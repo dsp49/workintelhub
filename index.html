@@ -3,51 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <meta name="description" content="Welcome to my new website." />
+  <title>WorkIntel Hub — Productivity, Time Tracking &amp; Employee Monitoring</title>
+  <meta name="description" content="WorkIntel Hub is a blog covering employee productivity, time tracking, time management, and employee monitoring — end to end." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="logo" href="/">My&nbsp;Site</a>
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
       <ul class="nav-links">
+        <li><a href="#latest">Articles</a></li>
+        <li><a href="#topics">Topics</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
       </ul>
+      <a class="nav-cta" href="#subscribe">Subscribe</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Welcome to My Website</h1>
-      <p>This is your brand-new site. Tell Claude what to change and it updates instantly.</p>
-      <a class="btn" href="#contact">Get in touch</a>
+      <p class="eyebrow">The workforce intelligence blog</p>
+      <h1>Work smarter, measure better, manage fairly.</h1>
+      <p class="lead">
+        Practical guides on employee productivity, time tracking, time management,
+        and employee monitoring — everything you need, end to end.
+      </p>
+      <a class="btn" href="#latest">Read the latest &rarr;</a>
     </section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>Write a short introduction about yourself or your business here.</p>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <div class="cards">
-        <div class="card"><h3>Service One</h3><p>Describe what you offer.</p></div>
-        <div class="card"><h3>Service Two</h3><p>Describe what you offer.</p></div>
-        <div class="card"><h3>Service Three</h3><p>Describe what you offer.</p></div>
+    <section id="topics" class="section">
+      <h2 class="section-title">Explore by topic</h2>
+      <div class="topic-grid">
+        <a class="topic" href="#latest"><h3>Productivity</h3><p>Boost output without burnout.</p></a>
+        <a class="topic" href="#latest"><h3>Time Tracking</h3><p>Know where the hours go.</p></a>
+        <a class="topic" href="#latest"><h3>Time Management</h3><p>Plan, prioritize, focus.</p></a>
+        <a class="topic" href="#latest"><h3>Employee Monitoring</h3><p>Insight with trust and ethics.</p></a>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:shabanask032@gmail.com">shabanask032@gmail.com</a></p>
+    <section id="latest" class="section">
+      <h2 class="section-title">Latest articles</h2>
+      <div class="posts">
+        <article class="post-card">
+          <span class="tag">Productivity</span>
+          <h3><a href="posts/employee-productivity-guide.html">The Complete Guide to Employee Productivity in 2026</a></h3>
+          <p>A practical framework for measuring and improving output across remote and in-office teams.</p>
+          <span class="meta">July 29, 2026 · 8 min read</span>
+        </article>
+
+        <article class="post-card">
+          <span class="tag">Time Tracking</span>
+          <h3><a href="posts/employee-productivity-guide.html">Time Tracking That Employees Actually Support</a></h3>
+          <p>How to roll out time tracking transparently so it helps the team instead of feeling like surveillance.</p>
+          <span class="meta">July 22, 2026 · 6 min read</span>
+        </article>
+
+        <article class="post-card">
+          <span class="tag">Time Management</span>
+          <h3><a href="posts/employee-productivity-guide.html">7 Time Management Techniques for Focused Work</a></h3>
+          <p>From time-blocking to the two-minute rule — methods that survive a busy workday.</p>
+          <span class="meta">July 15, 2026 · 5 min read</span>
+        </article>
+
+        <article class="post-card">
+          <span class="tag">Employee Monitoring</span>
+          <h3><a href="posts/employee-productivity-guide.html">Ethical Employee Monitoring: A Manager's Playbook</a></h3>
+          <p>What to measure, what to leave alone, and how to stay on the right side of privacy.</p>
+          <span class="meta">July 8, 2026 · 7 min read</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h2 class="section-title">About WorkIntel Hub</h2>
+      <p>
+        WorkIntel Hub is a blog for managers, team leads, and business owners who want to
+        understand how work really happens. We cover productivity, time tracking, time
+        management, and employee monitoring end to end — with practical, no-fluff advice.
+      </p>
+    </section>
+
+    <section id="subscribe" class="subscribe">
+      <h2>Get new articles in your inbox</h2>
+      <p>No spam. Unsubscribe anytime.</p>
+      <form class="subscribe-form" onsubmit="return false;">
+        <input type="email" placeholder="you@example.com" aria-label="Email address" required />
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 My Website. All rights reserved.</p>
+    <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
   </footer>
 </body>
 </html>
