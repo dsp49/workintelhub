@@ -8,3 +8,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Local authoring tooling — must NOT be deployed.
+# These were briefly published at workintelhub.com/agents/... and contain
+# third-party brand and product material. Keep them out of the build.
+agents/
+commands/

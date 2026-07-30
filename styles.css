@@ -260,6 +260,15 @@ img { max-width: 100%; display: block; }
 .card-media-gold { background: linear-gradient(135deg, var(--gold) 0%, #8c6209 60%, var(--ink) 100%); }
 .card-media-ink { background: linear-gradient(135deg, #33405a 0%, var(--ink) 70%); }
 
+/* When card art is a real image, it replaces the gradient placeholder. The ::after
+   stripe overlay does not render on replaced elements, which is what we want. */
+img.card-media {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background: var(--surface);
+}
+
 .card { display: flex; flex-direction: column; gap: 0.7rem; }
 .card h3 { font-size: 1.05rem; line-height: 1.35; }
 .card h3 a { color: var(--ink); }
@@ -285,7 +294,7 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--line);
 }
 .feature-side .card:last-child { border-bottom: 0; padding-bottom: 0; }
-.feature-side .card-media { aspect-ratio: 4 / 3; }
+.feature-side .card-media { aspect-ratio: 16 / 9; }
 .feature-side .card h3 { font-size: 0.98rem; }
 .feature-side .card-body { display: flex; flex-direction: column; gap: 0.4rem; }
 
