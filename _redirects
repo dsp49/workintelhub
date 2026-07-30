@@ -1,0 +1,13 @@
+# Cloudflare Pages redirects — https://developers.cloudflare.com/pages/configuration/redirects/
+# One rule per line:  <from>  <to>  <status>
+# First match wins, so keep the most specific rules at the top.
+
+# Folder rename: posts -> blogs (permanent, preserves any existing search ranking)
+/posts/*                    /blogs/:splat              301
+
+# Folder rename: assets -> images
+/assets/*                   /images/:splat             301
+
+# Note: www -> apex canonical redirect is NOT set here. Cloudflare Pages matches
+# _redirects on path, not hostname — configure that as a Redirect Rule in the
+# Cloudflare dashboard (Rules > Redirect Rules) instead. www is currently 522.

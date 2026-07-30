@@ -4,23 +4,155 @@
 
   <url>
     <loc>https://workintelhub.com/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://workintelhub.com/assets/og-image.png</image:loc>
-      <image:title>WorkIntel Hub — Work Smarter. Measure Better. Manage Fairly.</image:title>
+      <image:loc>https://workintelhub.com/images/og-image.png</image:loc>
+      <image:title>WorkIntel Hub</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/posts/employee-productivity-guide.html</loc>
+    <loc>https://workintelhub.com/blogs/employee-productivity-guide</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-productivity-guide.png</image:loc>
+    </image:image>
   </url>
 
-  <!-- Add one <url> block per new post. Keep <lastmod> accurate — Google
-       ignores changefreq/priority but does read lastmod. -->
+  <url>
+    <loc>https://workintelhub.com/blogs/time-tracking-employees-support</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/time-tracking-employees-support.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/time-management-techniques-focused-work</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/time-management-techniques-focused-work.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/ethical-employee-monitoring-playbook</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/ethical-employee-monitoring-playbook.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/what-to-measure-remote-work</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/what-to-measure-remote-work.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/why-output-metrics-fail-knowledge-teams.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/manual-vs-automatic-time-tracking</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/manual-vs-automatic-time-tracking.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/privacy-line-what-never-to-track</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/privacy-line-what-never-to-track.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/run-productivity-audit-one-week</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/run-productivity-audit-one-week.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/roll-out-time-tracking-without-losing-trust</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/roll-out-time-tracking-without-losing-trust.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/focus-blocks-busy-calendar</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/focus-blocks-busy-calendar.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/write-monitoring-policy-employees-sign.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/spot-burnout-in-the-data</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/spot-burnout-in-the-data.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/report-team-capacity-to-leadership</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/report-team-capacity-to-leadership.png</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Add one <url> block per new post. Keep <lastmod> accurate. -->
 
 </urlset>

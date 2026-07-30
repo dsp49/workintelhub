@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Productivity Metrics Fail Knowledge Teams — WorkIntel Hub</title>
+  <meta name="description" content="Productivity metrics break once they become targets. Why counts fail knowledge teams, how developer and sales metrics get gamed, and what to use instead." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams" />
+  <meta property="og:title" content="Why Productivity Metrics Fail Knowledge Teams" />
+  <meta property="og:description" content="Productivity metrics break once they become targets. Why counts fail knowledge teams, how developer and sales metrics get gamed, and what to use instead." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/why-output-metrics-fail-knowledge-teams.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-06-30T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-06-30T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Productivity Metrics Fail Knowledge Teams" />
+  <meta name="twitter:description" content="Productivity metrics break once they become targets. Why counts fail knowledge teams, how developer and sales metrics get gamed, and what to use instead." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/why-output-metrics-fail-knowledge-teams.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams#article",
+        "headline": "Why Productivity Metrics Fail Knowledge Teams",
+        "description": "Productivity metrics break once they become targets. Why counts fail knowledge teams, how developer and sales metrics get gamed, and what to use instead.",
+        "image": "https://workintelhub.com/images/blog/why-output-metrics-fail-knowledge-teams.png",
+        "datePublished": "2026-06-30T00:00:00+00:00",
+        "dateModified": "2026-06-30T00:00:00+00:00",
+        "author": { "@id": "https://workintelhub.com/#organization" },
+        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams"
+        },
+        "articleSection": "Productivity",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Productivity", "item": "https://workintelhub.com/#topics" },
+          { "@type": "ListItem", "position": 3, "name": "Why Productivity Metrics Fail Knowledge Teams" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are productivity metrics?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Productivity metrics are the measures a team uses to describe how much valuable work it produced over a period. Most are simple counts such as tickets closed, commits pushed, calls handled, or story points completed. Counts are cheap to collect and easy to chart, which is why they spread faster than better measures." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Goodhart's Law in simple terms?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Goodhart's Law says that when a measure becomes a target, it stops being a good measure. A number that described performance honestly while nobody was watching becomes something people manage directly once rewards attach to it, so it drifts away from the thing it was standing in for." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are productivity metrics ever useful?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, as diagnostics rather than targets. Counts are good at spotting change: a queue that doubled, a sudden drop in throughput, an unusual spike before a deadline. Use them to decide what to investigate. The failure begins the moment a count is attached to a goal, a review, or a bonus." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the best developer productivity metrics?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Team-level flow and stability measures beat individual counts. DORA holds deployment frequency and lead time for changes against change failure rate and time to restore service. SPACE adds satisfaction, communication, and efficiency. Both are designed for teams, and neither is meant to rank engineers against one another." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are lines of code a bad measure?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Because more code is usually worse code. The best engineering work often deletes code, replaces three systems with one, or avoids building something entirely. Counting lines rewards verbosity and copy-paste, and it punishes the people who reduce how much software you have to maintain." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which sales productivity metrics actually work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pair activity with durability. Qualified pipeline created is more honest than calls dialed, and it means much more when reported next to retention of those accounts at 90 days. Sales has a cleaner unit of output than most knowledge work, so counts carry real information there, but only in pairs." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a paired metric?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A paired metric is a volume or speed measure reported alongside a quality measure that moves the opposite way when the first is gamed. Tickets closed pairs with repeat contact rate. Cycle time pairs with rework rate. The pair makes gaming visible instead of rewarding it." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know a metric is being gamed?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Look for a number improving while the experience it represents does not. Tickets closed rising with no fall in customer complaints is the classic pattern. Also watch for unusually smooth results, sudden jumps right before reporting dates, and work split into smaller units for no operational reason." }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I tell leadership when they ask for individual numbers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Offer the decision instead of the data. Ask what they intend to do with the numbers, then propose the team-level measure that answers that question honestly. Most requests for individual counts are really requests for reassurance about delivery risk or about one specific person." }
+          },
+          {
+            "@type": "Question",
+            "name": "How long before dropping output targets shows an effect?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Expect a quarter before the numbers settle and behavior follows. Throughput often dips first, because people stop splitting work artificially and stop rushing low-value items. Judge the change on quality signals and delivery predictability rather than on the counts you just stopped targeting." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <ul class="topbar-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#subscribe">Write for Us</a></li>
+        <li><a href="../index.html#subscribe">Contact</a></li>
+      </ul>
+      <ul class="topbar-social">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="../index.html">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#topics">Productivity</a></li>
+        <li><a href="../index.html#topics">Time Tracking</a></li>
+        <li><a href="../index.html#topics">Time Management</a></li>
+        <li><a href="../index.html#topics">Monitoring</a></li>
+        <li><a href="../index.html#guides">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Why Productivity Metrics Fail Knowledge Teams</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">June 30, 2026 · 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/why-output-metrics-fail-knowledge-teams.png" alt="A dashboard of productivity metrics that no longer describe the knowledge work behind them" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Productivity metrics are the measures a team uses to describe how much valuable work it
+        produced over a period, and most of them are plain counts: tickets closed, commits pushed,
+        calls handled, documents shipped, story points burned. Counts are cheap to collect, easy to
+        chart, and comforting to report upward, which is why they spread. They also break in a
+        specific and predictable way once people know they are being counted. In knowledge work,
+        where the size and difficulty of each unit varies enormously, the break is bad enough that
+        the metric ends up worse than no metric at all.
+      </p>
+
+      <p>
+        This article explains the mechanism, names the gaming behavior each common count produces,
+        covers the developer and sales variants separately because they behave differently, and sets
+        out what we would use instead.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#goodharts-law">What Goodhart's Law does to productivity metrics</a></li>
+          <li><a href="#how-they-get-gamed">Which productivity metrics get gamed, and how</a></li>
+          <li><a href="#by-function">Productivity metrics by function: engineering and sales</a></li>
+          <li><a href="#counting-individuals">Why counting individuals damages collaborative work</a></li>
+          <li><a href="#what-to-use-instead">What should replace raw productivity metrics</a></li>
+          <li><a href="#cannot-be-counted">Which work genuinely cannot be counted</a></li>
+          <li><a href="#transition">How do you move a team off output targets?</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="goodharts-law">What Goodhart's Law does to productivity metrics</h2>
+
+      <p>
+        Goodhart's Law states that when a measure becomes a target, it ceases to be a good measure.
+        The original observation came from economics: a statistical regularity that holds while nobody
+        acts on it tends to collapse once policy starts pushing against it. The same thing happens
+        inside a team. A count that quietly described good work becomes a thing people manage
+        directly, and the link between the number and the underlying quality comes apart.
+      </p>
+
+      <p>
+        Why does the link break rather than simply weaken? Because there is nearly always a cheaper
+        way to move a number than to do the work it represented. Splitting one ticket into four raises
+        your count without helping a single customer. Nobody has to be dishonest for this to happen.
+        People respond to what gets noticed, and a published count is the loudest signal in the room.
+        Our
+        <a href="employee-productivity-guide.html">complete guide to employee productivity</a>
+        works through the same distinction between activity and value in more depth.
+      </p>
+
+      <p>
+        The cost of getting this wrong is not confined to a spreadsheet. <a href="https://www.gallup.com/workplace/708071/global-employee-engagement-continues-decline.aspx" target="_blank" rel="noopener">Gallup</a> reported in April 2026
+        that global employee engagement declined for the second year in a row in 2025, reaching its
+        lowest level since 2020, and estimated the cost of low engagement at roughly $10 trillion in
+        lost productivity, or 9% of global GDP. Gallup also found the decline was most acute among
+        managers, who are usually the people holding the dashboard.
+      </p>
+
+      <h2 id="how-they-get-gamed">Which productivity metrics get gamed, and how</h2>
+
+      <p>
+        Every common count has a well-worn workaround, and the workaround usually looks like
+        compliance rather than cheating. Any manager who has run these numbers for a year will
+        recognize most of the middle column.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>What people do to satisfy it</th>
+              <th>What quietly gets worse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tickets closed</td>
+              <td>Cherry-pick easy tickets, close and reopen, split one issue into several</td>
+              <td>Hard problems sit untouched; customers repeat themselves</td>
+            </tr>
+            <tr>
+              <td>Commits pushed</td>
+              <td>Break work into many tiny commits, commit trivial edits</td>
+              <td>History becomes noise; review quality drops</td>
+            </tr>
+            <tr>
+              <td>Lines of code</td>
+              <td>Write verbose code, avoid deleting anything, copy and paste</td>
+              <td>Maintenance cost rises for years afterward</td>
+            </tr>
+            <tr>
+              <td>Calls handled</td>
+              <td>End calls early, transfer rather than resolve, avoid complex accounts</td>
+              <td>Repeat contacts rise; the hardest customers get passed around</td>
+            </tr>
+            <tr>
+              <td>Story points completed</td>
+              <td>Inflate estimates, avoid unestimated work, skip refactoring</td>
+              <td>Forecasts stop being useful for planning</td>
+            </tr>
+            <tr>
+              <td>Documents or assets published</td>
+              <td>Ship thin pieces, reuse old material, skip the review step</td>
+              <td>Audience trust erodes slowly and invisibly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Every consequence in the right-hand column arrives later than the metric improvement, and
+        lands on someone other than the person being measured. That delay is exactly why output
+        targets feel like they are working for a while.
+      </p>
+
+      <h2 id="by-function">Productivity metrics by function: engineering and sales</h2>
+
+      <p>
+        Two functions get asked for numbers more than any other, and they fail in opposite directions.
+        Engineering work is highly variable and interdependent, so counts there are nearly meaningless.
+        Sales work has a cleaner unit, so counts there carry real information and still need a
+        counterweight.
+      </p>
+
+      <h3 id="developer-productivity-metrics">Developer productivity metrics in software engineering</h3>
+      <p>
+        Individual developer counts measure the queue, not the engineer. Commits, pull requests, and
+        story points all reward small, safe, visible work and punish the person who spends a week
+        deleting a subsystem nobody wanted to touch. DORA is the sane alternative, holding deployment
+        frequency and lead time for changes against change failure rate and time to restore service.
+        SPACE adds the dimensions DORA leaves out, including satisfaction and collaboration. Both are
+        explicitly team measures, and using either to rank individuals is a misuse of the framework.
+      </p>
+
+      <h3 id="sales-productivity-metrics">Sales productivity metrics</h3>
+      <p>
+        Sales counts are more defensible and still need pairing. Calls dialed and emails sent measure
+        motion. Qualified pipeline created measures something closer to the job, and it means far more
+        reported next to retention of those accounts at 90 days. Without the second number, a quarter
+        of aggressive qualifying looks identical to a quarter of good selling, and you find out which
+        one it was three quarters later, when renewals come due.
+      </p>
+
+      <h2 id="counting-individuals">Why counting individuals damages collaborative work</h2>
+
+      <p>
+        Individual counts tax the work that holds a team together. Reviewing a colleague's draft,
+        pairing on a hard bug, writing the document that stops five people repeating the same mistake:
+        none of it produces a unit with your name on it. When the scoreboard is personal, helping
+        someone else is a cost you pay out of your own score.
+      </p>
+
+      <p>
+        There is a second problem, more structural and just as damaging. In interdependent work, an
+        individual's throughput is largely set by the queue in front of them. A designer waiting three
+        days for approvals looks slow, and no amount of personal effort fixes that. You end up
+        measuring the system and blaming the person. When the work is distributed, the temptation gets
+        stronger, which is why we wrote a separate guide on
+        <a href="what-to-measure-remote-work.html">how to measure employee productivity when you cannot see the work</a>.
+      </p>
+
+      <div class="callout">
+        <h3>Do this instead</h3>
+        <p>
+          Report counts at the level where the work is actually coordinated, which is almost always
+          the team. Keep individual data for one-to-one conversations, where a manager can ask what it
+          means before concluding anything. If a number will be shown to anyone other than the person
+          it describes, it should be a team number.
+        </p>
+      </div>
+
+      <h2 id="what-to-use-instead">What should replace raw productivity metrics</h2>
+
+      <p>
+        Replace single counts with pairs: a volume or speed measure reported next to a quality measure
+        that moves the other way when the first is gamed. It is the most effective change available
+        and it costs almost nothing to make.
+      </p>
+
+      <h3 id="pair-volume">Pair volume with a counterweight</h3>
+      <p>
+        Tickets closed pairs with repeat contact rate. Cycle time pairs with rework rate. Deals closed
+        pairs with retention at 90 days. Speed alone is easy to fake. Speed with stability sitting
+        beside it is not, and the pair turns a status update into an actual conversation about
+        tradeoffs.
+      </p>
+
+      <h3 id="measure-outcomes">Measure outcomes rather than units</h3>
+      <p>
+        Ask what would be different if this work went well, then measure that. A support team's
+        outcome is customers who stop having the problem, not tickets moved to closed. A content
+        team's outcome is qualified inquiries or reduced support load, not pieces published. Outcomes
+        are slower and noisier than counts. They are also much harder to game.
+      </p>
+
+      <h3 id="watch-the-trend">Watch the trend, not the value</h3>
+      <p>
+        A single period's count means very little. A three-month trend in the same measure, read
+        alongside its counterweight, tells you whether something real changed. We would rather see six
+        months of two paired measures than a weekly dashboard of twelve, and a short
+        <a href="run-productivity-audit-one-week.html">productivity audit run over one week</a>
+        is usually enough to work out which two are worth keeping.
+      </p>
+
+      <h2 id="cannot-be-counted">Which work genuinely cannot be counted</h2>
+
+      <p>
+        Some work has no honest unit, and pretending otherwise produces fiction. Research where the
+        answer might be no. Mentoring. Architecture decisions that prevent a year of pain. Design
+        exploration where four discarded directions were the point. Incident prevention, which by
+        definition leaves no trace.
+      </p>
+
+      <p>
+        So how do you evaluate that work? Through review by someone competent to judge it, plus the
+        accounts of the people it affected. Written narrative, work samples, and peer input are not
+        soft substitutes for metrics. For this category they are the more accurate instrument. Say so
+        plainly, rather than inventing a proxy that flatters the spreadsheet.
+      </p>
+
+      <p>
+        Pressure makes the fiction worse. <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday" target="_blank" rel="noopener">Microsoft's 2025 Work Trend Index</a>, drawn from anonymized
+        Microsoft 365 telemetry plus a survey of 31,000 knowledge workers across 31 markets, found
+        that 48% of employees and 52% of leaders describe their work as chaotic and fragmented, and
+        that 1 in 3 employees say the pace of work makes it impossible to keep up. A team in that
+        state will hit whatever number you set and quietly drop the work you forgot to count. The
+        early warning signs are covered in
+        <a href="spot-burnout-in-the-data.html">signs of employee burnout hiding in workload data</a>.
+      </p>
+
+      <p>
+        A caveat worth stating plainly: this argument is weakest for high-volume, standardized work. A
+        team processing near-identical claims has a real unit of output, and counting it is reasonable
+        and fair. Everything here is aimed at variable, interdependent knowledge work.
+      </p>
+
+      <h2 id="transition">How do you move a team off output targets?</h2>
+
+      <p>
+        Move in one visible step rather than a quiet drift, and tell leadership what to expect before
+        the first number moves.
+      </p>
+
+      <ol>
+        <li>List every count that currently feeds a goal, a review, or a bonus.</li>
+        <li>For each one, write down the gaming behavior you have already seen.</li>
+        <li>Pick a counterweight for the counts worth keeping, and demote the rest to diagnostics.</li>
+        <li>Move all reporting to team level, and say publicly that you have done it.</li>
+        <li>Warn leadership that throughput may dip for a quarter, and explain why in advance.</li>
+        <li>Review after a quarter using quality and predictability, not the counts you dropped.</li>
+      </ol>
+
+      <p>
+        Step five is the one that fails most often, because it needs a format leadership trusts. Our
+        guide to <a href="report-team-capacity-to-leadership.html">reporting team capacity to leadership</a>
+        covers how to present paired productivity metrics without inviting a request for the old
+        scoreboard back.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Goodhart's Law is the mechanism: targets corrupt the measures they are built on.</li>
+        <li>Every common count has a cheap workaround that looks exactly like compliance.</li>
+        <li>Individual counts tax collaboration and mostly describe the queue, not the person.</li>
+        <li>Developer counts fail hardest; sales counts survive, but only in pairs.</li>
+        <li>Some work has no honest unit. Evaluate it by review rather than inventing a number.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+
+      <section class="faq">
+        <details>
+          <summary>What are productivity metrics?</summary>
+          <p>Productivity metrics are the measures a team uses to describe how much valuable work it produced over a period. Most are simple counts such as tickets closed, commits pushed, calls handled, or story points completed. Counts are cheap to collect and easy to chart, which is why they spread faster than better measures.</p>
+        </details>
+        <details>
+          <summary>What is Goodhart's Law in simple terms?</summary>
+          <p>Goodhart's Law says that when a measure becomes a target, it stops being a good measure. A number that described performance honestly while nobody was watching becomes something people manage directly once rewards attach to it, so it drifts away from the thing it was standing in for.</p>
+        </details>
+        <details>
+          <summary>Are productivity metrics ever useful?</summary>
+          <p>Yes, as diagnostics rather than targets. Counts are good at spotting change: a queue that doubled, a sudden drop in throughput, an unusual spike before a deadline. Use them to decide what to investigate. The failure begins the moment a count is attached to a goal, a review, or a bonus.</p>
+        </details>
+        <details>
+          <summary>What are the best developer productivity metrics?</summary>
+          <p>Team-level flow and stability measures beat individual counts. DORA holds deployment frequency and lead time for changes against change failure rate and time to restore service. SPACE adds satisfaction, communication, and efficiency. Both are designed for teams, and neither is meant to rank engineers against one another.</p>
+        </details>
+        <details>
+          <summary>Why are lines of code a bad measure?</summary>
+          <p>Because more code is usually worse code. The best engineering work often deletes code, replaces three systems with one, or avoids building something entirely. Counting lines rewards verbosity and copy-paste, and it punishes the people who reduce how much software you have to maintain.</p>
+        </details>
+        <details>
+          <summary>Which sales productivity metrics actually work?</summary>
+          <p>Pair activity with durability. Qualified pipeline created is more honest than calls dialed, and it means much more when reported next to retention of those accounts at 90 days. Sales has a cleaner unit of output than most knowledge work, so counts carry real information there, but only in pairs.</p>
+        </details>
+        <details>
+          <summary>What is a paired metric?</summary>
+          <p>A paired metric is a volume or speed measure reported alongside a quality measure that moves the opposite way when the first is gamed. Tickets closed pairs with repeat contact rate. Cycle time pairs with rework rate. The pair makes gaming visible instead of rewarding it.</p>
+        </details>
+        <details>
+          <summary>How do I know a metric is being gamed?</summary>
+          <p>Look for a number improving while the experience it represents does not. Tickets closed rising with no fall in customer complaints is the classic pattern. Also watch for unusually smooth results, sudden jumps right before reporting dates, and work split into smaller units for no operational reason.</p>
+        </details>
+        <details>
+          <summary>What do I tell leadership when they ask for individual numbers?</summary>
+          <p>Offer the decision instead of the data. Ask what they intend to do with the numbers, then propose the team-level measure that answers that question honestly. Most requests for individual counts are really requests for reassurance about delivery risk or about one specific person.</p>
+        </details>
+        <details>
+          <summary>How long before dropping output targets shows an effect?</summary>
+          <p>Expect a quarter before the numbers settle and behavior follows. Throughput often dips first, because people stop splitting work artificially and stop rushing low-value items. Judge the change on quality signals and delivery predictability rather than on the counts you just stopped targeting.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="employee-productivity-guide.html">The Complete Guide to Employee Productivity in 2026</a></li>
+          <li><a href="what-to-measure-remote-work.html">How to Measure Employee Productivity When You Can't See the Work</a></li>
+          <li><a href="run-productivity-audit-one-week.html">How to Run a Productivity Audit in One Week</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="../index.html">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="../index.html#topics">Productivity</a></li>
+            <li><a href="../index.html#topics">Time Tracking</a></li>
+            <li><a href="../index.html#topics">Time Management</a></li>
+            <li><a href="../index.html#topics">Employee Monitoring</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="../index.html#latest">Latest articles</a></li>
+            <li><a href="../index.html#guides">How-to guides</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#subscribe">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

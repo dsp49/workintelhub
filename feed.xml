@@ -5,24 +5,139 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://workintelhub.com/assets/logo.png</url>
+      <url>https://workintelhub.com/images/logo.png</url>
       <title>WorkIntel Hub</title>
       <link>https://workintelhub.com/</link>
     </image>
 
     <item>
       <title>The Complete Guide to Employee Productivity in 2026</title>
-      <link>https://workintelhub.com/posts/employee-productivity-guide.html</link>
-      <guid isPermaLink="true">https://workintelhub.com/posts/employee-productivity-guide.html</guid>
-      <description>A practical framework for measuring and improving employee productivity across remote and in-office teams.</description>
+      <link>https://workintelhub.com/blogs/employee-productivity-guide</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-productivity-guide</guid>
+      <description>A practical framework for measuring and improving employee productivity across remote and in-office teams, without resorting to surveillance.</description>
       <category>Productivity</category>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
     </item>
 
-    <!-- Add one <item> per new post, newest first. -->
+    <item>
+      <title>Time Tracking That Employees Actually Support</title>
+      <link>https://workintelhub.com/blogs/time-tracking-employees-support</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-tracking-employees-support</guid>
+      <description>How to roll out time tracking transparently so it helps your team protect focus time instead of feeling like surveillance.</description>
+      <category>Time Tracking</category>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>7 Time Management Techniques for Focused Work</title>
+      <link>https://workintelhub.com/blogs/time-management-techniques-focused-work</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-management-techniques-focused-work</guid>
+      <description>Seven time management techniques that survive a real working day, and the specific situation each one is actually for.</description>
+      <category>Time Management</category>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Ethical Employee Monitoring: A Manager’s Playbook</title>
+      <link>https://workintelhub.com/blogs/ethical-employee-monitoring-playbook</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ethical-employee-monitoring-playbook</guid>
+      <description>What to measure, what to leave alone, and how to run employee monitoring that stays on the right side of privacy and trust.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>What to Measure When You Can’t See the Work</title>
+      <link>https://workintelhub.com/blogs/what-to-measure-remote-work</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/what-to-measure-remote-work</guid>
+      <description>Remote and hybrid managers lose the visual signals they used to rely on. Here is what to measure instead, and what to stop measuring.</description>
+      <category>Productivity</category>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Why Output Metrics Fail Knowledge Teams</title>
+      <link>https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/why-output-metrics-fail-knowledge-teams</guid>
+      <description>Counting tickets, commits, and calls rewards the wrong behaviour. Here is what breaks and what to measure instead.</description>
+      <category>Productivity</category>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Manual vs. Automatic Time Tracking: Choosing Well</title>
+      <link>https://workintelhub.com/blogs/manual-vs-automatic-time-tracking</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/manual-vs-automatic-time-tracking</guid>
+      <description>Manual and automatic time tracking trade accuracy against trust. Here is how to work out which side your team actually needs.</description>
+      <category>Time Tracking</category>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>The Privacy Line: What You Should Never Track</title>
+      <link>https://workintelhub.com/blogs/privacy-line-what-never-to-track</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/privacy-line-what-never-to-track</guid>
+      <description>A short list of employee data that costs more in trust than it will ever return in insight, and how to decide where your line sits.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Run a Productivity Audit in One Week</title>
+      <link>https://workintelhub.com/blogs/run-productivity-audit-one-week</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/run-productivity-audit-one-week</guid>
+      <description>A five-day plan for finding out where your team’s time actually goes, without buying anything or disrupting the work.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Roll Out Time Tracking Without Losing Trust</title>
+      <link>https://workintelhub.com/blogs/roll-out-time-tracking-without-losing-trust</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/roll-out-time-tracking-without-losing-trust</guid>
+      <description>A step-by-step rollout plan for introducing time tracking to a team, from the first announcement to the ninety-day review.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Set Focus Blocks That Survive a Busy Calendar</title>
+      <link>https://workintelhub.com/blogs/focus-blocks-busy-calendar</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/focus-blocks-busy-calendar</guid>
+      <description>Focus blocks fail because they are the easiest thing on the calendar to move. Here is how to make them hold.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Write a Monitoring Policy Employees Will Sign</title>
+      <link>https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</guid>
+      <description>A section-by-section guide to writing an employee monitoring policy that is clear, lawful, and actually readable.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Spot Burnout in the Data Before It Costs You</title>
+      <link>https://workintelhub.com/blogs/spot-burnout-in-the-data</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/spot-burnout-in-the-data</guid>
+      <description>Workload data shows burnout risk earlier than exit interviews do. Here are the patterns to watch and how to respond.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Report Team Capacity to Leadership</title>
+      <link>https://workintelhub.com/blogs/report-team-capacity-to-leadership</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/report-team-capacity-to-leadership</guid>
+      <description>How to turn messy team workload data into a capacity report an executive will actually act on.</description>
+      <category>Guides</category>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+    </item>
 
   </channel>
 </rss>
