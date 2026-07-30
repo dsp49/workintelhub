@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WorkIntel Hub</title>
+    <link>https://workintelhub.com/</link>
+    <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://workintelhub.com/assets/logo.png</url>
+      <title>WorkIntel Hub</title>
+      <link>https://workintelhub.com/</link>
+    </image>
+
+    <item>
+      <title>The Complete Guide to Employee Productivity in 2026</title>
+      <link>https://workintelhub.com/posts/employee-productivity-guide.html</link>
+      <guid isPermaLink="true">https://workintelhub.com/posts/employee-productivity-guide.html</guid>
+      <description>A practical framework for measuring and improving employee productivity across remote and in-office teams.</description>
+      <category>Productivity</category>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+
+    <!-- Add one <item> per new post, newest first. -->
+
+  </channel>
+</rss>

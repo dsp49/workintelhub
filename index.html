@@ -4,97 +4,455 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WorkIntel Hub — Productivity, Time Tracking &amp; Employee Monitoring</title>
-  <meta name="description" content="WorkIntel Hub is a blog covering employee productivity, time tracking, time management, and employee monitoring — end to end." />
+  <meta name="description" content="Practical, no-fluff guides on employee productivity, time tracking, time management, and employee monitoring — written for the managers who have to make it work." />
+  <link rel="canonical" href="https://workintelhub.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/" />
+  <meta property="og:title" content="WorkIntel Hub — Productivity, Time Tracking &amp; Employee Monitoring" />
+  <meta property="og:description" content="Practical, no-fluff guides on employee productivity, time tracking, time management, and employee monitoring." />
+  <meta property="og:image" content="https://workintelhub.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="WorkIntel Hub — Work Smarter. Measure Better. Manage Fairly." />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WorkIntel Hub — Productivity, Time Tracking &amp; Employee Monitoring" />
+  <meta name="twitter:description" content="Practical, no-fluff guides on employee productivity, time tracking, time management, and employee monitoring." />
+  <meta name="twitter:image" content="https://workintelhub.com/assets/og-image.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/assets/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://workintelhub.com/#website",
+        "url": "https://workintelhub.com/",
+        "name": "WorkIntel Hub",
+        "description": "Practical guides on employee productivity, time tracking, time management, and employee monitoring.",
+        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://workintelhub.com/#blog",
+        "url": "https://workintelhub.com/",
+        "name": "WorkIntel Hub",
+        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- ================= Utility bar ================= -->
+  <div class="topbar">
+    <div class="wrap">
+      <ul class="topbar-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#subscribe">Write for Us</a></li>
+        <li><a href="#subscribe">Contact</a></li>
+      </ul>
+      <ul class="topbar-social">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= Header ================= -->
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+
       <ul class="nav-links">
-        <li><a href="#latest">Articles</a></li>
-        <li><a href="#topics">Topics</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#topics">Productivity</a></li>
+        <li><a href="#topics">Time Tracking</a></li>
+        <li><a href="#topics">Time Management</a></li>
+        <li><a href="#topics">Monitoring</a></li>
+        <li><a href="#guides">Guides</a></li>
       </ul>
-      <a class="nav-cta" href="#subscribe">Subscribe</a>
+
+      <div class="nav-actions">
+        <form class="search" role="search" onsubmit="return wihSearch(this);">
+          <input type="search" name="q" placeholder="Search articles" aria-label="Search articles" required />
+          <button type="submit" aria-label="Search">&#8594;</button>
+        </form>
+        <a class="btn btn-sm" href="#subscribe">Subscribe</a>
+      </div>
     </nav>
   </header>
 
   <main>
+
+    <!-- ================= Hero + Trending ================= -->
     <section class="hero">
-      <p class="eyebrow">The workforce intelligence blog</p>
-      <h1>Work smarter, measure better, manage fairly.</h1>
-      <p class="lead">
-        Practical guides on employee productivity, time tracking, time management,
-        and employee monitoring — everything you need, end to end.
-      </p>
-      <a class="btn" href="#latest">Read the latest &rarr;</a>
-    </section>
+      <div class="wrap hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow">The workforce intelligence blog</p>
+          <h1>Work Smarter. <em>Measure Better.</em> Manage Fairly.</h1>
+          <p class="lead">
+            Practical, no-fluff guides on employee productivity, time tracking, time
+            management, and employee monitoring — written for the managers who actually
+            have to make this work on Monday morning.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#latest">Read the latest</a>
+            <a class="btn btn-outline" href="#topics">Browse topics</a>
+          </div>
+        </div>
 
-    <section id="topics" class="section">
-      <h2 class="section-title">Explore by topic</h2>
-      <div class="topic-grid">
-        <a class="topic" href="#latest"><h3>Productivity</h3><p>Boost output without burnout.</p></a>
-        <a class="topic" href="#latest"><h3>Time Tracking</h3><p>Know where the hours go.</p></a>
-        <a class="topic" href="#latest"><h3>Time Management</h3><p>Plan, prioritize, focus.</p></a>
-        <a class="topic" href="#latest"><h3>Employee Monitoring</h3><p>Insight with trust and ethics.</p></a>
+        <aside class="trending">
+          <h2>Trending</h2>
+          <ol>
+            <li>
+              <div>
+                <a href="posts/employee-productivity-guide.html">The Complete Guide to Employee Productivity in 2026</a>
+                <span class="meta">Productivity · 8 min read</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="posts/employee-productivity-guide.html">Time Tracking That Employees Actually Support</a>
+                <span class="meta">Time Tracking · 6 min read</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="posts/employee-productivity-guide.html">Ethical Employee Monitoring: A Manager's Playbook</a>
+                <span class="meta">Monitoring · 7 min read</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="posts/employee-productivity-guide.html">7 Time Management Techniques for Focused Work</a>
+                <span class="meta">Time Management · 5 min read</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="posts/employee-productivity-guide.html">What to Measure When You Can't See the Work</a>
+                <span class="meta">Productivity · 6 min read</span>
+              </div>
+            </li>
+          </ol>
+        </aside>
       </div>
     </section>
 
+    <!-- ================= Featured ================= -->
     <section id="latest" class="section">
-      <h2 class="section-title">Latest articles</h2>
-      <div class="posts">
-        <article class="post-card">
-          <span class="tag">Productivity</span>
-          <h3><a href="posts/employee-productivity-guide.html">The Complete Guide to Employee Productivity in 2026</a></h3>
-          <p>A practical framework for measuring and improving output across remote and in-office teams.</p>
-          <span class="meta">July 29, 2026 · 8 min read</span>
-        </article>
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Latest articles</h2>
+          <a class="section-link" href="#guides">See all articles &rarr;</a>
+        </div>
 
-        <article class="post-card">
-          <span class="tag">Time Tracking</span>
-          <h3><a href="posts/employee-productivity-guide.html">Time Tracking That Employees Actually Support</a></h3>
-          <p>How to roll out time tracking transparently so it helps the team instead of feeling like surveillance.</p>
-          <span class="meta">July 22, 2026 · 6 min read</span>
-        </article>
+        <div class="featured-grid">
+          <article class="card feature-lead">
+            <a href="posts/employee-productivity-guide.html"><div class="card-media"></div></a>
+            <span class="tag">Productivity</span>
+            <h3><a href="posts/employee-productivity-guide.html">The Complete Guide to Employee Productivity in 2026</a></h3>
+            <p>
+              A practical framework for measuring and improving output across remote and
+              in-office teams — what to track, what to ignore, and how to tell the
+              difference between busy and effective.
+            </p>
+            <span class="meta">July 29, 2026 · 8 min read</span>
+          </article>
 
-        <article class="post-card">
-          <span class="tag">Time Management</span>
-          <h3><a href="posts/employee-productivity-guide.html">7 Time Management Techniques for Focused Work</a></h3>
-          <p>From time-blocking to the two-minute rule — methods that survive a busy workday.</p>
-          <span class="meta">July 15, 2026 · 5 min read</span>
-        </article>
+          <div class="feature-side">
+            <article class="card">
+              <a href="posts/employee-productivity-guide.html"><div class="card-media card-media-gold"></div></a>
+              <div class="card-body">
+                <span class="tag tag-gold">Time Tracking</span>
+                <h3><a href="posts/employee-productivity-guide.html">Time Tracking That Employees Actually Support</a></h3>
+                <span class="meta">July 22, 2026 · 6 min read</span>
+              </div>
+            </article>
 
-        <article class="post-card">
-          <span class="tag">Employee Monitoring</span>
-          <h3><a href="posts/employee-productivity-guide.html">Ethical Employee Monitoring: A Manager's Playbook</a></h3>
-          <p>What to measure, what to leave alone, and how to stay on the right side of privacy.</p>
-          <span class="meta">July 8, 2026 · 7 min read</span>
-        </article>
+            <article class="card">
+              <a href="posts/employee-productivity-guide.html"><div class="card-media card-media-ink"></div></a>
+              <div class="card-body">
+                <span class="tag">Time Management</span>
+                <h3><a href="posts/employee-productivity-guide.html">7 Time Management Techniques for Focused Work</a></h3>
+                <span class="meta">July 15, 2026 · 5 min read</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="posts/employee-productivity-guide.html"><div class="card-media"></div></a>
+              <div class="card-body">
+                <span class="tag">Employee Monitoring</span>
+                <h3><a href="posts/employee-productivity-guide.html">Ethical Employee Monitoring: A Manager's Playbook</a></h3>
+                <span class="meta">July 8, 2026 · 7 min read</span>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <h2 class="section-title">About WorkIntel Hub</h2>
-      <p>
-        WorkIntel Hub is a blog for managers, team leads, and business owners who want to
-        understand how work really happens. We cover productivity, time tracking, time
-        management, and employee monitoring end to end — with practical, no-fluff advice.
-      </p>
+    <!-- ================= Newsletter band ================= -->
+    <section id="subscribe" class="band">
+      <div class="wrap band-grid">
+        <div>
+          <h2>Get the workforce intelligence brief</h2>
+          <p>
+            One email a week: the best new guides on productivity, tracking, and fair
+            measurement. No spam, unsubscribe anytime.
+          </p>
+        </div>
+        <div>
+          <form class="subscribe-form" onsubmit="return false;">
+            <input type="email" placeholder="you@company.com" aria-label="Email address" required />
+            <button class="btn btn-invert" type="submit">Subscribe</button>
+          </form>
+          <p class="fineprint">Join managers who want to measure work without micromanaging it.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="subscribe" class="subscribe">
-      <h2>Get new articles in your inbox</h2>
-      <p>No spam. Unsubscribe anytime.</p>
-      <form class="subscribe-form" onsubmit="return false;">
-        <input type="email" placeholder="you@example.com" aria-label="Email address" required />
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
+    <!-- ================= Topics ================= -->
+    <section id="topics" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Explore by popular topics</h2>
+        </div>
+
+        <div class="topic-grid">
+          <a class="topic" href="#latest">
+            <h3>Productivity</h3>
+            <p>Boost output without burning the team out.</p>
+            <span class="count">View articles &rarr;</span>
+          </a>
+          <a class="topic" href="#latest">
+            <h3>Time Tracking</h3>
+            <p>Know where the hours actually go.</p>
+            <span class="count">View articles &rarr;</span>
+          </a>
+          <a class="topic" href="#latest">
+            <h3>Time Management</h3>
+            <p>Plan, prioritize, and protect deep focus.</p>
+            <span class="count">View articles &rarr;</span>
+          </a>
+          <a class="topic" href="#latest">
+            <h3>Employee Monitoring</h3>
+            <p>Insight that keeps trust and ethics intact.</p>
+            <span class="count">View articles &rarr;</span>
+          </a>
+        </div>
+      </div>
     </section>
+
+    <!-- ================= Editor's Choice ================= -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Editor's choice</h2>
+          <a class="section-link" href="#guides">More picks &rarr;</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <a href="posts/employee-productivity-guide.html"><div class="card-media card-media-ink"></div></a>
+            <span class="tag">Productivity</span>
+            <h3><a href="posts/employee-productivity-guide.html">Why Output Metrics Fail Knowledge Teams</a></h3>
+            <p>Counting tickets and commits rewards the wrong behaviour. Here's what to use instead.</p>
+            <span class="meta">June 30, 2026 · 7 min read</span>
+          </article>
+
+          <article class="card">
+            <a href="posts/employee-productivity-guide.html"><div class="card-media"></div></a>
+            <span class="tag">Time Tracking</span>
+            <h3><a href="posts/employee-productivity-guide.html">Manual vs. Automatic Time Tracking: Choosing Well</a></h3>
+            <p>The trade-off is accuracy against trust. How to decide which side you need.</p>
+            <span class="meta">June 24, 2026 · 6 min read</span>
+          </article>
+
+          <article class="card">
+            <a href="posts/employee-productivity-guide.html"><div class="card-media card-media-gold"></div></a>
+            <span class="tag tag-gold">Monitoring</span>
+            <h3><a href="posts/employee-productivity-guide.html">The Privacy Line: What You Should Never Track</a></h3>
+            <p>A short list of data that costs more in trust than it will ever return in insight.</p>
+            <span class="meta">June 17, 2026 · 5 min read</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= How-to guides ================= -->
+    <section id="guides" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">How-to guides</h2>
+        </div>
+
+        <div class="guide-list">
+          <div class="guide"><span class="num">01</span><a href="posts/employee-productivity-guide.html">How to Run a Productivity Audit in One Week</a></div>
+          <div class="guide"><span class="num">02</span><a href="posts/employee-productivity-guide.html">How to Roll Out Time Tracking Without Losing Trust</a></div>
+          <div class="guide"><span class="num">03</span><a href="posts/employee-productivity-guide.html">How to Set Focus Blocks That Survive a Busy Calendar</a></div>
+          <div class="guide"><span class="num">04</span><a href="posts/employee-productivity-guide.html">How to Write a Monitoring Policy Employees Will Sign</a></div>
+          <div class="guide"><span class="num">05</span><a href="posts/employee-productivity-guide.html">How to Spot Burnout in the Data Before It Costs You</a></div>
+          <div class="guide"><span class="num">06</span><a href="posts/employee-productivity-guide.html">How to Report Team Capacity to Leadership</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= About ================= -->
+    <section id="about" class="section section-alt">
+      <div class="wrap about-grid">
+        <div>
+          <div class="section-head">
+            <h2 class="section-title">About WorkIntel Hub</h2>
+          </div>
+          <p>
+            WorkIntel Hub is a blog for managers, team leads, and business owners who want
+            to understand how work really happens — not how a dashboard says it happens.
+          </p>
+          <p>
+            We cover productivity, time tracking, time management, and employee monitoring
+            end to end, with practical advice you can apply without buying anything.
+          </p>
+          <p style="margin-top:1.5rem"><a class="btn btn-outline" href="#subscribe">Get in touch</a></p>
+        </div>
+
+        <ul class="principles">
+          <li><b>Practical over theoretical</b><span>Every guide ends with something you can do this week.</span></li>
+          <li><b>Measurement with consent</b><span>We don't recommend anything we'd resent as an employee.</span></li>
+          <li><b>Vendor-neutral</b><span>Tools get named when they help, not because they paid.</span></li>
+          <li><b>Plain language</b><span>No jargon walls, no filler, no 3,000-word warm-ups.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= Browse all topics ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">Browse all topics</h2>
+        </div>
+        <div class="pill-row">
+          <a class="pill" href="#latest">Productivity</a>
+          <a class="pill" href="#latest">Time Tracking</a>
+          <a class="pill" href="#latest">Time Management</a>
+          <a class="pill" href="#latest">Employee Monitoring</a>
+          <a class="pill" href="#latest">Remote Work</a>
+          <a class="pill" href="#latest">Hybrid Teams</a>
+          <a class="pill" href="#latest">Focus &amp; Deep Work</a>
+          <a class="pill" href="#latest">Burnout</a>
+          <a class="pill" href="#latest">Workforce Analytics</a>
+          <a class="pill" href="#latest">Privacy &amp; Ethics</a>
+          <a class="pill" href="#latest">Team Capacity</a>
+          <a class="pill" href="#latest">Manager Playbooks</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ================= Footer ================= -->
   <footer class="site-footer">
-    <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring —
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+
+        <div>
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="#topics">Productivity</a></li>
+            <li><a href="#topics">Time Tracking</a></li>
+            <li><a href="#topics">Time Management</a></li>
+            <li><a href="#topics">Employee Monitoring</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="#latest">Latest articles</a></li>
+            <li><a href="#guides">How-to guides</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#subscribe">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Editorial standards</a></p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // No backend yet — send site search to Google scoped to this domain.
+    function wihSearch(form) {
+      var q = form.q.value.trim();
+      if (q) window.open('https://www.google.com/search?q=' + encodeURIComponent('site:workintelhub.com ' + q), '_blank');
+      return false;
+    }
+  </script>
 </body>
 </html>

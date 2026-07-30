@@ -1,0 +1,19 @@
+# robots.txt — WorkIntel Hub
+# https://workintelhub.com
+
+User-agent: *
+Allow: /
+
+# Nothing here is private, but keep crawlers out of build/meta noise.
+Disallow: /assets/tmp/
+Disallow: /*?utm_
+Disallow: /*?fbclid
+
+# Common AI crawlers — remove any line below to opt that crawler back in.
+# (Left commented by default: blocking these has no SEO benefit.)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+Sitemap: https://workintelhub.com/sitemap.xml
