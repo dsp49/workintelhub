@@ -4,12 +4,52 @@
 
   <url>
     <loc>https://workintelhub.com/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://workintelhub.com/images/og-image.png</image:loc>
       <image:title>WorkIntel Hub</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/time-theft-statistics</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/time-theft-statistics.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/remote-work-productivity-statistics</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/remote-work-productivity-statistics.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-monitoring-statistics</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-monitoring-statistics.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-burnout-statistics</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-burnout-statistics.png</image:loc>
     </image:image>
   </url>
 
