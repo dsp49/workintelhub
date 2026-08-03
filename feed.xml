@@ -5,13 +5,49 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
       <title>WorkIntel Hub</title>
       <link>https://workintelhub.com/</link>
     </image>
+
+    <item>
+      <title>21 Productivity Tips That Hold Up in a Real Workweek</title>
+      <link>https://workintelhub.com/blogs/productivity-tips</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/productivity-tips</guid>
+      <description>21 productivity tips for work, grouped by the problem they solve, each with the exact situation where it fails. Vendor-neutral, current for 2026, no filler.</description>
+      <category>Productivity</category>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>12 Employee Retention Strategies a Manager Can Actually Run</title>
+      <link>https://workintelhub.com/blogs/employee-retention-strategies</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-retention-strategies</guid>
+      <description>12 employee retention strategies a line manager can run without budget authority, each with the situation where it fails, plus what to escalate when the real issue is pay.</description>
+      <category>Guides</category>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>11 Employee Engagement Ideas for Remote Teams</title>
+      <link>https://workintelhub.com/blogs/employee-engagement-ideas-remote-teams</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-engagement-ideas-remote-teams</guid>
+      <description>11 employee engagement ideas work from home teams can actually use, built on written context, asynchronous recognition and time zone fairness, each with the situation where it fails.</description>
+      <category>Guides</category>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>17 Employee Engagement Ideas That Do Not Feel Forced</title>
+      <link>https://workintelhub.com/blogs/employee-engagement-ideas</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-engagement-ideas</guid>
+      <description>17 employee engagement ideas that change the conditions of the work rather than the snack budget, each with the situation where it fails, plus honest low-cost morale ideas.</description>
+      <category>Guides</category>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
 
     <item>
       <title>Time Theft at Work in 2026: What the Data Actually Shows</title>

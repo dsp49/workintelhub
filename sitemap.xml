@@ -4,12 +4,52 @@
 
   <url>
     <loc>https://workintelhub.com/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://workintelhub.com/images/og-image.png</image:loc>
       <image:title>WorkIntel Hub</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/productivity-tips</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/productivity-tips.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-retention-strategies</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-retention-strategies.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-engagement-ideas-remote-teams</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-engagement-ideas-remote-teams.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-engagement-ideas</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-engagement-ideas.png</image:loc>
     </image:image>
   </url>
 
