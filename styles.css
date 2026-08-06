@@ -373,6 +373,33 @@ img.card-media {
 }
 .pill:hover { background: var(--ink); border-color: var(--ink); color: var(--white); }
 
+/* ---------- Topic / category pages ---------- */
+.crumbs {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+.crumbs a { color: var(--muted); }
+.crumbs a:hover { color: var(--accent); }
+.crumbs span[aria-hidden] { margin: 0 0.4rem; color: var(--line); }
+.crumbs [aria-current] { color: var(--ink); font-weight: 600; }
+
+.topic-head { padding-block: 2.5rem 3rem; }
+.topic-head h1 {
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  font-weight: 800;
+  margin: 0.6rem 0 1rem;
+}
+.topic-head .lead { max-width: 68ch; font-size: 1.05rem; }
+.topic-head .callout { max-width: 68ch; margin-top: 1.75rem; }
+.topic-head .callout h2, .callout h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}
+.topic-head .callout p { margin-bottom: 0; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); color: #99a2b2; padding-block: 3rem 1.75rem; font-size: 0.9rem; }
 .footer-grid {
@@ -519,8 +546,9 @@ img.card-media {
   padding: 1.25rem 1.4rem;
   margin: 1.75rem 0;
 }
-.callout h3 { margin-top: 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.callout h2, .callout h3 { margin-top: 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .callout p:last-child, .callout ul:last-child, .callout li:last-child { margin-bottom: 0; }
+.callout h2 { font-size: 1rem; }
 
 .article table {
   width: 100%;

@@ -90,29 +90,25 @@
 <body>
 
   <!-- ================= Header ================= -->
+  <!-- BUILD:header -->
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
-
       <ul class="nav-links">
-        <li><a href="#topics">Productivity</a></li>
-        <li><a href="#topics">Time Tracking</a></li>
-        <li><a href="#topics">Time Management</a></li>
-        <li><a href="#topics">Monitoring</a></li>
+        <li><a href="topics/productivity.html">Productivity</a></li>
+        <li><a href="topics/time-tracking.html">Time Tracking</a></li>
+        <li><a href="topics/time-management.html">Time Management</a></li>
+        <li><a href="topics/employee-monitoring.html">Monitoring</a></li>
         <li><a href="#lists">Lists</a></li>
         <li><a href="#research">Statistics</a></li>
         <li><a href="#guides">Guides</a></li>
       </ul>
-
       <div class="nav-actions">
-        <form class="search" role="search" onsubmit="return wihSearch(this);">
-          <input type="search" name="q" placeholder="Search articles" aria-label="Search articles" required />
-          <button type="submit" aria-label="Search">&#8594;</button>
-        </form>
         <a class="btn btn-sm" href="#subscribe">Subscribe</a>
       </div>
     </nav>
   </header>
+<!-- /BUILD:header -->
 
   <main>
 
@@ -248,25 +244,35 @@
         </div>
 
         <div class="topic-grid">
-          <a class="topic" href="#latest">
+          <a class="topic" href="topics/productivity.html">
             <h3>Productivity</h3>
             <p>Boost output without burning the team out.</p>
-            <span class="count">View articles &rarr;</span>
+            <span class="count">Read the topic &rarr;</span>
           </a>
-          <a class="topic" href="#latest">
+          <a class="topic" href="topics/time-tracking.html">
             <h3>Time Tracking</h3>
             <p>Know where the hours actually go.</p>
-            <span class="count">View articles &rarr;</span>
+            <span class="count">Read the topic &rarr;</span>
           </a>
-          <a class="topic" href="#latest">
+          <a class="topic" href="topics/time-management.html">
             <h3>Time Management</h3>
             <p>Plan, prioritize, and protect deep focus.</p>
-            <span class="count">View articles &rarr;</span>
+            <span class="count">Read the topic &rarr;</span>
           </a>
-          <a class="topic" href="#latest">
+          <a class="topic" href="topics/employee-monitoring.html">
             <h3>Employee Monitoring</h3>
             <p>Insight that keeps trust and ethics intact.</p>
-            <span class="count">View articles &rarr;</span>
+            <span class="count">Read the topic &rarr;</span>
+          </a>
+          <a class="topic" href="topics/engagement-and-retention.html">
+            <h3>Engagement &amp; Retention</h3>
+            <p>Keep people, without budget authority.</p>
+            <span class="count">Read the topic &rarr;</span>
+          </a>
+          <a class="topic" href="topics/burnout-and-wellbeing.html">
+            <h3>Burnout &amp; Wellbeing</h3>
+            <p>Spot the conditions before people leave.</p>
+            <span class="count">Read the topic &rarr;</span>
           </a>
         </div>
       </div>
@@ -456,14 +462,14 @@
           <h2 class="section-title">Browse all topics</h2>
         </div>
         <div class="pill-row">
-          <a class="pill" href="#latest">Productivity</a>
-          <a class="pill" href="#latest">Time Tracking</a>
-          <a class="pill" href="#latest">Time Management</a>
-          <a class="pill" href="#latest">Employee Monitoring</a>
+          <a class="pill" href="topics/productivity.html">Productivity</a>
+          <a class="pill" href="topics/time-tracking.html">Time Tracking</a>
+          <a class="pill" href="topics/time-management.html">Time Management</a>
+          <a class="pill" href="topics/employee-monitoring.html">Employee Monitoring</a>
           <a class="pill" href="#latest">Remote Work</a>
           <a class="pill" href="#latest">Hybrid Teams</a>
           <a class="pill" href="#latest">Focus &amp; Deep Work</a>
-          <a class="pill" href="#latest">Burnout</a>
+          <a class="pill" href="topics/burnout-and-wellbeing.html">Burnout</a>
           <a class="pill" href="#latest">Workforce Analytics</a>
           <a class="pill" href="#latest">Privacy &amp; Ethics</a>
           <a class="pill" href="#latest">Team Capacity</a>
@@ -475,6 +481,7 @@
   </main>
 
   <!-- ================= Footer ================= -->
+  <!-- BUILD:footer -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -485,44 +492,41 @@
             covered end to end for the people who manage the work.
           </p>
         </div>
-
         <div>
           <h2>Topics</h2>
           <ul>
-            <li><a href="#topics">Productivity</a></li>
-            <li><a href="#topics">Time Tracking</a></li>
-            <li><a href="#topics">Time Management</a></li>
-            <li><a href="#topics">Employee Monitoring</a></li>
+            <li><a href="topics/productivity.html">Productivity</a></li>
+            <li><a href="topics/time-tracking.html">Time Tracking</a></li>
+            <li><a href="topics/time-management.html">Time Management</a></li>
+            <li><a href="topics/employee-monitoring.html">Employee Monitoring</a></li>
           </ul>
         </div>
-
         <div>
           <h2>Site</h2>
           <ul>
             <li><a href="#latest">Latest articles</a></li>
-            <li><a href="#guides">How-to guides</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#subscribe">Newsletter</a></li>
+            <li><a href="topics/index.html">All topics</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="editorial-policy.html">Editorial policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div>
-          <h2>Follow</h2>
+          <h2>Legal</h2>
           <ul>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">X</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">RSS</a></li>
+            <li><a href="privacy-policy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="feed.xml">RSS</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
-        <p><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Editorial standards</a></p>
+        <p><a href="privacy-policy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="editorial-policy.html">Editorial standards</a></p>
       </div>
     </div>
   </footer>
+<!-- /BUILD:footer -->
 
   <script>
     // No backend yet — send site search to Google scoped to this domain.
