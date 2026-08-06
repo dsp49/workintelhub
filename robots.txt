@@ -5,7 +5,6 @@ User-agent: *
 Allow: /
 
 # Nothing here is private, but keep crawlers out of build/meta noise.
-Disallow: /images/tmp/
 Disallow: /*?utm_
 Disallow: /*?fbclid
 
