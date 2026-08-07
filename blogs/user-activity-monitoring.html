@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Activity Monitoring Software: What It Captures</title>
+  <meta name="description" content="User activity monitoring software came from security, not productivity. What it captures, who it is really for, and why buying it to manage people backfires." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/user-activity-monitoring" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/user-activity-monitoring" />
+  <meta property="og:title" content="User Activity Monitoring: What It Captures and Who It Is For" />
+  <meta property="og:description" content="User activity monitoring software came out of security and insider risk, not productivity. What it captures, who it is really for, and why buying it to manage people backfires on both counts." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/user-activity-monitoring.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-06T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-08-06T00:00:00+00:00" />
+  <meta property="article:section" content="Employee Monitoring" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="User Activity Monitoring: What It Captures and Who It Is For" />
+  <meta name="twitter:description" content="User activity monitoring software came out of security and insider risk, not productivity. What it captures, who it is really for, and why buying it to manage people backfires on both counts." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/user-activity-monitoring.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/user-activity-monitoring#article",
+        "headline": "User Activity Monitoring: What It Captures and Who It Is For",
+        "description": "User activity monitoring software came out of security and insider risk, not productivity. What it captures, who it is really for, and why buying it to manage people backfires on both counts.",
+        "image": "https://workintelhub.com/images/blog/user-activity-monitoring.png",
+        "datePublished": "2026-08-06T00:00:00+00:00",
+        "dateModified": "2026-08-06T00:00:00+00:00",
+        "author": { "@id": "https://workintelhub.com/#organization" },
+        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/user-activity-monitoring"
+        },
+        "articleSection": "Employee Monitoring",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/user-activity-monitoring#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Employee Monitoring", "item": "https://workintelhub.com/#topics" },
+          { "@type": "ListItem", "position": 3, "name": "User Activity Monitoring: What It Captures and Who It Is For" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/user-activity-monitoring#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is user activity monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "User activity monitoring is the recording of what identified users do on corporate systems, so that a specific session can be reconstructed later. It grew out of security and insider risk work, where the purpose is to investigate an incident, satisfy an audit, or detect a pattern that looks like data being taken. The unit of analysis is a session tied to an account, not a person's working day, and that difference explains most of what follows." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does user activity monitoring software capture?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Typically sign-in and privilege events, application and process launches, file operations including copies, prints and writes to removable media, uploads and email attachments, command execution on servers, and in high assurance configurations a replayable record of the session. Productivity-oriented setups tend to collect a narrower and blunter set: application names, active and idle status, and visited domains. The two lists overlap but they are built to answer different questions." }
+          },
+          {
+            "@type": "Question",
+            "name": "How is user activity monitoring different from productivity tracking?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Direction and audience. Security monitoring collects deeply, looks rarely, and is read by a small investigations function under a defined trigger. Productivity tracking collects shallowly, looks constantly, and is read by line managers with no trigger at all. A tool tuned for one is badly suited to the other, and running a deep security dataset as a daily management report is the combination most likely to cause harm." }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is user activity monitoring actually for?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Security teams, compliance functions, and organizations with audit obligations, particularly around privileged accounts, third party contractors, and systems holding regulated data. If your organization has none of those conditions and the person asking for the tool is a line manager rather than a security lead, the request is probably a management problem in a security costume, and buying the tool will not resolve it." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is pc activity monitoring software the same thing?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It usually means the lighter endpoint version: an agent on a desktop or laptop recording applications, active time, and websites, with reporting aimed at managers rather than investigators. It is cheaper and shallower than a full insider risk deployment, which makes it less dangerous as a data holding and less useful as evidence. Judge it on what it lets you refuse to collect rather than on the length of its capability list." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does user activity monitoring improve productivity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We have no verified evidence that it does. What is documented is that the signal it produces is a poor proxy for work. Microsoft reported in June 2025, from telemetry combined with a survey of 31,000 knowledge workers across 31 markets, that knowledge workers are interrupted roughly every two minutes during work hours, about 275 times a day. An activity record drawn across that mostly measures fragmentation, and the quietest hour on the chart may be the only valuable one." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do employees have to be told about user activity monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In several states, yes, and there is no security exception for ordinary notice duties. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email, or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously, with penalties up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. There is a narrow exemption for processes performed solely for computer system maintenance or protection. Confirm your position with counsel." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is session recording and when is it justified?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Session recording captures a replayable record of what happened on a screen or a terminal, which makes it genuinely useful for reconstructing an incident and genuinely invasive as a standing practice. We would restrict it to privileged accounts, jump hosts, and third party access, with a documented trigger for review, a short retention period, and a log of who watched what. Applying it to a whole workforce as a management tool is the clearest example of the wrong use of the right technology." }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if you use a security tool to manage performance?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Two failures at once. The security function loses the dataset it needed, because once people know the same records feed performance reviews they change their behavior around the collection, which is exactly the behavior an insider risk program is trying to detect. And the management function inherits a stream of numbers that were never designed to describe work quality, then treats them as if they were. Both outcomes are predictable and both are avoidable by separating the two programs." }
+          },
+          {
+            "@type": "Question",
+            "name": "How should you evaluate user activity monitoring software?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Start with the trigger, not the capability list. Ask what event causes someone to look at the data, who that someone is by role, whether their lookup is itself logged, how long each field is retained before automatic deletion, and how an employee sees and challenges their own record. Then ask which categories can be permanently disabled. A deployment that collects deeply but is only opened under a documented trigger is safer than one that collects lightly and is browsed every Monday morning." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="../topics/productivity.html">Productivity</a></li>
+        <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
+        <li><a href="../topics/time-management.html">Time Management</a></li>
+        <li><a href="../topics/employee-monitoring.html">Monitoring</a></li>
+        <li><a href="../index.html#lists">Lists</a></li>
+        <li><a href="../index.html#research">Statistics</a></li>
+        <li><a href="../index.html#guides">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Employee Monitoring</span>
+      <h1>User Activity Monitoring: What It Captures and Who It Is For</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">August 6, 2026 · 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/user-activity-monitoring.png" alt="Security operations view of user activity monitoring records tied to accounts rather than people" width="1200" height="630" />
+      </figure>
+
+      <p>
+        User activity monitoring is the recording of what identified users do on corporate systems, so
+        that a particular session can be reconstructed afterward. It is a security discipline before it
+        is anything else. User activity monitoring software was built for insider risk, audit, and
+        incident investigation, and the fact that it also produces charts a manager can read is a side
+        effect rather than a design goal. Most of the confusion in this category comes from mistaking
+        the side effect for the product.
+      </p>
+      <p>
+        We are an independent publication with a published editorial policy. We sell nothing here, we
+        take no referral money, and we have not tested any product, so this page names no vendors,
+        quotes no prices, and makes no feature claims. What it does instead is separate two use cases
+        that are routinely sold as one, because buying the wrong one is the most common and most
+        expensive mistake in workplace monitoring.
+      </p>
+      <p>
+        The short version: security monitoring collects deeply and looks rarely. Productivity tracking
+        collects shallowly and looks constantly. Run either one with the other's habits and you get a
+        worse result on both counts.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#what-it-is">What user activity monitoring is, and where it came from</a></li>
+          <li><a href="#what-it-captures">What user activity monitoring software captures</a></li>
+          <li><a href="#two-directions">Security and productivity pull in opposite directions</a></li>
+    <li><a href="#insider-risk-numbers">What the insider risk numbers actually measure</a></li>
+          <li><a href="#wrong-tool">What goes wrong when a security tool manages people</a></li>
+          <li><a href="#pc-activity">Where pc activity monitoring software fits</a></li>
+          <li><a href="#evaluating">How to evaluate user activity monitoring software</a></li>
+          <li><a href="#us-law">Notice and access: what US law expects</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-it-is">What user activity monitoring is, and where it came from</h2>
+      <p>
+        The category grew out of a specific problem: an organization needed to prove, after the fact,
+        exactly what a named account did on a sensitive system. Auditors ask that question. Regulators
+        ask it. So does anyone investigating whether a departing employee took a customer list. The
+        answer requires records tied to identity, kept long enough to be useful, and detailed enough to
+        stand up when someone disputes them.
+      </p>
+      <p>
+        That origin shapes everything about the design. The unit of analysis is a session attached to
+        an account, not a person's working day. Detail is preferred over readability, because the
+        record has to survive scrutiny. Access is meant to be narrow, since the data would be damaging
+        in the wrong hands. And review is meant to be exceptional, triggered by an alert or an
+        investigation rather than performed every Monday out of habit.
+      </p>
+      <p>
+        None of those properties suit day-to-day management, and that is not a flaw. It is the tool
+        doing its job. Problems begin when a productivity question gets pointed at it, which happens
+        because both categories describe themselves with the same three words. If you want the
+        underlying mechanics of how any of these agents work, we cover
+        <a href="computer-monitoring-explained.html">monitoring a computer</a> at the operating system
+        level in a separate explainer.
+      </p>
+
+      <h2 id="what-it-captures">What user activity monitoring software captures</h2>
+      <p>
+        A security-grade deployment captures identity-linked events across systems, not just a laptop.
+        The usual set includes sign-in and privilege escalation events, application and process
+        launches, file operations such as copies, prints, and writes to removable media, uploads and
+        outbound attachments, command execution on servers, and in high assurance environments a
+        replayable session record. Some configurations add content classification so that the
+        sensitivity of a moved file is known, not guessed.
+      </p>
+      <p>
+        Productivity-oriented deployments capture a narrower and blunter set: which application was in
+        the foreground, whether input events occurred, which domains the browser reached, and sometimes
+        periodic screenshots. That data is shallower than an investigator would want and more exposed
+        than a manager needs, because a window title or a full URL carries far more personal detail
+        than the settings screen suggests.
+      </p>
+      <p>
+        The distinction that matters is between records built as evidence and records built as
+        reporting. Evidence needs integrity, timestamps, and chain of custody. Reporting needs
+        readability and aggregation. A dataset optimized for one is a liability in the other role, and
+        our page on what <a href="privacy-line-what-never-to-track.html">employee monitoring</a> should
+        never collect covers the fields we would keep out of both.
+      </p>
+
+      <h2 id="two-directions">Security and productivity pull in opposite directions</h2>
+      <p>
+        On every design axis that matters, the two use cases want opposite settings. That is why a
+        single deployment serving both purposes ends up serving neither well. The table below sets out
+        the conflict directly.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Design choice</th>
+              <th>Insider risk and audit use</th>
+              <th>Productivity management use</th>
+              <th>What happens if you merge them</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Depth of collection</td>
+              <td>Deep, evidence grade, identity linked</td>
+              <td>Shallow, aggregate, team level</td>
+              <td>Deep data in shallow hands, held far longer than needed</td>
+            </tr>
+            <tr>
+              <td>Frequency of review</td>
+              <td>Rare, triggered by an alert or investigation</td>
+              <td>Constant, weekly or daily reporting</td>
+              <td>Evidence-grade records browsed casually every week</td>
+            </tr>
+            <tr>
+              <td>Who reads it</td>
+              <td>A small named investigations or compliance function</td>
+              <td>Line managers across the organization</td>
+              <td>Access spreads until the access list is meaningless</td>
+            </tr>
+            <tr>
+              <td>Retention</td>
+              <td>Long, set by audit obligation</td>
+              <td>Short, because last quarter is irrelevant</td>
+              <td>Long retention applied to everything, raising discovery risk</td>
+            </tr>
+            <tr>
+              <td>What success looks like</td>
+              <td>Nothing found, and the record holds up when it is</td>
+              <td>A decision changed, a workload rebalanced</td>
+              <td>Neither is measured, so the program renews by inertia</td>
+            </tr>
+            <tr>
+              <td>Effect of people knowing</td>
+              <td>Detection weakens if targets adapt</td>
+              <td>Transparency is required and helps</td>
+              <td>The tool is either too quiet to be fair or too loud to detect</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Look at the last row for a moment, because it is the deepest conflict. A productivity program
+        has to be fully disclosed to be legitimate. An insider risk program loses part of its value
+        when the specific detection logic is public. Both positions are defensible on their own. Held
+        together in one system, they force an organization into either unfair opacity or ineffective
+        detection, and there is no configuration that escapes the choice.
+      </p>
+
+      <h2 id="insider-risk-numbers">What the insider risk numbers actually measure</h2>
+      <p>
+        The clearest picture of what this discipline is built for comes from its own research, and
+        reading it carefully explains why the tool behaves the way it does. The 2026 Cost of Insider
+        Risks report from the Ponemon Institute, sponsored by DTEX, a company that sells software in
+        exactly this category, analyzed 7,490 incidents across 354 organizations.
+      </p>
+      <p>
+        Its central finding is about speed. Organizations took an average of 67 days to contain an
+        insider incident in 2025, down from 81 days the year before, and only 13% of incidents were
+        contained inside 30 days. Cost tracks that timeline closely. Incidents contained in under 30
+        days averaged $14.2 million, while those running past 90 days averaged $21.9 million.
+      </p>
+      <p>
+        Notice what is being optimized there. Every one of those figures is about detecting a specific
+        event and shortening the window before someone acts on it. That is a different problem from
+        working out whether a team spent its week well, and it produces a different tool: one built
+        for alerts, retention, and evidence rather than for patterns and conversations.
+       That confusion runs across the whole category, and our guide to <a href="remote-desktop-monitoring-software.html">remote computer monitoring software</a> disentangles the four product types buyers routinely mix up.</p>
+      <p>
+        The incident mix explains the rest of the design. That same vendor-sponsored report counted an
+        average of 13.8 negligent insider incidents per organization at $747,107 each, 6.3 malicious
+        insider incidents at $742,125, and 5.3 credential theft incidents at $842,462. Negligence, not
+        malice, is the most common category by a wide margin, which is why these systems watch for
+        mistakes at least as closely as for intent.
+      </p>
+
+      <div class="callout">
+        <h3>How to read a vendor-sponsored study</h3>
+        <p>
+          The same report states that user behavior analytics saves organizations an average of $5.1
+          million, and that privileged access management saves $6.1 million. Both figures describe the
+          value of the sponsor's own product category, in research the sponsor paid for. That does not
+          make them false, and it does not make the containment timeline above unusable. It does mean
+          the savings claims carry a commercial interest that the containment data does not, and they
+          deserve to be weighed differently. Ask who funded a security study before you put its return
+          on investment figure into a business case.
+        </p>
+      </div>
+
+      <h2 id="wrong-tool">What goes wrong when a security tool manages people</h2>
+      <p>
+        Two failures arrive together. The security function loses the data it needed, because once
+        people learn the same records feed performance conversations, they adjust their behavior around
+        the collection, which is precisely the behavior an insider risk program exists to notice. And
+        the management function inherits a stream of numbers never designed to describe work quality,
+        then treats them as if they were. Goodhart's Law does the rest: the moment a measure becomes a
+        target, it stops measuring what it used to.
+      </p>
+      <p>
+        The measurement problem is not fixable by collecting harder.
+        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday" target="_blank" rel="noopener">Microsoft's Work Trend Index</a>,
+        published June 17, 2025 and combining anonymized Microsoft 365 telemetry with a survey of
+        31,000 knowledge workers across 31 markets fielded February 6 to March 24, 2025, found
+        knowledge workers are interrupted roughly every two minutes during work hours, about 275 times
+        a day, with 48% of employees and 52% of leaders describing their work as chaotic and
+        fragmented. An activity record drawn across that pattern is largely a picture of interruption.
+      </p>
+      <p>
+        There is a human cost on top of the analytical one. The American Psychological Association's
+        2024 Work in America survey, conducted by The Harris Poll among 2,027 employed US adults
+        between March 25 and April 3, 2024 with a margin of error of plus or minus 3.1 percentage
+        points, found 43% of workers report feeling tense or stressed out during the workday, rising to
+        61% among workers reporting lower psychological safety. Those are correlational findings rather
+        than proof of cause, and they describe the environment a repurposed security tool lands in.
+      </p>
+      <p>
+        Our position is that the two programs should be separated by design: different datasets,
+        different owners, different retention, different access lists, and different documents. Which
+        is another way of saying the decision is organizational before it is technical, and we set out
+        that argument in full in our piece on what a
+        <a href="staff-monitoring-programs.html">staff monitoring program</a> has to decide first.
+      </p>
+
+      <div class="callout">
+        <h3>The purchase we would talk you out of</h3>
+        <p>
+          The pattern we see most often runs like this. A manager cannot tell what a team is doing. A
+          security-grade tool is available on the corporate agreement, so it gets switched on for
+          visibility. Nobody writes down the question, nobody sets a retention period, and eighteen
+          months later the organization is holding detailed identity-linked records of every
+          employee's working day, with no incident to justify them and a discovery obligation attached
+          to all of it. We cannot tell you which product to avoid, because we have not tested any of
+          them. We can tell you that this sequence is the one that ends badly, and that it starts with
+          skipping the written question.
+        </p>
+      </div>
+
+      <h2 id="pc-activity">Where pc activity monitoring software fits</h2>
+      <p>
+        The phrase pc activity monitoring software usually points at the lighter end of the category:
+        an agent on a desktop or laptop recording applications, active and idle time, and websites,
+        with reporting built for managers rather than investigators. It is shallower and cheaper than a
+        full insider risk deployment, which makes it a smaller data-holding risk and a weaker source of
+        evidence at the same time.
+      </p>
+      <p>
+        That combination has an honest use. If your question is about license waste, unapproved
+        software, or whether a team's hours have quietly crept past reasonable, an endpoint agent
+        reporting at team level will answer it, and the collection can be narrow enough to explain in a
+        sentence. Those are legitimate operational questions and we would not argue against asking
+        them.
+      </p>
+      <p>
+        What it cannot do is rank people. Activity counts do not distinguish thinking from idling,
+        reading from ignoring, or a hard problem from a slow morning. If the underlying need is a fair
+        read on output, the work is defining what output means for each role, which is the subject of
+        our guide to <a href="what-to-measure-remote-work.html">how to measure employee productivity</a>
+        when the work is not visible from a desk.
+      </p>
+
+      <h2 id="evaluating">How to evaluate user activity monitoring software</h2>
+      <p>
+        Evaluate user activity monitoring software on its triggers and its refusals, not on its
+        capability list. A deep deployment that is only opened under a documented trigger, by two named
+        roles, with every lookup logged, is safer than a light one that anyone browses on a slow
+        Monday. Capability tells you what could happen. Governance tells you what will.
+      </p>
+      <ol>
+        <li>What event causes a human to look at this data, written down before purchase?</li>
+        <li>Which named roles can query a named individual, and is every query itself logged?</li>
+        <li>Which collection categories can be permanently disabled, and can employees verify that state?</li>
+        <li>What is the retention period per field, and is deletion automatic rather than manual?</li>
+        <li>How does an employee see their own record and challenge something they believe is wrong?</li>
+        <li>Is this dataset separate from anything used in performance management, in writing?</li>
+        <li>What is the export and destruction path if the contract ends?</li>
+        <li>On the review date, what decision or detection will we point to as justification?</li>
+      </ol>
+      <p>
+        Public opinion should inform where you set those dials. The
+        <a href="https://www.pewresearch.org/internet/2023/04/20/americans-views-on-use-of-ai-to-monitor-and-evaluate-workers/" target="_blank" rel="noopener">Pew Research Center</a>
+        published survey work in April 2023, from American Trends Panel Wave 119, finding 51% of US
+        adults oppose employers using AI to record what people do on their work computers, and a wide
+        age gap underneath that average: 64% of adults aged 18 to 29 opposed it, against 38% of adults
+        65 and over. If your workforce skews young, the headline number understates the resistance you
+        should plan for.
+      </p>
+      <p>
+        Plan against the population you actually employ rather than the national average, and check
+        the base of any figure someone puts in front of you before it shapes a decision. We keep a
+        wider set of verified
+        <a href="employee-monitoring-statistics.html">employee monitoring statistics</a> with their
+        samples and fielding dates attached, precisely so numbers like these can be argued with.
+      </p>
+
+      <h2 id="us-law">Notice and access: what US law expects</h2>
+      <p>
+        A security purpose does not remove an employer's notice duty, and that surprises people. In the
+        United States, monitoring company systems is broadly permitted, but several states impose
+        notice requirements that apply regardless of why you are collecting. Because those duties
+        follow the employee's location, a distributed team can create obligations in a dozen states at
+        once.
+      </p>
+      <p>
+        New York Civil Rights Law section 52-c is the clearest to reason from. Employers who monitor
+        telephone conversations, email, or internet usage by an electronic device must give prior
+        written notice upon hiring to all employees subject to monitoring. The notice must be in
+        writing or electronic form and acknowledged by the employee, and it must be posted
+        conspicuously where affected employees can see it. Penalties run up to $500 for a first
+        offense, $1,000 for a second, and $3,000 for a third and each subsequent offense. There is an
+        exemption for processes managing the type or volume of email, voicemail, or internet usage
+        performed solely for computer system maintenance or protection, which is narrower than a
+        general security justification. Read
+        <a href="https://www.nysenate.gov/legislation/laws/CVR/52-C*2" target="_blank" rel="noopener">the statute</a>
+        rather than a summary of it, including this one.
+      </p>
+      <p>
+        We describe New York because it is specific and checkable, not because it is universal.
+        Monitoring law varies by state and you should confirm your obligations with counsel wherever
+        you employ people. If you employ staff in the EU, GDPR imposes a separate set of requirements
+        beyond anything here. Whatever the jurisdiction, the document that carries the weight is a
+        written <a href="write-monitoring-policy-employees-sign.html">employee monitoring policy</a>
+        that names the purpose, the fields, the access list, and the retention period, and that people
+        have actually signed.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>User activity monitoring came out of security and insider risk. Its unit of analysis is a session tied to an account, not a person's working day.</li>
+        <li>Security use wants deep collection reviewed rarely by a small function. Productivity use wants shallow collection reviewed often by many managers. Merging them fails both.</li>
+        <li>Microsoft's June 2025 research found interruption roughly every two minutes and 48% of employees describing work as chaotic and fragmented, so activity records mostly measure fragmentation.</li>
+        <li>Pew found in April 2023 that 51% of US adults oppose recording work computer activity, rising to 64% among adults aged 18 to 29 against 38% of those 65 and over.</li>
+        <li>A security purpose does not remove notice duties. New York requires prior written notice, acknowledged and posted, with penalties up to $3,000 per offense. Confirm your state obligations with counsel.</li>
+        <li>Evaluate on triggers, access lists, and retention. Capability tells you what could happen, governance tells you what will.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What is user activity monitoring?</summary>
+          <p>User activity monitoring is the recording of what identified users do on corporate systems, so that a specific session can be reconstructed later. It grew out of security and insider risk work, where the purpose is to investigate an incident, satisfy an audit, or detect a pattern that looks like data being taken. The unit of analysis is a session tied to an account, not a person's working day, and that difference explains most of what follows.</p>
+        </details>
+        <details>
+          <summary>What does user activity monitoring software capture?</summary>
+          <p>Typically sign-in and privilege events, application and process launches, file operations including copies, prints and writes to removable media, uploads and email attachments, command execution on servers, and in high assurance configurations a replayable record of the session. Productivity-oriented setups tend to collect a narrower and blunter set: application names, active and idle status, and visited domains. The two lists overlap but they are built to answer different questions.</p>
+        </details>
+        <details>
+          <summary>How is user activity monitoring different from productivity tracking?</summary>
+          <p>Direction and audience. Security monitoring collects deeply, looks rarely, and is read by a small investigations function under a defined trigger. Productivity tracking collects shallowly, looks constantly, and is read by line managers with no trigger at all. A tool tuned for one is badly suited to the other, and running a deep security dataset as a daily management report is the combination most likely to cause harm.</p>
+        </details>
+        <details>
+          <summary>Who is user activity monitoring actually for?</summary>
+          <p>Security teams, compliance functions, and organizations with audit obligations, particularly around privileged accounts, third party contractors, and systems holding regulated data. If your organization has none of those conditions and the person asking for the tool is a line manager rather than a security lead, the request is probably a management problem in a security costume, and buying the tool will not resolve it.</p>
+        </details>
+        <details>
+          <summary>Is pc activity monitoring software the same thing?</summary>
+          <p>It usually means the lighter endpoint version: an agent on a desktop or laptop recording applications, active time, and websites, with reporting aimed at managers rather than investigators. It is cheaper and shallower than a full insider risk deployment, which makes it less dangerous as a data holding and less useful as evidence. Judge it on what it lets you refuse to collect rather than on the length of its capability list.</p>
+        </details>
+        <details>
+          <summary>Does user activity monitoring improve productivity?</summary>
+          <p>We have no verified evidence that it does. What is documented is that the signal it produces is a poor proxy for work. Microsoft reported in June 2025, from telemetry combined with a survey of 31,000 knowledge workers across 31 markets, that knowledge workers are interrupted roughly every two minutes during work hours, about 275 times a day. An activity record drawn across that mostly measures fragmentation, and the quietest hour on the chart may be the only valuable one.</p>
+        </details>
+        <details>
+          <summary>Do employees have to be told about user activity monitoring?</summary>
+          <p>In several states, yes, and there is no security exception for ordinary notice duties. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email, or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously, with penalties up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. There is a narrow exemption for processes performed solely for computer system maintenance or protection. Confirm your position with counsel.</p>
+        </details>
+        <details>
+          <summary>What is session recording and when is it justified?</summary>
+          <p>Session recording captures a replayable record of what happened on a screen or a terminal, which makes it genuinely useful for reconstructing an incident and genuinely invasive as a standing practice. We would restrict it to privileged accounts, jump hosts, and third party access, with a documented trigger for review, a short retention period, and a log of who watched what. Applying it to a whole workforce as a management tool is the clearest example of the wrong use of the right technology.</p>
+        </details>
+        <details>
+          <summary>What happens if you use a security tool to manage performance?</summary>
+          <p>Two failures at once. The security function loses the dataset it needed, because once people know the same records feed performance reviews they change their behavior around the collection, which is exactly the behavior an insider risk program is trying to detect. And the management function inherits a stream of numbers that were never designed to describe work quality, then treats them as if they were. Both outcomes are predictable and both are avoidable by separating the two programs.</p>
+        </details>
+        <details>
+          <summary>How should you evaluate user activity monitoring software?</summary>
+          <p>Start with the trigger, not the capability list. Ask what event causes someone to look at the data, who that someone is by role, whether their lookup is itself logged, how long each field is retained before automatic deletion, and how an employee sees and challenges their own record. Then ask which categories can be permanently disabled. A deployment that collects deeply but is only opened under a documented trigger is safer than one that collects lightly and is browsed every Monday morning.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="computer-monitoring-explained.html">What Computer Monitoring Actually Is, and How It Works</a></li>
+          <li><a href="staff-monitoring-programs.html">Staff Monitoring Programs: What They Do and What to Decide First</a></li>
+          <li><a href="write-monitoring-policy-employees-sign.html">How to Write an Employee Monitoring Policy</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+  <!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="../topics/productivity.html">Productivity</a></li>
+            <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
+            <li><a href="../topics/time-management.html">Time Management</a></li>
+            <li><a href="../topics/employee-monitoring.html">Employee Monitoring</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="../index.html#latest">Latest articles</a></li>
+            <li><a href="../topics/index.html">All topics</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../editorial-policy.html">Editorial policy</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="../privacy-policy.html">Privacy</a></li>
+            <li><a href="../terms.html">Terms</a></li>
+            <li><a href="../feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../editorial-policy.html">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitor Employee Internet Usage: What It Sees and Costs</title>
+  <meta name="description" content="Before you monitor employee internet usage, know the difference between network-level and endpoint-level capture, what HTTPS hides, and the notice duty that applies first." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/employee-internet-monitoring" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/employee-internet-monitoring" />
+  <meta property="og:title" content="Employee Internet Monitoring: What It Sees and What It Costs" />
+  <meta property="og:description" content="Before you monitor employee internet usage, know the difference between network-level and endpoint-level capture, what HTTPS hides, and the notice duty that applies first." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/employee-internet-monitoring.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-06T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-08-06T00:00:00+00:00" />
+  <meta property="article:section" content="Employee Monitoring" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Employee Internet Monitoring: What It Sees and What It Costs" />
+  <meta name="twitter:description" content="Before you monitor employee internet usage, know the difference between network-level and endpoint-level capture, what HTTPS hides, and the notice duty that applies first." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/employee-internet-monitoring.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/employee-internet-monitoring#article",
+        "headline": "Employee Internet Monitoring: What It Sees and What It Costs",
+        "description": "Before you monitor employee internet usage, know the difference between network-level and endpoint-level capture, what HTTPS hides, and the notice duty that applies first.",
+        "image": "https://workintelhub.com/images/blog/employee-internet-monitoring.png",
+        "datePublished": "2026-08-06T00:00:00+00:00",
+        "dateModified": "2026-08-06T00:00:00+00:00",
+        "author": { "@id": "https://workintelhub.com/#organization" },
+        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/employee-internet-monitoring"
+        },
+        "articleSection": "Employee Monitoring",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/employee-internet-monitoring#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Employee Monitoring", "item": "https://workintelhub.com/#topics" },
+          { "@type": "ListItem", "position": 3, "name": "Employee Internet Monitoring: What It Sees and What It Costs" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/employee-internet-monitoring#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is employee internet monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Employee internet monitoring is the recording of which internet destinations a company device or company network reaches, and sometimes how long and how often. It is one narrow slice of workplace monitoring rather than the whole of it. The important variable is where the capture happens, because a record taken at the network gateway and a record taken inside the browser on a laptop describe very different levels of detail." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between network-level and endpoint-level internet monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Network-level capture sits between the device and the internet and sees destinations, timing and volume for everything crossing that link, including traffic from phones and personal devices on the same network. Endpoint-level capture runs as an agent on a managed device, follows that device anywhere, and can see full page addresses and window titles inside the browser. Endpoint capture is more precise and considerably more invasive." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can employers see what you do on HTTPS websites?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not by default at the network level. Encryption hides the page path, the search terms, the form contents and the responses. What still leaks is the destination host name, the timing, and the amount of data moved, which is often enough to infer the subject. Two things change that: an agent on the device, which reads inside the browser, or TLS interception, which decrypts traffic in transit." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is TLS interception and should we use it?",
+            "acceptedAnswer": { "@type": "Answer", "text": "TLS interception installs a company certificate on the device so that a gateway can decrypt, inspect and re-encrypt web traffic. It turns encrypted browsing into readable content, which means banking sessions, health portals and private messages become inspectable in principle. If you deploy it, we would insist on documented exclusions for finance, health, legal and union categories, a narrow access list, short retention, and legal review before switch-on." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it legal to monitor employee internet usage in the United States?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Monitoring company systems is broadly permitted, but several states attach notice duties and internet usage is named explicitly in at least one of them. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously. Penalties run up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your obligations with counsel." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the system maintenance exemption cover security monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It is narrower than most people assume. The New York exemption covers processes that manage the type or volume of email, voicemail or internet usage performed solely for computer system maintenance or protection. The word solely is doing the work. A filter that only blocks malware domains and produces no per-person reporting looks different from a filter whose reports get read by line managers every Monday. Ask counsel where your deployment sits." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does blanket category blocking backfire?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Because the categories are wrong at the edges and the workarounds are worse than the browsing. Broad lists routinely block documentation, vendor support forums, research sources and health information people have a right to read. Employees respond by using a phone on cellular data, which moves the same activity onto a device you have no visibility into at all, and hands your security team a blind spot in exchange for a tidier report." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the security case for internet monitoring?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The strong version is narrow and specific: blocking known malicious destinations, detecting command and control traffic, and spotting large or unusual outbound transfers to unmanaged destinations. Each of those has a defined trigger, an owner in security rather than management, and a response that does not involve reading anyone's browsing history. The weak version is a general appetite for visibility, which produces a large data holding and no decisions." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can employers monitor internet usage on personal devices?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only within limits, and the limits should be tighter than the technology allows. On a personal device enrolled in a company program, restrict visibility to the managed work container and put in writing that personal traffic is out of scope. On a home network, a company has no business seeing traffic from devices it does not manage, and a network-level tool at the office will pick up personal phones unless you segment guest and personal traffic onto a separate network." }
+          },
+          {
+            "@type": "Question",
+            "name": "How should we evaluate software to monitor employee internet usage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Ask what it refuses to record before you ask what it can record. Can domain-only logging be enforced instead of full addresses? Can whole categories such as health, finance and legal be excluded permanently? Is per-person reporting off by default? Who can query a named individual, and is that query itself logged? What is the retention period per field, and is deletion automatic? A tool that cannot answer those is not ready for your workforce." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="../topics/productivity.html">Productivity</a></li>
+        <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
+        <li><a href="../topics/time-management.html">Time Management</a></li>
+        <li><a href="../topics/employee-monitoring.html">Monitoring</a></li>
+        <li><a href="../index.html#lists">Lists</a></li>
+        <li><a href="../index.html#research">Statistics</a></li>
+        <li><a href="../index.html#guides">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Employee Monitoring</span>
+      <h1>Employee Internet Monitoring: What It Sees and What It Costs</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">August 6, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/employee-internet-monitoring.png" alt="Diagram contrasting network gateway capture with endpoint agent capture of employee internet activity" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Employee internet monitoring is the recording of which internet destinations a company device
+        or company network reaches, and sometimes how long, how often, and how much data moved. A
+        decision to monitor employee internet usage is really a decision about where the capture
+        happens, because a record taken at the network gateway and a record taken by an agent inside
+        the browser describe wildly different amounts of a person's life. Most buyers never make that
+        choice consciously.
+      </p>
+      <p>
+        We are an independent publication with a published editorial policy. We sell nothing, take no
+        referral money, and have not tested any product, so this page names no vendors, quotes no
+        prices, and makes no feature claims. That leaves us free to say the thing a commission-funded
+        comparison page cannot: for a lot of organizations reading this, the right answer is a
+        filtering control owned by security and no per-person reporting at all.
+      </p>
+      <p>
+        The rest of this page covers what each capture method genuinely sees, what encryption still
+        hides, why the security case is stronger than the productivity case, and the notice duty that
+        applies before any of it.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#network-vs-endpoint">Network-level and endpoint-level capture see different things</a></li>
+          <li><a href="#https">What HTTPS hides, and what interception costs</a></li>
+          <li><a href="#two-cases">Two reasons to monitor employee internet usage, and only one holds up</a></li>
+          <li><a href="#blocking">Why blanket category blocking backfires</a></li>
+          <li><a href="#byod">Personal devices, home networks, and BYOD</a></li>
+          <li><a href="#choosing">How to evaluate software to monitor employee internet usage</a></li>
+          <li><a href="#law-and-notice">Notice duties and the employee internet monitoring rules</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="network-vs-endpoint">Network-level and endpoint-level capture see different things</h2>
+      <p>
+        Network-level capture sits between devices and the internet, usually at a gateway, firewall,
+        or DNS resolver, and logs destinations, timing, and data volume for everything crossing that
+        link. Endpoint-level capture runs as an agent on a managed device, travels with it to a
+        coffee shop or a spare bedroom, and can read inside the browser: full page addresses, tab
+        titles, time on page, sometimes the search box.
+      </p>
+      <p>
+        Those two positions have opposite failure modes. The network sees every device on the wire,
+        including a personal phone that joined the office Wi-Fi, but it goes blind the moment a laptop
+        leaves the building. The agent sees only its own device, but it follows that device
+        everywhere and never goes blind at all. Buying one while imagining the other is the most
+        common misunderstanding in this category.
+      </p>
+      <p>
+        The mechanics of how an agent hooks into a browser and an operating system are worth
+        understanding before you decide which one you want, and we cover
+        <a href="computer-monitoring-explained.html">monitoring a computer</a> at that level
+        separately. The short version is that an endpoint agent has access to almost everything, and
+        the settings screen is the only thing standing between "what it could see" and "what it does
+        see".
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Network-level capture</th>
+              <th>Endpoint-level capture</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Where it sits</td>
+              <td>Gateway, firewall, or DNS resolver</td>
+              <td>Agent installed on the device</td>
+            </tr>
+            <tr>
+              <td>Typical detail</td>
+              <td>Host name, timing, bytes moved</td>
+              <td>Full page address, tab title, time on page</td>
+            </tr>
+            <tr>
+              <td>Covers off-site work</td>
+              <td>No, unless traffic is forced through a company tunnel</td>
+              <td>Yes, wherever the device goes</td>
+            </tr>
+            <tr>
+              <td>Picks up personal devices</td>
+              <td>Yes, anything on that network</td>
+              <td>No, only the managed device</td>
+            </tr>
+            <tr>
+              <td>Sees encrypted page content</td>
+              <td>No, unless TLS is intercepted</td>
+              <td>Yes, it reads before encryption</td>
+            </tr>
+            <tr>
+              <td>Invasiveness</td>
+              <td>Moderate, and blunt</td>
+              <td>High, and precise</td>
+            </tr>
+            <tr>
+              <td>Best honest use</td>
+              <td>Blocking malicious destinations, spotting odd outbound volume</td>
+              <td>Device security posture and incident investigation with cause</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="https">What HTTPS hides, and what interception costs</h2>
+      <p>
+        At the network level, encryption hides more than most managers expect. HTTPS conceals the
+        page path, the search terms, the contents of forms, and everything the site sends back. What
+        still leaks is the destination host name, the timing, and the volume of data. That residue is
+        thinner than a browsing history and thicker than nothing, because a host name alone can
+        reveal a clinic, a debt counselor, or a job board.
+      </p>
+      <p>
+        Two things break through that wall. An agent on the device reads the page before encryption
+        happens, so it never needed to defeat anything. Or the organization deploys TLS interception,
+        installing a company certificate so a gateway can decrypt traffic, inspect it, and re-encrypt
+        it on the way out. Interception is a legitimate security control in some regulated settings
+        and it is also the single most consequential switch in this category.
+      </p>
+      <p>
+        Our position is that if you intercept, you owe people documented exclusions. Health, finance,
+        legal services, and union sites should be exempt from decryption by policy and by
+        configuration, not by the promise of a security team who has better things to do. The wider
+        principle, and the specific fields we would keep out of any collection, sits in our piece on
+        the boundaries of <a href="privacy-line-what-never-to-track.html">employee monitoring</a>.
+      </p>
+
+      <h2 id="two-cases">Two reasons to monitor employee internet usage, and only one holds up</h2>
+      <p>
+        The security case and the productivity case are usually presented together, and they should
+        be argued separately, because they need different data, different owners, and different
+        review habits. Bundling them is how organizations end up with a security control that reports
+        to a line manager.
+      </p>
+      <h3 id="security-case">The security case</h3>
+      <p>
+        The strong version is narrow: block known malicious destinations, detect command and control
+        traffic, and flag unusual outbound transfers to unmanaged destinations. Each has a defined
+        trigger, an owner in security rather than management, and a response that does not require
+        anybody to read a person's browsing history. Most of that works on domains and volumes alone,
+        without full page addresses and without decryption.
+      </p>
+      <p>
+        The weak version is a general appetite for visibility. It produces a very large data holding,
+        an unclear owner, and no decisions. If nobody can name the alert that will fire and the
+        person who will act on it, you are not building a security control, you are building an
+        archive. That distinction is the whole subject of our page on
+        <a href="user-activity-monitoring.html">user activity monitoring software</a> and where it
+        genuinely belongs.
+      </p>
+      <h3 id="productivity-case">The productivity case</h3>
+      <p>
+        The productivity case is weaker than it looks, because browsing is a poor proxy for work.
+        Research, documentation, and vendor forums all look like idle browsing in a domain log, and a
+        person who reads carefully before writing anything will always look worse than a person who
+        skims. Meanwhile the volume of legitimate digital activity keeps climbing.
+        <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday" target="_blank" rel="noopener">Microsoft's Work Trend Index</a>,
+        published June 17, 2025 from telemetry plus a survey of 31,000 knowledge workers across 31
+        markets fielded February 6 to March 24, 2025, reported that knowledge workers handle 117
+        emails a day and 153 chat messages per weekday, with message volume up 6% year over year, and
+        that they are interrupted roughly every two minutes during work hours. A browsing log drawn
+        across that pattern mostly measures fragmentation.
+      </p>
+
+      <div class="callout">
+        <h3>What we would refuse to build</h3>
+        <p>
+          The report that causes the most damage per byte is a weekly per-person list of visited
+          sites, emailed to managers. It answers no question anybody wrote down, it exposes health
+          and financial inference about named employees to an audience with no training in handling
+          it, and it converts a security tool into a performance instrument overnight. If a product
+          demonstration leads with that report, treat it as a signal about the product's assumed
+          buyer rather than as a feature.
+        </p>
+      </div>
+
+      <h2 id="blocking">Why blanket category blocking backfires</h2>
+      <p>
+        Broad category blocking creates more problems than it solves, and the failures are
+        predictable. Category lists are wrong at the edges: they block vendor support forums filed as
+        "chat", documentation hosted on a personal domain, research on a news site, and health
+        information people have every right to read on a lunch break. Each miss costs an IT ticket
+        and a small amount of goodwill.
+      </p>
+      <p>
+        The second failure is worse. When the block is broad, people route around it using a phone on
+        cellular data. The activity does not stop, it moves onto a device you cannot see, which means
+        the organization has traded genuine visibility for a tidier report. A security team that
+        pushes employees onto unmanaged devices has made the actual risk worse while making the chart
+        look better.
+      </p>
+      <p>
+        We would block on threat, not on taste. Malware, phishing, and known exfiltration
+        destinations are worth blocking automatically and permanently. Time-wasting is a management
+        conversation, and treating it as a firewall problem tends to signal distrust to everyone
+        including the people who were never the concern. If the real worry is remote teams drifting,
+        the answer is in how you set expectations, which is the subject of our guide to
+        <a href="how-to-monitor-employees-working-from-home.html">how to monitor employees working from home</a>.
+      </p>
+
+      <h2 id="byod">Personal devices, home networks, and BYOD</h2>
+      <p>
+        Personal devices are where internet monitoring most often crosses a line without anyone
+        deciding to. Enroll a personal phone in a company program and the technical capability to see
+        its traffic frequently arrives whether or not you asked for it. Our rule is to restrict
+        visibility to a managed work container and to state in writing that personal traffic is out
+        of scope, then to configure the tool so that the statement is true rather than aspirational.
+      </p>
+      <p>
+        Home networks deserve a firmer line. A company has no business seeing traffic from devices it
+        does not manage, and a full tunnel that forces all traffic from a home laptop through a
+        corporate gateway will sweep up personal browsing done on a work machine at 9 pm. Split
+        tunneling and a documented list of destinations that never route through the company are the
+        practical fix.
+      </p>
+      <p>
+        There is an office version of the same mistake. A network-level tool logs everything on the
+        wire, including personal phones that joined the staff Wi-Fi. Unless you segment personal and
+        guest traffic onto a separate network, you are collecting employees' personal browsing and
+        will not find out until someone asks you for the log. Segment first, then monitor what is
+        left.
+      </p>
+
+      <h2 id="choosing">How to evaluate software to monitor employee internet usage</h2>
+      <p>
+        Evaluate on refusals rather than capabilities. Every product in this category can record more
+        than you should collect, so the useful questions are about what it can be made to stop doing,
+        and whether that restriction is enforced by the software or merely promised in a policy
+        document nobody reads.
+      </p>
+      <ol>
+        <li>Can logging be limited to domains rather than full page addresses, and enforced centrally?</li>
+        <li>Can whole categories such as health, finance, legal, and union sites be excluded permanently from capture and from decryption?</li>
+        <li>Is per-person reporting off by default, and can it be disabled in a way managers cannot reverse?</li>
+        <li>Who can query a named individual, by role, and is every query itself logged?</li>
+        <li>What is the retention period per field, and is deletion automatic rather than a manual chore?</li>
+        <li>How does an employee see their own record and challenge an entry they believe is wrong?</li>
+        <li>Does the product distinguish company-owned from personally-owned devices, technically and not just in a label?</li>
+        <li>On the review date, what incident or decision will we point to as justification for keeping it?</li>
+      </ol>
+      <p>
+        Set expectations about how this will land, too. The
+        <a href="https://www.pewresearch.org/internet/2023/04/20/americans-views-on-use-of-ai-to-monitor-and-evaluate-workers/" target="_blank" rel="noopener">Pew Research Center</a>
+        reported in April 2023, from American Trends Panel Wave 119, that 51% of US adults oppose
+        employers using AI to record what people do on their work computers, with a wide age gap
+        underneath the average: 64% of adults aged 18 to 29 opposed it against 38% of adults 65 and
+        over. If your workforce skews young, plan against your own population rather than the
+        national figure.
+      </p>
+      <p>
+        Check the base of any number a salesperson puts in front of you, too, because this subject
+        attracts figures that have been passed between blog posts until nobody can find the original
+        survey. We keep a set of verified
+        <a href="employee-monitoring-statistics.html">employee monitoring statistics</a> with
+        samples and fielding dates attached for exactly that reason.
+      </p>
+
+      <h2 id="law-and-notice">Notice duties and the employee internet monitoring rules</h2>
+      <p>
+        Internet usage is named explicitly in the statute US employers most often have to satisfy,
+        which makes the notice question unusually clear here. New York Civil Rights Law section 52-c
+        requires employers who monitor telephone conversations, email, or internet usage by an
+        electronic device to give prior written notice upon hiring to all employees subject to
+        monitoring. The notice must be in writing or electronic form and acknowledged by the
+        employee, and it must be posted conspicuously where affected employees can see it. Penalties
+        run up to $500 for a first offense, $1,000 for a second, and $3,000 for a third and each
+        subsequent offense.
+      </p>
+      <p>
+        The exemption is narrower than people hope. It covers processes managing the type or volume
+        of email, voicemail, or internet usage performed solely for computer system maintenance or
+        protection. The word "solely" carries the weight. A filter that blocks malicious domains and
+        produces no per-person reporting looks very different from one whose reports are read by line
+        managers on Monday mornings. Read
+        <a href="https://www.nysenate.gov/legislation/laws/CVR/52-C*2" target="_blank" rel="noopener">the statute</a>
+        rather than a summary, this one included, and ask counsel where your deployment sits.
+      </p>
+      <p>
+        We describe New York because it is specific and checkable, not because it is universal.
+        Monitoring law varies by state, the duty follows the employee's location rather than the
+        company's, and a distributed team can create obligations in a dozen states at once. If you
+        employ staff in the EU, GDPR imposes a separate set of requirements beyond anything here.
+        Whatever the jurisdiction, the document that does the work is a written
+        <a href="write-monitoring-policy-employees-sign.html">employee monitoring policy</a> naming
+        the purpose, the fields, the access list, and the retention period, signed before the first
+        packet is logged.
+      </p>
+      <p>
+        One more consideration that is not legal but is real. The American Psychological
+        Association's 2024 Work in America survey, conducted by The Harris Poll among 2,027 employed US adults between March 25 and April 3,
+        2024 with a margin of error of plus or minus 3.1 percentage points, found that 43% of workers
+        report feeling tense or stressed out during the workday, rising to 61% among those reporting
+        lower psychological safety. That association is correlational rather than causal, and it is
+        the environment any decision to monitor employee internet usage lands in.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Where the capture happens decides how invasive it is. Network-level sees destinations and volumes; an endpoint agent reads inside the browser and follows the device anywhere.</li>
+        <li>HTTPS hides page paths, search terms, and content from network capture. Host names, timing, and data volume still leak, and TLS interception removes the wall entirely.</li>
+        <li>The security case is narrow and defensible: block malicious destinations, detect odd outbound transfers. The productivity case is weak, because research and skimming look identical in a log.</li>
+        <li>Blanket category blocking pushes activity onto personal phones, which trades real visibility for a cleaner report and makes the underlying risk worse.</li>
+        <li>New York Civil Rights Law section 52-c names internet usage directly and requires prior written notice, acknowledged and posted, with penalties up to $3,000. Law varies by state, so confirm with counsel.</li>
+        <li>Pew found in April 2023 that 51% of US adults oppose employers using AI to record what people do on work computers, rising to 64% among adults aged 18 to 29.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What is employee internet monitoring?</summary>
+          <p>Employee internet monitoring is the recording of which internet destinations a company device or company network reaches, and sometimes how long and how often. It is one narrow slice of workplace monitoring rather than the whole of it. The important variable is where the capture happens, because a record taken at the network gateway and a record taken inside the browser on a laptop describe very different levels of detail.</p>
+        </details>
+        <details>
+          <summary>What is the difference between network-level and endpoint-level internet monitoring?</summary>
+          <p>Network-level capture sits between the device and the internet and sees destinations, timing and volume for everything crossing that link, including traffic from phones and personal devices on the same network. Endpoint-level capture runs as an agent on a managed device, follows that device anywhere, and can see full page addresses and window titles inside the browser. Endpoint capture is more precise and considerably more invasive.</p>
+        </details>
+        <details>
+          <summary>Can employers see what you do on HTTPS websites?</summary>
+          <p>Not by default at the network level. Encryption hides the page path, the search terms, the form contents and the responses. What still leaks is the destination host name, the timing, and the amount of data moved, which is often enough to infer the subject. Two things change that: an agent on the device, which reads inside the browser, or TLS interception, which decrypts traffic in transit.</p>
+        </details>
+        <details>
+          <summary>What is TLS interception and should we use it?</summary>
+          <p>TLS interception installs a company certificate on the device so that a gateway can decrypt, inspect and re-encrypt web traffic. It turns encrypted browsing into readable content, which means banking sessions, health portals and private messages become inspectable in principle. If you deploy it, we would insist on documented exclusions for finance, health, legal and union categories, a narrow access list, short retention, and legal review before switch-on.</p>
+        </details>
+        <details>
+          <summary>Is it legal to monitor employee internet usage in the United States?</summary>
+          <p>Monitoring company systems is broadly permitted, but several states attach notice duties and internet usage is named explicitly in at least one of them. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously. Penalties run up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your obligations with counsel.</p>
+        </details>
+        <details>
+          <summary>Does the system maintenance exemption cover security monitoring?</summary>
+          <p>It is narrower than most people assume. The New York exemption covers processes that manage the type or volume of email, voicemail or internet usage performed solely for computer system maintenance or protection. The word solely is doing the work. A filter that only blocks malware domains and produces no per-person reporting looks different from a filter whose reports get read by line managers every Monday. Ask counsel where your deployment sits.</p>
+        </details>
+        <details>
+          <summary>Why does blanket category blocking backfire?</summary>
+          <p>Because the categories are wrong at the edges and the workarounds are worse than the browsing. Broad lists routinely block documentation, vendor support forums, research sources and health information people have a right to read. Employees respond by using a phone on cellular data, which moves the same activity onto a device you have no visibility into at all, and hands your security team a blind spot in exchange for a tidier report.</p>
+        </details>
+        <details>
+          <summary>What is the security case for internet monitoring?</summary>
+          <p>The strong version is narrow and specific: blocking known malicious destinations, detecting command and control traffic, and spotting large or unusual outbound transfers to unmanaged destinations. Each of those has a defined trigger, an owner in security rather than management, and a response that does not involve reading anyone's browsing history. The weak version is a general appetite for visibility, which produces a large data holding and no decisions.</p>
+        </details>
+        <details>
+          <summary>Can employers monitor internet usage on personal devices?</summary>
+          <p>Only within limits, and the limits should be tighter than the technology allows. On a personal device enrolled in a company program, restrict visibility to the managed work container and put in writing that personal traffic is out of scope. On a home network, a company has no business seeing traffic from devices it does not manage, and a network-level tool at the office will pick up personal phones unless you segment guest and personal traffic onto a separate network.</p>
+        </details>
+        <details>
+          <summary>How should we evaluate software to monitor employee internet usage?</summary>
+          <p>Ask what it refuses to record before you ask what it can record. Can domain-only logging be enforced instead of full addresses? Can whole categories such as health, finance and legal be excluded permanently? Is per-person reporting off by default? Who can query a named individual, and is that query itself logged? What is the retention period per field, and is deletion automatic? A tool that cannot answer those is not ready for your workforce.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="computer-monitoring-explained.html">What Computer Monitoring Actually Is, and How It Works</a></li>
+          <li><a href="privacy-line-what-never-to-track.html">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
+          <li><a href="how-to-monitor-employees-working-from-home.html">How to Monitor Employees Working From Home Without Wrecking Trust</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+  <!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="../topics/productivity.html">Productivity</a></li>
+            <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
+            <li><a href="../topics/time-management.html">Time Management</a></li>
+            <li><a href="../topics/employee-monitoring.html">Employee Monitoring</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="../index.html#latest">Latest articles</a></li>
+            <li><a href="../topics/index.html">All topics</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../editorial-policy.html">Editorial policy</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="../privacy-policy.html">Privacy</a></li>
+            <li><a href="../terms.html">Terms</a></li>
+            <li><a href="../feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../editorial-policy.html">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+</body>
+</html>

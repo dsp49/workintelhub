@@ -5,13 +5,85 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
       <title>WorkIntel Hub</title>
       <link>https://workintelhub.com/</link>
     </image>
+
+    <item>
+      <title>Workplace Analytics Without Turning It Into Surveillance</title>
+      <link>https://workintelhub.com/blogs/workplace-analytics-software</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/workplace-analytics-software</guid>
+      <description>Workplace analytics software and employee monitoring run on much the same data. The dividing line is aggregation and purpose. Here is where to draw it, and the design rules that hold it.</description>
+      <category>Productivity</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>User Activity Monitoring: What It Captures and Who It Is For</title>
+      <link>https://workintelhub.com/blogs/user-activity-monitoring</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/user-activity-monitoring</guid>
+      <description>User activity monitoring software came from security, not productivity. What it captures, who it is really for, and why buying it to manage people backfires.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Staff Monitoring Programs: What They Do and What to Decide First</title>
+      <link>https://workintelhub.com/blogs/staff-monitoring-programs</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/staff-monitoring-programs</guid>
+      <description>A staff monitoring program is a set of decisions, not a purchase. Purpose, scope, notice, retention, access, and a review date, plus what US law requires.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Remote and Desktop Monitoring Software: How the Categories Differ</title>
+      <link>https://workintelhub.com/blogs/remote-desktop-monitoring-software</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/remote-desktop-monitoring-software</guid>
+      <description>Remote computer monitoring software describes four unrelated product categories. Here is how to tell them apart, what buying the wrong one costs, and what changes when the desktop is at home.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>How to Monitor Employees Working From Home Without Wrecking Trust</title>
+      <link>https://workintelhub.com/blogs/how-to-monitor-employees-working-from-home</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/how-to-monitor-employees-working-from-home</guid>
+      <description>How to monitor employees working from home without wrecking trust: what changes at home, what to measure instead of activity, and what US law requires first.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Employee Internet Monitoring: What It Sees and What It Costs</title>
+      <link>https://workintelhub.com/blogs/employee-internet-monitoring</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-internet-monitoring</guid>
+      <description>Before you monitor employee internet usage, know the difference between network-level and endpoint-level capture, what HTTPS hides, and the notice duty that applies first.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Computer Screen Monitoring: Screenshots, Recording, and the Line</title>
+      <link>https://workintelhub.com/blogs/computer-screen-monitoring</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/computer-screen-monitoring</guid>
+      <description>Computer screen monitoring software is the most invasive common capture type. What screenshots and recording pick up by accident, why redaction only half works, and the narrow case that survives.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>What Computer Monitoring Actually Is, and How It Works</title>
+      <link>https://workintelhub.com/blogs/computer-monitoring-explained</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/computer-monitoring-explained</guid>
+      <description>Monitoring a computer at work, explained: how endpoint agents run, what gets captured, what stays hidden, and what US law requires first.</description>
+      <category>Employee Monitoring</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
 
     <item>
       <title>21 Productivity Tips That Hold Up in a Real Workweek</title>
@@ -26,8 +98,8 @@
       <title>12 Employee Retention Strategies a Manager Can Actually Run</title>
       <link>https://workintelhub.com/blogs/employee-retention-strategies</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-retention-strategies</guid>
-      <description>12 employee retention strategies a line manager can run without budget authority, each with the situation where it fails, plus what to escalate when the real issue is pay.</description>
-      <category>Guides</category>
+      <description>12 employee retention strategies a line manager can run without budget authority, each with the situation where it fails.</description>
+      <category>Engagement</category>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -35,8 +107,8 @@
       <title>11 Employee Engagement Ideas for Remote Teams</title>
       <link>https://workintelhub.com/blogs/employee-engagement-ideas-remote-teams</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-engagement-ideas-remote-teams</guid>
-      <description>11 employee engagement ideas work from home teams can actually use, built on written context, asynchronous recognition and time zone fairness, each with the situation where it fails.</description>
-      <category>Guides</category>
+      <description>11 employee engagement ideas remote teams can use, built on written context, async recognition and time zone fairness, each with where it fails.</description>
+      <category>Engagement</category>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -44,8 +116,8 @@
       <title>17 Employee Engagement Ideas That Do Not Feel Forced</title>
       <link>https://workintelhub.com/blogs/employee-engagement-ideas</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-engagement-ideas</guid>
-      <description>17 employee engagement ideas that change the conditions of the work rather than the snack budget, each with the situation where it fails, plus honest low-cost morale ideas.</description>
-      <category>Guides</category>
+      <description>17 employee engagement ideas that change the conditions of the work, not the snack budget, each with the situation where it fails.</description>
+      <category>Engagement</category>
       <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -53,7 +125,7 @@
       <title>Time Theft at Work in 2026: What the Data Actually Shows</title>
       <link>https://workintelhub.com/blogs/time-theft-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/time-theft-statistics</guid>
-      <description>Time theft is paid time an employee did not work. A plain definition, whether time theft is illegal in the US, what employee time theft punishment usually looks like, and why the popular statistics do not hold up.</description>
+      <description>What time theft is, whether it is illegal in the US, what punishment usually looks like, and why the popular statistics do not hold up.</description>
       <category>Time Tracking</category>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
     </item>
@@ -62,7 +134,7 @@
       <title>Remote Work Productivity Statistics in 2026</title>
       <link>https://workintelhub.com/blogs/remote-work-productivity-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/remote-work-productivity-statistics</guid>
-      <description>Remote work productivity statistics from named primary sources: Pew's January 2025 US data, a randomized hybrid work trial published in Nature in 2024, Microsoft telemetry, and Gallup, with what each one does and does not prove.</description>
+      <description>Remote work productivity statistics from primary sources: Pew 2025, a randomized hybrid trial in Nature, Microsoft telemetry and Gallup.</description>
       <category>Productivity</category>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
     </item>
@@ -71,7 +143,7 @@
       <title>Employee Monitoring Statistics in 2026 US Managers Can Actually Trust</title>
       <link>https://workintelhub.com/blogs/employee-monitoring-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-monitoring-statistics</guid>
-      <description>Employee monitoring statistics from named primary sources only. Pew, Microsoft, and New York law, with samples and fielding dates, and what each number means before you switch anything on.</description>
+      <description>Employee monitoring statistics from named primary sources only: Pew, Microsoft and New York law, with samples and fielding dates.</description>
       <category>Employee Monitoring</category>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
     </item>
@@ -80,8 +152,8 @@
       <title>Employee Burnout Statistics in 2026 and What They Mean for Managers</title>
       <link>https://workintelhub.com/blogs/employee-burnout-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-burnout-statistics</guid>
-      <description>Employee burnout statistics from the WHO, the APA 2024 Work in America Survey, Gallup and Microsoft, with samples and dates, and what each number should change about how you manage workload.</description>
-      <category>Guides</category>
+      <description>Employee burnout statistics from the WHO, APA, Gallup and Microsoft, with samples and dates, and what each number should change about workload.</description>
+      <category>Burnout</category>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -116,7 +188,7 @@
       <title>Employee Productivity Monitoring: An Ethical Playbook</title>
       <link>https://workintelhub.com/blogs/ethical-employee-monitoring-playbook</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/ethical-employee-monitoring-playbook</guid>
-      <description>How to run employee productivity monitoring responsibly: four tests every proposal should pass, what US notice law expects before you switch anything on, and a rollout order that keeps trust.</description>
+      <description>How to run employee productivity monitoring responsibly: four tests every proposal should pass, and what US notice law expects first.</description>
       <category>Employee Monitoring</category>
       <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
     </item>
@@ -152,7 +224,7 @@
       <title>The Privacy Line: What Employee Monitoring Should Never Collect</title>
       <link>https://workintelhub.com/blogs/privacy-line-what-never-to-track</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/privacy-line-what-never-to-track</guid>
-      <description>Six kinds of data employee monitoring should never collect, why each one costs more in trust than it returns in insight, and a four-question test for anything new.</description>
+      <description>Six kinds of data employee monitoring should never collect, why each costs more in trust than it returns, and a test for anything new.</description>
       <category>Employee Monitoring</category>
       <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
     </item>
@@ -162,7 +234,7 @@
       <link>https://workintelhub.com/blogs/run-productivity-audit-one-week</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/run-productivity-audit-one-week</guid>
       <description>Run a productivity audit in one week: one question on Monday, evidence from records you already keep, and two or three agreed changes by Friday.</description>
-      <category>Guides</category>
+      <category>Productivity</category>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -171,7 +243,7 @@
       <link>https://workintelhub.com/blogs/roll-out-time-tracking-without-losing-trust</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/roll-out-time-tracking-without-losing-trust</guid>
       <description>A time tracking rollout plan for US managers: written notice first, policy before tool, a real pilot, and a ninety-day review.</description>
-      <category>Guides</category>
+      <category>Time Tracking</category>
       <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -180,7 +252,7 @@
       <link>https://workintelhub.com/blogs/focus-blocks-busy-calendar</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/focus-blocks-busy-calendar</guid>
       <description>Focus blocks fail because canceling one costs nothing. Here is how to set focus blocks with a real cost to move, so they hold in a busy calendar.</description>
-      <category>Guides</category>
+      <category>Time Management</category>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -188,8 +260,8 @@
       <title>How to Write an Employee Monitoring Policy</title>
       <link>https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</guid>
-      <description>A section-by-section guide to writing an employee monitoring policy that meets US notice rules, answers the question staff actually have, and commits you to real limits.</description>
-      <category>Guides</category>
+      <description>A section-by-section guide to writing an employee monitoring policy that meets US notice rules and commits you to real limits.</description>
+      <category>Employee Monitoring</category>
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -198,7 +270,7 @@
       <link>https://workintelhub.com/blogs/spot-burnout-in-the-data</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/spot-burnout-in-the-data</guid>
       <description>The signs of employee burnout show up in workload data long before an exit interview. What to watch for, and the response that actually helps.</description>
-      <category>Guides</category>
+      <category>Burnout</category>
       <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
     </item>
 
@@ -207,7 +279,7 @@
       <link>https://workintelhub.com/blogs/report-team-capacity-to-leadership</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/report-team-capacity-to-leadership</guid>
       <description>How to report team capacity to leadership: separate headcount from capacity, present a tradeoff instead of a complaint, and keep it to one page.</description>
-      <category>Guides</category>
+      <category>Productivity</category>
       <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
     </item>
 

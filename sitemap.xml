@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://workintelhub.com/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,49 +15,49 @@
 
   <url>
     <loc>https://workintelhub.com/topics/burnout-and-wellbeing.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/employee-monitoring.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/engagement-and-retention.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/productivity.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/time-management.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://workintelhub.com/topics/time-tracking.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -95,6 +95,86 @@
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/workplace-analytics-software</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/workplace-analytics-software.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/user-activity-monitoring</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/user-activity-monitoring.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/staff-monitoring-programs</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/staff-monitoring-programs.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/remote-desktop-monitoring-software</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/remote-desktop-monitoring-software.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/how-to-monitor-employees-working-from-home</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/how-to-monitor-employees-working-from-home.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/employee-internet-monitoring</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/employee-internet-monitoring.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/computer-screen-monitoring</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/computer-screen-monitoring.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://workintelhub.com/blogs/computer-monitoring-explained</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://workintelhub.com/images/blog/computer-monitoring-explained.png</image:loc>
+    </image:image>
   </url>
 
   <url>
