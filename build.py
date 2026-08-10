@@ -47,6 +47,8 @@ def pages():
             "contact.html", "privacy-policy.html", "terms.html")]
     out += sorted(glob.glob(os.path.join(ROOT, "blogs", "*.html")))
     out += sorted(glob.glob(os.path.join(ROOT, "topics", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "tools", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "design", "*.html")))
     return [p for p in out if os.path.exists(p)]
 
 
@@ -85,6 +87,88 @@ def splice(html, name, rendered, fallback_pattern):
     return html, "MISSING"
 
 
+
+# --- vendor homepage screenshots -------------------------------------------
+# All or nothing, on purpose. A comparison page that shows a screenshot for some
+# products and a blank frame for others reads as favouritism, and a missing file
+# renders as a broken image. So the figures appear only once every tool has one.
+# Drop raw captures into images/tools/screenshots/_inbox/ and run
+# normalize_shots.py, then run this script again.
+
+TOOLS = [
+    ("activtrak", "ActivTrak"), ("connecteam", "Connecteam"),
+    ("controlio", "Controlio"), ("desktime", "DeskTime"),
+    ("intelogos", "Intelogos"), ("monitask", "Monitask"),
+    ("prodoscore", "Prodoscore"), ("timechamp", "Time Champ"),
+    ("veriato", "Veriato"), ("webwork", "WebWork Time Tracker"),
+]
+SHOT_DIR = os.path.join(ROOT, "images", "tools", "screenshots")
+SHOT_PAGE = os.path.join(ROOT, "tools", "best-employee-monitoring-software.html")
+
+FIGURE = '''<figure class="tool-shot">
+            <img src="../images/tools/screenshots/%s.webp" alt="%s homepage"
+                 width="1280" height="640" loading="lazy" decoding="async" />
+            <figcaption>%s homepage, captured August 2026.</figcaption>
+          </figure>'''
+
+INTRO = '''Each card opens with the vendor's own homepage as it looked in August 2026. Those are
+        marketing pages, not the product interface, so treat them as a look at how each company
+        pitches itself rather than as evidence of what the software does.'''
+
+NL = chr(10)
+
+
+def shot_path(slug):
+    return os.path.join(SHOT_DIR, slug + ".webp")
+
+
+def have_all_shots():
+    return all(os.path.exists(shot_path(slug)) for slug, _ in TOOLS)
+
+
+def fill(html, name, body, indent):
+    """Set the contents of a <!-- SHOT:name --> ... <!-- /SHOT:name --> region."""
+    open_tag = "<!-- SHOT:%s -->" % name
+    close_tag = "<!-- /SHOT:%s -->" % name
+    pat = re.compile(re.escape(open_tag) + r".*?" + re.escape(close_tag), re.S)
+    if body:
+        inner = NL + indent + body + NL + indent
+    else:
+        inner = NL + indent
+    return pat.sub(lambda _: open_tag + inner + close_tag, html, count=1)
+
+
+def sync_shots(check):
+    """Show the screenshot figures only when every tool has an image on disk."""
+    if not os.path.exists(SHOT_PAGE):
+        return None
+    original = read(SHOT_PAGE)
+    html = original
+    on = have_all_shots()
+    for slug, label in TOOLS:
+        body = FIGURE % (slug, label, label) if on else ""
+        html = fill(html, slug, body, " " * 10)
+    html = fill(html, "intro", INTRO if on else "", " " * 8)
+    moved = html != original
+    if moved and not check:
+        write(SHOT_PAGE, html)
+    have = sum(1 for slug, _ in TOOLS if os.path.exists(shot_path(slug)))
+    return on, have, len(TOOLS), moved
+
+
+def report_shots(shots, check):
+    if not shots:
+        return
+    on, have, want, moved = shots
+    if on:
+        state = "figures shown"
+    else:
+        state = "figures hidden until all %d exist" % want
+    if moved:
+        state += ", page needs rebuild" if check else ", page updated"
+    print("screenshots: %d of %d present, %s" % (have, want, state))
+
+
 def main():
     check = "--check" in sys.argv
     header = read(os.path.join(ROOT, "partials", "header.html"))
@@ -107,12 +191,16 @@ def main():
                 write(path, html)
                 changed += 1
 
+    shots = sync_shots(check)
+
     total = len(pages())
     if check:
         print("checked %d pages" % total)
         print("out of date: %s" % (", ".join(stale) if stale else "none"))
+        report_shots(shots, check)
     else:
         print("built %d of %d pages" % (changed, total))
+        report_shots(shots, check)
     if missing:
         print("COULD NOT PLACE BLOCK:")
         for m in missing:

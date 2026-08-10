@@ -14,3 +14,7 @@ Thumbs.db
 # third-party brand and product material. Keep them out of the build.
 agents/
 commands/
+
+# staging area for raw vendor screenshots before normalization
+images/tools/screenshots/_inbox/
+__pycache__/

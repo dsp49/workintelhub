@@ -457,6 +457,219 @@ img.card-media {
 }
 
 /* ==========================================================================
+   Listicle / roundup components
+   ========================================================================== */
+
+/* Shortlist: the numbered picks up front so a reader can skip the reviews */
+.shortlist { counter-reset: pick; list-style: none; margin: 0 0 2rem; }
+.shortlist li {
+  counter-increment: pick;
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.shortlist li::before {
+  content: counter(pick);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--accent);
+  background: var(--accent-tint);
+  border-radius: 6px;
+  height: 1.9rem;
+  display: grid;
+  place-items: center;
+}
+.shortlist--rest { counter-reset: pick 3; }
+.shortlist b { color: var(--ink); font-weight: 700; }
+.shortlist .why { display: block; color: var(--muted); font-size: 0.92rem; margin-top: 0.15rem; }
+
+/* Trust block */
+.trust-box {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0;
+}
+.trust-box h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
+.trust-box p:last-child { margin-bottom: 0; }
+
+/* One reviewed item */
+.tool-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 1.75rem 0;
+  overflow: hidden;
+}
+.tool-card__head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.tool-card__name { margin: 0; font-size: 1.25rem; flex: 1 1 auto; }
+.tool-card__best {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  background: #fdf4e0;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  white-space: nowrap;
+}
+.tool-card__body { padding: 1.4rem; }
+.tool-card__body h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 1.4rem 0 0.5rem;
+}
+.tool-card__body > h3:first-child { margin-top: 0; }
+.tool-card__body p { margin-bottom: 0.9rem; }
+.tool-card__body ul { margin: 0 0 0.9rem 1.15rem; }
+
+/* Pros and cons, side by side */
+.proscons { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1.25rem; margin-top: 1.25rem; }
+.proscons > div { background: var(--surface); border-radius: var(--radius); padding: 1rem 1.15rem; }
+.proscons h3 { margin-top: 0; }
+.proscons ul { list-style: none; margin: 0; }
+.proscons li { position: relative; padding-left: 1.4rem; margin-bottom: 0.45rem; font-size: 0.94rem; }
+.proscons li::before { position: absolute; left: 0; font-weight: 800; }
+.proscons .pro li::before { content: "+"; color: #157a4a; }
+.proscons .con li::before { content: "−"; color: #b4453a; }
+
+/* Vendor tile shown beside a tool name, in cards and comparison tables */
+.tool-tile {
+  flex: 0 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  object-fit: contain;
+  vertical-align: middle;
+}
+td .tool-tile { margin-right: 0.5rem; }
+
+/* Three highlighted picks sitting above the full alphabetical list */
+.picks { margin: 1.5rem 0 2rem; }
+.picks__lead { color: var(--muted); font-size: 0.95rem; margin: 0 0 1rem; }
+.picks__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 1rem;
+}
+.pick {
+  position: relative;
+  display: block;
+  padding: 1.5rem 1.15rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.pick::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.pick:hover,
+.pick:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(11, 70, 224, 0.10);
+  transform: translateY(-2px);
+}
+.pick__head { display: flex; align-items: center; gap: 0.55rem; margin-bottom: 0.6rem; }
+.pick__num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 6px;
+  background: var(--accent-tint);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+.pick--lead .pick__num { background: var(--accent); color: var(--white); }
+.pick--lead { border-color: var(--accent); background: linear-gradient(180deg, var(--accent-tint) 0%, var(--white) 62%); }
+.pick__logo {
+  flex: 0 0 auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  object-fit: contain;
+}
+.pick__name { margin: 0; font-size: 1.02rem; }
+.pick__tag {
+  display: block;
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.pick__why { margin: 0 0 0.8rem; font-size: 0.89rem; color: var(--body); }
+.pick__more { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+.pick:hover .pick__more { text-decoration: underline; }
+
+/* Small fact strip under a tool name */
+.tool-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.tool-meta span {
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  color: var(--muted);
+}
+.tool-meta b { color: var(--ink); font-weight: 600; }
+
+/* Vendor homepage screenshot inside a tool card */
+.tool-shot { margin: 0 0 1.3rem; }
+.tool-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+}
+.tool-shot figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* Mockup banner, so a template can never be mistaken for a published review */
+.mockup-note {
+  background: #fff4e5;
+  border: 1px solid #f0c987;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.93rem;
+  color: #6b4a12;
+}
+.mockup-note strong { color: #5a3d0c; }
+
+/* ==========================================================================
    Article page
    ========================================================================== */
 .article { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
@@ -511,6 +724,42 @@ img.card-media {
 .toc li:last-child { margin-bottom: 0; }
 .toc a { color: var(--ink); font-weight: 500; font-size: 0.94rem; }
 .toc a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ---------- TOC as a sticky sidebar on wide screens ----------
+   Below the breakpoint the table of contents stays inline exactly as before.
+   Above it, the article becomes a two-column grid and the TOC moves into the
+   right gutter, sticking as the reader scrolls. No markup change needed: the
+   TOC is already a direct child of .article. */
+@media (min-width: 1400px) {
+  .article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    column-gap: 3.25rem;
+    max-width: 1320px;
+  }
+  /* everything stays in the reading column ... */
+  .article > * { grid-column: 1; }
+  /* inline-level children must not stretch to fill the grid track */
+  .article > .tag,
+  .article > .back-link,
+  .article > figure { justify-self: start; }
+  /* ... except the TOC, which occupies the gutter and sticks */
+  .article > nav.toc {
+    grid-column: 2;
+    grid-row: 1 / span 999;
+    align-self: start;
+    position: sticky;
+    top: 92px;
+    margin: 0;
+    padding: 1.1rem 1.2rem;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  .article > nav.toc h2 { margin-bottom: 0.7rem; }
+  .article > nav.toc ol { padding-left: 1.05rem; }
+  .article > nav.toc li { margin-bottom: 0.55rem; }
+  .article > nav.toc a { font-size: 0.88rem; line-height: 1.35; }
+}
 
 /* Anchor targets must clear the sticky header */
 .article h2[id], .article h3[id] { scroll-margin-top: 90px; }
