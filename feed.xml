@@ -5,13 +5,22 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
       <title>WorkIntel Hub</title>
       <link>https://workintelhub.com/</link>
     </image>
+
+    <item>
+      <title>Time Management Tools, Sorted by the Problem They Solve</title>
+      <link>https://workintelhub.com/blogs/time-management-tools</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-management-tools</guid>
+      <description>Time management tools sorted by the problem they solve: diagnose your symptom, pick the right category, and evaluate any app. No products named, no affiliate money.</description>
+      <category>Time Management</category>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
 
     <item>
       <title>Workplace Analytics Without Turning It Into Surveillance</title>
