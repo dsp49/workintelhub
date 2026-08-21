@@ -3,6 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
+    <loc>https://workintelhub.com/blogs/how-to-improve-employee-productivity</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://workintelhub.com/</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -14,21 +20,21 @@
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/burnout-and-wellbeing.html</loc>
+    <loc>https://workintelhub.com/topics/burnout-and-wellbeing</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/employee-monitoring.html</loc>
+    <loc>https://workintelhub.com/topics/employee-monitoring</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/engagement-and-retention.html</loc>
+    <loc>https://workintelhub.com/topics/engagement-and-retention</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -42,56 +48,56 @@
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/productivity.html</loc>
+    <loc>https://workintelhub.com/topics/productivity</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/time-management.html</loc>
+    <loc>https://workintelhub.com/topics/time-management</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/topics/time-tracking.html</loc>
+    <loc>https://workintelhub.com/topics/time-tracking</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/about.html</loc>
+    <loc>https://workintelhub.com/about</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/editorial-policy.html</loc>
+    <loc>https://workintelhub.com/editorial-policy</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/contact.html</loc>
+    <loc>https://workintelhub.com/contact</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/privacy-policy.html</loc>
+    <loc>https://workintelhub.com/privacy-policy</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://workintelhub.com/terms.html</loc>
+    <loc>https://workintelhub.com/terms</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

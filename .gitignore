@@ -18,3 +18,6 @@ commands/
 # staging area for raw vendor screenshots before normalization
 images/tools/screenshots/_inbox/
 __pycache__/
+
+# keyword research: competitor data, public repo, keep out
+research/

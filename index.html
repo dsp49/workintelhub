@@ -186,6 +186,16 @@
 
           <div class="feature-side">
             <article class="card">
+              <a href="blogs/how-to-improve-employee-productivity.html"><img class="card-media" src="images/blog/how-to-improve-employee-productivity.png" alt="A working week rearranged so that scattered meetings give way to protected blocks of uninterrupted time" width="1200" height="630" loading="lazy" decoding="async" /></a>
+              <div class="card-body">
+                <span class="tag">Productivity</span>
+                <h3><a href="blogs/how-to-improve-employee-productivity.html">How to Improve Employee Productivity</a></h3>
+                <p>Nine levers that change the productivity ratio, ordered by how fast they act, with the evidence behind each and how to tell it worked.</p>
+                <span class="meta">August 21, 2026 &middot; 9 min read</span>
+              </div>
+            </article>
+
+            <article class="card">
               <a href="blogs/time-tracking-employees-support.html"><img class="card-media" src="images/blog/time-tracking-employees-support.png" alt="A remote worker reviewing their own weekly time record on a laptop at a home desk" width="1200" height="630" loading="lazy" decoding="async" /></a>
               <div class="card-body">
                 <span class="tag tag-gold">Time Tracking</span>
@@ -227,10 +237,18 @@
           </p>
         </div>
         <div>
-          <form class="subscribe-form" onsubmit="return false;">
-            <input type="email" placeholder="you@company.com" aria-label="Email address" required />
+          <form class="subscribe-form" id="subscribe-form" novalidate>
+            <label class="visually-hidden" for="subscribe-email">Email address</label>
+            <input type="email" id="subscribe-email" name="email" placeholder="you@company.com"
+                   autocomplete="email" required />
+            <!-- Left empty by humans, filled by bots. Hidden from both sight and screen readers. -->
+            <div class="hp" aria-hidden="true">
+              <label for="subscribe-website">Leave this field empty</label>
+              <input type="text" id="subscribe-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
             <button class="btn btn-invert" type="submit">Subscribe</button>
           </form>
+          <p class="subscribe-status" role="status" aria-live="polite"></p>
           <p class="fineprint">Join managers who want to measure work without micromanaging it.</p>
         </div>
       </div>
@@ -591,6 +609,61 @@
       if (q) window.open('https://www.google.com/search?q=' + encodeURIComponent('site:workintelhub.com ' + q), '_blank');
       return false;
     }
+  </script>
+  <script>
+    (function () {
+      var form = document.getElementById("subscribe-form");
+      if (!form) return;
+      var status = document.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = document.getElementById("subscribe-email");
+      var label = button.textContent;
+
+      function say(msg, ok) {
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false);
+          input.focus();
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Subscribing...";
+        say("");
+
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            email: email,
+            website: form.website.value,
+            source: location.pathname
+          })
+        })
+          .then(function (r) { return r.json().catch(function () { return null; }); })
+          .then(function (data) {
+            if (data && data.ok) {
+              form.reset();
+              say("Thanks. You are on the list.", true);
+            } else {
+              say((data && data.error) || "Something went wrong. Please try again.", false);
+            }
+          })
+          .catch(function () {
+            say("Could not reach the server. Please try again shortly.", false);
+          })
+          .finally(function () {
+            button.disabled = false;
+            button.textContent = label;
+          });
+      });
+    })();
   </script>
 </body>
 </html>

@@ -343,6 +343,23 @@ img.card-media {
 }
 .subscribe-form input:focus { outline: none; border-color: var(--ink); }
 .band .fineprint { font-size: 0.8rem; color: rgba(255, 255, 255, 0.75); margin-top: 0.75rem; }
+.subscribe-status {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  color: rgba(255, 255, 255, 0.9);
+}
+.subscribe-status.is-ok { color: #b9f5d0; font-weight: 600; }
+.subscribe-status.is-error { color: #ffd0cc; font-weight: 600; }
+
+/* Honeypot: out of sight for people, still in the DOM for bots to fill. */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
@@ -861,3 +878,15 @@ td .tool-tile { margin-right: 0.5rem; }
 .related a { color: var(--ink); font-weight: 600; font-size: 0.95rem; }
 .related a:hover { color: var(--accent); }
 .related + .back-link { margin-top: 2.5rem; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
