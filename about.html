@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
@@ -70,8 +70,8 @@
       },
       {
         "@type": "AboutPage",
-        "@id": "https://workintelhub.com/about.html#page",
-        "url": "https://workintelhub.com/about.html",
+        "@id": "https://workintelhub.com/about#page",
+        "url": "https://workintelhub.com/about",
         "name": "About WorkIntel Hub",
         "description": "WorkIntel Hub is an independent, vendor-neutral publication on employee productivity, time tracking, time management, and monitoring.",
         "publisher": { "@id": "https://workintelhub.com/#organization" },
@@ -79,7 +79,7 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://workintelhub.com/about.html#breadcrumb",
+        "@id": "https://workintelhub.com/about#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
           { "@type": "ListItem", "position": 2, "name": "About WorkIntel Hub" }
@@ -96,16 +96,16 @@
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
       <ul class="nav-links">
-        <li><a href="topics/productivity.html">Productivity</a></li>
-        <li><a href="topics/time-tracking.html">Time Tracking</a></li>
-        <li><a href="topics/time-management.html">Time Management</a></li>
-        <li><a href="topics/employee-monitoring.html">Monitoring</a></li>
-        <li><a href="index.html#lists">Lists</a></li>
-        <li><a href="index.html#research">Statistics</a></li>
-        <li><a href="index.html#guides">Guides</a></li>
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="btn btn-sm" href="index.html#subscribe">Subscribe</a>
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
       </div>
     </nav>
   </header>
@@ -115,7 +115,7 @@
     <article class="article">
       <a class="back-link" href="/">&larr; Back to WorkIntel Hub</a>
       <h1>About WorkIntel Hub</h1>
-      <p class="meta" style="display:block;margin-bottom:2rem">Last updated August 6, 2026</p>
+      <p class="meta" style="display:block;margin-bottom:2rem">Last updated August 27, 2026</p>
 
       <p>
         WorkIntel Hub is an independent publication about how work actually happens. We cover
@@ -123,6 +123,17 @@
         the managers, team leads, and business owners who have to make decisions about all four and
         then live with the consequences.
       </p>
+      <!-- wih:who-we-are -->
+      <h2 id="who-we-are">Who we are</h2>
+      <p>
+        WorkIntel Hub is written and edited by <a href="/authors/pavan">Pavan</a>,
+        editor of the site. Pavan is the editor of WorkIntel Hub. He writes the site&#x27;s guides on productivity measurement, time tracking and employee monitoring, and checks every statistic against its primary source before it is published.
+      </p>
+      <p>
+        Legal and statistics pages carry a "reviewed by" line once an outside reviewer has checked them. Where
+        that line is absent, the page has been checked against the primary source by the editor only.
+      </p>
+<!-- /wih:who-we-are -->
 
       <h2 id="what-we-cover">What we cover</h2>
       <p>
@@ -148,7 +159,7 @@
         version is that every statistic on this site traces to a named primary source with a stated
         sample and date, we do not publish figures we cannot verify, and no placement here can be
         bought. The long version, including how corrections are handled, is in our
-        <a href="/editorial-policy.html">editorial policy</a>.
+        <a href="/editorial-policy">editorial policy</a>.
       </p>
 
       <div class="callout">
@@ -176,7 +187,7 @@
         <a href="mailto:info@workintelhub.com">info@workintelhub.com</a>. If you think something here
         is wrong, that is the fastest way to get it fixed, and we would rather hear it from you than
         leave it standing. More detail on what to expect is on the
-        <a href="/contact.html">contact page</a>.
+        <a href="/contact">contact page</a>.
       </p>
 
     </article>
@@ -196,34 +207,35 @@
         <div>
           <h2>Topics</h2>
           <ul>
-            <li><a href="topics/productivity.html">Productivity</a></li>
-            <li><a href="topics/time-tracking.html">Time Tracking</a></li>
-            <li><a href="topics/time-management.html">Time Management</a></li>
-            <li><a href="topics/employee-monitoring.html">Employee Monitoring</a></li>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
           </ul>
         </div>
         <div>
           <h2>Site</h2>
           <ul>
-            <li><a href="index.html#latest">Latest articles</a></li>
-            <li><a href="topics/index.html">All topics</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="editorial-policy.html">Editorial policy</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <h2>Legal</h2>
           <ul>
-            <li><a href="privacy-policy.html">Privacy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="feed.xml">RSS</a></li>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
-        <p><a href="privacy-policy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="editorial-policy.html">Editorial standards</a></p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
       </div>
     </div>
   </footer>

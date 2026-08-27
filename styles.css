@@ -890,3 +890,29 @@ td .tool-tile { margin-right: 0.5rem; }
   white-space: nowrap;
   border: 0;
 }
+
+/* ---------- wih:fixpack additions ---------- */
+.author-box { display: flex; gap: 1rem; align-items: flex-start; margin-top: 3rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.author-box .avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+.author-box__name { margin: 0 0 .25rem; font-weight: 700; color: var(--ink); }
+.author-box__name a { color: var(--ink); text-decoration: none; }
+.author-box__role { font-weight: 500; color: var(--muted); font-size: .85rem; margin-left: .35rem; }
+.author-box__bio { margin: 0 0 .5rem; font-size: .95rem; }
+.author-box__links { margin: 0; font-size: .85rem; }
+.inline-subscribe { margin: 2.5rem 0; padding: 1.5rem; border-radius: var(--radius); background: var(--accent-tint); border: 1px solid var(--line); }
+.inline-subscribe .eyebrow { margin-bottom: .25rem; }
+.inline-subscribe h2 { font-size: 1.25rem; margin: 0 0 .5rem; }
+.inline-subscribe p { margin: 0 0 1rem; }
+.inline-subscribe .subscribe-form { display: flex; flex-wrap: wrap; gap: .5rem; }
+.inline-subscribe .subscribe-form input[type=email] { flex: 1 1 220px; padding: .65rem .85rem; border: 1px solid var(--line); border-radius: 6px; font: inherit; }
+.inline-subscribe .subscribe-status { margin: .5rem 0 0; font-size: .85rem; min-height: 1.2em; }
+.subscribe-status.is-ok { color: #1e7a45; } .subscribe-status.is-error { color: #b3261e; }
+.band .subscribe-status.is-ok, .band .subscribe-status.is-error { color: #fff; }
+.reviewed { font-size: .85rem; color: var(--muted); margin: -1.25rem 0 1.5rem; }
+.state-table { min-width: 820px; font-size: .88rem; }
+.state-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.state-table td:nth-child(2) { white-space: nowrap; }
+.state-table .meta { white-space: nowrap; }
+.state-table .yes { color: #1e7a45; font-weight: 600; } .state-table .all { color: #b3261e; font-weight: 600; }
+.guide-list { list-style: none; padding: 0; display: grid; gap: .6rem; }
+.guide-list .meta { display: block; }

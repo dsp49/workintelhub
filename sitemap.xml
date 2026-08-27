@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/employee-monitoring-laws-by-state</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -447,4 +447,24 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://workintelhub.com/authors/pavan</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/statistics/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/guides/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/lists/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/topics/for-employees</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
 </urlset>

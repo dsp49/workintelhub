@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monitoring a Computer at Work: How It Actually Works</title>
+  <meta name="author" content="Pavan">
   <meta name="description" content="Monitoring a computer at work, explained: how endpoint agents run, what gets captured, what stays hidden, and what US law requires first." />
   <link rel="canonical" href="https://workintelhub.com/blogs/computer-monitoring-explained" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -39,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
@@ -69,6 +70,17 @@
         }
       },
       {
+        "@type": "Person",
+        "@id": "https://workintelhub.com/authors/pavan#person",
+        "name": "Pavan",
+        "url": "https://workintelhub.com/authors/pavan",
+        "jobTitle": "Editor, WorkIntel Hub",
+        "worksFor": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "sameAs": []
+      },
+      {
         "@type": "BlogPosting",
         "@id": "https://workintelhub.com/blogs/computer-monitoring-explained#article",
         "headline": "What Computer Monitoring Actually Is, and How It Works",
@@ -76,8 +88,12 @@
         "image": "https://workintelhub.com/images/blog/computer-monitoring-explained.png",
         "datePublished": "2026-08-06T00:00:00+00:00",
         "dateModified": "2026-08-06T00:00:00+00:00",
-        "author": { "@id": "https://workintelhub.com/#organization" },
-        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "author": {
+          "@id": "https://workintelhub.com/authors/pavan#person"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://workintelhub.com/blogs/computer-monitoring-explained"
@@ -89,9 +105,23 @@
         "@type": "BreadcrumbList",
         "@id": "https://workintelhub.com/blogs/computer-monitoring-explained#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Employee Monitoring", "item": "https://workintelhub.com/#topics" },
-          { "@type": "ListItem", "position": 3, "name": "What Computer Monitoring Actually Is, and How It Works" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Employee Monitoring",
+            "item": "https://workintelhub.com/#topics"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What Computer Monitoring Actually Is, and How It Works"
+          }
         ]
       },
       {
@@ -101,52 +131,82 @@
           {
             "@type": "Question",
             "name": "What is computer monitoring?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Computer monitoring is the practice of recording how a work computer is used and reporting that record back to the employer. In most workplace setups it runs as a background agent installed on the device, which samples the foreground application, the active window title, the browser domain, and whether the keyboard and mouse are in use. Broader programs add periodic screen capture, network traffic inspection at the gateway, or content classification that flags sensitive files. The four are separate technologies with separate purposes." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Computer monitoring is the practice of recording how a work computer is used and reporting that record back to the employer. In most workplace setups it runs as a background agent installed on the device, which samples the foreground application, the active window title, the browser domain, and whether the keyboard and mouse are in use. Broader programs add periodic screen capture, network traffic inspection at the gateway, or content classification that flags sensitive files. The four are separate technologies with separate purposes."
+            }
           },
           {
             "@type": "Question",
             "name": "How does monitoring a computer actually work?",
-            "acceptedAnswer": { "@type": "Answer", "text": "An agent is installed as a system service that starts at boot and runs with system-level privileges. It polls the operating system on a short interval to ask which window is in focus and which process owns it, counts input events to decide whether the session is active or idle, and buffers those samples locally. On a schedule it uploads the batch over an encrypted connection to a server the employer controls or rents. Nothing about that process is exotic. It is the same mechanism most IT inventory and endpoint security tools already use." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An agent is installed as a system service that starts at boot and runs with system-level privileges. It polls the operating system on a short interval to ask which window is in focus and which process owns it, counts input events to decide whether the session is active or idle, and buffers those samples locally. On a schedule it uploads the batch over an encrypted connection to a server the employer controls or rents. Nothing about that process is exotic. It is the same mechanism most IT inventory and endpoint security tools already use."
+            }
           },
           {
             "@type": "Question",
             "name": "Can my employer see everything I do on my work computer?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Not automatically, and it depends entirely on what was switched on. A basic activity configuration sees application names, window titles, domains, and active or idle status. It does not read the contents of your documents or your keystrokes unless content capture or keystroke logging was specifically enabled. What matters is that the range is wide and the choice belongs to the employer, so the only reliable answer for any given workplace is the written notice you were given." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not automatically, and it depends entirely on what was switched on. A basic activity configuration sees application names, window titles, domains, and active or idle status. It does not read the contents of your documents or your keystrokes unless content capture or keystroke logging was specifically enabled. What matters is that the range is wide and the choice belongs to the employer, so the only reliable answer for any given workplace is the written notice you were given."
+            }
           },
           {
             "@type": "Question",
             "name": "Can employees tell if their computer is being monitored?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, if they look. An agent appears in the process list, in installed programs, and often in a management profile pushed by the device management system. On macOS, screen recording and accessibility access are gated behind permission entries the user can inspect. Network inspection that decrypts traffic requires a certificate in the machine trust store. Assuming monitoring is invisible is a bad bet for any employer to make." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually yes, if they look. An agent appears in the process list, in installed programs, and often in a management profile pushed by the device management system. On macOS, screen recording and accessibility access are gated behind permission entries the user can inspect. Network inspection that decrypts traffic requires a certificate in the machine trust store. Assuming monitoring is invisible is a bad bet for any employer to make."
+            }
           },
           {
             "@type": "Question",
             "name": "What is the difference between computer monitoring and DLP?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Activity monitoring records behavior and produces a history you read after the fact. Data loss prevention classifies content and enforces a rule at the moment of the action, so it can block an upload, an attachment, or a copy to a USB drive before it completes. One tells you what happened. The other stops something from happening. Buying the first when you needed the second leaves the risk in place and adds surveillance you did not need." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Activity monitoring records behavior and produces a history you read after the fact. Data loss prevention classifies content and enforces a rule at the moment of the action, so it can block an upload, an attachment, or a copy to a USB drive before it completes. One tells you what happened. The other stops something from happening. Buying the first when you needed the second leaves the risk in place and adds surveillance you did not need."
+            }
           },
           {
             "@type": "Question",
             "name": "Is computer monitoring legal in the United States?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Monitoring company equipment is broadly permitted in the United States, but notice duties vary by state and the details matter. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email, or internet usage by an electronic device to give prior written notice upon hiring to every employee subject to monitoring, in a form the employee acknowledges, and to post that notice conspicuously. Penalties run to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your own obligations with counsel in every state where you employ people." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Monitoring company equipment is broadly permitted in the United States, but notice duties vary by state and the details matter. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email, or internet usage by an electronic device to give prior written notice upon hiring to every employee subject to monitoring, in a form the employee acknowledges, and to post that notice conspicuously. Penalties run to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your own obligations with counsel in every state where you employ people."
+            }
           },
           {
             "@type": "Question",
             "name": "Can an employer monitor a personal computer used for work?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Technically it is possible only if the employee installs the agent, and practically it is a decision most employers should refuse. Installing a monitoring agent on a device the company does not own extends collection into a household, mixes personal data into a corporate system, and creates a retention and discovery problem nobody wants. The cleaner answer is to keep work on managed equipment, or to secure the application layer rather than the personal device." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Technically it is possible only if the employee installs the agent, and practically it is a decision most employers should refuse. Installing a monitoring agent on a device the company does not own extends collection into a household, mixes personal data into a corporate system, and creates a retention and discovery problem nobody wants. The cleaner answer is to keep work on managed equipment, or to secure the application layer rather than the personal device."
+            }
           },
           {
             "@type": "Question",
             "name": "Does computer monitoring measure productivity?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No, it measures interaction with a machine. Microsoft published Work Trend Index research in June 2025, combining anonymized Microsoft 365 telemetry with a survey of 31,000 knowledge workers across 31 markets, and reported that knowledge workers are interrupted roughly every two minutes during work hours, about 275 times a day. Under those conditions a busy activity graph mostly records fragmentation. The quiet stretch you would flag as low activity may be the only real work in the day." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, it measures interaction with a machine. Microsoft published Work Trend Index research in June 2025, combining anonymized Microsoft 365 telemetry with a survey of 31,000 knowledge workers across 31 markets, and reported that knowledge workers are interrupted roughly every two minutes during work hours, about 275 times a day. Under those conditions a busy activity graph mostly records fragmentation. The quiet stretch you would flag as low activity may be the only real work in the day."
+            }
           },
           {
             "@type": "Question",
             "name": "Do computer monitoring programs record keystrokes?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Some can, and the distinction to insist on is between counting keystrokes and capturing them. Counting produces a number of events per interval and reveals nothing about content. Capturing records the characters themselves, which will sooner or later include a personal password, a medical detail, or a message never meant for the employer. We think content-level keystroke capture is almost never justified outside a documented security investigation with legal sign off." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some can, and the distinction to insist on is between counting keystrokes and capturing them. Counting produces a number of events per interval and reveals nothing about content. Capturing records the characters themselves, which will sooner or later include a personal password, a medical detail, or a message never meant for the employer. We think content-level keystroke capture is almost never justified outside a documented security investigation with legal sign off."
+            }
           },
           {
             "@type": "Question",
             "name": "What should I look for when evaluating computer monitoring software?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Start with the question you are trying to answer, then ask which collection categories can be turned off and stay off, what the default retention period is, who can run a query about a named individual, whether those queries are themselves logged, and how a person requests their own record. Ask what the tool does when the device is offline and what happens to stored data if you cancel. If a category cannot be disabled and you cannot justify it in one sentence to the people it applies to, that is a reason to walk away." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Start with the question you are trying to answer, then ask which collection categories can be turned off and stay off, what the default retention period is, who can run a query about a named individual, whether those queries are themselves logged, and how a person requests their own record. Ask what the tool does when the device is offline and what happens to stored data if you cancel. If a category cannot be disabled and you cannot justify it in one sentence to the people it applies to, that is a reason to walk away."
+            }
           }
         ]
       }
@@ -161,16 +221,16 @@
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
       <ul class="nav-links">
-        <li><a href="../topics/productivity.html">Productivity</a></li>
-        <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-        <li><a href="../topics/time-management.html">Time Management</a></li>
-        <li><a href="../topics/employee-monitoring.html">Monitoring</a></li>
-        <li><a href="../index.html#lists">Lists</a></li>
-        <li><a href="../index.html#research">Statistics</a></li>
-        <li><a href="../index.html#guides">Guides</a></li>
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
       </div>
     </nav>
   </header>
@@ -178,20 +238,20 @@
 
   <main>
     <article class="article">
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
       <span class="tag">Employee Monitoring</span>
       <h1>What Computer Monitoring Actually Is, and How It Works</h1>
 
       <div class="byline">
-        <span class="avatar">WH</span>
+        <span class="avatar">P</span>
         <span>
-          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
           <span class="when">August 6, 2026 · 11 min read</span>
         </span>
       </div>
 
       <figure class="hero-figure">
-        <img src="../images/blog/computer-monitoring-explained.png" alt="Diagram of computer monitoring showing an endpoint agent, network layer, and reporting server" width="1200" height="630" />
+        <img src="/images/blog/computer-monitoring-explained.png" alt="Diagram of computer monitoring showing an endpoint agent, network layer, and reporting server" width="1200" height="630" />
       </figure>
 
       <p>
@@ -238,7 +298,7 @@
         system. The network, meaning a gateway, proxy, or DNS resolver that sees traffic leaving the
         building or the corporate tunnel. And the cloud services themselves, which already write logs
         of sign-ins, file access, and message sending whether or not anyone bought a monitoring tool.
-       The state by state picture is in our guide to <a href="employee-monitoring-laws-by-state.html">employee monitoring laws by state</a>.</p>
+       The state by state picture is in our guide to <a href="/blogs/employee-monitoring-laws-by-state">employee monitoring laws by state</a>.</p>
       <p>
         That third source surprises people. Most organizations already hold a lot of activity data in
         their identity provider, email platform, and document storage. Ask whether your question can
@@ -250,7 +310,7 @@
         and covert keystroke capture use similar mechanics with none of the governance, and that
         association is why any workplace deployment has to be loud rather than quiet. We keep a
         separate page on the categories of data that
-        <a href="privacy-line-what-never-to-track.html">employee monitoring</a> should refuse to collect
+        <a href="/blogs/privacy-line-what-never-to-track">employee monitoring</a> should refuse to collect
         under any justification, because drawing that line first makes every later decision easier.
       </p>
 
@@ -291,7 +351,7 @@
         Before any purchase, write down field by field what will be collected and what will not.
         Configuration ranges from mild to severe inside the same category of tool, so the category
         name tells you almost nothing. The table below sorts the common fields by exposure.
-       Buyers also conflate several distinct product categories here, and our guide to <a href="remote-desktop-monitoring-software.html">remote computer monitoring software</a> separates remote access, endpoint management, and activity capture before you shortlist anything.</p>
+       Buyers also conflate several distinct product categories here, and our guide to <a href="/blogs/remote-desktop-monitoring-software">remote computer monitoring software</a> separates remote access, endpoint management, and activity capture before you shortlist anything.</p>
 
       <div class="table-scroll">
         <table>
@@ -374,7 +434,7 @@
         and the subject line of whatever was open. Full URL capture is the same problem with the
         privacy stakes raised. If you collect either, you are collecting content, whatever the settings
         page calls it. Our roundup of verified
-        <a href="employee-monitoring-statistics.html">employee monitoring statistics</a> covers how the
+        <a href="/blogs/employee-monitoring-statistics">employee monitoring statistics</a> covers how the
         public rates these choices, and the ordering is not the one most buyers expect.
       </p>
 
@@ -386,7 +446,7 @@
         or when a rule fires. Network-level monitoring sits between the device and the internet and
         sees destinations rather than local actions. Data loss prevention classifies the content of
         files and messages and enforces a policy at the moment of the action.
-       We put the ten products that dominate this market side by side in our comparison of the <a href="../tools/best-employee-monitoring-software.html">best employee monitoring software</a>.</p>
+       We put the ten products that dominate this market side by side in our comparison of the <a href="/tools/best-employee-monitoring-software">best employee monitoring software</a>.</p>
       <p>
         The important difference is between recording and enforcing. Activity logging and screen
         capture are retrospective: they tell you what happened, days later, if someone goes looking.
@@ -400,7 +460,7 @@
         installing a certificate in the machine's trust store. That is a significant step with its own
         consent and security implications, and it will not cover a personal phone on cellular data
         sitting next to the laptop. The security-first category built around insider risk is properly
-        called <a href="user-activity-monitoring.html">user activity monitoring software</a>, and it
+        called <a href="/blogs/user-activity-monitoring">user activity monitoring software</a>, and it
         behaves differently from a productivity tool in ways that matter.
       </p>
 
@@ -432,7 +492,7 @@
       <p>
         None of which makes monitoring indefensible. It makes secrecy indefensible, and it raises the
         bar on justification. The practical version of that bar is set out in our playbook for ethical
-        <a href="ethical-employee-monitoring-playbook.html">employee productivity monitoring</a>, which
+        <a href="/blogs/ethical-employee-monitoring-playbook">employee productivity monitoring</a>, which
         deals with the decisions rather than the mechanism.
       </p>
 
@@ -462,7 +522,7 @@
         question. If you employ staff in the EU, GDPR adds a separate set of requirements beyond
         anything discussed here. Notice is a floor rather than a finish line, and the document that
         does the real work is a written
-        <a href="write-monitoring-policy-employees-sign.html">employee monitoring policy</a> that people
+        <a href="/blogs/write-monitoring-policy-employees-sign">employee monitoring policy</a> that people
         have actually read.
       </p>
 
@@ -513,7 +573,7 @@
         trails are mandatory, monitoring is not optional and the debate is about scope and governance
         rather than whether to do it. Everyone else is usually looking at a visibility problem that
         better reporting solves, which is the subject of our complete guide to
-        <a href="employee-productivity-guide.html">employee productivity</a>.
+        <a href="/blogs/employee-productivity-guide">employee productivity</a>.
       </p>
 
       <h2 id="key-takeaways">Key takeaways</h2>
@@ -525,6 +585,25 @@
         <li>Microsoft's June 2025 research found interruption roughly every two minutes, so activity data largely measures fragmentation rather than effort.</li>
         <li>New York requires prior written notice, acknowledged and posted, with penalties up to $3,000 per offense. Notice duties vary by state, so confirm yours with counsel.</li>
       </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="employee-monitoring">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
 
       <h2 id="faq">Frequently asked questions</h2>
       <section class="faq">
@@ -570,19 +649,29 @@
         </details>
       </section>
 
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub. He writes the site&#x27;s guides on productivity measurement, time tracking and employee monitoring, and checks every statistic against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
       <div class="related">
         <h2>Related reading</h2>
         <ul>
-          <li><a href="how-to-detect-employee-monitoring.html">How to Detect Employee Monitoring</a></li>
-          <li><a href="can-my-employer-track-my-laptop-location.html">Can My Employer Track My Laptop Location?</a></li>
-          <li><a href="../tools/best-employee-monitoring-software.html">Best Employee Monitoring Software: 10 Tools Compared</a></li>
-          <li><a href="user-activity-monitoring.html">User Activity Monitoring: What It Captures and Who It Is For</a></li>
-          <li><a href="privacy-line-what-never-to-track.html">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
-          <li><a href="ethical-employee-monitoring-playbook.html">Employee Productivity Monitoring: An Ethical Playbook</a></li>
+          <li><a href="/blogs/how-to-detect-employee-monitoring">How to Detect Employee Monitoring</a></li>
+          <li><a href="/blogs/can-my-employer-track-my-laptop-location">Can My Employer Track My Laptop Location?</a></li>
+          <li><a href="/tools/best-employee-monitoring-software">Best Employee Monitoring Software: 10 Tools Compared</a></li>
+          <li><a href="/blogs/user-activity-monitoring">User Activity Monitoring: What It Captures and Who It Is For</a></li>
+          <li><a href="/blogs/privacy-line-what-never-to-track">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
+          <li><a href="/blogs/ethical-employee-monitoring-playbook">Employee Productivity Monitoring: An Ethical Playbook</a></li>
         </ul>
       </div>
 
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
     </article>
   </main>
 
@@ -600,37 +689,89 @@
         <div>
           <h2>Topics</h2>
           <ul>
-            <li><a href="../topics/productivity.html">Productivity</a></li>
-            <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-            <li><a href="../topics/time-management.html">Time Management</a></li>
-            <li><a href="../topics/employee-monitoring.html">Employee Monitoring</a></li>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
           </ul>
         </div>
         <div>
           <h2>Site</h2>
           <ul>
-            <li><a href="../index.html#latest">Latest articles</a></li>
-            <li><a href="../topics/index.html">All topics</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../editorial-policy.html">Editorial policy</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <h2>Legal</h2>
           <ul>
-            <li><a href="../privacy-policy.html">Privacy</a></li>
-            <li><a href="../terms.html">Terms</a></li>
-            <li><a href="../feed.xml">RSS</a></li>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
-        <p><a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../editorial-policy.html">Editorial standards</a></p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
       </div>
     </div>
   </footer>
 <!-- /BUILD:footer -->
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>

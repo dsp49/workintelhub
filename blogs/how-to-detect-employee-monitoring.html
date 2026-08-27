@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Detect Employee Monitoring on Your Work Computer</title>
+  <meta name="author" content="Pavan">
   <meta name="description" content="Where to look on Windows and macOS, what each finding actually means, and what you are entitled to be told. Detection, not evasion." />
   <link rel="canonical" href="https://workintelhub.com/blogs/how-to-detect-employee-monitoring" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -39,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
@@ -69,6 +70,17 @@
         }
       },
       {
+        "@type": "Person",
+        "@id": "https://workintelhub.com/authors/pavan#person",
+        "name": "Pavan",
+        "url": "https://workintelhub.com/authors/pavan",
+        "jobTitle": "Editor, WorkIntel Hub",
+        "worksFor": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "sameAs": []
+      },
+      {
         "@type": "BlogPosting",
         "@id": "https://workintelhub.com/blogs/how-to-detect-employee-monitoring#article",
         "headline": "How to Detect Employee Monitoring",
@@ -77,7 +89,7 @@
         "datePublished": "2026-08-21T00:00:00+00:00",
         "dateModified": "2026-08-21T00:00:00+00:00",
         "author": {
-          "@id": "https://workintelhub.com/#organization"
+          "@id": "https://workintelhub.com/authors/pavan#person"
         },
         "publisher": {
           "@id": "https://workintelhub.com/#organization"
@@ -103,7 +115,7 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Employee Monitoring",
-            "item": "https://workintelhub.com/#guides"
+            "item": "https://workintelhub.com/topics/employee-monitoring"
           },
           {
             "@type": "ListItem",
@@ -193,16 +205,16 @@
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
       <ul class="nav-links">
-        <li><a href="../topics/productivity.html">Productivity</a></li>
-        <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-        <li><a href="../topics/time-management.html">Time Management</a></li>
-        <li><a href="../topics/employee-monitoring.html">Monitoring</a></li>
-        <li><a href="../index.html#lists">Lists</a></li>
-        <li><a href="../index.html#research">Statistics</a></li>
-        <li><a href="../index.html#guides">Guides</a></li>
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
       </div>
     </nav>
   </header>
@@ -210,20 +222,23 @@
 
   <main>
     <article class="article">
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
       <span class="tag">Employee Monitoring</span>
       <h1>How to Detect Employee Monitoring</h1>
 
       <div class="byline">
-        <span class="avatar">WH</span>
+        <span class="avatar">P</span>
         <span>
-          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
           <span class="when">August 21, 2026 &middot; 8 min read</span>
         </span>
       </div>
+      <!-- wih:reviewed-by: when a lawyer or HR-compliance professional has reviewed this page, add
+           <p class="reviewed">Reviewed for accuracy by <a href="https://REVIEWER-URL">REVIEWER NAME</a>, TITLE, on DATE.</p>
+           here, and a "reviewedBy" Person node in the BlogPosting schema. -->
 
       <figure class="hero-figure">
-        <img src="../images/blog/how-to-detect-employee-monitoring.png" alt="A settings panel listing device management profiles and screen recording permissions" width="1200" height="630" />
+        <img src="/images/blog/how-to-detect-employee-monitoring.png" alt="A settings panel listing device management profiles and screen recording permissions" width="1200" height="630" />
       </figure>
 
       <p>
@@ -333,7 +348,7 @@
         The distinction that matters is between security tooling and productivity monitoring. Both read
         a lot. They exist for different reasons, are usually run by different teams, and produce
         reports that go to different people. Our explainer on
-        <a href="computer-monitoring-explained.html">computer monitoring</a> covers what each category
+        <a href="/blogs/computer-monitoring-explained">computer monitoring</a> covers what each category
         actually captures.
       </p>
       <h2 id="rights">What you are entitled to know</h2>
@@ -342,7 +357,7 @@
         require employers to give notice of electronic monitoring, and in Delaware and New York the
         employee has to acknowledge it. If you are working in one of those states and never received
         one, that is a compliance gap rather than a mystery. The specifics are in our guide to
-        <a href="employee-monitoring-laws-by-state.html">employee monitoring laws by state</a>.
+        <a href="/blogs/employee-monitoring-laws-by-state">employee monitoring laws by state</a>.
       </p>
       <p>
         Everywhere else, asking still works better than searching. A written question to IT or HR
@@ -363,7 +378,7 @@
         Publish what is collected, in plain language, before anyone has to go looking in Task Manager.
         Let people see their own record. Never deploy an agent configured to hide, because the day it
         is discovered is the day every other statement you have made about trust is re-examined. Our
-        guide to <a href="write-monitoring-policy-employees-sign.html">writing a monitoring policy</a>
+        guide to <a href="/blogs/write-monitoring-policy-employees-sign">writing a monitoring policy</a>
         has the structure, and a page nobody had to hunt for is worth more than any feature you could
         buy.
       </p>
@@ -378,6 +393,25 @@
         <li>In Connecticut, Delaware, and New York you are entitled to written notice of electronic monitoring.</li>
         <li>Asking in writing beats searching. It produces a documented answer, and it is usually less alarming than the uncertainty.</li>
       </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="employee-monitoring">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
 
       <h2 id="faq">Frequently asked questions</h2>
       <section class="faq">
@@ -415,16 +449,26 @@
         </details>
       </section>
 
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub. He writes the site&#x27;s guides on productivity measurement, time tracking and employee monitoring, and checks every statistic against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
       <div class="related">
         <h2>Related reading</h2>
         <ul>
-          <li><a href="computer-monitoring-explained.html">What Computer Monitoring Actually Is, and How It Works</a></li>
-          <li><a href="employee-monitoring-laws-by-state.html">Employee Monitoring Laws by U.S. State</a></li>
-          <li><a href="can-my-employer-track-my-laptop-location.html">Can My Employer Track My Laptop Location?</a></li>
+          <li><a href="/blogs/computer-monitoring-explained">What Computer Monitoring Actually Is, and How It Works</a></li>
+          <li><a href="/blogs/employee-monitoring-laws-by-state">Employee Monitoring Laws by U.S. State</a></li>
+          <li><a href="/blogs/can-my-employer-track-my-laptop-location">Can My Employer Track My Laptop Location?</a></li>
         </ul>
       </div>
 
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
     </article>
   </main>
 
@@ -442,38 +486,90 @@
         <div>
           <h2>Topics</h2>
           <ul>
-            <li><a href="../topics/productivity.html">Productivity</a></li>
-            <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-            <li><a href="../topics/time-management.html">Time Management</a></li>
-            <li><a href="../topics/employee-monitoring.html">Employee Monitoring</a></li>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
           </ul>
         </div>
         <div>
           <h2>Site</h2>
           <ul>
-            <li><a href="../index.html#latest">Latest articles</a></li>
-            <li><a href="../topics/index.html">All topics</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../editorial-policy.html">Editorial policy</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <h2>Legal</h2>
           <ul>
-            <li><a href="../privacy-policy.html">Privacy</a></li>
-            <li><a href="../terms.html">Terms</a></li>
-            <li><a href="../feed.xml">RSS</a></li>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
-        <p><a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../editorial-policy.html">Editorial standards</a></p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
       </div>
     </div>
   </footer>
 <!-- /BUILD:footer -->
 
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>

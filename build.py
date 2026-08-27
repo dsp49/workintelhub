@@ -49,6 +49,10 @@ def pages():
     out += sorted(glob.glob(os.path.join(ROOT, "topics", "*.html")))
     out += sorted(glob.glob(os.path.join(ROOT, "tools", "*.html")))
     out += sorted(glob.glob(os.path.join(ROOT, "design", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "authors", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "statistics", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "guides", "*.html")))
+    out += sorted(glob.glob(os.path.join(ROOT, "lists", "*.html")))
     return [p for p in out if os.path.exists(p)]
 
 

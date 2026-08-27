@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monitor Employee Internet Usage: What It Sees and Costs</title>
+  <meta name="author" content="Pavan">
   <meta name="description" content="What employee internet monitoring sees at the network and endpoint level, what it costs in trust, and what US notice law requires first." />
   <link rel="canonical" href="https://workintelhub.com/blogs/employee-internet-monitoring" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -39,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
@@ -69,6 +70,17 @@
         }
       },
       {
+        "@type": "Person",
+        "@id": "https://workintelhub.com/authors/pavan#person",
+        "name": "Pavan",
+        "url": "https://workintelhub.com/authors/pavan",
+        "jobTitle": "Editor, WorkIntel Hub",
+        "worksFor": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "sameAs": []
+      },
+      {
         "@type": "BlogPosting",
         "@id": "https://workintelhub.com/blogs/employee-internet-monitoring#article",
         "headline": "Employee Internet Monitoring: What It Sees and What It Costs",
@@ -76,8 +88,12 @@
         "image": "https://workintelhub.com/images/blog/employee-internet-monitoring.png",
         "datePublished": "2026-08-06T00:00:00+00:00",
         "dateModified": "2026-08-06T00:00:00+00:00",
-        "author": { "@id": "https://workintelhub.com/#organization" },
-        "publisher": { "@id": "https://workintelhub.com/#organization" },
+        "author": {
+          "@id": "https://workintelhub.com/authors/pavan#person"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://workintelhub.com/blogs/employee-internet-monitoring"
@@ -89,9 +105,23 @@
         "@type": "BreadcrumbList",
         "@id": "https://workintelhub.com/blogs/employee-internet-monitoring#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://workintelhub.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Employee Monitoring", "item": "https://workintelhub.com/#topics" },
-          { "@type": "ListItem", "position": 3, "name": "Employee Internet Monitoring: What It Sees and What It Costs" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Employee Monitoring",
+            "item": "https://workintelhub.com/#topics"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Employee Internet Monitoring: What It Sees and What It Costs"
+          }
         ]
       },
       {
@@ -101,52 +131,82 @@
           {
             "@type": "Question",
             "name": "What is employee internet monitoring?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Employee internet monitoring is the recording of which internet destinations a company device or company network reaches, and sometimes how long and how often. It is one narrow slice of workplace monitoring rather than the whole of it. The important variable is where the capture happens, because a record taken at the network gateway and a record taken inside the browser on a laptop describe very different levels of detail." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Employee internet monitoring is the recording of which internet destinations a company device or company network reaches, and sometimes how long and how often. It is one narrow slice of workplace monitoring rather than the whole of it. The important variable is where the capture happens, because a record taken at the network gateway and a record taken inside the browser on a laptop describe very different levels of detail."
+            }
           },
           {
             "@type": "Question",
             "name": "What is the difference between network-level and endpoint-level internet monitoring?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Network-level capture sits between the device and the internet and sees destinations, timing and volume for everything crossing that link, including traffic from phones and personal devices on the same network. Endpoint-level capture runs as an agent on a managed device, follows that device anywhere, and can see full page addresses and window titles inside the browser. Endpoint capture is more precise and considerably more invasive." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Network-level capture sits between the device and the internet and sees destinations, timing and volume for everything crossing that link, including traffic from phones and personal devices on the same network. Endpoint-level capture runs as an agent on a managed device, follows that device anywhere, and can see full page addresses and window titles inside the browser. Endpoint capture is more precise and considerably more invasive."
+            }
           },
           {
             "@type": "Question",
             "name": "Can employers see what you do on HTTPS websites?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Not by default at the network level. Encryption hides the page path, the search terms, the form contents and the responses. What still leaks is the destination host name, the timing, and the amount of data moved, which is often enough to infer the subject. Two things change that: an agent on the device, which reads inside the browser, or TLS interception, which decrypts traffic in transit." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not by default at the network level. Encryption hides the page path, the search terms, the form contents and the responses. What still leaks is the destination host name, the timing, and the amount of data moved, which is often enough to infer the subject. Two things change that: an agent on the device, which reads inside the browser, or TLS interception, which decrypts traffic in transit."
+            }
           },
           {
             "@type": "Question",
             "name": "What is TLS interception and should we use it?",
-            "acceptedAnswer": { "@type": "Answer", "text": "TLS interception installs a company certificate on the device so that a gateway can decrypt, inspect and re-encrypt web traffic. It turns encrypted browsing into readable content, which means banking sessions, health portals and private messages become inspectable in principle. If you deploy it, we would insist on documented exclusions for finance, health, legal and union categories, a narrow access list, short retention, and legal review before switch-on." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TLS interception installs a company certificate on the device so that a gateway can decrypt, inspect and re-encrypt web traffic. It turns encrypted browsing into readable content, which means banking sessions, health portals and private messages become inspectable in principle. If you deploy it, we would insist on documented exclusions for finance, health, legal and union categories, a narrow access list, short retention, and legal review before switch-on."
+            }
           },
           {
             "@type": "Question",
             "name": "Is it legal to monitor employee internet usage in the United States?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Monitoring company systems is broadly permitted, but several states attach notice duties and internet usage is named explicitly in at least one of them. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously. Penalties run up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your obligations with counsel." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Monitoring company systems is broadly permitted, but several states attach notice duties and internet usage is named explicitly in at least one of them. New York Civil Rights Law section 52-c requires employers who monitor telephone conversations, email or internet usage by electronic device to give prior written notice upon hiring to all employees subject to monitoring, acknowledged by the employee and posted conspicuously. Penalties run up to 500 dollars for a first offense, 1,000 for a second, and 3,000 for a third and each one after. Confirm your obligations with counsel."
+            }
           },
           {
             "@type": "Question",
             "name": "Does the system maintenance exemption cover security monitoring?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It is narrower than most people assume. The New York exemption covers processes that manage the type or volume of email, voicemail or internet usage performed solely for computer system maintenance or protection. The word solely is doing the work. A filter that only blocks malware domains and produces no per-person reporting looks different from a filter whose reports get read by line managers every Monday. Ask counsel where your deployment sits." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is narrower than most people assume. The New York exemption covers processes that manage the type or volume of email, voicemail or internet usage performed solely for computer system maintenance or protection. The word solely is doing the work. A filter that only blocks malware domains and produces no per-person reporting looks different from a filter whose reports get read by line managers every Monday. Ask counsel where your deployment sits."
+            }
           },
           {
             "@type": "Question",
             "name": "Why does blanket category blocking backfire?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Because the categories are wrong at the edges and the workarounds are worse than the browsing. Broad lists routinely block documentation, vendor support forums, research sources and health information people have a right to read. Employees respond by using a phone on cellular data, which moves the same activity onto a device you have no visibility into at all, and hands your security team a blind spot in exchange for a tidier report." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because the categories are wrong at the edges and the workarounds are worse than the browsing. Broad lists routinely block documentation, vendor support forums, research sources and health information people have a right to read. Employees respond by using a phone on cellular data, which moves the same activity onto a device you have no visibility into at all, and hands your security team a blind spot in exchange for a tidier report."
+            }
           },
           {
             "@type": "Question",
             "name": "What is the security case for internet monitoring?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The strong version is narrow and specific: blocking known malicious destinations, detecting command and control traffic, and spotting large or unusual outbound transfers to unmanaged destinations. Each of those has a defined trigger, an owner in security rather than management, and a response that does not involve reading anyone's browsing history. The weak version is a general appetite for visibility, which produces a large data holding and no decisions." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The strong version is narrow and specific: blocking known malicious destinations, detecting command and control traffic, and spotting large or unusual outbound transfers to unmanaged destinations. Each of those has a defined trigger, an owner in security rather than management, and a response that does not involve reading anyone's browsing history. The weak version is a general appetite for visibility, which produces a large data holding and no decisions."
+            }
           },
           {
             "@type": "Question",
             "name": "Can employers monitor internet usage on personal devices?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Only within limits, and the limits should be tighter than the technology allows. On a personal device enrolled in a company program, restrict visibility to the managed work container and put in writing that personal traffic is out of scope. On a home network, a company has no business seeing traffic from devices it does not manage, and a network-level tool at the office will pick up personal phones unless you segment guest and personal traffic onto a separate network." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only within limits, and the limits should be tighter than the technology allows. On a personal device enrolled in a company program, restrict visibility to the managed work container and put in writing that personal traffic is out of scope. On a home network, a company has no business seeing traffic from devices it does not manage, and a network-level tool at the office will pick up personal phones unless you segment guest and personal traffic onto a separate network."
+            }
           },
           {
             "@type": "Question",
             "name": "How should we evaluate software to monitor employee internet usage?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Ask what it refuses to record before you ask what it can record. Can domain-only logging be enforced instead of full addresses? Can whole categories such as health, finance and legal be excluded permanently? Is per-person reporting off by default? Who can query a named individual, and is that query itself logged? What is the retention period per field, and is deletion automatic? A tool that cannot answer those is not ready for your workforce." }
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ask what it refuses to record before you ask what it can record. Can domain-only logging be enforced instead of full addresses? Can whole categories such as health, finance and legal be excluded permanently? Is per-person reporting off by default? Who can query a named individual, and is that query itself logged? What is the retention period per field, and is deletion automatic? A tool that cannot answer those is not ready for your workforce."
+            }
           }
         ]
       }
@@ -161,16 +221,16 @@
     <nav class="nav">
       <a class="logo" href="/">WorkIntel<span>Hub</span></a>
       <ul class="nav-links">
-        <li><a href="../topics/productivity.html">Productivity</a></li>
-        <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-        <li><a href="../topics/time-management.html">Time Management</a></li>
-        <li><a href="../topics/employee-monitoring.html">Monitoring</a></li>
-        <li><a href="../index.html#lists">Lists</a></li>
-        <li><a href="../index.html#research">Statistics</a></li>
-        <li><a href="../index.html#guides">Guides</a></li>
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="btn btn-sm" href="../index.html#subscribe">Subscribe</a>
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
       </div>
     </nav>
   </header>
@@ -178,20 +238,20 @@
 
   <main>
     <article class="article">
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
       <span class="tag">Employee Monitoring</span>
       <h1>Employee Internet Monitoring: What It Sees and What It Costs</h1>
 
       <div class="byline">
-        <span class="avatar">WH</span>
+        <span class="avatar">P</span>
         <span>
-          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
           <span class="when">August 6, 2026 &middot; 9 min read</span>
         </span>
       </div>
 
       <figure class="hero-figure">
-        <img src="../images/blog/employee-internet-monitoring.png" alt="Diagram contrasting network gateway capture with endpoint agent capture of employee internet activity" width="1200" height="630" />
+        <img src="/images/blog/employee-internet-monitoring.png" alt="Diagram contrasting network gateway capture with endpoint agent capture of employee internet activity" width="1200" height="630" />
       </figure>
 
       <p>
@@ -248,7 +308,7 @@
       <p>
         The mechanics of how an agent hooks into a browser and an operating system are worth
         understanding before you decide which one you want, and we cover
-        <a href="computer-monitoring-explained.html">monitoring a computer</a> at that level
+        <a href="/blogs/computer-monitoring-explained">monitoring a computer</a> at that level
         separately. The short version is that an endpoint agent has access to almost everything, and
         the settings screen is the only thing standing between "what it could see" and "what it does
         see".
@@ -323,7 +383,7 @@
         legal services, and union sites should be exempt from decryption by policy and by
         configuration, not by the promise of a security team who has better things to do. The wider
         principle, and the specific fields we would keep out of any collection, sits in our piece on
-        the boundaries of <a href="privacy-line-what-never-to-track.html">employee monitoring</a>.
+        the boundaries of <a href="/blogs/privacy-line-what-never-to-track">employee monitoring</a>.
       </p>
 
       <h2 id="two-cases">Two reasons to monitor employee internet usage, and only one holds up</h2>
@@ -346,7 +406,7 @@
         an unclear owner, and no decisions. If nobody can name the alert that will fire and the
         person who will act on it, you are not building a security control, you are building an
         archive. That distinction is the whole subject of our page on
-        <a href="user-activity-monitoring.html">user activity monitoring software</a> and where it
+        <a href="/blogs/user-activity-monitoring">user activity monitoring software</a> and where it
         genuinely belongs.
       </p>
       <h3 id="productivity-case">The productivity case</h3>
@@ -396,7 +456,7 @@
         conversation, and treating it as a firewall problem tends to signal distrust to everyone
         including the people who were never the concern. If the real worry is remote teams drifting,
         the answer is in how you set expectations, which is the subject of our guide to
-        <a href="how-to-monitor-employees-working-from-home.html">how to monitor employees working from home</a>.
+        <a href="/blogs/how-to-monitor-employees-working-from-home">how to monitor employees working from home</a>.
       </p>
 
       <h2 id="byod">Personal devices, home networks, and BYOD</h2>
@@ -452,7 +512,7 @@
         Check the base of any number a salesperson puts in front of you, too, because this subject
         attracts figures that have been passed between blog posts until nobody can find the original
         survey. We keep a set of verified
-        <a href="employee-monitoring-statistics.html">employee monitoring statistics</a> with
+        <a href="/blogs/employee-monitoring-statistics">employee monitoring statistics</a> with
         samples and fielding dates attached for exactly that reason.
       </p>
 
@@ -482,7 +542,7 @@
         company's, and a distributed team can create obligations in a dozen states at once. If you
         employ staff in the EU, GDPR imposes a separate set of requirements beyond anything here.
         Whatever the jurisdiction, the document that does the work is a written
-        <a href="write-monitoring-policy-employees-sign.html">employee monitoring policy</a> naming
+        <a href="/blogs/write-monitoring-policy-employees-sign">employee monitoring policy</a> naming
         the purpose, the fields, the access list, and the retention period, signed before the first
         packet is logged.
       </p>
@@ -504,6 +564,25 @@
         <li>New York Civil Rights Law section 52-c names internet usage directly and requires prior written notice, acknowledged and posted, with penalties up to $3,000. Law varies by state, so confirm with counsel.</li>
         <li>Pew found in April 2023 that 51% of US adults oppose employers using AI to record what people do on work computers, rising to 64% among adults aged 18 to 29.</li>
       </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="employee-monitoring">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
 
       <h2 id="faq">Frequently asked questions</h2>
       <section class="faq">
@@ -549,17 +628,27 @@
         </details>
       </section>
 
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub. He writes the site&#x27;s guides on productivity measurement, time tracking and employee monitoring, and checks every statistic against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
       <div class="related">
         <h2>Related reading</h2>
         <ul>
-          <li><a href="../tools/best-employee-monitoring-software.html">Best Employee Monitoring Software: 10 Tools Compared</a></li>
-          <li><a href="computer-monitoring-explained.html">What Computer Monitoring Actually Is, and How It Works</a></li>
-          <li><a href="privacy-line-what-never-to-track.html">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
-          <li><a href="how-to-monitor-employees-working-from-home.html">How to Monitor Employees Working From Home Without Wrecking Trust</a></li>
+          <li><a href="/tools/best-employee-monitoring-software">Best Employee Monitoring Software: 10 Tools Compared</a></li>
+          <li><a href="/blogs/computer-monitoring-explained">What Computer Monitoring Actually Is, and How It Works</a></li>
+          <li><a href="/blogs/privacy-line-what-never-to-track">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
+          <li><a href="/blogs/how-to-monitor-employees-working-from-home">How to Monitor Employees Working From Home Without Wrecking Trust</a></li>
         </ul>
       </div>
 
-      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <a class="back-link" href="/">&larr; Back to all articles</a>
     </article>
   </main>
 
@@ -577,37 +666,89 @@
         <div>
           <h2>Topics</h2>
           <ul>
-            <li><a href="../topics/productivity.html">Productivity</a></li>
-            <li><a href="../topics/time-tracking.html">Time Tracking</a></li>
-            <li><a href="../topics/time-management.html">Time Management</a></li>
-            <li><a href="../topics/employee-monitoring.html">Employee Monitoring</a></li>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
           </ul>
         </div>
         <div>
           <h2>Site</h2>
           <ul>
-            <li><a href="../index.html#latest">Latest articles</a></li>
-            <li><a href="../topics/index.html">All topics</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../editorial-policy.html">Editorial policy</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div>
           <h2>Legal</h2>
           <ul>
-            <li><a href="../privacy-policy.html">Privacy</a></li>
-            <li><a href="../terms.html">Terms</a></li>
-            <li><a href="../feed.xml">RSS</a></li>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
-        <p><a href="../privacy-policy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a> &middot; <a href="../editorial-policy.html">Editorial standards</a></p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
       </div>
     </div>
   </footer>
 <!-- /BUILD:footer -->
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>

@@ -1,19 +1,16 @@
 # robots.txt — WorkIntel Hub
 # https://workintelhub.com
+#
+# One message, no contradictions: every crawler, including AI search and training crawlers,
+# may read the site. (If Cloudflare's "managed robots.txt" / "block AI bots" is switched on in
+# the dashboard it prepends its own Disallow rules ABOVE this file — turn it off there.)
 
 User-agent: *
 Allow: /
 
-# Nothing here is private, but keep crawlers out of build/meta noise.
+# Keep crawlers out of build/meta noise and tracking-parameter duplicates.
 Disallow: /design/
 Disallow: /*?utm_
 Disallow: /*?fbclid
-
-# Common AI crawlers — remove any line below to opt that crawler back in.
-# (Left commented by default: blocking these has no SEO benefit.)
-# User-agent: GPTBot
-# Disallow: /
-# User-agent: CCBot
-# Disallow: /
 
 Sitemap: https://workintelhub.com/sitemap.xml
