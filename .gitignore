@@ -21,3 +21,6 @@ __pycache__/
 
 # keyword research: competitor data, public repo, keep out
 research/
+
+# local note of the IndexNow key; the public key file itself is committed
+.indexnow-key
