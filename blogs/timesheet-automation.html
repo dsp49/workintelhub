@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timesheet Automation: What to Automate First</title>
+  <meta name="description" content="Which parts of timesheet handling are worth automating, in what order, what automation cannot fix, and the compliance points that survive the move." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/timesheet-automation" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/timesheet-automation" />
+  <meta property="og:title" content="Timesheet Automation" />
+  <meta property="og:description" content="Which parts of timesheet handling are worth automating, in what order, what automation cannot fix, and the compliance points that survive the move." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/timesheet-automation.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Timesheet Automation" />
+  <meta name="twitter:description" content="Which parts of timesheet handling are worth automating, in what order, what automation cannot fix, and the compliance points that survive the move." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/timesheet-automation.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/timesheet-automation#article",
+        "headline": "Timesheet Automation",
+        "description": "Which parts of timesheet handling are worth automating, in what order, what automation cannot fix, and the compliance points that survive the move.",
+        "image": "https://workintelhub.com/images/blog/timesheet-automation.png",
+        "datePublished": "2026-08-31T00:00:00+00:00",
+        "dateModified": "2026-08-31T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/timesheet-automation"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/timesheet-automation#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Timesheet Automation"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/timesheet-automation#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What should I automate first in timesheet processing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The payroll export. Re-keying hours into payroll is the slowest manual step and the one where a single transposed digit becomes a pay error, and connecting the two systems is usually configuration rather than a project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is automated time tracking better than manual timesheets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the work. Automatic capture fits jobs with a clear physical or system boundary, such as shift work at a fixed site. It fits knowledge work poorly, because reading, thinking and phone calls register as idle and the record has to be corrected so often that it costs more than entering hours would have."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does automating timesheets change my record keeping obligations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. 29 CFR 516.2 requires the employer to keep hours worked each workday and each workweek regardless of what produced the record, and 29 CFR 516.6 requires time records to be kept at least two years. Confirm your vendor retains them that long and that you can export them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do automated timesheet systems round hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many do, and several ship with quarter-hour rounding enabled by default. 29 CFR 785.48 applies to an automated system exactly as it does to paper: rounding must run both ways and must not, over time, fail to compensate employees for hours actually worked. Check the default setting before go-live."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will timesheet automation stop people submitting late?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if lateness was caused by the effort of submitting. If it is caused by a deadline at a bad time, unclear project codes, or nobody knowing what the data is for, automation makes the chasing faster without reducing it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I ask a time tracking vendor before buying?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Which way rounding defaults and whether it can be disabled, whether the workweek start is configurable, whether it handles daily overtime states, whether employees can export their own record unaided, what the payroll export format is, and what you get back if you leave."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate the ROI of timesheet automation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost the manual process first: administration hours per period, employee entry time, and the cost of corrections, each multiplied out to a year at a loaded hourly rate. Automation removes most of the administration, the chasing and the corrections, but not the entry, so hold the licence fee against that subset rather than the whole figure. Add implementation and one parallel payroll run to the cost side."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does automatic time capture require employee notice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Treat it as monitoring, because that is what it is. Connecticut, Delaware and New York require written notice before electronic monitoring begins, and Delaware and New York require the employee to acknowledge it. Elsewhere notice is not mandated by statute but the rollout goes considerably better with it."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Timesheet Automation</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">August 31, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/timesheet-automation.png" alt="A timesheet workflow moving from manual entry through approval to payroll" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Timesheet automation covers four separate jobs that get sold as one: capturing the hours,
+        chasing the submissions, approving them, and getting them into payroll. They have very
+        different payoffs, and the one most products lead with is the one worth doing last.
+      </p>
+      <p>
+        This page ranks them by return, says what automation does not fix, and covers the compliance
+        points that follow the process wherever it moves.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#order">The order that pays off</a></li>
+          <li><a href="#validation">Validation is the underrated one</a></li>
+          <li><a href="#cannot-fix">What automation does not fix</a></li>
+          <li><a href="#capture">Where automatic capture makes sense, and where it does not</a></li>
+          <li><a href="#compliance">What stays your responsibility after automation</a></li>
+          <li><a href="#roi">Working out whether it is worth it</a></li>
+          <li><a href="#evaluating">Questions worth asking a vendor</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="order">The order that pays off</h2>
+      <p>
+        Ranked by hours saved against effort to implement.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Step</th><th>What it removes</th><th>Effort</th><th>Do it</th></tr></thead>
+          <tbody>
+            <tr><td>Payroll export</td><td>Manual re-keying, and the errors that come with it</td><td>Low</td><td>First</td></tr>
+            <tr><td>Reminders and chasing</td><td>The recurring administrative tax</td><td>Low</td><td>Second</td></tr>
+            <tr><td>Validation rules</td><td>Corrections found after payroll has run</td><td>Medium</td><td>Third</td></tr>
+            <tr><td>Approval routing</td><td>Sheets sitting in an inbox</td><td>Medium</td><td>Fourth</td></tr>
+            <tr><td>Automatic time capture</td><td>Entry itself</td><td>High</td><td>Last, if at all</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Payroll export first, because re-keying is both the slowest step and the one where a single
+        transposed digit becomes a pay error. It is also usually a configuration rather than a
+        project.
+      </p>
+      <p>
+        Automatic capture last, because it is the most invasive, the most expensive, and the one that
+        changes what the timesheet means. An entry a person made is a statement about their work. An
+        entry a machine made is a measurement, and the two are not interchangeable when someone
+        disputes a week.
+      </p>
+      <h2 id="validation">Validation is the underrated one</h2>
+      <p>
+        Most of the time lost to timesheets is not in filling them in. It is in finding and fixing the
+        wrong ones after they have gone through, which costs a correction cycle and someone's trust in
+        the number.
+      </p>
+      <p>
+        A short set of checks at submission catches nearly all of it.
+      </p>
+      <ul>
+        <li>Total hours outside a plausible range for the period.</li>
+        <li>A shift crossing midnight that produced a negative or zero duration.</li>
+        <li>Overtime on a week whose daily entries do not add up to the total.</li>
+        <li>An entry on a day the person was recorded as on leave.</li>
+        <li>Hours booked to a closed project or a cost code that no longer exists.</li>
+        <li>A duplicate submission for a period already approved.</li>
+      </ul>
+      <p>
+        Each of these is a few lines of logic and each removes a class of correction permanently. This
+        is the step with the best ratio on the list, and the one most often skipped because it is less
+        visible than the others.
+      </p>
+      <h2 id="cannot-fix">What automation does not fix</h2>
+      <p>
+        Three things, and mistaking any of them for a tooling problem is how automation projects
+        disappoint.
+      </p>
+      <p>
+        <strong>A deadline at the wrong time.</strong> Automating reminders against a Friday 5pm cutoff
+        automates the chasing rather than removing the reason for it. Move the deadline first, then
+        automate. Our page on <a href="/blogs/timesheet-reminder">timesheet reminders</a> covers the
+        structural causes.
+      </p>
+      <p>
+        <strong>Unclear categories.</strong> If people do not know which project a piece of work
+        belongs to, faster entry produces wrong data faster. Fix the list of codes before the form.
+      </p>
+      <p>
+        <strong>Distrust of what the data is for.</strong> If people believe the hours are being used
+        to judge them rather than to run payroll and cost projects, automation reads as surveillance
+        and adoption suffers. That is a stated-purpose problem, and it is covered in
+        <a href="/blogs/time-tracking-employees-support">time tracking for remote employees</a>.
+      </p>
+      <h2 id="capture">Where automatic capture makes sense, and where it does not</h2>
+      <p>
+        Automatic capture means the system infers hours rather than asking: from app and window
+        activity, from calendar entries, from geofences, or from device login and logout.
+      </p>
+      <p>
+        It fits work with a clear physical or system boundary. Shift work with a fixed site, field
+        work with defined stops, machine-paced work. In those cases the inference is close to the
+        truth and it removes genuine friction.
+      </p>
+      <p>
+        It fits knowledge work poorly, for a reason that is not about privacy. The measurable signal
+        and the work diverge. Reading, thinking, a phone call and a whiteboard all register as idle,
+        so the system has to be corrected constantly, which costs more than entering the hours would
+        have. The output is also a poor basis for judgement, which we cover in
+        <a href="/blogs/why-output-metrics-fail-knowledge-teams">why productivity metrics fail
+        knowledge teams</a>.
+      </p>
+      <p>
+        If you do adopt it, the notice obligations are the same as for any monitoring. Connecticut,
+        Delaware and New York require written notice before it starts, set out in our
+        <a href="/blogs/employee-monitoring-laws-by-state">guide to monitoring laws by state</a>, and
+        the acknowledgement wording is in our
+        <a href="/blogs/employee-monitoring-consent-form">monitoring consent form</a>.
+      </p>
+      <h2 id="compliance">What stays your responsibility after automation</h2>
+      <p>
+        Automating the process does not move any of the duties. Four survive intact.
+      </p>
+      <ul>
+        <li><strong>The records are still yours.</strong> <a href="https://www.law.cornell.edu/cfr/text/29/516.2" target="_blank" rel="noopener">29 CFR 516.2</a> requires the employer to keep hours worked
+        each day and each workweek, whatever produced them.</li>
+        <li><strong>Retention still applies.</strong> Time records for at least two years under <a href="https://www.law.cornell.edu/cfr/text/29/516.6" target="_blank" rel="noopener">29 CFR 516.6</a>.
+        Check that the vendor keeps them that long and that you can export them if you leave.</li>
+        <li><strong>Rounding still has to be neutral.</strong> If the system rounds, <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> applies exactly
+        as it did on paper. Find the setting and check which way it rounds.</li>
+        <li><strong>Overtime is still weekly.</strong> Confirm the workweek is configured to the day
+        and time you actually use, not the vendor's default.</li>
+      </ul>
+      <p>
+        The rounding default is the one to check on day one. Several systems ship with quarter hour
+        rounding enabled, and a default that happens to favour the employer is the same violation as
+        a deliberate one.
+      </p>
+      <h2 id="roi">Working out whether it is worth it</h2>
+      <p>
+        The calculation is small enough to do on the back of an envelope, and it usually settles the
+        question in one direction or the other quickly.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Annual cost of the manual process</span>
+        <p>Admin time: <code>=hours_per_period * periods_per_year * loaded_hourly_cost</code></p>
+        <p>Employee entry time: <code>=headcount * minutes_per_period / 60 * periods_per_year * loaded_hourly_cost</code></p>
+        <p>Correction cost: <code>=corrections_per_year * hours_per_correction * loaded_hourly_cost</code></p>
+      </div>
+      <p>
+        A worked example. Twenty five people, semi-monthly, one hour of administration per period and
+        ten minutes of entry each. That is 24 hours of administration and about 100 hours of entry a
+        year. At a loaded cost of 50 dollars an hour it is roughly 6,200 dollars, before any
+        correction cost.
+      </p>
+      <p>
+        Automation does not remove all of it. Entry mostly remains, unless you go as far as automatic
+        capture, so the realistic saving is the administration, the chasing and most of the
+        corrections. In this example that is the 24 hours plus whatever the corrections are costing,
+        which is the number to hold a licence fee against.
+      </p>
+      <p>
+        Two costs that get left out of these sums and should not be. Implementation and data
+        migration, which is usually measured in weeks rather than days for anything touching payroll.
+        And the parallel run, because you will want one payroll cycle processed both ways before you
+        trust the new one.
+      </p>
+      <h2 id="evaluating">Questions worth asking a vendor</h2>
+      <p>
+        Six that separate products quickly, and that most demos will not cover unless you ask.
+      </p>
+      <ol>
+        <li>Which way does rounding default, and can it be turned off entirely?</li>
+        <li>Can the workweek start be set to our actual start, including a non-Monday one?</li>
+        <li>Does it calculate daily overtime for states that require it?</li>
+        <li>Can an employee see and export their own record without asking anyone?</li>
+        <li>What does the payroll export look like, and does it match our provider's import format?</li>
+        <li>If we leave, what do we get back, and in what format?</li>
+      </ol>
+      <p>
+        The fourth is the one that predicts how the rollout goes. A system people can inspect gets
+        accepted; one they cannot gets treated as something happening to them. The last one is the
+        one people wish they had asked.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Automate payroll export first. Re-keying is the slowest step and the one where a single digit becomes a pay error.</li>
+        <li>Validation at submission has the best ratio on the list and is the step most often skipped.</li>
+        <li>Automatic time capture is the most invasive and least valuable, and belongs last if at all.</li>
+        <li>Automation cannot fix a badly timed deadline, unclear project codes, or distrust of what the data is for.</li>
+        <li>Automatic capture suits work with a clear physical boundary. It suits knowledge work poorly because the signal and the work diverge.</li>
+        <li>The record keeping, retention, rounding and weekly overtime duties all survive automation unchanged.</li>
+        <li>Check the rounding default on day one. A default that happens to favour the employer is the same violation as a deliberate one.</li>
+        <li>Cost the manual process before shopping. Administration and corrections are what automation removes; entry mostly stays.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What should I automate first in timesheet processing?</summary>
+          <p>The payroll export. Re-keying hours into payroll is the slowest manual step and the one where a single transposed digit becomes a pay error, and connecting the two systems is usually configuration rather than a project.</p>
+        </details>
+        <details>
+          <summary>Is automated time tracking better than manual timesheets?</summary>
+          <p>It depends on the work. Automatic capture fits jobs with a clear physical or system boundary, such as shift work at a fixed site. It fits knowledge work poorly, because reading, thinking and phone calls register as idle and the record has to be corrected so often that it costs more than entering hours would have.</p>
+        </details>
+        <details>
+          <summary>Does automating timesheets change my record keeping obligations?</summary>
+          <p>No. 29 CFR 516.2 requires the employer to keep hours worked each workday and each workweek regardless of what produced the record, and 29 CFR 516.6 requires time records to be kept at least two years. Confirm your vendor retains them that long and that you can export them.</p>
+        </details>
+        <details>
+          <summary>Do automated timesheet systems round hours?</summary>
+          <p>Many do, and several ship with quarter-hour rounding enabled by default. 29 CFR 785.48 applies to an automated system exactly as it does to paper: rounding must run both ways and must not, over time, fail to compensate employees for hours actually worked. Check the default setting before go-live.</p>
+        </details>
+        <details>
+          <summary>Will timesheet automation stop people submitting late?</summary>
+          <p>Only if lateness was caused by the effort of submitting. If it is caused by a deadline at a bad time, unclear project codes, or nobody knowing what the data is for, automation makes the chasing faster without reducing it.</p>
+        </details>
+        <details>
+          <summary>What should I ask a time tracking vendor before buying?</summary>
+          <p>Which way rounding defaults and whether it can be disabled, whether the workweek start is configurable, whether it handles daily overtime states, whether employees can export their own record unaided, what the payroll export format is, and what you get back if you leave.</p>
+        </details>
+        <details>
+          <summary>How do I calculate the ROI of timesheet automation?</summary>
+          <p>Cost the manual process first: administration hours per period, employee entry time, and the cost of corrections, each multiplied out to a year at a loaded hourly rate. Automation removes most of the administration, the chasing and the corrections, but not the entry, so hold the licence fee against that subset rather than the whole figure. Add implementation and one parallel payroll run to the cost side.</p>
+        </details>
+        <details>
+          <summary>Does automatic time capture require employee notice?</summary>
+          <p>Treat it as monitoring, because that is what it is. Connecticut, Delaware and New York require written notice before electronic monitoring begins, and Delaware and New York require the employee to acknowledge it. Elsewhere notice is not mandated by statute but the rollout goes considerably better with it.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+          <li><a href="timesheet-reminder.html">Timesheet Reminders That Actually Get Timesheets In</a></li>
+          <li><a href="time-tracking-employees-support.html">Time Tracking for Remote Employees That Your Team Will Support</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

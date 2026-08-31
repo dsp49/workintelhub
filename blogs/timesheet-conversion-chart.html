@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timesheet Conversion Chart: Minutes to Decimal Hours</title>
+  <meta name="description" content="Every minute from 1 to 59 converted to decimal hours, plus nearest tenth and nearest quarter columns, and what the rounding rule actually permits." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/timesheet-conversion-chart" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/timesheet-conversion-chart" />
+  <meta property="og:title" content="Timesheet Conversion Chart" />
+  <meta property="og:description" content="Every minute from 1 to 59 converted to decimal hours, plus nearest tenth and nearest quarter columns, and what the rounding rule actually permits." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/timesheet-conversion-chart.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Timesheet Conversion Chart" />
+  <meta name="twitter:description" content="Every minute from 1 to 59 converted to decimal hours, plus nearest tenth and nearest quarter columns, and what the rounding rule actually permits." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/timesheet-conversion-chart.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/timesheet-conversion-chart#article",
+        "headline": "Timesheet Conversion Chart",
+        "description": "Every minute from 1 to 59 converted to decimal hours, plus nearest tenth and nearest quarter columns, and what the rounding rule actually permits.",
+        "image": "https://workintelhub.com/images/blog/timesheet-conversion-chart.png",
+        "datePublished": "2026-08-31T00:00:00+00:00",
+        "dateModified": "2026-08-31T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/timesheet-conversion-chart"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/timesheet-conversion-chart#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Timesheet Conversion Chart"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/timesheet-conversion-chart#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I convert minutes to decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the minutes by 60. Fifteen minutes is 0.25, thirty is 0.50, and forty five is 0.75. The values that catch people out are the ones that do not divide evenly, such as twenty minutes, which is 0.33 rather than 0.20."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 20 minutes in decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "0.33. Twenty divided by sixty is 0.3333, which rounds to 0.33 at two decimal places. Writing it as 0.20 is the most common timesheet conversion error and understates the time by about eight minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 45 minutes in decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "0.75. Forty five is three quarters of sixty, so three quarters of an hour is 0.75. Similarly fifteen minutes is 0.25 and thirty minutes is 0.50."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 7 minute rule for timesheets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It describes what quarter-hour rounding does: minutes 1 through 7 round down to the previous quarter hour and minutes 8 through 14 round up to the next one. It is not a separate rule in the regulations. 29 CFR 785.48 permits quarter-hour rounding generally, and the seven minute split is simply where the midpoint falls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it legal to round employee time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, within limits. 29 CFR 785.48 permits recording start and stop times to the nearest 5 minutes, tenth of an hour or quarter hour, provided the practice does not over time fail to compensate employees for all the hours they actually worked. Rounding that only ever favours the employer does not satisfy that condition."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I round or use exact decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use exact decimal if a computer is doing the arithmetic. Rounding existed to make punch card totals tractable by hand. A spreadsheet has no such constraint, and exact hours remove any question about whether the rounding was neutral."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my spreadsheet show 7:30 instead of 7.50?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The result cell is formatted as a time rather than a number. Change the cell format to Number with two decimal places. Left as a time format, hour totals silently behave as fractions of a day when you add them, which produces totals that look plausible and are wrong."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Timesheet Conversion Chart</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">August 31, 2026 &middot; 6 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/timesheet-conversion-chart.png" alt="A conversion chart mapping clock minutes to decimal hours for payroll" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Payroll runs on decimal hours. Clocks record minutes. The chart below converts every minute
+        from 1 to 59, and adds the two rounded columns most payroll systems use.
+      </p>
+      <p>
+        The conversion itself is minutes divided by 60. It is worth having the table anyway, because
+        the error people make is not arithmetic. It is reading 20 minutes as 0.20 instead of 0.33,
+        which looks right and is wrong by seven minutes every time.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#chart">Minutes to decimal hours</a></li>
+          <li><a href="#common">The ones worth memorising</a></li>
+          <li><a href="#spreadsheet">Do not convert by hand in a spreadsheet</a></li>
+          <li><a href="#rounding-rule">What rounding is actually allowed</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="chart">Minutes to decimal hours</h2>
+      <p>
+        <strong>Exact</strong> is minutes divided by 60, to two places. <strong>Nearest tenth</strong>
+        and <strong>nearest quarter</strong> are the two rounding conventions <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> recognises, shown so
+        you can see what each one does to a given minute before you adopt it.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Minutes</th><th>Exact</th><th>Nearest tenth</th><th>Nearest quarter</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>0.02</td><td>0.00</td><td>0.00</td></tr>
+            <tr><td>2</td><td>0.03</td><td>0.00</td><td>0.00</td></tr>
+            <tr><td>3</td><td>0.05</td><td>0.00</td><td>0.00</td></tr>
+            <tr><td>4</td><td>0.07</td><td>0.10</td><td>0.00</td></tr>
+            <tr><td>5</td><td>0.08</td><td>0.10</td><td>0.00</td></tr>
+            <tr><td>6</td><td>0.10</td><td>0.10</td><td>0.00</td></tr>
+            <tr><td>7</td><td>0.12</td><td>0.10</td><td>0.00</td></tr>
+            <tr><td>8</td><td>0.13</td><td>0.10</td><td>0.25</td></tr>
+            <tr><td>9</td><td>0.15</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>10</td><td>0.17</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>11</td><td>0.18</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>12</td><td>0.20</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>13</td><td>0.22</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>14</td><td>0.23</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>15</td><td>0.25</td><td>0.20</td><td>0.25</td></tr>
+            <tr><td>16</td><td>0.27</td><td>0.30</td><td>0.25</td></tr>
+            <tr><td>17</td><td>0.28</td><td>0.30</td><td>0.25</td></tr>
+            <tr><td>18</td><td>0.30</td><td>0.30</td><td>0.25</td></tr>
+            <tr><td>19</td><td>0.32</td><td>0.30</td><td>0.25</td></tr>
+            <tr><td>20</td><td>0.33</td><td>0.30</td><td>0.25</td></tr>
+            <tr><td>21</td><td>0.35</td><td>0.40</td><td>0.25</td></tr>
+            <tr><td>22</td><td>0.37</td><td>0.40</td><td>0.25</td></tr>
+            <tr><td>23</td><td>0.38</td><td>0.40</td><td>0.50</td></tr>
+            <tr><td>24</td><td>0.40</td><td>0.40</td><td>0.50</td></tr>
+            <tr><td>25</td><td>0.42</td><td>0.40</td><td>0.50</td></tr>
+            <tr><td>26</td><td>0.43</td><td>0.40</td><td>0.50</td></tr>
+            <tr><td>27</td><td>0.45</td><td>0.40</td><td>0.50</td></tr>
+            <tr><td>28</td><td>0.47</td><td>0.50</td><td>0.50</td></tr>
+            <tr><td>29</td><td>0.48</td><td>0.50</td><td>0.50</td></tr>
+            <tr><td>30</td><td>0.50</td><td>0.50</td><td>0.50</td></tr>
+            <tr><td>31</td><td>0.52</td><td>0.50</td><td>0.50</td></tr>
+            <tr><td>32</td><td>0.53</td><td>0.50</td><td>0.50</td></tr>
+            <tr><td>33</td><td>0.55</td><td>0.60</td><td>0.50</td></tr>
+            <tr><td>34</td><td>0.57</td><td>0.60</td><td>0.50</td></tr>
+            <tr><td>35</td><td>0.58</td><td>0.60</td><td>0.50</td></tr>
+            <tr><td>36</td><td>0.60</td><td>0.60</td><td>0.50</td></tr>
+            <tr><td>37</td><td>0.62</td><td>0.60</td><td>0.50</td></tr>
+            <tr><td>38</td><td>0.63</td><td>0.60</td><td>0.75</td></tr>
+            <tr><td>39</td><td>0.65</td><td>0.60</td><td>0.75</td></tr>
+            <tr><td>40</td><td>0.67</td><td>0.70</td><td>0.75</td></tr>
+            <tr><td>41</td><td>0.68</td><td>0.70</td><td>0.75</td></tr>
+            <tr><td>42</td><td>0.70</td><td>0.70</td><td>0.75</td></tr>
+            <tr><td>43</td><td>0.72</td><td>0.70</td><td>0.75</td></tr>
+            <tr><td>44</td><td>0.73</td><td>0.70</td><td>0.75</td></tr>
+            <tr><td>45</td><td>0.75</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>46</td><td>0.77</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>47</td><td>0.78</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>48</td><td>0.80</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>49</td><td>0.82</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>50</td><td>0.83</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>51</td><td>0.85</td><td>0.80</td><td>0.75</td></tr>
+            <tr><td>52</td><td>0.87</td><td>0.90</td><td>0.75</td></tr>
+            <tr><td>53</td><td>0.88</td><td>0.90</td><td>1.00</td></tr>
+            <tr><td>54</td><td>0.90</td><td>0.90</td><td>1.00</td></tr>
+            <tr><td>55</td><td>0.92</td><td>0.90</td><td>1.00</td></tr>
+            <tr><td>56</td><td>0.93</td><td>0.90</td><td>1.00</td></tr>
+            <tr><td>57</td><td>0.95</td><td>1.00</td><td>1.00</td></tr>
+            <tr><td>58</td><td>0.97</td><td>1.00</td><td>1.00</td></tr>
+            <tr><td>59</td><td>0.98</td><td>1.00</td><td>1.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2 id="common">The ones worth memorising</h2>
+      <p>
+        In practice about eight values cover most of what you will convert.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Minutes</th><th>Decimal</th><th>Why it comes up</th></tr></thead>
+          <tbody>
+            <tr><td>6</td><td>0.10</td><td>The tenth-of-an-hour unit used in billing</td></tr>
+            <tr><td>10</td><td>0.17</td><td>Frequently mis-written as 0.10</td></tr>
+            <tr><td>15</td><td>0.25</td><td>Quarter hour</td></tr>
+            <tr><td>20</td><td>0.33</td><td>Frequently mis-written as 0.20</td></tr>
+            <tr><td>30</td><td>0.50</td><td>Half hour</td></tr>
+            <tr><td>40</td><td>0.67</td><td>Frequently mis-written as 0.40</td></tr>
+            <tr><td>45</td><td>0.75</td><td>Three quarter hour</td></tr>
+            <tr><td>50</td><td>0.83</td><td>Frequently mis-written as 0.50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The pattern in the errors is worth noticing. Every one of them treats the minutes as if they
+        were hundredths, and every one of them understates the time. Nobody accidentally converts 20
+        minutes to 0.45.
+      </p>
+      <h2 id="spreadsheet">Do not convert by hand in a spreadsheet</h2>
+      <p>
+        If your times are in a spreadsheet, the conversion is already done for you. Subtracting one
+        time from another returns a fraction of a day, so multiplying by 24 gives decimal hours
+        directly.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Formulas</span>
+        <p>Decimal hours between two times: <code>=(out-in)*24</code></p>
+        <p>Crossing midnight: <code>=MOD(out-in,1)*24</code></p>
+        <p>Minutes to decimal: <code>=minutes/60</code></p>
+        <p>Decimal back to h:mm: <code>=TEXT(hours/24,"h:mm")</code></p>
+        <p>Round to nearest tenth: <code>=ROUND(hours*10,0)/10</code></p>
+        <p>Round to nearest quarter: <code>=ROUND(hours*4,0)/4</code></p>
+      </div>
+      <p>
+        Format the result cell as a number, not as a time. Leaving it formatted as time is why a
+        7.5 hour day sometimes displays as 07:30 in one column and 7.50 in the next, and why the two
+        get added together.
+      </p>
+      <h2 id="rounding-rule">What rounding is actually allowed</h2>
+      <p>
+        The nearest tenth and nearest quarter columns are not arbitrary conventions. <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> permits the
+        long-standing practice of recording start and stop times to the nearest 5 minutes, the nearest
+        tenth of an hour, or the nearest quarter hour, provided the practice does not, over a period
+        of time, fail to compensate employees properly for all the time they actually worked.
+      </p>
+      <p>
+        That proviso does the real work. Rounding has to run both directions, and it has to come out
+        roughly even. A rule that rounds arrivals up to the next quarter and departures down to the
+        last quarter is not rounding, it is a standing deduction of up to 28 minutes a day, and it
+        fails the regulation regardless of how it is described in the handbook.
+      </p>
+      <p>
+        The rule that gets called the seven minute rule is the arithmetic consequence of quarter hour
+        rounding, not a separate provision. Under quarter hour rounding, minutes 1 to 7 round down and
+        8 to 14 round up. That is neutral by construction, which is the only reason it is defensible.
+      </p>
+      <p>
+        Our <a href="/blogs/timesheet-template">timesheet template</a> uses exact decimal to two
+        places for this reason. If the arithmetic is being done by a computer, rounding buys nothing
+        and adds a compliance question you do not need.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Minutes convert to decimal hours by dividing by 60. Twenty minutes is 0.33, not 0.20.</li>
+        <li>Every common conversion error treats minutes as hundredths, and every one of them understates the time worked.</li>
+        <li>In a spreadsheet, subtracting two times and multiplying by 24 gives decimal hours with no manual conversion.</li>
+        <li>Use MOD for shifts that cross midnight, or the result goes negative.</li>
+        <li>29 CFR 785.48 permits rounding to the nearest 5 minutes, tenth or quarter hour, but only if it comes out even over time.</li>
+        <li>The seven minute rule is just what quarter-hour rounding does arithmetically, not a separate legal provision.</li>
+        <li>If a computer is doing the arithmetic, do not round at all. Exact decimal removes the compliance question.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>How do I convert minutes to decimal hours?</summary>
+          <p>Divide the minutes by 60. Fifteen minutes is 0.25, thirty is 0.50, and forty five is 0.75. The values that catch people out are the ones that do not divide evenly, such as twenty minutes, which is 0.33 rather than 0.20.</p>
+        </details>
+        <details>
+          <summary>What is 20 minutes in decimal hours?</summary>
+          <p>0.33. Twenty divided by sixty is 0.3333, which rounds to 0.33 at two decimal places. Writing it as 0.20 is the most common timesheet conversion error and understates the time by about eight minutes.</p>
+        </details>
+        <details>
+          <summary>What is 45 minutes in decimal hours?</summary>
+          <p>0.75. Forty five is three quarters of sixty, so three quarters of an hour is 0.75. Similarly fifteen minutes is 0.25 and thirty minutes is 0.50.</p>
+        </details>
+        <details>
+          <summary>What is the 7 minute rule for timesheets?</summary>
+          <p>It describes what quarter-hour rounding does: minutes 1 through 7 round down to the previous quarter hour and minutes 8 through 14 round up to the next one. It is not a separate rule in the regulations. 29 CFR 785.48 permits quarter-hour rounding generally, and the seven minute split is simply where the midpoint falls.</p>
+        </details>
+        <details>
+          <summary>Is it legal to round employee time?</summary>
+          <p>Yes, within limits. 29 CFR 785.48 permits recording start and stop times to the nearest 5 minutes, tenth of an hour or quarter hour, provided the practice does not over time fail to compensate employees for all the hours they actually worked. Rounding that only ever favours the employer does not satisfy that condition.</p>
+        </details>
+        <details>
+          <summary>Should I round or use exact decimal hours?</summary>
+          <p>Use exact decimal if a computer is doing the arithmetic. Rounding existed to make punch card totals tractable by hand. A spreadsheet has no such constraint, and exact hours remove any question about whether the rounding was neutral.</p>
+        </details>
+        <details>
+          <summary>Why does my spreadsheet show 7:30 instead of 7.50?</summary>
+          <p>The result cell is formatted as a time rather than a number. Change the cell format to Number with two decimal places. Left as a time format, hour totals silently behave as fractions of a day when you add them, which produces totals that look plausible and are wrong.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+          <li><a href="timesheet-automation.html">Timesheet Automation: What to Automate First</a></li>
+          <li><a href="time-tracking-employees-support.html">Time Tracking for Remote Employees That Your Team Will Support</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

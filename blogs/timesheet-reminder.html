@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timesheet Reminders That Actually Get Timesheets In</title>
+  <meta name="description" content="Why timesheets come in late, what to change before you add another reminder, and copy-paste reminder wording for Slack, email and escalation." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/timesheet-reminder" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/timesheet-reminder" />
+  <meta property="og:title" content="Timesheet Reminders" />
+  <meta property="og:description" content="Why timesheets come in late, what to change before you add another reminder, and copy-paste reminder wording for Slack, email and escalation." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/timesheet-reminder.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-08-31T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Timesheet Reminders" />
+  <meta name="twitter:description" content="Why timesheets come in late, what to change before you add another reminder, and copy-paste reminder wording for Slack, email and escalation." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/timesheet-reminder.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/timesheet-reminder#article",
+        "headline": "Timesheet Reminders",
+        "description": "Why timesheets come in late, what to change before you add another reminder, and copy-paste reminder wording for Slack, email and escalation.",
+        "image": "https://workintelhub.com/images/blog/timesheet-reminder.png",
+        "datePublished": "2026-08-31T00:00:00+00:00",
+        "dateModified": "2026-08-31T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/timesheet-reminder"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/timesheet-reminder#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Timesheet Reminders"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/timesheet-reminder#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I get employees to submit timesheets on time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Change the deadline before you change the reminder. A Friday 5pm deadline competes with everything else due that day and lands after many people have stopped. Friday midday or Monday afternoon typically works better. After that, reduce the number of fields and remind only the people who have not submitted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I withhold pay if an employee does not submit a timesheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Under the FLSA an employer must pay for all hours worked on the regular payday regardless of whether a timesheet was submitted, and the record keeping duty in 29 CFR 516.2 belongs to the employer. A missing timesheet means you must establish the hours another way, not that payment can be delayed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many timesheet reminders should I send?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Three at most: one in advance to everyone, one on the deadline to people who have not submitted, and one after the deadline to the manager. Beyond that people learn to ignore all of them, and the reminders stop working for the few who genuinely need them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should timesheet reminders go to the whole team?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only the advance one. The deadline reminder should go to people who have not submitted. Reminding someone who already complied trains them to ignore the message, which then degrades the reminder for everyone else."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should a timesheet reminder say?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The period, the deadline, the link, and one line on why it matters. Add an invitation to reply if something is blocking it, which turns the chase into an offer and surfaces tooling problems you would otherwise never hear about."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is daily or weekly timesheet entry better?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Daily, in most cases. It takes less total time than reconstructing a week from memory and it produces more accurate data, because the entries are made while the person still remembers what they did. Weekly reconstruction is a common reason sheets are both late and approximate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I measure whether timesheet chasing is improving?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Track on-time submission rate by team, the number of reminders sent after the deadline, and the share of sheets amended after approval. The third is the one people miss: a team that submits on time but is corrected often is submitting fast and wrong, which costs payroll more than lateness does."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a reasonable timesheet deadline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Late morning on the last working day of the period, or early afternoon on the first day of the next one. Both land at moments people are at their desks and not already closing down, which matters more than how much notice you give."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Timesheet Reminders</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">August 31, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/timesheet-reminder.png" alt="A timesheet reminder message scheduled ahead of a payroll deadline" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Reminder wording is at the bottom of this page. It is at the bottom deliberately, because a
+        reminder is the cheapest possible fix and it is rarely the reason timesheets are late.
+      </p>
+      <p>
+        Late timesheets almost always have a structural cause: the deadline is at a bad time, the form
+        takes too long, nothing happens when it is missed, or nobody knows what the data is used for.
+        Fix those and the reminder becomes a courtesy rather than a chase.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#why-late">Why timesheets come in late</a></li>
+          <li><a href="#timing">When to send them</a></li>
+          <li><a href="#measure">Measure the submission rate, not the reminders sent</a></li>
+          <li><a href="#templates">Copy-paste reminder wording</a></li>
+          <li><a href="#escalation">What happens when it is still late</a></li>
+          <li><a href="#automate">Automate the chase before you write more of it</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="why-late">Why timesheets come in late</h2>
+      <p>
+        Five causes cover almost all of it, and the right fix is different for each.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Cause</th><th>What it looks like</th><th>Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Bad deadline</td><td>Due Friday at 5pm, or Monday morning</td><td>Move it to Friday midday or Monday afternoon</td></tr>
+            <tr><td>Too slow to fill in</td><td>Reconstructing the week from memory</td><td>Fewer fields, or daily entry</td></tr>
+            <tr><td>No consequence</td><td>Payroll chases and it still gets paid</td><td>Name what actually happens, once</td></tr>
+            <tr><td>No visible purpose</td><td>Nobody knows where it goes</td><td>Show what it is used for</td></tr>
+            <tr><td>Broken tooling</td><td>Login expires, mobile does not work</td><td>Fix the tool, not the person</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The deadline one is the most common and the easiest to test. A Friday 5pm deadline competes
+        with everything else that has to be finished on Friday and lands after many people have
+        stopped for the week. Moving it to Friday midday routinely improves on-time submission more
+        than any reminder does, because it is asking at a moment people are still at their desks.
+      </p>
+      <h2 id="timing">When to send them</h2>
+      <p>
+        Three sends. More than that and people learn to ignore all of them, which is the specific
+        failure mode of reminder-heavy systems.
+      </p>
+      <ul>
+        <li><strong>Advance, on the last working day of the period.</strong> Ahead of the deadline,
+        while there is still time to act.</li>
+        <li><strong>On the deadline, to the people who have not submitted.</strong> Not to everyone.
+        Reminding people who already complied is how a reminder becomes background noise.</li>
+        <li><strong>After the deadline, to the manager.</strong> Once, with names. Not a public
+        list.</li>
+      </ul>
+      <p>
+        Segmenting the second send matters more than the wording. If a reminder reaches people who
+        have already done the thing, they stop reading it, and then it stops working for the people
+        who have not.
+      </p>
+      <p>
+        Consider also what you are adding to. <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday" target="_blank" rel="noopener">Microsoft Work Trend Index</a> reported in June 2025 that knowledge workers are
+        interrupted roughly every two minutes across meetings, email and chat. A reminder is an
+        interruption too, and one aimed at the wrong people is a pure cost.
+      </p>
+      <h2 id="measure">Measure the submission rate, not the reminders sent</h2>
+      <p>
+        If chasing timesheets is a recurring cost, it is worth a number. One is enough.
+      </p>
+      <p>
+        <strong>On-time submission rate</strong> is the share of expected timesheets received before
+        the deadline, per period. Track it by team rather than by person, because the pattern is
+        almost always a team-level one: a particular manager, a particular shift pattern, a particular
+        client whose work runs late into Friday.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">The calculation</span>
+        <p>On-time rate: <code>=submitted_before_deadline / expected_submissions</code></p>
+        <p>Chase load: <code>=reminders_sent_after_deadline / expected_submissions</code></p>
+        <p>Correction rate: <code>=sheets_amended_after_approval / submitted</code></p>
+      </div>
+      <p>
+        The third one is the useful surprise. A team with a high on-time rate and a high correction
+        rate is submitting fast and wrong, which is worse for payroll than submitting late, and a
+        reminder-only view of the problem never surfaces it.
+      </p>
+      <p>
+        Two cautions about how you use these. Do not publish a league table of individuals; it changes
+        the behaviour without changing the cause, and people start submitting placeholder hours to
+        clear the deadline. And do not set a target of 100%%. The last few percent are usually people
+        on leave, on shift, or genuinely blocked, and pursuing them costs more than the hours are
+        worth.
+      </p>
+      <h2 id="templates">Copy-paste reminder wording</h2>
+      <p>
+        Three messages, matching the three sends. Keep the deadline, the link and the reason in every
+        one, and keep them short enough to read in the notification preview.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Advance reminder &mdash; Slack or Teams</span>
+        <p>Timesheets for <span class="fill">[period]</span> are due <span class="fill">[day and time]</span>. It takes about two minutes: <span class="fill">[link]</span></p>
+        <p>Submitting on time is what lets payroll run on <span class="fill">[payday]</span>.</p>
+      </div>
+      <div class="tmpl">
+        <span class="tmpl__label">Deadline day &mdash; email, unsubmitted only</span>
+        <p>Subject: Timesheet due today, <span class="fill">[date]</span></p>
+        <p>Hi <span class="fill">[name]</span>, your timesheet for <span class="fill">[period]</span> has not come through yet. It closes at <span class="fill">[time]</span> today.</p>
+        <p>Submit here: <span class="fill">[link]</span></p>
+        <p>If something is blocking it, reply to this and we will sort it out rather than you having to
+        work around it.</p>
+      </div>
+      <div class="tmpl">
+        <span class="tmpl__label">After the deadline &mdash; to the manager</span>
+        <p>Subject: Outstanding timesheets, <span class="fill">[period]</span></p>
+        <p>These have not been submitted for the period ending <span class="fill">[date]</span>: <span class="fill">[names]</span></p>
+        <p>Payroll closes <span class="fill">[date and time]</span>. After that, corrections move to the following cycle.</p>
+      </div>
+      <p>
+        Note what is absent. No exclamation marks, no "friendly reminder", no third and fourth chase.
+        The last line of the deadline message is the one that does the most work, because it turns a
+        chase into an offer and surfaces the tooling problems you would otherwise never hear about.
+      </p>
+      <h2 id="escalation">What happens when it is still late</h2>
+      <p>
+        This is the part most policies avoid, and avoiding it is why the reminders never stop.
+      </p>
+      <p>
+        Be careful about the obvious lever. Withholding pay for a missing timesheet is not available
+        to you: under the FLSA an employer must pay for all hours worked on the regular payday whether
+        or not the timesheet arrived. The record keeping duty in <a href="https://www.law.cornell.edu/cfr/text/29/516.2" target="_blank" rel="noopener">29 CFR 516.2</a> is the employer's, not the
+        employee's. A missing timesheet means you have to establish the hours some other way, not that
+        you can decline to pay.
+      </p>
+      <p>
+        What is available is ordinary management. Say once what happens when a timesheet is late, in
+        the same plain terms as the rest of the policy: the hours are estimated from the schedule,
+        payroll corrects in the next cycle, and repeated lateness is a performance conversation rather
+        than an escalating email sequence. Then hold to it.
+      </p>
+      <p>
+        Where the sheet is late because the person genuinely does not remember the week, the fix is
+        upstream. Daily entry takes less total time than weekly reconstruction and produces better
+        data, and it is the single change most likely to end the chasing.
+      </p>
+      <h2 id="automate">Automate the chase before you write more of it</h2>
+      <p>
+        A reminder is a scheduled message conditional on a missing record. That is a job for software.
+        If you are sending them by hand, that is the thing to fix first, because manual reminders are
+        also the ones that go to everybody rather than only to the people who need them.
+      </p>
+      <p>
+        Most time tracking tools do this natively. If yours does not, a scheduled script against the
+        submission list is a short piece of work, and it removes the part of the job that made anyone
+        resent it. Our page on <a href="/blogs/timesheet-automation">timesheet automation</a> covers
+        what to automate in what order, and the
+        <a href="/blogs/timesheet-template">timesheet template</a> covers the form itself.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Late timesheets usually have a structural cause. A reminder is the cheapest fix and rarely the right one.</li>
+        <li>Moving a Friday 5pm deadline to Friday midday improves on-time submission more than any reminder wording.</li>
+        <li>Send three: advance to everyone, deadline day to unsubmitted only, after the deadline to the manager.</li>
+        <li>Never remind people who have already submitted. That is how a reminder becomes background noise.</li>
+        <li>You cannot withhold pay for a missing timesheet. The FLSA record keeping duty is the employer's.</li>
+        <li>Say once what happens when a sheet is late, then hold to it, instead of escalating the email sequence.</li>
+        <li>Daily entry takes less total time than weekly reconstruction and is the change most likely to end the chasing.</li>
+        <li>Track on-time submission by team, and watch the correction rate: fast and wrong is worse for payroll than late.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>How do I get employees to submit timesheets on time?</summary>
+          <p>Change the deadline before you change the reminder. A Friday 5pm deadline competes with everything else due that day and lands after many people have stopped. Friday midday or Monday afternoon typically works better. After that, reduce the number of fields and remind only the people who have not submitted.</p>
+        </details>
+        <details>
+          <summary>Can I withhold pay if an employee does not submit a timesheet?</summary>
+          <p>No. Under the FLSA an employer must pay for all hours worked on the regular payday regardless of whether a timesheet was submitted, and the record keeping duty in 29 CFR 516.2 belongs to the employer. A missing timesheet means you must establish the hours another way, not that payment can be delayed.</p>
+        </details>
+        <details>
+          <summary>How many timesheet reminders should I send?</summary>
+          <p>Three at most: one in advance to everyone, one on the deadline to people who have not submitted, and one after the deadline to the manager. Beyond that people learn to ignore all of them, and the reminders stop working for the few who genuinely need them.</p>
+        </details>
+        <details>
+          <summary>Should timesheet reminders go to the whole team?</summary>
+          <p>Only the advance one. The deadline reminder should go to people who have not submitted. Reminding someone who already complied trains them to ignore the message, which then degrades the reminder for everyone else.</p>
+        </details>
+        <details>
+          <summary>What should a timesheet reminder say?</summary>
+          <p>The period, the deadline, the link, and one line on why it matters. Add an invitation to reply if something is blocking it, which turns the chase into an offer and surfaces tooling problems you would otherwise never hear about.</p>
+        </details>
+        <details>
+          <summary>Is daily or weekly timesheet entry better?</summary>
+          <p>Daily, in most cases. It takes less total time than reconstructing a week from memory and it produces more accurate data, because the entries are made while the person still remembers what they did. Weekly reconstruction is a common reason sheets are both late and approximate.</p>
+        </details>
+        <details>
+          <summary>How do I measure whether timesheet chasing is improving?</summary>
+          <p>Track on-time submission rate by team, the number of reminders sent after the deadline, and the share of sheets amended after approval. The third is the one people miss: a team that submits on time but is corrected often is submitting fast and wrong, which costs payroll more than lateness does.</p>
+        </details>
+        <details>
+          <summary>What is a reasonable timesheet deadline?</summary>
+          <p>Late morning on the last working day of the period, or early afternoon on the first day of the next one. Both land at moments people are at their desks and not already closing down, which matters more than how much notice you give.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+          <li><a href="timesheet-automation.html">Timesheet Automation: What to Automate First</a></li>
+          <li><a href="timesheet-conversion-chart.html">Timesheet Conversion Chart: Minutes to Decimal Hours</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/">WorkIntel<span>Hub</span></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
