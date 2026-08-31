@@ -916,3 +916,32 @@ td .tool-tile { margin-right: 0.5rem; }
 .state-table .yes { color: #1e7a45; font-weight: 600; } .state-table .all { color: #b3261e; font-weight: 600; }
 .guide-list { list-style: none; padding: 0; display: grid; gap: .6rem; }
 .guide-list .meta { display: block; }
+
+/* Copy-paste template text, marked out from the surrounding commentary so a
+   reader can see at a glance what to lift and what is explanation. */
+.tmpl {
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.1rem 1.3rem;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+.tmpl p { margin: 0 0 0.75rem; }
+.tmpl p:last-child { margin-bottom: 0; }
+.tmpl .fill {
+  background: #fff4e5;
+  border-bottom: 1px dashed var(--gold);
+  padding: 0 0.15em;
+  font-weight: 600;
+  color: #6b4a12;
+}
+.tmpl__label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.55rem;
+}
