@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic AI in HR: Separating Hype From Reality</title>
+  <meta name="description" content="What AI agents for HR actually do, how they differ from existing automation, where they work today, and the rules that apply before you switch one on." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/ai-agents-for-hr" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/ai-agents-for-hr" />
+  <meta property="og:title" content="Agentic AI in HR" />
+  <meta property="og:description" content="What AI agents for HR actually do, how they differ from existing automation, where they work today, and the rules that apply before you switch one on." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/ai-agents-for-hr.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agentic AI in HR" />
+  <meta name="twitter:description" content="What AI agents for HR actually do, how they differ from existing automation, where they work today, and the rules that apply before you switch one on." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/ai-agents-for-hr.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/ai-agents-for-hr#article",
+        "headline": "Agentic AI in HR",
+        "description": "What AI agents for HR actually do, how they differ from existing automation, where they work today, and the rules that apply before you switch one on.",
+        "image": "https://workintelhub.com/images/blog/ai-agents-for-hr.png",
+        "datePublished": "2026-09-01T00:00:00+00:00",
+        "dateModified": "2026-09-01T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/ai-agents-for-hr"
+        },
+        "articleSection": "Productivity",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/ai-agents-for-hr#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Productivity",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Agentic AI in HR"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/ai-agents-for-hr#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between AI agents and agentic AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They describe the same technology from two angles. Agentic AI is the term for the paradigm: systems with memory, planning and autonomous execution. AI agents is how people refer to the tools built on it. An AI agent for HR is agentic AI applied to a specific HR workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is agentic AI the same as generative AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Generative AI produces a response to a prompt and stops. Agentic AI uses generative models as a reasoning layer but goes further: it decides the next step, acts through connected systems, and continues toward a goal without being re-prompted at each stage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the risks of agentic AI in HR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Biased or incorrect decisions made at scale, unclear accountability when an agent acts on its own, and compliance exposure under laws such as NYC Local Law 144 and the Illinois Human Rights Act as amended. Keeping high-stakes decisions with a person and maintaining an audit trail for every action are the standard mitigations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which HR tasks are best suited to AI agents right now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "High-volume, low-risk, well-defined workflows: resume screening, interview scheduling, onboarding orchestration and routine policy questions. Termination, compensation and promotion decisions should keep a human as the final decision-maker."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does NYC Local Law 144 apply if my company is not in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It can. The law follows the location of the job rather than the location of your company or the residence of the candidate. A role tied to New York City, including a remote position associated with an NYC office, is covered wherever you are headquartered."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Local Law 144 actually require?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A bias audit of the tool conducted within the previous year, a summary of the audit results published on your careers or jobs website, and notice to candidates at least ten business days before the tool is used, with a route to request an alternative process. Penalties reach $500 for a first violation and up to $1,500 for later ones, accruing per day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Illinois require for AI in hiring?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HB 3773 amended the Illinois Human Rights Act with effect from 1 January 2026. It makes discriminatory use of AI in employment decisions a civil rights violation, bars using zip code as a proxy for a protected class, and requires notice to applicants and employees when AI is used in a covered decision."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I measure the ROI of an HR agent?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tie it to one operational metric the agent directly touches rather than to AI adoption. For a recruiting agent, time-to-fill and cost-per-hire before and after. For a service desk agent, resolution time and the share of tickets closed without escalation. Give the pilot four to eight weeks against a known baseline, and if no number moved, it has not proven anything."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an agentic workflow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A multi-step process an agent runs end to end toward a goal, adjusting its next action based on what happened in the previous step. In a traditional workflow every step and its order are fixed in advance by a person."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Agentic AI in HR</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 1, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/ai-agents-for-hr.png" alt="An AI agent planning and executing a multi-step HR workflow across connected systems" width="1200" height="630" />
+      </figure>
+
+      <p>
+        An AI agent for HR is a system that plans and carries out multi-step HR work on its own,
+        inside guardrails you set, instead of waiting for a prompt at every step. That is the one
+        distinction separating a real agent from every "AI in HR" claim of the last three years. A
+        chatbot that answers a benefits question is not an agent. A system that reads a leave request,
+        checks it against policy and team coverage, approves or escalates it, and updates the HRIS
+        without a human clicking anything is an agent.
+      </p>
+      <p>
+        This guide covers what agentic AI actually means, how it differs from the automation HR has
+        used for a decade, where it is genuinely useful today, and where the hype has run ahead of the
+        results.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#what-is-agentic-ai">What is agentic AI?</a></li>
+          <li><a href="#what-are-ai-agents-for-hr">What are AI agents for HR?</a></li>
+          <li><a href="#how-they-work">How AI agents work in HR</a></li>
+          <li><a href="#vs-automation">Traditional HR automation vs agentic AI</a></li>
+          <li><a href="#benefits">What they are actually good at</a></li>
+          <li><a href="#use-cases">Five use cases, and where each one fails</a></li>
+          <li><a href="#compliance">The compliance rules that apply before you switch one on</a></li>
+          <li><a href="#best-practices">Best practices</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-is-agentic-ai">What is agentic AI?</h2>
+      <p>
+        Agentic AI is software built to pursue a goal across multiple steps, using memory of what it
+        has already done, a plan for what to do next, and the ability to take real actions through
+        other systems, rather than just producing a reply. <a href="https://www.strategyand.pwc.com/" target="_blank" rel="noopener">PwC's Strategy&amp;</a> breaks the practical value into three
+        layers: automating repetitive rule-based steps, augmenting a human decision with real-time
+        analysis, and orchestrating an entire workflow across systems end to end. That third layer is
+        what makes it agentic rather than another automation script.
+      </p>
+      <p>
+        Generative AI and agentic AI get conflated constantly, and the difference matters more than
+        the marketing suggests. A generative tool, including the chatbots most HR teams already use,
+        responds when prompted and stops. Agentic AI keeps going: it decides the next step, executes
+        it through a connected system, checks the result, and adjusts if something does not match the
+        plan.
+      </p>
+      <p>
+        That gap is wide enough that vendors have started overusing the word. A quick way to tell the
+        difference: a real agent remembers earlier interactions, handles an unexpected input without
+        breaking, and takes the next step on its own instead of waiting to be asked. If a vendor's
+        agent fails all three, you are buying a chatbot with better branding.
+      </p>
+      <h2 id="what-are-ai-agents-for-hr">What are AI agents for HR?</h2>
+      <p>
+        AI agents for HR are agentic systems purpose-built to plan and execute HR tasks: sourcing and
+        screening candidates, routing employee questions, running onboarding checklists, flagging
+        attrition risk, or approving routine requests against policy. They sit on top of your existing
+        stack, an ATS, an HRIS, a payroll system, and act inside it rather than replacing it.
+      </p>
+      <p>
+        The distinction that matters for a buying decision is scope. An AI HR assistant answers
+        questions. An AI agent completes a workflow that used to require a person to open three
+        different systems. Many tools available today sit somewhere between the two, which is why it
+        is worth evaluating what a product actually does rather than what a demo shows.
+      </p>
+      <h2 id="how-they-work">How AI agents work in HR</h2>
+      <p>
+        Every functioning HR agent is built from the same four components, whether it is screening
+        resumes or approving PTO.
+      </p>
+      <ul>
+        <li><strong>Perception.</strong> It reads structured and unstructured HR data: applications,
+        tickets, calendar availability, HRIS records, prior conversation history.</li>
+        <li><strong>Planning.</strong> It breaks a goal, fill this requisition, resolve this leave
+        request, into an ordered set of steps, using a language model as the reasoning layer.</li>
+        <li><strong>Action.</strong> It executes those steps through tool calls and API connections
+        into your ATS, HRIS, calendar or messaging platform, not just by generating text.</li>
+        <li><strong>Memory and guardrails.</strong> It retains context across steps and sessions, and
+        operates inside limits you define: which decisions it makes outright, which need sign-off, and
+        what it may never touch.</li>
+      </ul>
+      <p>
+        In recruiting that loop looks like: parse a resume, score it against the requisition, shortlist
+        the top candidates, draft interview invitations, and route anything ambiguous to a recruiter
+        instead of guessing. The agent is not answering one question. It is running a process and
+        stopping only where you told it to.
+      </p>
+      <h2 id="vs-automation">Traditional HR automation vs agentic AI</h2>
+      <p>
+        "We already automated that" is the most common objection when a vendor pitches agentic AI, and
+        it deserves a real answer.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th></th><th>Traditional automation (RPA, rules engines)</th><th>Agentic AI</th></tr></thead>
+          <tbody>
+            <tr><td>Trigger</td><td>Fixed event: form submitted, date reached</td><td>A goal, then the agent decides the steps</td></tr>
+            <tr><td>The unexpected</td><td>Breaks or escalates on anything outside the rule</td><td>Adapts the plan, replans, or asks for input</td></tr>
+            <tr><td>Decision-making</td><td>None; follows a fixed if-then path</td><td>Weighs options against context and prior outcomes</td></tr>
+            <tr><td>Memory</td><td>Stateless between runs</td><td>Retains context across steps and sessions</td></tr>
+            <tr><td>Oversight</td><td>Set once, monitored occasionally</td><td>Ongoing guardrails and audit review</td></tr>
+            <tr><td>Example</td><td>Auto-reject any application missing a required field</td><td>Review a borderline application, request the missing detail, then re-score it</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Traditional automation is a calculator: it does exactly what it was programmed to do. Agentic
+        AI is closer to a junior employee given a goal who makes decisions along the way. That is
+        precisely why it needs <em>more</em> oversight, not less, particularly early on.
+      </p>
+      <h2 id="benefits">What they are actually good at</h2>
+      <ul>
+        <li><strong>Speed on high-volume, low-risk work.</strong> Screening, scheduling and policy
+        questions that took a coordinator hours can run continuously.</li>
+        <li><strong>Consistency.</strong> An agent applies the same criteria to the 500th application
+        as to the first, which a tired reviewer at four on a Friday does not always manage.</li>
+        <li><strong>Coverage outside business hours.</strong> Routine requests get handled when they
+        arrive rather than the next working day.</li>
+        <li><strong>Freed-up time for judgement work.</strong> Every hour an agent spends scheduling
+        is an hour a recruiter spends on a hard conversation or a close call.</li>
+      </ul>
+      <p>
+        Interest is real. Per Gartner's CHRO Priorities research for 2026, 82 per cent of HR leaders
+        planned to deploy some form of agentic AI within twelve months, and <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-07-gartner-says-ai-revolution-and-cost-pressures-are-two-forces-driving-the-top-four-trends-for-talent-acquisition-in-2026" target="_blank" rel="noopener">Gartner</a> projects that by 2028,
+        30 per cent of recruiting teams will use AI agents for high-volume hiring and early-stage
+        tasks.
+      </p>
+      <p>
+        Adoption is running well ahead of measurable results, though. <a href="https://www.gartner.com/en/newsroom/press-releases/2025-10-16-ai-in-hr-separate-hype-from-reality-to-achieve-business-goals" target="_blank" rel="noopener">Gartner</a> reported that while 95 per
+        cent of CHROs had adopted some form of AI in HR by the end of 2025, nearly three-quarters said
+        the business value delivered so far was only moderate or minimal.
+      </p>
+      <p>
+        The sharpest warning is separate: <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">Gartner predicted in June 2025</a> that over 40 per cent of agentic AI projects would be
+        cancelled by the end of 2027, citing escalating costs, unclear business value and inadequate
+        risk controls. Read that as a reason to scope one workflow narrowly rather than as a reason to
+        wait.
+      </p>
+      <h2 id="use-cases">Five use cases, and where each one fails</h2>
+      <p>
+        <strong>1. Candidate sourcing and screening.</strong> Agents parse resumes, score against
+        requisition criteria and shortlist automatically.
+      </p>
+      <p>
+        <em>Where it fails:</em> criteria trained on historical hiring data can replicate past bias,
+        which is what <a href="https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page" target="_blank" rel="noopener">New York City Local Law 144</a> was written to catch. The compliance detail is in the section below, and the
+        scope is narrower than most summaries claim.
+      </p>
+      <p>
+        <strong>2. Interview scheduling and coordination.</strong> Agents check availability, book
+        interviews and send reminders across time zones.
+      </p>
+      <p>
+        <em>Where it fails:</em> double bookings and missed context, such as a candidate's scheduling
+        constraint mentioned in an email the agent never ingested, when it is not connected to every
+        relevant system.
+      </p>
+      <p>
+        <strong>3. Onboarding orchestration.</strong> An agent can trigger IT provisioning, benefits
+        reminders and training assignments the moment an offer is signed.
+      </p>
+      <p>
+        <em>Where it fails:</em> onboarding run entirely by an agent reads as impersonal in a new
+        hire's first week, which is the moment human contact matters most for retention.
+      </p>
+      <p>
+        <strong>4. Employee self-service and policy questions.</strong> Agents resolve routine
+        questions about leave balances, benefits and policy without a ticket.
+      </p>
+      <p>
+        <em>Where it fails:</em> it will answer confidently from a policy that is unclear, outdated or
+        recently changed. The agent is only as current as the document it reads, which makes policy
+        hygiene a prerequisite rather than a nice-to-have.
+      </p>
+      <p>
+        <strong>5. Attrition risk flagging.</strong> Agents watch engagement signals, workload and
+        tenure to flag elevated flight risk early.
+      </p>
+      <p>
+        <em>Where it fails:</em> scores built on incomplete signals mislabel people, and using the
+        score itself as a performance input crosses directly into the surveillance problem covered in
+        our <a href="/blogs/ethical-employee-monitoring-playbook">ethical monitoring playbook</a> and
+        our page on <a href="/blogs/privacy-line-what-never-to-track">what monitoring should never
+        collect</a>.
+      </p>
+      <h2 id="compliance">The compliance rules that apply before you switch one on</h2>
+      <p>
+        Two US jurisdictions regulate this directly today, and both are commonly misdescribed.
+      </p>
+      <p>
+        <strong>New York City.</strong> <a href="https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page" target="_blank" rel="noopener">New York City Local Law 144</a> governs automated employment decision tools. The tool must
+        have had a bias audit within the previous year, a summary of the results must be published on
+        your careers or jobs site, and candidates must be given at least ten business days' notice
+        before it is used, with a route to request an alternative process.
+      </p>
+      <p>
+        The scope is the part that gets stated wrongly. The law follows <strong>the location of the
+        job</strong>, not where the candidate happens to live. A role tied to New York City, including
+        a remote position associated with an NYC office, is covered no matter where your company is
+        headquartered. Penalties run to $500 for a first violation and up to $1,500 for each
+        subsequent one, and every day a tool is used without a valid audit counts separately, so they
+        accumulate quickly.
+      </p>
+      <p>
+        <strong>Illinois.</strong> <a href="https://www.ilga.gov/ftp/legislation/103/BillStatus/HTML/10300HB3773.html" target="_blank" rel="noopener">Illinois HB 3773</a> amended the Illinois Human Rights Act with effect from 1 January
+        2026. It makes it a civil rights violation to use AI that discriminates in recruitment, hiring,
+        promotion, discipline, discharge or the terms of employment, expressly bars using zip code as a
+        proxy for a protected class, and requires notice to applicants and employees when AI is used in
+        a covered decision. Our page on
+        <a href="/blogs/illinois-right-to-privacy-in-the-workplace-act">Illinois workplace privacy
+        law</a> covers the neighbouring statutes, including BIPA, which applies if any part of your
+        process touches face or voice analysis.
+      </p>
+      <p>
+        Beyond these, an agent that reads employee activity data is monitoring, and four states now
+        require written notice of electronic monitoring before it starts. Our
+        <a href="/blogs/employee-monitoring-laws-by-state">state-by-state guide</a> sets out the duty,
+        and the <a href="/blogs/employee-monitoring-consent-form">acknowledgement form</a> has wording
+        that covers it.
+      </p>
+      <h2 id="best-practices">Best practices</h2>
+      <ul>
+        <li><strong>Start with one narrow, high-volume workflow.</strong> A single well-defined process
+        lets you measure honestly and limits the blast radius of a mistake.</li>
+        <li><strong>Keep a human in the loop on anything high-stakes.</strong> Termination,
+        compensation, promotion and any decision covered by employment law should never be fully
+        autonomous. Route them for sign-off every time.</li>
+        <li><strong>Demand an audit trail.</strong> You need to answer "why did the agent do that" for
+        any action, not just see the output. Without a record of how a decision was reached it cannot
+        be explained, reviewed or defended.</li>
+        <li><strong>Vet for agentic-washing before you buy.</strong> Ask the vendor to demonstrate
+        live that the tool remembers context across a multi-step task, handles an input you did not
+        warn them about, and takes the next action unprompted. If it cannot do all three, it is a
+        chatbot.</li>
+        <li><strong>Check compliance before deployment, not after.</strong> Confirm your obligations
+        with counsel first. The NYC notice period alone is ten business days, so it cannot be
+        retrofitted the week you go live.</li>
+        <li><strong>Measure a business outcome.</strong> Time-to-fill, ticket resolution time,
+        escalation rate. Implementing an agent is not a result.</li>
+      </ul>
+      <p>
+        One limitation is worth stating plainly. Most agentic deployments in HR are still pilots on
+        narrow tasks, and the Gartner findings above show adoption far ahead of realised value. That is
+        not an argument against it. It is an argument for picking one measurable problem instead of
+        treating agentic AI as a strategy.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Agentic AI plans and executes multi-step work inside guardrails. A chatbot that answers one question and stops is not an agent.</li>
+        <li>AI agents for HR sit on top of your ATS, HRIS and payroll and complete workflows rather than responding to prompts.</li>
+        <li>Traditional automation follows a fixed rule. Agentic AI adapts its plan, which is exactly why it needs more oversight, not less.</li>
+        <li>The strongest current use cases are high-volume and low-risk: screening, scheduling, onboarding logistics, policy questions and attrition flagging.</li>
+        <li>Gartner found 82 per cent of HR leaders planned to deploy agentic AI within twelve months, while nearly three-quarters of CHROs rated the value delivered so far as moderate or minimal.</li>
+        <li>Gartner also predicted over 40 per cent of agentic AI projects would be cancelled by the end of 2027, on cost, unclear value and weak risk controls.</li>
+        <li>NYC Local Law 144 follows the location of the job, not where the candidate lives. Audit within a year, published summary, ten business days' notice.</li>
+        <li>Illinois HB 3773 took effect on 1 January 2026 and requires notice when AI is used in a covered employment decision.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What is the difference between AI agents and agentic AI?</summary>
+          <p>They describe the same technology from two angles. Agentic AI is the term for the paradigm: systems with memory, planning and autonomous execution. AI agents is how people refer to the tools built on it. An AI agent for HR is agentic AI applied to a specific HR workflow.</p>
+        </details>
+        <details>
+          <summary>Is agentic AI the same as generative AI?</summary>
+          <p>No. Generative AI produces a response to a prompt and stops. Agentic AI uses generative models as a reasoning layer but goes further: it decides the next step, acts through connected systems, and continues toward a goal without being re-prompted at each stage.</p>
+        </details>
+        <details>
+          <summary>What are the risks of agentic AI in HR?</summary>
+          <p>Biased or incorrect decisions made at scale, unclear accountability when an agent acts on its own, and compliance exposure under laws such as NYC Local Law 144 and the Illinois Human Rights Act as amended. Keeping high-stakes decisions with a person and maintaining an audit trail for every action are the standard mitigations.</p>
+        </details>
+        <details>
+          <summary>Which HR tasks are best suited to AI agents right now?</summary>
+          <p>High-volume, low-risk, well-defined workflows: resume screening, interview scheduling, onboarding orchestration and routine policy questions. Termination, compensation and promotion decisions should keep a human as the final decision-maker.</p>
+        </details>
+        <details>
+          <summary>Does NYC Local Law 144 apply if my company is not in New York?</summary>
+          <p>It can. The law follows the location of the job rather than the location of your company or the residence of the candidate. A role tied to New York City, including a remote position associated with an NYC office, is covered wherever you are headquartered.</p>
+        </details>
+        <details>
+          <summary>What does Local Law 144 actually require?</summary>
+          <p>A bias audit of the tool conducted within the previous year, a summary of the audit results published on your careers or jobs website, and notice to candidates at least ten business days before the tool is used, with a route to request an alternative process. Penalties reach $500 for a first violation and up to $1,500 for later ones, accruing per day.</p>
+        </details>
+        <details>
+          <summary>What does Illinois require for AI in hiring?</summary>
+          <p>HB 3773 amended the Illinois Human Rights Act with effect from 1 January 2026. It makes discriminatory use of AI in employment decisions a civil rights violation, bars using zip code as a proxy for a protected class, and requires notice to applicants and employees when AI is used in a covered decision.</p>
+        </details>
+        <details>
+          <summary>How do I measure the ROI of an HR agent?</summary>
+          <p>Tie it to one operational metric the agent directly touches rather than to AI adoption. For a recruiting agent, time-to-fill and cost-per-hire before and after. For a service desk agent, resolution time and the share of tickets closed without escalation. Give the pilot four to eight weeks against a known baseline, and if no number moved, it has not proven anything.</p>
+        </details>
+        <details>
+          <summary>What is an agentic workflow?</summary>
+          <p>A multi-step process an agent runs end to end toward a goal, adjusting its next action based on what happened in the previous step. In a traditional workflow every step and its order are fixed in advance by a person.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="ethical-employee-monitoring-playbook.html">Employee Productivity Monitoring: An Ethical Playbook</a></li>
+          <li><a href="illinois-right-to-privacy-in-the-workplace-act.html">Illinois Right to Privacy in the Workplace Act</a></li>
+          <li><a href="employee-performance-tracking.html">Employee Performance Tracking That Does Not Backfire</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
