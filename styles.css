@@ -61,6 +61,8 @@ img { max-width: 100%; display: block; }
   gap: 1.15rem;
 }
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: 800;
   font-size: 1.35rem;
   color: var(--ink);
@@ -68,6 +70,8 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 .logo span { color: var(--accent); }
+.logo img { height: 38px; width: auto; display: block; }
+@media (max-width: 760px) { .logo img { height: 32px; } }
 
 .nav-links {
   list-style: none;
