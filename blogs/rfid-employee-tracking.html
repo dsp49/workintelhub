@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RFID Employee Tracking: Badges, Biometrics and the Line</title>
+  <meta name="description" content="What an RFID badge system records, why a proximity badge is not a biometric under Illinois law but a fingerprint reader is, and where the line sits." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/rfid-employee-tracking" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/rfid-employee-tracking" />
+  <meta property="og:title" content="RFID Employee Tracking" />
+  <meta property="og:description" content="What an RFID badge system records, why a proximity badge is not a biometric under Illinois law but a fingerprint reader is, and where the line sits." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/rfid-employee-tracking.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:section" content="Employee Monitoring" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RFID Employee Tracking" />
+  <meta name="twitter:description" content="What an RFID badge system records, why a proximity badge is not a biometric under Illinois law but a fingerprint reader is, and where the line sits." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/rfid-employee-tracking.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/rfid-employee-tracking#article",
+        "headline": "RFID Employee Tracking",
+        "description": "What an RFID badge system records, why a proximity badge is not a biometric under Illinois law but a fingerprint reader is, and where the line sits.",
+        "image": "https://workintelhub.com/images/blog/rfid-employee-tracking.png",
+        "datePublished": "2026-09-01T00:00:00+00:00",
+        "dateModified": "2026-09-01T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/rfid-employee-tracking"
+        },
+        "articleSection": "Employee Monitoring",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/rfid-employee-tracking#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Employee Monitoring",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "RFID Employee Tracking"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/rfid-employee-tracking#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is RFID employee tracking legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Badge-based access control is lawful across the United States. The constraints come from how the data is used rather than from collecting it: several states require notice of electronic monitoring, some protect off-duty conduct, and using badge times for pay brings the wage and hour rules with it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is an RFID badge a biometric under Illinois BIPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. 740 ILCS 14/10 defines a biometric identifier as a retina or iris scan, fingerprint, voiceprint, or scan of hand or face geometry. A proximity card or fob identifies a token the person carries rather than the person, so it falls outside that list. A fingerprint or hand-geometry reader is inside it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When does a badge system trigger BIPA obligations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At the point a biometric reader is introduced, not at the original installation. Adding fingerprint or face readers to an existing access system creates a duty to give written notice and obtain a written release before collection, and BIPA carries a private right of action, which is what makes the exposure unusual."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long should badge access logs be kept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ninety days covers nearly every legitimate security investigation. Access control systems commonly ship with retention set to years, which produces a detailed movement history that nobody decided to collect and that has to be disclosed or produced if it is ever sought."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can badge times be used as clock-in and clock-out?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, with two cautions. The badge read happens at the door rather than where work begins, and where the gap involves required activity that time is generally compensable. And if the system rounds, the rounding must run both directions and come out even over time, which access systems are not designed with in mind."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between access control and employee tracking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The question being asked. Who was in the building during an incident is access control. A routine report of each person's first and last read is an attendance system built out of a lock. The same hardware supports both, and the second one tends to arrive without anyone deciding to deploy it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do employees object to badge systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rarely to the badge itself. The objections are discovering a second use nobody mentioned, readers on internal doors that track movement rather than entry, and not being able to look up their own record. All three are answered by disclosing the uses before the system starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should employees be told about badge tracking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and it costs nothing. Four states now require written notice of electronic monitoring, and Maine's definition covers monitoring through an electronic device or system generally rather than a named list of channels. Beyond compliance, the objection people raise is almost always about discovering a use they were not told about."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Employee Monitoring</span>
+      <h1>RFID Employee Tracking</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 1, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/rfid-employee-tracking.png" alt="An RFID badge reader logging entry times at a secured door" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Almost every organisation with a door already runs an employee tracking system. A badge reader
+        records who went where and when, and the data sits in a log whether or not anyone decided to
+        collect it.
+      </p>
+      <p>
+        The question that matters is not whether to have badges. It is where access control ends and
+        movement tracking begins, and one legal distinction that decides how expensive a mistake can
+        be.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#what-it-records">What the system actually holds</a></li>
+          <li><a href="#not-biometric">An RFID badge is not a biometric, and the distinction is expensive</a></li>
+          <li><a href="#access-vs-tracking">Where access control becomes tracking</a></li>
+          <li><a href="#timekeeping">Using badge reads for pay</a></li>
+          <li><a href="#rollout">What people object to, and what they do not</a></li>
+          <li><a href="#doing-it-well">Deploying it without the trust cost</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-it-records">What the system actually holds</h2>
+      <p>
+        More than most employers realise, and less than employees usually fear.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Recorded</th><th>Typically retained</th><th>Reveals</th></tr></thead>
+          <tbody>
+            <tr><td>Badge ID, door, timestamp</td><td>Months to years by default</td><td>Arrival, departure, which areas</td></tr>
+            <tr><td>Failed and denied reads</td><td>Same</td><td>Attempted access outside permissions</td></tr>
+            <tr><td>Reader location</td><td>Same</td><td>Movement between zones, if readers are internal</td></tr>
+            <tr><td>Anti-passback state</td><td>Session</td><td>Whether someone is currently on site</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The default retention is the part worth checking today. Access control systems are usually
+        specified by facilities for security reasons and left on whatever the manufacturer shipped,
+        which is often years. That is a movement history nobody decided to keep.
+      </p>
+      <p>
+        The other thing to check is how many readers are internal. Perimeter readers answer a security
+        question. Readers on every internal door answer a different question, and once the data exists
+        somebody will eventually ask it.
+      </p>
+      <h2 id="not-biometric">An RFID badge is not a biometric, and the distinction is expensive</h2>
+      <p>
+        This is the point most coverage of employee tracking gets wrong, and getting it right is worth
+        real money in Illinois.
+      </p>
+      <p>
+        <a href="https://codes.findlaw.com/il/chapter-740-civil-liabilities/il-st-sect-740-14-10/" target="_blank" rel="noopener">740 ILCS 14/10</a> defines a biometric identifier as a retina or iris scan, fingerprint, voiceprint, or scan
+        of hand or face geometry. That is the complete list. A proximity card, a fob and a phone-based
+        credential are none of those things: they identify a token the person carries, not the person.
+      </p>
+      <p>
+        So a plain RFID badge system does not engage the Biometric Information Privacy Act. A
+        fingerprint or hand-geometry time clock does, and it brings with it a written notice and
+        written release requirement <em>before</em> collection, plus a private right of action, which
+        is what makes Illinois different from everywhere else.
+      </p>
+      <p>
+        The trap is the upgrade. Access systems are routinely extended with fingerprint or face
+        readers for higher-security areas, and the BIPA obligations attach at that moment rather than
+        at the original installation. Our page on the
+        <a href="/blogs/illinois-right-to-privacy-in-the-workplace-act">Illinois Right to Privacy in
+        the Workplace Act</a> covers BIPA in full, including the 2024 damages amendment that the
+        Seventh Circuit held applies retroactively in May 2026.
+      </p>
+      <p>
+        Texas and Washington also regulate biometric collection, and several states now require notice
+        of electronic monitoring generally. Badge data is not biometric, but in Maine it is squarely
+        within the definition of employer surveillance, since <a href="https://legislature.maine.gov/legis/statutes/26/title26sec620-A.html" target="_blank" rel="noopener">26 M.R.S. section 620-A</a> covers monitoring through an
+        electronic device or system without limiting it to a named list of channels.
+      </p>
+      <h2 id="access-vs-tracking">Where access control becomes tracking</h2>
+      <p>
+        The same hardware supports both. What separates them is the question being asked of the data.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Access control</th><th>Movement tracking</th></tr></thead>
+          <tbody>
+            <tr><td>Is this person allowed through this door</td><td>Where has this person been today</td></tr>
+            <tr><td>Who was in the building during the incident</td><td>Who takes the longest breaks</td></tr>
+            <tr><td>Is anyone still on site in an evacuation</td><td>Who arrives latest on Mondays</td></tr>
+            <tr><td>Queried after an event</td><td>Queried routinely, or reported automatically</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The right hand column is not unlawful in most places. It is simply a different system with
+        different consequences, deployed without anyone deciding to deploy it, and it is where badge
+        data damages trust: people accepted a lock, not a timesheet.
+      </p>
+      <p>
+        The workable rule is that badge data answers questions about <strong>places and events</strong>
+        rather than about <strong>individuals over time</strong>. Who was in the server room on
+        Tuesday night is a security question. A weekly report of each person's first and last read is
+        an attendance system built out of a lock, and if you want one of those you should say so.
+      </p>
+      <h2 id="timekeeping">Using badge reads for pay</h2>
+      <p>
+        Badge times are frequently repurposed as clock-in and clock-out. That is lawful and it
+        introduces two specific problems.
+      </p>
+      <p>
+        <strong>The badge is not the shift.</strong> The read happens at the door, and the work starts
+        at the desk, the bench or after changing. Where the gap is meaningful and the activity is
+        required, that time is generally compensable, and a system that pays from badge-in to badge-out
+        may be underpaying or overpaying depending on which direction the gap runs.
+      </p>
+      <p>
+        <strong>Rounding still applies.</strong> If the system rounds badge times to a quarter hour,
+        <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> applies exactly as it does to a paper card: the rounding must run both directions and must
+        not, over time, fail to compensate people for hours actually worked. Access systems are not
+        designed with that rule in mind, so check which way the default rounds.
+      </p>
+      <p>
+        The record keeping duty in <a href="https://www.law.cornell.edu/cfr/text/29/516.2" target="_blank" rel="noopener">29 CFR 516.2</a> does not move either. Whatever produces the times, the employer
+        keeps hours worked each day and each workweek. Our
+        <a href="/blogs/timesheet-template">timesheet guidance</a> covers what has to be retained and
+        for how long.
+      </p>
+      <h2 id="rollout">What people object to, and what they do not</h2>
+      <p>
+        Badge systems are unusual in employee monitoring because almost nobody objects to the badge.
+        People object to three specific things, and each has a cheap answer.
+      </p>
+      <p>
+        <strong>Discovering a second use.</strong> A badge accepted as a door key being used to
+        compile attendance is the complaint, not the door key. Saying at the outset that times may
+        feed payroll costs nothing and removes the objection entirely.
+      </p>
+      <p>
+        <strong>Internal readers.</strong> A perimeter reader answers whether someone is on site. A
+        reader on the door of every department answers where they spent the day. If internal readers
+        exist for genuine security reasons, say which areas and why.
+      </p>
+      <p>
+        <strong>Not being able to see their own record.</strong> This is the one that turns unease
+        into suspicion. A person who can look up their own badge history treats the system as
+        infrastructure; a person who cannot treats it as something being done to them.
+      </p>
+      <p>
+        None of the three is about the technology. They are all about whether the use was disclosed
+        before it started, which is the same finding as everywhere else in monitoring and the reason
+        the <a href="/blogs/write-monitoring-policy-employees-sign">policy comes before the
+        install</a>.
+      </p>
+      <h2 id="doing-it-well">Deploying it without the trust cost</h2>
+      <ol>
+        <li><strong>Set retention deliberately.</strong> Ninety days covers nearly every security
+        investigation. Years of movement history is a liability with no matching benefit.</li>
+        <li><strong>Say what it is for, in writing.</strong> Security, safety and evacuation. If it
+        will also feed payroll, say that too, because discovering it later is the thing people
+        object to.</li>
+        <li><strong>Name who can query it,</strong> and separate the security role from the management
+        role. The person who can pull movement history should not be the person deciding promotions.</li>
+        <li><strong>Do not run routine reports on individuals.</strong> Query on events, not on
+        people.</li>
+        <li><strong>Give people their own record on request.</strong> This costs nothing and changes
+        how the system is received more than any policy sentence.</li>
+        <li><strong>Re-check before any biometric upgrade.</strong> The obligations change the day the
+        reader changes.</li>
+      </ol>
+      <p>
+        Our <a href="/blogs/employee-monitoring-consent-form">monitoring acknowledgement form</a> has
+        notice wording that covers physical access data, and the
+        <a href="/blogs/ethical-employee-monitoring-playbook">ethical playbook</a> covers the tests to
+        apply before extending the system.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>An RFID badge is not a biometric under Illinois law. The BIPA list is retina or iris, fingerprint, voiceprint, and hand or face geometry.</li>
+        <li>A fingerprint or hand-geometry reader does engage BIPA, with written notice and release required before collection and a private right of action attached.</li>
+        <li>The obligations attach at the upgrade, not the original installation, which is where employers get caught.</li>
+        <li>Access systems usually ship with default retention measured in years. That is a movement history nobody chose to keep.</li>
+        <li>Badge data should answer questions about places and events, not about individuals over time.</li>
+        <li>Badge-in is not shift start. Paying strictly from door reads can misstate hours in either direction.</li>
+        <li>If badge times feed payroll, the rounding rule applies exactly as it does to a paper time card.</li>
+        <li>Nobody objects to the badge. They object to an undisclosed second use, internal readers, and not being able to see their own record.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>Is RFID employee tracking legal?</summary>
+          <p>Badge-based access control is lawful across the United States. The constraints come from how the data is used rather than from collecting it: several states require notice of electronic monitoring, some protect off-duty conduct, and using badge times for pay brings the wage and hour rules with it.</p>
+        </details>
+        <details>
+          <summary>Is an RFID badge a biometric under Illinois BIPA?</summary>
+          <p>No. 740 ILCS 14/10 defines a biometric identifier as a retina or iris scan, fingerprint, voiceprint, or scan of hand or face geometry. A proximity card or fob identifies a token the person carries rather than the person, so it falls outside that list. A fingerprint or hand-geometry reader is inside it.</p>
+        </details>
+        <details>
+          <summary>When does a badge system trigger BIPA obligations?</summary>
+          <p>At the point a biometric reader is introduced, not at the original installation. Adding fingerprint or face readers to an existing access system creates a duty to give written notice and obtain a written release before collection, and BIPA carries a private right of action, which is what makes the exposure unusual.</p>
+        </details>
+        <details>
+          <summary>How long should badge access logs be kept?</summary>
+          <p>Ninety days covers nearly every legitimate security investigation. Access control systems commonly ship with retention set to years, which produces a detailed movement history that nobody decided to collect and that has to be disclosed or produced if it is ever sought.</p>
+        </details>
+        <details>
+          <summary>Can badge times be used as clock-in and clock-out?</summary>
+          <p>Yes, with two cautions. The badge read happens at the door rather than where work begins, and where the gap involves required activity that time is generally compensable. And if the system rounds, the rounding must run both directions and come out even over time, which access systems are not designed with in mind.</p>
+        </details>
+        <details>
+          <summary>What is the difference between access control and employee tracking?</summary>
+          <p>The question being asked. Who was in the building during an incident is access control. A routine report of each person's first and last read is an attendance system built out of a lock. The same hardware supports both, and the second one tends to arrive without anyone deciding to deploy it.</p>
+        </details>
+        <details>
+          <summary>Why do employees object to badge systems?</summary>
+          <p>Rarely to the badge itself. The objections are discovering a second use nobody mentioned, readers on internal doors that track movement rather than entry, and not being able to look up their own record. All three are answered by disclosing the uses before the system starts.</p>
+        </details>
+        <details>
+          <summary>Should employees be told about badge tracking?</summary>
+          <p>Yes, and it costs nothing. Four states now require written notice of electronic monitoring, and Maine's definition covers monitoring through an electronic device or system generally rather than a named list of channels. Beyond compliance, the objection people raise is almost always about discovering a use they were not told about.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="illinois-right-to-privacy-in-the-workplace-act.html">Illinois Right to Privacy in the Workplace Act</a></li>
+          <li><a href="employee-monitoring-laws-by-state.html">Employee Monitoring Laws by U.S. State</a></li>
+          <li><a href="privacy-line-what-never-to-track.html">The Privacy Line: What Employee Monitoring Should Never Collect</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

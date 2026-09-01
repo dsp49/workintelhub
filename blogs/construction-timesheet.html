@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construction Timesheet: Job Costing and Certified Payroll</title>
+  <meta name="description" content="What a construction timesheet must capture beyond an office one: cost codes, worker classification, multi-site days and weekly certified payroll." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/construction-timesheet" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/construction-timesheet" />
+  <meta property="og:title" content="Construction Timesheet" />
+  <meta property="og:description" content="What a construction timesheet must capture beyond an office one: cost codes, worker classification, multi-site days and weekly certified payroll." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/construction-timesheet.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Construction Timesheet" />
+  <meta name="twitter:description" content="What a construction timesheet must capture beyond an office one: cost codes, worker classification, multi-site days and weekly certified payroll." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/construction-timesheet.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/construction-timesheet#article",
+        "headline": "Construction Timesheet",
+        "description": "What a construction timesheet must capture beyond an office one: cost codes, worker classification, multi-site days and weekly certified payroll.",
+        "image": "https://workintelhub.com/images/blog/construction-timesheet.png",
+        "datePublished": "2026-09-01T00:00:00+00:00",
+        "dateModified": "2026-09-01T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/construction-timesheet"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/construction-timesheet#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Construction Timesheet"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/construction-timesheet#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What should a construction timesheet include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Beyond date, in, out and break: the job, the cost code or phase, the classification actually worked, and hours split by code within the day. The split matters because a crew member can work two cost codes in one shift, and a sheet that cannot record that charges the whole day to one of them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long do I have to keep construction payroll records?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On Davis-Bacon covered work, 29 CFR 5.5(a)(3) requires payrolls and basic records to be preserved for three years after the project is completed. That is a different and usually longer clock than the two years ordinary time cards must be kept under the FLSA recordkeeping rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often is certified payroll submitted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Weekly, for each week in which covered work is performed, with a statement of compliance attached. The statement certifies that the payroll is accurate and complete, that each worker received full weekly wages without rebate or improper deduction, and that the applicable rates and fringe benefits were paid for the classifications actually performed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the prevailing wage rate follow the person or the work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The work. A worker paid the applicable rate for the classification actually performed means someone who normally supervises but spends a day operating equipment is paid the operator rate for that day. This is why classification has to be recorded per row rather than held as an attribute of the employee."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is travel between job sites paid time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Travel from one site to another during the working day is generally hours worked, while the ordinary commute from home to the first site generally is not. Give travel its own code, because otherwise the time is absorbed by whichever job is listed on the row and distorts the cost of both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I track hours when a crew works two jobs in one day?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One row per cost code rather than one row per day, with the day's rows summing to the actual shift. Add a check that compares the sum of an employee's rows for a date against the shift length and flags any difference, which catches both double-counting and missing time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need software or will a spreadsheet do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A spreadsheet handles the arithmetic fine. What it handles badly is collection from crews who are not at desks and often without signal, and the weekly certified payroll cycle if you are on public work. The practical break point is usually multiple crews across multiple sites rather than a headcount threshold."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Construction Timesheet</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 1, 2026 &middot; 10 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/construction-timesheet.png" alt="A construction timesheet with cost codes, classifications and multiple job sites" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A construction timesheet does two jobs an office timesheet never has to. It has to cost labour
+        to the right part of the right job, and on public work it has to survive being submitted to
+        the government every week with a signature attached.
+      </p>
+      <p>
+        Those two requirements decide the columns. Get them wrong and you find out either at
+        month-end, when the job costs do not reconcile, or considerably later, when someone asks for
+        three years of payroll records you cannot produce.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#columns">The columns a construction sheet needs</a></li>
+          <li><a href="#classification">Classification is not job title</a></li>
+          <li><a href="#certified-payroll">Certified payroll, and what the record has to contain</a></li>
+          <li><a href="#job-costing">Making the cost side actually useful</a></li>
+          <li><a href="#multi-site">Multi-site days, travel and the awkward hours</a></li>
+          <li><a href="#field-capture">Getting the sheet filled in on site</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="columns">The columns a construction sheet needs</h2>
+      <p>
+        Four beyond the ordinary in, out and break.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Field</th><th>Why it is there</th><th>What breaks without it</th></tr></thead>
+          <tbody>
+            <tr><td>Job or project</td><td>Which job carries the cost</td><td>Labour lands in overhead</td></tr>
+            <tr><td>Cost code or phase</td><td>Which part of the job</td><td>Job totals are right, the estimate comparison is useless</td></tr>
+            <tr><td>Classification</td><td>Trade and level actually worked</td><td>Certified payroll cannot be produced</td></tr>
+            <tr><td>Hours by code, per day</td><td>A day split across codes or jobs</td><td>Whole day charged to whichever site was listed first</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The fourth is the one that separates a real construction sheet from an office one with extra
+        columns. A crew member who spends the morning on footings and the afternoon on framing has
+        worked one day and two cost codes, and the sheet has to hold both without a second row
+        contradicting the first on start and end times.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Daily row structure</span>
+        <p>Date &nbsp; Employee &nbsp; Job &nbsp; Cost code &nbsp; Classification &nbsp; In &nbsp; Out
+        &nbsp; Break &nbsp; Hours &nbsp; Notes</p>
+        <p>One row per code, not per day. The day's total is the sum of its rows, and that total is
+        what has to reconcile against the crew's actual shift.</p>
+        <p>Daily check: <code>=SUMIFS(hours, date, A2, employee, B2)</code> against the shift length,
+        flagged where the two differ.</p>
+      </div>
+      <h2 id="classification">Classification is not job title</h2>
+      <p>
+        On prevailing wage work the rate follows the work actually performed, not the person's usual
+        title or their pay grade. Someone who normally runs a crew but spends a day operating
+        equipment is paid the operator rate for that day.
+      </p>
+      <p>
+        That means classification belongs on the timesheet row rather than in the employee record,
+        which is where most systems put it. If classification is an attribute of the person, a day
+        split between two trades cannot be recorded correctly, and the certified payroll built from
+        it will be wrong in a way nobody notices until it is audited.
+      </p>
+      <p>
+        The same principle covers apprentices. Apprentice rates depend on registration in a recognised
+        programme and on the ratio of apprentices to journeyworkers actually on site, so the sheet has
+        to record who was present, not only who was scheduled.
+      </p>
+      <h2 id="certified-payroll">Certified payroll, and what the record has to contain</h2>
+      <p>
+        On federally funded construction contracts over $2,000 the Davis-Bacon requirements apply, and
+        they are more demanding than ordinary FLSA recordkeeping.
+      </p>
+      <p>
+        <a href="https://www.law.cornell.edu/cfr/text/29/5.5" target="_blank" rel="noopener">29 CFR 5.5(a)(3)</a> requires the contractor and every subcontractor to maintain regular payrolls and basic
+        records during the work and to preserve them for <strong>three years after the project is
+        completed</strong>. Note the trigger: completion of the work, not the end of the tax year or
+        the pay period, which is a longer and differently-timed clock than the two years ordinary time
+        cards require.
+      </p>
+      <p>
+        The records must cover, for each worker: name, Social Security number, address, phone and
+        email, job classifications, hourly rates, daily and weekly hours worked, deductions, and the
+        wages actually paid.
+      </p>
+      <p>
+        Certified payrolls must be submitted <strong>weekly</strong> for each week in which covered
+        work is performed. Each is accompanied by a statement of compliance certifying three things:
+        that the payroll information is accurate and complete, that each worker received their full
+        weekly wages without rebate or improper deduction, and that workers were paid the applicable
+        rates and fringe benefits for the classifications they actually performed.
+      </p>
+      <p>
+        The practical consequence for the timesheet is that a weekly cycle is not optional. A monthly
+        construction timesheet cannot produce a weekly certified payroll, and reconstructing one after
+        the fact is exactly the situation the statement of compliance is designed to make
+        uncomfortable to sign.
+      </p>
+      <h2 id="job-costing">Making the cost side actually useful</h2>
+      <p>
+        Most construction timesheets produce accurate totals and useless information, because the
+        hours arrive after the decision they should have informed.
+      </p>
+      <p>
+        Three practices change that, and none of them requires new software.
+      </p>
+      <ul>
+        <li><strong>Code at entry, not at review.</strong> A foreman assigning codes on Friday for the
+        whole week is guessing. The cost data is then precise and wrong, which is worse than
+        approximate and honest.</li>
+        <li><strong>Compare to the estimate weekly, by code.</strong> Job-level totals tell you a job
+        is over. Code-level totals tell you which activity, while there is still enough of the job
+        left to respond.</li>
+        <li><strong>Keep the code list short.</strong> A list nobody can hold in their head gets
+        resolved by picking whichever code is nearest the top. Twenty codes used accurately beat two
+        hundred used approximately.</li>
+      </ul>
+      <div class="tmpl">
+        <span class="tmpl__label">Weekly job cost check</span>
+        <p>Hours by code: <code>=SUMIFS(hours, job, "Job A", code, "03-300")</code></p>
+        <p>Against estimate: <code>=actual_hours / estimated_hours</code></p>
+        <p>Earned value: <code>=percent_complete * estimated_hours - actual_hours</code></p>
+      </div>
+      <p>
+        The third line is the one worth adding. Hours over estimate only means overrun if the work is
+        not correspondingly further along, and comparing spend to progress rather than to budget is
+        what distinguishes a real problem from a fast start.
+      </p>
+      <h2 id="multi-site">Multi-site days, travel and the awkward hours</h2>
+      <p>
+        Three recurring questions, and the timesheet has to take a position on each because the
+        crew will otherwise take their own.
+      </p>
+      <p>
+        <strong>Travel between sites.</strong> Time spent travelling from one job site to another
+        during the working day is generally hours worked. The ordinary home-to-first-site commute
+        generally is not. A sheet with no travel row pushes that time into whichever job happens to be
+        listed, which distorts both jobs.
+      </p>
+      <p>
+        <strong>Tool and equipment time.</strong> Loading, prep and clean-up at the yard are work.
+        Where they are recorded matters for costing, because they belong to the job that generated
+        them rather than to overhead by default.
+      </p>
+      <p>
+        <strong>Waiting.</strong> Time on site waiting for materials, inspection or another trade is
+        hours worked, and it is also the single most valuable number on a construction timesheet
+        because it is the one that can be reduced. Give it a code rather than letting it disappear
+        into the activity it delayed.
+      </p>
+      <p>
+        On the general rules for which hours count, our page on
+        <a href="/blogs/timesheet-template">what a timesheet must record</a> covers the federal
+        position, and state law can be stricter.
+      </p>
+      <h2 id="field-capture">Getting the sheet filled in on site</h2>
+      <p>
+        The construction-specific failure is not accuracy, it is collection. Crews are not at desks,
+        signal is unreliable, and hands are dirty.
+      </p>
+      <ul>
+        <li><strong>One person per crew records, not each individual.</strong> A foreman entering a
+        crew of six is one interaction rather than six, and it is the arrangement most crews already
+        use informally.</li>
+        <li><strong>It has to work offline.</strong> Anything that fails without signal gets
+        reconstructed from memory at the end of the week, which is where the accuracy actually goes.</li>
+        <li><strong>Capture at the change, not at the end.</strong> Recording the switch when the crew
+        moves from footings to framing takes seconds. Recalling it on Friday does not happen.</li>
+        <li><strong>Photograph the paper if paper is what works.</strong> A photographed daily sheet
+        entered once by the office beats a digital system the crew does not use.</li>
+      </ul>
+      <p>
+        If you are considering GPS or geofenced clock-ins to solve this, read our page on
+        <a href="/blogs/employee-gps-tracking">employee GPS tracking</a> first. It is lawful in most
+        of the country on company assets, and it carries notice duties that vary by state.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>A construction timesheet needs job, cost code, classification and hours split by code within a single day.</li>
+        <li>Classification belongs on the row, not on the employee record, because the prevailing wage rate follows the work actually performed.</li>
+        <li>Davis-Bacon records must be preserved three years after project completion, a longer and differently-timed clock than the usual two years for time cards.</li>
+        <li>Certified payrolls are weekly, with a statement of compliance covering accuracy, full wages without rebate, and correct classification rates.</li>
+        <li>A monthly construction timesheet cannot produce a weekly certified payroll.</li>
+        <li>Code at entry rather than at Friday review, or the cost data becomes precise and wrong.</li>
+        <li>Give waiting time its own code. It is the most reducible cost on the sheet and the easiest to lose.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What should a construction timesheet include?</summary>
+          <p>Beyond date, in, out and break: the job, the cost code or phase, the classification actually worked, and hours split by code within the day. The split matters because a crew member can work two cost codes in one shift, and a sheet that cannot record that charges the whole day to one of them.</p>
+        </details>
+        <details>
+          <summary>How long do I have to keep construction payroll records?</summary>
+          <p>On Davis-Bacon covered work, 29 CFR 5.5(a)(3) requires payrolls and basic records to be preserved for three years after the project is completed. That is a different and usually longer clock than the two years ordinary time cards must be kept under the FLSA recordkeeping rules.</p>
+        </details>
+        <details>
+          <summary>How often is certified payroll submitted?</summary>
+          <p>Weekly, for each week in which covered work is performed, with a statement of compliance attached. The statement certifies that the payroll is accurate and complete, that each worker received full weekly wages without rebate or improper deduction, and that the applicable rates and fringe benefits were paid for the classifications actually performed.</p>
+        </details>
+        <details>
+          <summary>Does the prevailing wage rate follow the person or the work?</summary>
+          <p>The work. A worker paid the applicable rate for the classification actually performed means someone who normally supervises but spends a day operating equipment is paid the operator rate for that day. This is why classification has to be recorded per row rather than held as an attribute of the employee.</p>
+        </details>
+        <details>
+          <summary>Is travel between job sites paid time?</summary>
+          <p>Travel from one site to another during the working day is generally hours worked, while the ordinary commute from home to the first site generally is not. Give travel its own code, because otherwise the time is absorbed by whichever job is listed on the row and distorts the cost of both.</p>
+        </details>
+        <details>
+          <summary>How do I track hours when a crew works two jobs in one day?</summary>
+          <p>One row per cost code rather than one row per day, with the day's rows summing to the actual shift. Add a check that compares the sum of an employee's rows for a date against the shift length and flags any difference, which catches both double-counting and missing time.</p>
+        </details>
+        <details>
+          <summary>Do I need software or will a spreadsheet do?</summary>
+          <p>A spreadsheet handles the arithmetic fine. What it handles badly is collection from crews who are not at desks and often without signal, and the weekly certified payroll cycle if you are on public work. The practical break point is usually multiple crews across multiple sites rather than a headcount threshold.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+          <li><a href="excel-google-sheets-timesheet-template.html">Excel and Google Sheets Timesheet Template</a></li>
+          <li><a href="employee-gps-tracking.html">Employee GPS Tracking: What Is Legal</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

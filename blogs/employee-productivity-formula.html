@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Productivity Formula: How to Actually Calculate It</title>
+  <meta name="description" content="The productivity formulas that mean something, worked through with real numbers, and the ones that look rigorous while measuring how busy people appear." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/employee-productivity-formula" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/employee-productivity-formula" />
+  <meta property="og:title" content="Employee Productivity Formula" />
+  <meta property="og:description" content="The productivity formulas that mean something, worked through with real numbers, and the ones that look rigorous while measuring how busy people appear." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/employee-productivity-formula.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Employee Productivity Formula" />
+  <meta name="twitter:description" content="The productivity formulas that mean something, worked through with real numbers, and the ones that look rigorous while measuring how busy people appear." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/employee-productivity-formula.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/employee-productivity-formula#article",
+        "headline": "Employee Productivity Formula",
+        "description": "The productivity formulas that mean something, worked through with real numbers, and the ones that look rigorous while measuring how busy people appear.",
+        "image": "https://workintelhub.com/images/blog/employee-productivity-formula.png",
+        "datePublished": "2026-09-01T00:00:00+00:00",
+        "dateModified": "2026-09-01T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/employee-productivity-formula"
+        },
+        "articleSection": "Productivity",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/employee-productivity-formula#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Productivity",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Employee Productivity Formula"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/employee-productivity-formula#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the employee productivity formula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Output divided by input. In practice that becomes labour productivity (output divided by hours worked), revenue per employee (revenue divided by FTE headcount), or utilisation (billable hours divided by available hours). The arithmetic is trivial; choosing what counts as output is the actual work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate labour productivity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide total output by total labour hours for the same period. A team producing 1,240 units in 1,280 hours has a labour productivity of 0.97 units per hour. The calculation is only meaningful if a unit this period is comparable in size to a unit last period."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate revenue per employee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Total revenue divided by full-time equivalent headcount. It is the most robust productivity measure available because it is difficult to manipulate from inside a team, and the least actionable for the same reason: it shows direction without showing cause."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a good employee productivity percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no cross-industry benchmark worth quoting, because output definitions are not comparable between organisations. The useful comparison is your own trend over several periods, with the work mix and meeting load noted alongside it, since both move the number without any change in effort."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate utilisation rate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Billable hours divided by available hours. Used alone it drives booking everything regardless of value, so pair it with revenue per labour dollar. A firm can raise utilisation while that second figure falls, which means it has become busier on worse work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should productivity be measured per individual or per team?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Per team for anything collaborative. Team-level figures cannot be decomposed into individual contributions, and using them for individual decisions is how a reasonable measure becomes unfair. Individual measurement makes sense only where the work is genuinely independent and the units are genuinely comparable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should productivity be calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quarterly or annually at company level, monthly for teams, quarterly at most for individuals, and weekly only for repeatable process work. Short windows on knowledge work measure noise: a fortnight of apparently low output is frequently one hard problem being solved, and the formula cannot tell the difference."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does measured productivity rise when a team is overloaded?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because hours are usually the denominator and unpaid overtime does not appear in them. Output rises while recorded hours stay flat, so the ratio improves. A team heading toward burnout produces an improving productivity number right up until it stops, which is why hours are a poor input on their own."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Employee Productivity Formula</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 1, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/employee-productivity-formula.png" alt="A productivity calculation showing output over input with worked figures" width="1200" height="630" />
+      </figure>
+
+      <p>
+        The basic formula is output divided by input. Everything difficult about measuring
+        productivity is in deciding what those two words mean for work that does not come off a
+        production line.
+      </p>
+      <p>
+        Below are the formulas worth using, each worked through with numbers, along with what each one
+        hides. The arithmetic is easy. Choosing the right numerator is the whole job.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#basic">The base formula</a></li>
+          <li><a href="#which-input">Choosing the input</a></li>
+          <li><a href="#which-output">Choosing the output, which is the hard part</a></li>
+          <li><a href="#worked">Three worked examples</a></li>
+          <li><a href="#cadence">How often to calculate it</a></li>
+          <li><a href="#what-not">Formulas that look rigorous and are not</a></li>
+          <li><a href="#context">The correction most calculations need</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="basic">The base formula</h2>
+      <div class="tmpl">
+        <span class="tmpl__label">Productivity</span>
+        <p><code>Productivity = Output / Input</code></p>
+        <p>Labour productivity: <code>= Output / Labour hours</code></p>
+        <p>Revenue per employee: <code>= Total revenue / FTE headcount</code></p>
+        <p>Utilisation: <code>= Billable hours / Available hours</code></p>
+      </div>
+      <p>
+        Worked: a team of eight produces 1,240 completed units in a month, working 1,280 hours. Labour
+        productivity is 1,240 / 1,280 = <strong>0.97 units per hour</strong>. Next month the same team
+        produces 1,300 units in 1,150 hours, which is 1.13 units per hour, a 17 per cent improvement.
+      </p>
+      <p>
+        That calculation is sound only if a unit this month is the same size as a unit last month. In
+        manufacturing it usually is. In knowledge work it usually is not, and that single assumption
+        is where most productivity measurement quietly fails.
+      </p>
+      <h2 id="which-input">Choosing the input</h2>
+      <p>
+        Hours are the obvious input and the most misleading, because they measure availability rather
+        than effort or effect.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Input</th><th>Formula</th><th>Good for</th><th>Distorted by</th></tr></thead>
+          <tbody>
+            <tr><td>Labour hours</td><td>Output / hours</td><td>Repeatable, comparable work</td><td>Unpaid overtime, which improves the ratio</td></tr>
+            <tr><td>Headcount (FTE)</td><td>Output / FTE</td><td>Year on year comparison</td><td>Part-time and contractor mix</td></tr>
+            <tr><td>Cost</td><td>Output / labour cost</td><td>Deciding where to invest</td><td>Seniority mix, not effort</td></tr>
+            <tr><td>Capacity</td><td>Output / available hours after deductions</td><td>Planning</td><td>Needs honest deductions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The first row contains a genuine perversity worth naming. If people work unpaid overtime, the
+        recorded hours stay flat while output rises, and measured productivity improves. A team on the
+        way to burnout produces an improving productivity number until it does not. Our page on
+        <a href="/blogs/team-capacity-planning">capacity planning</a> covers computing available hours
+        honestly.
+      </p>
+      <h2 id="which-output">Choosing the output, which is the hard part</h2>
+      <p>
+        Four candidates, in descending order of how well they survive being used as a target.
+      </p>
+      <ol>
+        <li><strong>Outcome achieved.</strong> Did the work do its job. Hard to count, nearly
+        impossible to game, slow to observe.</li>
+        <li><strong>Value delivered.</strong> Revenue, cost avoided, or a proxy agreed in advance.
+        Attributable in sales and support, contested elsewhere.</li>
+        <li><strong>Completed units of comparable size.</strong> Works where the units really are
+        comparable. Splits into smaller units the moment it becomes a target.</li>
+        <li><strong>Activity counts.</strong> Tickets, commits, calls, messages. Available
+        immediately, and the least informative thing on the list.</li>
+      </ol>
+      <p>
+        The gap between the first and the last is the whole problem. Activity is easy to obtain and
+        easy to inflate; outcomes are hard to obtain and hard to fake. Most organisations measure
+        activity and describe it as productivity, which is covered in
+        <a href="/blogs/why-output-metrics-fail-knowledge-teams">why productivity metrics fail
+        knowledge teams</a>.
+      </p>
+      <h2 id="worked">Three worked examples</h2>
+      <div class="tmpl">
+        <span class="tmpl__label">Support team</span>
+        <p>412 tickets resolved, 6 agents, 960 hours. <code>412 / 960 = 0.43 tickets per hour</code></p>
+        <p>Reopened within 7 days: 4.1 per cent. Effective resolutions: <code>412 x 0.959 = 395</code></p>
+        <p>Quality-adjusted: <code>395 / 960 = 0.41 per hour</code></p>
+      </div>
+      <p>
+        The adjustment is the point. A raw count rewards closing tickets; the adjusted figure only
+        rewards closing them in a way that holds. The difference here is small, which is itself the
+        useful finding.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Professional services</span>
+        <p>Billable 1,120 hours, available 1,480. <code>Utilisation = 1,120 / 1,480 = 75.7%</code></p>
+        <p>Revenue 224,000, labour cost 118,000. <code>Revenue per labour dollar = 1.90</code></p>
+      </div>
+      <p>
+        Utilisation alone pushes toward booking everything and improving nothing. Paired with revenue
+        per labour dollar, the picture is different: a firm can raise utilisation while the second
+        number falls, which means it is busier on worse work.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Whole company</span>
+        <p>Revenue 14.2m, FTE 96. <code>Revenue per employee = 147,900</code></p>
+        <p>Prior year 12.8m, FTE 91. <code>= 140,700, up 5.1%</code></p>
+      </div>
+      <p>
+        This is the most robust of the three because it is the hardest to manipulate from inside a
+        team, and the least actionable for the same reason. It tells you the direction, not the cause.
+      </p>
+      <h2 id="cadence">How often to calculate it</h2>
+      <p>
+        Productivity figures are noisy over short windows, and the noise is usually mistaken for
+        signal.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Level</th><th>Period</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Company</td><td>Quarterly or annually</td><td>Revenue per employee needs a long enough window to be meaningful</td></tr>
+            <tr><td>Team</td><td>Monthly</td><td>Long enough to absorb one difficult piece of work</td></tr>
+            <tr><td>Individual</td><td>Quarterly at most</td><td>Knowledge work is lumpy; a fortnight is not a sample</td></tr>
+            <tr><td>Process</td><td>Weekly</td><td>Repeatable work stabilises quickly</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The third row is where damage happens. A fortnight of apparently low output is frequently one
+        hard problem being solved, and a formula applied to that fortnight returns a confident wrong
+        answer. The arithmetic does not know the difference between a slow period and a difficult one.
+      </p>
+      <p>
+        A useful discipline: before acting on any productivity figure, write down what you would
+        expect it to look like if the team had done excellent work on an unusually hard problem. If
+        that answer looks the same as underperformance, the measure cannot support the decision you
+        were about to make with it.
+      </p>
+      <h2 id="what-not">Formulas that look rigorous and are not</h2>
+      <p>
+        <strong>Active time divided by total time.</strong> This measures keyboard and mouse
+        intensity. It penalises reading, thinking, phone calls and whiteboards, which is most of what
+        senior work consists of.
+      </p>
+      <p>
+        <strong>Output divided by hours logged in a monitoring tool.</strong> Both terms are
+        influenceable by the person being measured, in opposite directions, so the ratio can be
+        improved without any change to the work.
+      </p>
+      <p>
+        <strong>Anything divided by headcount at a team level, used for individual decisions.</strong>
+        Team productivity says nothing about who contributed what, and using it that way is how a
+        measure that was fine becomes unfair.
+      </p>
+      <p>
+        <strong>Composite scores.</strong> Blending several measures into one number destroys the
+        property that made the set useful, which was that the measures constrained each other. Once
+        combined, a fall in one can be hidden by a rise in another.
+      </p>
+      <h2 id="context">The correction most calculations need</h2>
+      <p>
+        Before concluding that a productivity number reflects effort, check the two things that most
+        commonly move it and have nothing to do with how hard anyone worked.
+      </p>
+      <p>
+        <strong>Fragmentation.</strong> <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday" target="_blank" rel="noopener">Microsoft Work Trend Index</a> reported in June 2025 that knowledge workers are interrupted
+        roughly every two minutes, about 275 times a day, and that 48 per cent describe their work as
+        chaotic and fragmented. A quarter with more meetings will show lower output at identical
+        effort.
+      </p>
+      <p>
+        <strong>Work mix.</strong> A team that spent the period on harder problems produces fewer
+        units. Unless the denominator accounts for difficulty, the formula reports that as a
+        productivity decline, and acting on it punishes the team for doing the work that mattered.
+      </p>
+      <p>
+        Both are reasons to treat a productivity figure as the start of a question rather than the
+        answer to one. Our guide to
+        <a href="/blogs/employee-performance-tracking">performance tracking</a> covers using several
+        measures that constrain each other instead.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Productivity is output over input. Every difficulty is in defining the two terms, not in the arithmetic.</li>
+        <li>Hours as the input contains a perversity: unpaid overtime holds recorded hours flat while output rises, so measured productivity improves as a team burns out.</li>
+        <li>Outcomes and value survive being used as targets. Activity counts do not, and are what most organisations actually measure.</li>
+        <li>Adjust for quality. 412 tickets at 4.1 per cent reopened is 395 effective resolutions, and only the adjusted figure rewards work that holds.</li>
+        <li>Pair utilisation with revenue per labour dollar, or you optimise for being busy on worse work.</li>
+        <li>Revenue per employee is the hardest to manipulate and the least actionable. It gives direction, not cause.</li>
+        <li>Never blend measures into a composite. Combining them destroys the constraint that made the set informative.</li>
+        <li>Before acting on a figure, ask what excellent work on a hard problem would look like. If it looks like underperformance, the measure cannot carry the decision.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What is the employee productivity formula?</summary>
+          <p>Output divided by input. In practice that becomes labour productivity (output divided by hours worked), revenue per employee (revenue divided by FTE headcount), or utilisation (billable hours divided by available hours). The arithmetic is trivial; choosing what counts as output is the actual work.</p>
+        </details>
+        <details>
+          <summary>How do you calculate labour productivity?</summary>
+          <p>Divide total output by total labour hours for the same period. A team producing 1,240 units in 1,280 hours has a labour productivity of 0.97 units per hour. The calculation is only meaningful if a unit this period is comparable in size to a unit last period.</p>
+        </details>
+        <details>
+          <summary>How do you calculate revenue per employee?</summary>
+          <p>Total revenue divided by full-time equivalent headcount. It is the most robust productivity measure available because it is difficult to manipulate from inside a team, and the least actionable for the same reason: it shows direction without showing cause.</p>
+        </details>
+        <details>
+          <summary>What is a good employee productivity percentage?</summary>
+          <p>There is no cross-industry benchmark worth quoting, because output definitions are not comparable between organisations. The useful comparison is your own trend over several periods, with the work mix and meeting load noted alongside it, since both move the number without any change in effort.</p>
+        </details>
+        <details>
+          <summary>How do you calculate utilisation rate?</summary>
+          <p>Billable hours divided by available hours. Used alone it drives booking everything regardless of value, so pair it with revenue per labour dollar. A firm can raise utilisation while that second figure falls, which means it has become busier on worse work.</p>
+        </details>
+        <details>
+          <summary>Should productivity be measured per individual or per team?</summary>
+          <p>Per team for anything collaborative. Team-level figures cannot be decomposed into individual contributions, and using them for individual decisions is how a reasonable measure becomes unfair. Individual measurement makes sense only where the work is genuinely independent and the units are genuinely comparable.</p>
+        </details>
+        <details>
+          <summary>How often should productivity be calculated?</summary>
+          <p>Quarterly or annually at company level, monthly for teams, quarterly at most for individuals, and weekly only for repeatable process work. Short windows on knowledge work measure noise: a fortnight of apparently low output is frequently one hard problem being solved, and the formula cannot tell the difference.</p>
+        </details>
+        <details>
+          <summary>Why does measured productivity rise when a team is overloaded?</summary>
+          <p>Because hours are usually the denominator and unpaid overtime does not appear in them. Output rises while recorded hours stay flat, so the ratio improves. A team heading toward burnout produces an improving productivity number right up until it stops, which is why hours are a poor input on their own.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="employee-performance-tracking.html">Employee Performance Tracking That Does Not Backfire</a></li>
+          <li><a href="why-output-metrics-fail-knowledge-teams.html">Why Productivity Metrics Fail Knowledge Teams</a></li>
+          <li><a href="team-capacity-planning.html">Team Capacity Planning Without Fictional Numbers</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

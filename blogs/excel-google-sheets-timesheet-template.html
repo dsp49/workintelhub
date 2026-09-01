@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel and Google Sheets Timesheet Template With Formulas</title>
+  <meta name="description" content="Build a timesheet in Excel or Google Sheets: the formulas that handle midnight and breaks, the formatting trap, and the payroll rules that apply." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/excel-google-sheets-timesheet-template" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/excel-google-sheets-timesheet-template" />
+  <meta property="og:title" content="Excel and Google Sheets Timesheet" />
+  <meta property="og:description" content="Build a timesheet in Excel or Google Sheets: the formulas that handle midnight and breaks, the formatting trap, and the payroll rules that apply." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/excel-google-sheets-timesheet-template.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-01T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Excel and Google Sheets Timesheet" />
+  <meta name="twitter:description" content="Build a timesheet in Excel or Google Sheets: the formulas that handle midnight and breaks, the formatting trap, and the payroll rules that apply." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/excel-google-sheets-timesheet-template.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/excel-google-sheets-timesheet-template#article",
+        "headline": "Excel and Google Sheets Timesheet",
+        "description": "Build a timesheet in Excel or Google Sheets: the formulas that handle midnight and breaks, the formatting trap, and the payroll rules that apply.",
+        "image": "https://workintelhub.com/images/blog/excel-google-sheets-timesheet-template.png",
+        "datePublished": "2026-09-01T00:00:00+00:00",
+        "dateModified": "2026-09-01T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/excel-google-sheets-timesheet-template"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/excel-google-sheets-timesheet-template#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Excel and Google Sheets Timesheet"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/excel-google-sheets-timesheet-template#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate hours worked in Excel or Google Sheets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subtract the in time from the out time, multiply by 24 for decimal hours, then subtract unpaid break minutes divided by 60. Wrap the subtraction in MOD so shifts crossing midnight do not go negative: =ROUND(MOD(D2-C2,1)*24-E2/60, 2). The formula is identical in both applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I handle a shift that crosses midnight?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use MOD(out-in,1) rather than out-in. Times are stored as fractions of a day, so a 22:00 to 06:00 shift subtracts to a negative number and the weekly total silently under-reports. MOD wraps the value around midnight and has no effect on an ordinary shift."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my timesheet show 12:00 instead of 7.5 hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The result cell is still formatted as Time. Multiplying by 24 produces a decimal number, but a time-formatted cell displays it as a clock value and totals wrap around at 24 hours. Set the column to Number with two decimals. If you do want time format on a total over 24 hours, use the custom format [h]:mm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a spreadsheet timesheet legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. 29 CFR 516.2 lists the records an employer must keep and states that no particular timekeeping system or form of record is required. The obligations that do not change are retention: time records for at least two years and payroll records for at least three, longer where state law requires it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I round hours in my timesheet spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Within limits. 29 CFR 785.48 permits rounding to the nearest 5 minutes, tenth or quarter hour provided the practice does not over time fail to pay employees for hours actually worked. Use ROUND, which goes both directions. FLOOR and ROUNDDOWN only ever favour the employer and do not satisfy the rule."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate overtime in a timesheet spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Per workweek, not per pay period: =MAX(0, weekly_total-40). A biweekly sheet needs two separate weekly subtotals, because fifty hours in one week and thirty in the next is ten hours of overtime even though the period totals eighty. In California and a few other states add daily overtime columns as well."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I stop people breaking the shared timesheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Protect the formula columns so only the in, out, break and notes cells are editable, add data validation restricting times and break minutes to sensible values, and use conditional formatting to flag any day over 16 hours. That last rule catches most genuinely wrong entries, which are almost always a missed clock-out."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I use Excel or Google Sheets for timesheets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The formulas are identical, so it comes down to collection. Google Sheets is easier when several people submit into one file, because there is one live copy and an edit history. Excel is easier where the sheet must live on a locked-down machine or feed an existing payroll workbook."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Excel and Google Sheets Timesheet</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 1, 2026 &middot; 10 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/excel-google-sheets-timesheet-template.png" alt="A spreadsheet timesheet with formulas calculating decimal hours and overtime" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Most timesheet spreadsheets break in one of three places: a shift that crosses midnight, a
+        cell formatted as time when it should be a number, and overtime worked out on the pay period
+        instead of the week. All three are fixable in one sitting.
+      </p>
+      <p>
+        Below is the sheet layout, every formula for both Excel and Google Sheets, and the payroll
+        rules that decide whether the numbers it produces are actually usable. That last part is what
+        the spreadsheet tutorials leave out, and it is the part that costs money when it is wrong.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#layout">The sheet</a></li>
+          <li><a href="#formulas">The formulas, for both applications</a></li>
+          <li><a href="#formatting">The formatting trap</a></li>
+          <li><a href="#rounding">Rounding, and what the law actually allows</a></li>
+          <li><a href="#overtime">Overtime is weekly, and in some states daily</a></li>
+          <li><a href="#protect">Stop the sheet being broken by accident</a></li>
+          <li><a href="#keep">What you have to keep</a></li>
+          <li><a href="#outgrow">When to stop</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="layout">The sheet</h2>
+      <p>
+        Seven columns. Anything else belongs in payroll rather than on the sheet.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Col</th><th>Field</th><th>Format</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>Date</td><td>Date</td><td>One row per day</td></tr>
+            <tr><td>B</td><td>Day</td><td>Text</td><td><code>=TEXT(A2,"ddd")</code></td></tr>
+            <tr><td>C</td><td>In</td><td>Time</td><td>24-hour entry avoids AM/PM mistakes</td></tr>
+            <tr><td>D</td><td>Out</td><td>Time</td><td></td></tr>
+            <tr><td>E</td><td>Break (min)</td><td>Number</td><td>Unpaid break only</td></tr>
+            <tr><td>F</td><td>Hours</td><td>Number, 2dp</td><td>The formula below</td></tr>
+            <tr><td>G</td><td>Notes</td><td>Text</td><td>Job, project or cost code</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Column F is the one people get wrong, and the reason is almost always formatting rather than
+        arithmetic. More on that below.
+      </p>
+      <h2 id="formulas">The formulas, for both applications</h2>
+      <p>
+        These are identical in Excel and Google Sheets. Row 2 is the first day.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Daily hours</span>
+        <p>Standard shift: <code>=ROUND((D2-C2)*24-E2/60, 2)</code></p>
+        <p>Handles midnight: <code>=ROUND(MOD(D2-C2,1)*24-E2/60, 2)</code></p>
+        <p>Blank rows stay blank: <code>=IF(OR(C2="",D2=""),"",ROUND(MOD(D2-C2,1)*24-E2/60,2))</code></p>
+      </div>
+      <p>
+        Use the <code>MOD</code> version always. Subtracting two times gives a fraction of a day, so a
+        22:00 to 06:00 shift returns a negative number and the week silently under-reports.
+        <code>MOD(D2-C2,1)</code> wraps it around midnight and costs nothing on a normal shift.
+      </p>
+      <p>
+        Most tutorials reach for <code>=IF(D2&lt;C2, D2+1-C2, D2-C2)</code> instead. It gives the same
+        answer, but it is longer, it breaks if someone types the times in the wrong order, and it has
+        to be repeated inside every formula that touches the shift. <code>MOD</code> does the same job
+        in one function.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Weekly totals and overtime</span>
+        <p>Week total: <code>=SUM(F2:F8)</code></p>
+        <p>Regular: <code>=MIN(40, F9)</code> &nbsp;&nbsp; Overtime: <code>=MAX(0, F9-40)</code></p>
+        <p>Pay: <code>=regular*rate + overtime*rate*1.5</code></p>
+        <p>Hours on one job: <code>=SUMIF(G2:G40,"Job name",F2:F40)</code></p>
+      </div>
+      <h2 id="formatting">The formatting trap</h2>
+      <p>
+        This is the single most common reason a timesheet produces a number that looks plausible and
+        is wrong.
+      </p>
+      <p>
+        A time value in a spreadsheet is a fraction of a day. 7:30 is stored as 0.3125. Multiplying by
+        24 converts it to 7.5 decimal hours, which is what payroll wants. But if the result cell is
+        still formatted as <strong>Time</strong>, the spreadsheet displays 7.5 as 12:00 and, worse,
+        adding a column of them wraps around at 24 hours.
+      </p>
+      <p>
+        Fix it explicitly rather than relying on the default:
+      </p>
+      <ul>
+        <li><strong>Excel:</strong> select column F, Home &rarr; Number Format &rarr; Number, 2 decimal
+        places.</li>
+        <li><strong>Google Sheets:</strong> select column F, Format &rarr; Number &rarr; Number.</li>
+        <li>If a total exceeds 24 and you do want it shown as time, the custom format is
+        <code>[h]:mm</code>. The square brackets are what stop it wrapping.</li>
+      </ul>
+      <p>
+        A quick test: put 8 hours in seven rows and check the total reads 56.00 and not 08:00. If it
+        reads 08:00 the column is still a time.
+      </p>
+      <h2 id="rounding">Rounding, and what the law actually allows</h2>
+      <p>
+        Spreadsheet tutorials cover rounding as a formatting preference. It is not. <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> permits
+        recording start and stop times to the nearest 5 minutes, tenth of an hour or quarter hour,
+        but only if the practice does not, over a period of time, fail to compensate employees for
+        all the time they actually worked.
+      </p>
+      <p>
+        Two consequences follow. Rounding has to run <strong>both directions</strong>, so a rule that
+        rounds arrivals up and departures down is a standing deduction rather than rounding. And it
+        has to come out roughly even over time, which is a property of the practice rather than of any
+        single entry.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">If you must round</span>
+        <p>Nearest quarter hour: <code>=ROUND(F2*4,0)/4</code></p>
+        <p>Nearest tenth: <code>=ROUND(F2*10,0)/10</code></p>
+        <p>Nearest 5 minutes: <code>=ROUND(F2*12,0)/12</code></p>
+      </div>
+      <p>
+        Note these all use <code>ROUND</code>, which goes both ways. <code>FLOOR</code> and
+        <code>ROUNDDOWN</code> only ever go one way and are the formulas that turn a rounding policy
+        into a wage claim.
+      </p>
+      <p>
+        The better answer in a spreadsheet is not to round at all. Rounding existed to make punch card
+        totals tractable by hand, and a computer has no such constraint. Exact decimal to two places
+        removes the question entirely.
+      </p>
+      <h2 id="overtime">Overtime is weekly, and in some states daily</h2>
+      <p>
+        Two errors, both common in homemade sheets.
+      </p>
+      <p>
+        <strong>Do not total the pay period.</strong> Overtime under the FLSA is calculated on each
+        workweek separately. Fifty hours one week and thirty the next is ten hours of overtime, even
+        though the fortnight totals eighty. A biweekly sheet needs two weekly subtotals, never one.
+      </p>
+      <p>
+        <strong>Daily overtime exists.</strong> Per the <a href="https://www.dir.ca.gov/dlse/faq_overtime.htm" target="_blank" rel="noopener">California Division of Labor Standards Enforcement</a>, California pays time and a half over eight
+        hours in a workday and double time over twelve, with a separate rule for the seventh
+        consecutive day. Four ten hour days is forty hours for the week and eight hours of daily
+        overtime, and a sheet that only tests the weekly total reports none of it. Alaska, Nevada and
+        Colorado have their own daily thresholds.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Daily overtime columns</span>
+        <p>Daily regular: <code>=MIN(8, F2)</code></p>
+        <p>Daily time and a half: <code>=MAX(0, MIN(F2,12)-8)</code></p>
+        <p>Daily double time: <code>=MAX(0, F2-12)</code></p>
+      </div>
+      <p>
+        Our <a href="/blogs/timesheet-template">timesheet template</a> has the full weekly, biweekly
+        and monthly layouts if you would rather start from a finished sheet.
+      </p>
+      <h2 id="protect">Stop the sheet being broken by accident</h2>
+      <p>
+        A shared timesheet gets damaged by ordinary use, not malice. Four settings prevent most of it.
+      </p>
+      <ul>
+        <li><strong>Lock the formula cells.</strong> Google Sheets: Data &rarr; Protect sheets and
+        ranges, leaving only C, D, E and G editable. Excel: unlock those columns, then Review &rarr;
+        Protect Sheet.</li>
+        <li><strong>Validate the inputs.</strong> Data validation restricting C and D to times, and E
+        to a number between 0 and 240, stops most bad entries at the point of typing.</li>
+        <li><strong>Flag the impossible.</strong> Conditional formatting on F where
+        <code>=F2&gt;16</code> catches the missed AM/PM and the forgotten clock-out.</li>
+        <li><strong>Freeze the header row</strong> so nobody types into it on a long sheet.</li>
+      </ul>
+      <p>
+        The 16 hour rule earns its place. Almost every genuinely wrong timesheet line is a shift
+        recorded as far longer than anyone worked, and it is trivial to catch automatically and
+        tedious to catch by eye.
+      </p>
+      <h2 id="keep">What you have to keep</h2>
+      <p>
+        A spreadsheet is a legally acceptable timekeeping system. <a href="https://www.law.cornell.edu/cfr/text/29/516.2" target="_blank" rel="noopener">29 CFR 516.2</a> lists the twelve records an
+        employer must keep for each non-exempt employee and is explicit that no particular
+        timekeeping system or format is required. Paper, spreadsheet and software all satisfy it.
+      </p>
+      <p>
+        What the format does not change is retention. Time records showing daily start and stop times
+        must be kept at least two years under <a href="https://www.law.cornell.edu/cfr/text/29/516.6" target="_blank" rel="noopener">29 CFR 516.6</a>, and payroll records at least three. State law
+        frequently requires longer.
+      </p>
+      <p>
+        Which raises the practical weakness of spreadsheets, and it is not the arithmetic. It is that
+        a file gets overwritten, renamed, or lost with a laptop. If you are running timesheets in a
+        spreadsheet, the retention plan is the part to decide deliberately: one file per pay period,
+        never edited after approval, stored somewhere backed up.
+      </p>
+      <h2 id="outgrow">When to stop</h2>
+      <p>
+        A spreadsheet works well up to roughly a dozen people on similar schedules. The failure past
+        that is not the formulas, it is the collection: chasing submissions, reconciling versions, and
+        discovering on payroll day that three sheets are missing.
+      </p>
+      <p>
+        The signals are specific. Someone spends more than an hour per period assembling sheets.
+        Corrections arrive after payroll has run. You cannot answer how many hours went to a job
+        without opening every file. Or you employ across state lines and the overtime rules have
+        stopped being the same. Our page on
+        <a href="/blogs/timesheet-automation">timesheet automation</a> covers what to move first, and
+        <a href="/blogs/timesheet-reminder">timesheet reminders</a> covers the chasing.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Use MOD(out-in,1)*24 for daily hours. It handles shifts crossing midnight in one function, where the usual IF approach needs repeating everywhere.</li>
+        <li>Format the hours column as Number, not Time. A time-formatted total wraps at 24 hours and quietly produces wrong totals.</li>
+        <li>Rounding must run both directions. ROUND is defensible, FLOOR and ROUNDDOWN are a standing deduction.</li>
+        <li>Overtime is calculated per workweek, never per pay period, so a biweekly sheet needs two weekly subtotals.</li>
+        <li>California, Alaska, Nevada and Colorado have daily overtime, which a weekly-only sheet reports as zero.</li>
+        <li>Lock the formula cells and flag any day over 16 hours. That one rule catches most genuinely wrong lines.</li>
+        <li>A spreadsheet is a lawful timekeeping system, but time records must still be kept two years and payroll three.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>How do I calculate hours worked in Excel or Google Sheets?</summary>
+          <p>Subtract the in time from the out time, multiply by 24 for decimal hours, then subtract unpaid break minutes divided by 60. Wrap the subtraction in MOD so shifts crossing midnight do not go negative: =ROUND(MOD(D2-C2,1)*24-E2/60, 2). The formula is identical in both applications.</p>
+        </details>
+        <details>
+          <summary>How do I handle a shift that crosses midnight?</summary>
+          <p>Use MOD(out-in,1) rather than out-in. Times are stored as fractions of a day, so a 22:00 to 06:00 shift subtracts to a negative number and the weekly total silently under-reports. MOD wraps the value around midnight and has no effect on an ordinary shift.</p>
+        </details>
+        <details>
+          <summary>Why does my timesheet show 12:00 instead of 7.5 hours?</summary>
+          <p>The result cell is still formatted as Time. Multiplying by 24 produces a decimal number, but a time-formatted cell displays it as a clock value and totals wrap around at 24 hours. Set the column to Number with two decimals. If you do want time format on a total over 24 hours, use the custom format [h]:mm.</p>
+        </details>
+        <details>
+          <summary>Is a spreadsheet timesheet legal?</summary>
+          <p>Yes. 29 CFR 516.2 lists the records an employer must keep and states that no particular timekeeping system or form of record is required. The obligations that do not change are retention: time records for at least two years and payroll records for at least three, longer where state law requires it.</p>
+        </details>
+        <details>
+          <summary>Can I round hours in my timesheet spreadsheet?</summary>
+          <p>Within limits. 29 CFR 785.48 permits rounding to the nearest 5 minutes, tenth or quarter hour provided the practice does not over time fail to pay employees for hours actually worked. Use ROUND, which goes both directions. FLOOR and ROUNDDOWN only ever favour the employer and do not satisfy the rule.</p>
+        </details>
+        <details>
+          <summary>How do I calculate overtime in a timesheet spreadsheet?</summary>
+          <p>Per workweek, not per pay period: =MAX(0, weekly_total-40). A biweekly sheet needs two separate weekly subtotals, because fifty hours in one week and thirty in the next is ten hours of overtime even though the period totals eighty. In California and a few other states add daily overtime columns as well.</p>
+        </details>
+        <details>
+          <summary>How do I stop people breaking the shared timesheet?</summary>
+          <p>Protect the formula columns so only the in, out, break and notes cells are editable, add data validation restricting times and break minutes to sensible values, and use conditional formatting to flag any day over 16 hours. That last rule catches most genuinely wrong entries, which are almost always a missed clock-out.</p>
+        </details>
+        <details>
+          <summary>Should I use Excel or Google Sheets for timesheets?</summary>
+          <p>The formulas are identical, so it comes down to collection. Google Sheets is easier when several people submit into one file, because there is one live copy and an edit history. Excel is easier where the sheet must live on a locked-down machine or feed an existing payroll workbook.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+          <li><a href="timesheet-conversion-chart.html">Timesheet Conversion Chart: Minutes to Decimal Hours</a></li>
+          <li><a href="timesheet-automation.html">Timesheet Automation: What to Automate First</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/#latest">Latest articles</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
