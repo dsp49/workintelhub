@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overtime Calculator: Regular Rate, Not Just Base Pay</title>
+  <meta name="description" content="Work out overtime pay using the regular rate the FLSA actually requires, including bonuses and shift differentials, not just the base hourly wage." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/overtime-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/overtime-calculator" />
+  <meta property="og:title" content="Overtime Calculator" />
+  <meta property="og:description" content="Work out overtime pay using the regular rate the FLSA actually requires, including bonuses and shift differentials, not just the base hourly wage." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/overtime-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-03T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-03T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Overtime Calculator" />
+  <meta name="twitter:description" content="Work out overtime pay using the regular rate the FLSA actually requires, including bonuses and shift differentials, not just the base hourly wage." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/overtime-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/overtime-calculator#article",
+        "headline": "Overtime Calculator",
+        "description": "Work out overtime pay using the regular rate the FLSA actually requires, including bonuses and shift differentials, not just the base hourly wage.",
+        "image": "https://workintelhub.com/images/blog/overtime-calculator.png",
+        "datePublished": "2026-09-03T00:00:00+00:00",
+        "dateModified": "2026-09-03T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/overtime-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/overtime-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/#guides"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Overtime Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/overtime-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate overtime pay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide total remuneration for the workweek by the hours actually worked to get the regular rate, then pay one and a half times that rate for hours beyond 40. Where straight time has already been paid on all hours, only the additional half premium remains for the overtime hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is overtime calculated on my base hourly rate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not necessarily. The FLSA requires overtime on the regular rate, which includes nondiscretionary bonuses, shift differentials and commissions as well as base wages. If you received any of those in the same week, the regular rate is higher than your base wage and so is the overtime owed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which bonuses count toward overtime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nondiscretionary ones: bonuses announced in advance for hitting a target, production or attendance bonuses, and anything an employee worked toward expecting payment. Genuinely discretionary bonuses, decided after the fact and never promised, are excluded. Labelling a bonus discretionary does not make it so if people were told they could earn it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the formula for time and a half?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Regular rate multiplied by 1.5, applied to hours beyond 40 in the workweek. The part people get wrong is the regular rate itself, which is total weekly pay divided by hours worked rather than the contracted hourly wage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can overtime be averaged across two weeks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Overtime is calculated on each workweek separately, and a workweek is a fixed recurring period of 168 hours defined in advance. Fifty hours in one week and thirty in the next is ten hours of overtime even though the two-week total is eighty."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is a quarterly bonus handled for overtime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It has to be apportioned across the weeks it covers, and the regular rate recalculated for each of those weeks that contained overtime hours. A lump sum paid in one cheque does not belong to the single week in which it was paid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I get overtime after 8 hours in a day?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only in states with a daily threshold. California pays time and a half beyond eight hours in a workday and double time beyond twelve, with a separate rule for the seventh consecutive day. Alaska, Nevada and Colorado have their own daily rules. Under federal law alone, overtime begins after 40 hours in the week regardless of how they were distributed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my employer give time off instead of overtime pay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not in the private sector. Compensatory time in place of overtime is permitted only to public agencies under the FLSA. A private employer must pay overtime in money on the regular payday, and an employee's agreement to take time off instead does not make the arrangement lawful."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Overtime Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 3, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/overtime-calculator.png" alt="An overtime calculation built from the regular rate rather than the base wage" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Most overtime calculators multiply the base hourly wage by 1.5. That is the right answer only
+        when base pay is the entire pay packet. The Fair Labor Standards Act requires overtime on the
+        <strong>regular rate</strong>, which also includes nondiscretionary bonuses, shift
+        differentials and commissions.
+      </p>
+      <p>
+        The calculator below does it the way the regulation does. Enter the extras if there were any,
+        and it will show you the regular rate it derived and where the difference came from.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Overtime calculator</a></li>
+          <li><a href="#regular-rate">Why the regular rate is not your hourly wage</a></li>
+          <li><a href="#worked">A worked example</a></li>
+          <li><a href="#weekly">Overtime is weekly, and the workweek is yours to define</a></li>
+          <li><a href="#daily">The states where daily overtime applies</a></li>
+          <li><a href="#who">Who is owed overtime at all</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Overtime calculator</h2>
+      <div class="calc">
+        <div class="calc__grid">
+          <div>
+            <label for="ot-hours">Hours worked this week</label>
+            <input id="ot-hours" type="number" min="0" step="0.25" value="46" />
+          </div>
+          <div>
+            <label for="ot-rate">Base hourly rate ($)</label>
+            <input id="ot-rate" type="number" min="0" step="0.01" value="22.00" />
+          </div>
+          <div>
+            <label for="ot-bonus">Nondiscretionary bonus this week ($)</label>
+            <input id="ot-bonus" type="number" min="0" step="0.01" value="0" />
+          </div>
+          <div>
+            <label for="ot-diff">Shift differential paid this week ($)</label>
+            <input id="ot-diff" type="number" min="0" step="0.01" value="0" />
+          </div>
+        </div>
+        <div class="calc__out" id="ot-out"></div>
+        <p class="calc__note">Federal weekly overtime only. If you work in a state with daily
+        overtime, see the section below. Discretionary bonuses and paid leave are excluded from the
+        regular rate, so leave them out.</p>
+      </div>
+      <script>
+      (function () {
+        var ids = ["ot-hours", "ot-rate", "ot-bonus", "ot-diff"];
+        var out = document.getElementById("ot-out");
+        function money(n) {
+          return "$" + n.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+        function row(label, value, id) {
+          return '<div class="calc__row"><span>' + label + '</span><span>' + value + '</span></div>';
+        }
+        function calc() {
+          var h = parseFloat(document.getElementById("ot-hours").value) || 0;
+          var r = parseFloat(document.getElementById("ot-rate").value) || 0;
+          var b = parseFloat(document.getElementById("ot-bonus").value) || 0;
+          var d = parseFloat(document.getElementById("ot-diff").value) || 0;
+          if (h <= 0 || r < 0) { out.innerHTML = ""; return; }
+          var straight = r * h;
+          var total = straight + b + d;
+          var regular = total / h;
+          var otHours = Math.max(0, h - 40);
+          var premium = 0.5 * regular * otHours;
+          var due = total + premium;
+          var html = "";
+          html += row("Straight-time earnings", money(straight));
+          if (b + d > 0) html += row("Plus bonus and differential", money(b + d));
+          html += row("Total remuneration", money(total));
+          html += row("Regular rate (total &divide; " + h + " hours)", money(regular) + " / hr");
+          html += row("Overtime hours", otHours.toFixed(2));
+          html += row("Overtime premium (half the regular rate)", money(premium));
+          html += row("Total pay due", money(due));
+          out.innerHTML = html;
+        }
+        ids.forEach(function (id) {
+          var el = document.getElementById(id);
+          el.addEventListener("input", calc);
+          el.addEventListener("change", calc);
+        });
+        calc();
+      })();
+      </script>
+      <p>
+        The calculation runs in your browser. Nothing is sent anywhere, and nothing is stored.
+      </p>
+      <h2 id="regular-rate">Why the regular rate is not your hourly wage</h2>
+      <p>
+        <a href="https://www.law.cornell.edu/cfr/text/29/778.109" target="_blank" rel="noopener">29 CFR 778.109</a> is short and decisive: the regular hourly rate is total remuneration for the workweek,
+        excluding the statutory exclusions, divided by the total hours actually worked in that week.
+        It is a rate per hour that you <em>derive</em>, not a number on the employment contract.
+      </p>
+      <p>
+        <a href="https://www.law.cornell.edu/uscode/text/29/207" target="_blank" rel="noopener">29 U.S.C. 207(e)</a> lists what comes out of that total. The exclusions are narrower than most people assume:
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Included in the regular rate</th><th>Excluded</th></tr></thead>
+          <tbody>
+            <tr><td>Base wages</td><td>Gifts, and holiday payments not tied to hours or performance</td></tr>
+            <tr><td>Nondiscretionary bonuses</td><td>Discretionary bonuses, decided solely by the employer</td></tr>
+            <tr><td>Shift differentials</td><td>Paid leave: vacation, holiday, sick</td></tr>
+            <tr><td>Commissions</td><td>Reasonable travel expense reimbursement</td></tr>
+            <tr><td>Production and attendance bonuses</td><td>Employer contributions to retirement or insurance plans</td></tr>
+            <tr><td>On-call pay</td><td>Premium pay already at time and a half or more</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The line dividing the two bonus rows is the one that decides most cases. A bonus announced in
+        advance for hitting a target is <strong>nondiscretionary</strong>, because the employee worked
+        toward it expecting payment, and it goes into the regular rate. A genuine surprise, decided
+        after the fact and not promised, is discretionary and stays out. Calling something
+        discretionary in the handbook does not make it so if people were told they could earn it.
+      </p>
+      <h2 id="worked">A worked example</h2>
+      <p>
+        Someone earns $22 an hour, works 46 hours, and receives a $150 production bonus for the week.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">The wrong way, which most calculators use</span>
+        <p>40 &times; $22 = $880<br>
+        6 &times; $22 &times; 1.5 = $198<br>
+        Total: <strong>$1,078</strong></p>
+      </div>
+      <div class="tmpl">
+        <span class="tmpl__label">The way the regulation requires</span>
+        <p>Straight time: 46 &times; $22 = $1,012<br>
+        Plus bonus: $1,012 + $150 = $1,162 total remuneration<br>
+        Regular rate: $1,162 &divide; 46 = $25.26 per hour<br>
+        Overtime premium: 0.5 &times; $25.26 &times; 6 = $75.78<br>
+        Total: <strong>$1,237.78</strong></p>
+      </div>
+      <p>
+        The gap is the bonus raising the rate on which overtime is owed. Note also the form of the
+        second calculation: because straight time has already been paid on all 46 hours, only the
+        <em>half</em> premium remains. That is the standard method for a week containing a bonus, and
+        it produces the same answer as computing time and a half from scratch.
+      </p>
+      <p>
+        Where a lump sum bonus covers several weeks, it has to be apportioned across those weeks and
+        the regular rate recalculated for each week that contained overtime. A quarterly bonus paid in
+        one cheque does not sit in one week.
+      </p>
+      <h2 id="weekly">Overtime is weekly, and the workweek is yours to define</h2>
+      <p>
+        Overtime is calculated on each workweek separately. A workweek is a fixed, recurring period of
+        168 consecutive hours which the employer defines in advance. It does not have to start on
+        Monday or align with the pay period.
+      </p>
+      <p>
+        Two consequences follow. Fifty hours in week one and thirty in week two is ten hours of
+        overtime, not zero, even though the fortnight totals eighty. And the workweek cannot be moved
+        around to avoid overtime once it is set: it is fixed and recurring precisely so that it cannot.
+      </p>
+      <p>
+        Our <a href="/blogs/timesheet-template">timesheet template</a> has the biweekly layout with
+        two separate weekly subtotals, which is the arrangement this rule requires.
+      </p>
+      <h2 id="daily">The states where daily overtime applies</h2>
+      <p>
+        The calculator above applies the federal weekly rule. Several states add a daily threshold,
+        and in those states a week under 40 hours can still owe overtime.
+      </p>
+      <p>
+        Per the <a href="https://www.dir.ca.gov/dlse/faq_overtime.htm" target="_blank" rel="noopener">California Division of Labor Standards Enforcement</a>, California pays time and a half for hours beyond eight in a workday, up to and
+        including twelve, and double time beyond twelve. On the seventh consecutive day of a workweek,
+        the first eight hours are at time and a half and anything beyond that is at double time.
+      </p>
+      <p>
+        Four ten-hour days is forty hours for the week and eight hours of daily overtime. A weekly
+        calculator reports nothing. Alaska, Nevada and Colorado have their own daily thresholds with
+        their own conditions, so check the specific state rather than assuming they match California.
+      </p>
+      <div class="tmpl">
+        <span class="tmpl__label">Daily overtime, per day</span>
+        <p>Regular: <code>=MIN(8, daily_hours)</code></p>
+        <p>Time and a half: <code>=MAX(0, MIN(daily_hours,12)-8)</code></p>
+        <p>Double time: <code>=MAX(0, daily_hours-12)</code></p>
+      </div>
+      <h2 id="who">Who is owed overtime at all</h2>
+      <p>
+        None of this applies to an exempt employee. Whether someone is exempt turns on three tests,
+        all of which must be satisfied: paid on a salary basis, at or above $684 a week, and
+        performing duties that fall within a recognised exemption.
+      </p>
+      <p>
+        A salaried employee can be non-exempt, which is the arrangement most often got wrong. Salary
+        is a method of payment rather than an exemption, and a salaried non-exempt employee is owed
+        overtime and needs hours recorded. Our definition of
+        <a href="/glossary/exempt-vs-non-exempt">exempt vs non-exempt</a> works through the three
+        tests.
+      </p>
+      <p>
+        And where overtime is owed, it must be paid in money. Time off instead is compensatory time,
+        which under the FLSA is available only to public agencies, as our entry on
+        <a href="/glossary/comp-time">comp time</a> explains.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Overtime is owed on the regular rate, not the base hourly wage.</li>
+        <li>The regular rate is total remuneration for the week divided by hours actually worked, and you derive it rather than look it up.</li>
+        <li>Nondiscretionary bonuses, shift differentials and commissions go into it. Discretionary bonuses, paid leave and expense reimbursement do not.</li>
+        <li>A bonus announced in advance for hitting a target is nondiscretionary, whatever the handbook calls it.</li>
+        <li>In a week containing a bonus, only the half premium remains, because straight time has already been paid on every hour.</li>
+        <li>A lump sum covering several weeks must be apportioned, and the regular rate recalculated for each week with overtime.</li>
+        <li>Overtime is per workweek. Fifty hours then thirty is ten hours of overtime, not zero.</li>
+        <li>California, Alaska, Nevada and Colorado add daily thresholds a weekly calculator will miss entirely.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>How do you calculate overtime pay?</summary>
+          <p>Divide total remuneration for the workweek by the hours actually worked to get the regular rate, then pay one and a half times that rate for hours beyond 40. Where straight time has already been paid on all hours, only the additional half premium remains for the overtime hours.</p>
+        </details>
+        <details>
+          <summary>Is overtime calculated on my base hourly rate?</summary>
+          <p>Not necessarily. The FLSA requires overtime on the regular rate, which includes nondiscretionary bonuses, shift differentials and commissions as well as base wages. If you received any of those in the same week, the regular rate is higher than your base wage and so is the overtime owed.</p>
+        </details>
+        <details>
+          <summary>Which bonuses count toward overtime?</summary>
+          <p>Nondiscretionary ones: bonuses announced in advance for hitting a target, production or attendance bonuses, and anything an employee worked toward expecting payment. Genuinely discretionary bonuses, decided after the fact and never promised, are excluded. Labelling a bonus discretionary does not make it so if people were told they could earn it.</p>
+        </details>
+        <details>
+          <summary>What is the formula for time and a half?</summary>
+          <p>Regular rate multiplied by 1.5, applied to hours beyond 40 in the workweek. The part people get wrong is the regular rate itself, which is total weekly pay divided by hours worked rather than the contracted hourly wage.</p>
+        </details>
+        <details>
+          <summary>Can overtime be averaged across two weeks?</summary>
+          <p>No. Overtime is calculated on each workweek separately, and a workweek is a fixed recurring period of 168 hours defined in advance. Fifty hours in one week and thirty in the next is ten hours of overtime even though the two-week total is eighty.</p>
+        </details>
+        <details>
+          <summary>How is a quarterly bonus handled for overtime?</summary>
+          <p>It has to be apportioned across the weeks it covers, and the regular rate recalculated for each of those weeks that contained overtime hours. A lump sum paid in one cheque does not belong to the single week in which it was paid.</p>
+        </details>
+        <details>
+          <summary>Do I get overtime after 8 hours in a day?</summary>
+          <p>Only in states with a daily threshold. California pays time and a half beyond eight hours in a workday and double time beyond twelve, with a separate rule for the seventh consecutive day. Alaska, Nevada and Colorado have their own daily rules. Under federal law alone, overtime begins after 40 hours in the week regardless of how they were distributed.</p>
+        </details>
+        <details>
+          <summary>Can my employer give time off instead of overtime pay?</summary>
+          <p>Not in the private sector. Compensatory time in place of overtime is permitted only to public agencies under the FLSA. A private employer must pay overtime in money on the regular payday, and an employee's agreement to take time off instead does not make the arrangement lawful.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/glossary/exempt-vs-non-exempt.html">Exempt vs non-exempt</a></li>
+          <li><a href="/glossary/shift-differential.html">Shift differential</a></li>
+          <li><a href="/blogs/timesheet-template.html">Timesheet Template: Weekly, Biweekly and Monthly</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="../index.html">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

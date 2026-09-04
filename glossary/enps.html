@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eNPS: Definition, Formula and Its Limits</title>
+  <meta name="description" content="What employee Net Promoter Score measures, how to calculate it, why the number is coarser than it looks, and what to pair it with." />
+  <link rel="canonical" href="https://workintelhub.com/glossary/enps" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/glossary/enps" />
+  <meta property="og:title" content="eNPS" />
+  <meta property="og:description" content="What employee Net Promoter Score measures, how to calculate it, why the number is coarser than it looks, and what to pair it with." />
+  <meta property="og:image" content="https://workintelhub.com/images/glossary/enps.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-03T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-03T00:00:00+00:00" />
+  <meta property="article:section" content="Engagement" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="eNPS" />
+  <meta name="twitter:description" content="What employee Net Promoter Score measures, how to calculate it, why the number is coarser than it looks, and what to pair it with." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/glossary/enps.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://workintelhub.com/glossary/#termset",
+        "name": "WorkIntel Hub glossary",
+        "url": "https://workintelhub.com/glossary/"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://workintelhub.com/glossary/enps#term",
+        "name": "eNPS",
+        "description": "eNPS, or employee Net Promoter Score, is the percentage of employees who would recommend the organisation as a place to work minus the percentage who would not, on a 0 to 10 scale.",
+        "url": "https://workintelhub.com/glossary/enps",
+        "inDefinedTermSet": {
+          "@id": "https://workintelhub.com/glossary/#termset"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://workintelhub.com/glossary/enps#article",
+        "headline": "eNPS",
+        "description": "What employee Net Promoter Score measures, how to calculate it, why the number is coarser than it looks, and what to pair it with.",
+        "image": "https://workintelhub.com/images/glossary/enps.png",
+        "datePublished": "2026-09-03T00:00:00+00:00",
+        "dateModified": "2026-09-03T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/glossary/enps"
+        },
+        "articleSection": "Engagement",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/glossary/enps#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Glossary",
+            "item": "https://workintelhub.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "eNPS"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/glossary/enps#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is eNPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Employee Net Promoter Score, the employee version of Net Promoter Score. Employees are asked how likely they are to recommend the organisation as a place to work on a 0 to 10 scale, and the score is the percentage of promoters minus the percentage of detractors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate eNPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Classify responses as promoters (9 to 10), passives (7 to 8) and detractors (0 to 6). Subtract the percentage of detractors from the percentage of promoters. With 45 per cent promoters and 20 per cent detractors, eNPS is +25. The result is a whole number between minus 100 and plus 100, not a percentage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a good eNPS score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no benchmark worth relying on, because response cultures differ enormously between countries, industries and company sizes. The useful measure is your own trend across several periods, reported alongside the full distribution of promoters, passives and detractors."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why are passives excluded from eNPS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By design, the score measures the balance between advocacy and detraction rather than average sentiment. The consequence is that a large group of respondents does not appear in the answer, and equal and opposite movements into promoter and detractor bands cancel out entirely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many responses does eNPS need to be meaningful?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Around 30 as a floor for reporting at team level. In a team of 20, a single person moving from 9 to 6 shifts the score by 10 points, so smaller groups produce swings that will be read as signal when they are noise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is eNPS the same as employee engagement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recommending a workplace and being engaged in it are different things: people recommend employers for pay, location and flexibility while being disengaged, and committed employees sometimes would not recommend the place to a friend. eNPS is one shallow indicator rather than a measure of engagement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should eNPS affect manager bonuses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Once a score determines compensation it comes under pressure, and that pressure is applied to the people being surveyed. Asking for a good score becomes the rational response, and the metric stops describing anything."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/glossary/">&larr; Back to the glossary</a>
+      <span class="tag">Engagement</span>
+      <h1>eNPS</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 3, 2026 &middot; 7 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/glossary/enps.png" alt="An eNPS calculation showing promoters, passives and detractors" width="1200" height="630" />
+      </figure>
+
+      <p>
+        <strong>eNPS is the employee version of Net Promoter Score. Ask how likely people are to
+        recommend the organisation as a place to work on a 0 to 10 scale, then subtract the percentage
+        scoring 0 to 6 from the percentage scoring 9 or 10.</strong>
+      </p>
+      <p>
+        It is quick, comparable over time, and considerably coarser than the confidence usually placed
+        in it. Both halves of that are worth understanding before it becomes a board metric.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#formula">The formula</a></li>
+          <li><a href="#limits">Why the number is coarser than it looks</a></li>
+          <li><a href="#using">Using it well</a></li>
+          <li><a href="#pair">What to pair it with</a></li>
+          <li><a href="#key-takeaways">Key points</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="formula">The formula</h2>
+      <div class="tmpl">
+        <span class="tmpl__label">eNPS</span>
+        <p>Question: <em>On a scale of 0 to 10, how likely are you to recommend <span class="fill">[Company]</span> as a place to
+        work?</em></p>
+        <p>Promoters = 9&ndash;10 &nbsp;&nbsp; Passives = 7&ndash;8 &nbsp;&nbsp; Detractors = 0&ndash;6</p>
+        <p><code>eNPS = %Promoters &minus; %Detractors</code></p>
+      </div>
+      <p>
+        Worked: 200 responses, 90 promoters, 70 passives, 40 detractors. Promoters are 45 per cent,
+        detractors 20 per cent, so eNPS is <strong>+25</strong>. The range runs from &minus;100 to
+        +100, and the result is a whole number rather than a percentage.
+      </p>
+      <p>
+        Note what the arithmetic discards. Passives, 35 per cent of respondents in this example, do
+        not appear in the answer at all. A shift of people from passive to promoter and an equal shift
+        from passive to detractor cancel out entirely.
+      </p>
+      <h2 id="limits">Why the number is coarser than it looks</h2>
+      <p>
+        <strong>The bands are uneven.</strong> A 6 and a 0 are both detractors. Someone mildly
+        lukewarm counts the same as someone actively hostile, and an improvement from 0 to 6 does not
+        register at all.
+      </p>
+      <p>
+        <strong>Small samples swing hard.</strong> In a team of 20, one person moving from 9 to 6
+        moves eNPS by 10 points. Reporting eNPS by team below roughly 30 respondents produces noise
+        that will be read as signal.
+      </p>
+      <p>
+        <strong>It is not anonymous at team level.</strong> In a small team, a detractor is often
+        identifiable, and people know it. That changes the answers rather than the underlying reality.
+      </p>
+      <p>
+        <strong>Recommending is not the same as being engaged.</strong> People recommend workplaces
+        for pay, location and flexibility while being disengaged in them, and the reverse also
+        happens.
+      </p>
+      <p>
+        <strong>It tells you nothing about why.</strong> Which is manageable if you always ask a free
+        text follow-up, and useless if you do not.
+      </p>
+      <h2 id="using">Using it well</h2>
+      <ol>
+        <li><strong>Always ask the follow-up.</strong> "What is the main reason for your score?"
+        The free text is where the actionable content is; the number is only an index for tracking.</li>
+        <li><strong>Track the trend, not the level.</strong> There is no meaningful cross-industry
+        benchmark, because response cultures differ enormously. Your own direction over several
+        periods is the signal.</li>
+        <li><strong>Report the full distribution alongside it.</strong> Promoters, passives and
+        detractors as three numbers says more than the single score, and it exposes movement the score
+        cancels out.</li>
+        <li><strong>Set a floor on team-level reporting.</strong> Around 30 responses. Below that,
+        report the group rather than the team.</li>
+        <li><strong>Never tie it to a manager's compensation.</strong> As soon as a score determines
+        pay it comes under pressure, and the pressure lands on the person being surveyed.</li>
+      </ol>
+      <p>
+        The last point is the one that destroys eNPS programmes. Once managers have a stake in the
+        number, asking for a good score becomes rational, and the metric stops measuring anything.
+        This is Goodhart's Law in its ordinary form, which our page on
+        <a href="/blogs/why-output-metrics-fail-knowledge-teams">why productivity metrics fail</a>
+        covers.
+      </p>
+      <h2 id="pair">What to pair it with</h2>
+      <p>
+        eNPS answers one question shallowly. Three companions make it useful.
+      </p>
+      <ul>
+        <li><strong>A psychological safety question,</strong> which predicts whether the rest of your
+        survey answers are honest.</li>
+        <li><strong>Regretted voluntary turnover,</strong> the behavioural counterpart. A rising eNPS
+        alongside rising regretted turnover means one of the two is wrong, and it is usually the
+        survey. Our entry on <a href="/glossary/turnover-rate">the turnover split</a> covers the split.</li>
+        <li><strong>A recognition question,</strong> because it is consistently among the widest gaps
+        between engaged and disengaged employees and among the cheapest to act on.</li>
+      </ul>
+      <p>
+        And watch for the pattern where scores stay acceptable while people quietly disengage without
+        leaving, which our entry on
+        <a href="/glossary/quiet-cracking">quiet cracking</a> describes.
+      </p>
+
+      <h2 id="key-takeaways">Key points</h2>
+      <ul>
+        <li>eNPS is the percentage of promoters (9 to 10) minus the percentage of detractors (0 to 6), on a scale of minus 100 to plus 100.</li>
+        <li>Passives, 7 to 8, are excluded from the arithmetic entirely, so offsetting movements cancel out.</li>
+        <li>The bands are uneven: a 6 and a 0 both count as detractors, and improving from 0 to 6 does not register.</li>
+        <li>Below about 30 respondents the score is noise. One person shifting can move a team of 20 by 10 points.</li>
+        <li>Recommending a workplace and being engaged in it are different things, and people do one without the other.</li>
+        <li>Always ask the free-text follow-up. The number is an index for tracking; the text is the actionable part.</li>
+        <li>Never tie eNPS to manager compensation, or asking for a good score becomes the rational response.</li>
+      </ul>
+
+      <h2 id="faq">Frequently asked questions</h2>
+      <section class="faq">
+        <details>
+          <summary>What is eNPS?</summary>
+          <p>Employee Net Promoter Score, the employee version of Net Promoter Score. Employees are asked how likely they are to recommend the organisation as a place to work on a 0 to 10 scale, and the score is the percentage of promoters minus the percentage of detractors.</p>
+        </details>
+        <details>
+          <summary>How do you calculate eNPS?</summary>
+          <p>Classify responses as promoters (9 to 10), passives (7 to 8) and detractors (0 to 6). Subtract the percentage of detractors from the percentage of promoters. With 45 per cent promoters and 20 per cent detractors, eNPS is +25. The result is a whole number between minus 100 and plus 100, not a percentage.</p>
+        </details>
+        <details>
+          <summary>What is a good eNPS score?</summary>
+          <p>There is no benchmark worth relying on, because response cultures differ enormously between countries, industries and company sizes. The useful measure is your own trend across several periods, reported alongside the full distribution of promoters, passives and detractors.</p>
+        </details>
+        <details>
+          <summary>Why are passives excluded from eNPS?</summary>
+          <p>By design, the score measures the balance between advocacy and detraction rather than average sentiment. The consequence is that a large group of respondents does not appear in the answer, and equal and opposite movements into promoter and detractor bands cancel out entirely.</p>
+        </details>
+        <details>
+          <summary>How many responses does eNPS need to be meaningful?</summary>
+          <p>Around 30 as a floor for reporting at team level. In a team of 20, a single person moving from 9 to 6 shifts the score by 10 points, so smaller groups produce swings that will be read as signal when they are noise.</p>
+        </details>
+        <details>
+          <summary>Is eNPS the same as employee engagement?</summary>
+          <p>No. Recommending a workplace and being engaged in it are different things: people recommend employers for pay, location and flexibility while being disengaged, and committed employees sometimes would not recommend the place to a friend. eNPS is one shallow indicator rather than a measure of engagement.</p>
+        </details>
+        <details>
+          <summary>Should eNPS affect manager bonuses?</summary>
+          <p>No. Once a score determines compensation it comes under pressure, and that pressure is applied to the people being surveyed. Asking for a good score becomes the rational response, and the metric stops describing anything.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/glossary/turnover-rate">Turnover rate</a></li>
+          <li><a href="/glossary/quiet-cracking">Quiet cracking</a></li>
+          <li><a href="/blogs/employee-engagement-ideas">17 Employee Engagement Ideas That Do Not Feel Forced</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/glossary/">&larr; Back to the glossary</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
