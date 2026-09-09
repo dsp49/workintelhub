@@ -13,7 +13,7 @@
 
   --ink: #0a0e17;
   --body: #39424f;
-  --muted: #6c7686;
+  --muted: #5b6676;
 
   --line: #e5e8ee;
   --surface: #f5f7fa;
@@ -223,7 +223,7 @@ img { max-width: 100%; display: block; }
   padding: 0.25rem 0.65rem;
   border-radius: 4px;
 }
-.tag-gold { background: #fdf4e0; color: var(--gold); }
+.tag-gold { background: #fdf4e0; color: #7d5a07; }
 
 .meta { color: var(--muted); font-size: 0.82rem; }
 
