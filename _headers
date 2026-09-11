@@ -12,6 +12,15 @@
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Heroes are regenerated in place, so they cannot be immutable for a year.
+/images/blog/*
+  ! Cache-Control
+  Cache-Control: public, max-age=2592000
+
+/images/glossary/*
+  ! Cache-Control
+  Cache-Control: public, max-age=2592000
+
 /favicon.ico
   Cache-Control: public, max-age=604800
 
