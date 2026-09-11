@@ -967,3 +967,50 @@ td .tool-tile { margin-right: 0.5rem; }
   color: var(--muted);
   margin-bottom: 0.55rem;
 }
+
+/* ---------- Interactive tools (calculators, pickers, planners) ---------- */
+.tool-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.calc .btn { font: inherit; cursor: pointer; }
+.calc table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.calc th, .calc td { padding: .35rem .3rem; text-align: left; vertical-align: middle; }
+.calc td input, .calc td select { padding: .45rem .5rem; }
+.calc__total { font-weight: 800; }
+.calc textarea { width: 100%; min-height: 220px; padding: .8rem; border: 1px solid var(--line); border-radius: 8px;
+        font: inherit; font-size: .9rem; line-height: 1.5; background: var(--white); }
+.calc .hint { font-size: .8rem; color: var(--muted); margin: .2rem 0 0; }
+.pick { display: grid; gap: .45rem; margin: .6rem 0 1rem; }
+.pick label { display: flex; gap: .6rem; align-items: flex-start; font-weight: 500; font-size: .92rem; cursor: pointer; }
+.pick input { width: auto; margin-top: .3rem; flex: none; }
+.pick-group { margin-top: 1rem; }
+.pick-group h3 { font-size: .95rem; margin: .8rem 0 .2rem; }
+.quad { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin-top: 1rem; }
+.quad__cell { border: 1px solid var(--line); border-radius: 8px; padding: .8rem; min-height: 140px; background: var(--white); }
+.quad__cell h3 { font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .5rem; }
+.quad__cell ul { list-style: none; margin: 0; padding: 0; }
+.quad__cell li { display: flex; justify-content: space-between; gap: .5rem; padding: .3rem 0; border-bottom: 1px dashed var(--line); font-size: .88rem; }
+.quad__cell li button { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: .8rem; }
+.q1 { border-top: 3px solid #b91c1c; } .q2 { border-top: 3px solid var(--accent); }
+.q3 { border-top: 3px solid #b45309; } .q4 { border-top: 3px solid #6b7280; }
+.timer { text-align: center; padding: 1rem 1.4rem; }
+.timer__clock { font-size: clamp(3rem, 12vw, 5.5rem); font-weight: 800; letter-spacing: .02em; font-variant-numeric: tabular-nums; line-height: 1; }
+.timer__phase { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: .4rem 0 1rem; }
+.timer__dots { display: flex; justify-content: center; gap: .4rem; margin-bottom: 1rem; }
+.timer__dots span { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--accent); }
+.timer__dots span.done { background: var(--accent); }
+.plan { list-style: none; margin: 1rem 0 0; padding: 0; }
+.plan li { display: grid; grid-template-columns: 5.5rem 1fr auto; gap: .8rem; align-items: center; padding: .5rem .6rem; border-left: 4px solid var(--accent); background: var(--white); margin-bottom: .4rem; border-radius: 6px; font-size: .92rem; }
+.plan li.buffer { border-left-color: var(--line); color: var(--muted); }
+.plan li .t { font-weight: 700; font-variant-numeric: tabular-nums; }
+.progress { height: 10px; background: var(--line); border-radius: 999px; overflow: hidden; margin: .6rem 0 1rem; }
+.progress span { display: block; height: 100%; background: var(--accent); width: 0; transition: width .2s; }
+.chk { list-style: none; margin: 0; padding: 0; }
+.chk li { padding: .45rem 0; border-bottom: 1px dashed var(--line); }
+.chk label { display: flex; gap: .6rem; align-items: flex-start; font-size: .92rem; cursor: pointer; }
+.chk input { margin-top: .3rem; flex: none; }
+.chk li.done label { color: var(--muted); text-decoration: line-through; }
+.chk .due { font-size: .78rem; color: var(--muted); margin-left: auto; white-space: nowrap; }
+.week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .4rem; margin-top: 1rem; }
+.week div { border-radius: 6px; padding: .6rem .3rem; text-align: center; font-size: .8rem; font-weight: 600; border: 1px solid var(--line); }
+.week .on { background: var(--accent); color: var(--white); border-color: var(--accent); }
+.week .off { background: var(--white); color: var(--muted); }
+@media (max-width: 640px) { .quad { grid-template-columns: 1fr; } .plan li { grid-template-columns: 4.5rem 1fr auto; } }

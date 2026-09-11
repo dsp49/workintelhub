@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Calculate Hours Worked: Steps, Decimals and Rules</title>
+  <meta name="description" content="How to calculate hours worked from clock times, convert minutes to decimals, what counts as work time under the FLSA, and a calculator for a single shift." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/how-to-calculate-hours-worked" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/how-to-calculate-hours-worked" />
+  <meta property="og:title" content="How to Calculate Hours Worked" />
+  <meta property="og:description" content="How to calculate hours worked from clock times, convert minutes to decimals, what counts as work time under the FLSA, and a calculator for a single shift." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/how-to-calculate-hours-worked.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Calculate Hours Worked" />
+  <meta name="twitter:description" content="How to calculate hours worked from clock times, convert minutes to decimals, what counts as work time under the FLSA, and a calculator for a single shift." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/how-to-calculate-hours-worked.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/how-to-calculate-hours-worked#article",
+        "headline": "How to Calculate Hours Worked",
+        "description": "How to calculate hours worked from clock times, convert minutes to decimals, what counts as work time under the FLSA, and a calculator for a single shift.",
+        "image": "https://workintelhub.com/images/blog/how-to-calculate-hours-worked.png",
+        "datePublished": "2026-09-11T00:00:00+00:00",
+        "dateModified": "2026-09-11T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/how-to-calculate-hours-worked"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/how-to-calculate-hours-worked#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to Calculate Hours Worked"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/how-to-calculate-hours-worked#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate hours worked with a lunch break?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subtract the start time from the end time to get the elapsed time, then subtract the unpaid meal break, then divide the remaining minutes by 60. An 8:47 to 17:22 shift with a 30-minute unpaid lunch is 515 minutes less 30, which is 485 minutes or 8.08 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert minutes to decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the minutes by 60. Fifteen minutes is 0.25, thirty is 0.50, forty-five is 0.75, and ten minutes is 0.17. Do not write 30 minutes as 0.30; that is the most common payroll error."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do breaks count as hours worked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Short rest breaks of about 5 to 20 minutes count and must be paid. A meal period of roughly 30 minutes or more does not count if the employee is completely relieved of duty. An employee required to stay at their desk or machine during a meal is working."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 7-minute rule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A consequence of quarter-hour rounding under 29 CFR 785.48: a punch up to seven minutes after the quarter rounds down, eight or more rounds up. It is permitted only if the rounding does not, over time, underpay employees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does time spent before clocking in count?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If work was performed and the employer knew or should have known, yes. Loading systems, preparing equipment or reading work email before the punch is work time. The fix is to have people clock in when they start, not to ignore the minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate hours worked for overtime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Add the decimal hours for each day of the workweek. Hours over 40 are overtime under federal law. Some states also count daily hours over a threshold. The weekly time card calculator applies both rules."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>How to Calculate Hours Worked</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 11, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/how-to-calculate-hours-worked.png" alt="A single shift converted from clock times to decimal hours with the break removed" width="1200" height="630" />
+      </figure>
+
+      <p>
+        To calculate hours worked, convert the start and end times to minutes, subtract one from the
+        other, take off any unpaid meal break, and divide by 60. The answer is a decimal number of
+        hours, which is what payroll multiplies by the rate.
+      </p>
+      <p>
+        The arithmetic is the easy part. What makes the number right or wrong is what you count as
+        work in the first place, which federal regulations define more precisely than most
+        timesheets do. Both are covered below, with a calculator for a single shift and a link to the
+        weekly version.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Single-shift calculator</a></li>
+          <li><a href="#steps">The method, step by step</a></li>
+          <li><a href="#what-counts">What counts as hours worked</a></li>
+          <li><a href="#rounding">Rounding and the 7-minute rule</a></li>
+          <li><a href="#examples">Three worked examples</a></li>
+          <li><a href="#weekly">From a day to a week to a pay cheque</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Single-shift calculator</h2>
+      <div class="calc" id="hw">
+        <div class="calc__grid">
+          <div><label for="hw-in">Start time</label><input id="hw-in" type="time" value="08:47"></div>
+          <div><label for="hw-out">End time</label><input id="hw-out" type="time" value="17:22"></div>
+          <div><label for="hw-br">Unpaid break (minutes)</label><input id="hw-br" type="number" min="0" step="1" value="30"></div>
+        </div>
+        <div class="calc__out" id="hw-out"></div>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function mins(t) { if (!t) return null; var p = t.split(":"); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var a = mins(el("hw-in").value), b = mins(el("hw-out").value), br = parseFloat(el("hw-br").value) || 0;
+          if (a === null || b === null) { el("hw-out").innerHTML = ""; return; }
+          if (b <= a) b += 1440;
+          var gross = b - a, net = Math.max(0, gross - br);
+          var h = Math.floor(net / 60), m = net % 60, dec = net / 60;
+          var html = "";
+          html += row("Elapsed time", Math.floor(gross / 60) + " h " + (gross % 60) + " min");
+          html += row("Less unpaid break", br + " min");
+          html += row("Hours worked", h + " h " + m + " min");
+          html += row("As a decimal (minutes &divide; 60)", dec.toFixed(2) + " hours");
+          html += row("Rounded to nearest tenth", (Math.round(dec * 10) / 10).toFixed(1) + " hours");
+          html += row("Rounded to nearest quarter", (Math.round(dec * 4) / 4).toFixed(2) + " hours");
+          el("hw-out").innerHTML = html;
+        }
+        ["hw-in", "hw-out", "hw-br"].forEach(function (id) { el(id).addEventListener("input", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="steps">The method, step by step</h2>
+      <ol>
+        <li><strong>Write both times in 24-hour form.</strong> 8:47 am is 08:47; 5:22 pm is 17:22.
+        This removes the am/pm errors that account for most hand-calculation mistakes.</li>
+        <li><strong>Convert each to minutes past midnight.</strong> Hours times 60 plus minutes.
+        08:47 is 527; 17:22 is 1,042.</li>
+        <li><strong>Subtract.</strong> 1,042 minus 527 is 515 minutes. If the end time is smaller
+        than the start time, the shift crossed midnight: add 1,440 to the end time first.</li>
+        <li><strong>Remove unpaid breaks.</strong> A 30-minute unpaid meal gives 485 minutes. Only
+        bona fide meal periods can be removed; see the rules below.</li>
+        <li><strong>Divide by 60.</strong> 485 &divide; 60 = 8.08 hours. Payroll uses the decimal;
+        8 hours 5 minutes is the same number in clock form.</li>
+        <li><strong>Add the days for the week</strong> and apply overtime to anything over 40 (or
+        your state's daily threshold).</li>
+      </ol>
+      <p>
+        The mistake to watch for is treating minutes as decimals directly. 8 hours 30 minutes is
+        8.50, not 8.30; 8 hours 15 minutes is 8.25. Our
+        <a href="/blogs/timesheet-conversion-chart">timesheet conversion chart</a> gives every
+        minute from 1 to 59 as a decimal for anyone totalling by hand.
+      </p>
+      <h2 id="what-counts">What counts as hours worked</h2>
+      <p>
+        Federal regulations at 29 CFR Part 785 define hours worked, and the definitions decide
+        whether the number is right regardless of how carefully it was calculated.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Time</th><th>Counts?</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Rest breaks of 5 to 20 minutes</td><td>Yes</td><td><a href="https://www.law.cornell.edu/cfr/text/29/785.18" target="_blank" rel="noopener">29 CFR 785.18</a>: "must be counted as hours worked"</td></tr>
+            <tr><td>Meal period, 30 minutes or more, fully relieved</td><td>No</td><td><a href="https://www.law.cornell.edu/cfr/text/29/785.19" target="_blank" rel="noopener">29 CFR 785.19</a>: bona fide meal period</td></tr>
+            <tr><td>Meal eaten at the desk while working</td><td>Yes</td><td>Same section: "working while eating"</td></tr>
+            <tr><td>Work done before clocking in or after clocking out</td><td>Yes</td><td>Work the employer knows about or should know about is compensable</td></tr>
+            <tr><td>Ordinary commute</td><td>No</td><td>Home-to-work travel is not work time</td></tr>
+            <tr><td>Travel between job sites during the day</td><td>Yes</td><td>Part of the day's principal activity</td></tr>
+            <tr><td>Required training or meetings</td><td>Yes</td><td>Voluntary, outside hours, unrelated and no work performed is the only exclusion</td></tr>
+            <tr><td>On call, required to stay on premises</td><td>Yes</td><td>Engaged to wait is work</td></tr>
+            <tr><td>On call, free to use time for own purposes</td><td>Generally no</td><td>Waiting to be engaged</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The rows that cause claims are the third, fourth and last two. An employee who logs in ten
+        minutes early every day to load systems is working for those ten minutes, and the employer
+        who knows it and does not pay for it owes the time. The safest instruction is that nobody
+        does anything work-related before the punch in, and that the punch reflects when they
+        actually started.
+      </p>
+      <h2 id="rounding">Rounding and the 7-minute rule</h2>
+      <p>
+        Time may be rounded to the nearest 5 minutes, tenth of an hour or quarter hour under <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a>,
+        provided the rounding "will not result, over a period of time, in failure to compensate the
+        employees properly for all the time they have actually worked". Quarter-hour rounding
+        produces the 7-minute rule: 08:07 rounds to 08:00 and 08:08 rounds to 08:15. Rounding that
+        always goes the employer's way fails the test, and with exact electronic records the
+        justification for rounding at all is weak. The calculator shows exact, tenth and quarter
+        values so the effect is visible.
+      </p>
+      <h2 id="examples">Three worked examples</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Shift</th><th>Arithmetic</th><th>Hours worked</th></tr></thead>
+          <tbody>
+            <tr><td>07:00 to 15:30, 30-minute unpaid lunch taken away from the desk</td><td>930 &minus; 420 = 510 minutes; less 30 = 480</td><td>8.00</td></tr>
+            <tr><td>09:10 to 18:05, ate at the desk while covering the phones</td><td>1,085 &minus; 550 = 535 minutes; no deduction, the meal was work</td><td>8.92</td></tr>
+            <tr><td>22:00 to 06:15 next day, two 15-minute rest breaks</td><td>(375 + 1,440) &minus; 1,320 = 495 minutes; rest breaks are paid, no deduction</td><td>8.25</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The second and third rows are where hand-calculated timesheets most often go wrong: an
+        automatic 30-minute deduction on the second row would underpay by half an hour, and
+        deducting the rest breaks on the third row would underpay by another half hour. Over a
+        year, for a full-time employee, that is roughly 250 hours.
+      </p>
+      <h2 id="weekly">From a day to a week to a pay cheque</h2>
+      <p>
+        Once each day is a decimal, the week is a sum and overtime is what exceeds 40. The
+        <a href="/blogs/time-card-calculator">time card calculator</a> does the whole week with
+        rounding and overtime options, and the
+        <a href="/blogs/overtime-calculator">overtime calculator</a> turns overtime hours into pay
+        using the regular rate, which includes bonuses and differentials and is often higher than
+        the hourly rate. For the recordkeeping side, the
+        <a href="/blogs/timesheet-template">timesheet template</a> is built around the fields 29 CFR
+        516.2 requires employers to keep.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Convert to 24-hour time, convert to minutes, subtract, remove unpaid meal breaks, divide by 60.</li>
+        <li>Minutes are not decimals: 8 hours 30 minutes is 8.50, and 8 hours 15 minutes is 8.25.</li>
+        <li>If the end time is before the start time, the shift crossed midnight; add 24 hours to the end.</li>
+        <li>Rest breaks of 5 to 20 minutes are paid. Meal periods can be unpaid only when 30 minutes or more and fully relieved of duty.</li>
+        <li>Work before the punch in or after the punch out that the employer knows about is compensable.</li>
+        <li>Rounding to 5, 6 or 15 minutes is allowed only if it averages out. Rounding that favours the employer is not.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate hours worked with a lunch break?</summary>
+          <p>Subtract the start time from the end time to get the elapsed time, then subtract the unpaid meal break, then divide the remaining minutes by 60. An 8:47 to 17:22 shift with a 30-minute unpaid lunch is 515 minutes less 30, which is 485 minutes or 8.08 hours.</p>
+        </details>
+        <details>
+          <summary>How do I convert minutes to decimal hours?</summary>
+          <p>Divide the minutes by 60. Fifteen minutes is 0.25, thirty is 0.50, forty-five is 0.75, and ten minutes is 0.17. Do not write 30 minutes as 0.30; that is the most common payroll error.</p>
+        </details>
+        <details>
+          <summary>Do breaks count as hours worked?</summary>
+          <p>Short rest breaks of about 5 to 20 minutes count and must be paid. A meal period of roughly 30 minutes or more does not count if the employee is completely relieved of duty. An employee required to stay at their desk or machine during a meal is working.</p>
+        </details>
+        <details>
+          <summary>What is the 7-minute rule?</summary>
+          <p>A consequence of quarter-hour rounding under 29 CFR 785.48: a punch up to seven minutes after the quarter rounds down, eight or more rounds up. It is permitted only if the rounding does not, over time, underpay employees.</p>
+        </details>
+        <details>
+          <summary>Does time spent before clocking in count?</summary>
+          <p>If work was performed and the employer knew or should have known, yes. Loading systems, preparing equipment or reading work email before the punch is work time. The fix is to have people clock in when they start, not to ignore the minutes.</p>
+        </details>
+        <details>
+          <summary>How do I calculate hours worked for overtime?</summary>
+          <p>Add the decimal hours for each day of the workweek. Hours over 40 are overtime under federal law. Some states also count daily hours over a threshold. The weekly time card calculator applies both rules.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/time-card-calculator">Time Card Calculator</a></li>
+          <li><a href="/blogs/timesheet-conversion-chart">Timesheet Conversion Chart</a></li>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

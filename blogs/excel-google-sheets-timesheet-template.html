@@ -456,8 +456,8 @@
         <li>A spreadsheet is a lawful timekeeping system, but time records must still be kept two years and payroll three.</li>
       </ul>
 
-      <h2 id="faq">Frequently asked questions</h2>
-      <section class="faq">
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
         <details>
           <summary>How do I calculate hours worked in Excel or Google Sheets?</summary>
           <p>Subtract the in time from the out time, multiply by 24 for decimal hours, then subtract unpaid break minutes divided by 60. Wrap the subtraction in MOD so shifts crossing midnight do not go negative: =ROUND(MOD(D2-C2,1)*24-E2/60, 2). The formula is identical in both applications.</p>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PTO Accrual Calculator: Per Period, Per Hour or Lump Sum</title>
+  <meta name="description" content="Work out an accrued PTO balance by pay period, by hour worked or as a lump sum, with carryover and caps, plus the state rules on whether unused time can expire." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/pto-accrual-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/pto-accrual-calculator" />
+  <meta property="og:title" content="PTO Accrual Calculator" />
+  <meta property="og:description" content="Work out an accrued PTO balance by pay period, by hour worked or as a lump sum, with carryover and caps, plus the state rules on whether unused time can expire." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/pto-accrual-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PTO Accrual Calculator" />
+  <meta name="twitter:description" content="Work out an accrued PTO balance by pay period, by hour worked or as a lump sum, with carryover and caps, plus the state rules on whether unused time can expire." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/pto-accrual-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/pto-accrual-calculator#article",
+        "headline": "PTO Accrual Calculator",
+        "description": "Work out an accrued PTO balance by pay period, by hour worked or as a lump sum, with carryover and caps, plus the state rules on whether unused time can expire.",
+        "image": "https://workintelhub.com/images/blog/pto-accrual-calculator.png",
+        "datePublished": "2026-09-11T00:00:00+00:00",
+        "dateModified": "2026-09-11T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/pto-accrual-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/pto-accrual-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PTO Accrual Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/pto-accrual-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is PTO accrual calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the annual allowance by the number of accrual periods. For per-pay-period accrual that is the number of pay periods in the year; for per-hour accrual it is the hours worked in a year, typically 2,080 for full time. Multiply the rate by periods or hours completed, add carryover, subtract time taken."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much PTO do I accrue per hour?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Annual PTO hours divided by annual hours worked. An employee with 80 hours of PTO a year working 2,080 hours accrues about 0.0385 hours per hour worked. With 120 hours it is about 0.0577. Multiply by hours on the pay stub to check a period's accrual."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a PTO accrual cap?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A ceiling on the balance. Once the balance reaches the cap, no more time accrues until some is taken. It limits the employer's liability without taking earned time away, which is why it is used in states that prohibit use-it-or-lose-it policies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is use-it-or-lose-it PTO legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the state. California treats vested vacation as earned wages that cannot be forfeited. Several other states allow forfeiture only under a written policy communicated in advance, and some require payout of unused vacation when employment ends regardless of policy. Check the state rule before the policy sets any hours to expire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does PTO accrue during unpaid leave?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under most policies no, because accrual is tied to hours worked or paid periods. Under the per-hour method it stops automatically; under the per-period method the policy has to say so. FMLA leave does not have to accrue PTO unless the employer's policy provides it for other unpaid leave."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert PTO hours to days?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide by the length of the employee's standard day. The calculator uses 8 hours. For a 7.5-hour day, divide by 7.5. Policies written in days rather than hours are harder to apply fairly to part-time staff, which is why most are written in hours."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>PTO Accrual Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 11, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/pto-accrual-calculator.png" alt="A PTO balance built up period by period against an annual allowance and a cap" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Enter the annual allowance, how it accrues, the dates and what has been taken. The
+        calculator gives the accrual rate, the balance to date in hours and days, and where the
+        balance will be at year end if nothing more is taken. Carryover and accrual caps are
+        included because they are where most PTO policies get complicated.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">PTO accrual calculator</a></li>
+          <li><a href="#methods">The three accrual methods, and the arithmetic</a></li>
+          <li><a href="#caps">Carryover, caps and use-it-or-lose-it</a></li>
+          <li><a href="#liability">Why the balance is a balance-sheet number</a></li>
+          <li><a href="#checking">Checking an employer's figure</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">PTO accrual calculator</h2>
+      <div class="calc" id="pto">
+        <div class="calc__grid">
+          <div>
+            <label for="pto-annual">Annual PTO allowance (hours)</label>
+            <input id="pto-annual" type="number" min="0" step="1" value="120">
+            <p class="hint">15 days at 8 hours = 120</p>
+          </div>
+          <div>
+            <label for="pto-method">Accrual method</label>
+            <select id="pto-method">
+              <option value="period">Per pay period</option>
+              <option value="hour">Per hour worked</option>
+              <option value="lump">Lump sum at start of year</option>
+            </select>
+          </div>
+          <div>
+            <label for="pto-freq">Pay frequency</label>
+            <select id="pto-freq">
+              <option value="52">Weekly (52)</option>
+              <option value="26" selected>Biweekly (26)</option>
+              <option value="24">Semi-monthly (24)</option>
+              <option value="12">Monthly (12)</option>
+            </select>
+          </div>
+          <div>
+            <label for="pto-hpw">Hours worked per week</label>
+            <input id="pto-hpw" type="number" min="0" step="0.5" value="40">
+          </div>
+          <div>
+            <label for="pto-start">Accrual start date</label>
+            <input id="pto-start" type="date" value="2026-01-01">
+          </div>
+          <div>
+            <label for="pto-asof">Balance as of</label>
+            <input id="pto-asof" type="date" value="2026-09-11">
+          </div>
+          <div>
+            <label for="pto-used">Hours already taken</label>
+            <input id="pto-used" type="number" min="0" step="0.5" value="24">
+          </div>
+          <div>
+            <label for="pto-carry">Carried over from last year (hours)</label>
+            <input id="pto-carry" type="number" min="0" step="0.5" value="0">
+          </div>
+          <div>
+            <label for="pto-cap">Accrual cap (hours, 0 = none)</label>
+            <input id="pto-cap" type="number" min="0" step="1" value="0">
+          </div>
+        </div>
+        <div class="calc__out" id="pto-out"></div>
+        <p class="calc__note">Per-pay-period accrual counts completed periods between the two dates. Per-hour accrual assumes the weekly hours entered were worked every week. A cap stops accrual when the balance reaches it, which is the lawful alternative to forfeiture in states that ban use-it-or-lose-it.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function f(n) { return (Math.round(n * 100) / 100).toFixed(2); }
+        function calc() {
+          var annual = parseFloat(el("pto-annual").value) || 0, method = el("pto-method").value;
+          var freq = parseInt(el("pto-freq").value, 10), hpw = parseFloat(el("pto-hpw").value) || 0;
+          var start = new Date(el("pto-start").value), asof = new Date(el("pto-asof").value);
+          var used = parseFloat(el("pto-used").value) || 0, carry = parseFloat(el("pto-carry").value) || 0, cap = parseFloat(el("pto-cap").value) || 0;
+          if (isNaN(start) || isNaN(asof) || asof < start) { el("pto-out").innerHTML = row("Enter a start date before the balance date", ""); return; }
+          var days = Math.floor((asof - start) / 86400000), weeks = days / 7;
+          var rate, rateLabel, accrued;
+          if (method === "period") {
+            rate = annual / freq; rateLabel = "Accrual per pay period";
+            var periods = Math.floor(weeks * freq / 52);
+            accrued = rate * periods;
+          } else if (method === "hour") {
+            rate = annual / (hpw * 52); rateLabel = "Accrual per hour worked";
+            accrued = rate * hpw * weeks;
+          } else {
+            rate = annual; rateLabel = "Granted at start of year";
+            accrued = annual;
+          }
+          var balance = carry + accrued - used;
+          var capped = false;
+          if (cap > 0 && balance > cap) { balance = cap; capped = true; }
+          var remainingYear = Math.max(0, 365 - days);
+          var projected = method === "lump" ? balance : balance + (annual / 365) * remainingYear;
+          if (cap > 0) projected = Math.min(projected, cap);
+          var html = "";
+          html += row(rateLabel, f(rate) + " hours" + (method === "hour" ? " (" + (rate).toFixed(4) + ")" : ""));
+          html += row("Accrued since " + el("pto-start").value, f(accrued) + " hours");
+          if (carry) html += row("Plus carryover", f(carry) + " hours");
+          html += row("Less hours taken", f(used) + " hours");
+          html += row("Current balance" + (capped ? " (at cap)" : ""), f(balance) + " hours = " + f(balance / 8) + " days");
+          html += row("Projected balance at 12 months if none taken", f(projected) + " hours");
+          el("pto-out").innerHTML = html;
+        }
+        ["pto-annual", "pto-method", "pto-freq", "pto-hpw", "pto-start", "pto-asof", "pto-used", "pto-carry", "pto-cap"].forEach(function (id) {
+          el(id).addEventListener("input", calc); el(id).addEventListener("change", calc);
+        });
+        calc();
+      })();
+      </script>
+      <h2 id="methods">The three accrual methods, and the arithmetic</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Method</th><th>Rate formula</th><th>120 hours a year, 40-hour week</th><th>Suits</th></tr></thead>
+          <tbody>
+            <tr><td>Per pay period</td><td>Annual hours &divide; pay periods</td><td>4.615 hours per biweekly period</td><td>Salaried and regular full-time staff</td></tr>
+            <tr><td>Per hour worked</td><td>Annual hours &divide; (weekly hours &times; 52)</td><td>0.0577 hours per hour worked</td><td>Part-time, variable and hourly staff</td></tr>
+            <tr><td>Lump sum</td><td>Full allowance on day one of the year</td><td>120 hours on 1 January</td><td>Simple to administer; creates a large liability early</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The per-hour method is the fairest for variable schedules because someone working 30 hours
+        accrues three quarters of what a 40-hour colleague does. The per-period method is simpler
+        but over-credits part-timers unless the allowance is pro-rated first. Lump-sum grants are
+        easiest to explain and hardest to fund, because an employee who leaves in February may have
+        used or be owed a year's allowance.
+      </p>
+      <h2 id="caps">Carryover, caps and use-it-or-lose-it</h2>
+      <p>
+        Three policy features interact, and the calculator models all of them.
+      </p>
+      <ul>
+        <li><strong>Carryover</strong> is unused time that moves into the new year. Some policies
+        allow all of it, some a fixed number of hours, some none.</li>
+        <li><strong>An accrual cap</strong> stops further accrual once the balance reaches a
+        ceiling. Accrual resumes when time is taken. This is the mechanism that keeps liability
+        bounded without taking anything away.</li>
+        <li><strong>Use-it-or-lose-it</strong> forfeits unused hours at year end. It is the feature
+        state law restricts.</li>
+      </ul>
+      <p>
+        <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=227.3.&amp;lawCode=LAB" target="_blank" rel="noopener">California Labor Code 227.3</a> provides that an employer policy "shall not provide for forfeiture of vested vacation
+        time upon termination", and California treats vested vacation as earned wages, which is why
+        employers there use accrual caps rather than forfeiture. Other states permit forfeiture only where
+        the policy is in writing and communicated in advance, and a number require payout of
+        accrued vacation at termination regardless of policy. Our
+        <a href="/blogs/employee-vacation-tracking">vacation and PTO tracking guide</a> lists the
+        states where unused vacation must be paid out and where use-it-or-lose-it is prohibited,
+        which is the part of the policy to check before setting the cap field to zero.
+      </p>
+      <h2 id="liability">Why the balance is a balance-sheet number</h2>
+      <p>
+        Every accrued hour is a liability at the employee's current rate. A team of forty people
+        carrying an average of 60 unused hours at 30 dollars is 72,000 dollars owed, and it rises
+        with every pay increase because the hours are paid at the rate on the day they are taken or
+        cashed out, not the rate at which they accrued. Finance teams care about the projected line
+        in the calculator for exactly this reason.
+      </p>
+      <p>
+        The operational fix is not to discourage leave, which raises the burnout cost our
+        <a href="/blogs/employee-burnout-statistics">burnout statistics</a> page documents. It is a
+        cap set at a sensible multiple of the annual allowance, usually 1.5 to 2 times, with
+        managers prompted when someone is near it. A balance that never moves is a scheduling
+        problem, and the <a href="/blogs/team-capacity-planning">capacity planning guide</a> covers
+        how to plan leave into the year rather than around it.
+      </p>
+      <h2 id="checking">Checking an employer's figure</h2>
+      <p>
+        If you are an employee checking your own balance, you need four things from the handbook or
+        the pay stub: the annual allowance, the accrual method, the pay frequency, and whether there
+        is a cap. Enter them with your start date, and compare the calculator's balance with the pay
+        stub. Common causes of a mismatch are a waiting period before accrual starts, accrual that
+        pauses during unpaid leave, and pro-rating in the first year. If the employer's number is
+        lower and none of those apply, ask for the calculation in writing; in payout states the
+        difference is wages.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Per-period accrual is annual hours divided by pay periods. Per-hour accrual is annual hours divided by annual hours worked. Lump sum grants everything on day one.</li>
+        <li>Per-hour accrual is fairest for variable schedules. Per-period over-credits part-timers unless the allowance is pro-rated.</li>
+        <li>A cap stops accrual at a ceiling and resumes when leave is taken. Use-it-or-lose-it forfeits time, and several states restrict or ban it.</li>
+        <li>California treats vested vacation as wages that cannot be forfeited, so caps are the compliant tool there.</li>
+        <li>Accrued PTO is a liability at the current pay rate, which rises with every raise. Caps at 1.5 to 2 times the annual allowance keep it bounded.</li>
+        <li>Employees checking a balance need the allowance, method, frequency and cap. Waiting periods and unpaid leave are the usual causes of mismatch.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How is PTO accrual calculated?</summary>
+          <p>Divide the annual allowance by the number of accrual periods. For per-pay-period accrual that is the number of pay periods in the year; for per-hour accrual it is the hours worked in a year, typically 2,080 for full time. Multiply the rate by periods or hours completed, add carryover, subtract time taken.</p>
+        </details>
+        <details>
+          <summary>How much PTO do I accrue per hour?</summary>
+          <p>Annual PTO hours divided by annual hours worked. An employee with 80 hours of PTO a year working 2,080 hours accrues about 0.0385 hours per hour worked. With 120 hours it is about 0.0577. Multiply by hours on the pay stub to check a period's accrual.</p>
+        </details>
+        <details>
+          <summary>What is a PTO accrual cap?</summary>
+          <p>A ceiling on the balance. Once the balance reaches the cap, no more time accrues until some is taken. It limits the employer's liability without taking earned time away, which is why it is used in states that prohibit use-it-or-lose-it policies.</p>
+        </details>
+        <details>
+          <summary>Is use-it-or-lose-it PTO legal?</summary>
+          <p>It depends on the state. California treats vested vacation as earned wages that cannot be forfeited. Several other states allow forfeiture only under a written policy communicated in advance, and some require payout of unused vacation when employment ends regardless of policy. Check the state rule before the policy sets any hours to expire.</p>
+        </details>
+        <details>
+          <summary>Does PTO accrue during unpaid leave?</summary>
+          <p>Under most policies no, because accrual is tied to hours worked or paid periods. Under the per-hour method it stops automatically; under the per-period method the policy has to say so. FMLA leave does not have to accrue PTO unless the employer's policy provides it for other unpaid leave.</p>
+        </details>
+        <details>
+          <summary>How do I convert PTO hours to days?</summary>
+          <p>Divide by the length of the employee's standard day. The calculator uses 8 hours. For a 7.5-hour day, divide by 7.5. Policies written in days rather than hours are harder to apply fairly to part-time staff, which is why most are written in hours.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/employee-vacation-tracking">Employee Vacation and PTO Tracking</a></li>
+          <li><a href="/blogs/time-card-calculator">Time Card Calculator</a></li>
+          <li><a href="/blogs/employee-attendance-tracking">Employee Attendance Tracking</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

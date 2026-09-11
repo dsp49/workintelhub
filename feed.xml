@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -13,6 +13,111 @@
       <link>https://workintelhub.com/</link>
     </image>
 
+    <item>
+      <title>Time Card Calculator</title>
+      <link>https://workintelhub.com/blogs/time-card-calculator</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-card-calculator</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>A free weekly time card calculator with break deduction, punch rounding and federal or daily overtime, plus the FLSA rules that decide which of those settings is lawful.</description>
+    </item>
+    <item>
+      <title>PTO Accrual Calculator</title>
+      <link>https://workintelhub.com/blogs/pto-accrual-calculator</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/pto-accrual-calculator</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Work out an accrued PTO balance by pay period, by hour worked or as a lump sum, with carryover and caps, plus the state rules on whether unused time can expire.</description>
+    </item>
+    <item>
+      <title>How to Calculate Hours Worked</title>
+      <link>https://workintelhub.com/blogs/how-to-calculate-hours-worked</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/how-to-calculate-hours-worked</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Step-by-step method for calculating hours worked from clock times, converting minutes to decimals, what counts as work time under the FLSA, and a calculator for a single shift.</description>
+    </item>
+    <item>
+      <title>Time Blocking</title>
+      <link>https://workintelhub.com/blogs/time-blocking</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-blocking</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>What time blocking is, how to build a blocked day that survives a real calendar, the variants worth knowing, where the method fails, and a planner to lay out today.</description>
+    </item>
+    <item>
+      <title>Eat the Frog</title>
+      <link>https://workintelhub.com/blogs/eat-the-frog</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/eat-the-frog</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>What the eat the frog method is, where the frog quote actually came from, how to pick the right frog, a tool that ranks your tasks, and when doing the hardest thing first is wrong.</description>
+    </item>
+    <item>
+      <title>Pomodoro Technique</title>
+      <link>https://workintelhub.com/blogs/pomodoro-technique</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/pomodoro-technique</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>How the Pomodoro technique works, the rules Cirillo actually set, a timer you can use on this page, how to adapt the intervals, and the kinds of work it is wrong for.</description>
+    </item>
+    <item>
+      <title>Eisenhower Matrix</title>
+      <link>https://workintelhub.com/blogs/eisenhower-matrix</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/eisenhower-matrix</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>How the Eisenhower matrix sorts work by urgency and importance, what Eisenhower actually said in 1954, why people default to urgent tasks, and an interactive matrix.</description>
+    </item>
+    <item>
+      <title>Employee Engagement Survey Questions</title>
+      <link>https://workintelhub.com/blogs/employee-engagement-survey-questions</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-engagement-survey-questions</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Thirty-five engagement survey questions grouped by driver, a builder that assembles your survey, the scale and anonymity rules that make results usable, and how to act on them.</description>
+    </item>
+    <item>
+      <title>One-on-One Meeting Template</title>
+      <link>https://workintelhub.com/blogs/one-on-one-meeting-template</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/one-on-one-meeting-template</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>A 45-minute one-on-one agenda, 25 questions grouped by purpose, a builder that assembles yours, and the rules that stop one-on-ones turning into status updates.</description>
+    </item>
+    <item>
+      <title>Employee Onboarding Checklist</title>
+      <link>https://workintelhub.com/blogs/employee-onboarding-checklist</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-onboarding-checklist</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>An interactive onboarding checklist from offer to day 90, with the federal deadlines that carry penalties, the items most companies skip, and what the first week should contain.</description>
+    </item>
+    <item>
+      <title>Stay Interview Questions</title>
+      <link>https://workintelhub.com/blogs/stay-interview-questions</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/stay-interview-questions</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Twenty-two stay interview questions grouped by what they uncover, a script builder, how a stay interview differs from an exit interview, and what to do when the answer is one you cannot give.</description>
+    </item>
+    <item>
+      <title>Employee Write-Up Template</title>
+      <link>https://workintelhub.com/blogs/employee-write-up-template</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-write-up-template</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>A generator that produces a written warning from your facts, the eight sections a defensible write-up contains, the wording to avoid, and when a write-up is the wrong tool.</description>
+    </item>
+    <item>
+      <title>Attendance Policy Template</title>
+      <link>https://workintelhub.com/blogs/attendance-policy-template</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/attendance-policy-template</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Generate an attendance policy from your own settings, choose between points and occurrences, and get the protected-absence section right.</description>
+    </item>
+    <item>
+      <title>Hybrid Work Schedule</title>
+      <link>https://workintelhub.com/blogs/hybrid-work-schedule</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/hybrid-work-schedule</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Six hybrid work schedule models compared on collaboration, desk demand and fairness, a calculator that shows peak occupancy for your team, and how to choose.</description>
+    </item>
+    <item>
+      <title>Workforce Management (WFM)</title>
+      <link>https://workintelhub.com/glossary/workforce-management</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/workforce-management</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Workforce management (WFM) is the set of processes an organisation uses to have the right number of people with the right skills working at the right times: forecasting demand, scheduling, time and attendance, absence management and labour compliance.</description>
+    </item>
     <item>
       <title>Performance Improvement Plan: Template and Legal Risk</title>
       <link>https://workintelhub.com/blogs/performance-improvement-plan</link>
@@ -353,7 +458,7 @@
       <title>Best Employee Monitoring Software: 10 Tools Compared</title>
       <link>https://workintelhub.com/tools/best-employee-monitoring-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-employee-monitoring-software</guid>
-      <pubDate>Sun, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
       <description>Ten employee monitoring platforms, what each is built to do, and where each falls short. No pricing, no affiliate links, plus the US notice law that applies first.</description>
     </item>
     <item>

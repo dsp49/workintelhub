@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Card Calculator: Breaks, Rounding and Overtime</title>
+  <meta name="description" content="A free weekly time card calculator with break deduction, punch rounding and federal or daily overtime, plus the FLSA rules that decide which of those settings is lawful." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/time-card-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/time-card-calculator" />
+  <meta property="og:title" content="Time Card Calculator" />
+  <meta property="og:description" content="A free weekly time card calculator with break deduction, punch rounding and federal or daily overtime, plus the FLSA rules that decide which of those settings is lawful." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/time-card-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-11T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Time Card Calculator" />
+  <meta name="twitter:description" content="A free weekly time card calculator with break deduction, punch rounding and federal or daily overtime, plus the FLSA rules that decide which of those settings is lawful." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/time-card-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/time-card-calculator#article",
+        "headline": "Time Card Calculator",
+        "description": "A free weekly time card calculator with break deduction, punch rounding and federal or daily overtime, plus the FLSA rules that decide which of those settings is lawful.",
+        "image": "https://workintelhub.com/images/blog/time-card-calculator.png",
+        "datePublished": "2026-09-11T00:00:00+00:00",
+        "dateModified": "2026-09-11T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/time-card-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/time-card-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Time Card Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/time-card-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate time card hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Convert each in and out time to minutes, subtract the in time from the out time, subtract any unpaid meal break, and divide by 60 to get decimal hours. Add the days together for the week. The calculator above does this and also applies rounding and overtime rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 7-minute rule for time cards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under quarter-hour rounding, a punch up to seven minutes after the quarter rounds down to it and a punch eight or more minutes after rounds up to the next quarter. It comes from 29 CFR 785.48, which allows rounding to the nearest quarter hour provided it does not, over time, underpay employees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is time card rounding legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under federal law, yes, to the nearest 5 minutes, tenth of an hour or quarter hour, as long as the practice averages out and does not systematically shortchange employees. Rounding that always favours the employer is not permitted, and some states have moved against rounding where exact times are recorded."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should lunch breaks be deducted from hours worked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if the break is a bona fide meal period: ordinarily 30 minutes or more and with the employee completely relieved of duty. An employee who eats at their desk while answering the phone is working. Rest breaks of 5 to 20 minutes are always paid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the calculator handle overnight shifts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If the out time is earlier than the in time, it treats the out time as the next day. A 22:00 to 06:00 shift is counted as eight hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this calculator handle daily overtime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The second overtime option counts hours over 8 in a day as well as hours over 40 in the week and uses the larger figure, which is the basic shape of California's rule. It does not model double time or seventh-day rules, so check your state's specifics."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a printed time card enough for payroll records?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. 29 CFR 516.2 requires the employer to keep the workweek start, daily and weekly hours, pay basis, regular rate, straight-time and overtime earnings, deductions and payment dates, for at least three years. Use the card as an input to that record, not as the record."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Time Card Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 11, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/time-card-calculator.png" alt="A weekly time card with in and out punches, break deductions and a running total" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Enter each day's in and out times and any unpaid break. The calculator totals the week in
+        decimal hours and hours-and-minutes, applies the rounding rule you choose to each punch the
+        way a time clock would, and splits regular from overtime hours under either the federal
+        weekly rule or a daily-plus-weekly rule.
+      </p>
+      <p>
+        Most time card calculators stop there. This page also covers what the rounding and break
+        settings are actually allowed to do, because those two settings are where most wage claims
+        about time cards come from.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Weekly time card calculator</a></li>
+          <li><a href="#how-it-counts">How the calculator counts</a></li>
+          <li><a href="#rounding">What rounding is allowed to do</a></li>
+          <li><a href="#breaks">Which breaks can be deducted</a></li>
+          <li><a href="#records">What the record has to contain</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Weekly time card calculator</h2>
+      <div class="calc" id="timecard">
+        <table>
+          <thead><tr><th>Day</th><th>In</th><th>Out</th><th>Break (min)</th><th>Hours</th></tr></thead>
+          <tbody>
+            <tr><td>Mon</td><td><input type="time" id="tc-in-0" value="09:00"></td><td><input type="time" id="tc-out-0" value="17:30"></td><td><input type="number" id="tc-br-0" min="0" step="5" value="30" aria-label="Mon break minutes"></td><td id="tc-h-0" class="calc__total">0.00</td></tr>
+            <tr><td>Tue</td><td><input type="time" id="tc-in-1" value="09:00"></td><td><input type="time" id="tc-out-1" value="17:30"></td><td><input type="number" id="tc-br-1" min="0" step="5" value="30" aria-label="Tue break minutes"></td><td id="tc-h-1" class="calc__total">0.00</td></tr>
+            <tr><td>Wed</td><td><input type="time" id="tc-in-2" value="09:00"></td><td><input type="time" id="tc-out-2" value="17:30"></td><td><input type="number" id="tc-br-2" min="0" step="5" value="30" aria-label="Wed break minutes"></td><td id="tc-h-2" class="calc__total">0.00</td></tr>
+            <tr><td>Thu</td><td><input type="time" id="tc-in-3" value="09:00"></td><td><input type="time" id="tc-out-3" value="17:30"></td><td><input type="number" id="tc-br-3" min="0" step="5" value="30" aria-label="Thu break minutes"></td><td id="tc-h-3" class="calc__total">0.00</td></tr>
+            <tr><td>Fri</td><td><input type="time" id="tc-in-4" value="09:00"></td><td><input type="time" id="tc-out-4" value="17:30"></td><td><input type="number" id="tc-br-4" min="0" step="5" value="30" aria-label="Fri break minutes"></td><td id="tc-h-4" class="calc__total">0.00</td></tr>
+            <tr><td>Sat</td><td><input type="time" id="tc-in-5" value=""></td><td><input type="time" id="tc-out-5" value=""></td><td><input type="number" id="tc-br-5" min="0" step="5" value="0" aria-label="Sat break minutes"></td><td id="tc-h-5" class="calc__total">0.00</td></tr>
+            <tr><td>Sun</td><td><input type="time" id="tc-in-6" value=""></td><td><input type="time" id="tc-out-6" value=""></td><td><input type="number" id="tc-br-6" min="0" step="5" value="0" aria-label="Sun break minutes"></td><td id="tc-h-6" class="calc__total">0.00</td></tr>
+          </tbody>
+        </table>
+        <div class="calc__grid" style="margin-top:1rem">
+          <div>
+            <label for="tc-round">Rounding</label>
+            <select id="tc-round">
+              <option value="0">None (exact minutes)</option>
+              <option value="5">Nearest 5 minutes</option>
+              <option value="6">Nearest 6 minutes (tenth of an hour)</option>
+              <option value="15">Nearest 15 minutes (quarter hour)</option>
+            </select>
+          </div>
+          <div>
+            <label for="tc-ot">Overtime rule</label>
+            <select id="tc-ot">
+              <option value="w40">Weekly: over 40 hours (federal)</option>
+              <option value="d8">Daily over 8 + weekly over 40 (California style)</option>
+              <option value="none">No overtime</option>
+            </select>
+          </div>
+          <div>
+            <label for="tc-rate">Hourly rate ($, optional)</label>
+            <input id="tc-rate" type="number" min="0" step="0.01" placeholder="0.00">
+          </div>
+        </div>
+        <div class="calc__out" id="tc-out"></div>
+        <div class="tool-actions">
+          <button class="btn btn-sm btn-outline" type="button" id="tc-copy">Copy Mon to all weekdays</button>
+          <button class="btn btn-sm btn-outline" type="button" id="tc-clear">Clear</button>
+          <button class="btn btn-sm" type="button" id="tc-print">Print</button>
+        </div>
+        <p class="calc__note">Overnight shifts are handled: an out time earlier than the in time is treated as the next day. Rounding is applied to each punch, which is how time clocks do it; the totals show both rounded and exact hours so you can see the difference. Nothing you type leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        var N = 7, out = document.getElementById("tc-out");
+        function el(id) { return document.getElementById(id); }
+        function mins(t) { if (!t) return null; var p = t.split(":"); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+        function rnd(m, q) { if (!q) return m; return Math.round(m / q) * q; }
+        function fmt(h) { return h.toFixed(2); }
+        function hm(h) { var m = Math.round(h * 60); return Math.floor(m / 60) + "h " + (m % 60 < 10 ? "0" : "") + (m % 60) + "m"; }
+        function money(n) { return "$" + n.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var q = parseInt(el("tc-round").value, 10), rule = el("tc-ot").value, rate = parseFloat(el("tc-rate").value) || 0;
+          var exact = 0, total = 0, daily = 0, dayHours = [];
+          for (var i = 0; i < N; i++) {
+            var a = mins(el("tc-in-" + i).value), b = mins(el("tc-out-" + i).value), br = parseFloat(el("tc-br-" + i).value) || 0;
+            var h = 0, hx = 0;
+            if (a !== null && b !== null) {
+              if (b <= a) b += 24 * 60;
+              hx = Math.max(0, (b - a - br)) / 60;
+              h = Math.max(0, (rnd(b, q) - rnd(a, q) - br)) / 60;
+            }
+            el("tc-h-" + i).textContent = fmt(h);
+            dayHours.push(h); total += h; exact += hx;
+            if (rule === "d8") daily += Math.max(0, h - 8);
+          }
+          var ot = 0;
+          if (rule === "w40") ot = Math.max(0, total - 40);
+          else if (rule === "d8") ot = Math.max(daily, Math.max(0, total - 40));
+          var reg = total - ot, html = "";
+          html += row("Total hours (rounded as selected)", fmt(total) + " (" + hm(total) + ")");
+          if (q) html += row("Total hours (exact punches)", fmt(exact) + " (" + hm(exact) + ")");
+          html += row("Regular hours", fmt(reg));
+          html += row("Overtime hours", fmt(ot));
+          if (rate > 0) {
+            var pay = reg * rate + ot * rate * 1.5;
+            html += row("Regular pay", money(reg * rate));
+            html += row("Overtime pay at 1.5x", money(ot * rate * 1.5));
+            html += row("Gross pay this week", money(pay));
+          } else {
+            html += row("Week total", fmt(total) + " hours");
+          }
+          out.innerHTML = html;
+        }
+        for (var i = 0; i < N; i++) ["tc-in-", "tc-out-", "tc-br-"].forEach(function (p) { el(p + i).addEventListener("input", calc); });
+        ["tc-round", "tc-ot", "tc-rate"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        el("tc-copy").addEventListener("click", function () {
+          for (var i = 1; i < 5; i++) { el("tc-in-" + i).value = el("tc-in-0").value; el("tc-out-" + i).value = el("tc-out-0").value; el("tc-br-" + i).value = el("tc-br-0").value; }
+          calc();
+        });
+        el("tc-clear").addEventListener("click", function () {
+          for (var i = 0; i < N; i++) { el("tc-in-" + i).value = ""; el("tc-out-" + i).value = ""; el("tc-br-" + i).value = "0"; }
+          el("tc-rate").value = ""; calc();
+        });
+        el("tc-print").addEventListener("click", function () { window.print(); });
+        calc();
+      })();
+      </script>
+      <h2 id="how-it-counts">How the calculator counts</h2>
+      <ol>
+        <li><strong>Minutes between in and out.</strong> An out time earlier than the in time is
+        read as the following day, so a 22:00 to 06:00 night shift gives eight hours, not minus
+        sixteen.</li>
+        <li><strong>Rounding, if selected, is applied to each punch,</strong> not to the daily
+        total. That is how clock systems work, and it matters: rounding a 08:53 punch to 09:00 and
+        a 17:07 punch to 17:00 removes fourteen minutes from that day, which is why the exact total
+        is shown alongside.</li>
+        <li><strong>Unpaid break minutes are subtracted from the day.</strong> Only enter a break
+        here if the employee was completely relieved of duty for it; the section below explains why.</li>
+        <li><strong>Overtime.</strong> The federal rule counts hours over 40 in the workweek. The
+        daily option counts hours over 8 in a day as well and takes whichever total is larger, which
+        is the shape of California's rule (it also has double time after 12, which this calculator
+        does not model).</li>
+      </ol>
+      <h2 id="rounding">What rounding is allowed to do</h2>
+      <p>
+        Rounding is lawful under federal law, within limits. <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> accepts recording time "to the
+        nearest 5 minutes, or to the nearest one-tenth or quarter of an hour", on the presumption
+        that "this arrangement averages out so that the employees are fully compensated for all the
+        time they actually work". The condition is that the practice does not "result, over a
+        period of time, in failure to compensate the employees properly for all the time they have
+        actually worked".
+      </p>
+      <p>
+        Two things follow. Rounding must be neutral: always rounding down, or rounding in whichever
+        direction favours the employer, fails the test. And the largest permitted unit is a quarter
+        hour, which is where the "7-minute rule" comes from: under quarter-hour rounding, a punch up
+        to seven minutes past the quarter rounds down and eight or more rounds up.
+      </p>
+      <p>
+        With electronic clocks recording exact minutes, several courts and state agencies have
+        questioned whether rounding still serves any purpose. The safest configuration in 2026 is
+        no rounding at all, which is the calculator's default. If you round, use the exact total
+        row to check that the difference is not consistently in one direction.
+      </p>
+      <h2 id="breaks">Which breaks can be deducted</h2>
+      <p>
+        The break column is the second place time cards go wrong. Federal law draws the line by
+        length and by whether the employee is actually free.
+      </p>
+      <ul>
+        <li><strong>Short rest breaks are paid.</strong> <a href="https://www.law.cornell.edu/cfr/text/29/785.18" target="_blank" rel="noopener">29 CFR 785.18</a>: rest periods "running from 5 minutes to
+        about 20 minutes" are "customarily paid for as working time" and "must be counted as hours
+        worked". Do not deduct them.</li>
+        <li><strong>Meal periods can be unpaid only if the employee is completely relieved.</strong>
+        <a href="https://www.law.cornell.edu/cfr/text/29/785.19" target="_blank" rel="noopener">29 CFR 785.19</a>: "ordinarily 30 minutes or more is long enough for a bona fide meal period", but "the
+        employee must be completely relieved from duty". The regulation's own example is that "an
+        office employee who is required to eat at his desk or a factory worker who is required to
+        be at his machine is working while eating".</li>
+        <li><strong>Automatic deductions are the risk.</strong> A system that removes 30 minutes a
+        day whether or not the meal was taken produces exactly the underpayment the calculator's
+        exact row is there to expose. If the employee worked through lunch, the break entry should
+        be zero.</li>
+      </ul>
+      <p>
+        Several states add their own meal and rest requirements with penalties for missed breaks,
+        California most prominently. The calculator deducts what you enter; it does not tell you
+        whether the deduction was lawful.
+      </p>
+      <h2 id="records">What the record has to contain</h2>
+      <p>
+        A printed time card from this page is not, on its own, a compliant payroll record. <a href="https://www.law.cornell.edu/cfr/text/29/516.2" target="_blank" rel="noopener">29 CFR 516.2</a>
+        requires the employer to keep, for each non-exempt employee, the time and day the workweek
+        begins, hours worked each day and each week, the basis of pay, regular rate, straight-time
+        and overtime earnings, deductions, and dates of payment. Our
+        <a href="/blogs/timesheet-template">timesheet template</a> is built around those fields, and
+        the <a href="/blogs/timesheet-conversion-chart">conversion chart</a> covers every minute to
+        decimal value if you are totalling by hand.
+      </p>
+      <p>
+        For pay rather than hours, the <a href="/blogs/overtime-calculator">overtime calculator</a>
+        works out the regular rate including bonuses and shift differentials, which this page's
+        simple rate-times-hours line does not.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Rounding is applied per punch, not per day, so a neutral-looking rule can still remove minutes. Check the exact row.</li>
+        <li>Federal law accepts rounding to 5, 6 or 15 minutes only if it averages out over time. Rounding that consistently favours the employer is unlawful.</li>
+        <li>Rest breaks of 5 to 20 minutes are paid time and must not be deducted.</li>
+        <li>A meal break can be unpaid only if it is about 30 minutes or more and the employee is completely relieved of duty. Eating at the desk is work.</li>
+        <li>Automatic meal deductions applied regardless of whether the break was taken are the most common time card underpayment.</li>
+        <li>Federal overtime is weekly over 40. Some states add daily overtime, which the calculator's second rule models.</li>
+        <li>The printed card is not a payroll record on its own; 29 CFR 516.2 lists what has to be kept.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do I calculate time card hours?</summary>
+          <p>Convert each in and out time to minutes, subtract the in time from the out time, subtract any unpaid meal break, and divide by 60 to get decimal hours. Add the days together for the week. The calculator above does this and also applies rounding and overtime rules.</p>
+        </details>
+        <details>
+          <summary>What is the 7-minute rule for time cards?</summary>
+          <p>Under quarter-hour rounding, a punch up to seven minutes after the quarter rounds down to it and a punch eight or more minutes after rounds up to the next quarter. It comes from 29 CFR 785.48, which allows rounding to the nearest quarter hour provided it does not, over time, underpay employees.</p>
+        </details>
+        <details>
+          <summary>Is time card rounding legal?</summary>
+          <p>Under federal law, yes, to the nearest 5 minutes, tenth of an hour or quarter hour, as long as the practice averages out and does not systematically shortchange employees. Rounding that always favours the employer is not permitted, and some states have moved against rounding where exact times are recorded.</p>
+        </details>
+        <details>
+          <summary>Should lunch breaks be deducted from hours worked?</summary>
+          <p>Only if the break is a bona fide meal period: ordinarily 30 minutes or more and with the employee completely relieved of duty. An employee who eats at their desk while answering the phone is working. Rest breaks of 5 to 20 minutes are always paid.</p>
+        </details>
+        <details>
+          <summary>How does the calculator handle overnight shifts?</summary>
+          <p>If the out time is earlier than the in time, it treats the out time as the next day. A 22:00 to 06:00 shift is counted as eight hours.</p>
+        </details>
+        <details>
+          <summary>Does this calculator handle daily overtime?</summary>
+          <p>The second overtime option counts hours over 8 in a day as well as hours over 40 in the week and uses the larger figure, which is the basic shape of California's rule. It does not model double time or seventh-day rules, so check your state's specifics.</p>
+        </details>
+        <details>
+          <summary>Is a printed time card enough for payroll records?</summary>
+          <p>No. 29 CFR 516.2 requires the employer to keep the workweek start, daily and weekly hours, pay basis, regular rate, straight-time and overtime earnings, deductions and payment dates, for at least three years. Use the card as an input to that record, not as the record.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+          <li><a href="/blogs/timesheet-conversion-chart">Timesheet Conversion Chart</a></li>
+          <li><a href="/blogs/how-to-calculate-hours-worked">How to Calculate Hours Worked</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
