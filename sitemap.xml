@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -76,7 +76,7 @@
 
   <url>
     <loc>https://workintelhub.com/topics/employee-monitoring</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -97,7 +97,7 @@
 
   <url>
     <loc>https://workintelhub.com/topics/productivity</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -111,7 +111,7 @@
 
   <url>
     <loc>https://workintelhub.com/topics/time-tracking</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -481,7 +481,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/guides/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-15</lastmod>
   </url>
   <url>
     <loc>https://workintelhub.com/lists/</loc>
@@ -595,7 +595,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -619,7 +619,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/glossary/exempt-vs-non-exempt</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -673,7 +673,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/overtime-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -826,5 +826,41 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/no-tax-on-overtime-calculator</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/working-days-in-2027</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/federal-holidays-2027</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/connecticut-electronic-monitoring-law</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/california-ai-workplace-laws</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/self-evaluation-examples</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
