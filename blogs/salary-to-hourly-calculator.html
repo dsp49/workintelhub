@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salary to Hourly Calculator (and Hourly to Salary)</title>
+  <meta name="description" content="Convert an annual salary to an hourly rate or back, with the 2,080-hour assumption explained, overtime for non-exempt staff, and the exempt salary floor." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/salary-to-hourly-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/salary-to-hourly-calculator" />
+  <meta property="og:title" content="Salary to Hourly Calculator" />
+  <meta property="og:description" content="Convert an annual salary to an hourly rate or back, with the 2,080-hour assumption explained, overtime for non-exempt staff, and the exempt salary floor." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/salary-to-hourly-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Salary to Hourly Calculator" />
+  <meta name="twitter:description" content="Convert an annual salary to an hourly rate or back, with the 2,080-hour assumption explained, overtime for non-exempt staff, and the exempt salary floor." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/salary-to-hourly-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/salary-to-hourly-calculator#article",
+        "headline": "Salary to Hourly Calculator",
+        "description": "Convert an annual salary to an hourly rate or back, with the 2,080-hour assumption explained, overtime for non-exempt staff, and the exempt salary floor.",
+        "image": "https://workintelhub.com/images/blog/salary-to-hourly-calculator.png",
+        "datePublished": "2026-09-17T00:00:00+00:00",
+        "dateModified": "2026-09-17T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/salary-to-hourly-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/salary-to-hourly-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Salary to Hourly Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/salary-to-hourly-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I convert salary to hourly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the annual salary by the hours worked in a year. For a 40-hour week with 52 paid weeks that is 2,080 hours, so $60,000 is $28.85 an hour. Use fewer hours if the week is shorter or some weeks are unpaid."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert hourly to salary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multiply the hourly rate by hours per week and by paid weeks per year. $25 an hour for 40 hours over 52 weeks is $52,000. If overtime is regular and paid, add it separately at 1.5 times the rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is $50,000 a year hourly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "$24.04 an hour at 2,080 hours a year, which is 40 hours a week for 52 weeks. At 37.5 hours a week it is $25.64."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is $20 an hour annually?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "$41,600 a year at 40 hours a week for 52 weeks. At 30 hours a week it is $31,200."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do salaried employees get overtime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if they are non-exempt. A salaried employee is exempt from federal overtime only when paid at least $684 a week on a salary basis and their duties meet one of the exemption tests. Salary alone does not remove the right to overtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many working hours are in a year?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2,080 for a 40-hour week counted across all 52 weeks. The number of working days in a given year varies with where weekends fall; 2027 has 261 weekdays, or 2,088 hours at 8 a day before holidays."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Salary to Hourly Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 17, 2026 &middot; 7 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/salary-to-hourly-calculator.png" alt="An annual salary broken into hourly, daily, weekly and monthly figures" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A salary converts to an hourly rate by dividing it by the hours worked in a year, which for
+        a 40-hour week and 52 paid weeks is 2,080. An hourly rate converts back by multiplying.
+        The calculator does both directions and shows daily, weekly, biweekly and monthly figures
+        alongside.
+      </p>
+      <p>
+        The number most people get wrong is not the arithmetic but the hours. A salary quoted for
+        a 40-hour week that actually takes 50 is a lower hourly rate than it looks, and whether
+        those extra hours are paid at all depends on a classification rule covered below.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Salary and hourly converter</a></li>
+          <li><a href="#hours">Why 2,080, and when to use a different number</a></li>
+          <li><a href="#exempt">Whether the extra hours are paid</a></li>
+          <li><a href="#comparing">Comparing an hourly offer with a salaried one</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Salary and hourly converter</h2>
+      <div class="calc" id="sh">
+        <div class="calc__grid">
+          <div><label for="sh-mode">Convert</label><select id="sh-mode"><option value="s2h">Salary to hourly</option><option value="h2s">Hourly to salary</option></select></div>
+          <div><label for="sh-amount" id="sh-amount-label">Annual salary ($)</label><input id="sh-amount" type="number" min="0" step="0.01" value="60000"></div>
+          <div><label for="sh-hpw">Hours per week</label><input id="sh-hpw" type="number" min="1" max="80" step="0.5" value="40"></div>
+          <div><label for="sh-wpy">Paid weeks per year</label><input id="sh-wpy" type="number" min="1" max="52" step="1" value="52"></div>
+        </div>
+        <div class="calc__out" id="sh-out"></div>
+        <p class="calc__note">Fifty-two paid weeks assumes paid holidays and vacation. Enter fewer weeks for unpaid time off. The overtime line assumes a non-exempt employee paid weekly overtime at 1.5x; it does not apply to exempt salaried staff.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function money(n, d) { return "$" + n.toLocaleString("en-US", {minimumFractionDigits: d === undefined ? 2 : d, maximumFractionDigits: d === undefined ? 2 : d}); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var mode = el("sh-mode").value, amt = parseFloat(el("sh-amount").value) || 0, hpw = parseFloat(el("sh-hpw").value) || 40, wpy = parseFloat(el("sh-wpy").value) || 52;
+          el("sh-amount-label").textContent = mode === "s2h" ? "Annual salary ($)" : "Hourly rate ($)";
+          var hours = hpw * wpy, hourly, annual;
+          if (mode === "s2h") { annual = amt; hourly = hours ? amt / hours : 0; } else { hourly = amt; annual = amt * hours; }
+          var html = "";
+          html += row("Hours per year (" + hpw + " x " + wpy + ")", hours.toLocaleString("en-US"));
+          html += row("Hourly rate", money(hourly));
+          html += row("Daily (" + (hpw / 5).toFixed(1) + " h)", money(hourly * hpw / 5));
+          html += row("Weekly", money(hourly * hpw));
+          html += row("Biweekly", money(hourly * hpw * 2));
+          html += row("Monthly", money(annual / 12));
+          html += row("Annual", money(annual, 0));
+          if (hpw > 40) html += row("Of which weekly overtime hours at 1.5x, if non-exempt", (hpw - 40).toFixed(1) + " h, worth " + money(hourly * 1.5 * (hpw - 40)) + " per week");
+          var weekly = annual / 52;
+          html += row("Federal exempt salary floor (29 CFR 541.600)", "$684 a week; this salary is " + money(weekly) + " a week, " + (weekly >= 684 ? "above" : "below") + " it");
+          el("sh-out").innerHTML = html;
+        }
+        ["sh-mode", "sh-amount", "sh-hpw", "sh-wpy"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="hours">Why 2,080, and when to use a different number</h2>
+      <p>
+        Fifty-two weeks times 40 hours is 2,080, and it is the standard assumption in job offers,
+        payroll systems and most calculators. It counts every week as paid, which is right for a
+        salaried employee with paid holidays and vacation. It is wrong for anyone with unpaid time
+        off, and it is wrong as a description of hours actually worked.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Situation</th><th>Hours to use</th><th>Effect on a $60,000 salary</th></tr></thead>
+          <tbody>
+            <tr><td>Standard salaried, paid leave</td><td>2,080</td><td>$28.85 an hour</td></tr>
+            <tr><td>Two weeks unpaid leave</td><td>2,000</td><td>$30.00 an hour</td></tr>
+            <tr><td>37.5-hour week</td><td>1,950</td><td>$30.77 an hour</td></tr>
+            <tr><td>Actually working 50 hours a week</td><td>2,600</td><td>$23.08 an hour</td></tr>
+            <tr><td>Contractor, 46 billable weeks</td><td>1,840 at 40 h</td><td>$32.61 an hour before costs</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The last row is why freelancers should not price from 2,080. Unbillable time, unpaid
+        leave, and the employer costs a salary does not include all push the equivalent rate
+        higher. Our <a href="/glossary/billable-hours">billable hours</a> entry covers utilisation,
+        which is the other half of that calculation.
+      </p>
+      <h2 id="exempt">Whether the extra hours are paid</h2>
+      <p>
+        The converter assumes hours over 40 are paid at 1.5 times, which is only true for
+        non-exempt employees. Under <a href="https://www.law.cornell.edu/cfr/text/29/part-541" target="_blank" rel="noopener">29 CFR Part 541</a>, a salaried employee is exempt from overtime only if paid
+        at least $684 a week ($35,568 a year) on a salary basis <em>and</em> their duties meet one
+        of the executive, administrative, professional, computer or outside sales tests. Salary
+        alone does not make someone exempt, and a job title does not either.
+      </p>
+      <p>
+        Two consequences. A salaried employee below $684 a week is owed overtime regardless of
+        duties. And a salaried employee above it whose duties do not meet a test is also owed
+        overtime, which is the more common and more expensive error. The Department of Labor's
+        2024 rule that would have raised the threshold was struck down and was formally rescinded
+        in May 2026, so $684 remains the figure. Our
+        <a href="/glossary/exempt-vs-non-exempt">exempt versus non-exempt</a> entry covers the
+        duties tests, and the <a href="/blogs/overtime-calculator">overtime calculator</a> works
+        out what a non-exempt salaried employee is owed from the regular rate.
+      </p>
+      <h2 id="comparing">Comparing an hourly offer with a salaried one</h2>
+      <p>
+        Convert both to the same basis, then adjust for what the salary includes. Paid holidays
+        and vacation are typically worth 10 to 15 days, which is 4 to 6 per cent of the year.
+        Employer-paid health insurance, retirement matching and paid sick leave can add a further
+        20 to 30 per cent of salary in cost that an hourly contractor has to fund. And an hourly
+        non-exempt role pays for every hour, while a salaried exempt one pays the same for 40 hours
+        and 55.
+      </p>
+      <p>
+        So a $30 hourly role with no benefits and a $60,000 salary with full benefits are not
+        equivalent, even though the converter shows $28.85. For someone who reliably works 40
+        hours and takes leave, the salary is worth more. For someone who will work 50, the hourly
+        rate is, provided the overtime is actually paid. The
+        <a href="/blogs/time-and-a-half-calculator">time and a half calculator</a> shows what
+        those hours are worth.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Hourly rate is salary divided by hours per year. The standard 2,080 assumes 40 hours for 52 paid weeks.</li>
+        <li>Use actual hours for a real comparison: a $60,000 salary is $28.85 at 40 hours a week and $23.08 at 50.</li>
+        <li>Freelancers should price from billable hours, not 2,080. Unbillable time and employer costs push the equivalent rate up.</li>
+        <li>Hours over 40 are paid at 1.5x only for non-exempt employees. Exemption needs $684 a week and a duties test, not a title.</li>
+        <li>The 2024 threshold rule was rescinded in May 2026. $684 a week stands.</li>
+        <li>Paid leave and benefits are worth 25 to 35 per cent of a salary. Compare offers on total value, not the converted rate.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do I convert salary to hourly?</summary>
+          <p>Divide the annual salary by the hours worked in a year. For a 40-hour week with 52 paid weeks that is 2,080 hours, so $60,000 is $28.85 an hour. Use fewer hours if the week is shorter or some weeks are unpaid.</p>
+        </details>
+        <details>
+          <summary>How do I convert hourly to salary?</summary>
+          <p>Multiply the hourly rate by hours per week and by paid weeks per year. $25 an hour for 40 hours over 52 weeks is $52,000. If overtime is regular and paid, add it separately at 1.5 times the rate.</p>
+        </details>
+        <details>
+          <summary>What is $50,000 a year hourly?</summary>
+          <p>$24.04 an hour at 2,080 hours a year, which is 40 hours a week for 52 weeks. At 37.5 hours a week it is $25.64.</p>
+        </details>
+        <details>
+          <summary>What is $20 an hour annually?</summary>
+          <p>$41,600 a year at 40 hours a week for 52 weeks. At 30 hours a week it is $31,200.</p>
+        </details>
+        <details>
+          <summary>Do salaried employees get overtime?</summary>
+          <p>Only if they are non-exempt. A salaried employee is exempt from federal overtime only when paid at least $684 a week on a salary basis and their duties meet one of the exemption tests. Salary alone does not remove the right to overtime.</p>
+        </details>
+        <details>
+          <summary>How many working hours are in a year?</summary>
+          <p>2,080 for a 40-hour week counted across all 52 weeks. The number of working days in a given year varies with where weekends fall; 2027 has 261 weekdays, or 2,088 hours at 8 a day before holidays.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/glossary/exempt-vs-non-exempt">Exempt vs Non-Exempt Employee</a></li>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+          <li><a href="/blogs/working-days-in-2027">Working Days in 2027</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

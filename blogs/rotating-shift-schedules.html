@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotating Shift Schedules: DuPont, Panama, Pitman, 4-on-4-off</title>
+  <meta name="description" content="DuPont, Panama, Pitman and 4-on-4-off compared on hours, consecutive shifts, weekends off and overtime, with a four-team rota generator." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/rotating-shift-schedules" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/rotating-shift-schedules" />
+  <meta property="og:title" content="Rotating Shift Schedules" />
+  <meta property="og:description" content="DuPont, Panama, Pitman and 4-on-4-off compared on hours, consecutive shifts, weekends off and overtime, with a four-team rota generator." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/rotating-shift-schedules.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rotating Shift Schedules" />
+  <meta name="twitter:description" content="DuPont, Panama, Pitman and 4-on-4-off compared on hours, consecutive shifts, weekends off and overtime, with a four-team rota generator." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/rotating-shift-schedules.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/rotating-shift-schedules#article",
+        "headline": "Rotating Shift Schedules",
+        "description": "DuPont, Panama, Pitman and 4-on-4-off compared on hours, consecutive shifts, weekends off and overtime, with a four-team rota generator.",
+        "image": "https://workintelhub.com/images/blog/rotating-shift-schedules.png",
+        "datePublished": "2026-09-17T00:00:00+00:00",
+        "dateModified": "2026-09-17T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/rotating-shift-schedules"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/rotating-shift-schedules#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Rotating Shift Schedules"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/rotating-shift-schedules#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a 2-2-3 schedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 14-day pattern of two shifts on, two off, three on, two off, two on, three off, run by four teams on 12-hour shifts. It is also called the Panama schedule. Each team works seven shifts a fortnight, averaging 42 hours a week, and gets every other weekend off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the DuPont schedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 28-day rotation for four teams: four nights, three off, three days, one off, three nights, three off, four days, then seven days off. It averages 42 hours a week and gives a full week off every cycle, at the cost of one week containing six 12-hour shifts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between Pitman and Panama?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They share the 2-2-3 sequence. Panama keeps each team on the same shift, days or nights. Pitman swaps a team between days and nights every two weeks, so the full cycle is 28 days and night work is shared equally."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many hours a week is a 4-on-4-off schedule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Forty-two on average with 12-hour shifts: four shifts in every eight days is 48 hours per eight days. Individual Monday-to-Sunday weeks alternate between 48 and 36 hours, and the 48-hour weeks carry eight hours of federal overtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do 12-hour shifts mean overtime every week?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not every week, but every rota has weeks over 40 hours and those hours are overtime under federal law. Averaging across a two- or four-week cycle is not permitted for private employers. States with daily overtime add a premium to every 12-hour shift unless an alternative workweek arrangement is in place."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many teams does a 24/7 rotating schedule need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Four, for 12-hour shifts. Two teams cover each 24-hour day and two are off, which is what produces the 42-hour average. Eight-hour rotas need at least four teams as well, and usually five to keep hours near 40."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Rotating Shift Schedules</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 17, 2026 &middot; 10 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/rotating-shift-schedules.png" alt="A four-team rota grid showing day shifts, night shifts and days off across a cycle" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A rotating shift schedule covers a 24-hour operation with a fixed number of teams cycling
+        through days on, days off and, usually, day and night shifts. Four patterns account for
+        most 12-hour rotas in manufacturing, healthcare, emergency services and utilities: DuPont,
+        Panama (also called 2-2-3), Pitman and 4-on-4-off.
+      </p>
+      <p>
+        The generator below builds any of them for four teams from a start date and counts the
+        hours, the longest run of shifts and the overtime. The sections after it explain the
+        trade-offs, which mostly come down to one question: do your people want a whole week off
+        every month, or every other weekend?
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#generator">Build the rota</a></li>
+          <li><a href="#patterns">The four patterns</a></li>
+          <li><a href="#overtime">The overtime built into every 12-hour rota</a></li>
+          <li><a href="#choosing">Choosing between them</a></li>
+          <li><a href="#rules">Rules that constrain the rota</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="generator">Build the rota</h2>
+      <div class="calc" id="rs">
+        <div class="calc__grid">
+          <div><label for="rs-pattern">Pattern</label><select id="rs-pattern">
+            <option value="panama">Panama / 2-2-3 (14-day cycle)</option>
+            <option value="pitman">Pitman, day and night swap every two weeks</option>
+            <option value="dupont">DuPont (28-day cycle)</option>
+            <option value="fourfour">4 on, 4 off (8-day cycle)</option>
+          </select></div>
+          <div><label for="rs-start">Cycle starts on</label><input id="rs-start" type="date" value="2026-10-05"></div>
+          <div><label for="rs-len">Shift length (hours)</label><input id="rs-len" type="number" min="8" max="12" step="0.5" value="12"></div>
+          <div><label for="rs-weeks">Weeks to show</label><input id="rs-weeks" type="number" min="2" max="8" step="1" value="4"></div>
+          <div><label for="rs-wk">Payroll workweek starts on</label><select id="rs-wk"><option value="1">Monday</option><option value="2">Tuesday</option><option value="3" selected>Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select><p class="hint">Where the workweek starts changes which shifts fall in which week, and so the overtime</p></div>
+        </div>
+        <div class="table-scroll" style="margin-top:1rem"><table id="rs-table"></table></div>
+        <div class="calc__out" id="rs-out"></div>
+        <div class="tool-actions"><button class="btn btn-sm btn-outline" type="button" id="rs-copy">Copy Team A as text</button><button class="btn btn-sm" type="button" id="rs-print">Print</button></div>
+        <p class="calc__note">D is a day shift, N a night shift, a dash is off. Four teams are shown offset so that every day has one team on days and one on nights. Weekly hours are counted from the payroll workweek start you choose against the federal 40-hour threshold; a state daily rule would add more. Only complete workweeks in the period are counted.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        var P = {
+          panama:   {cycle: ["D","D","-","-","D","D","D","-","-","D","D","-","-","-"], teams: 4, offs: [0, 7, 0, 7], nightTeams: [2, 3]},
+          pitman:   {cycle: ["D","D","-","-","D","D","D","-","-","D","D","-","-","-","N","N","-","-","N","N","N","-","-","N","N","-","-","-"], teams: 4, offs: [0, 7, 14, 21], nightTeams: []},
+          dupont:   {cycle: ["N","N","N","N","-","-","-","D","D","D","-","N","N","N","-","-","-","D","D","D","D","-","-","-","-","-","-","-"], teams: 4, offs: [0, 7, 14, 21], nightTeams: []},
+          fourfour: {cycle: ["D","D","D","D","-","-","-","-"], teams: 4, offs: [0, 4, 0, 4], nightTeams: [2, 3]}
+        };
+        var NAMES = ["Team A", "Team B", "Team C", "Team D"];
+        function render() {
+          var p = P[el("rs-pattern").value], start = new Date(el("rs-start").value), len = parseFloat(el("rs-len").value) || 12, weeks = parseInt(el("rs-weeks").value, 10) || 4;
+          if (isNaN(start)) return;
+          var days = weeks * 7, head = "<thead><tr><th>Week</th>", rows = [], text = [], perWeek = [], maxRun = 0, wkStart = parseInt(el("rs-wk").value, 10), inWeek = false;
+          for (var t = 0; t < p.teams; t++) rows.push("<tr><th>" + NAMES[t] + "</th>");
+          var monday = new Date(start); monday.setDate(start.getDate() - ((start.getDay() + 6) % 7));
+          for (var d = 0; d < days; d++) {
+            var date = new Date(monday); date.setDate(monday.getDate() + d);
+            if (d % 7 === 0) head += "<th colspan='7' style='text-align:center'>" + date.toLocaleDateString("en-US", {month: "short", day: "numeric"}) + "</th>";
+            for (var t = 0; t < p.teams; t++) {
+              var idx = ((d - Math.round((start - monday) / 86400000) + p.offs[t]) % p.cycle.length + p.cycle.length) % p.cycle.length;
+              var v = p.cycle[idx]; if (v === "D" && p.nightTeams.indexOf(t) >= 0) v = "N";
+              if (t === 0) { if (date.getDay() === wkStart) { inWeek = true; perWeek.push(0); } if (inWeek) perWeek[perWeek.length - 1] += (v === "-" ? 0 : len); if (v !== "-") { text.push(date.toISOString().slice(0, 10) + " " + v); } }
+              rows[t] += "<td style='text-align:center;" + (v === "-" ? "color:#9aa3b2" : v === "N" ? "background:#0b46e0;color:#fff" : "background:#e8eefc") + "'>" + v + "</td>";
+            }
+          }
+          var run = 0; p.cycle.concat(p.cycle).forEach(function (v) { if (v === "-") run = 0; else { run++; if (run > maxRun) maxRun = run; } });
+          var shifts = p.cycle.filter(function (v) { return v !== "-"; }).length, avg = shifts * len / (p.cycle.length / 7);
+          el("rs-table").innerHTML = head + "</tr></thead><tbody>" + rows.map(function (r) { return r + "</tr>"; }).join("") + "</tbody>";
+          var lastFull = new Date(monday); lastFull.setDate(monday.getDate() + days - 1); if (perWeek.length && ((lastFull.getDay() - wkStart + 7) % 7) !== 6) perWeek.pop();
+          var ot = perWeek.map(function (h) { return Math.max(0, h - 40); }).reduce(function (a, b) { return a + b; }, 0);
+          el("rs-out").innerHTML = '<div class="calc__row"><span>Average hours per week</span><span>' + avg.toFixed(1) + '</span></div><div class="calc__row"><span>Team A hours by full workweek</span><span>' + perWeek.map(function (h) { return h.toFixed(0); }).join(" / ") + '</span></div><div class="calc__row"><span>Longest run of consecutive shifts</span><span>' + maxRun + '</span></div><div class="calc__row"><span>Federal overtime hours for Team A, full workweeks shown</span><span>' + ot.toFixed(0) + '</span></div>';
+          el("rs-copy").setAttribute("data-text", text.join("\n"));
+        }
+        ["rs-pattern", "rs-start", "rs-len", "rs-weeks", "rs-wk"].forEach(function (id) { el(id).addEventListener("input", render); el(id).addEventListener("change", render); });
+        el("rs-copy").addEventListener("click", function () { var t = this.getAttribute("data-text") || ""; if (navigator.clipboard) navigator.clipboard.writeText(t); this.textContent = "Copied"; var s = this; setTimeout(function () { s.textContent = "Copy Team A as text"; }, 1500); });
+        el("rs-print").addEventListener("click", function () { window.print(); });
+        render();
+      })();
+      </script>
+      <h2 id="patterns">The four patterns</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Pattern</th><th>Cycle</th><th>Sequence</th><th>Avg hours/week</th><th>Longest run</th><th>Distinctive feature</th></tr></thead>
+          <tbody>
+            <tr><td>Panama (2-2-3)</td><td>14 days</td><td>2 on, 2 off, 3 on, 2 off, 2 on, 3 off</td><td>42</td><td>3</td><td>Every other weekend off; same shift throughout</td></tr>
+            <tr><td>Pitman</td><td>28 days</td><td>Panama sequence, swapping days and nights every two weeks</td><td>42</td><td>3</td><td>Every other weekend off with rotation</td></tr>
+            <tr><td>DuPont</td><td>28 days</td><td>4 nights, 3 off, 3 days, 1 off, 3 nights, 3 off, 4 days, 7 off</td><td>42</td><td>4</td><td>Seven consecutive days off once a cycle; one 72-hour week</td></tr>
+            <tr><td>4-on-4-off</td><td>8 days</td><td>4 on, 4 off</td><td>42</td><td>4</td><td>Simplest; days off drift through the week</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        All four average 42 hours a week with 12-hour shifts, because each covers 168 hours with
+        four teams. What differs is how the hours cluster. Panama and Pitman never exceed three
+        shifts in a row and never exceed 48 in a week. DuPont concentrates work into one 72-hour
+        week and pays for it with a full week off. 4-on-4-off is the easiest to run and the
+        hardest to plan a life around, because the days off move forward through the week and only
+        line up with a weekend every few cycles.
+      </p>
+      <h2 id="overtime">The overtime built into every 12-hour rota</h2>
+      <p>
+        Under <a href="https://www.law.cornell.edu/uscode/text/29/207" target="_blank" rel="noopener">29 U.S.C. 207</a>, overtime is hours over 40 in a workweek, and every one of these patterns
+        produces weeks of 48 and weeks of 36. The 48-hour weeks carry eight hours of federal
+        overtime regardless of the 36-hour weeks either side; averaging across the cycle is not
+        permitted for private employers. The generator's overtime line counts this for Team A.
+      </p>
+      <p>
+        Three consequences. Budget the rota at roughly 42 straight-time hours plus the premium on
+        the 48-hour weeks, not at 40. Choose the workweek start day deliberately: where the
+        seven-day workweek begins changes which shifts fall in which week and can move overtime
+        from one week to another without changing the pattern. And in states with daily overtime,
+        every 12-hour shift carries four hours at a premium on top, which is why California
+        employers on 12-hour rotas generally adopt an alternative workweek schedule by employee
+        vote under Labor Code 511 to avoid it. Our
+        <a href="/blogs/time-and-a-half-calculator">time and a half calculator</a> models the
+        federal and California rules, and the
+        <a href="/glossary/shift-differential">shift differential</a> entry covers the night
+        premium most of these rotas also pay.
+      </p>
+      <h2 id="choosing">Choosing between them</h2>
+      <ul>
+        <li><strong>Pick Panama</strong> when predictability matters most: same shift, same
+        alternating weekends, never more than three in a row. It is the easiest to cover absence
+        on because the off-team is always known.</li>
+        <li><strong>Pick Pitman</strong> when nights have to be shared fairly and nobody will
+        accept a permanent night team. The cost is the day-to-night switch every two weeks, which
+        is the pattern sleep research is least kind to.</li>
+        <li><strong>Pick DuPont</strong> when the seven-day break is the retention hook, and the
+        workforce is young enough to absorb the 72-hour week. Older workforces and safety-critical
+        roles tend to move away from it.</li>
+        <li><strong>Pick 4-on-4-off</strong> for simplicity and long recovery blocks, and accept
+        that the calendar never settles. It suits people without school-age children better than
+        those with.</li>
+      </ul>
+      <p>
+        Whichever pattern, the decision that matters more is fixed versus rotating nights. Fixed
+        nights are better for sleep and worse for fairness; rotating is the reverse. Ask the teams
+        before deciding, because a rota imposed on a workforce that wanted the other one is the
+        most common reason a 12-hour schedule fails within a year.
+      </p>
+      <h2 id="rules">Rules that constrain the rota</h2>
+      <ul>
+        <li><strong>Rest between shifts.</strong> Federal law sets no minimum, but several
+        states, and most union agreements, require eight to eleven hours. The day-to-night switch
+        in Pitman and DuPont needs checking against whatever applies.</li>
+        <li><strong>Meal and rest breaks.</strong> A 12-hour shift in California carries two
+        meal periods (the second waivable) and three rest breaks. %s covers the federal position,
+        which is that rest breaks are paid and meal periods can be unpaid only if fully relieved.</li>
+        <li><strong>Predictive scheduling.</strong> Oregon and about ten cities require two weeks'
+        notice of schedules and premium pay for changes in retail, food service and hospitality.
+        A fixed rota published a cycle ahead satisfies the notice rule by construction.</li>
+        <li><strong>Recording it.</strong> A rota is a plan; the time record is what was worked.
+        The <a href="/blogs/time-card-calculator">time card calculator</a> and
+        <a href="/blogs/employee-attendance-tracking">attendance tracking guide</a> cover the
+        record side.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Four patterns cover most 12-hour rotas: Panama (2-2-3), Pitman, DuPont and 4-on-4-off. All average 42 hours a week with four teams.</li>
+        <li>Panama and Pitman cap runs at three shifts and give every other weekend off. DuPont trades a 72-hour week for seven days off. 4-on-4-off is simplest and drifts through the calendar.</li>
+        <li>Every 12-hour rota has 48-hour weeks, and each carries eight hours of federal overtime. Averaging across the cycle is not allowed.</li>
+        <li>In daily-overtime states, 12-hour shifts need an alternative workweek arrangement or every shift carries four premium hours.</li>
+        <li>Fixed versus rotating nights matters more than the pattern. Ask the teams before deciding.</li>
+        <li>Check rest-between-shifts rules, meal and rest breaks, and predictive scheduling notice where they apply.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is a 2-2-3 schedule?</summary>
+          <p>A 14-day pattern of two shifts on, two off, three on, two off, two on, three off, run by four teams on 12-hour shifts. It is also called the Panama schedule. Each team works seven shifts a fortnight, averaging 42 hours a week, and gets every other weekend off.</p>
+        </details>
+        <details>
+          <summary>What is the DuPont schedule?</summary>
+          <p>A 28-day rotation for four teams: four nights, three off, three days, one off, three nights, three off, four days, then seven days off. It averages 42 hours a week and gives a full week off every cycle, at the cost of one week containing six 12-hour shifts.</p>
+        </details>
+        <details>
+          <summary>What is the difference between Pitman and Panama?</summary>
+          <p>They share the 2-2-3 sequence. Panama keeps each team on the same shift, days or nights. Pitman swaps a team between days and nights every two weeks, so the full cycle is 28 days and night work is shared equally.</p>
+        </details>
+        <details>
+          <summary>How many hours a week is a 4-on-4-off schedule?</summary>
+          <p>Forty-two on average with 12-hour shifts: four shifts in every eight days is 48 hours per eight days. Individual Monday-to-Sunday weeks alternate between 48 and 36 hours, and the 48-hour weeks carry eight hours of federal overtime.</p>
+        </details>
+        <details>
+          <summary>Do 12-hour shifts mean overtime every week?</summary>
+          <p>Not every week, but every rota has weeks over 40 hours and those hours are overtime under federal law. Averaging across a two- or four-week cycle is not permitted for private employers. States with daily overtime add a premium to every 12-hour shift unless an alternative workweek arrangement is in place.</p>
+        </details>
+        <details>
+          <summary>How many teams does a 24/7 rotating schedule need?</summary>
+          <p>Four, for 12-hour shifts. Two teams cover each 24-hour day and two are off, which is what produces the 42-hour average. Eight-hour rotas need at least four teams as well, and usually five to keep hours near 40.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/time-and-a-half-calculator">Time and a Half Calculator</a></li>
+          <li><a href="/glossary/shift-differential">Shift Differential</a></li>
+          <li><a href="/blogs/work-schedule-template">Work Schedule Template</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

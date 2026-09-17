@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -13,6 +13,76 @@
       <link>https://workintelhub.com/</link>
     </image>
 
+    <item>
+      <title>Hours Calculator</title>
+      <link>https://workintelhub.com/blogs/hours-calculator</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/hours-calculator</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Calculate hours between two times with unpaid breaks removed, add multiple shifts, and get the answer in hours and minutes and as the decimal payroll uses.</description>
+    </item>
+    <item>
+      <title>Salary to Hourly Calculator</title>
+      <link>https://workintelhub.com/blogs/salary-to-hourly-calculator</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/salary-to-hourly-calculator</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Convert an annual salary to an hourly rate or back, with the 2,080-hour assumption explained, overtime for non-exempt staff, and the exempt salary floor.</description>
+    </item>
+    <item>
+      <title>Time and a Half Calculator</title>
+      <link>https://workintelhub.com/blogs/time-and-a-half-calculator</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/time-and-a-half-calculator</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Work out time and a half and double time pay under the federal weekly rule or California's daily and seventh-day rules.</description>
+    </item>
+    <item>
+      <title>Rotating Shift Schedules</title>
+      <link>https://workintelhub.com/blogs/rotating-shift-schedules</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/rotating-shift-schedules</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>DuPont, Panama, Pitman and 4-on-4-off compared on hours, consecutive shifts, weekends off and overtime, with a generator that builds a four-team rota.</description>
+    </item>
+    <item>
+      <title>Work Schedule Template</title>
+      <link>https://workintelhub.com/blogs/work-schedule-template</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/work-schedule-template</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>A weekly schedule builder that shows coverage gaps and overtime as you fill it, with auto-fill, plus the notice laws that apply.</description>
+    </item>
+    <item>
+      <title>Split Shift</title>
+      <link>https://workintelhub.com/blogs/split-shift</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/split-shift</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>What a split shift is, how the unpaid gap is treated under federal law, and how California's one-hour split shift premium works, with a calculator.</description>
+    </item>
+    <item>
+      <title>Employee Availability Form</title>
+      <link>https://workintelhub.com/blogs/employee-availability-form</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-availability-form</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Generate an employee availability form with weekly hours, maximum hours and fixed commitments, plus what the form should and should not ask.</description>
+    </item>
+    <item>
+      <title>Employee Absenteeism</title>
+      <link>https://workintelhub.com/blogs/employee-absenteeism</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-absenteeism</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>How to calculate the absenteeism rate and what it costs, the BLS benchmark, the Bradford factor, the causes that move the number, and the legal limits on acting on it.</description>
+    </item>
+    <item>
+      <title>Final Paycheck Laws by State</title>
+      <link>https://workintelhub.com/blogs/final-paycheck-laws-by-state</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/final-paycheck-laws-by-state</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Final paycheck deadlines for all 50 states and D.C. when fired versus resigning, whether unused vacation must be paid, and the penalties for missing the deadline.</description>
+    </item>
+    <item>
+      <title>Bereavement Leave Policy</title>
+      <link>https://workintelhub.com/blogs/bereavement-leave-policy</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/bereavement-leave-policy</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Generate a bereavement leave policy from your own terms, with the statutory floor added for the six states that mandate leave.</description>
+    </item>
     <item>
       <title>No Tax on Overtime Calculator</title>
       <link>https://workintelhub.com/blogs/no-tax-on-overtime-calculator</link>

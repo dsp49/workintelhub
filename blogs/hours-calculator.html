@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hours Calculator: Hours Between Two Times, With Breaks</title>
+  <meta name="description" content="Calculate hours between two times with unpaid breaks removed, add multiple shifts, and get the answer in hours and minutes and as the decimal payroll uses." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/hours-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/hours-calculator" />
+  <meta property="og:title" content="Hours Calculator" />
+  <meta property="og:description" content="Calculate hours between two times with unpaid breaks removed, add multiple shifts, and get the answer in hours and minutes and as the decimal payroll uses." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/hours-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-17T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hours Calculator" />
+  <meta name="twitter:description" content="Calculate hours between two times with unpaid breaks removed, add multiple shifts, and get the answer in hours and minutes and as the decimal payroll uses." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/hours-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/hours-calculator#article",
+        "headline": "Hours Calculator",
+        "description": "Calculate hours between two times with unpaid breaks removed, add multiple shifts, and get the answer in hours and minutes and as the decimal payroll uses.",
+        "image": "https://workintelhub.com/images/blog/hours-calculator.png",
+        "datePublished": "2026-09-17T00:00:00+00:00",
+        "dateModified": "2026-09-17T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/hours-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/hours-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hours Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/hours-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I calculate hours between two times?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Convert both to 24-hour time, turn each into minutes past midnight, subtract the start from the end, take off any unpaid meal break, and divide by 60. The calculator above does this for one or many shifts and shows the result in hours and minutes and as a decimal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate hours worked overnight?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If the end time is earlier than the start time, add 24 hours to the end before subtracting. A 22:00 to 06:00 shift is 06:00 plus 24 hours, minus 22:00, which is 8 hours. The calculator handles this automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert hours and minutes to decimal hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the minutes by 60 and add to the hours. 8 hours 45 minutes is 8 plus 45 divided by 60, which is 8.75. Fifteen minutes is 0.25, thirty is 0.50, and ten minutes is 0.17."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I subtract lunch from hours worked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only if it was an unpaid meal period of about 30 minutes or more during which the employee was completely relieved of duty. Working lunches and short rest breaks of 5 to 20 minutes are paid time and stay in the total."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 7.5 hours in hours and minutes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "7 hours 30 minutes. The decimal part is a fraction of an hour: 0.5 hours is 30 minutes, 0.25 is 15 minutes, and 0.75 is 45 minutes."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Hours Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 17, 2026 &middot; 6 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/hours-calculator.png" alt="A start time and an end time resolved into hours and minutes and a decimal" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Enter a start time, an end time and any unpaid break, and the calculator gives the hours
+        worked in hours and minutes and as a decimal. Add rows for more shifts and it totals them,
+        flags anything over 40 hours, and copies the result as text.
+      </p>
+      <p>
+        Below the calculator: how the arithmetic works if you need to do it by hand, which breaks
+        can be deducted and which cannot, and where to go when you need a whole week or a pay
+        figure rather than a duration.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Hours calculator</a></li>
+          <li><a href="#by-hand">Doing it by hand</a></li>
+          <li><a href="#breaks">Which breaks come off</a></li>
+          <li><a href="#common">Common shifts, already worked out</a></li>
+          <li><a href="#next">When you need more than a duration</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Hours calculator</h2>
+      <div class="calc" id="hc">
+        <table>
+          <thead><tr><th>#</th><th>Start</th><th>End</th><th>Break (min)</th><th>Hours</th></tr></thead>
+          <tbody id="hc-rows"></tbody>
+        </table>
+        <div class="tool-actions">
+          <button class="btn btn-sm btn-outline" type="button" id="hc-add">Add a row</button>
+          <button class="btn btn-sm btn-outline" type="button" id="hc-clear">Clear</button>
+          <button class="btn btn-sm btn-outline" type="button" id="hc-copy">Copy result</button>
+        </div>
+        <div class="calc__out" id="hc-out"></div>
+        <p class="calc__note">An end time earlier than the start is treated as the next day. Results show hours and minutes and the decimal that payroll uses. Nothing you enter leaves this page.</p>
+      </div>
+      <script>
+      (function () {
+        var body = document.getElementById("hc-rows"), n = 0;
+        function mins(t) { if (!t) return null; var p = t.split(":"); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+        function hm(m) { return Math.floor(m / 60) + " h " + (m % 60 < 10 ? "0" : "") + (m % 60) + " min"; }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function addRow(s, e, b) {
+          n++;
+          var tr = document.createElement("tr");
+          tr.innerHTML = '<td>' + n + '</td><td><input type="time" value="' + (s || "") + '" aria-label="Start ' + n + '"></td><td><input type="time" value="' + (e || "") + '" aria-label="End ' + n + '"></td><td><input type="number" min="0" step="1" value="' + (b || 0) + '" aria-label="Break ' + n + '"></td><td class="calc__total">0.00</td>';
+          body.appendChild(tr);
+          tr.querySelectorAll("input").forEach(function (i) { i.addEventListener("input", calc); });
+          calc();
+        }
+        function calc() {
+          var total = 0, lines = [];
+          body.querySelectorAll("tr").forEach(function (tr, i) {
+            var inp = tr.querySelectorAll("input"), a = mins(inp[0].value), b = mins(inp[1].value), br = parseFloat(inp[2].value) || 0, m = 0;
+            if (a !== null && b !== null) { if (b <= a) b += 1440; m = Math.max(0, b - a - br); }
+            tr.lastElementChild.textContent = (m / 60).toFixed(2);
+            total += m; if (m) lines.push("Row " + (i + 1) + ": " + hm(m) + " (" + (m / 60).toFixed(2) + ")");
+          });
+          var html = row("Total time", hm(total)) + row("Decimal hours", (total / 60).toFixed(2)) + row("Rounded to nearest quarter hour", (Math.round(total / 15) * 15 / 60).toFixed(2));
+          if (total > 40 * 60) html += row("Over 40 hours (federal overtime threshold)", ((total - 2400) / 60).toFixed(2) + " h");
+          document.getElementById("hc-out").innerHTML = html;
+          document.getElementById("hc-copy").setAttribute("data-text", lines.concat(["Total: " + hm(total) + " = " + (total / 60).toFixed(2) + " hours"]).join("\n"));
+        }
+        document.getElementById("hc-add").addEventListener("click", function () { addRow("", "", 0); });
+        document.getElementById("hc-clear").addEventListener("click", function () { body.innerHTML = ""; n = 0; addRow("09:00", "17:30", 30); });
+        document.getElementById("hc-copy").addEventListener("click", function () { var t = this.getAttribute("data-text") || ""; if (navigator.clipboard) navigator.clipboard.writeText(t); this.textContent = "Copied"; var self = this; setTimeout(function () { self.textContent = "Copy result"; }, 1500); });
+        addRow("09:00", "17:30", 30);
+      })();
+      </script>
+      <h2 id="by-hand">Doing it by hand</h2>
+      <ol>
+        <li>Write both times in 24-hour form. 8:15 am is 08:15; 4:45 pm is 16:45.</li>
+        <li>Convert each to minutes: hours times 60, plus minutes. 08:15 is 495; 16:45 is 1,005.</li>
+        <li>Subtract: 1,005 minus 495 is 510 minutes. If the end is smaller than the start, add
+        1,440 to the end first because the shift crossed midnight.</li>
+        <li>Remove the unpaid break: 510 minus 30 is 480.</li>
+        <li>Divide by 60: 8.00 hours. Or express it as hours and minutes: 8 h 00 min.</li>
+      </ol>
+      <p>
+        The decimal is what payroll multiplies by the rate, and it is where hand calculations go
+        wrong: 7 hours 30 minutes is 7.50, not 7.30, and 7 hours 20 minutes is 7.33. The
+        <a href="/blogs/timesheet-conversion-chart">conversion chart</a> lists every minute value,
+        and our guide to <a href="/blogs/how-to-calculate-hours-worked">calculating hours worked</a>
+        covers the method with worked examples.
+      </p>
+      <h2 id="breaks">Which breaks come off</h2>
+      <p>
+        Only unpaid, bona fide meal periods are deducted. Under <a href="https://www.law.cornell.edu/cfr/text/29/785.19" target="_blank" rel="noopener">29 CFR 785.19</a> a meal period is ordinarily 30
+        minutes or more and the employee must be completely relieved of duty; someone eating at
+        their desk while answering the phone is working. Under <a href="https://www.law.cornell.edu/cfr/text/29/785.18" target="_blank" rel="noopener">29 CFR 785.18</a>, rest breaks of 5 to 20 minutes
+        are paid and "must be counted as hours worked", so they are never entered in the break
+        column. If you are calculating for payroll and the person worked through lunch, the break
+        is zero.
+      </p>
+      <h2 id="common">Common shifts, already worked out</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Shift</th><th>Unpaid break</th><th>Hours worked</th><th>Decimal</th></tr></thead>
+          <tbody>
+            <tr><td>9:00 am to 5:00 pm</td><td>None</td><td>8 h 00 min</td><td>8.00</td></tr>
+            <tr><td>9:00 am to 5:00 pm</td><td>30 min</td><td>7 h 30 min</td><td>7.50</td></tr>
+            <tr><td>9:00 am to 5:30 pm</td><td>30 min</td><td>8 h 00 min</td><td>8.00</td></tr>
+            <tr><td>8:30 am to 5:00 pm</td><td>60 min</td><td>7 h 30 min</td><td>7.50</td></tr>
+            <tr><td>7:00 am to 3:30 pm</td><td>30 min</td><td>8 h 00 min</td><td>8.00</td></tr>
+            <tr><td>6:00 am to 6:00 pm</td><td>30 min</td><td>11 h 30 min</td><td>11.50</td></tr>
+            <tr><td>10:00 pm to 6:00 am</td><td>30 min</td><td>7 h 30 min</td><td>7.50</td></tr>
+            <tr><td>11:00 am to 2:00 pm and 5:00 pm to 10:00 pm</td><td>None (split shift)</td><td>8 h 00 min</td><td>8.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The first two rows are the most common source of dispute: "nine to five" is eight hours
+        only if lunch is paid or eaten while working. With a 30-minute unpaid lunch it is 7.5, and
+        a week of it is 37.5, not 40. Whether that lunch can be unpaid at all is the question the
+        breaks section above answers. The last row is a <a href="/blogs/split-shift">split
+        shift</a>, which in California carries a premium on top of the hours.
+      </p>
+      <h2 id="next">When you need more than a duration</h2>
+      <ul>
+        <li><strong>A whole week with rounding and overtime:</strong> the
+        <a href="/blogs/time-card-calculator">time card calculator</a>.</li>
+        <li><strong>Overtime pay from the regular rate,</strong> including bonuses and
+        differentials: the <a href="/blogs/overtime-calculator">overtime calculator</a>.</li>
+        <li><strong>A quick 1.5x or 2x figure:</strong> the
+        <a href="/blogs/time-and-a-half-calculator">time and a half calculator</a>.</li>
+        <li><strong>Working days and hours in a year:</strong> the
+        <a href="/blogs/working-days-in-2027">2027 working days page</a>.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Convert both times to minutes, subtract, remove unpaid meal breaks, divide by 60.</li>
+        <li>An end time before the start time means the shift crossed midnight: add 24 hours to the end.</li>
+        <li>Minutes are not decimals. 7 hours 30 minutes is 7.50; 7 hours 20 minutes is 7.33.</li>
+        <li>Only unpaid meal periods of about 30 minutes or more, with the employee fully relieved, are deducted. Rest breaks of 5 to 20 minutes are paid.</li>
+        <li>Over 40 hours in a workweek is overtime under federal law; some states add daily thresholds.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do I calculate hours between two times?</summary>
+          <p>Convert both to 24-hour time, turn each into minutes past midnight, subtract the start from the end, take off any unpaid meal break, and divide by 60. The calculator above does this for one or many shifts and shows the result in hours and minutes and as a decimal.</p>
+        </details>
+        <details>
+          <summary>How do I calculate hours worked overnight?</summary>
+          <p>If the end time is earlier than the start time, add 24 hours to the end before subtracting. A 22:00 to 06:00 shift is 06:00 plus 24 hours, minus 22:00, which is 8 hours. The calculator handles this automatically.</p>
+        </details>
+        <details>
+          <summary>How do I convert hours and minutes to decimal hours?</summary>
+          <p>Divide the minutes by 60 and add to the hours. 8 hours 45 minutes is 8 plus 45 divided by 60, which is 8.75. Fifteen minutes is 0.25, thirty is 0.50, and ten minutes is 0.17.</p>
+        </details>
+        <details>
+          <summary>Do I subtract lunch from hours worked?</summary>
+          <p>Only if it was an unpaid meal period of about 30 minutes or more during which the employee was completely relieved of duty. Working lunches and short rest breaks of 5 to 20 minutes are paid time and stay in the total.</p>
+        </details>
+        <details>
+          <summary>What is 7.5 hours in hours and minutes?</summary>
+          <p>7 hours 30 minutes. The decimal part is a fraction of an hour: 0.5 hours is 30 minutes, 0.25 is 15 minutes, and 0.75 is 45 minutes.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/time-card-calculator">Time Card Calculator</a></li>
+          <li><a href="/blogs/how-to-calculate-hours-worked">How to Calculate Hours Worked</a></li>
+          <li><a href="/blogs/timesheet-conversion-chart">Timesheet Conversion Chart</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
