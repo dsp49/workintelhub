@@ -24,3 +24,6 @@ research/
 
 # local note of the IndexNow key; the public key file itself is committed
 .indexnow-key
+
+# Third-party content briefs, never for the public repo
+Glossary Content/
