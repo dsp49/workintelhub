@@ -307,7 +307,8 @@
           return "see the state table";
         }
         function due(offset) {
-          var s = el("ob-last").value; if (!s) return "";
+          var s = el("ob-last").value;
+          if (!s) return offset === 0 ? "at notice" : offset === 1 ? "last day" : "within " + offset + " days";
           var d = new Date(s + "T00:00:00");
           if (offset === 0) return "at notice";
           if (offset === 1) return "last day, " + d.toLocaleDateString("en-US", {month: "short", day: "numeric"});
@@ -325,7 +326,7 @@
               var text = it[0];
               if (text.indexOf("Final paycheck") === 0) text += " (" + finalPay(st, type) + ")";
               var id = grp[0] + "-" + i, chk = !!state[id]; total++; if (chk) done++;
-              rows += '<li class="' + (chk ? "done" : "") + '"><label><input type="checkbox" data-id="' + id + '"' + (chk ? " checked" : "") + '> <span>' + text + '</span><span class="due">' + (due(it[1]) || it[3]) + '</span></label></li>';
+              rows += '<li class="' + (chk ? "done" : "") + '"><label><input type="checkbox" data-id="' + id + '"' + (chk ? " checked" : "") + '> <span>' + text + '</span><span class="due">' + due(it[1]) + '</span></label></li>';
             });
             if (rows) html += '<div class="pick-group"><h3>' + grp[1] + '</h3><ul class="chk">' + rows + '</ul></div>';
           });

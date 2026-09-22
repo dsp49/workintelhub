@@ -1006,7 +1006,7 @@ td .tool-tile { margin-right: 0.5rem; }
 .chk { list-style: none; margin: 0; padding: 0; }
 .chk li { padding: .45rem 0; border-bottom: 1px dashed var(--line); }
 .chk label { display: flex; gap: .6rem; align-items: flex-start; font-size: .92rem; cursor: pointer; }
-.chk input { margin-top: .3rem; flex: none; }
+.chk input { width: auto; margin-top: .3rem; flex: none; }
 .chk li.done label { color: var(--muted); text-decoration: line-through; }
 .chk .due { font-size: .78rem; color: var(--muted); margin-left: auto; white-space: nowrap; }
 .week { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .4rem; margin-top: 1rem; }

@@ -298,7 +298,8 @@
         var state = {}; try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
         function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
         function due(offset) {
-          var s = el("nh-start").value; if (!s) return "";
+          var s = el("nh-start").value;
+          if (!s) return offset === 0 ? "before start" : offset < 0 ? (-offset) + " days before start" : offset === 1 ? "day 1" : offset === 3 ? "within 3 business days" : "within " + offset + " days";
           var d = new Date(s + "T00:00:00");
           if (offset === 0) return "before start";
           if (offset === 1) return "day 1, " + d.toLocaleDateString("en-US", {month: "short", day: "numeric"});
@@ -315,7 +316,7 @@
               if (it[3] === "E-Verify" && ev !== "yes") return;
               if (it[0].indexOf("non-exempt staff") >= 0 && cls === "exempt") return;
               var id = grp[0] + "-" + i, chk = !!state[id]; total++; if (chk) done++;
-              rows += '<li class="' + (chk ? "done" : "") + '"><label><input type="checkbox" data-id="' + id + '"' + (chk ? " checked" : "") + '> <span>' + it[0] + '</span><span class="due">' + (due(it[1]) || it[3]) + '</span></label></li>';
+              rows += '<li class="' + (chk ? "done" : "") + '"><label><input type="checkbox" data-id="' + id + '"' + (chk ? " checked" : "") + '> <span>' + it[0] + '</span><span class="due">' + due(it[1]) + '</span></label></li>';
             });
             if (rows) html += '<div class="pick-group"><h3>' + grp[1] + '</h3><ul class="chk">' + rows + '</ul></div>';
           });
