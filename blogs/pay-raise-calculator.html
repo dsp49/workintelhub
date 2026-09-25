@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay Raise Calculator: Percent, Per Paycheck and Real Raise</title>
+  <meta name="description" content="Work out a raise as a percentage, a new salary or hourly rate and the change per paycheck, then compare it with 2026 inflation and the average raise budget." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/pay-raise-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/pay-raise-calculator" />
+  <meta property="og:title" content="Pay Raise Calculator" />
+  <meta property="og:description" content="Work out a raise as a percentage, a new salary or hourly rate and the change per paycheck, then compare it with 2026 inflation and the average raise budget." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/pay-raise-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-25T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pay Raise Calculator" />
+  <meta name="twitter:description" content="Work out a raise as a percentage, a new salary or hourly rate and the change per paycheck, then compare it with 2026 inflation and the average raise budget." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/pay-raise-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/pay-raise-calculator#article",
+        "headline": "Pay Raise Calculator",
+        "description": "Work out a raise as a percentage, a new salary or hourly rate and the change per paycheck, then compare it with 2026 inflation and the average raise budget.",
+        "image": "https://workintelhub.com/images/blog/pay-raise-calculator.png",
+        "datePublished": "2026-09-25T00:00:00+00:00",
+        "dateModified": "2026-09-25T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/pay-raise-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/pay-raise-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pay Raise Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/pay-raise-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate a pay raise percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Subtract the old pay from the new pay, divide by the old pay and multiply by 100. A move from $55,000 to $58,000 is 3,000 divided by 55,000, or 5.45 per cent. To go the other way, multiply current pay by one plus the percentage: a 4 per cent raise on $55,000 is $57,200."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a good raise in 2026?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Employers budgeted about 3.5 per cent in total for 2026 increases, with merit increases around 3.3 per cent, according to Mercer and WorldatWork surveys. Anything above 4 per cent is above average for a merit raise. Against CPI inflation of 3.4 per cent in the year to August 2026, a raise needs to exceed about 3.5 per cent to be a real gain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much of a raise will I see in my paycheck?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the annual increase by the number of pay periods, then remove tax at your marginal rate on that amount. A $2,000 raise paid bi-weekly is $76.92 before tax and roughly $54 after federal tax and FICA at the 22 per cent bracket, before state tax."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a raise push you into a higher tax bracket?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It can, but only the dollars above the bracket threshold are taxed at the higher rate. Take-home pay always rises with a raise. The exception is benefit cliffs, where higher income ends eligibility for a means-tested benefit, which is a separate calculation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is a cost-of-living raise different from a merit raise?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A cost-of-living adjustment tracks inflation, usually the CPI, and applies to everyone to preserve purchasing power. A merit raise rewards individual performance and varies by person. Most private employers give merit raises only, which is why comparing the raise with inflation matters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the best time to ask for a raise?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Before the salary budget is set, which for most employers is late summer or early autumn for the following year, or immediately after a visible result or a change in responsibilities. Bring the market range for the role and a specific figure."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Pay Raise Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 25, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/pay-raise-calculator.png" alt="A pay raise worked out as a percentage, an annual amount, a per-paycheck change and a real increase after inflation" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A pay raise is usually announced as a percentage and felt as a number on a paycheck, and
+        the distance between the two is where most confusion sits. Three per cent on $62,000 is
+        $1,860 a year, which is $71.54 per bi-weekly paycheck before tax and closer to $50 after
+        it. Whether that is a good raise depends on what prices did over the same year, which is
+        the comparison the calculator makes for you.
+      </p>
+      <p>
+        The calculator works in either direction: enter a percentage to get the new pay, or a new
+        pay to get the percentage. The rest of the page covers the arithmetic, what a typical raise
+        looks like in 2026 and against inflation, how employers set raise budgets, and how to make
+        the case for one.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Pay raise calculator</a></li>
+          <li><a href="#math">The arithmetic</a></li>
+          <li><a href="#typical">What a typical raise looks like in 2026</a></li>
+          <li><a href="#employer">How raises are decided</a></li>
+          <li><a href="#asking">Making the case for a raise</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Pay raise calculator</h2>
+      <div class="calc" id="pr">
+        <div class="calc__grid">
+          <div><label for="pr-basis">Current pay is</label><select id="pr-basis"><option value="annual">Annual salary</option><option value="hourly">Hourly rate</option></select></div>
+          <div><label for="pr-current">Current pay ($)</label><input id="pr-current" type="number" min="0" step="0.01" value="62000"></div>
+          <div><label for="pr-hours">Hours per week (hourly only)</label><input id="pr-hours" type="number" min="1" max="80" step="0.5" value="40"></div>
+          <div><label for="pr-mode">Raise given as</label><select id="pr-mode"><option value="pct">Percentage</option><option value="amt">New pay amount</option><option value="add">Amount added</option></select></div>
+          <div><label for="pr-val">Value</label><input id="pr-val" type="number" min="0" step="0.01" value="3.5"></div>
+          <div><label for="pr-freq">Pay frequency</label><select id="pr-freq"><option value="26" selected>Bi-weekly (26)</option><option value="24">Semi-monthly (24)</option><option value="52">Weekly (52)</option><option value="12">Monthly (12)</option></select></div>
+          <div><label for="pr-cpi">Inflation to compare against (%)</label><input id="pr-cpi" type="number" min="-5" max="30" step="0.1" value="3.4"><p class="hint">3.4% is the CPI-U rise for the 12 months to August 2026. Change it for your own comparison.</p></div>
+          <div><label for="pr-tax">Marginal tax rate on the extra pay (%)</label><input id="pr-tax" type="number" min="0" max="60" step="0.5" value="29.65"><p class="hint">22% federal bracket plus 7.65% FICA is 29.65; add your state rate.</p></div>
+        </div>
+        <div class="calc__out" id="pr-out"></div>
+        <p class="calc__note">A raise is stated on base pay before tax. The real raise line subtracts the inflation figure you entered; the take-home line applies the marginal rate to the increase only, which is what actually changes in the paycheck.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function n(id) { return parseFloat(el(id).value) || 0; }
+        function money(x, d) { return "$" + x.toLocaleString("en-US", {minimumFractionDigits: d, maximumFractionDigits: d}); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var hourly = el("pr-basis").value === "hourly", cur = n("pr-current"), hrs = n("pr-hours") || 40, mode = el("pr-mode").value, val = n("pr-val"), freq = parseInt(el("pr-freq").value, 10);
+          var annualCur = hourly ? cur * hrs * 52 : cur;
+          var annualNew;
+          if (mode === "pct") annualNew = annualCur * (1 + val / 100);
+          else if (mode === "amt") annualNew = hourly ? val * hrs * 52 : val;
+          else annualNew = annualCur + (hourly ? val * hrs * 52 : val);
+          var pct = annualCur ? 100 * (annualNew - annualCur) / annualCur : 0, diff = annualNew - annualCur;
+          var cpi = n("pr-cpi"), real = ((1 + pct / 100) / (1 + cpi / 100) - 1) * 100, tax = n("pr-tax") / 100;
+          var html = row("Raise", pct.toFixed(2) + "%");
+          html += row("Annual pay: before", money(annualCur, 0)); html += row("Annual pay: after", money(annualNew, 0));
+          html += row("Annual increase, before tax", money(diff, 0));
+          if (hourly) { html += row("Hourly rate: after", money(annualNew / (hrs * 52), 2)); }
+          else { html += row("Equivalent hourly rate at 40 hours (2,080 hours)", money(annualNew / 2080, 2)); }
+          html += row("Increase per paycheck, before tax", money(diff / freq, 2));
+          html += row("Increase per paycheck, after tax (estimate)", money(diff * (1 - tax) / freq, 2));
+          html += row("Real raise after " + cpi.toFixed(1) + "% inflation", real.toFixed(2) + "%" + (real < 0 ? " (a pay cut in purchasing power)" : ""));
+          html += row("Compared with the 2026 average budget (3.5%)", pct > 3.5 ? "above average" : pct < 3.5 ? "below average" : "at the average");
+          el("pr-out").innerHTML = html;
+        }
+        ["pr-basis", "pr-current", "pr-hours", "pr-mode", "pr-val", "pr-freq", "pr-cpi", "pr-tax"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="math">The arithmetic</h2>
+      <p>
+        Three formulas cover every case.
+      </p>
+      <ul>
+        <li><strong>Percentage to new pay:</strong> new pay = current pay × (1 + raise ÷ 100).
+        A 4 per cent raise on $55,000 is 55,000 × 1.04 = $57,200.</li>
+        <li><strong>New pay to percentage:</strong> raise = (new − current) ÷ current × 100.
+        From $55,000 to $58,000 is 3,000 ÷ 55,000 = 5.45 per cent.</li>
+        <li><strong>Per paycheck:</strong> annual increase ÷ number of pay periods. $2,200 a year is
+        $84.62 bi-weekly, $91.67 semi-monthly, $42.31 weekly.</li>
+      </ul>
+      <p>
+        For hourly pay, multiply the rate by scheduled hours and 52 to get the annual figure, then
+        apply the same formulas; a $0.75 raise on $20 an hour at 40 hours is 3.75 per cent and
+        $1,560 a year. Our <a href="/blogs/salary-to-hourly-calculator">salary to hourly
+        calculator</a> handles the conversion in both directions and explains the 2,080-hour
+        assumption behind it.
+      </p>
+      <p>
+        The after-tax line is an estimate. A raise is taxed at the marginal rate, the rate on the
+        last dollar earned, not the average rate on all income. For most full-time earners that is
+        the 22 per cent federal bracket plus 7.65 per cent Social Security and Medicare, then state
+        tax. A raise never pushes take-home pay down: only the dollars above a bracket threshold
+        are taxed at the higher rate.
+      </p>
+      <h2 id="typical">What a typical raise looks like in 2026</h2>
+      <p>
+        Employers set a salary increase budget each year, a percentage of total payroll to be
+        distributed across merit, promotion and adjustment increases. For 2026, <a href="https://www.mercer.com/en-us/about/newsroom/most-us-employers-plan-to-keep-2026-salary-increases-flat/" target="_blank" rel="noopener">Mercer</a> reports
+        that US employers planned total increase budgets of 3.5 per cent, with 3.3 per cent for
+        merit, essentially flat on 2025 actuals; the <a href="https://worldatwork.org/research/salary-budget-survey" target="_blank" rel="noopener">WorldatWork</a> salary budget survey of 1,774
+        organisations put the mean at 3.6 per cent. Those are averages of budgets, not of
+        individual raises: a typical distribution gives strong performers 4 to 6 per cent,
+        solid performers around 3, and some employees nothing.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Type of increase</th><th>Typical range</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Merit, meets expectations</td><td>2.5% to 3.5%</td><td>Close to the budget average</td></tr>
+            <tr><td>Merit, exceeds expectations</td><td>4% to 6%</td><td>Funded by giving less elsewhere</td></tr>
+            <tr><td>Promotion</td><td>8% to 15%</td><td>Usually to the new band's minimum or above</td></tr>
+            <tr><td>Market adjustment</td><td>Varies</td><td>Brings pay to the band when the market moved</td></tr>
+            <tr><td>Cost-of-living adjustment</td><td>Tied to CPI</td><td>Common in union contracts and government; rare elsewhere</td></tr>
+            <tr><td>Counter-offer or retention</td><td>10% to 20%</td><td>Reactive; often below what leaving would pay</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The inflation comparison decides whether a raise is a raise. The <a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a> reported the
+        all-items CPI-U up 3.4 per cent for the twelve months to August 2026. A 3.3 per cent merit
+        increase against that is a real cut of about 0.1 per cent; a 5 per cent raise is a real
+        gain of about 1.5 per cent. The calculator's real-raise line does that division, which is
+        (1 + raise) ÷ (1 + inflation) − 1 rather than a simple subtraction, though at these levels
+        the two are nearly the same.
+      </p>
+      <h2 id="employer">How raises are decided</h2>
+      <p>
+        From the employer's side a raise is a budget allocation, and the constraints are visible
+        if you know where to look. The budget is set in the autumn for the following year. It is
+        distributed by manager, often through a merit matrix that crosses performance rating with
+        position in the pay band: a high performer below the band midpoint gets the largest
+        percentage; a high performer already above it gets less, because the band caps pay for
+        the role. Promotions come from a separate pool. Market adjustments happen when a
+        benchmarking exercise finds a role has drifted below the market, which is more common now
+        that <a href="/blogs/pay-transparency-laws-by-state">pay transparency laws</a> make
+        competitors' ranges visible.
+      </p>
+      <p>
+        Two consequences follow. A raise request that arrives in November lands after the budget
+        is set, so the useful conversation happens in late summer. And a request framed as "I need
+        more" competes with everyone else's need, while a request framed as "my role is paid below
+        the market, here is the evidence" competes with the company's retention risk, which is a
+        stronger position. The <a href="/blogs/hr-metrics">HR metrics</a> page explains why
+        employers fear regretted turnover more than they resent raises.
+      </p>
+      <h2 id="asking">Making the case for a raise</h2>
+      <ol>
+        <li><strong>Know the market number.</strong> Posted ranges for the same role at comparable
+        employers, which pay transparency laws now put in job postings in fourteen states. Note
+        the range midpoint, not the top.</li>
+        <li><strong>Know your number.</strong> The percentage and the annual amount, and what it
+        costs the employer in total (add roughly 25 to 30 per cent for payroll tax and benefits).
+        Ask for a figure, not a range.</li>
+        <li><strong>Bring evidence, not effort.</strong> Results with numbers attached, responsibilities
+        added since the last review, and anything that changed the role. The
+        <a href="/blogs/self-evaluation-examples">self-evaluation examples</a> show the format.</li>
+        <li><strong>Time it.</strong> Before the budget is set, after a visible win, or at a
+        promotion. Not the week after a bad quarter.</li>
+        <li><strong>Ask about the mechanism.</strong> If the answer is no, ask what would make it
+        yes and when it will be reviewed. A dated commitment is worth more than a vague one.</li>
+        <li><strong>Consider the whole package.</strong> A title change, a one-off bonus, extra
+        leave or a training budget may be available when base pay is not, and some of them
+        compound into the next raise.</li>
+      </ol>
+      <p>
+        If the raise arrives, the <a href="/blogs/salary-to-hourly-calculator">hourly equivalent</a>
+        and the take-home change are worth knowing before the first new paycheck, if only to
+        avoid the disappointment of expecting the gross figure.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>New pay is current pay times one plus the percentage; the percentage is the difference divided by current pay. Per paycheck, divide the annual increase by the pay periods.</li>
+        <li>A raise is taxed at the marginal rate on the increase only. Take-home never falls because of a raise.</li>
+        <li>US employers budgeted about 3.5 per cent for 2026 increases, with merit around 3.3. Strong performers see 4 to 6, promotions 8 to 15.</li>
+        <li>Compare with inflation: CPI-U rose 3.4 per cent in the year to August 2026, so an average merit raise is roughly flat in real terms.</li>
+        <li>Budgets are set in the autumn and distributed through a merit matrix. Ask before the budget is fixed, with market evidence.</li>
+        <li>Frame the request as a market gap with numbers, not as need, and ask what would make a no into a yes and when.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate a pay raise percentage?</summary>
+          <p>Subtract the old pay from the new pay, divide by the old pay and multiply by 100. A move from $55,000 to $58,000 is 3,000 divided by 55,000, or 5.45 per cent. To go the other way, multiply current pay by one plus the percentage: a 4 per cent raise on $55,000 is $57,200.</p>
+        </details>
+        <details>
+          <summary>What is a good raise in 2026?</summary>
+          <p>Employers budgeted about 3.5 per cent in total for 2026 increases, with merit increases around 3.3 per cent, according to Mercer and WorldatWork surveys. Anything above 4 per cent is above average for a merit raise. Against CPI inflation of 3.4 per cent in the year to August 2026, a raise needs to exceed about 3.5 per cent to be a real gain.</p>
+        </details>
+        <details>
+          <summary>How much of a raise will I see in my paycheck?</summary>
+          <p>Divide the annual increase by the number of pay periods, then remove tax at your marginal rate on that amount. A $2,000 raise paid bi-weekly is $76.92 before tax and roughly $54 after federal tax and FICA at the 22 per cent bracket, before state tax.</p>
+        </details>
+        <details>
+          <summary>Does a raise push you into a higher tax bracket?</summary>
+          <p>It can, but only the dollars above the bracket threshold are taxed at the higher rate. Take-home pay always rises with a raise. The exception is benefit cliffs, where higher income ends eligibility for a means-tested benefit, which is a separate calculation.</p>
+        </details>
+        <details>
+          <summary>How is a cost-of-living raise different from a merit raise?</summary>
+          <p>A cost-of-living adjustment tracks inflation, usually the CPI, and applies to everyone to preserve purchasing power. A merit raise rewards individual performance and varies by person. Most private employers give merit raises only, which is why comparing the raise with inflation matters.</p>
+        </details>
+        <details>
+          <summary>When is the best time to ask for a raise?</summary>
+          <p>Before the salary budget is set, which for most employers is late summer or early autumn for the following year, or immediately after a visible result or a change in responsibilities. Bring the market range for the role and a specific figure.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/salary-to-hourly-calculator">Salary to Hourly Calculator</a></li>
+          <li><a href="/blogs/pay-transparency-laws-by-state">Pay Transparency Laws by State</a></li>
+          <li><a href="/blogs/self-evaluation-examples">Self-Evaluation Examples</a></li>
+          <li><a href="/blogs/salary-vs-hourly">Salary vs Hourly</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

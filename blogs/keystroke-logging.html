@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keystroke Logging at Work: Legality and a Notice Checker</title>
+  <meta name="description" content="What keystroke logging software records, counts versus content, the federal and state laws on employee keyloggers, what employees think, and a setup checker." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/keystroke-logging" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/keystroke-logging" />
+  <meta property="og:title" content="Keystroke Logging at Work" />
+  <meta property="og:description" content="What keystroke logging software records, counts versus content, the federal and state laws on employee keyloggers, what employees think, and a setup checker." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/keystroke-logging.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-25T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-25T00:00:00+00:00" />
+  <meta property="article:section" content="Employee Monitoring" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keystroke Logging at Work" />
+  <meta name="twitter:description" content="What keystroke logging software records, counts versus content, the federal and state laws on employee keyloggers, what employees think, and a setup checker." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/keystroke-logging.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/keystroke-logging#article",
+        "headline": "Keystroke Logging at Work",
+        "description": "What keystroke logging software records, counts versus content, the federal and state laws on employee keyloggers, what employees think, and a setup checker.",
+        "image": "https://workintelhub.com/images/blog/keystroke-logging.png",
+        "datePublished": "2026-09-25T00:00:00+00:00",
+        "dateModified": "2026-09-25T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/keystroke-logging"
+        },
+        "articleSection": "Employee Monitoring",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/keystroke-logging#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Employee Monitoring",
+            "item": "https://workintelhub.com/topics/employee-monitoring"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Keystroke Logging at Work"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/keystroke-logging#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is keystroke logging legal in the United States?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut and Delaware require written notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my employer see what I type?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut and Delaware the employer must have told you in writing; elsewhere the policy should say what is captured."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between keystroke logging and keystroke counting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Counting records the number of key presses per interval as an activity measure and is common in monitoring tools. Logging records the characters typed, which captures credentials and personal content. Counting carries low data risk and little legal exposure with notice; content logging carries both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do employers have to tell employees about keystroke logging?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defences under federal law, and covert logging removes it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is keystroke logging a biometric?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keystroke content and counts are not. Keystroke dynamics, the measurement of typing rhythm to identify or authenticate a person, is a biometric identifier under the Illinois Biometric Information Privacy Act and similar laws in Texas and Washington, which require written consent and a retention policy before collection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does keystroke logging improve productivity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behaviour and, in surveys, damages trust."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Employee Monitoring</span>
+      <h1>Keystroke Logging at Work</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 25, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/keystroke-logging.png" alt="A keystroke logging setup checked against state notice rules, device ownership and what is captured" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Keystroke logging is software that records what is typed on a computer. In employee
+        monitoring it comes in two forms that share a name and little else. Keystroke counting
+        records how many keys were pressed per minute, as an activity signal, and is a standard
+        feature of most productivity monitoring tools. Keystroke content logging records the keys
+        themselves, which means every password, every personal message and every search, and is
+        the feature that gives the category its reputation. "Bossware", the term that entered
+        general use during the pandemic, mostly means the second.
+      </p>
+      <p>
+        The checker below reads your setup against the state notice rules and the capture type.
+        The rest of the page covers what each form records, the federal and state law, what
+        employees think about it, and how to configure monitoring so that it is lawful and,
+        separately, so that it is worth having.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#checker">Keystroke logging notice checker</a></li>
+          <li><a href="#what">What it captures: counts versus content</a></li>
+          <li><a href="#law">The law: federal floor, state rules</a></li>
+          <li><a href="#employees">What employees think, and what it does to them</a></li>
+          <li><a href="#config">Configuring it so that it is lawful and useful</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="checker">Keystroke logging notice checker</h2>
+      <div class="calc" id="kl">
+        <div class="calc__grid">
+          <div><label for="kl-state">State where the employee works</label><select id="kl-state"><option value="">Choose</option></select></div>
+          <div><label for="kl-what">What the tool captures</label><select id="kl-what"><option value="counts">Keystroke counts and activity levels only</option><option value="content">Keystroke content (what is typed)</option><option value="biometric">Typing rhythm used to identify the user</option></select></div>
+          <div><label for="kl-device">Device</label><select id="kl-device"><option value="company">Company-owned</option><option value="byod">Employee-owned (BYOD)</option></select></div>
+          <div><label for="kl-notice">Notice given</label><select id="kl-notice"><option value="none">None</option><option value="policy">Written policy, not acknowledged</option><option value="ack">Written notice, acknowledged and posted</option></select></div>
+        </div>
+        <div class="calc__out" id="kl-out"></div>
+        <p class="calc__note">A first look at the notice and consent rules, not legal advice. Federal law is the floor; the state where the employee works sets the rest, and content capture on personal devices is the combination most likely to be unlawful.</p>
+      </div>
+      <script>
+      (function () {
+        var KL = [["California", "notice", "No monitoring-specific notice statute; the constitutional privacy right and Penal Code wiretap rules apply. Notice and a written policy are the practical requirement. CCPA/CPRA gives employees rights over data collected about them."], ["Connecticut", "required", "Prior written notice of the types of electronic monitoring, posted conspicuously, under General Statutes 31-48d. From 1 October 2026 the notice must also identify monitoring locations and new hires must receive a plain-language statement."], ["Delaware", "required", "Notice of monitoring of email, internet or telephone use under 19 Del. C. 705: a one-time written acknowledgment or a daily electronic notice at login."], ["Illinois", "notice", "No general monitoring notice law, but the Biometric Information Privacy Act requires written consent before collecting biometrics, which can include keystroke dynamics used to identify a person."], ["New York", "required", "Prior written notice on hiring, acknowledged in writing or electronically, and posted in a conspicuous place, under Civil Rights Law 52-c, for monitoring of telephone, email or internet use."], ["Texas", "notice", "No monitoring-specific statute; one-party consent for communications. Notice and a policy are the practical requirement."], ["Other states", "notice", "Most states have no monitoring-specific statute. All-party consent states (California, Florida, Illinois, Maryland, Massachusetts, Pennsylvania, Washington and others) apply to intercepted communications, which some courts have read to include real-time capture of messages."]];
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        var sel = el("kl-state");
+        KL.forEach(function (r) { var o = document.createElement("option"); o.value = r[0]; o.textContent = r[0]; sel.appendChild(o); });
+        function calc() {
+          var st = sel.value, what = el("kl-what").value, dev = el("kl-device").value, notice = el("kl-notice").value;
+          if (!st) { el("kl-out").innerHTML = row("Result", "Choose a state"); return; }
+          var r = null; KL.forEach(function (x) { if (x[0] === st) r = x; });
+          var html = row("State rule", r[2]);
+          var risk = [];
+          if (r[1] === "required" && notice !== "ack") risk.push("Notice is required by statute and has not been given in the required form");
+          if (what === "content") risk.push("Content capture records passwords, personal messages and health or financial details; several states treat real-time capture as interception requiring all-party consent, and it creates a data breach liability the employer did not have before");
+          if (what === "biometric") risk.push("Typing-rhythm identification is a biometric identifier in Illinois (BIPA) and under similar laws in Texas and Washington; written consent and a retention policy are required");
+          if (dev === "byod") risk.push("Logging on an employee-owned device captures personal use outside work; courts have been hostile to it and many states' computer crime laws apply");
+          if (notice === "none") risk.push("No notice: in every state this removes the employer's main defence and in New York, Connecticut and Delaware it is a statutory violation");
+          html += row("Reading", risk.length ? "Not defensible as configured" : (what === "counts" && dev === "company" && notice === "ack" ? "Defensible: activity-level data on company devices with acknowledged notice" : "Defensible with the conditions in the state rule met"));
+          risk.forEach(function (x, i) { html += row("Issue " + (i + 1), x); });
+          html += row("Minimum to fix", "Written notice acknowledged at hire and posted; policy stating what is captured, who sees it, how long it is kept; company devices only; counts not content; no capture in password fields or personal accounts");
+          el("kl-out").innerHTML = html;
+        }
+        ["kl-state", "kl-what", "kl-device", "kl-notice"].forEach(function (id) { el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="what">What it captures: counts versus content</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th></th><th>Keystroke counts</th><th>Keystroke content</th></tr></thead>
+          <tbody>
+            <tr><td>What is stored</td><td>Number of key presses per interval, often with mouse activity, as an activity score</td><td>The characters typed, sometimes with the window and timestamp</td></tr>
+            <tr><td>What it can show</td><td>Whether someone was typing, and roughly how much</td><td>What they wrote, including passwords, card numbers, medical and personal messages</td></tr>
+            <tr><td>What it cannot show</td><td>What was typed, whether it was work, whether it was any good</td><td>Whether it was any good</td></tr>
+            <tr><td>Typical use</td><td>Idle detection, activity reports, timesheet validation</td><td>Investigations, data loss prevention, covert surveillance</td></tr>
+            <tr><td>Data risk</td><td>Low</td><td>High: a store of credentials and personal data that must be secured and that a breach exposes</td></tr>
+            <tr><td>Common in</td><td>Most productivity monitoring tools</td><td>Security and investigation tools; some monitoring products as an optional module</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A third variant, keystroke dynamics, measures typing rhythm to identify or authenticate the
+        user. It is a biometric under Illinois law and similar statutes, with its own consent
+        rules, and is covered below. Our guides to <a href="/blogs/computer-monitoring-explained">what
+        computer monitoring is</a> and <a href="/blogs/user-activity-monitoring">user activity
+        monitoring</a> place keystroke capture among the other things these tools collect, and the
+        <a href="/tools/best-employee-monitoring-software">software comparison</a> notes which
+        products offer it.
+      </p>
+      <h2 id="law">The law: federal floor, state rules</h2>
+      <p>
+        Federally, the Electronic Communications Privacy Act, <a href="https://www.law.cornell.edu/uscode/text/18/2511" target="_blank" rel="noopener">18 U.S.C. 2511</a>, prohibits intercepting
+        electronic communications, with two exceptions employers rely on: consent, and the
+        "ordinary course of business" use of the employer's own equipment. Keystroke logging on a
+        company computer with notice and a policy generally falls inside the exceptions;
+        keystroke logging without notice, or on a personal device, or of personal accounts, has
+        produced findings of liability, and a small number of criminal prosecutions where the
+        logging was covert. Penalties under the statute run to $250,000 in fines and five years'
+        imprisonment for wilful violations, plus civil damages.
+      </p>
+      <p>
+        States add notice requirements and consent rules.
+      </p>
+      <ul>
+        <li><strong>New York.</strong> <a href="https://www.nysenate.gov/legislation/laws/CVR/52-C*2" target="_blank" rel="noopener">New York Civil Rights Law 52-c</a> requires prior written notice on hiring, acknowledged
+        by the employee, and a posted notice, for any monitoring of telephone, email or internet
+        use. Penalties of $500, $1,000 and $3,000 for successive violations.</li>
+        <li><strong>Connecticut.</strong> <a href="https://law.justia.com/codes/connecticut/title-31/chapter-557/section-31-48d/" target="_blank" rel="noopener">Connecticut General Statutes 31-48d</a> requires prior written notice of the types of
+        monitoring and a posted notice; from 1 October 2026 the notice must identify monitoring
+        locations and new hires must receive a plain-language statement of what may be monitored.
+        Our <a href="/blogs/connecticut-electronic-monitoring-law">Connecticut guide</a> covers
+        the change.</li>
+        <li><strong>Delaware.</strong> <a href="https://delcode.delaware.gov/title19/c007/sc01/index.html" target="_blank" rel="noopener">19 Del. C. 705</a> requires either a one-time acknowledged notice or a
+        daily electronic notice at login for monitoring of email, internet or telephone use.</li>
+        <li><strong>All-party consent states.</strong> California, Florida, Illinois, Maryland,
+        Massachusetts, Pennsylvania, Washington and others require every party's consent to
+        intercept a communication. Real-time capture of a message as it is typed has been argued
+        to be interception, which makes content logging of chat and email riskier in those states
+        than counting is.</li>
+        <li><strong>Biometrics.</strong> Illinois's Biometric Information Privacy Act requires
+        written consent and a public retention policy before collecting a biometric identifier,
+        and typing rhythm used for identification can be one. Texas and Washington have similar
+        statutes with agency rather than private enforcement.</li>
+      </ul>
+      <p>
+        The <a href="/blogs/employee-monitoring-laws-by-state">state-by-state monitoring law
+        guide</a> has the full picture, and the
+        <a href="/blogs/employee-monitoring-policy-template">policy template</a> and
+        <a href="/blogs/employee-monitoring-consent-form">consent form</a> are the documents the
+        notice rules require.
+      </p>
+      <h2 id="employees">What employees think, and what it does to them</h2>
+      <p>
+        <a href="https://www.pewresearch.org/internet/2023/04/20/ai-in-hiring-and-evaluating-workers-what-americans-think/" target="_blank" rel="noopener">Pew Research Center</a> asked US adults in 2023 about specific monitoring practices. Fifty-one per cent
+        opposed employers recording what workers do on their computers, and 61 per cent opposed
+        tracking workers' movements; recording keystrokes was not asked separately but sits inside
+        the first figure at its most intrusive end. The site's
+        <a href="/blogs/employee-monitoring-statistics">monitoring statistics</a> page collects
+        the surveys that have asked since; the pattern is consistent, with opposition strongest
+        among the youngest workers.
+      </p>
+      <p>
+        The behavioural effect is the practical problem. A keystroke count that feeds an activity
+        score rewards typing, and people who are scored on typing type: the mouse-jiggler and
+        the keyboard-tapping script are the products of exactly this measurement. Thinking,
+        reading, a phone call with a customer and a whiteboard session all score zero. A tool that
+        measures activity has to be configured so that the activity is not the target, which
+        usually means the counts are used for idle detection and nothing else, and the
+        <a href="/blogs/privacy-line-what-never-to-track">line on what is never tracked</a> is
+        written down before the tool is installed.
+      </p>
+      <h2 id="config">Configuring it so that it is lawful and useful</h2>
+      <ol>
+        <li><strong>Decide the question first.</strong> If it is "are hours accurate", counts
+        plus idle detection answer it. If it is "who leaked the file", that is an investigation
+        with its own process and a security tool, not a workforce-wide keylogger.</li>
+        <li><strong>Counts, not content.</strong> Switch content capture off at the account level
+        and confirm in writing with the vendor that it is off and cannot be enabled by a
+        manager.</li>
+        <li><strong>Company devices only.</strong> No agents on personal phones or laptops. Where
+        staff use their own devices, monitoring stops at the company account boundary.</li>
+        <li><strong>Exclude what should never be captured.</strong> Password fields, personal
+        email and banking sites, health portals, and the lunch break. Most tools support
+        exclusion lists; a tool that does not is the wrong tool.</li>
+        <li><strong>Give notice properly.</strong> Written, at hire, acknowledged, posted, and
+        specific about what is captured, who can see it, how long it is kept and what decisions
+        it may inform. This is the law in three states and the defence everywhere.</li>
+        <li><strong>Restrict access and retention.</strong> Named viewers, a short retention
+        period, deletion on schedule, and a log of who looked at what.</li>
+        <li><strong>Never use it as the sole basis for a decision.</strong> An activity score is
+        a prompt for a conversation. The
+        <a href="/blogs/ethical-employee-monitoring-playbook">ethical monitoring playbook</a>
+        sets out the process around it.</li>
+      </ol>
+      <p>
+        Configured this way, keystroke data is a modest signal that a timesheet is roughly right.
+        Configured the other way, it is a store of every password in the company, collected
+        without consent in states that require it, feeding a score that rewards the wrong thing.
+        The difference is settings, and the settings are decided before installation or not at all.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Keystroke counting records how much was typed; keystroke content logging records what. The first is an activity signal, the second is a store of passwords and personal data.</li>
+        <li>Federal law permits monitoring on company systems with notice and a business purpose. Covert logging, personal devices and personal accounts are where liability starts.</li>
+        <li>New York, Connecticut and Delaware require written notice by statute; all-party consent states make real-time content capture riskier; Illinois treats typing rhythm as a biometric.</li>
+        <li>About half of US adults oppose recording what workers do on their computers, and activity scores based on typing reward typing, not work.</li>
+        <li>Configure for counts not content, company devices only, exclusion lists, acknowledged notice, restricted access and short retention.</li>
+        <li>Never make a decision on an activity score alone.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>Is keystroke logging legal in the United States?</summary>
+          <p>On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut and Delaware require written notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability.</p>
+        </details>
+        <details>
+          <summary>Can my employer see what I type?</summary>
+          <p>If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut and Delaware the employer must have told you in writing; elsewhere the policy should say what is captured.</p>
+        </details>
+        <details>
+          <summary>What is the difference between keystroke logging and keystroke counting?</summary>
+          <p>Counting records the number of key presses per interval as an activity measure and is common in monitoring tools. Logging records the characters typed, which captures credentials and personal content. Counting carries low data risk and little legal exposure with notice; content logging carries both.</p>
+        </details>
+        <details>
+          <summary>Do employers have to tell employees about keystroke logging?</summary>
+          <p>By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defences under federal law, and covert logging removes it.</p>
+        </details>
+        <details>
+          <summary>Is keystroke logging a biometric?</summary>
+          <p>Keystroke content and counts are not. Keystroke dynamics, the measurement of typing rhythm to identify or authenticate a person, is a biometric identifier under the Illinois Biometric Information Privacy Act and similar laws in Texas and Washington, which require written consent and a retention policy before collection.</p>
+        </details>
+        <details>
+          <summary>Does keystroke logging improve productivity?</summary>
+          <p>Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behaviour and, in surveys, damages trust.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/employee-monitoring-laws-by-state">Employee Monitoring Laws by State</a></li>
+          <li><a href="/blogs/computer-monitoring-explained">What Computer Monitoring Actually Is</a></li>
+          <li><a href="/blogs/employee-monitoring-policy-template">Employee Monitoring Policy Template</a></li>
+          <li><a href="/blogs/privacy-line-what-never-to-track">The Privacy Line: What Never to Track</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
