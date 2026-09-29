@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hours and Minutes Calculator: Add, Subtract and Convert</title>
+  <meta name="description" content="Add and subtract hours and minutes, find the time between two clock times with a break removed, and convert between h:mm and decimal hours, with payroll rounding." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/hours-and-minutes-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/hours-and-minutes-calculator" />
+  <meta property="og:title" content="Hours and Minutes Calculator" />
+  <meta property="og:description" content="Add and subtract hours and minutes, find the time between two clock times with a break removed, and convert between h:mm and decimal hours, with payroll rounding." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/hours-and-minutes-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-29T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-09-29T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hours and Minutes Calculator" />
+  <meta name="twitter:description" content="Add and subtract hours and minutes, find the time between two clock times with a break removed, and convert between h:mm and decimal hours, with payroll rounding." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/hours-and-minutes-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/hours-and-minutes-calculator#article",
+        "headline": "Hours and Minutes Calculator",
+        "description": "Add and subtract hours and minutes, find the time between two clock times with a break removed, and convert between h:mm and decimal hours, with payroll rounding.",
+        "image": "https://workintelhub.com/images/blog/hours-and-minutes-calculator.png",
+        "datePublished": "2026-09-29T00:00:00+00:00",
+        "dateModified": "2026-09-29T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/hours-and-minutes-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/hours-and-minutes-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hours and Minutes Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/hours-and-minutes-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you add hours and minutes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Add the hours together and the minutes together, then convert every 60 minutes of the minute total into an hour. 1:45 plus 2:30 is 3 hours and 75 minutes, which is 4 hours 15 minutes. The calculator on this page does it for any number of entries."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you convert hours and minutes to decimal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide the minutes by 60 and add the result to the hours. 7 hours 45 minutes is 7 plus 0.75, so 7.75. Going the other way, multiply the decimal fraction by 60: 0.4 hours is 24 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does 7.45 not equal 7 hours 45 minutes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because 0.45 of an hour is 27 minutes. Decimal hours split the hour into 100 parts; clock time splits it into 60. Payroll uses decimal hours, so a timesheet written as 7:45 must be entered as 7.75."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate hours worked between two times?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Turn each time into minutes since midnight, subtract the start from the end, add 1,440 if the shift crossed midnight, then subtract the unpaid break. 8:30 a.m. to 5:15 p.m. with a 30-minute break is 8 hours 15 minutes, or 8.25."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an employer round hours to the nearest quarter hour?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under federal rules, yes, if the rounding is neutral over time: minutes 1 to 7 round down and 8 to 14 round up. Several states and courts have limited the practice where exact records exist, so most employers now pay to the minute."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Hours and Minutes Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">September 29, 2026 &middot; 6 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/hours-and-minutes-calculator.png" alt="A calculator adding a list of hours and minutes and showing the total in h:mm and decimal" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Adding hours and minutes goes wrong for one reason: minutes are base 60 and calculators
+        are base 10. Type 1.45 plus 2.30 into a phone and it says 3.75; the real answer is 4 hours
+        15 minutes, which is 4.25 in the decimal hours a payroll system wants. The calculator
+        below adds any list of durations, subtracts one from another, finds the time between two
+        clock times with a break removed, and converts either way, so the base-60 arithmetic
+        never has to be done by hand.
+      </p>
+      <p>
+        The rest of the page shows the method for doing it by hand when needed, the minutes-to-decimal
+        table, and the rounding rule US payroll is allowed to apply.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Hours and minutes calculator</a></li>
+          <li><a href="#method">Doing it by hand</a></li>
+          <li><a href="#table">Minutes to decimal hours</a></li>
+          <li><a href="#rounding">Rounding, and what payroll may do</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Hours and minutes calculator</h2>
+      <div class="calc" id="hm">
+        <div class="calc__grid">
+          <div><label for="hm-mode">Operation</label><select id="hm-mode"><option value="add">Add durations</option><option value="sub">Subtract a duration</option><option value="between">Time between two clock times</option><option value="dec">Convert hours:minutes to decimal, or back</option></select></div>
+        </div>
+        <div id="hm-add" class="calc__grid">
+          <div style="grid-column: 1 / -1"><label for="hm-list">Durations, one per line, as h:mm or hours and minutes (e.g. 1:45, 0:30, 2h 10m)</label><textarea id="hm-list" style="min-height:90px">1:45
+0:30
+2:10
+3:05</textarea></div>
+        </div>
+        <div id="hm-sub" class="calc__grid" hidden>
+          <div><label for="hm-a">From (h:mm)</label><input id="hm-a" type="text" value="8:00" maxlength="9"></div>
+          <div><label for="hm-b">Subtract (h:mm)</label><input id="hm-b" type="text" value="0:45" maxlength="9"></div>
+        </div>
+        <div id="hm-between" class="calc__grid" hidden>
+          <div><label for="hm-s">Start time</label><input id="hm-s" type="time" value="08:30"></div>
+          <div><label for="hm-e">End time</label><input id="hm-e" type="time" value="17:15"></div>
+          <div><label for="hm-br">Unpaid break (minutes)</label><input id="hm-br" type="number" min="0" step="1" value="30"></div>
+        </div>
+        <div id="hm-dec" class="calc__grid" hidden>
+          <div><label for="hm-d1">Hours:minutes</label><input id="hm-d1" type="text" value="7:45" maxlength="9"></div>
+          <div><label for="hm-d2">or decimal hours</label><input id="hm-d2" type="number" step="0.01" placeholder="7.75"></div>
+        </div>
+        <div class="calc__out" id="hm-out"></div>
+        <p class="calc__note">Minutes are base 60, so 7:45 is 7.75 hours, not 7.45. Payroll systems use decimal hours; timesheets are usually written in hours and minutes; this converts between the two and adds either.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function parse(s) {
+          s = String(s).trim().toLowerCase(); if (!s) return null;
+          var m = s.match(/^(-?)(\d+):(\d{1,2})$/); if (m) return (m[1] ? -1 : 1) * (parseInt(m[2], 10) * 60 + parseInt(m[3], 10));
+          var h = s.match(/(\d+(?:\.\d+)?)\s*h/), mm = s.match(/(\d+)\s*m/);
+          if (h || mm) return Math.round((h ? parseFloat(h[1]) : 0) * 60 + (mm ? parseInt(mm[1], 10) : 0));
+          if (/^\d+(?:\.\d+)?$/.test(s)) return Math.round(parseFloat(s) * 60);
+          return null;
+        }
+        function fmt(m) { var sign = m < 0 ? "-" : ""; m = Math.abs(m); return sign + Math.floor(m / 60) + ":" + ("0" + (m % 60)).slice(-2); }
+        function dec(m) { return (m / 60).toFixed(2); }
+        function calc() {
+          var mode = el("hm-mode").value;
+          ["add", "sub", "between", "dec"].forEach(function (k) { el("hm-" + k).hidden = k !== mode; });
+          var html = "";
+          if (mode === "add") {
+            var lines = el("hm-list").value.split("\n").map(parse).filter(function (x) { return x !== null; });
+            var total = lines.reduce(function (a, b) { return a + b; }, 0);
+            html = row("Durations counted", lines.length) + row("Total", fmt(total) + " (" + dec(total) + " hours)") + row("Average", lines.length ? fmt(Math.round(total / lines.length)) : "0:00");
+            if (total > 2400) html += row("Over 40 hours by", fmt(total - 2400) + " (overtime if in one workweek)");
+          } else if (mode === "sub") {
+            var a = parse(el("hm-a").value), b = parse(el("hm-b").value);
+            html = (a === null || b === null) ? row("Result", "Enter times as h:mm") : row("Result", fmt(a - b) + " (" + dec(a - b) + " hours)");
+          } else if (mode === "between") {
+            var s = el("hm-s").value, e = el("hm-e").value;
+            if (s && e) { var sm = parse(s), em = parse(e); var d = em - sm; if (d < 0) d += 1440; var br = parseInt(el("hm-br").value, 10) || 0; html = row("Elapsed", fmt(d) + (em < sm ? " (crosses midnight)" : "")) + row("Less break", fmt(br)) + row("Hours worked", fmt(d - br) + " (" + dec(d - br) + " hours)"); }
+          } else {
+            var d1 = parse(el("hm-d1").value), d2 = parseFloat(el("hm-d2").value);
+            if (!isNaN(d2)) html = row(d2 + " decimal hours", fmt(Math.round(d2 * 60)) + " in hours and minutes");
+            else if (d1 !== null) html = row(fmt(d1) + " in decimal", dec(d1) + " hours") + row("Rounded to quarter hour (7/8 rule)", (Math.round(d1 / 15) * 15 / 60).toFixed(2) + " hours");
+          }
+          el("hm-out").innerHTML = html;
+        }
+        ["hm-mode", "hm-list", "hm-a", "hm-b", "hm-s", "hm-e", "hm-br", "hm-d1"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        el("hm-d2").addEventListener("input", function () { el("hm-d1").value = ""; calc(); });
+        el("hm-d1").addEventListener("input", function () { el("hm-d2").value = ""; calc(); });
+        calc();
+      })();
+      </script>
+      <h2 id="method">Doing it by hand</h2>
+      <p>
+        <strong>Adding.</strong> Add the hours and the minutes separately, then carry every 60
+        minutes into an hour. 1:45 + 2:30 + 0:50 is 3 hours and 125 minutes; 125 minutes is 2
+        hours 5 minutes; total 5:05.
+      </p>
+      <p>
+        <strong>Subtracting.</strong> If the minutes being subtracted are larger than the minutes
+        you have, borrow an hour as 60 minutes. 8:00 − 0:45: borrow to make 7:60, subtract to get
+        7:15.
+      </p>
+      <p>
+        <strong>Between two clock times.</strong> Convert both to minutes since midnight, subtract,
+        add 1,440 if the result is negative (the shift crossed midnight), then remove any unpaid
+        break. 8:30 a.m. to 5:15 p.m. is 510 to 1,035 minutes, a difference of 525, less a 30-minute
+        break is 495 minutes, which is 8:15 or 8.25 hours.
+      </p>
+      <p>
+        <strong>To decimal.</strong> Divide the minutes by 60 and add to the hours: 7:45 is
+        7 + 45 ÷ 60 = 7.75. <strong>From decimal,</strong> multiply the fraction by 60: 0.4 hours is
+        24 minutes. The <a href="/blogs/timesheet-conversion-chart">conversion chart</a> lists
+        every minute value, and the <a href="/blogs/hours-calculator">hours calculator</a> handles
+        several shifts at once.
+      </p>
+      <h2 id="table">Minutes to decimal hours</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Minutes</th><th>Decimal</th><th>Minutes</th><th>Decimal</th><th>Minutes</th><th>Decimal</th></tr></thead>
+          <tbody>
+            <tr><td>5</td><td>0.08</td><td>25</td><td>0.42</td><td>45</td><td>0.75</td></tr>
+            <tr><td>10</td><td>0.17</td><td>30</td><td>0.50</td><td>50</td><td>0.83</td></tr>
+            <tr><td>15</td><td>0.25</td><td>35</td><td>0.58</td><td>55</td><td>0.92</td></tr>
+            <tr><td>20</td><td>0.33</td><td>40</td><td>0.67</td><td>60</td><td>1.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Two decimals is the payroll convention. A third decimal changes pay by fractions of a cent
+        per hour and is not worth the disagreement it causes on a printed timesheet.
+      </p>
+      <h2 id="rounding">Rounding, and what payroll may do</h2>
+      <p>
+        Federal regulations at <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> allow employers to round recorded time to the nearest five
+        minutes, tenth of an hour or quarter hour, provided the rounding does not, over time,
+        favour the employer. The quarter-hour rule is the common one: minutes 1 to 7 round down to
+        the previous quarter, 8 to 14 round up to the next, which is why it is called the 7/8
+        rule. A clock-in at 8:07 rounds to 8:00; at 8:08 it rounds to 8:15. The rounding has to
+        be applied evenly to arrivals and departures, and several states and recent court
+        decisions have narrowed the practice where accurate records exist, so rounding is now more
+        defensible as an exception than as a policy.
+      </p>
+      <p>
+        The calculator's decimal mode shows the quarter-hour rounded figure alongside the exact
+        one. Where the exact figure is available, use it; the
+        <a href="/blogs/time-card-calculator">time card calculator</a> works in exact minutes and
+        applies overtime at the workweek level, which is where the rounding question usually ends
+        up.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Minutes are base 60: 7:45 is 7.75 decimal hours, and adding h:mm on a normal calculator gives the wrong answer.</li>
+        <li>Add hours and minutes separately and carry every 60 minutes; borrow 60 minutes when subtracting.</li>
+        <li>Time between two clock times: convert to minutes since midnight, subtract, add 1,440 across midnight, remove the unpaid break.</li>
+        <li>Divide minutes by 60 for decimal; multiply the decimal fraction by 60 for minutes. Two decimals is the payroll convention.</li>
+        <li>Rounding to the quarter hour is allowed under federal rules only where it is neutral over time; use exact minutes where they exist.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you add hours and minutes?</summary>
+          <p>Add the hours together and the minutes together, then convert every 60 minutes of the minute total into an hour. 1:45 plus 2:30 is 3 hours and 75 minutes, which is 4 hours 15 minutes. The calculator on this page does it for any number of entries.</p>
+        </details>
+        <details>
+          <summary>How do you convert hours and minutes to decimal?</summary>
+          <p>Divide the minutes by 60 and add the result to the hours. 7 hours 45 minutes is 7 plus 0.75, so 7.75. Going the other way, multiply the decimal fraction by 60: 0.4 hours is 24 minutes.</p>
+        </details>
+        <details>
+          <summary>Why does 7.45 not equal 7 hours 45 minutes?</summary>
+          <p>Because 0.45 of an hour is 27 minutes. Decimal hours split the hour into 100 parts; clock time splits it into 60. Payroll uses decimal hours, so a timesheet written as 7:45 must be entered as 7.75.</p>
+        </details>
+        <details>
+          <summary>How do you calculate hours worked between two times?</summary>
+          <p>Turn each time into minutes since midnight, subtract the start from the end, add 1,440 if the shift crossed midnight, then subtract the unpaid break. 8:30 a.m. to 5:15 p.m. with a 30-minute break is 8 hours 15 minutes, or 8.25.</p>
+        </details>
+        <details>
+          <summary>Can an employer round hours to the nearest quarter hour?</summary>
+          <p>Under federal rules, yes, if the rounding is neutral over time: minutes 1 to 7 round down and 8 to 14 round up. Several states and courts have limited the practice where exact records exist, so most employers now pay to the minute.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/hours-calculator">Work Hours Calculator</a></li>
+          <li><a href="/blogs/timesheet-conversion-chart">Timesheet Conversion Chart</a></li>
+          <li><a href="/blogs/time-card-calculator">Time Card and Timesheet Calculator</a></li>
+          <li><a href="/blogs/military-time-chart">Military Time Chart</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
