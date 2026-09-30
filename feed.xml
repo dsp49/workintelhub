@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -13,6 +13,13 @@
       <link>https://workintelhub.com/</link>
     </image>
 
+    <item>
+      <title>Timesheet Memes</title>
+      <link>https://workintelhub.com/blogs/timesheet-memes</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/timesheet-memes</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Fifty-six original timesheet memes about Friday reminders, filling it in from memory, rounding, billable hours and payroll, plus a meme maker and the fixes for late sheets.</description>
+    </item>
     <item>
       <title>How to Stop Procrastinating</title>
       <link>https://workintelhub.com/blogs/how-to-stop-procrastinating</link>
