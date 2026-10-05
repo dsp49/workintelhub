@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Batching: How It Works, What to Batch, and a Planner</title>
+  <meta name="description" content="Task batching groups similar work into single blocks so you switch less. The research on switching costs, what batches well, a planner for the blocks, and limits." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/task-batching" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/task-batching" />
+  <meta property="og:title" content="Task Batching" />
+  <meta property="og:description" content="Task batching groups similar work into single blocks so you switch less. The research on switching costs, what batches well, a planner for the blocks, and limits." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/task-batching.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Task Batching" />
+  <meta name="twitter:description" content="Task batching groups similar work into single blocks so you switch less. The research on switching costs, what batches well, a planner for the blocks, and limits." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/task-batching.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20260930" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/task-batching#article",
+        "headline": "Task Batching",
+        "description": "Task batching groups similar work into single blocks so you switch less. The research on switching costs, what batches well, a planner for the blocks, and limits.",
+        "image": "https://workintelhub.com/images/blog/task-batching.png",
+        "datePublished": "2026-10-05T00:00:00+00:00",
+        "dateModified": "2026-10-05T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/task-batching"
+        },
+        "articleSection": "Productivity",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/task-batching#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Productivity",
+            "item": "https://workintelhub.com/topics/productivity"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Task Batching"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/task-batching#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is task batching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Grouping similar tasks and doing them together in one block of time instead of spreading them through the day: all the email at set times, all the calls together, all the approvals in one sitting. It reduces the number of switches between kinds of work, each of which costs time to reload the context."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does task batching actually improve productivity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The research on task switching says yes for the switches it removes: every switch carries a measurable cost that grows with task complexity, and a scattered day contains dozens. The saving is largest for people with many small, similar tasks and smallest for people whose job is responsiveness. It does not make the tasks themselves shorter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What tasks should I batch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Email and chat replies, phone calls, approvals and admin, reviews, errands, and planning. Each uses one tool or one frame of mind. Deep work such as writing is batched in the sense of being done in one protected block first thing. Tasks with deadlines inside the batch window, on-call work, and dissimilar creative tasks should not be batched together."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I check email if I batch it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Two or three fixed times a day for most office roles, announced to colleagues with another route for genuine emergencies. Once a day is too rare if people are waiting on replies. The interval should be the longest that does not make other people's work late."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between task batching and time blocking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Time blocking assigns tasks to calendar blocks; task batching decides which tasks share a block, by similarity. Batching is a way of filling time blocks. Most people use both: the week is blocked, and the blocks for communication and admin are batches."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Task Batching</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">October 5, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/task-batching.png" alt="A day planned as batches of similar tasks with start times and the number of switches saved" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Task batching is doing similar tasks together in one block instead of scattering them
+        through the day: all the email at 11 and 4, all the calls after lunch, all the approvals
+        on Friday morning. The idea is old, it is how factories and kitchens have always worked,
+        and it applies to knowledge work for one reason: every switch between kinds of work costs
+        time to reload the context, and a day of scattered small tasks pays that cost dozens of
+        times. Batching pays it once per batch.
+      </p>
+      <p>
+        The planner below groups a pasted task list into batches, schedules them back to back and
+        counts the switches saved. The rest of the page covers the research on why switching is
+        expensive, which tasks batch well and which do not, how to set up the day, and the point
+        at which batching turns into procrastination with a system.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#planner">Task batching planner</a></li>
+          <li><a href="#why">Why batching works</a></li>
+          <li><a href="#what">What batches well, and what does not</a></li>
+          <li><a href="#setup">Setting up the day</a></li>
+          <li><a href="#limits">When batching becomes avoidance</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="planner">Task batching planner</h2>
+      <div class="calc" id="tb">
+        <div class="calc__grid">
+          <div style="grid-column: 1 / -1"><label for="tb-list">Tasks, one per line: task | category | minutes (categories: email, calls, admin, writing, review, errands, planning, or your own)</label><textarea id="tb-list" style="min-height:140px">Reply to the three vendor emails | email | 20
+Call the recruiter back | calls | 15
+Approve last week's expenses | admin | 10
+Draft the Q4 summary | writing | 90
+Review Priya's proposal | review | 40
+Book the dentist | errands | 5
+Update the project tracker | admin | 15
+Reply to the client about scope | email | 15
+Call the landlord | calls | 10
+Outline next week's priorities | planning | 30
+Review the two pull requests | review | 30</textarea></div>
+          <div><label for="tb-start">Day starts</label><input id="tb-start" type="time" value="09:00"></div>
+          <div><label for="tb-deep">Put the longest writing or review batch first?</label><select id="tb-deep"><option value="yes">Yes, deep work first</option><option value="no">No, keep the order as entered</option></select></div>
+        </div>
+        <div class="calc__out" id="tb-out"></div>
+        <p class="calc__note">Batches are grouped by category and placed back to back with a five-minute gap; small categories under 20 minutes are merged into one "small stuff" batch. Nothing typed here leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function hhmm(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; return (h % 12 || 12) + ":" + ("0" + mm).slice(-2) + (h < 12 ? " AM" : " PM"); }
+        function calc() {
+          var rows = el("tb-list").value.split("\n").map(function (l) { var p = l.split("|").map(function (x) { return x.trim(); }); return {t: p[0], c: (p[1] || "other").toLowerCase(), m: parseFloat(p[2]) || 15}; }).filter(function (r) { return r.t; });
+          var groups = {}; rows.forEach(function (r) { (groups[r.c] = groups[r.c] || []).push(r); });
+          var batches = Object.keys(groups).map(function (k) { return {name: k, items: groups[k], total: groups[k].reduce(function (s, r) { return s + r.m; }, 0)}; });
+          var small = batches.filter(function (b) { return b.total < 20; }), big = batches.filter(function (b) { return b.total >= 20; });
+          if (small.length) big.push({name: "small stuff", items: [].concat.apply([], small.map(function (b) { return b.items; })), total: small.reduce(function (s, b) { return s + b.total; }, 0)});
+          if (el("tb-deep").value === "yes") big.sort(function (a, b) { var da = /writing|review|planning/.test(a.name) ? 1 : 0, db = /writing|review|planning/.test(b.name) ? 1 : 0; return db - da || b.total - a.total; });
+          var p = el("tb-start").value.split(":"), t = parseInt(p[0], 10) * 60 + parseInt(p[1], 10), html = '<div class="table-scroll"><table><thead><tr><th>Block</th><th>Batch</th><th>Minutes</th><th>Tasks</th></tr></thead><tbody>';
+          big.forEach(function (b) { html += '<tr><td>' + hhmm(t) + ' to ' + hhmm(t + b.total) + '</td><td>' + b.name + '</td><td>' + b.total + '</td><td>' + b.items.map(function (r) { return r.t; }).join("; ") + '</td></tr>'; t += b.total + 5; });
+          html += '</tbody></table></div>';
+          html += '<div class="calc__row"><span>Switches</span><span>' + (big.length - 1) + ' between batches instead of ' + Math.max(0, rows.length - 1) + ' between tasks</span></div>';
+          html += '<div class="calc__row"><span>Total planned</span><span>' + rows.reduce(function (s, r) { return s + r.m; }, 0) + ' minutes, finishing around ' + hhmm(t - 5) + '</span></div>';
+          el("tb-out").innerHTML = html;
+        }
+        ["tb-list", "tb-start", "tb-deep"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="why">Why batching works</h2>
+      <p>
+        Task-switching experiments summarised by the <a href="https://www.apa.org/topics/research/multitasking" target="_blank" rel="noopener">American Psychological Association</a> find that every switch between tasks
+        carries a cost, in time and in errors, and that the cost grows with the complexity of the
+        tasks and the unfamiliarity of the one being switched to. Gloria Mark's field studies of
+        office workers found that after an interruption people typically take a detour through
+        two or three other tasks before returning, and that average attention on one screen has
+        fallen to under a minute. The
+        <a href="/blogs/context-switching">context switching</a> page goes through that research
+        in detail; the short version is that switches are individually cheap and collectively
+        expensive, and that a working day contains far more of them than people estimate.
+      </p>
+      <p>
+        Batching attacks the count. Ten emails answered in one block involve one reload of
+        "email mode", not ten; six approvals done together need the expense system open once.
+        The saving is not only the switch itself but the warm-up that follows it: the third call
+        in a row is faster than the first, because the tone, the notes template and the mental
+        checklist are already loaded. Batching also makes the small, formless tasks visible as a
+        block with a size, which is the first step to shrinking them.
+      </p>
+      <h2 id="what">What batches well, and what does not</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Batches well</th><th>Why</th><th>Suggested rhythm</th></tr></thead>
+          <tbody>
+            <tr><td>Email and chat replies</td><td>Same tool, same mode, most not urgent</td><td>Two or three blocks a day, closed in between</td></tr>
+            <tr><td>Phone calls and voicemails</td><td>Warm-up effect; one quiet room booking</td><td>One block early afternoon</td></tr>
+            <tr><td>Approvals, expenses, timesheets, admin</td><td>Same systems, low thought, interruptible</td><td>One block, Friday or end of day</td></tr>
+            <tr><td>Reviews and feedback</td><td>Same critical mode; standards stay consistent across items</td><td>One block, mid-morning</td></tr>
+            <tr><td>Writing and other deep work</td><td>Long warm-up, high switch cost</td><td>One block, first thing, protected; see <a href="/blogs/deep-work">deep work</a></td></tr>
+            <tr><td>Errands and personal admin</td><td>Leaves the desk once</td><td>One block, lunchtime</td></tr>
+            <tr><td>Planning and scheduling</td><td>Calendar open once</td><td>Friday afternoon for the week; five minutes each evening</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        What does not batch: anything with a real deadline inside the batch window, support and
+        on-call work where the job is responsiveness, and creative tasks that need a different
+        state of mind from each other (editing someone else's text and writing your own in the
+        same block tends to flatten both). Batching is a default, not a rule; the
+        <a href="/blogs/how-to-prioritize-tasks">prioritising guide</a> is where the genuinely
+        urgent gets identified before the batches are built.
+      </p>
+      <h2 id="setup">Setting up the day</h2>
+      <ol>
+        <li><strong>Categorise the list.</strong> Five to seven categories are enough; the planner
+        merges anything smaller than twenty minutes into a single small-stuff batch.</li>
+        <li><strong>Put the deep batch first.</strong> Writing, analysis and review go in the
+        morning block before the inputs start; the planner's default does this.</li>
+        <li><strong>Fix the communication batches and tell people.</strong> "I check email at 11
+        and 4" is a boundary only if colleagues know it and urgent matters have another route.
+        The <a href="/blogs/team-charter-template">team charter</a> is where response-time norms
+        are written down.</li>
+        <li><strong>Close the tools between batches.</strong> A batch with the inbox open in the
+        next tab is not a batch.</li>
+        <li><strong>Put the blocks on the calendar.</strong> Batching is a form of
+        <a href="/blogs/time-blocking">time blocking</a> with the blocks defined by task type;
+        the <a href="/blogs/daily-schedule-template">daily schedule</a> generator holds them.</li>
+        <li><strong>Review weekly.</strong> If a batch keeps overflowing, the category has a volume
+        problem that batching cannot fix: too much email means too many lists, too many approvals
+        means thresholds set too low.</li>
+      </ol>
+      <h2 id="limits">When batching becomes avoidance</h2>
+      <p>
+        Batching has one characteristic failure: the batch that never comes. Email checked twice
+        a day becomes email checked once, becomes an inbox of four hundred, and the batching
+        system has become a way of not doing the task. The same happens with approvals that block
+        other people and calls that were dreaded in the first place. Two rules prevent it. A batch
+        with other people waiting on it has a maximum interval, usually a day, whatever the
+        system says; and a batch that is consistently skipped is not a batching problem but a
+        <a href="/blogs/how-to-stop-procrastinating">procrastination</a> one, and is handled as
+        such.
+      </p>
+      <p>
+        The other limit is role. For managers, support staff and anyone whose job is to be
+        available, the batches are smaller and the rhythm faster, and the saving comes from
+        batching the deep work into one protected block rather than from batching the
+        responsive work at all.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Task batching groups similar tasks into one block so the context is loaded once per batch instead of once per task.</li>
+        <li>Switching costs are individually small and collectively large; attention on one screen now averages under a minute.</li>
+        <li>Email, calls, approvals, reviews, errands and planning batch well. Deadlines inside the window, on-call work and dissimilar creative tasks do not.</li>
+        <li>Deep work first, communication batches fixed and announced, tools closed between batches, blocks on the calendar, weekly review.</li>
+        <li>A batch that other people are waiting on has a one-day maximum; a batch that keeps being skipped is procrastination, not scheduling.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is task batching?</summary>
+          <p>Grouping similar tasks and doing them together in one block of time instead of spreading them through the day: all the email at set times, all the calls together, all the approvals in one sitting. It reduces the number of switches between kinds of work, each of which costs time to reload the context.</p>
+        </details>
+        <details>
+          <summary>Does task batching actually improve productivity?</summary>
+          <p>The research on task switching says yes for the switches it removes: every switch carries a measurable cost that grows with task complexity, and a scattered day contains dozens. The saving is largest for people with many small, similar tasks and smallest for people whose job is responsiveness. It does not make the tasks themselves shorter.</p>
+        </details>
+        <details>
+          <summary>What tasks should I batch?</summary>
+          <p>Email and chat replies, phone calls, approvals and admin, reviews, errands, and planning. Each uses one tool or one frame of mind. Deep work such as writing is batched in the sense of being done in one protected block first thing. Tasks with deadlines inside the batch window, on-call work, and dissimilar creative tasks should not be batched together.</p>
+        </details>
+        <details>
+          <summary>How often should I check email if I batch it?</summary>
+          <p>Two or three fixed times a day for most office roles, announced to colleagues with another route for genuine emergencies. Once a day is too rare if people are waiting on replies. The interval should be the longest that does not make other people's work late.</p>
+        </details>
+        <details>
+          <summary>What is the difference between task batching and time blocking?</summary>
+          <p>Time blocking assigns tasks to calendar blocks; task batching decides which tasks share a block, by similarity. Batching is a way of filling time blocks. Most people use both: the week is blocked, and the blocks for communication and admin are batches.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/context-switching">Context Switching</a></li>
+          <li><a href="/blogs/time-blocking">Time Blocking</a></li>
+          <li><a href="/blogs/deep-work">Deep Work</a></li>
+          <li><a href="/blogs/how-to-prioritize-tasks">How to Prioritize Tasks</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

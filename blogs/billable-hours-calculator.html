@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billable Hours Calculator: Utilisation and Real Rate</title>
+  <meta name="description" content="Calculate billable hours, utilisation, realisation, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/billable-hours-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/billable-hours-calculator" />
+  <meta property="og:title" content="Billable Hours Calculator" />
+  <meta property="og:description" content="Calculate billable hours, utilisation, realisation, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/billable-hours-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-10-05T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-10-05T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Billable Hours Calculator" />
+  <meta name="twitter:description" content="Calculate billable hours, utilisation, realisation, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/billable-hours-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=20260930" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://workintelhub.com/blogs/billable-hours-calculator#article",
+        "headline": "Billable Hours Calculator",
+        "description": "Calculate billable hours, utilisation, realisation, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target.",
+        "image": "https://workintelhub.com/images/blog/billable-hours-calculator.png",
+        "datePublished": "2026-10-05T00:00:00+00:00",
+        "dateModified": "2026-10-05T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/blogs/billable-hours-calculator"
+        },
+        "articleSection": "Time Tracking",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/blogs/billable-hours-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Time Tracking",
+            "item": "https://workintelhub.com/topics/time-tracking"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Billable Hours Calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/blogs/billable-hours-calculator#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate billable hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Record the time spent on client work in the firm's increments (tenths or quarters of an hour), total it per week, and multiply by weeks worked for the annual figure. Utilisation is billable hours divided by all hours worked. The calculator on this page takes weekly inputs and produces annual hours, revenue and effective rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a good utilisation rate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on the role. Lawyers at small firms average about 38 per cent of an eight-hour day; consultants on engagement run 70 to 85 per cent; agency staff 65 to 75 per cent. For an individual, 65 to 70 per cent of a 45-hour week is sustainable; above 80 per cent for long periods usually means unrecorded non-billable work or burnout."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between utilisation and realisation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Utilisation is the share of hours worked that are billable. Realisation is the share of billable hours that are actually invoiced after write-downs and discounts. Collection is the share of invoiced amounts that clients pay. All three multiply together; a firm can have high utilisation and still earn little if realisation or collection is poor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many billable hours a year is realistic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 1,400 to 1,500 for a professional working a 45-hour week at 65 to 70 per cent utilisation over 47 weeks. Large law firm targets of 1,800 to 2,100 assume working weeks of 55 hours or more. Targets above what the available weeks allow produce padded timesheets rather than hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What counts as non-billable time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Business development and proposals, internal meetings, training, administration, invoicing and time recording itself, bench time between projects, and any client work the client has not agreed to pay for. Tracking non-billable time by category is how firms find out where the billable hours went."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Billable Hours Calculator</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">October 5, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../images/blog/billable-hours-calculator.png" alt="A billable hours calculator showing utilisation, annual hours against target and effective rate" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Billable hours are the hours a professional can charge to a client. They are never all
+        the hours worked, because meetings, proposals, admin, training and the time spent
+        tracking time itself are not billable, and the gap between the two is the single most
+        important number in any firm that sells time. Three ratios describe it: utilisation (the
+        billable share of hours worked), realisation (the share of billable hours that survive
+        write-downs to reach an invoice) and collection (the share of invoices that get paid).
+        Multiply them together and you have the fraction of a working hour that turns into money.
+      </p>
+      <p>
+        The calculator turns weekly inputs into annual billable hours, revenue through each stage,
+        the effective rate per hour actually worked, and the break-even rate against your cost.
+        The rest of the page gives the benchmarks, explains where billable hours leak, and shows
+        how to set an annual target that a human being can meet.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Billable hours calculator</a></li>
+          <li><a href="#benchmarks">Benchmarks</a></li>
+          <li><a href="#leaks">Where billable hours leak</a></li>
+          <li><a href="#targets">Setting a target a person can meet</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="calculator">Billable hours calculator</h2>
+      <div class="calc" id="bh">
+        <div class="calc__grid">
+          <div><label for="bh-hours">Hours worked per week</label><input id="bh-hours" type="number" min="1" max="100" step="0.5" value="45"></div>
+          <div><label for="bh-bill">Billable hours per week</label><input id="bh-bill" type="number" min="0" max="100" step="0.5" value="30"></div>
+          <div><label for="bh-rate">Billing rate ($ per hour)</label><input id="bh-rate" type="number" min="0" step="5" value="250"></div>
+          <div><label for="bh-weeks">Weeks worked per year</label><input id="bh-weeks" type="number" min="1" max="52" step="0.5" value="47"></div>
+          <div><label for="bh-real">Realisation (share of billable hours actually invoiced, %)</label><input id="bh-real" type="number" min="0" max="100" step="1" value="88"></div>
+          <div><label for="bh-coll">Collection (share of invoices paid, %)</label><input id="bh-coll" type="number" min="0" max="100" step="1" value="93"></div>
+          <div><label for="bh-target">Annual billable target (hours, optional)</label><input id="bh-target" type="number" min="0" step="10" value="1800"></div>
+          <div><label for="bh-cost">Your fully loaded cost ($ per year, optional)</label><input id="bh-cost" type="number" min="0" step="1000" value="150000"></div>
+        </div>
+        <div class="calc__out" id="bh-out"></div>
+        <p class="calc__note">Utilisation is billable hours over hours worked; realisation is what survives write-downs; collection is what clients pay. The effective rate is revenue collected divided by all hours worked. Nothing typed here leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function n(id) { return parseFloat(el(id).value) || 0; }
+        function money(x) { return "$" + Math.round(x).toLocaleString("en-US"); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var h = n("bh-hours"), b = n("bh-bill"), r = n("bh-rate"), wk = n("bh-weeks"), re = n("bh-real") / 100, co = n("bh-coll") / 100, t = n("bh-target"), cost = n("bh-cost");
+          var util = h ? b / h : 0, annualBill = b * wk, billed = annualBill * r, invoiced = billed * re, collected = invoiced * co, eff = h * wk ? collected / (h * wk) : 0;
+          var html = row("Utilisation", (util * 100).toFixed(0) + "% (" + b + " of " + h + " hours)");
+          html += row("Billable hours per year", annualBill.toLocaleString("en-US") + (t ? (annualBill >= t ? ", meets" : ", short of") + " the " + t.toLocaleString("en-US") + "-hour target by " + Math.abs(annualBill - t).toLocaleString("en-US") : ""));
+          if (t) html += row("Weekly billable needed for the target", (t / wk).toFixed(1) + " hours, " + (100 * t / wk / h).toFixed(0) + "% utilisation at " + h + " hours worked");
+          html += row("Billed at " + money(r) + " per hour", money(billed));
+          html += row("Invoiced after realisation", money(invoiced));
+          html += row("Collected", money(collected) + " (" + (re * co * 100).toFixed(0) + "% of billed value)");
+          html += row("Effective rate per hour worked", money(eff) + " per hour");
+          if (cost) html += row("Break-even rate", money(cost / (annualBill * re * co || 1)) + " per billable hour to cover " + money(cost) + "; margin at current rate " + (collected ? ((1 - cost / collected) * 100).toFixed(0) : "0") + "%");
+          el("bh-out").innerHTML = html;
+        }
+        ["bh-hours", "bh-bill", "bh-rate", "bh-weeks", "bh-real", "bh-coll", "bh-target", "bh-cost"].forEach(function (id) { el(id).addEventListener("input", calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="benchmarks">Benchmarks</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Sector</th><th>Typical annual target</th><th>Utilisation</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Large law firms (associates)</td><td>1,800 to 2,100</td><td>60 to 75% of a long week</td><td>Targets assume 2,500-plus hours worked</td></tr>
+            <tr><td>Small law firms and solos</td><td>1,200 to 1,600</td><td>38% average</td><td>The <a href="https://www.clio.com/resources/legal-trends/benchmarks/" target="_blank" rel="noopener">Clio Legal Trends Report</a> puts utilisation at 38%, realisation 88% and collection 93% in 2025: about 2.4 collected hours per 8-hour day</td></tr>
+            <tr><td>Management consulting</td><td>1,500 to 1,800</td><td>70 to 85% when staffed</td><td>Bench time between projects drops the annual figure</td></tr>
+            <tr><td>Agencies (creative, marketing, dev)</td><td>1,300 to 1,600</td><td>65 to 75%</td><td>Account management and pitching are the main non-billable loads</td></tr>
+            <tr><td>Accounting and advisory</td><td>1,400 to 1,700</td><td>60 to 70%</td><td>Seasonal: busy season runs far above, summer below</td></tr>
+            <tr><td>Freelancers and independent contractors</td><td>1,000 to 1,400</td><td>50 to 65%</td><td>Sales, admin and unpaid gaps between clients are all non-billable</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The 38 per cent figure for small law firms is the one to keep in mind, because it is
+        measured rather than targeted: in an eight-hour day the average lawyer records three
+        billable hours, invoices 2.6 of them after write-downs, and collects 2.4. A firm that
+        believes it bills six hours a day is usually counting hours worked, not hours collected.
+        The <a href="/blogs/employee-cost-calculator">employee cost calculator</a> gives the
+        fully loaded cost the break-even line uses.
+      </p>
+      <h2 id="leaks">Where billable hours leak</h2>
+      <ul>
+        <li><strong>Unrecorded time.</strong> Work done and never logged, which is the largest
+        leak in firms that record time at the end of the day or week. Memory loses short tasks
+        first: the six-minute call, the quick email, the review. Contemporaneous capture, with a
+        timer or automatic tracking, recovers hours that were already worked; the
+        <a href="/blogs/timesheet-automation">timesheet automation</a> guide covers the
+        options.</li>
+        <li><strong>Write-downs.</strong> Hours recorded and then cut before invoicing, usually
+        because the partner thinks the client will not accept them. Realisation below 85 per cent
+        usually means either the estimate was wrong or the work was inefficient, and the fix is
+        upstream of the invoice.</li>
+        <li><strong>Scope creep.</strong> "Can you just quickly" work that is done, not billed,
+        and not refused. A change-order habit fixes it; the
+        <a href="/blogs/timesheet-memes">timesheet memes</a> page has the meme.</li>
+        <li><strong>Non-billable creep.</strong> Internal meetings, reporting, and tool
+        maintenance that grows until it crowds out client work. A monthly look at the
+        non-billable categories, with a cap on each, is the control.</li>
+        <li><strong>Collection.</strong> Invoiced and unpaid. Below 90 per cent means credit
+        checks, deposits and faster invoicing are worth more than any utilisation push.</li>
+      </ul>
+      <h2 id="targets">Setting a target a person can meet</h2>
+      <p>
+        Work backwards from the weeks actually worked. A professional with three weeks of leave,
+        ten holidays and a few sick days works about 46 to 47 weeks, as the
+        <a href="/blogs/how-many-weeks-in-a-work-year">weeks in a work year</a> page shows. An
+        1,800-hour target over 47 weeks is 38.3 billable hours a week; at 70 per cent utilisation
+        that is a 55-hour working week, every week, with no bench time. Targets are often set
+        from the revenue the firm wants rather than from the hours available, and the calculator's
+        "weekly billable needed" line is the sanity check.
+      </p>
+      <p>
+        A target that is reachable at a 45-hour week and 65 to 70 per cent utilisation is roughly
+        1,400 to 1,500 hours. Firms that need more revenue than that implies have three honest
+        options: raise rates, improve realisation and collection (which the calculator shows is
+        often worth more than extra hours), or hire. The fourth option, a target nobody meets,
+        produces the timesheet behaviour that the <a href="/blogs/time-theft-statistics">time
+        theft statistics</a> page describes from the other side: padded entries, and eventually
+        departures.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Utilisation × realisation × collection is the share of a worked hour that becomes money. Small law firms average 38% × 88% × 93%, about 2.4 collected hours in an 8-hour day.</li>
+        <li>Annual targets: 1,800 to 2,100 in large law firms, 1,200 to 1,600 in small firms and agencies, 1,000 to 1,400 for freelancers.</li>
+        <li>The largest leak is unrecorded time; contemporaneous capture recovers hours already worked.</li>
+        <li>Work backwards from about 47 weeks worked: 1,800 hours needs 38 billable hours a week, which at 70% utilisation is a 55-hour week.</li>
+        <li>Improving realisation and collection is often worth more than pushing hours.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate billable hours?</summary>
+          <p>Record the time spent on client work in the firm's increments (tenths or quarters of an hour), total it per week, and multiply by weeks worked for the annual figure. Utilisation is billable hours divided by all hours worked. The calculator on this page takes weekly inputs and produces annual hours, revenue and effective rate.</p>
+        </details>
+        <details>
+          <summary>What is a good utilisation rate?</summary>
+          <p>It depends on the role. Lawyers at small firms average about 38 per cent of an eight-hour day; consultants on engagement run 70 to 85 per cent; agency staff 65 to 75 per cent. For an individual, 65 to 70 per cent of a 45-hour week is sustainable; above 80 per cent for long periods usually means unrecorded non-billable work or burnout.</p>
+        </details>
+        <details>
+          <summary>What is the difference between utilisation and realisation?</summary>
+          <p>Utilisation is the share of hours worked that are billable. Realisation is the share of billable hours that are actually invoiced after write-downs and discounts. Collection is the share of invoiced amounts that clients pay. All three multiply together; a firm can have high utilisation and still earn little if realisation or collection is poor.</p>
+        </details>
+        <details>
+          <summary>How many billable hours a year is realistic?</summary>
+          <p>About 1,400 to 1,500 for a professional working a 45-hour week at 65 to 70 per cent utilisation over 47 weeks. Large law firm targets of 1,800 to 2,100 assume working weeks of 55 hours or more. Targets above what the available weeks allow produce padded timesheets rather than hours.</p>
+        </details>
+        <details>
+          <summary>What counts as non-billable time?</summary>
+          <p>Business development and proposals, internal meetings, training, administration, invoicing and time recording itself, bench time between projects, and any client work the client has not agreed to pay for. Tracking non-billable time by category is how firms find out where the billable hours went.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/how-many-weeks-in-a-work-year">How Many Weeks in a Work Year</a></li>
+          <li><a href="/blogs/timesheet-automation">Timesheet Automation</a></li>
+          <li><a href="/blogs/employee-cost-calculator">Employee Cost Calculator</a></li>
+          <li><a href="/glossary/billable-hours">Billable Hours (Glossary)</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
