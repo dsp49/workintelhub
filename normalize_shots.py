@@ -19,8 +19,8 @@ INBOX = os.path.join(OUT, "_inbox")
 TARGET_W, TARGET_H = 1280, 640
 RATIO = TARGET_W / TARGET_H
 
-SLUGS = ["activtrak", "connecteam", "controlio", "desktime", "intelogos",
-         "monitask", "prodoscore", "timechamp", "veriato", "webwork"]
+SLUGS = ["activtrak", "hubstaff", "teramind", "controlio", "currentware", "desktime",
+         "insightful", "kickidler", "monitask", "timechamp", "timedoctor", "veriato"]
 
 
 def normalize(src, dest):
@@ -58,15 +58,17 @@ def normalize(src, dest):
 
 ALIASES = {
     "activtrak": ["activtrak", "activ trak"],
-    "connecteam": ["connecteam", "connect team"],
+    "hubstaff": ["hubstaff", "hub staff"],
+    "teramind": ["teramind"],
     "controlio": ["controlio"],
+    "currentware": ["currentware", "current ware"],
     "desktime": ["desktime", "desk time"],
-    "timechamp": ["timechamp", "time champ"],
-    "intelogos": ["intelogos"],
+    "insightful": ["insightful"],
+    "kickidler": ["kickidler", "keepactive", "keep active"],
     "monitask": ["monitask"],
-    "prodoscore": ["prodoscore"],
+    "timechamp": ["timechamp", "time champ"],
+    "timedoctor": ["timedoctor", "time doctor"],
     "veriato": ["veriato"],
-    "webwork": ["webwork", "web work", "webwork tracker"],
 }
 
 

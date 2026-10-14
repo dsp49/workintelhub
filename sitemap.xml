@@ -3,14 +3,44 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
+    <loc>https://workintelhub.com/blogs/can-my-employer-see-my-teams-or-slack-messages</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/can-my-employer-monitor-my-personal-phone</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/can-my-employer-see-my-browsing-history-on-wifi</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/does-my-employer-know-when-i-am-idle-on-teams</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://workintelhub.com/blogs/paid-sick-leave-laws-by-state</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://workintelhub.com/blogs/employee-monitoring-consent-form</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/employee-monitoring-policy-template</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -28,19 +58,19 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/how-to-detect-employee-monitoring</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/can-my-employer-track-my-laptop-location</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/employee-monitoring-laws-by-state</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -153,7 +183,7 @@
 
   <url>
     <loc>https://workintelhub.com/tools/best-employee-monitoring-software</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -172,12 +202,12 @@
   </url>
 
   <url>
-    <loc>https://workintelhub.com/blogs/workplace-analytics-software</loc>
-    <lastmod>2026-08-06</lastmod>
+    <loc>https://workintelhub.com/blogs/workplace-analytics-without-surveillance</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://workintelhub.com/images/blog/workplace-analytics-software.png</image:loc>
+      <image:loc>https://workintelhub.com/images/blog/workplace-analytics-without-surveillance.png</image:loc>
     </image:image>
   </url>
 
@@ -403,7 +433,7 @@
 
   <url>
     <loc>https://workintelhub.com/blogs/privacy-line-what-never-to-track</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -443,7 +473,7 @@
 
   <url>
     <loc>https://workintelhub.com/blogs/write-monitoring-policy-employees-sign</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -553,7 +583,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/excel-google-sheets-timesheet-template</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -865,7 +895,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/blogs/hours-calculator</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1176,12 +1206,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workintelhub.com/blogs/hours-and-minutes-calculator</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://workintelhub.com/blogs/letter-of-recommendation-for-employee</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -1369,7 +1393,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/tools/best-employee-monitoring-tools-for-remote-teams</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1380,32 +1404,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workintelhub.com/tools/employee-monitoring-software-for-hybrid-workforces</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/employee-monitoring-software-comparison</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://workintelhub.com/tools/best-time-tracking-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/best-employee-time-tracking-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/top-time-tracking-tools-for-teams</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1416,56 +1416,26 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workintelhub.com/tools/time-tracking-software-comparison</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://workintelhub.com/tools/best-productivity-monitoring-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/top-employee-productivity-tracking-tools</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/best-productivity-management-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/productivity-monitoring-software-comparison</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/tools/best-workforce-productivity-software</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/tools/best-employee-attendance-tracking-software</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://workintelhub.com/tools/best-workforce-scheduling-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/top-attendance-management-systems</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1476,32 +1446,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workintelhub.com/tools/employee-scheduling-software-comparison</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://workintelhub.com/tools/best-workforce-management-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/top-workforce-management-tools</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/best-workforce-management-software-for-growing-businesses</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/workforce-management-platforms-compared</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1513,13 +1459,7 @@
   </url>
   <url>
     <loc>https://workintelhub.com/tools/best-workforce-analytics-software</loc>
-    <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://workintelhub.com/tools/top-workforce-intelligence-platforms</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -13,6 +13,41 @@
       <link>https://workintelhub.com/</link>
     </image>
 
+    <item>
+      <title>Can My Employer See My Teams or Slack Messages?</title>
+      <link>https://workintelhub.com/blogs/can-my-employer-see-my-teams-or-slack-messages</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/can-my-employer-see-my-teams-or-slack-messages</guid>
+      <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Who can read Teams chats and Slack DMs, what each plan and role allows, whether deleted messages survive, whether you are told, and what US law requires.</description>
+    </item>
+    <item>
+      <title>Can My Employer Monitor My Personal Phone?</title>
+      <link>https://workintelhub.com/blogs/can-my-employer-monitor-my-personal-phone</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/can-my-employer-monitor-my-personal-phone</guid>
+      <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What an employer can and cannot see on a personal phone under each setup, from a work email app to full enrolment, what they can wipe, and what US law says.</description>
+    </item>
+    <item>
+      <title>Can My Employer See My Browsing History on Company Wi-Fi?</title>
+      <link>https://workintelhub.com/blogs/can-my-employer-see-my-browsing-history-on-wifi</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/can-my-employer-see-my-browsing-history-on-wifi</guid>
+      <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What a company network sees from a personal phone: domains yes, pages no, unless the device is managed. Incognito, VPNs, encrypted DNS, guest Wi-Fi and the law.</description>
+    </item>
+    <item>
+      <title>Does My Employer Know When I Am Idle or Away on Teams?</title>
+      <link>https://workintelhub.com/blogs/does-my-employer-know-when-i-am-idle-on-teams</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/does-my-employer-know-when-i-am-idle-on-teams</guid>
+      <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What the Teams Away status is based on, who can see it, whether a history exists anywhere, what admin reports actually contain, and how monitoring agents differ.</description>
+    </item>
+    <item>
+      <title>Paid Sick Leave Laws by State (2026)</title>
+      <link>https://workintelhub.com/blogs/paid-sick-leave-laws-by-state</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/paid-sick-leave-laws-by-state</guid>
+      <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <description>The 20 states and DC that require paid sick leave in 2026: accrual rate, caps, carryover, employer size, waiting period and the statute for each, plus what changed.</description>
+    </item>
     <item>
       <title>Consultant Time Tracking Templates</title>
       <link>https://workintelhub.com/blogs/consultant-time-tracking-template</link>
@@ -350,13 +385,6 @@
       <description>Thirteen workforce analytics platforms reviewed, from Visier and ChartHop to ActivTrak and Viva Insights: HR-side and activity-side data, planning, price and fit.</description>
     </item>
     <item>
-      <title>Top Workforce Intelligence Platforms: 8 Reviewed (2026)</title>
-      <link>https://workintelhub.com/tools/top-workforce-intelligence-platforms</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/top-workforce-intelligence-platforms</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight workforce intelligence platforms organised by the data they read: HR records, work patterns, collaboration and operations. What each tells you and costs.</description>
-    </item>
-    <item>
       <title>Best Workforce Planning Software: 8 Tools Reviewed (2026)</title>
       <link>https://workintelhub.com/tools/best-workforce-planning-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-workforce-planning-software</guid>
@@ -385,27 +413,6 @@
       <description>Twelve workforce management platforms reviewed, from Deputy and Rippling to UKG, Dayforce and Workday: scheduling, time, payroll, compliance and real quote costs.</description>
     </item>
     <item>
-      <title>Top Workforce Management Tools by Company Size (2026)</title>
-      <link>https://workintelhub.com/tools/top-workforce-management-tools</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/top-workforce-management-tools</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Ten workforce management tools matched to company size, from under 50 to enterprise: which fits at each headcount, what it costs and when to move up.</description>
-    </item>
-    <item>
-      <title>Best WFM Software for Growing Businesses: 8 Reviewed (2026)</title>
-      <link>https://workintelhub.com/tools/best-workforce-management-software-for-growing-businesses</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/best-workforce-management-software-for-growing-businesses</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight workforce management tools reviewed for businesses that expect to double: which scale without a migration, what they cost as you grow, and when to switch.</description>
-    </item>
-    <item>
-      <title>Workforce Management Platforms Compared: 12 Platforms (2026)</title>
-      <link>https://workintelhub.com/tools/workforce-management-platforms-compared</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/workforce-management-platforms-compared</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Twelve workforce management platforms compared on twelve criteria: pricing model, size fit, scheduling, time, forecasting, payroll, HR and compliance. No ranking.</description>
-    </item>
-    <item>
       <title>Best Workforce Optimization Software: 8 Reviewed (2026)</title>
       <link>https://workintelhub.com/tools/best-workforce-optimization-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-workforce-optimization-software</guid>
@@ -427,13 +434,6 @@
       <description>Ten workforce scheduling tools reviewed by how schedules get built, forecasting, compliance and price, from free rotas to enterprise systems. October 2026 pricing.</description>
     </item>
     <item>
-      <title>Top Attendance Management Systems: 10 Reviewed (2026)</title>
-      <link>https://workintelhub.com/tools/top-attendance-management-systems</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/top-attendance-management-systems</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Ten attendance management systems reviewed as systems: wall clocks, kiosks, mobile and automatic capture, policy rules, payroll and records, with a cost calculator.</description>
-    </item>
-    <item>
       <title>Best Shift Scheduling Software: 8 Tools Reviewed (2026)</title>
       <link>https://workintelhub.com/tools/best-shift-scheduling-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-shift-scheduling-software</guid>
@@ -441,39 +441,11 @@
       <description>Eight shift scheduling tools reviewed for restaurants, shops, healthcare, field and office teams: swaps, open shifts, compliance and price. October 2026 pricing.</description>
     </item>
     <item>
-      <title>Employee Scheduling Software Comparison: 12 Tools (2026)</title>
-      <link>https://workintelhub.com/tools/employee-scheduling-software-comparison</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/employee-scheduling-software-comparison</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Twelve scheduling and attendance tools compared on fourteen criteria: pricing model, free plan, auto-scheduling, swaps, clock, GPS, compliance, payroll. No ranking.</description>
-    </item>
-    <item>
       <title>Best Productivity Monitoring Software: 12 Tools (2026)</title>
       <link>https://workintelhub.com/tools/best-productivity-monitoring-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-productivity-monitoring-software</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <description>Twelve productivity monitoring tools reviewed by how they measure productivity, what they capture and what they cost, with a chooser. Pricing checked October 2026.</description>
-    </item>
-    <item>
-      <title>Top Employee Productivity Tracking Tools: How Each Scores</title>
-      <link>https://workintelhub.com/tools/top-employee-productivity-tracking-tools</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/top-employee-productivity-tracking-tools</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight employee productivity tracking tools reviewed by how they build the score, what it rewards, who sees it and what it costs. Pricing checked October 2026.</description>
-    </item>
-    <item>
-      <title>Best Productivity Management Software: 8 Tools (2026)</title>
-      <link>https://workintelhub.com/tools/best-productivity-management-software</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/best-productivity-management-software</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight productivity management tools reviewed: ClickUp, Asana, Notion, monday.com and Trello for the work; RescueTime, Timely and Toggl for attention and time.</description>
-    </item>
-    <item>
-      <title>Productivity Monitoring Software Comparison: 12 Tools (2026)</title>
-      <link>https://workintelhub.com/tools/productivity-monitoring-software-comparison</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/productivity-monitoring-software-comparison</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Twelve productivity monitoring tools compared on thirteen criteria: price, data source, platforms, scoring, screenshots, keystrokes and coaching. No ranking.</description>
     </item>
     <item>
       <title>Best Workforce Productivity Software: 8 Platforms (2026)</title>
@@ -490,32 +462,11 @@
       <description>Twelve time tracking tools reviewed by who they suit, how entries get made and what they cost, with pricing checked in October 2026 and a chooser.</description>
     </item>
     <item>
-      <title>Best Employee Time Tracking Software for Employers (2026)</title>
-      <link>https://workintelhub.com/tools/best-employee-time-tracking-software</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/best-employee-time-tracking-software</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Nine employee time tracking tools reviewed for employers: attendance, overtime, approvals, GPS, kiosks and payroll, with a cost calculator for your headcount.</description>
-    </item>
-    <item>
-      <title>Top Time Tracking Tools for Teams: Budgets and Approvals</title>
-      <link>https://workintelhub.com/tools/top-time-tracking-tools-for-teams</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/top-time-tracking-tools-for-teams</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight time tracking tools reviewed for teams: budgets, approvals, capacity planning and Asana, Jira and ClickUp integrations. Pricing checked October 2026.</description>
-    </item>
-    <item>
       <title>Best Time Tracking Software for Remote Employees (2026)</title>
       <link>https://workintelhub.com/tools/best-time-tracking-software-for-remote-employees</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-time-tracking-software-for-remote-employees</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <description>Eight time tracking tools reviewed for remote employees: offline tracking, time zones, proof-of-work policy, payroll and platforms. Pricing checked October 2026.</description>
-    </item>
-    <item>
-      <title>Time Tracking Software Comparison: 12 Tools (2026)</title>
-      <link>https://workintelhub.com/tools/time-tracking-software-comparison</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/time-tracking-software-comparison</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Twelve time tracking tools compared on fourteen criteria: price, free plan, platforms, automatic tracking, approvals, invoicing, payroll and GPS. No ranking.</description>
     </item>
     <item>
       <title>Best Employee Monitoring Tools for Remote Teams (2026)</title>
@@ -530,20 +481,6 @@
       <guid isPermaLink="true">https://workintelhub.com/tools/employee-monitoring-software-for-small-business</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <description>Eight employee monitoring tools reviewed for small businesses, with a cost calculator for your headcount and the minimums and add-ons that hide the real price.</description>
-    </item>
-    <item>
-      <title>Best Employee Monitoring Software for Hybrid Teams (2026)</title>
-      <link>https://workintelhub.com/tools/employee-monitoring-software-for-hybrid-workforces</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/employee-monitoring-software-for-hybrid-workforces</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight monitoring tools reviewed for hybrid workforces: office versus remote reporting, schedule adherence, attendance by location and fairness. October 2026 pricing.</description>
-    </item>
-    <item>
-      <title>Employee Monitoring Software Comparison: 12 Tools (2026)</title>
-      <link>https://workintelhub.com/tools/employee-monitoring-software-comparison</link>
-      <guid isPermaLink="true">https://workintelhub.com/tools/employee-monitoring-software-comparison</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Twelve employee monitoring tools compared on fifteen criteria, with a filter for platform, price, deployment and features. October 2026 pricing. No ranking.</description>
     </item>
     <item>
       <title>Two Weeks Notice Letter</title>
@@ -733,13 +670,6 @@
       <guid isPermaLink="true">https://workintelhub.com/blogs/daily-schedule-template</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
       <description>Generate a printable daily schedule in 15, 30 or 60-minute rows as an hourly planner, a time-block plan with a top three, or a shift schedule, and how to fill it.</description>
-    </item>
-    <item>
-      <title>Hours and Minutes Calculator</title>
-      <link>https://workintelhub.com/blogs/hours-and-minutes-calculator</link>
-      <guid isPermaLink="true">https://workintelhub.com/blogs/hours-and-minutes-calculator</guid>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Add and subtract hours and minutes, find the time between two clock times with a break removed, and convert between h:mm and decimal hours, with payroll rounding.</description>
     </item>
     <item>
       <title>Letter of Recommendation for an Employee</title>
@@ -1627,8 +1557,8 @@
 
     <item>
       <title>Workplace Analytics Without Turning It Into Surveillance</title>
-      <link>https://workintelhub.com/blogs/workplace-analytics-software</link>
-      <guid isPermaLink="true">https://workintelhub.com/blogs/workplace-analytics-software</guid>
+      <link>https://workintelhub.com/blogs/workplace-analytics-without-surveillance</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/workplace-analytics-without-surveillance</guid>
       <description>Workplace analytics software and employee monitoring run on much the same data. The dividing line is aggregation and purpose. Here is where to draw it, and the design rules that hold it.</description>
       <category>Productivity</category>
       <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>

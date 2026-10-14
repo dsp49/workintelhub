@@ -101,22 +101,30 @@ def splice(html, name, rendered, fallback_pattern):
 # normalize_shots.py, then run this script again.
 
 TOOLS = [
-    ("activtrak", "ActivTrak"), ("connecteam", "Connecteam"),
-    ("controlio", "Controlio"), ("desktime", "DeskTime"),
-    ("intelogos", "Intelogos"), ("monitask", "Monitask"),
-    ("prodoscore", "Prodoscore"), ("timechamp", "Time Champ"),
-    ("veriato", "Veriato"), ("webwork", "WebWork Time Tracker"),
+    ("activtrak", "ActivTrak"), ("hubstaff", "Hubstaff"),
+    ("teramind", "Teramind"), ("controlio", "Controlio"),
+    ("currentware", "CurrentWare"), ("desktime", "DeskTime"),
+    ("insightful", "Insightful"), ("kickidler", "Kickidler"),
+    ("monitask", "Monitask"), ("timechamp", "Time Champ"),
+    ("timedoctor", "Time Doctor"), ("veriato", "Veriato"),
 ]
 SHOT_DIR = os.path.join(ROOT, "images", "tools", "screenshots")
 SHOT_PAGE = os.path.join(ROOT, "tools", "best-employee-monitoring-software.html")
 
+CAPTURED = {  # month each vendor homepage was captured
+    "activtrak": "August 2026", "controlio": "August 2026", "desktime": "August 2026",
+    "monitask": "August 2026", "timechamp": "August 2026", "veriato": "August 2026",
+    "hubstaff": "October 2026", "teramind": "October 2026", "currentware": "October 2026",
+    "insightful": "October 2026", "kickidler": "October 2026", "timedoctor": "October 2026",
+}
+
 FIGURE = '''<figure class="tool-shot">
             <img src="../images/tools/screenshots/%s.webp" alt="%s homepage"
                  width="1280" height="640" loading="lazy" decoding="async" />
-            <figcaption>%s homepage, captured August 2026.</figcaption>
+            <figcaption>%s homepage, captured %s.</figcaption>
           </figure>'''
 
-INTRO = '''Each card opens with the vendor's own homepage as it looked in August 2026. Those are
+INTRO = '''Each card opens with the vendor's own homepage as it looked when captured, in August or October 2026. Those are
         marketing pages, not the product interface, so treat them as a look at how each company
         pitches itself rather than as evidence of what the software does.'''
 
@@ -151,7 +159,7 @@ def sync_shots(check):
     html = original
     on = have_all_shots()
     for slug, label in TOOLS:
-        body = FIGURE % (slug, label, label) if on else ""
+        body = FIGURE % (slug, label, label, CAPTURED.get(slug, "2026")) if on else ""
         html = fill(html, slug, body, " " * 10)
     html = fill(html, "intro", INTRO if on else "", " " * 8)
     moved = html != original

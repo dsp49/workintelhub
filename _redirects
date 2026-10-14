@@ -2,6 +2,27 @@
 # One rule per line:  <from>  <to>  <status>
 # First match wins, so keep the most specific rules at the top.
 
+# Listicle consolidation, 2026-10-14: duplicate intents merged into one pillar per query.
+# Each source still has unique sections (pricing bands, size fit, scoring methods) worth folding into its target.
+/tools/employee-monitoring-software-comparison                      /tools/best-employee-monitoring-software                  301
+/tools/top-employee-productivity-tracking-tools                     /tools/best-productivity-monitoring-software              301
+/tools/productivity-monitoring-software-comparison                  /tools/best-productivity-monitoring-software              301
+/tools/employee-monitoring-software-for-hybrid-workforces           /tools/best-employee-monitoring-tools-for-remote-teams    301
+/tools/top-workforce-management-tools                               /tools/best-workforce-management-software                 301
+/tools/workforce-management-platforms-compared                      /tools/best-workforce-management-software                 301
+/tools/best-workforce-management-software-for-growing-businesses    /tools/best-workforce-management-software                 301
+/tools/best-employee-time-tracking-software                         /tools/best-time-tracking-software                        301
+/tools/top-time-tracking-tools-for-teams                            /tools/best-time-tracking-software                        301
+/tools/time-tracking-software-comparison                            /tools/best-time-tracking-software                        301
+/tools/top-workforce-intelligence-platforms                         /tools/best-workforce-analytics-software                  301
+/tools/employee-scheduling-software-comparison                      /tools/best-workforce-scheduling-software                 301
+/tools/top-attendance-management-systems                            /tools/best-employee-attendance-tracking-software         301
+/tools/best-productivity-management-software                        /tools/best-workforce-productivity-software               301
+
+# Blog consolidation, 2026-10-14
+/blogs/hours-and-minutes-calculator  /blogs/hours-calculator  301
+/blogs/workplace-analytics-software  /blogs/workplace-analytics-without-surveillance  301
+
 # Folder rename: posts -> blogs (permanent, preserves any existing search ranking)
 /posts/*                    /blogs/:splat              301
 
@@ -10,4 +31,4 @@
 
 # Note: www -> apex canonical redirect is NOT set here. Cloudflare Pages matches
 # _redirects on path, not hostname — configure that as a Redirect Rule in the
-# Cloudflare dashboard (Rules > Redirect Rules) instead. www is currently 522.
+# Cloudflare dashboard (Rules > Redirect Rules) instead. It is configured there and returns 301.

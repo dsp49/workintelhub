@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work Hours Calculator: Hours Between Two Times, With Breaks</title>
+  <title>Work Hours Calculator: Shifts, Breaks, Hours and Minutes</title>
   <meta name="description" content="Free work hours calculator: hours between two times with unpaid breaks removed, multiple shifts added, and the answer in hours and minutes and decimal payroll hours." />
   <link rel="canonical" href="https://workintelhub.com/blogs/hours-calculator" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -75,7 +75,7 @@
         "description": "Free work hours calculator: hours between two times with unpaid breaks removed, multiple shifts added, and the answer in hours and minutes and decimal payroll hours.",
         "image": "https://workintelhub.com/images/blog/hours-calculator.png",
         "datePublished": "2026-09-17T00:00:00+00:00",
-        "dateModified": "2026-09-17T00:00:00+00:00",
+        "dateModified": "2026-10-14T00:00:00+00:00",
         "author": {
           "@id": "https://workintelhub.com/#organization"
         },
@@ -209,7 +209,7 @@
 
       <p>
         Enter a start time, an end time and any unpaid break, and the calculator gives the hours
-        worked in hours and minutes and as a <a href="/blogs/hours-and-minutes-calculator">decimal</a>. Add rows for more shifts and it totals them,
+        worked in hours and minutes and as a decimal. Add rows for more shifts and it totals them,
         flags anything over 40 hours, and copies the result as text.
       </p>
       <p>
@@ -225,6 +225,9 @@
           <li><a href="#by-hand">Doing it by hand</a></li>
           <li><a href="#breaks">Which breaks come off</a></li>
           <li><a href="#common">Common shifts, already worked out</a></li>
+          <li><a href="#add-subtract">Add, subtract and convert hours and minutes</a></li>
+          <li><a href="#table">Minutes to decimal hours</a></li>
+          <li><a href="#rounding">Rounding, and what payroll may do</a></li>
           <li><a href="#next">When you need more than a duration</a></li>
           <li><a href="#key-takeaways">Key takeaways</a></li>
           <li><a href="#faq">Frequently asked questions</a></li>
@@ -326,6 +329,114 @@
         breaks section above answers. The last row is a <a href="/blogs/split-shift">split
         shift</a>, which in California carries a premium on top of the hours.
       </p>
+      <h2 id="add-subtract">Add, subtract and convert hours and minutes</h2>
+      <p>
+        The calculator above measures a shift. This one does the arithmetic around it: add a list of
+        durations, subtract one from another, or convert between hours and minutes and the decimal
+        hours that payroll uses.
+      </p>
+      <div class="calc" id="hm">
+        <div class="calc__grid">
+          <div><label for="hm-mode">Operation</label><select id="hm-mode"><option value="add">Add durations</option><option value="sub">Subtract a duration</option><option value="between">Time between two clock times</option><option value="dec">Convert hours:minutes to decimal, or back</option></select></div>
+        </div>
+        <div id="hm-add" class="calc__grid">
+          <div style="grid-column: 1 / -1"><label for="hm-list">Durations, one per line, as h:mm or hours and minutes (e.g. 1:45, 0:30, 2h 10m)</label><textarea id="hm-list" style="min-height:90px">1:45
+0:30
+2:10
+3:05</textarea></div>
+        </div>
+        <div id="hm-sub" class="calc__grid" hidden>
+          <div><label for="hm-a">From (h:mm)</label><input id="hm-a" type="text" value="8:00" maxlength="9"></div>
+          <div><label for="hm-b">Subtract (h:mm)</label><input id="hm-b" type="text" value="0:45" maxlength="9"></div>
+        </div>
+        <div id="hm-between" class="calc__grid" hidden>
+          <div><label for="hm-s">Start time</label><input id="hm-s" type="time" value="08:30"></div>
+          <div><label for="hm-e">End time</label><input id="hm-e" type="time" value="17:15"></div>
+          <div><label for="hm-br">Unpaid break (minutes)</label><input id="hm-br" type="number" min="0" step="1" value="30"></div>
+        </div>
+        <div id="hm-dec" class="calc__grid" hidden>
+          <div><label for="hm-d1">Hours:minutes</label><input id="hm-d1" type="text" value="7:45" maxlength="9"></div>
+          <div><label for="hm-d2">or decimal hours</label><input id="hm-d2" type="number" step="0.01" placeholder="7.75"></div>
+        </div>
+        <div class="calc__out" id="hm-out"></div>
+        <p class="calc__note">Minutes are base 60, so 7:45 is 7.75 hours, not 7.45. Payroll systems use decimal hours; timesheets are usually written in hours and minutes; this converts between the two and adds either.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function parse(s) {
+          s = String(s).trim().toLowerCase(); if (!s) return null;
+          var m = s.match(/^(-?)(\d+):(\d{1,2})$/); if (m) return (m[1] ? -1 : 1) * (parseInt(m[2], 10) * 60 + parseInt(m[3], 10));
+          var h = s.match(/(\d+(?:\.\d+)?)\s*h/), mm = s.match(/(\d+)\s*m/);
+          if (h || mm) return Math.round((h ? parseFloat(h[1]) : 0) * 60 + (mm ? parseInt(mm[1], 10) : 0));
+          if (/^\d+(?:\.\d+)?$/.test(s)) return Math.round(parseFloat(s) * 60);
+          return null;
+        }
+        function fmt(m) { var sign = m < 0 ? "-" : ""; m = Math.abs(m); return sign + Math.floor(m / 60) + ":" + ("0" + (m % 60)).slice(-2); }
+        function dec(m) { return (m / 60).toFixed(2); }
+        function calc() {
+          var mode = el("hm-mode").value;
+          ["add", "sub", "between", "dec"].forEach(function (k) { el("hm-" + k).hidden = k !== mode; });
+          var html = "";
+          if (mode === "add") {
+            var lines = el("hm-list").value.split("\n").map(parse).filter(function (x) { return x !== null; });
+            var total = lines.reduce(function (a, b) { return a + b; }, 0);
+            html = row("Durations counted", lines.length) + row("Total", fmt(total) + " (" + dec(total) + " hours)") + row("Average", lines.length ? fmt(Math.round(total / lines.length)) : "0:00");
+            if (total > 2400) html += row("Over 40 hours by", fmt(total - 2400) + " (overtime if in one workweek)");
+          } else if (mode === "sub") {
+            var a = parse(el("hm-a").value), b = parse(el("hm-b").value);
+            html = (a === null || b === null) ? row("Result", "Enter times as h:mm") : row("Result", fmt(a - b) + " (" + dec(a - b) + " hours)");
+          } else if (mode === "between") {
+            var s = el("hm-s").value, e = el("hm-e").value;
+            if (s && e) { var sm = parse(s), em = parse(e); var d = em - sm; if (d < 0) d += 1440; var br = parseInt(el("hm-br").value, 10) || 0; html = row("Elapsed", fmt(d) + (em < sm ? " (crosses midnight)" : "")) + row("Less break", fmt(br)) + row("Hours worked", fmt(d - br) + " (" + dec(d - br) + " hours)"); }
+          } else {
+            var d1 = parse(el("hm-d1").value), d2 = parseFloat(el("hm-d2").value);
+            if (!isNaN(d2)) html = row(d2 + " decimal hours", fmt(Math.round(d2 * 60)) + " in hours and minutes");
+            else if (d1 !== null) html = row(fmt(d1) + " in decimal", dec(d1) + " hours") + row("Rounded to quarter hour (7/8 rule)", (Math.round(d1 / 15) * 15 / 60).toFixed(2) + " hours");
+          }
+          el("hm-out").innerHTML = html;
+        }
+        ["hm-mode", "hm-list", "hm-a", "hm-b", "hm-s", "hm-e", "hm-br", "hm-d1"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        el("hm-d2").addEventListener("input", function () { el("hm-d1").value = ""; calc(); });
+        el("hm-d1").addEventListener("input", function () { el("hm-d2").value = ""; calc(); });
+        calc();
+      })();
+      </script>
+      <h2 id="table">Minutes to decimal hours</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Minutes</th><th>Decimal</th><th>Minutes</th><th>Decimal</th><th>Minutes</th><th>Decimal</th></tr></thead>
+          <tbody>
+            <tr><td>5</td><td>0.08</td><td>25</td><td>0.42</td><td>45</td><td>0.75</td></tr>
+            <tr><td>10</td><td>0.17</td><td>30</td><td>0.50</td><td>50</td><td>0.83</td></tr>
+            <tr><td>15</td><td>0.25</td><td>35</td><td>0.58</td><td>55</td><td>0.92</td></tr>
+            <tr><td>20</td><td>0.33</td><td>40</td><td>0.67</td><td>60</td><td>1.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Two decimals is the payroll convention. A third decimal changes pay by fractions of a cent
+        per hour and is not worth the disagreement it causes on a printed timesheet.
+      </p>
+      <h2 id="rounding">Rounding, and what payroll may do</h2>
+      <p>
+        Federal regulations at <a href="https://www.law.cornell.edu/cfr/text/29/785.48" target="_blank" rel="noopener">29 CFR 785.48</a> allow employers to round recorded time to the nearest five
+        minutes, tenth of an hour or quarter hour, provided the rounding does not, over time,
+        favour the employer. The quarter-hour rule is the common one: minutes 1 to 7 round down to
+        the previous quarter, 8 to 14 round up to the next, which is why it is called the 7/8
+        rule. A clock-in at 8:07 rounds to 8:00; at 8:08 it rounds to 8:15. The rounding has to
+        be applied evenly to arrivals and departures, and several states and recent court
+        decisions have narrowed the practice where accurate records exist, so rounding is now more
+        defensible as an exception than as a policy.
+      </p>
+      <p>
+        The calculator's decimal mode shows the quarter-hour rounded figure alongside the exact
+        one. Where the exact figure is available, use it; the
+        <a href="/blogs/time-card-calculator">time card calculator</a> works in exact minutes and
+        applies overtime at the workweek level, which is where the rounding question usually ends
+        up.
+      </p>
       <h2 id="next">When you need more than a duration</h2>
       <ul>
         <li><strong>A whole week with rounding and overtime:</strong> the
@@ -378,7 +489,7 @@
           <li><a href="/blogs/how-to-calculate-hours-worked">How to Calculate Hours Worked</a></li>
           <li><a href="/blogs/timesheet-conversion-chart">Timesheet Conversion Chart</a></li>
                   <li><a href="/blogs/minimum-wage-by-state-2026">Minimum Wage by State 2026</a></li>
-          <li><a href="/blogs/hours-and-minutes-calculator">Hours and Minutes Calculator</a></li>
+          <li>Hours and Minutes Calculator</li>
           <li><a href="/blogs/how-many-work-hours-in-a-year">How Many Work Hours in a Year</a></li>
           <li><a href="/blogs/billable-hours-calculator">Billable Hours Calculator</a></li>
           <li><a href="/tools/best-time-tracking-software">Best Time Tracking Software</a></li>
