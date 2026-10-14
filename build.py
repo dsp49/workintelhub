@@ -182,6 +182,56 @@ def report_shots(shots, check):
     print("screenshots: %d of %d present, %s" % (have, want, state))
 
 
+# --- author headshots ------------------------------------------------------
+# Same instinct as the vendor screenshots above: never ship a broken image.
+# A byline is authored as <span class="avatar" data-author="slug">X</span>.
+# If images/authors/<slug>.{jpg,png,webp} exists the span becomes that photo,
+# otherwise it falls back to the author's initial. So adding a headshot is just
+# dropping the file in and running this script, and removing it reverts cleanly.
+
+AUTHORS = {"pavan": "P", "tarun": "T"}
+AVATAR_DIR = os.path.join(ROOT, "images", "authors")
+AVATAR_EXTS = (".jpg", ".jpeg", ".png", ".webp")
+AVATAR_RE = re.compile(r'<span class="avatar(?: avatar--photo)?"([^>]*)>.*?</span>')
+AUTHOR_ATTR = re.compile(r'data-author="([a-z0-9-]+)"')
+AVATAR_IMG = ('<img src="/images/authors/%s" alt="" width="96" height="96" '
+              'loading="lazy" decoding="async" />')
+
+
+def avatar_file(slug):
+    for ext in AVATAR_EXTS:
+        if os.path.exists(os.path.join(AVATAR_DIR, slug + ext)):
+            return slug + ext
+    return None
+
+
+def swap_avatar(m):
+    attrs = m.group(1)
+    found = AUTHOR_ATTR.search(attrs)
+    if not found:
+        return m.group(0)  # an avatar we do not manage, leave it alone
+    slug = found.group(1)
+    photo = avatar_file(slug)
+    if photo:
+        return '<span class="avatar avatar--photo"%s>%s</span>' % (
+            attrs, AVATAR_IMG % photo)
+    return '<span class="avatar"%s>%s</span>' % (attrs, AUTHORS.get(slug, "?"))
+
+
+def sync_avatars(html):
+    return AVATAR_RE.sub(swap_avatar, html)
+
+
+def report_avatars():
+    have = [s for s in sorted(AUTHORS) if avatar_file(s)]
+    missing = [s for s in sorted(AUTHORS) if not avatar_file(s)]
+    print("author photos: %d of %d (%s)" % (
+        len(have), len(AUTHORS),
+        ", ".join("%s yes" % s for s in have) +
+        ("; " if have and missing else "") +
+        ", ".join("%s falls back to initial" % s for s in missing)))
+
+
 def main():
     check = "--check" in sys.argv
     header = read(os.path.join(ROOT, "partials", "header.html"))
@@ -195,6 +245,7 @@ def main():
                                r'<header class="site-header">.*?</header>')
         html, f_state = splice(html, "footer", render(footer, path),
                                r'<footer class="site-footer">.*?</footer>')
+        html = sync_avatars(html)
         rel = os.path.relpath(path, ROOT).replace("\\", "/")
         if "MISSING" in (h_state, f_state):
             missing.append("%s (header=%s footer=%s)" % (rel, h_state, f_state))
@@ -214,6 +265,7 @@ def main():
     else:
         print("built %d of %d pages" % (changed, total))
         report_shots(shots, check)
+    report_avatars()
     if missing:
         print("COULD NOT PLACE BLOCK:")
         for m in missing:
