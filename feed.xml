@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -14,11 +14,81 @@
     </image>
 
     <item>
+      <title>Is It Legal to Record Meetings With an AI Notetaker? Rules by State</title>
+      <link>https://workintelhub.com/blogs/ai-notetaker-recording-consent</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-notetaker-recording-consent</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>AI notetakers record and transcribe, so wiretap law applies. Which states need everyone&#x27;s consent, what the Otter and Fireflies suits allege, and a script.</description>
+    </item>
+    <item>
+      <title>ChatGPT Prompts for HR: 40 Prompts by Task With Data and Legal Rules</title>
+      <link>https://workintelhub.com/blogs/chatgpt-prompts-for-hr</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/chatgpt-prompts-for-hr</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Forty ChatGPT prompts for HR across job descriptions, policies, onboarding, reviews, surveys and more, each marked for personal data, legal review and sign-off.</description>
+    </item>
+    <item>
+      <title>AI Training for Employees: What to Teach, in What Order (Free Plan)</title>
+      <link>https://workintelhub.com/blogs/ai-training-for-employees</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-training-for-employees</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A role-based AI training plan built from the field experiments on where AI helps and harms. Six modules, free Word, Excel and PDF plan template, no email.</description>
+    </item>
+    <item>
+      <title>AI in Performance Reviews: What Managers Can Use It For, Legally</title>
+      <link>https://workintelhub.com/blogs/ai-in-performance-reviews</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-in-performance-reviews</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Where AI helps in performance reviews, where it adds bias, what employees think, and which US laws apply when AI influences a rating, raise or dismissal.</description>
+    </item>
+    <item>
+      <title>Jobs Most Exposed to AI (2026): Exposure vs Measured Job Losses</title>
+      <link>https://workintelhub.com/blogs/jobs-most-exposed-to-ai</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/jobs-most-exposed-to-ai</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Which occupations are most exposed to AI by each major measure, what the 2025 to 2035 BLS projections say, and what has been measured in jobs and hiring so far.</description>
+    </item>
+    <item>
+      <title>AI Resume Screening: How It Works, Where It Fails, What the Law Says</title>
+      <link>https://workintelhub.com/blogs/ai-resume-screening</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-resume-screening</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>How AI resume screening ranks candidates, what the bias studies and Mobley v. Workday found, which state laws apply, and the questions to ask a vendor first.</description>
+    </item>
+    <item>
+      <title>Can My Employer See If I Use ChatGPT? What Each Setup Reveals</title>
+      <link>https://workintelhub.com/blogs/can-my-employer-see-if-i-use-chatgpt</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/can-my-employer-see-if-i-use-chatgpt</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>What your employer can see of your ChatGPT, Copilot or Gemini use on a work laptop, work account, office network or your own phone, from vendor documentation.</description>
+    </item>
+    <item>
+      <title>AI Hiring Laws by State (2026): In Force, Enacted or Dead</title>
+      <link>https://workintelhub.com/blogs/ai-hiring-laws-by-state</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-hiring-laws-by-state</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Six states and New York City regulate AI in hiring. One table with citation, effective date, duties, penalty and enforcer for each, plus the bills that failed.</description>
+    </item>
+    <item>
+      <title>Colorado AI Act for Employers: What SB 26-189 Requires From 2027</title>
+      <link>https://workintelhub.com/blogs/colorado-ai-act-employers</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/colorado-ai-act-employers</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Colorado repealed its 2024 AI Act and re-enacted it as SB 26-189. What employers must do from January 1, 2027: notice, 30-day explanations, human review.</description>
+    </item>
+    <item>
+      <title>Employee AI Use Policy Template (2026): Free Word and PDF</title>
+      <link>https://workintelhub.com/blogs/ai-use-policy-template</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/ai-use-policy-template</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A twelve-section AI use policy for US employers with the wording written out, the laws behind each clause dated, and free Word and PDF files. No email required.</description>
+    </item>
+    <item>
       <title>Project Management Statistics (2026)</title>
       <link>https://workintelhub.com/blogs/project-management-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/project-management-statistics</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>36% of organisations complete projects on time and 0.5% of large projects hit budget, schedule and benefits. Success rates, overruns, pay and methods.</description>
+      <description>36% of organizations complete projects on time and 0.5% of large projects hit budget, schedule and benefits. Success rates, overruns, pay and methods.</description>
     </item>
     <item>
       <title>Payroll Error Statistics (2026)</title>
@@ -32,14 +102,14 @@
       <link>https://workintelhub.com/blogs/gen-z-workplace-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/gen-z-workplace-statistics</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Workers aged 16 to 24 are 12.9% of the US labour force, Gen Z engagement fell 8 points since 2020 and 23% want fully remote work. Pay, stress, tenure, myths.</description>
+      <description>Workers aged 16 to 24 are 12.9% of the US labor force, Gen Z engagement fell 8 points since 2020 and 23% want fully remote work. Pay, stress, tenure, myths.</description>
     </item>
     <item>
       <title>HR Technology Statistics (2026)</title>
       <link>https://workintelhub.com/blogs/hr-technology-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/hr-technology-statistics</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>HCM software revenue hit $36.3 billion, 39% of organisations use AI in HR and 30% plan to raise HR tech spend in 2026. Systems, AI hiring, regulation and ROI.</description>
+      <description>HCM software revenue hit $36.3 billion, 39% of organizations use AI in HR and 30% plan to raise HR tech spend in 2026. Systems, AI hiring, regulation and ROI.</description>
     </item>
     <item>
       <title>Employee Training Statistics (2026)</title>
@@ -137,7 +207,7 @@
       <link>https://workintelhub.com/blogs/employee-wellness-program-statistics</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-wellness-program-statistics</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>83% of large US employers offer a wellness program and 48% of workers have access. What the randomised trials found and why the $3.27 ROI is dead.</description>
+      <description>83% of large US employers offer a wellness program and 48% of workers have access. What the randomized trials found and why the $3.27 ROI is dead.</description>
     </item>
     <item>
       <title>Workplace Loneliness Statistics (2026)</title>
@@ -235,7 +305,7 @@
       <link>https://workintelhub.com/blogs/can-my-employer-monitor-my-personal-phone</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/can-my-employer-monitor-my-personal-phone</guid>
       <pubDate>Tue, 14 Oct 2026 00:00:00 +0000</pubDate>
-      <description>What an employer can and cannot see on a personal phone under each setup, from a work email app to full enrolment, what they can wipe, and what US law says.</description>
+      <description>What an employer can and cannot see on a personal phone under each setup, from a work email app to full enrollment, what they can wipe, and what US law says.</description>
     </item>
     <item>
       <title>Can My Employer See My Browsing History on Company Wi-Fi?</title>
@@ -298,7 +368,7 @@
       <link>https://workintelhub.com/blogs/work-log-template</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/work-log-template</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Free work log templates in Excel, Word and PDF: daily work log, weekly activity log, project log, remote work log and a maintenance log, with hours totalled.</description>
+      <description>Free work log templates in Excel, Word and PDF: daily work log, weekly activity log, project log, remote work log and a maintenance log, with hours totaled.</description>
     </item>
     <item>
       <title>Employee Attendance Sheet for Daily Tracking</title>
@@ -396,7 +466,7 @@
       <link>https://workintelhub.com/blogs/project-charter-template</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/project-charter-template</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Six free project charter templates in Word, Excel and PDF: one-page, full, agile, programme and internal improvement charters, plus a charter register.</description>
+      <description>Six free project charter templates in Word, Excel and PDF: one-page, full, agile, program and internal improvement charters, plus a charter register.</description>
     </item>
     <item>
       <title>Operational Plan Template: 7 Free Picks</title>
@@ -410,7 +480,7 @@
       <link>https://workintelhub.com/blogs/expense-report-template</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/expense-report-template</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Thirteen free expense report templates in Excel, Word and PDF: itemised, travel, mileage, per diem, monthly, project, team, card, contractor, event and petty cash.</description>
+      <description>Thirteen free expense report templates in Excel, Word and PDF: itemized, travel, mileage, per diem, monthly, project, team, card, contractor, event and petty cash.</description>
     </item>
     <item>
       <title>10 Free Goal Setting Templates</title>
@@ -452,7 +522,7 @@
       <link>https://workintelhub.com/blogs/resource-planning-template</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/resource-planning-template</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Free resource planning templates in Excel, Word and PDF: plan by role, allocation matrix across projects, weekly availability, utilisation tracker, request form.</description>
+      <description>Free resource planning templates in Excel, Word and PDF: plan by role, allocation matrix across projects, weekly availability, utilization tracker, request form.</description>
     </item>
     <item>
       <title>Work Plan Template: Free Download and Guide</title>
@@ -627,7 +697,7 @@
       <link>https://workintelhub.com/tools/best-workforce-optimization-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-workforce-optimization-software</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight workforce optimization tools reviewed for contact centres, retail, hospitals and desk teams: forecasting, schedule optimisation, adherence and capacity.</description>
+      <description>Eight workforce optimization tools reviewed for contact centers, retail, hospitals and desk teams: forecasting, schedule optimization, adherence and capacity.</description>
     </item>
     <item>
       <title>Best Employee Attendance Tracking Software: 12 Tools (2026)</title>
@@ -662,7 +732,7 @@
       <link>https://workintelhub.com/tools/best-workforce-productivity-software</link>
       <guid isPermaLink="true">https://workintelhub.com/tools/best-workforce-productivity-software</guid>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Eight workforce productivity platforms reviewed for organisation-level questions: capacity, meeting load, after-hours work and attendance, agent and agentless.</description>
+      <description>Eight workforce productivity platforms reviewed for organization-level questions: capacity, meeting load, after-hours work and attendance, agent and agentless.</description>
     </item>
     <item>
       <title>Best Time Tracking Software: 12 Tools Reviewed (2026)</title>
@@ -732,7 +802,7 @@
       <link>https://workintelhub.com/blogs/billable-hours-calculator</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/billable-hours-calculator</guid>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Calculate billable hours, utilisation, realisation, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target.</description>
+      <description>Calculate billable hours, utilization, realization, collection and your effective hourly rate, see benchmarks for law, consulting and agencies, and set a target.</description>
     </item>
     <item>
       <title>Task Batching</title>
@@ -798,11 +868,11 @@
       <description>Generate a company travel policy covering approval, booking, air class, lodging, per diem meals, rental cars, international trips, safety and travel-time pay.</description>
     </item>
     <item>
-      <title>Employee Handbook Acknowledgement Form</title>
-      <link>https://workintelhub.com/blogs/employee-handbook-acknowledgement</link>
-      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-handbook-acknowledgement</guid>
+      <title>Employee Handbook Acknowledgment Form</title>
+      <link>https://workintelhub.com/blogs/employee-handbook-acknowledgment</link>
+      <guid isPermaLink="true">https://workintelhub.com/blogs/employee-handbook-acknowledgment</guid>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Generate an employee handbook acknowledgement form with the at-will, not-a-contract and rights clauses, what the signature does and does not prove, and refusals.</description>
+      <description>Generate an employee handbook acknowledgment form with the at-will, not-a-contract and rights clauses, what the signature does and does not prove, and refusals.</description>
     </item>
     <item>
       <title>Timesheet Memes</title>
@@ -844,7 +914,7 @@
       <link>https://workintelhub.com/blogs/to-do-list-template</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/to-do-list-template</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Generate a printable to do list in five layouts, daily, weekly, prioritised, project and shared, with the rules that keep a list short enough to finish.</description>
+      <description>Generate a printable to do list in five layouts, daily, weekly, prioritized, project and shared, with the rules that keep a list short enough to finish.</description>
     </item>
     <item>
       <title>Time Management Skills</title>
@@ -907,7 +977,7 @@
       <link>https://workintelhub.com/blogs/context-switching</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/context-switching</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <description>What context switching is, what the research found behind the 23-minute and 40 per cent figures, a cost calculator for a person and a team, and the fixes that work.</description>
+      <description>What context switching is, what the research found behind the 23-minute and 40 percent figures, a cost calculator for a person and a team, and the fixes that work.</description>
     </item>
     <item>
       <title>Holiday Pay Calculator</title>
@@ -1411,7 +1481,7 @@
       <link>https://workintelhub.com/glossary/workforce-management</link>
       <guid isPermaLink="true">https://workintelhub.com/glossary/workforce-management</guid>
       <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Workforce management (WFM) is the set of processes an organisation uses to have the right number of people with the right skills working at the right times: forecasting demand, scheduling, time and attendance, absence management and labour compliance.</description>
+      <description>Workforce management (WFM) is the set of processes an organization uses to have the right number of people with the right skills working at the right times: forecasting demand, scheduling, time and attendance, absence management and labor compliance.</description>
     </item>
     <item>
       <title>Performance Improvement Plan: Template and Legal Risk</title>
@@ -1460,7 +1530,7 @@
       <link>https://workintelhub.com/glossary/aedt</link>
       <guid isPermaLink="true">https://workintelhub.com/glossary/aedt</guid>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
-      <description>An automated employment decision tool (AEDT) is software that uses machine learning, statistical modelling, data analytics or artificial intelligence to produce a score, classification or recommendation that substantially assists or replaces a human decision about hiring or promotion.</description>
+      <description>An automated employment decision tool (AEDT) is software that uses machine learning, statistical modeling, data analytics or artificial intelligence to produce a score, classification or recommendation that substantially assists or replaces a human decision about hiring or promotion.</description>
     </item>
     <item>
       <title>Biometric Time Clock</title>
@@ -1488,14 +1558,14 @@
       <link>https://workintelhub.com/blogs/employee-handbook</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-handbook</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <description>What an employee handbook has to contain, the disclaimer and acknowledgement it needs, and the labour law standard that makes broad policy wording unenforceable.</description>
+      <description>What an employee handbook has to contain, the disclaimer and acknowledgment it needs, and the labor law standard that makes broad policy wording unenforceable.</description>
     </item>
     <item>
       <title>eNPS</title>
       <link>https://workintelhub.com/glossary/enps</link>
       <guid isPermaLink="true">https://workintelhub.com/glossary/enps</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>eNPS, or employee Net Promoter Score, is the percentage of employees who would recommend the organisation as a place to work minus the percentage who would not, on a 0 to 10 scale.</description>
+      <description>eNPS, or employee Net Promoter Score, is the percentage of employees who would recommend the organization as a place to work minus the percentage who would not, on a 0 to 10 scale.</description>
     </item>
     <item>
       <title>Quiet Firing</title>
@@ -1516,7 +1586,7 @@
       <link>https://workintelhub.com/glossary/span-of-control</link>
       <guid isPermaLink="true">https://workintelhub.com/glossary/span-of-control</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Span of control is the number of direct reports a single manager has. A wide span means many reports and a flatter organisation; a narrow span means fewer reports and more layers.</description>
+      <description>Span of control is the number of direct reports a single manager has. A wide span means many reports and a flatter organization; a narrow span means fewer reports and more layers.</description>
     </item>
     <item>
       <title>Turnover Rate</title>
@@ -1544,7 +1614,7 @@
       <link>https://workintelhub.com/glossary/exempt-vs-non-exempt</link>
       <guid isPermaLink="true">https://workintelhub.com/glossary/exempt-vs-non-exempt</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description>An exempt employee is one the Fair Labor Standards Act excludes from its minimum wage and overtime requirements, because they are paid on a salary basis at or above a set threshold and their actual job duties fall within a recognised exemption.</description>
+      <description>An exempt employee is one the Fair Labor Standards Act excludes from its minimum wage and overtime requirements, because they are paid on a salary basis at or above a set threshold and their actual job duties fall within a recognized exemption.</description>
     </item>
     <item>
       <title>Presenteeism</title>
@@ -1684,14 +1754,14 @@
       <link>https://workintelhub.com/blogs/employee-social-media-monitoring</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-social-media-monitoring</guid>
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <description>What employers may lawfully see, the federal labour law that protects complaints about work, the state password laws, and why most social media policies are too broad to enforce.</description>
+      <description>What employers may lawfully see, the federal labor law that protects complaints about work, the state password laws, and why most social media policies are too broad to enforce.</description>
     </item>
     <item>
       <title>Employee Monitoring Consent Form</title>
       <link>https://workintelhub.com/blogs/employee-monitoring-consent-form</link>
       <guid isPermaLink="true">https://workintelhub.com/blogs/employee-monitoring-consent-form</guid>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
-      <description>A copy-paste monitoring acknowledgement form, what Delaware and New York actually require, and why consent is usually the wrong word in an employment relationship.</description>
+      <description>A copy-paste monitoring acknowledgment form, what Delaware and New York actually require, and why consent is usually the wrong word in an employment relationship.</description>
     </item>
     <item>
       <title>Employee Monitoring Policy Template</title>

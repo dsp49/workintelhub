@@ -143,7 +143,7 @@
             "name": "Does incognito mode hide my browsing from work Wi-Fi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Incognito stops the browser saving history on your device and nothing else. Google's own description says Incognito does not make you invisible and that your activity may still be visible to organisations that manage your network, naming your employer. Firefox says the same about private windows. The network logs are untouched."
+              "text": "No. Incognito stops the browser saving history on your device and nothing else. Google's own description says Incognito does not make you invisible and that your activity may still be visible to organizations that manage your network, naming your employer. Firefox says the same about private windows. The network logs are untouched."
             }
           },
           {
@@ -159,7 +159,7 @@
             "name": "Does a VPN hide my browsing from my employer's Wi-Fi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "It hides the destinations and content from the network, which then sees only a connection to one VPN server, the timing and the volume. It does not hide that you are using a VPN, which device you are using it from, or anything on a company managed device. Many corporate networks categorise and block VPN traffic, and using one may breach the acceptable use policy."
+              "text": "It hides the destinations and content from the network, which then sees only a connection to one VPN server, the timing and the volume. It does not hide that you are using a VPN, which device you are using it from, or anything on a company managed device. Many corporate networks categorize and block VPN traffic, and using one may breach the acceptable use policy."
             }
           },
           {
@@ -175,7 +175,7 @@
             "name": "How does my employer know which device is mine?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Four ways. The phone's Wi-Fi address, which both Apple and Android randomise per network but keep stable on the same network. The hostname your phone announces when it asks for an address, which is often your name. Your login if the network uses 802.1X credentials. And the captive portal sign-in on guest networks, which can be an email, a company account or an SMS to your phone number."
+              "text": "Four ways. The phone's Wi-Fi address, which both Apple and Android randomize per network but keep stable on the same network. The hostname your phone announces when it asks for an address, which is often your name. Your login if the network uses 802.1X credentials. And the captive portal sign-in on guest networks, which can be an email, a company account or an SMS to your phone number."
             }
           },
           {
@@ -343,7 +343,7 @@
       <h2 id="upgrades">Why encrypted DNS and ECH do not help on work Wi-Fi</h2>
       <p>
         Two technologies close the two leaks in the table. DNS over HTTPS hides the lookup inside
-        ordinary web traffic, and Encrypted Client Hello, standardised as
+        ordinary web traffic, and Encrypted Client Hello, standardized as
         <a href="https://datatracker.ietf.org/doc/html/rfc9849" target="_blank" rel="noopener">RFC 9849</a>
         in March 2026, encrypts the SNI field so an observer sees only that you connected to a
         content network, not which site. On your home network, with a modern browser, both may be on.
@@ -406,7 +406,7 @@
         A domain list is only interesting if it attaches to a name, and four things attach it.
       </p>
       <ul>
-        <li><strong>The Wi-Fi address.</strong> Both Apple and Android now randomise it, but per network. Apple's <a href="https://support.apple.com/en-us/102509" target="_blank" rel="noopener">private address documentation</a> says the device "identifies itself to each network using a different Wi-Fi address," and under the default setting that address does not rotate on the same network. Android derives the address from the network profile and keeps it "until a factory reset." The office sees the same identifier for your phone every day.</li>
+        <li><strong>The Wi-Fi address.</strong> Both Apple and Android now randomize it, but per network. Apple's <a href="https://support.apple.com/en-us/102509" target="_blank" rel="noopener">private address documentation</a> says the device "identifies itself to each network using a different Wi-Fi address," and under the default setting that address does not rotate on the same network. Android derives the address from the network profile and keeps it "until a factory reset." The office sees the same identifier for your phone every day.</li>
         <li><strong>The hostname.</strong> When a phone asks the network for an address it usually sends its name in the request, which on many phones is still the owner's name.</li>
         <li><strong>Your login.</strong> On a corporate network secured with 802.1X, the firewall's client page shows "the username the client sent via 802.1X authentication." Meraki's <a href="https://documentation.meraki.com/General_Administration/Cross-Platform_Content/Client_Details_Page" target="_blank" rel="noopener">client details page</a> lists it alongside the address, the manufacturer and the operating system.</li>
         <li><strong>The guest portal.</strong> A splash page that asks for an email, a company account or an SMS code records that against the device. Meraki notes the phone number appears as the recent user on the clients page.</li>
@@ -529,7 +529,7 @@
         </details>
         <details>
           <summary>Does incognito mode hide my browsing from work Wi-Fi?</summary>
-          <p>No. Incognito stops the browser saving history on your device and nothing else. Google's own description says Incognito does not make you invisible and that your activity may still be visible to organisations that manage your network, naming your employer. Firefox says the same about private windows. The network logs are untouched.</p>
+          <p>No. Incognito stops the browser saving history on your device and nothing else. Google's own description says Incognito does not make you invisible and that your activity may still be visible to organizations that manage your network, naming your employer. Firefox says the same about private windows. The network logs are untouched.</p>
         </details>
         <details>
           <summary>Can my employer see my Google searches on company Wi-Fi?</summary>
@@ -537,7 +537,7 @@
         </details>
         <details>
           <summary>Does a VPN hide my browsing from my employer's Wi-Fi?</summary>
-          <p>It hides the destinations and content from the network, which then sees only a connection to one VPN server, the timing and the volume. It does not hide that you are using a VPN, which device you are using it from, or anything on a company managed device. Many corporate networks categorise and block VPN traffic, and using one may breach the acceptable use policy.</p>
+          <p>It hides the destinations and content from the network, which then sees only a connection to one VPN server, the timing and the volume. It does not hide that you are using a VPN, which device you are using it from, or anything on a company managed device. Many corporate networks categorize and block VPN traffic, and using one may breach the acceptable use policy.</p>
         </details>
         <details>
           <summary>Can my employer see my phone's browsing if I use mobile data?</summary>
@@ -545,7 +545,7 @@
         </details>
         <details>
           <summary>How does my employer know which device is mine?</summary>
-          <p>Four ways. The phone's Wi-Fi address, which both Apple and Android randomise per network but keep stable on the same network. The hostname your phone announces when it asks for an address, which is often your name. Your login if the network uses 802.1X credentials. And the captive portal sign-in on guest networks, which can be an email, a company account or an SMS to your phone number.</p>
+          <p>Four ways. The phone's Wi-Fi address, which both Apple and Android randomize per network but keep stable on the same network. The hostname your phone announces when it asks for an address, which is often your name. Your login if the network uses 802.1X credentials. And the captive portal sign-in on guest networks, which can be an email, a company account or an SMS to your phone number.</p>
         </details>
         <details>
           <summary>Is guest Wi-Fi private?</summary>

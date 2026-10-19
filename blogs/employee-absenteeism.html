@@ -122,7 +122,7 @@
             "name": "How do you calculate the absenteeism rate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Divide unplanned days absent by days available, which is the number of employees multiplied by working days in the period, and multiply by 100. Forty employees over 21 working days have 840 available days; 34 lost is a 4.05 per cent rate. Planned leave is excluded."
+              "text": "Divide unplanned days absent by days available, which is the number of employees multiplied by working days in the period, and multiply by 100. Forty employees over 21 working days have 840 available days; 34 lost is a 4.05 percent rate. Planned leave is excluded."
             }
           },
           {
@@ -130,7 +130,7 @@
             "name": "What is a good absenteeism rate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Bureau of Labor Statistics reported a 3.2 per cent absence rate and a 1.7 per cent lost worktime rate for full-time workers in 2025. Days-lost rates under about 2 per cent are in line with the national pattern; rates well above it usually point to a specific team, manager or shift rather than the whole workforce."
+              "text": "The Bureau of Labor Statistics reported a 3.2 percent absence rate and a 1.7 percent lost worktime rate for full-time workers in 2025. Days-lost rates under about 2 percent are in line with the national pattern; rates well above it usually point to a specific team, manager or shift rather than the whole workforce."
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "What is the Bradford factor?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A score for an individual's absence pattern: the number of separate absences squared, multiplied by total days absent. It weights frequent short absences heavily. It is useful for spotting patterns worth a conversation and dangerous as an automatic disciplinary trigger, because it penalises chronic and protected conditions."
+              "text": "A score for an individual's absence pattern: the number of separate absences squared, multiplied by total days absent. It weights frequent short absences heavily. It is useful for spotting patterns worth a conversation and dangerous as an automatic disciplinary trigger, because it penalizes chronic and protected conditions."
             }
           },
           {
@@ -223,7 +223,7 @@
         days, because someone has to cover them or the work waits.
       </p>
       <p>
-        The calculator gives the rate, the annualised days per person and the cost. The rest of
+        The calculator gives the rate, the annualized days per person and the cost. The rest of
         the page covers what the rate is compared with, the pattern measures that find the real
         problem, what causes absence at the level a manager can change, and the legal line between
         managing attendance and punishing protected leave.
@@ -248,7 +248,7 @@
           <div><label for="ab-emp">Employees</label><input id="ab-emp" type="number" min="1" step="1" value="40"></div>
           <div><label for="ab-days">Working days in the period</label><input id="ab-days" type="number" min="1" step="1" value="21"><p class="hint">21 for a typical month, 250 for a year</p></div>
           <div><label for="ab-absent">Unplanned days absent (all employees)</label><input id="ab-absent" type="number" min="0" step="0.5" value="34"></div>
-          <div><label for="ab-cost">Average daily labour cost per employee ($)</label><input id="ab-cost" type="number" min="0" step="1" value="240"></div>
+          <div><label for="ab-cost">Average daily labor cost per employee ($)</label><input id="ab-cost" type="number" min="0" step="1" value="240"></div>
           <div><label for="ab-cover">Cover cost as a share of daily cost</label><select id="ab-cover"><option value="0">None (work waits)</option><option value="1" selected>100% (agency or overtime cover)</option><option value="1.5">150% (overtime at time and a half)</option></select></div>
         </div>
         <div class="calc__out" id="ab-out"></div>
@@ -265,11 +265,11 @@
           var direct = a * c, cover = a * c * cv, total = direct + cover;
           var html = row("Absenteeism rate", rate.toFixed(2) + "%" + (rate > 3.2 ? " (above the 3.2% BLS 2025 benchmark)" : " (at or below the 3.2% BLS 2025 benchmark)"));
           html += row("Days absent per employee in the period", perHead.toFixed(2));
-          html += row("Annualised days per employee", annual.toFixed(1));
+          html += row("Annualized days per employee", annual.toFixed(1));
           html += row("Direct cost (paid or lost days)", money(direct));
           html += row("Cover cost", money(cover));
           html += row("Total cost of absence in the period", money(total));
-          if (d) html += row("Annualised cost", money(total * 250 / d));
+          if (d) html += row("Annualized cost", money(total * 250 / d));
           el("ab-out").innerHTML = html;
         }
         ["ab-emp", "ab-days", "ab-absent", "ab-cost", "ab-cover"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
@@ -280,15 +280,15 @@
       <p>
         Absenteeism rate = (unplanned days absent &divide; days available) &times; 100, where days
         available is employees times working days in the period. Forty employees over a 21-day
-        month have 840 available days; 34 lost is 4.05 per cent.
+        month have 840 available days; 34 lost is 4.05 percent.
       </p>
       <p>
         The <a href="https://www.bls.gov/cps/cpsaat46.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a> reports absence for full-time wage and salary workers from the Current Population
-        Survey. For 2025 the absence rate was 3.2 per cent, of which 2.2 points were illness or
-        injury and 1.0 other reasons, and the lost worktime rate was 1.7 per cent. The absence
+        Survey. For 2025 the absence rate was 3.2 percent, of which 2.2 points were illness or
+        injury and 1.0 other reasons, and the lost worktime rate was 1.7 percent. The absence
         rate counts people who missed any time in the survey week; the lost worktime rate counts
         hours actually lost, and is the closer comparison for a days-lost calculation. A team
-        running well above 2 per cent of days lost is above the national pattern.
+        running well above 2 percent of days lost is above the national pattern.
       </p>
       <p>
         Two cautions. Include only unplanned absence; vacation, approved leave and holidays are not
@@ -352,7 +352,7 @@
       <h2 id="key-takeaways">Key takeaways</h2>
       <ul>
         <li>Absenteeism rate is unplanned days absent divided by days available, times 100. Exclude planned leave.</li>
-        <li>BLS 2025: 3.2 per cent absence rate and 1.7 per cent lost worktime for full-time workers. Above 2 per cent of days lost is above the national pattern.</li>
+        <li>BLS 2025: 3.2 percent absence rate and 1.7 percent lost worktime for full-time workers. Above 2 percent of days lost is above the national pattern.</li>
         <li>Count occurrences separately from days. Frequent short absence is the avoidable pattern; the Bradford factor surfaces it but must not trigger discipline on its own.</li>
         <li>Cut the rate by day of week and by manager. The company average hides the team with the problem.</li>
         <li>The controllable causes are overload, a bad manager, schedules that ignore availability and no sick pay. Illness itself mostly is not controllable.</li>
@@ -363,15 +363,15 @@
         <h2 id="faq">Frequently asked questions</h2>
         <details>
           <summary>How do you calculate the absenteeism rate?</summary>
-          <p>Divide unplanned days absent by days available, which is the number of employees multiplied by working days in the period, and multiply by 100. Forty employees over 21 working days have 840 available days; 34 lost is a 4.05 per cent rate. Planned leave is excluded.</p>
+          <p>Divide unplanned days absent by days available, which is the number of employees multiplied by working days in the period, and multiply by 100. Forty employees over 21 working days have 840 available days; 34 lost is a 4.05 percent rate. Planned leave is excluded.</p>
         </details>
         <details>
           <summary>What is a good absenteeism rate?</summary>
-          <p>The Bureau of Labor Statistics reported a 3.2 per cent absence rate and a 1.7 per cent lost worktime rate for full-time workers in 2025. Days-lost rates under about 2 per cent are in line with the national pattern; rates well above it usually point to a specific team, manager or shift rather than the whole workforce.</p>
+          <p>The Bureau of Labor Statistics reported a 3.2 percent absence rate and a 1.7 percent lost worktime rate for full-time workers in 2025. Days-lost rates under about 2 percent are in line with the national pattern; rates well above it usually point to a specific team, manager or shift rather than the whole workforce.</p>
         </details>
         <details>
           <summary>What is the Bradford factor?</summary>
-          <p>A score for an individual's absence pattern: the number of separate absences squared, multiplied by total days absent. It weights frequent short absences heavily. It is useful for spotting patterns worth a conversation and dangerous as an automatic disciplinary trigger, because it penalises chronic and protected conditions.</p>
+          <p>A score for an individual's absence pattern: the number of separate absences squared, multiplied by total days absent. It weights frequent short absences heavily. It is useful for spotting patterns worth a conversation and dangerous as an automatic disciplinary trigger, because it penalizes chronic and protected conditions.</p>
         </details>
         <details>
           <summary>What is the difference between absenteeism and presenteeism?</summary>

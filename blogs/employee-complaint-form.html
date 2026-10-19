@@ -122,7 +122,7 @@
             "name": "What should an employee complaint form include?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An anti-retaliation statement at the top; the employee's details with an anonymous option; what happened in their own words; when, where and whether it is continuing; who was involved and any witnesses; a type-specific section such as protected basis for harassment or pay periods for wage complaints; documents; previous reports; the outcome they want; a signature; and an HR block recording receipt, acknowledgement, investigator, interim measures and closure."
+              "text": "An anti-retaliation statement at the top; the employee's details with an anonymous option; what happened in their own words; when, where and whether it is continuing; who was involved and any witnesses; a type-specific section such as protected basis for harassment or pay periods for wage complaints; documents; previous reports; the outcome they want; a signature; and an HR block recording receipt, acknowledgment, investigator, interim measures and closure."
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "Where should complaint records be kept?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "In a confidential investigation file separate from the personnel files of everyone involved, containing the form, acknowledgement, investigator's notes and finding, action taken, closure letters and follow-up notes. Retain it for the longest applicable period; records relating to an EEOC charge must be kept until the matter is finally disposed of."
+              "text": "In a confidential investigation file separate from the personnel files of everyone involved, containing the form, acknowledgment, investigator's notes and finding, action taken, closure letters and follow-up notes. Retain it for the longest applicable period; records relating to an EEOC charge must be kept until the matter is finally disposed of."
             }
           }
         ]
@@ -252,7 +252,7 @@
           <div><label for="cf-type">Complaint type</label><select id="cf-type"><option value="general">General workplace concern</option><option value="harass">Harassment or discrimination</option><option value="safety">Safety hazard</option><option value="pay">Pay or hours</option><option value="retal">Retaliation</option></select></div>
           <div><label for="cf-anon">Allow anonymous submission?</label><select id="cf-anon"><option value="yes">Yes, with the limits explained</option><option value="no">No, name required</option></select></div>
           <div><label for="cf-contact">Where the form is submitted</label><input id="cf-contact" type="text" maxlength="120" placeholder="hr@company.com, the HR office, or the reporting hotline"></div>
-          <div><label for="cf-days">Acknowledgement within (business days)</label><input id="cf-days" type="number" min="1" max="10" step="1" value="2"></div>
+          <div><label for="cf-days">Acknowledgment within (business days)</label><input id="cf-days" type="number" min="1" max="10" step="1" value="2"></div>
         </div>
         <div class="tool-actions"><button class="btn btn-sm" type="button" id="cf-build">Generate form</button><button class="btn btn-sm btn-outline" type="button" id="cf-copy">Copy</button><button class="btn btn-sm btn-outline" type="button" id="cf-print">Print</button></div>
         <textarea id="cf-out" aria-label="Generated employee complaint form" readonly style="min-height:400px"></textarea>
@@ -265,7 +265,7 @@
         function build() {
           var co = v("cf-co") || "[Company]", t = v("cf-type"), anon = v("cf-anon") === "yes", where = v("cf-contact") || "[HR contact]", days = v("cf-days") || "2", L = [];
           var title = {general: "EMPLOYEE COMPLAINT FORM", harass: "HARASSMENT OR DISCRIMINATION COMPLAINT FORM", safety: "SAFETY CONCERN REPORT", pay: "PAY OR HOURS COMPLAINT FORM", retal: "RETALIATION COMPLAINT FORM"}[t];
-          L.push(co.toUpperCase() + "   " + title); L.push("Submit to: " + where + ". You will receive an acknowledgement within " + days + " business days."); L.push("");
+          L.push(co.toUpperCase() + "   " + title); L.push("Submit to: " + where + ". You will receive an acknowledgment within " + days + " business days."); L.push("");
           L.push(co + " prohibits retaliation against anyone who raises a concern in good faith or takes part in an investigation. If you believe you have been retaliated against for using this form, report it to " + where + " or to any manager you trust.");
           L.push("");
           L.push("1. YOUR DETAILS" + (anon ? " (optional: you may submit anonymously, but we may then be unable to follow up with you or to investigate fully)" : ""));
@@ -367,7 +367,7 @@
       </ol>
       <p>
         Target 30 days from complaint to closure for most matters and say so in the
-        acknowledgement. Complaints that drift for months are the ones that become charges.
+        acknowledgment. Complaints that drift for months are the ones that become charges.
       </p>
       <h2 id="retaliation">Retaliation: the rule that applies from the moment of the complaint</h2>
       <p>
@@ -403,7 +403,7 @@
         is ignore a complaint because it was anonymous.
       </p>
       <p>
-        The record at the end is the form, the acknowledgement, the investigator's notes and
+        The record at the end is the form, the acknowledgment, the investigator's notes and
         finding, the action taken, the closure letters and the follow-up notes, kept in a
         confidential investigation file separate from the personnel files of the people
         involved, and retained for the longest applicable period (EEOC charge-related records
@@ -426,7 +426,7 @@
         <h2 id="faq">Frequently asked questions</h2>
         <details>
           <summary>What should an employee complaint form include?</summary>
-          <p>An anti-retaliation statement at the top; the employee's details with an anonymous option; what happened in their own words; when, where and whether it is continuing; who was involved and any witnesses; a type-specific section such as protected basis for harassment or pay periods for wage complaints; documents; previous reports; the outcome they want; a signature; and an HR block recording receipt, acknowledgement, investigator, interim measures and closure.</p>
+          <p>An anti-retaliation statement at the top; the employee's details with an anonymous option; what happened in their own words; when, where and whether it is continuing; who was involved and any witnesses; a type-specific section such as protected basis for harassment or pay periods for wage complaints; documents; previous reports; the outcome they want; a signature; and an HR block recording receipt, acknowledgment, investigator, interim measures and closure.</p>
         </details>
         <details>
           <summary>How quickly should HR respond to an employee complaint?</summary>
@@ -446,7 +446,7 @@
         </details>
         <details>
           <summary>Where should complaint records be kept?</summary>
-          <p>In a confidential investigation file separate from the personnel files of everyone involved, containing the form, acknowledgement, investigator's notes and finding, action taken, closure letters and follow-up notes. Retain it for the longest applicable period; records relating to an EEOC charge must be kept until the matter is finally disposed of.</p>
+          <p>In a confidential investigation file separate from the personnel files of everyone involved, containing the form, acknowledgment, investigator's notes and finding, action taken, closure letters and follow-up notes. Retain it for the longest applicable period; records relating to an EEOC charge must be kept until the matter is finally disposed of.</p>
         </details>
       </section>
 

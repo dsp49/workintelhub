@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume Screening: How It Works, Where It Fails, and the Law</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="How AI resume screening ranks candidates, what the bias studies and Mobley v. Workday found, which state laws apply, and the questions to ask a vendor first." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/ai-resume-screening" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/ai-resume-screening" />
+  <meta property="og:title" content="AI Resume Screening: How It Works, Where It Fails, and the Law" />
+  <meta property="og:description" content="How AI resume screening ranks candidates, what the bias studies and Mobley v. Workday found, which state laws apply, and the questions to ask a vendor first." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/ai-resume-screening.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-10-19T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-10-19T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Resume Screening: How It Works, Where It Fails, and the Law" />
+  <meta name="twitter:description" content="How AI resume screening ranks candidates, what the bias studies and Mobley v. Workday found, which state laws apply, and the questions to ask a vendor first." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/ai-resume-screening.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/ai-resume-screening#article",
+      "headline": "AI Resume Screening: How It Works, Where It Fails, and the Law",
+      "description": "How AI resume screening ranks candidates, what the bias studies and Mobley v. Workday found, which state laws apply, and the questions to ask a vendor first.",
+      "image": "https://workintelhub.com/images/blog/ai-resume-screening.png",
+      "datePublished": "2026-10-19T00:00:00+00:00",
+      "dateModified": "2026-10-19T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/ai-resume-screening"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/ai-resume-screening#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Resume Screening: How It Works, Where It Fails, and the Law"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/ai-resume-screening#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI resume screening work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three ways. Knockout filters remove applications that fail a rule such as a required degree. Matching models score each resume against the job description and rank the list. Large language model tools read the resume and produce a judgment, summary or score. The legal duties attach when the output substantially assists or replaces the recruiter's decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI resume screening biased?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can be. A 2024 University of Washington study found three large language models preferred white-associated names over Black-associated names 85% to 9% and male over female names 52% to 11% on identical resumes. Amazon abandoned a model in 2018 that had learned to penalize women from its own hiring history. Bias depends on the training data and the testing, which is why the vendor questions matter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it legal to use AI to screen resumes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, subject to discrimination law and state rules. Title VII, the ADA and the ADEA apply to the tool's outcomes. New York City requires a bias audit and 10 business days' notice. Illinois requires notice and bans discriminatory effect. California requires four years of records and makes the vendor the employer's agent. Colorado requires notice and human review from January 1, 2027."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the four-fifths rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A rule in the federal Uniform Guidelines on Employee Selection Procedures, 29 CFR 1607.4(D), under which a selection rate for any race, sex or ethnic group that is less than four-fifths of the rate for the group with the highest rate is generally regarded as evidence of adverse impact. It is a rule of thumb, not a safe harbor, and New York City's bias audit uses the same ratio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Mobley v. Workday about?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A job applicant alleges Workday's screening tools discriminated against him by race, age and disability across more than 100 applications. The court allowed claims against Workday as the employers' agent, conditionally certified a nationwide collective of applicants aged 40 and over on May 16, 2025, and on June 22, 2026 allowed California FEHA claims to proceed. The merits have not been decided."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do most resumes get rejected by software before a human sees them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The widely quoted 75% figure comes from a 2012 vendor estimate and has never been measured. The better-sourced finding is Harvard Business School's 2021 report, in which 88% of executives agreed their automated tools screen out qualified candidates, mostly through over-specified knockout criteria rather than AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do candidates object to AI screening?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Pew's December 2022 survey of 11,004 US adults, 66% would not want to apply to an employer using AI in hiring decisions and 71% opposed AI making the final decision. Behavior differs: 81% of job seekers use or plan to use AI in their own search according to LinkedIn's 2026 data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should we use AI to screen resumes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use it to surface and summarize for a human who reads every application, and the legal exposure is small. Use it to rank or reject, and you need a bias audit, candidate notice, impact testing by sex, race and age each quarter, a human reviewer with override authority, and records kept for four years. Over-specified knockout criteria do more damage than the AI and should be removed either way."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>AI Resume Screening: How It Works, Where It Fails, and the Law</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">October 19, 2026 &middot; 14 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/ai-resume-screening.png" alt="A four-point AI star with a smaller satellite star and a gold dot" width="1200" height="630" />
+      </figure>
+
+      <p>
+        AI resume screening is the use of a model to read applications and rank, score or filter candidates before a recruiter looks at them. It is now the most common use of AI in recruiting: in iCIMS and Aptitude Research's April 2026 survey of more than 400 US talent acquisition leaders, 69% used AI somewhere in hiring and screening was the top use at 58%. In the same survey 45% had no governance framework for it. That gap, between adoption and control, is what this page is about.
+      </p>
+      <p>
+        The pages that rank for this topic are written by the vendors that sell the tools or by resume services selling the opposite promise, that you can beat the tool. Neither cites the studies that measured bias in the current generation of language models, the lawsuit that has turned a vendor into a defendant, or the state laws that took effect in 2025 and 2026. This guide does, with the date and sample on every figure, and it is written for the HR team deciding whether and how to use one.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#what">What AI resume screening is and is not</a></li>
+          <li><a href="#adoption">How many employers use it</a></li>
+          <li><a href="#fails">Where it fails: the evidence</a></li>
+          <li><a href="#law">The law that applies in 2026</a></li>
+          <li><a href="#mobley">Mobley v. Workday</a></li>
+          <li><a href="#candidates">What candidates think, and what they do</a></li>
+          <li><a href="#vendor">Questions to ask a vendor</a></li>
+          <li><a href="#deploy">How to deploy one defensibly</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="what">What AI resume screening is and is not</h2>
+      <p>
+        Three different things get called AI resume screening, and the law treats them differently.
+      </p>
+      <ul>
+        <li><strong>Keyword and knockout filters</strong> inside an applicant tracking system. A rule such as "must hold a bachelor's degree" or "must have the words project management" removes applications before anyone reads them. This is automation, not AI, but it is the source of the "75% of resumes are rejected by a robot" claim, which traces to a 2012 vendor estimate and has never been measured. Harvard Business School's 2021 Hidden Workers report found 88% of executives saying their automated tools screen out qualified candidates, which is the better-sourced version of the same concern.</li>
+        <li><strong>Matching and ranking models</strong> that score each resume against a job description and order the list. These have been in applicant tracking systems for a decade and are what the regulations mean by an automated employment decision tool when a recruiter relies on the order.</li>
+        <li><strong>Large language model screening</strong>, where a general model reads the resume and the job and produces a judgment, a summary or a score. This is the newest and the one the 2024 bias studies tested.</li>
+      </ul>
+      <p>
+        The legal line is whether the tool "substantially assists or replaces" the decision in New York City's
+        words, or "materially influences" it in Colorado's. A tool that summarizes a resume for a recruiter
+        who then reads the resume is outside both. A tool whose ranking determines who gets a phone screen is
+        inside both.
+      </p>
+
+      <h2 id="adoption">How many employers use it</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Finding</th><th>Source, sample and date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>69% of US talent acquisition leaders use AI somewhere in hiring; 18% use it broadly; screening is the top use at 58%; 45% have no governance framework; 74% say candidates use AI to apply</td><td>iCIMS and Aptitude Research, more than 400 US talent acquisition leaders, April 30, 2026</td></tr>
+            <tr><td>93% of recruiting professionals plan to increase AI use; 66% plan more AI in pre-screening interviews; US applications per role have doubled since spring 2022; 81% of job seekers use or plan to use AI in their search</td><td>LinkedIn Talent Trends 2026, 6,554 HR professionals and 19,113 consumers in 13 markets, fielded November 2025, published January 7, 2026</td></tr>
+            <tr><td>About one in four organizations used automation or AI in HR; among them, 64% used tools that automatically filter out unqualified applicants and 19% had accidentally excluded qualified candidates; 85% reported time savings; two in five said their vendor was very transparent about bias controls</td><td>SHRM, 1,688 HR professionals, fielded February 1 to 17, 2022, published April 2022</td></tr>
+            <tr><td>39% of HR professionals say their organization uses AI in HR; recruiting is the top function at 27%; 49% have AI use policies</td><td>SHRM State of AI in HR, 1,908 HR professionals, December 2025</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Two readings matter. Use has roughly tripled in four years. And the volume problem that drives it
+        is real: LinkedIn's data show applications per US role doubling since 2022, and 74% of talent leaders
+        say candidates now use AI to write those applications. The model is screening resumes that another
+        model wrote. Our <a href="/blogs/hr-technology-statistics">HR technology statistics</a> page tracks
+        the adoption series.
+      </p>
+
+      <h2 id="fails">Where it fails: the evidence</h2>
+      <h3>Name-based bias in current language models</h3>
+      <p>
+        The University of Washington study published October 31, 2024 is the most direct test of the newest
+        tools. Researchers ran three large language models over more than 550 real resumes and 500 real job
+        listings, swapping in 120 first names associated with white, Black, male and female people, for more
+        than three million comparisons. The models preferred the resume with a white-associated name 85% of
+        the time and the Black-associated name 9% of the time; male-associated names 52% of the time and
+        female-associated names 11%. Black male names were never preferred over white male names. The
+        resumes were identical apart from the name. This is the failure that a keyword filter cannot have
+        and a language model does.
+      </p>
+      <h3>Learning the past</h3>
+      <p>
+        Reuters reported on October 10, 2018 that Amazon had scrapped an experimental recruiting model after
+        finding it penalized resumes containing the word "women's", as in a women's chess club, and
+        downgraded graduates of two all-women's colleges. The model had been trained on ten years of resumes
+        submitted to a company whose technical hires were mostly men, and it learned that pattern as merit.
+        Every ranking model trained on an employer's own hiring history carries the same risk, which is why
+        the questions to ask a vendor below start with training data.
+      </p>
+      <h3>Qualified people filtered out</h3>
+      <p>
+        SHRM's 2022 survey found that among organizations using automated filters, 19% knew they had
+        excluded qualified candidates by accident. Harvard Business School and Accenture's Hidden Workers
+        report, September 2021, surveyed more than 2,250 executives in the US, UK and Germany and found 88%
+        agreeing that qualified, highly skilled candidates were vetted out because they did not match the
+        exact criteria. The report attributed the problem to over-specified filters, such as requiring a
+        degree for a role that does not need one, and to gaps in work history being treated as disqualifying.
+      </p>
+      <h3>Opaque scoring</h3>
+      <p>
+        Bloomberg's 2024 test of a general language model ranking identical resumes with different names
+        found similar name effects to the Washington study. Vendors' own bias audits published under New
+        York City's law show impact ratios, but a 2024 study of 391 New York City employers by 155 student
+        investigators found only about 5% had published the required audit, so there is very little public
+        data on how deployed tools perform.
+      </p>
+
+      <h2 id="law">The law that applies in 2026</h2>
+      <p>
+        Federal discrimination law applies to a model's decision exactly as it applies to a recruiter's.
+        Title VII's disparate impact provision makes an employer liable for a neutral practice that
+        disproportionately excludes a protected group unless the practice is job-related and consistent with
+        business necessity. The Uniform Guidelines on Employee Selection Procedures,
+        29 CFR 1607.4(D), treat a selection rate for any group below four-fifths of the highest group's rate
+        as evidence of adverse impact. The Equal Employment Opportunity Commission's May 2023 technical
+        assistance on this point was removed from its website in January 2025; the regulation was not. The
+        Age Discrimination in Employment Act and the Americans with Disabilities Act apply too, and the ADA
+        adds a duty to offer accommodations in the screening process, for example to a candidate whose
+        disability produces a gap in work history.
+      </p>
+      <p>
+        State and local rules add notice, audit and record duties. New York City's Local Law 144 requires an
+        independent bias audit within a year before use, a public summary and 10 business days' notice to
+        candidates, enforced since July 5, 2023. Illinois HB 3773, in force since January 1, 2026, makes AI
+        use with a discriminatory effect in recruitment and hiring a civil rights violation and requires
+        notice. California's Civil Rights Council regulations, in force since October 1, 2025, make the
+        screening vendor the employer's agent and require four years of records. Colorado's re-enacted law
+        requires notice, a 30-day explanation after rejection and human review on request for decisions from
+        January 1, 2027. The full table with citations is on our
+        <a href="/blogs/ai-hiring-laws-by-state">AI hiring laws by state</a> page.
+      </p>
+
+      <h2 id="mobley">Mobley v. Workday</h2>
+      <p>
+        The case that every HR vendor is watching is <em>Mobley v. Workday, Inc.</em>, No. 23-cv-00770 in the
+        Northern District of California, before Judge Rita Lin. Derek Mobley, a Black man over 40 with
+        anxiety and depression, alleged he was rejected from more than 100 jobs at employers using Workday's
+        screening tools. The court let the case proceed against Workday as an agent of the employers, and on
+        May 16, 2025 conditionally certified a nationwide collective of applicants aged 40 and over under the
+        Age Discrimination in Employment Act. On June 22, 2026 the court granted in part and denied in part
+        Workday's motion to dismiss the third amended complaint, letting California Fair Employment and
+        Housing Act claims proceed on the basis that Workday's algorithmic tools materially participated in
+        the decisions from its California headquarters, allowing an amended disability claim, and striking
+        a theory that Workday was itself the employer. The case has not been decided on the merits. Its
+        significance is procedural: a vendor whose tool screens applicants can be sued as the employer's
+        agent, and a collective of every older applicant screened by the tool can be certified.
+      </p>
+
+      <h2 id="candidates">What candidates think, and what they do</h2>
+      <p>
+        Pew Research Center's survey of 11,004 US adults, fielded December 12 to 18, 2022 and published
+        April 20, 2023, found 66% would not want to apply for a job with an employer that used AI to help
+        make hiring decisions, 71% opposed AI making a final hiring decision, and 47% thought AI would treat
+        all applicants more consistently than humans while 15% thought it would do worse. Women were more
+        opposed than men, 70% to 61%. Those attitudes have not stopped behavior: LinkedIn's 2026 data show
+        81% of job seekers using or planning to use AI in their search, and talent leaders report AI-written
+        applications as the norm. The practical consequence is that keyword matching is now matching the
+        model's keywords, and the signal in a resume has fallen. Several employers have responded by moving
+        weight from the resume to structured work samples, which is also the approach with the strongest
+        validity evidence.
+      </p>
+
+      <h2 id="vendor">Questions to ask a vendor</h2>
+      <ol>
+        <li><strong>What was the model trained on?</strong> If the answer is our hiring outcomes, ask how they tested for the Amazon problem. If the answer is a general language model, ask for name-swap test results like the Washington study.</li>
+        <li><strong>Can we see the bias audit for our configuration, not the product in general?</strong> New York City requires an audit of the tool as used; a generic audit of the vendor's platform does not meet it if your weighting differs.</li>
+        <li><strong>What are the impact ratios by sex and by race and ethnicity, and by age band?</strong> The four-fifths rule is the threshold the regulator and the plaintiffs' bar will apply.</li>
+        <li><strong>What does the tool do with a gap in employment, a non-traditional credential or a disability disclosure?</strong> The ADA accommodation duty attaches to screening.</li>
+        <li><strong>Can a recruiter see why a candidate was ranked where they were?</strong> Colorado's 30-day explanation and Connecticut's adverse-decision explanation both require you to say what the tool did.</li>
+        <li><strong>Will you supply the developer documentation Colorado requires from January 1, 2027?</strong> Intended use, training data categories, known limitations, update notices.</li>
+        <li><strong>What are the retention terms, and can we keep four years of records as California requires?</strong></li>
+        <li><strong>Who is liable if the tool discriminates?</strong> Under California's regulations the vendor is your agent; under Colorado's law an indemnity for one's own discrimination is void; <em>Mobley</em> shows the vendor can be sued directly. Get the contract reviewed with those three facts in mind.</li>
+      </ol>
+
+      <h2 id="deploy">How to deploy one defensibly</h2>
+      <ol>
+        <li>Use the tool to surface and summarize, not to reject. A tool that produces a reading order for a human who reads every application is outside most of the rules above and keeps the recruiter accountable.</li>
+        <li>If the tool does reject or rank for action, run the four-fifths test on your own applicant data every quarter, by sex, race and ethnicity, and age band, and keep the results.</li>
+        <li>Write the candidate notice once and use it everywhere: which tool, what it does, how to request accommodation, how to request human review.</li>
+        <li>Designate a reviewer with authority to override and a documented process for using it. Colorado defines this; it is good evidence under every other law.</li>
+        <li>Remove knockout criteria that are not job-related. The Hidden Workers report's core finding was that over-specification, not AI, does most of the filtering out.</li>
+        <li>Record the model version, the configuration and the date of each change. Four years in California, three in Colorado, one year of audit currency in New York City.</li>
+        <li>Put the whole arrangement in your <a href="/blogs/ai-use-policy-template">AI use policy</a> under the employment decisions section, with the named approvers.</li>
+      </ol>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>69% of US talent acquisition leaders use AI in hiring and screening is the top use at 58%, but 45% have no governance framework (iCIMS and Aptitude Research, April 2026).</li>
+        <li>Three large language models preferred resumes with white-associated names 85% of the time and Black-associated names 9% of the time in a 2024 University of Washington test of three million comparisons on otherwise identical resumes.</li>
+        <li>Amazon scrapped a recruiting model in 2018 that penalized the word 'women's'; 88% of executives told Harvard Business School in 2021 that their filters screen out qualified candidates; 19% of SHRM respondents in 2022 knew they had done so.</li>
+        <li>Title VII disparate impact, the ADA, the ADEA and the four-fifths rule in 29 CFR 1607.4(D) apply to AI screening. The EEOC's 2023 guidance was removed in January 2025; the law was not.</li>
+        <li>NYC requires a bias audit and notice; Illinois bans discriminatory effect and requires notice; California makes the vendor the employer's agent with four years of records; Colorado requires notice and human review from January 1, 2027.</li>
+        <li>Mobley v. Workday has a nationwide ADEA collective certified since May 16, 2025 and FEHA claims proceeding since June 22, 2026 against the vendor as the employers' agent.</li>
+        <li>66% of US adults would not apply to an employer using AI in hiring decisions (Pew, December 2022), yet 81% of job seekers use or plan to use AI in their search (LinkedIn, 2026).</li>
+        <li>The defensible deployment surfaces and summarizes rather than rejects, tests impact ratios quarterly, gives one notice everywhere and names a reviewer with override authority.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="hr">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How does AI resume screening work?</summary>
+          <p>Three ways. Knockout filters remove applications that fail a rule such as a required degree. Matching models score each resume against the job description and rank the list. Large language model tools read the resume and produce a judgment, summary or score. The legal duties attach when the output substantially assists or replaces the recruiter's decision.</p>
+        </details>
+        <details>
+          <summary>Is AI resume screening biased?</summary>
+          <p>It can be. A 2024 University of Washington study found three large language models preferred white-associated names over Black-associated names 85% to 9% and male over female names 52% to 11% on identical resumes. Amazon abandoned a model in 2018 that had learned to penalize women from its own hiring history. Bias depends on the training data and the testing, which is why the vendor questions matter.</p>
+        </details>
+        <details>
+          <summary>Is it legal to use AI to screen resumes?</summary>
+          <p>Yes, subject to discrimination law and state rules. Title VII, the ADA and the ADEA apply to the tool's outcomes. New York City requires a bias audit and 10 business days' notice. Illinois requires notice and bans discriminatory effect. California requires four years of records and makes the vendor the employer's agent. Colorado requires notice and human review from January 1, 2027.</p>
+        </details>
+        <details>
+          <summary>What is the four-fifths rule?</summary>
+          <p>A rule in the federal Uniform Guidelines on Employee Selection Procedures, 29 CFR 1607.4(D), under which a selection rate for any race, sex or ethnic group that is less than four-fifths of the rate for the group with the highest rate is generally regarded as evidence of adverse impact. It is a rule of thumb, not a safe harbor, and New York City's bias audit uses the same ratio.</p>
+        </details>
+        <details>
+          <summary>What is Mobley v. Workday about?</summary>
+          <p>A job applicant alleges Workday's screening tools discriminated against him by race, age and disability across more than 100 applications. The court allowed claims against Workday as the employers' agent, conditionally certified a nationwide collective of applicants aged 40 and over on May 16, 2025, and on June 22, 2026 allowed California FEHA claims to proceed. The merits have not been decided.</p>
+        </details>
+        <details>
+          <summary>Do most resumes get rejected by software before a human sees them?</summary>
+          <p>The widely quoted 75% figure comes from a 2012 vendor estimate and has never been measured. The better-sourced finding is Harvard Business School's 2021 report, in which 88% of executives agreed their automated tools screen out qualified candidates, mostly through over-specified knockout criteria rather than AI.</p>
+        </details>
+        <details>
+          <summary>Do candidates object to AI screening?</summary>
+          <p>In Pew's December 2022 survey of 11,004 US adults, 66% would not want to apply to an employer using AI in hiring decisions and 71% opposed AI making the final decision. Behavior differs: 81% of job seekers use or plan to use AI in their own search according to LinkedIn's 2026 data.</p>
+        </details>
+        <details>
+          <summary>Should we use AI to screen resumes?</summary>
+          <p>Use it to surface and summarize for a human who reads every application, and the legal exposure is small. Use it to rank or reject, and you need a bias audit, candidate notice, impact testing by sex, race and age each quarter, a human reviewer with override authority, and records kept for four years. Over-specified knockout criteria do more damage than the AI and should be removed either way.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/ai-hiring-laws-by-state">AI Hiring Laws by State</a></li>
+          <li><a href="/blogs/colorado-ai-act-employers">Colorado AI Act for Employers</a></li>
+          <li><a href="/blogs/hr-technology-statistics">HR Technology Statistics (2026)</a></li>
+          <li><a href="/blogs/ai-agents-for-hr">Agentic AI in HR</a></li>
+          <li><a href="/blogs/job-description-template">Job Description Template</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

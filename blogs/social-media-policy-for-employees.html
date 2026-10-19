@@ -130,7 +130,7 @@
             "name": "What should a social media policy for employees include?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Who may post from official accounts; a request to make clear personal views are personal; a requirement to disclose employment when promoting the company's products; a specific list of confidential information that may not be posted; the harassment policy applied online; where media enquiries go; what to do if a post goes wrong; and an express statement that discussing working conditions, union activity and reporting to agencies is not restricted."
+              "text": "Who may post from official accounts; a request to make clear personal views are personal; a requirement to disclose employment when promoting the company's products; a specific list of confidential information that may not be posted; the harassment policy applied online; where media inquiries go; what to do if a post goes wrong; and an express statement that discussing working conditions, union activity and reporting to agencies is not restricted."
             }
           },
           {
@@ -154,7 +154,7 @@
             "name": "Can an employee be fired for a social media post?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For posting confidential data, harassing a colleague or customer, or posting fake reviews, yes, through the normal discipline process with the specific breach documented. For criticising the company's pay, scheduling or management, even rudely, generally no, because that is protected concerted activity and discipline for it is an unfair labour practice."
+              "text": "For posting confidential data, harassing a colleague or customer, or posting fake reviews, yes, through the normal discipline process with the specific breach documented. For criticizing the company's pay, scheduling or management, even rudely, generally no, because that is protected concerted activity and discipline for it is an unfair labor practice."
             }
           },
           {
@@ -249,10 +249,10 @@
         <div class="calc__grid">
           <div><label for="sm-co">Company</label><input id="sm-co" type="text" maxlength="80"></div>
           <div><label for="sm-reg">Regulated sector?</label><select id="sm-reg"><option value="no">No</option><option value="finance">Financial services (FINRA / SEC communications rules)</option><option value="health">Healthcare (HIPAA)</option><option value="public">Public sector or government contractor</option></select></div>
-          <div><label for="sm-official">Who may post on official company accounts</label><input id="sm-official" type="text" maxlength="120" placeholder="the marketing team and anyone they authorise in writing"></div>
+          <div><label for="sm-official">Who may post on official company accounts</label><input id="sm-official" type="text" maxlength="120" placeholder="the marketing team and anyone they authorize in writing"></div>
           <div><label for="sm-disclose">Employees who talk about our products must</label><select id="sm-disclose"><option value="yes">Disclose that they work here (FTC endorsement rule)</option></select></div>
           <div><label for="sm-contact">Questions and reports go to</label><input id="sm-contact" type="text" maxlength="80" placeholder="Human Resources"></div>
-          <div><label for="sm-press">Media enquiries go to</label><input id="sm-press" type="text" maxlength="80" placeholder="communications@company.com"></div>
+          <div><label for="sm-press">Media inquiries go to</label><input id="sm-press" type="text" maxlength="80" placeholder="communications@company.com"></div>
         </div>
         <div class="tool-actions"><button class="btn btn-sm" type="button" id="sm-build">Generate policy</button><button class="btn btn-sm btn-outline" type="button" id="sm-copy">Copy</button><button class="btn btn-sm btn-outline" type="button" id="sm-print">Print</button></div>
         <textarea id="sm-out" aria-label="Generated social media policy" readonly style="min-height:420px"></textarea>
@@ -263,13 +263,13 @@
         function el(id) { return document.getElementById(id); }
         function v(id) { return (el(id).value || "").trim(); }
         function build() {
-          var co = v("sm-co") || "[Company]", reg = v("sm-reg"), off = v("sm-official") || "the communications team and people they authorise in writing", hr = v("sm-contact") || "Human Resources", press = v("sm-press") || "[communications contact]", L = [], k = 1;
+          var co = v("sm-co") || "[Company]", reg = v("sm-reg"), off = v("sm-official") || "the communications team and people they authorize in writing", hr = v("sm-contact") || "Human Resources", press = v("sm-press") || "[communications contact]", L = [], k = 1;
           L.push(co.toUpperCase() + " SOCIAL MEDIA POLICY"); L.push("Effective: [date]    Owner: Human Resources and Communications"); L.push("");
           L.push(k++ + ". WHAT THIS COVERS. Personal and professional use of social networks, forums, review sites, video platforms, messaging apps with public channels, blogs and podcasts, whether or not you mention " + co + ". It does not restrict your right to discuss your pay, hours and working conditions with colleagues or anyone else, to support a union, to report concerns to a government agency, or to post about matters of public interest.");
           L.push("");
           L.push(k++ + ". OFFICIAL ACCOUNTS. Only " + off + " may post from " + co + "'s official accounts or create accounts that use the company's name or brand. Everyone else posts as themselves.");
           L.push("");
-          L.push(k++ + ". SAY IT IS YOUR OWN VIEW. If your profile names " + co + " as your employer and you post about our industry, products or competitors, make clear you are speaking for yourself (for example, 'views my own' in your profile). Do not present personal opinions as the company's position, and do not speak to the press on " + co + "'s behalf; refer media enquiries to " + press + ".");
+          L.push(k++ + ". SAY IT IS YOUR OWN VIEW. If your profile names " + co + " as your employer and you post about our industry, products or competitors, make clear you are speaking for yourself (for example, 'views my own' in your profile). Do not present personal opinions as the company's position, and do not speak to the press on " + co + "'s behalf; refer media inquiries to " + press + ".");
           L.push("");
           L.push(k++ + ". DISCLOSE WHEN YOU PROMOTE US. If you post about " + co + "'s products or services, whether on your own account or in a review, say that you work here. Federal Trade Commission rules require that a material connection between an endorser and the company be disclosed clearly, in the post itself, and " + co + " does not want enthusiasm from employees to be mistaken for independent reviews. Never post fake reviews, and never ask friends or family to.");
           L.push("");
@@ -323,7 +323,7 @@
             <tr><td>Disclose that you work here when you promote our products</td><td>Share our marketing posts (with incentives and no disclosure)</td></tr>
             <tr><td>Do not post trade secrets, customer data, unreleased products or internal documents</td><td>Do not post confidential information (undefined, which the NLRB reads as covering wages)</td></tr>
             <tr><td>The harassment policy applies online; do not abuse individuals</td><td>Do not post anything negative, disparaging or that could embarrass the company</td></tr>
-            <tr><td>Refer media enquiries to communications</td><td>Do not speak to the media</td></tr>
+            <tr><td>Refer media inquiries to communications</td><td>Do not speak to the media</td></tr>
             <tr><td>Nothing here restricts discussing working conditions, union activity or reporting to agencies</td><td>(Silence on this point, which is how policies get read broadly)</td></tr>
           </tbody>
         </table>
@@ -342,7 +342,7 @@
         <li><strong>Classify it before acting.</strong> Is the post about working conditions
         (protected, even if rude), abuse of an individual (not protected), or disclosure of
         confidential data (not protected)? The first category gets no discipline, whatever the
-        tone, and an employer that disciplines it faces an unfair labour practice charge that it
+        tone, and an employer that disciplines it faces an unfair labor practice charge that it
         will usually lose.</li>
         <li><strong>Ask for removal of data, not opinions.</strong> A post with a customer's
         details in it should come down immediately; a post calling the bonus scheme a joke stays
@@ -376,7 +376,7 @@
         </details>
         <details>
           <summary>What should a social media policy for employees include?</summary>
-          <p>Who may post from official accounts; a request to make clear personal views are personal; a requirement to disclose employment when promoting the company's products; a specific list of confidential information that may not be posted; the harassment policy applied online; where media enquiries go; what to do if a post goes wrong; and an express statement that discussing working conditions, union activity and reporting to agencies is not restricted.</p>
+          <p>Who may post from official accounts; a request to make clear personal views are personal; a requirement to disclose employment when promoting the company's products; a specific list of confidential information that may not be posted; the harassment policy applied online; where media inquiries go; what to do if a post goes wrong; and an express statement that discussing working conditions, union activity and reporting to agencies is not restricted.</p>
         </details>
         <details>
           <summary>Do employees have to disclose that they work for a company when posting about its products?</summary>
@@ -388,7 +388,7 @@
         </details>
         <details>
           <summary>Can an employee be fired for a social media post?</summary>
-          <p>For posting confidential data, harassing a colleague or customer, or posting fake reviews, yes, through the normal discipline process with the specific breach documented. For criticising the company's pay, scheduling or management, even rudely, generally no, because that is protected concerted activity and discipline for it is an unfair labour practice.</p>
+          <p>For posting confidential data, harassing a colleague or customer, or posting fake reviews, yes, through the normal discipline process with the specific breach documented. For criticizing the company's pay, scheduling or management, even rudely, generally no, because that is protected concerted activity and discipline for it is an unfair labor practice.</p>
         </details>
         <details>
           <summary>Does the policy apply to personal accounts?</summary>

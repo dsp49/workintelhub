@@ -130,7 +130,7 @@
             "name": "What is an accountable plan?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "An IRS arrangement under which employee reimbursements are not taxable wages, provided three conditions are met: expenses have a business connection, they are substantiated with amount, date, place and purpose within a reasonable period (60 days under the safe harbour), and any excess advance is returned within a reasonable period (120 days). A policy that fails any condition makes reimbursements taxable."
+              "text": "An IRS arrangement under which employee reimbursements are not taxable wages, provided three conditions are met: expenses have a business connection, they are substantiated with amount, date, place and purpose within a reasonable period (60 days under the safe harbor), and any excess advance is returned within a reasonable period (120 days). A policy that fails any condition makes reimbursements taxable."
             }
           },
           {
@@ -269,12 +269,12 @@
         function build() {
           var co = v("er-co") || "[Company]", L = [], k = 1;
           var mile = v("er-mile") === "irs" ? "the IRS standard business mileage rate in force on the date of travel (76 cents per mile from July 1, 2026; 72.5 cents for travel earlier in 2026)" : v("er-milecustom") + " cents per mile";
-          var meals = v("er-meals") === "actual" ? "Meals while travelling overnight are reimbursed at actual cost with itemised receipts, up to $" + v("er-cap") + " a day. Alcohol is not reimbursed except at approved client events." : "Meals and incidental expenses while travelling overnight are paid as a per diem at the GSA rate for the destination (the standard rate is $68 a day for fiscal 2026), with no receipts required and 75 per cent of the rate on the first and last day of travel.";
+          var meals = v("er-meals") === "actual" ? "Meals while traveling overnight are reimbursed at actual cost with itemized receipts, up to $" + v("er-cap") + " a day. Alcohol is not reimbursed except at approved client events." : "Meals and incidental expenses while traveling overnight are paid as a per diem at the GSA rate for the destination (the standard rate is $68 a day for fiscal 2026), with no receipts required and 75 percent of the rate on the first and last day of travel.";
           var remote = v("er-remote") === "stipend" ? "Employees who are required to use a personal phone or home internet for work receive a stipend of $" + v("er-stipend") + " a month through payroll, which covers the reasonable business share of those costs. Employees in states that require reimbursement of actual costs may instead submit the business share of their bills if it exceeds the stipend." : v("er-remote") === "actual" ? "Employees who are required to use a personal phone or home internet for work may claim the business share of the monthly bill, with the bill attached and the share stated." : "Personal phone and internet costs are not reimbursed unless state law requires it; in California, Illinois, Iowa, Massachusetts, Minnesota, Montana, New Hampshire, North Dakota, South Dakota and the District of Columbia, required business use of personal devices must be reimbursed and employees should submit the business share.";
           L.push(co.toUpperCase() + " EXPENSE REIMBURSEMENT POLICY"); L.push("Effective: [date]    Owner: Finance"); L.push("");
           L.push(k++ + ". PURPOSE. " + co + " reimburses employees for reasonable, necessary expenses they incur doing their jobs. This policy is an accountable plan under IRS rules: expenses must have a business purpose, be substantiated, and any excess advance returned, so that reimbursements are not taxed as wages.");
           L.push("");
-          L.push(k++ + ". WHAT IS REIMBURSED. Travel (airfare, rail, rental cars, taxis and rideshare, parking, tolls), lodging, meals while travelling overnight, mileage in a personal vehicle, business phone and internet costs where required, supplies and equipment approved in advance, professional memberships and training approved in advance, and client entertainment approved in advance. Anything over $[amount] needs written approval before it is incurred.");
+          L.push(k++ + ". WHAT IS REIMBURSED. Travel (airfare, rail, rental cars, taxis and rideshare, parking, tolls), lodging, meals while traveling overnight, mileage in a personal vehicle, business phone and internet costs where required, supplies and equipment approved in advance, professional memberships and training approved in advance, and client entertainment approved in advance. Anything over $[amount] needs written approval before it is incurred.");
           L.push("");
           L.push(k++ + ". WHAT IS NOT. Personal expenses, commuting between home and your normal workplace, traffic and parking fines, upgrades beyond the travel policy, expenses for family members, and anything without a business purpose.");
           L.push("");
@@ -284,7 +284,7 @@
           L.push("");
           L.push(k++ + ". REMOTE WORK. " + remote);
           L.push("");
-          L.push(k++ + ". HOW TO CLAIM. Submit expenses through [system] within " + v("er-days") + " days of incurring them, with the business purpose stated and itemised receipts attached for any expense of $" + v("er-receipt") + " or more (the IRS requires receipts for lodging at any amount and for other expenses of $75 or more; " + co + "'s threshold is lower). Claims submitted after " + v("er-days") + " days need a written explanation and may be declined, except where state law requires reimbursement.");
+          L.push(k++ + ". HOW TO CLAIM. Submit expenses through [system] within " + v("er-days") + " days of incurring them, with the business purpose stated and itemized receipts attached for any expense of $" + v("er-receipt") + " or more (the IRS requires receipts for lodging at any amount and for other expenses of $75 or more; " + co + "'s threshold is lower). Claims submitted after " + v("er-days") + " days need a written explanation and may be declined, except where state law requires reimbursement.");
           L.push("");
           L.push(k++ + ". APPROVAL AND PAYMENT. Your manager approves claims; Finance reviews them. Approved expenses are paid within " + v("er-pay") + " days of approval, by payroll or direct deposit, separately identified from wages. Questions about a declined claim go to Finance first and then to Human Resources.");
           L.push("");
@@ -307,10 +307,10 @@
         <a href="https://www.irs.gov/publications/p463" target="_blank" rel="noopener">IRS Publication 463</a> sets three conditions for reimbursements to be excluded from wages. The expense must
         have a <strong>business connection</strong>: incurred while performing services as an
         employee. It must be <strong>substantiated</strong> within a reasonable period, which the
-        IRS treats as 60 days under its safe harbour: the amount, date, place and business purpose,
+        IRS treats as 60 days under its safe harbor: the amount, date, place and business purpose,
         with receipts for lodging at any amount and for other expenses of $75 or more. And any
         <strong>excess advance must be returned</strong> within a reasonable period, 120 days
-        under the safe harbour. A policy that misses any of the three makes every reimbursement
+        under the safe harbor. A policy that misses any of the three makes every reimbursement
         taxable wages, which is an expensive way to save paperwork.
       </p>
       <p>
@@ -328,7 +328,7 @@
             <tr><td>Business mileage, January 1 to June 30, 2026</td><td>72.5 cents per mile</td><td><a href="https://www.irs.gov/tax-professionals/standard-mileage-rates" target="_blank" rel="noopener">IRS standard mileage rates</a>; the rate was announced in December 2025</td></tr>
             <tr><td>Business mileage, July 1 to December 31, 2026</td><td>76 cents per mile</td><td>A mid-year increase, which the IRS makes rarely; policies that name the rate rather than referring to it went stale on July 1</td></tr>
             <tr><td>Standard CONUS per diem, fiscal 2026 (October 2025 to September 2026)</td><td>$110 lodging, $68 meals and incidentals</td><td><a href="https://www.gsa.gov/travel/plan-book/per-diem-rates" target="_blank" rel="noopener">GSA per diem rates</a>; around 300 higher-cost areas have their own rates, and the fiscal 2027 rates take effect October 1, 2026</td></tr>
-            <tr><td>First and last day of travel</td><td>75 per cent of the M&amp;IE rate</td><td>Standard proration</td></tr>
+            <tr><td>First and last day of travel</td><td>75 percent of the M&amp;IE rate</td><td>Standard proration</td></tr>
             <tr><td>Receipt threshold</td><td>$75 (any amount for lodging)</td><td>IRS minimum; most policies set a lower internal threshold</td></tr>
           </tbody>
         </table>
@@ -348,7 +348,7 @@
         Illinois, Montana, New Hampshire, North Dakota and South Dakota require reimbursement of
         all necessary expenses an employee incurs at the employer's direction, which California
         courts have held includes a reasonable share of a personal phone plan and home internet
-        when their use is required. Iowa requires reimbursement of expenses authorised by the
+        when their use is required. Iowa requires reimbursement of expenses authorized by the
         employer, within 30 days; Minnesota covers equipment used for work other than tools of
         the trade; Massachusetts, New York and the District of Columbia have narrower rules tied
         to specific categories or to expenses that would take pay below the minimum wage; and
@@ -368,7 +368,7 @@
       <h2 id="choices">The choices that decide whether it is followed</h2>
       <ul>
         <li><strong>Deadline:</strong> 30 days is the common setting. Shorter is unrealistic
-        for travellers; longer produces the quarterly pile that finance dreads.</li>
+        for travelers; longer produces the quarterly pile that finance dreads.</li>
         <li><strong>Receipt threshold:</strong> $25 to $50. Every receipt for every coffee is a
         policy nobody follows; no receipts below $75 is a policy nobody can audit.</li>
         <li><strong>Payment time:</strong> within one payroll cycle of approval, and separately
@@ -400,7 +400,7 @@
         </details>
         <details>
           <summary>What is an accountable plan?</summary>
-          <p>An IRS arrangement under which employee reimbursements are not taxable wages, provided three conditions are met: expenses have a business connection, they are substantiated with amount, date, place and purpose within a reasonable period (60 days under the safe harbour), and any excess advance is returned within a reasonable period (120 days). A policy that fails any condition makes reimbursements taxable.</p>
+          <p>An IRS arrangement under which employee reimbursements are not taxable wages, provided three conditions are met: expenses have a business connection, they are substantiated with amount, date, place and purpose within a reasonable period (60 days under the safe harbor), and any excess advance is returned within a reasonable period (120 days). A policy that fails any condition makes reimbursements taxable.</p>
         </details>
         <details>
           <summary>What is the IRS mileage rate for 2026?</summary>

@@ -135,7 +135,7 @@
             "name": "Can my manager read my Teams chats?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not through anything built into Teams for managers. Chat content is only reachable through Microsoft Purview eDiscovery, the export APIs, or communication compliance, and each of those is limited to specific role groups such as eDiscovery Manager. The Teams admin centre reports your manager might be shown contain message counts and a last activity date, not the messages themselves."
+              "text": "Not through anything built into Teams for managers. Chat content is only reachable through Microsoft Purview eDiscovery, the export APIs, or communication compliance, and each of those is limited to specific role groups such as eDiscovery Manager. The Teams admin center reports your manager might be shown contain message counts and a last activity date, not the messages themselves."
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "Can my employer see my personal Teams account?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not inside its own tenant: Microsoft's compliance tools reach the mailboxes the organisation controls, and a personal account is not among them. The exception is any chat between your personal account and a work account, which Microsoft stores in the work user's mailbox and in a shadow mailbox, and which that employer's retention and discovery rules cover."
+              "text": "Not inside its own tenant: Microsoft's compliance tools reach the mailboxes the organization controls, and a personal account is not among them. The exception is any chat between your personal account and a work account, which Microsoft stores in the work user's mailbox and in a shadow mailbox, and which that employer's retention and discovery rules cover."
             }
           },
           {
@@ -183,7 +183,7 @@
             "name": "Is it legal for my employer to read my work messages?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On an employer provided system, generally yes. The Stored Communications Act exempts conduct authorised by the entity providing the service, and the Wiretap Act allows interception with one party's consent, which is what an acceptable use policy obtains. New York, Connecticut and Delaware require written notice of electronic monitoring. The National Labor Relations Act protects employees discussing wages and working conditions together, and the NLRB treats surveillance of those conversations as an unfair labor practice."
+              "text": "On an employer provided system, generally yes. The Stored Communications Act exempts conduct authorized by the entity providing the service, and the Wiretap Act allows interception with one party's consent, which is what an acceptable use policy obtains. New York, Connecticut and Delaware require written notice of electronic monitoring. The National Labor Relations Act protects employees discussing wages and working conditions together, and the NLRB treats surveillance of those conversations as an unfair labor practice."
             }
           },
           {
@@ -242,7 +242,7 @@
       </div>
 
       <figure class="hero-figure">
-        <img src="/images/blog/can-my-employer-see-my-teams-or-slack-messages.png" alt="Two chat windows, one marked as retained and searchable by the organisation" width="1200" height="630" />
+        <img src="/images/blog/can-my-employer-see-my-teams-or-slack-messages.png" alt="Two chat windows, one marked as retained and searchable by the organization" width="1200" height="630" />
       </figure>
 
       <p>
@@ -303,7 +303,7 @@
         exactly what it contains. Microsoft's
         <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-teams-user-activity-preview" target="_blank" rel="noopener">report reference</a>
         lists the columns: channel messages, posts, replies, urgent messages, chat messages, 1:1
-        calls, meetings organised and attended, audio, video and screen share duration, and a last
+        calls, meetings organized and attended, audio, video and screen share duration, and a last
         activity date. Counts, not content. Names are hidden in those reports by default and have
         been since September 2021, unless a global admin switches the setting.
       </p>
@@ -311,7 +311,7 @@
         Three more routes exist, all role gated and all visible to whoever administers the tenant.
         <a href="https://learn.microsoft.com/en-us/purview/communication-compliance" target="_blank" rel="noopener">Communication compliance</a>
         scans chats and channels against policies for inappropriate text, sensitive data or conflicts
-        of interest; usernames are pseudonymised by default and reviewers have to be opted in by an
+        of interest; usernames are pseudonymized by default and reviewers have to be opted in by an
         admin. The
         <a href="https://learn.microsoft.com/en-us/microsoftteams/export-teams-content" target="_blank" rel="noopener">Teams export APIs</a>
         feed archiving products such as Smarsh and Proofpoint, and require admin approved
@@ -319,7 +319,7 @@
         included.
       </p>
       <p>
-        Two edges people miss. Chats with guests and with people in other organisations are
+        Two edges people miss. Chats with guests and with people in other organizations are
         discoverable: for a meeting between two companies, Microsoft says "admins in both
         organizations can search for content in chat messages from the meeting." And when you leave,
         your chats stay in an inactive mailbox and remain searchable.
@@ -372,9 +372,9 @@
         offer "Never delete messages, save edits," which records edits and deletions, or "don't
         save edits," which does not. Data deleted under a retention setting "is permanent."
         <strong>Slack Connect is readable by both sides.</strong> On Business+ and Enterprise, each
-        organisation can export the shared channels and DMs its members are in, and the
+        organization can export the shared channels and DMs its members are in, and the
         <a href="https://slack.com/help/articles/115004152843" target="_blank" rel="noopener">Slack Connect guidance</a>
-        says the Discovery API "allows all organisations to read content in channels and DMs that
+        says the Discovery API "allows all organizations to read content in channels and DMs that
         they share with people outside of their company." <strong>Enterprise has native DLP</strong>
         that scans messages against rules, can hide a flagged message until it is reviewed, and
         notifies the sender if it is deleted.
@@ -430,7 +430,7 @@
         The <strong>Stored Communications Act</strong>,
         <a href="https://www.law.cornell.edu/uscode/text/18/2701" target="_blank" rel="noopener">18 U.S.C. 2701</a>,
         prohibits unauthorised access to a facility that provides an electronic communication
-        service, and then exempts conduct authorised "by the person or entity providing a wire or
+        service, and then exempts conduct authorized "by the person or entity providing a wire or
         electronic communications service." Courts and commentators generally read an employer that
         provides the Teams tenant or Slack workspace as falling inside that exception. The
         <strong>Wiretap Act</strong>,
@@ -443,7 +443,7 @@
         hiring" to employees whose email, internet use or transmissions are monitored, acknowledged in
         writing or electronically, with a posted notice as well, under
         <a href="https://www.nysenate.gov/legislation/laws/CVR/52-C*2" target="_blank" rel="noopener">Civil Rights Law 52-c</a>.
-        Penalties run from $500 to $3,000 per offence. <strong>Connecticut</strong> defines
+        Penalties run from $500 to $3,000 per offense. <strong>Connecticut</strong> defines
         electronic monitoring as "the collection of information on an employer's premises
         concerning employees' activities or communications by any means other than direct
         observation" and requires prior written notice of the types of monitoring, under General
@@ -496,7 +496,7 @@
         <li>Deleted Teams messages remain searchable for at least 21 days, and for the full retention period if a policy or hold applies.</li>
         <li>Slack exports of private channels and DMs are plan dependent: not without Slack's approval on Free and Pro, self-serve after primary owner approval on Business+, and through the Discovery API on Enterprise.</li>
         <li>Neither product notifies you of a search. Slack stopped automatic export notices in April 2018.</li>
-        <li>Chats with guests, external meetings and Slack Connect channels are readable by both organisations.</li>
+        <li>Chats with guests, external meetings and Slack Connect channels are readable by both organizations.</li>
         <li>Federal law permits reading on employer provided systems. New York, Connecticut and Delaware require written notice. The NLRA protects wage and working condition discussions from surveillance.</li>
         <li>A personal account on a personal device is outside all of this, except where it talks to a work account.</li>
       </ul>
@@ -524,7 +524,7 @@
         <h2 id="faq">Frequently asked questions</h2>
         <details>
           <summary>Can my manager read my Teams chats?</summary>
-          <p>Not through anything built into Teams for managers. Chat content is only reachable through Microsoft Purview eDiscovery, the export APIs, or communication compliance, and each of those is limited to specific role groups such as eDiscovery Manager. The Teams admin centre reports your manager might be shown contain message counts and a last activity date, not the messages themselves.</p>
+          <p>Not through anything built into Teams for managers. Chat content is only reachable through Microsoft Purview eDiscovery, the export APIs, or communication compliance, and each of those is limited to specific role groups such as eDiscovery Manager. The Teams admin center reports your manager might be shown contain message counts and a last activity date, not the messages themselves.</p>
         </details>
         <details>
           <summary>Can my employer see Teams messages I deleted?</summary>
@@ -540,7 +540,7 @@
         </details>
         <details>
           <summary>Can my employer see my personal Teams account?</summary>
-          <p>Not inside its own tenant: Microsoft's compliance tools reach the mailboxes the organisation controls, and a personal account is not among them. The exception is any chat between your personal account and a work account, which Microsoft stores in the work user's mailbox and in a shadow mailbox, and which that employer's retention and discovery rules cover.</p>
+          <p>Not inside its own tenant: Microsoft's compliance tools reach the mailboxes the organization controls, and a personal account is not among them. The exception is any chat between your personal account and a work account, which Microsoft stores in the work user's mailbox and in a shadow mailbox, and which that employer's retention and discovery rules cover.</p>
         </details>
         <details>
           <summary>Can my boss see Slack messages I deleted?</summary>
@@ -548,7 +548,7 @@
         </details>
         <details>
           <summary>Is it legal for my employer to read my work messages?</summary>
-          <p>On an employer provided system, generally yes. The Stored Communications Act exempts conduct authorised by the entity providing the service, and the Wiretap Act allows interception with one party's consent, which is what an acceptable use policy obtains. New York, Connecticut and Delaware require written notice of electronic monitoring. The National Labor Relations Act protects employees discussing wages and working conditions together, and the NLRB treats surveillance of those conversations as an unfair labor practice.</p>
+          <p>On an employer provided system, generally yes. The Stored Communications Act exempts conduct authorized by the entity providing the service, and the Wiretap Act allows interception with one party's consent, which is what an acceptable use policy obtains. New York, Connecticut and Delaware require written notice of electronic monitoring. The National Labor Relations Act protects employees discussing wages and working conditions together, and the NLRB treats surveillance of those conversations as an unfair labor practice.</p>
         </details>
         <details>
           <summary>How can I check what my Slack workspace can export?</summary>

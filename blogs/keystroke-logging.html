@@ -146,7 +146,7 @@
             "name": "Do employers have to tell employees about keystroke logging?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defences under federal law, and covert logging removes it."
+              "text": "By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it."
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "Does keystroke logging improve productivity?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behaviour and, in surveys, damages trust."
+              "text": "Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behavior and, in surveys, damages trust."
             }
           }
         ]
@@ -273,7 +273,7 @@
           if (what === "content") risk.push("Content capture records passwords, personal messages and health or financial details; several states treat real-time capture as interception requiring all-party consent, and it creates a data breach liability the employer did not have before");
           if (what === "biometric") risk.push("Typing-rhythm identification is a biometric identifier in Illinois (BIPA) and under similar laws in Texas and Washington; written consent and a retention policy are required");
           if (dev === "byod") risk.push("Logging on an employee-owned device captures personal use outside work; courts have been hostile to it and many states' computer crime laws apply");
-          if (notice === "none") risk.push("No notice: in every state this removes the employer's main defence and in New York, Connecticut and Delaware it is a statutory violation");
+          if (notice === "none") risk.push("No notice: in every state this removes the employer's main defense and in New York, Connecticut and Delaware it is a statutory violation");
           html += row("Reading", risk.length ? "Not defensible as configured" : (what === "counts" && dev === "company" && notice === "ack" ? "Defensible: activity-level data on company devices with acknowledged notice" : "Defensible with the conditions in the state rule met"));
           risk.forEach(function (x, i) { html += row("Issue " + (i + 1), x); });
           html += row("Minimum to fix", "Written notice acknowledged at hire and posted; policy stating what is captured, who sees it, how long it is kept; company devices only; counts not content; no capture in password fields or personal accounts");
@@ -315,7 +315,7 @@
         keystroke logging without notice, or on a personal device, or of personal accounts, has
         produced findings of liability, and a small number of criminal prosecutions where the
         logging was covert. Penalties under the statute run to $250,000 in fines and five years'
-        imprisonment for wilful violations, plus civil damages.
+        imprisonment for willful violations, plus civil damages.
       </p>
       <p>
         States add notice requirements and consent rules.
@@ -350,8 +350,8 @@
       </p>
       <h2 id="employees">What employees think, and what it does to them</h2>
       <p>
-        <a href="https://www.pewresearch.org/internet/2023/04/20/ai-in-hiring-and-evaluating-workers-what-americans-think/" target="_blank" rel="noopener">Pew Research Center</a> asked US adults in 2023 about specific monitoring practices. Fifty-one per cent
-        opposed employers recording what workers do on their computers, and 61 per cent opposed
+        <a href="https://www.pewresearch.org/internet/2023/04/20/ai-in-hiring-and-evaluating-workers-what-americans-think/" target="_blank" rel="noopener">Pew Research Center</a> asked US adults in 2023 about specific monitoring practices. Fifty-one percent
+        opposed employers recording what workers do on their computers, and 61 percent opposed
         tracking workers' movements; recording keystrokes was not asked separately but sits inside
         the first figure at its most intrusive end. The site's
         <a href="/blogs/employee-monitoring-statistics">monitoring statistics</a> page collects
@@ -359,7 +359,7 @@
         among the youngest workers.
       </p>
       <p>
-        The behavioural effect is the practical problem. A keystroke count that feeds an activity
+        The behavioral effect is the practical problem. A keystroke count that feeds an activity
         score rewards typing, and people who are scored on typing type: the mouse-jiggler and
         the keyboard-tapping script are the products of exactly this measurement. Thinking,
         reading, a phone call with a customer and a whiteboard session all score zero. A tool that
@@ -383,7 +383,7 @@
         exclusion lists; a tool that does not is the wrong tool.</li>
         <li><strong>Give notice properly.</strong> Written, at hire, acknowledged, posted, and
         specific about what is captured, who can see it, how long it is kept and what decisions
-        it may inform. This is the law in three states and the defence everywhere.</li>
+        it may inform. This is the law in three states and the defense everywhere.</li>
         <li><strong>Restrict access and retention.</strong> Named viewers, a short retention
         period, deletion on schedule, and a log of who looked at what.</li>
         <li><strong>Never use it as the sole basis for a decision.</strong> An activity score is
@@ -424,7 +424,7 @@
         </details>
         <details>
           <summary>Do employers have to tell employees about keystroke logging?</summary>
-          <p>By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defences under federal law, and covert logging removes it.</p>
+          <p>By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it.</p>
         </details>
         <details>
           <summary>Is keystroke logging a biometric?</summary>
@@ -432,7 +432,7 @@
         </details>
         <details>
           <summary>Does keystroke logging improve productivity?</summary>
-          <p>Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behaviour and, in surveys, damages trust.</p>
+          <p>Not on the evidence. Keystroke counts measure typing, and people scored on typing produce typing; reading, thinking and conversations score zero. Used for idle detection alongside output measures it is a minor validation signal. Used as a productivity score it distorts behavior and, in surveys, damages trust.</p>
         </details>
       </section>
 

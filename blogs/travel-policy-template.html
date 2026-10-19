@@ -138,7 +138,7 @@
             "name": "Should a travel policy use per diem or actual meal costs?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Per diem for most companies: no receipts, no arguments, not taxable at or below the GSA rate, and the traveller keeps what they do not spend. Actual cost with a daily cap is fairer in cheap cities and more work. Many employers use per diem for meals and actual cost up to a city-based limit for lodging."
+              "text": "Per diem for most companies: no receipts, no arguments, not taxable at or below the GSA rate, and the traveler keeps what they do not spend. Actual cost with a daily cap is fairer in cheap cities and more work. Many employers use per diem for meals and actual cost up to a city-based limit for lodging."
             }
           },
           {
@@ -270,13 +270,13 @@
           var co = v("tp-co") || "[Company]", book = v("tp-book") || "[the booking tool]", ap = v("tp-approve") || "your manager", L = [], k = 1;
           var air = {economy: "Economy class on all flights.", premium6: "Economy class; premium economy may be booked for flights with a scheduled duration over six hours.", business8: "Economy class; business class may be booked, with approval from the department head, for flights with a scheduled duration over eight hours."}[v("tp-air")];
           var lodge = v("tp-lodge") === "gsa" ? "Lodging is reimbursed at actual cost up to the GSA lodging rate for the destination (the standard rate is $110 a night for fiscal 2026; major cities are higher). Book standard rooms at business hotels; conference hotels at the conference rate are fine even if above the GSA rate." : "Lodging is reimbursed at actual cost up to $" + v("tp-lodgecap") + " a night before taxes. Conference hotels at the conference rate are fine even if above the cap.";
-          var meals = v("tp-meals") === "perdiem" ? "Meals and incidental expenses on overnight trips are paid as a per diem at the GSA rate for the destination (the standard rate is $68 a day for fiscal 2026), with no receipts required, at 75 per cent on the first and last day of travel, and reduced for any meal provided by a conference, client or hotel." : "Meals on overnight trips are reimbursed at actual cost with itemised receipts up to $" + v("tp-mealcap") + " a day. Alcohol is not reimbursed except at approved client entertainment.";
+          var meals = v("tp-meals") === "perdiem" ? "Meals and incidental expenses on overnight trips are paid as a per diem at the GSA rate for the destination (the standard rate is $68 a day for fiscal 2026), with no receipts required, at 75 percent on the first and last day of travel, and reduced for any meal provided by a conference, client or hotel." : "Meals on overnight trips are reimbursed at actual cost with itemized receipts up to $" + v("tp-mealcap") + " a day. Alcohol is not reimbursed except at approved client entertainment.";
           L.push(co.toUpperCase() + " BUSINESS TRAVEL POLICY"); L.push("Effective: [date]    Owner: Finance"); L.push("");
           L.push(k++ + ". PURPOSE. This policy sets out how business travel is approved, booked and reimbursed so that travel is safe, reasonable in cost and simple to claim. It works with the expense reimbursement policy, which covers how to submit claims.");
           L.push("");
           L.push(k++ + ". APPROVAL. Trips are approved in advance by " + ap + ". Approval covers the purpose, dates and estimated cost. Travel without prior approval may not be reimbursed.");
           L.push("");
-          L.push(k++ + ". BOOKING. Book through " + book + " at least " + v("tp-lead") + " days ahead where the trip is known; later bookings need a reason noted on the approval. Choose the lowest reasonable fare and rate that fits the itinerary. Loyalty points earned on business travel may be kept by the traveller, but may not drive the choice of carrier or hotel.");
+          L.push(k++ + ". BOOKING. Book through " + book + " at least " + v("tp-lead") + " days ahead where the trip is known; later bookings need a reason noted on the approval. Choose the lowest reasonable fare and rate that fits the itinerary. Loyalty points earned on business travel may be kept by the traveler, but may not drive the choice of carrier or hotel.");
           L.push("");
           L.push(k++ + ". AIR. " + air + " Refundable fares only where the trip is genuinely uncertain. Seat selection and one checked bag are reimbursable; upgrades, lounge access and priority boarding are personal unless included in the fare.");
           L.push("");
@@ -284,7 +284,7 @@
           L.push("");
           L.push(k++ + ". MEALS. " + meals);
           L.push("");
-          L.push(k++ + ". GROUND TRANSPORT. Use the most economical option that is practical: public transport, rideshare or taxi, airport shuttle, or a rental car. Rental cars: " + (v("tp-car") === "mid" ? "up to midsize, or larger with a business reason such as equipment or multiple travellers" : "compact or economy class") + "; decline the rental company's collision waiver if the company card or corporate insurance covers it, and refuel before return. Personal vehicle use is reimbursed at the mileage rate in the expense policy. Fines and tolls incurred for personal reasons are not reimbursed.");
+          L.push(k++ + ". GROUND TRANSPORT. Use the most economical option that is practical: public transport, rideshare or taxi, airport shuttle, or a rental car. Rental cars: " + (v("tp-car") === "mid" ? "up to midsize, or larger with a business reason such as equipment or multiple travelers" : "compact or economy class") + "; decline the rental company's collision waiver if the company card or corporate insurance covers it, and refuel before return. Personal vehicle use is reimbursed at the mileage rate in the expense policy. Fines and tolls incurred for personal reasons are not reimbursed.");
           L.push("");
           L.push(k++ + ". INTERNATIONAL. International trips need approval from the department head, a check of travel advisories, and confirmation of medical and travel insurance cover. Keep receipts in the local currency; claims are converted at the rate on the date of the expense.");
           L.push("");
@@ -315,7 +315,7 @@
             <tr><td>Lodging</td><td>GSA rate for the city, or a flat cap of $150 to $250</td><td>The GSA rate scales by city automatically; a flat cap is simpler and wrong in expensive cities</td></tr>
             <tr><td>Meals</td><td>GSA per diem, or actual up to $75</td><td>Per diem needs no receipts and no arguments; actual is fairer in cheap cities</td></tr>
             <tr><td>Rental cars</td><td>Up to midsize</td><td>Say whether to decline the collision waiver, which depends on the company's card or insurance</td></tr>
-            <tr><td>Points and miles</td><td>Traveller keeps them, may not drive the choice</td><td>Taking them away is unpopular and unenforceable</td></tr>
+            <tr><td>Points and miles</td><td>Traveler keeps them, may not drive the choice</td><td>Taking them away is unpopular and unenforceable</td></tr>
           </tbody>
         </table>
       </div>
@@ -333,13 +333,13 @@
         M&amp;IE, with around 300 higher-cost areas set individually; New York, San Francisco and
         Washington run well above the standard. Private employers may use them as reimbursement
         limits, and when they pay M&amp;IE at or below the GSA rate no meal receipts are
-        required, the amounts are not taxable, and the traveller keeps whatever they do not
-        spend. The first and last day of travel are paid at 75 per cent, and meals provided by a
+        required, the amounts are not taxable, and the traveler keeps whatever they do not
+        spend. The first and last day of travel are paid at 75 percent, and meals provided by a
         conference or hotel are deducted.
       </p>
       <p>
-        The alternative, actual cost with receipts up to a cap, is fairer for travellers in cheap
-        cities and more work for everyone. Most companies above a few dozen travellers move to
+        The alternative, actual cost with receipts up to a cap, is fairer for travelers in cheap
+        cities and more work for everyone. Most companies above a few dozen travelers move to
         per diem for meals and keep actual cost with a city-based limit for lodging, which is the
         generator's default. Refer to "the GSA rate for the destination" rather than naming the
         figures, so the policy does not go stale every October.
@@ -356,7 +356,7 @@
         occurs. Several states, California among them, count more of it than federal law does.
       </p>
       <p>
-        The generator's policy tells non-exempt travellers to record the time on their timesheet,
+        The generator's policy tells non-exempt travelers to record the time on their timesheet,
         and the <a href="/blogs/overtime-calculator">overtime calculator</a> shows what a week
         with two travel days does to the total. Exempt employees' pay does not change with travel,
         though many employers give a day in lieu for weekend travel; the
@@ -365,17 +365,17 @@
       <h2 id="clauses">The clauses that save arguments</h2>
       <ul>
         <li><strong>Safety over cost.</strong> Nobody is required to travel somewhere under a
-        do-not-travel advisory or where they feel unsafe, and in an emergency the traveller acts
+        do-not-travel advisory or where they feel unsafe, and in an emergency the traveler acts
         first and files the expense afterwards. Written down, this clause is a duty-of-care
         document; absent, it is a lawsuit.</li>
-        <li><strong>Personal days on a business trip.</strong> Allowed, at the traveller's cost,
+        <li><strong>Personal days on a business trip.</strong> Allowed, at the traveler's cost,
         with a comparison quote for the business-only itinerary. Without the clause every
         extended trip is a negotiation.</li>
         <li><strong>Conference hotels.</strong> Reimbursed at the conference rate even above the
         cap. The alternative is staff in a cheaper hotel across town missing the evening sessions
         that were the point.</li>
         <li><strong>Collision waiver.</strong> One sentence saying whether to accept it, based on
-        what the company card or insurance covers. Travellers guess otherwise, expensively.</li>
+        what the company card or insurance covers. Travelers guess otherwise, expensively.</li>
         <li><strong>Companions.</strong> Family may travel at the employee's expense; the
         company pays the single rate.</li>
         <li><strong>Currency.</strong> Converted at the rate on the date of the expense, with the
@@ -391,7 +391,7 @@
       <ul>
         <li>A travel policy sets the limits in advance: approval, lead time, air class by flight duration, lodging at the GSA rate or a cap, meals by per diem or a cap, rental car class.</li>
         <li>Fiscal 2026 GSA standard rates: $110 lodging, $68 meals and incidentals; refer to the rate for the destination rather than naming figures.</li>
-        <li>Per diem at or below the GSA rate needs no receipts and is not taxable; first and last days at 75 per cent.</li>
+        <li>Per diem at or below the GSA rate needs no receipts and is not taxable; first and last days at 75 percent.</li>
         <li>Non-exempt employees are paid for travel during normal working hours, including on days off, and for all driving at the employer's request.</li>
         <li>Write the safety, personal-days, conference-hotel, collision-waiver, companion and currency clauses; they are where the arguments come from.</li>
       </ul>
@@ -408,7 +408,7 @@
         </details>
         <details>
           <summary>Should a travel policy use per diem or actual meal costs?</summary>
-          <p>Per diem for most companies: no receipts, no arguments, not taxable at or below the GSA rate, and the traveller keeps what they do not spend. Actual cost with a daily cap is fairer in cheap cities and more work. Many employers use per diem for meals and actual cost up to a city-based limit for lodging.</p>
+          <p>Per diem for most companies: no receipts, no arguments, not taxable at or below the GSA rate, and the traveler keeps what they do not spend. Actual cost with a daily cap is fairer in cheap cities and more work. Many employers use per diem for meals and actual cost up to a city-based limit for lodging.</p>
         </details>
         <details>
           <summary>Do hourly employees get paid for travel time?</summary>

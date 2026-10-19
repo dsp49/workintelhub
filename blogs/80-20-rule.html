@@ -130,7 +130,7 @@
             "name": "Where does the 80/20 rule come from?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Vilfredo Pareto observed in 1896 that about 80 per cent of Italian land was owned by about 20 per cent of the population. Joseph Juran applied the pattern to quality management in the 1940s, finding that most defects came from a few causes, and named it after Pareto, describing it as separating the vital few from the useful many."
+              "text": "Vilfredo Pareto observed in 1896 that about 80 percent of Italian land was owned by about 20 percent of the population. Joseph Juran applied the pattern to quality management in the 1940s, finding that most defects came from a few causes, and named it after Pareto, describing it as separating the vital few from the useful many."
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "How do you do a Pareto analysis?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "List the categories with a count for each (complaints by cause, hours by activity, revenue by customer), sort from largest to smallest, calculate each category's share and the running cumulative share, and note how many categories it takes to reach 80 per cent. The calculator on this page does the arithmetic and marks the line."
+              "text": "List the categories with a count for each (complaints by cause, hours by activity, revenue by customer), sort from largest to smallest, calculate each category's share and the running cumulative share, and note how many categories it takes to reach 80 percent. The calculator on this page does the arithmetic and marks the line."
             }
           },
           {
@@ -162,7 +162,7 @@
             "name": "When does the 80/20 rule not apply?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When the work is all-or-nothing, such as payroll, compliance or safety, where the last 20 per cent is the part that matters; when the categories are chosen so finely or so coarsely that the distribution is an artefact; and as a target rather than a measurement. It also never means the remaining causes can be ignored, only that they come second."
+              "text": "When the work is all-or-nothing, such as payroll, compliance or safety, where the last 20 percent is the part that matters; when the categories are chosen so finely or so coarsely that the distribution is an artifact; and as a target rather than a measurement. It also never means the remaining causes can be ignored, only that they come second."
             }
           }
         ]
@@ -213,21 +213,21 @@
       </div>
 
       <figure class="hero-figure">
-        <img src="../images/blog/80-20-rule.png" alt="A Pareto analysis table with categories ranked by count and the 80 per cent line marked" width="1200" height="630" />
+        <img src="../images/blog/80-20-rule.png" alt="A Pareto analysis table with categories ranked by count and the 80 percent line marked" width="1200" height="630" />
       </figure>
 
       <p>
         The 80/20 rule, or Pareto principle, is the observation that in many systems a small share
-        of causes produces most of the effect: roughly 20 per cent of customers generate 80 per
-        cent of revenue, 20 per cent of defects cause 80 per cent of complaints, 20 per cent of a
-        task list delivers 80 per cent of the value. The numbers are a shorthand, not a law. What
+        of causes produces most of the effect: roughly 20 percent of customers generate 80 per
+        cent of revenue, 20 percent of defects cause 80 percent of complaints, 20 percent of a
+        task list delivers 80 percent of the value. The numbers are a shorthand, not a law. What
         the principle actually asserts is that effects are unevenly distributed across causes,
         usually far more unevenly than people assume, and that finding the vital few is worth
         the effort.
       </p>
       <p>
         The calculator below runs that analysis on any list of categories and counts and shows
-        where the 80 per cent line falls. The rest of the page covers where the idea came from,
+        where the 80 percent line falls. The rest of the page covers where the idea came from,
         worked examples from the kinds of data most managers have, how to apply it to a week,
         and the situations where it misleads.
       </p>
@@ -258,7 +258,7 @@ Other | 11"></textarea></div>
         </div>
         <div class="tool-actions"><button class="btn btn-sm" type="button" id="pa-build">Run Pareto analysis</button><button class="btn btn-sm btn-outline" type="button" id="pa-copy">Copy</button></div>
         <div class="calc__out" id="pa-out"></div>
-        <p class="calc__note">Nothing typed here leaves your browser. The analysis sorts categories by count and shows the cumulative share, marking where 80 per cent of the total is reached. Use counts, hours, dollars or defects; the method is the same.</p>
+        <p class="calc__note">Nothing typed here leaves your browser. The analysis sorts categories by count and shows the cumulative share, marking where 80 percent of the total is reached. Use counts, hours, dollars or defects; the method is the same.</p>
       </div>
       <script>
       (function () {
@@ -278,7 +278,7 @@ Other | 11"></textarea></div>
           if (!marked) vital = rows.length;
           html += '<div class="calc__row"><span>Categories</span><span>' + rows.length + '</span></div>';
           html += '<div class="calc__row"><span>Categories needed to reach 80% of the total</span><span>' + vital + ' of ' + rows.length + ' (' + (100 * vital / rows.length).toFixed(0) + '%)</span></div>';
-          html += '<div class="calc__row"><span>Reading</span><span>' + (vital / rows.length <= 0.35 ? "Strongly concentrated: fix the top " + vital + " and most of the total goes away" : vital / rows.length <= 0.6 ? "Moderately concentrated: the top " + vital + " are worth fixing first" : "Spread out: no vital few; look for a different way to categorise") + '</span></div>';
+          html += '<div class="calc__row"><span>Reading</span><span>' + (vital / rows.length <= 0.35 ? "Strongly concentrated: fix the top " + vital + " and most of the total goes away" : vital / rows.length <= 0.6 ? "Moderately concentrated: the top " + vital + " are worth fixing first" : "Spread out: no vital few; look for a different way to categorize") + '</span></div>';
           el("pa-out").innerHTML = html;
         }
         el("pa-build").addEventListener("click", build); el("pa-data").addEventListener("input", build);
@@ -288,8 +288,8 @@ Other | 11"></textarea></div>
       </script>
       <h2 id="origin">Where it came from and what it claims</h2>
       <p>
-        Vilfredo Pareto, an Italian economist, observed in 1896 that about 80 per cent of the land
-        in Italy was owned by about 20 per cent of the population, and found similar distributions
+        Vilfredo Pareto, an Italian economist, observed in 1896 that about 80 percent of the land
+        in Italy was owned by about 20 percent of the population, and found similar distributions
         in other countries' wealth data. The management use came half a century later from Joseph
         Juran, the quality engineer, who noticed in the 1940s that most defects in a process came
         from a few causes and named the pattern after Pareto. The <a href="https://www.juran.com/blog/a-guide-to-the-pareto-principle-80-20-rule-pareto-analysis/" target="_blank" rel="noopener">Juran Institute</a> still describes it as
@@ -353,18 +353,18 @@ Other | 11"></textarea></div>
       <ul>
         <li><strong>It is not a target.</strong> Nobody should aim for 80/20. The analysis
         reports the distribution that exists; the number is whatever it is.</li>
-        <li><strong>It says nothing about the remaining 80 per cent of causes being worthless.</strong>
+        <li><strong>It says nothing about the remaining 80 percent of causes being worthless.</strong>
         Juran's "useful many" still have to be handled. A support team that only fixes the top
         three causes leaves the other customers waiting.</li>
         <li><strong>It depends on the categories.</strong> Split causes finely and the
         concentration disappears; lump them and it appears. The calculator's "spread out" reading
-        usually means the categorisation needs rethinking, not that the data is flat.</li>
+        usually means the categorization needs rethinking, not that the data is flat.</li>
         <li><strong>Some work is all-or-nothing.</strong> Compliance, safety and payroll do not
-        have a vital 20 per cent; the last 20 per cent of a payroll run is the part that matters.</li>
+        have a vital 20 percent; the last 20 percent of a payroll run is the part that matters.</li>
         <li><strong>It is a snapshot.</strong> Today's minor cause is next quarter's major one.
         The vital few change, which is why the analysis is repeated rather than done.</li>
-        <li><strong>It is often quoted, rarely measured.</strong> "80 per cent of our sales come
-        from 20 per cent of customers" is usually an assumption. The calculator takes two minutes;
+        <li><strong>It is often quoted, rarely measured.</strong> "80 percent of our sales come
+        from 20 percent of customers" is usually an assumption. The calculator takes two minutes;
         the actual split is frequently more extreme, and occasionally the reverse.</li>
       </ul>
 
@@ -372,7 +372,7 @@ Other | 11"></textarea></div>
       <ul>
         <li>The 80/20 rule says effects are unevenly distributed across causes, usually more unevenly than assumed. The numbers are shorthand, not a law.</li>
         <li>Pareto observed it in wealth data in 1896; Juran applied it to quality in the 1940s and named the vital few and the useful many.</li>
-        <li>Run the analysis on real counts: sort, cumulate, find where 80 per cent is reached. The calculator does it in seconds.</li>
+        <li>Run the analysis on real counts: sort, cumulate, find where 80 percent is reached. The calculator does it in seconds.</li>
         <li>In a week's time data the vital few are the hours that produced results; protect those before cutting anything.</li>
         <li>The useful many still need handling, categories change the answer, and some work has no vital few.</li>
         <li>Measure it rather than quote it; the real split is often more extreme than 80/20.</li>
@@ -386,11 +386,11 @@ Other | 11"></textarea></div>
         </details>
         <details>
           <summary>Where does the 80/20 rule come from?</summary>
-          <p>Vilfredo Pareto observed in 1896 that about 80 per cent of Italian land was owned by about 20 per cent of the population. Joseph Juran applied the pattern to quality management in the 1940s, finding that most defects came from a few causes, and named it after Pareto, describing it as separating the vital few from the useful many.</p>
+          <p>Vilfredo Pareto observed in 1896 that about 80 percent of Italian land was owned by about 20 percent of the population. Joseph Juran applied the pattern to quality management in the 1940s, finding that most defects came from a few causes, and named it after Pareto, describing it as separating the vital few from the useful many.</p>
         </details>
         <details>
           <summary>How do you do a Pareto analysis?</summary>
-          <p>List the categories with a count for each (complaints by cause, hours by activity, revenue by customer), sort from largest to smallest, calculate each category's share and the running cumulative share, and note how many categories it takes to reach 80 per cent. The calculator on this page does the arithmetic and marks the line.</p>
+          <p>List the categories with a count for each (complaints by cause, hours by activity, revenue by customer), sort from largest to smallest, calculate each category's share and the running cumulative share, and note how many categories it takes to reach 80 percent. The calculator on this page does the arithmetic and marks the line.</p>
         </details>
         <details>
           <summary>Does the 80/20 rule have to add up to 100?</summary>
@@ -402,7 +402,7 @@ Other | 11"></textarea></div>
         </details>
         <details>
           <summary>When does the 80/20 rule not apply?</summary>
-          <p>When the work is all-or-nothing, such as payroll, compliance or safety, where the last 20 per cent is the part that matters; when the categories are chosen so finely or so coarsely that the distribution is an artefact; and as a target rather than a measurement. It also never means the remaining causes can be ignored, only that they come second.</p>
+          <p>When the work is all-or-nothing, such as payroll, compliance or safety, where the last 20 percent is the part that matters; when the categories are chosen so finely or so coarsely that the distribution is an artifact; and as a target rather than a measurement. It also never means the remaining causes can be ignored, only that they come second.</p>
         </details>
       </section>
 

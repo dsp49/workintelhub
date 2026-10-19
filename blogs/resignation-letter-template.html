@@ -273,7 +273,7 @@
           if (tone === "immediate") L.push("Please accept this letter as notice of my resignation from my position as " + title + " at " + co + ", effective immediately. My last day will be " + last + ".");
           else L.push("Please accept this letter as notice of my resignation from my position as " + title + " at " + co + ". My last day of work will be " + last + (tone === "standard" ? ", two weeks from today" : "") + ".");
           var r = v("rl-reason");
-          if (r === "new") L.push("I have accepted a position with another organisation.");
+          if (r === "new") L.push("I have accepted a position with another organization.");
           else if (r === "personal") L.push("I am leaving for personal reasons.");
           else if (r === "relocate") L.push("I am relocating and will not be able to continue in the role.");
           L.push("");

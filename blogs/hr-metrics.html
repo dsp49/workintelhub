@@ -130,7 +130,7 @@
             "name": "How do you calculate employee turnover rate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Divide the number of employees who left during the period by the average headcount, which is the start and end headcount divided by two, and multiply by 100. Count all leavers for total turnover and resignations only for voluntary turnover. Annualise a shorter period by multiplying by twelve over the number of months."
+              "text": "Divide the number of employees who left during the period by the average headcount, which is the start and end headcount divided by two, and multiply by 100. Count all leavers for total turnover and resignations only for voluntary turnover. Annualize a shorter period by multiplying by twelve over the number of months."
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "What is a good turnover rate?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "SHRM's 2025 benchmarking put median voluntary turnover at 9 per cent and the average at 13 across more than 2,000 organisations. Rates vary widely by industry: hospitality and retail run far higher, government and utilities lower. A rate below the median can still be a problem if the people leaving are the ones the business most needed."
+              "text": "SHRM's 2025 benchmarking put median voluntary turnover at 9 percent and the average at 13 across more than 2,000 organizations. Rates vary widely by industry: hospitality and retail run far higher, government and utilities lower. A rate below the median can still be a problem if the people leaving are the ones the business most needed."
             }
           },
           {
@@ -217,7 +217,7 @@
       </figure>
 
       <p>
-        HR metrics are the handful of ratios that describe whether an organisation is keeping the
+        HR metrics are the handful of ratios that describe whether an organization is keeping the
         people it hires, hiring them at a sensible cost and speed, and getting them to work.
         There are hundreds in the textbooks. About eight are used by anyone who has to defend a
         budget: turnover, voluntary turnover, first-year turnover, retention, cost per hire, time
@@ -270,7 +270,7 @@
           <div><label for="hm-wdays">Working days in the period</label><input id="hm-wdays" type="number" min="1" step="1" value="250"></div>
         </div>
         <div class="calc__out" id="hm-out"></div>
-        <p class="calc__note">Benchmarks: SHRM 2025 benchmarking reports (median voluntary turnover 9 per cent, average 13; average cost per hire $5,475 non-executive; median time to fill 44 days), BLS JOLTS 2025 annual average (total separations 3.3 per cent per month, quits 2.0), BLS 2025 absence rate 3.2 per cent. Definitions differ between sources, so compare direction over time in your own numbers before comparing levels with anyone else's.</p>
+        <p class="calc__note">Benchmarks: SHRM 2025 benchmarking reports (median voluntary turnover 9 percent, average 13; average cost per hire $5,475 non-executive; median time to fill 44 days), BLS JOLTS 2025 annual average (total separations 3.3 percent per month, quits 2.0), BLS 2025 absence rate 3.2 percent. Definitions differ between sources, so compare direction over time in your own numbers before comparing levels with anyone else's.</p>
       </div>
       <script>
       (function () {
@@ -286,8 +286,8 @@
           var ret = s ? 100 * (s - (left - 0)) / s : 0;
           var abs = (avg * n("hm-wdays")) ? 100 * n("hm-absent") / (avg * n("hm-wdays")) : 0;
           var html = row("Average headcount", avg.toFixed(1));
-          html += row("Total turnover rate" + (mo < 12 ? " (annualised)" : ""), (turn * ann).toFixed(1) + "%");
-          html += row("Voluntary turnover rate" + (mo < 12 ? " (annualised)" : ""), (vturn * ann).toFixed(1) + "%" + (vturn * ann > 13 ? " (above the SHRM 2025 average of 13%)" : vturn * ann > 9 ? " (between the SHRM median of 9% and average of 13%)" : " (at or below the SHRM 2025 median of 9%)"));
+          html += row("Total turnover rate" + (mo < 12 ? " (annualized)" : ""), (turn * ann).toFixed(1) + "%");
+          html += row("Voluntary turnover rate" + (mo < 12 ? " (annualized)" : ""), (vturn * ann).toFixed(1) + "%" + (vturn * ann > 13 ? " (above the SHRM 2025 average of 13%)" : vturn * ann > 9 ? " (between the SHRM median of 9% and average of 13%)" : " (at or below the SHRM 2025 median of 9%)"));
           html += row("Retention rate (share of starting headcount still employed)", Math.max(0, ret).toFixed(1) + "%");
           html += row("First-year turnover (share of hires who left within 12 months)", firstYear.toFixed(1) + "%");
           html += row("Cost per hire", money(cph) + (cph > 5475 ? " (above the SHRM 2025 average of $5,475)" : " (at or below the SHRM 2025 average of $5,475)"));
@@ -318,42 +318,42 @@
       </div>
       <p>
         Two of these are worth expanding. Retention is not the mirror of turnover: a team that
-        started the year with 100 people, hired 30 and lost 20 of the new hires has 20 per cent
-        turnover on average headcount and 100 per cent retention of the original staff. Both
+        started the year with 100 people, hired 30 and lost 20 of the new hires has 20 percent
+        turnover on average headcount and 100 percent retention of the original staff. Both
         numbers are true and they describe different problems, which is why first-year turnover
         exists as a separate measure. Cost per hire, under the SHRM and ANSI standard, includes
-        internal costs that most organisations never tally: the recruiter's salary share, the
+        internal costs that most organizations never tally: the recruiter's salary share, the
         hiring manager's interview hours, the <a href="/blogs/employee-referral-program">referral</a> bonus, the applicant tracking system. An
-        organisation that reports $1,800 per hire is usually reporting agency fees.
+        organization that reports $1,800 per hire is usually reporting agency fees.
       </p>
       <h2 id="benchmarks">What the 2025 benchmarks measure</h2>
       <ul>
-        <li><strong>Turnover.</strong> The <a href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" target="_blank" rel="noopener">SHRM 2025 benchmarking reports</a> put median voluntary turnover at 9 per cent
-        and the average at 13, across more than 2,000 organisations, with the gap showing how
+        <li><strong>Turnover.</strong> The <a href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" target="_blank" rel="noopener">SHRM 2025 benchmarking reports</a> put median voluntary turnover at 9 percent
+        and the average at 13, across more than 2,000 organizations, with the gap showing how
         much a minority of high-churn employers pull the average up. The <a href="https://www.bls.gov/jlt/" target="_blank" rel="noopener">Job Openings and Labor Turnover Survey</a> gives a
-        different cut: the 2025 annual average total separations rate was 3.3 per cent of
+        different cut: the 2025 annual average total separations rate was 3.3 percent of
         employment per month, of which quits were 2.0, layoffs and discharges 1.1. Multiply a
-        monthly JOLTS rate by twelve and you get economy-wide turnover of roughly 40 per cent,
+        monthly JOLTS rate by twelve and you get economy-wide turnover of roughly 40 percent,
         which is not comparable to SHRM's survey of established employers. Use SHRM for a
-        company benchmark and JOLTS for the labour market context.</li>
+        company benchmark and JOLTS for the labor market context.</li>
         <li><strong>Cost per hire.</strong> SHRM 2025: $5,475 average for non-executive hires,
         $35,879 for executives, using the SHRM and ANSI cost standard. Earlier SHRM editions gave
         $4,700 and $4,129; the rise reflects both inflation and more complete cost counting.</li>
         <li><strong>Time to fill.</strong> SHRM 2025: median 44 days for non-executive roles, 45
         for executive, measured from requisition to acceptance. Technology and healthcare roles
         run longer; hourly and retail roles shorter.</li>
-        <li><strong>Absence.</strong> The <a href="https://www.bls.gov/cps/cpsaat46.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a> reported a 3.2 per cent absence rate and 1.7
-        per cent lost worktime rate for full-time workers in 2025. The absence rate counts
+        <li><strong>Absence.</strong> The <a href="https://www.bls.gov/cps/cpsaat46.htm" target="_blank" rel="noopener">Bureau of Labor Statistics</a> reported a 3.2 percent absence rate and 1.7
+        percent lost worktime rate for full-time workers in 2025. The absence rate counts
         workers absent in the survey week; the lost worktime rate counts hours, and is the
         closer match to a days-lost calculation. Our
         <a href="/blogs/employee-absenteeism">absenteeism guide</a> goes deeper.</li>
       </ul>
       <p>
         Benchmarks describe where the middle of a distribution sits. They do not say what is
-        good for a particular business. A software company with 5 per cent voluntary turnover
-        may be losing exactly the people it cannot replace; a call centre at 35 per cent may be
+        good for a particular business. A software company with 5 percent voluntary turnover
+        may be losing exactly the people it cannot replace; a call center at 35 percent may be
         running at the industry's floor. The comparison that matters is the same metric, defined
-        the same way, in your own organisation over time.
+        the same way, in your own organization over time.
       </p>
       <h2 id="segments">Cutting the numbers so they say something</h2>
       <p>
@@ -384,7 +384,7 @@
       <h2 id="avoid">Metrics that look like insight</h2>
       <ul>
         <li><strong>HR-to-employee ratio.</strong> Widely benchmarked, meaningless without knowing
-        what HR does in the organisation. A company that outsources payroll and benefits has a
+        what HR does in the organization. A company that outsources payroll and benefits has a
         different ratio from one that does not, and neither number says anything about quality.</li>
         <li><strong>Revenue per employee.</strong> A finance metric that moves with pricing,
         capital intensity and outsourcing far more than with anything HR controls.</li>
@@ -410,7 +410,7 @@
         <li>Eight metrics do most of the work: turnover, voluntary turnover, first-year turnover, retention, cost per hire, time to hire, offer acceptance and absence rate.</li>
         <li>Turnover is leavers over average headcount; retention is original staff still employed. They are not mirror images, and first-year turnover is the gap between them.</li>
         <li>Cost per hire under the SHRM and ANSI standard includes internal costs. SHRM's 2025 average is $5,475 for non-executive hires; figures far below that are usually agency fees alone.</li>
-        <li>SHRM 2025 median voluntary turnover is 9 per cent (average 13); median time to fill 44 days; BLS absence rate 3.2 per cent. Definitions differ, so compare your own trend first.</li>
+        <li>SHRM 2025 median voluntary turnover is 9 percent (average 13); median time to fill 44 days; BLS absence rate 3.2 percent. Definitions differ, so compare your own trend first.</li>
         <li>Cut every metric by manager, tenure, location and source. The company average hides the team with the problem.</li>
         <li>Drop metrics with no owner and no decision attached. HR-to-employee ratio, training hours and activity-based productivity are the usual candidates.</li>
       </ul>
@@ -423,11 +423,11 @@
         </details>
         <details>
           <summary>How do you calculate employee turnover rate?</summary>
-          <p>Divide the number of employees who left during the period by the average headcount, which is the start and end headcount divided by two, and multiply by 100. Count all leavers for total turnover and resignations only for voluntary turnover. Annualise a shorter period by multiplying by twelve over the number of months.</p>
+          <p>Divide the number of employees who left during the period by the average headcount, which is the start and end headcount divided by two, and multiply by 100. Count all leavers for total turnover and resignations only for voluntary turnover. Annualize a shorter period by multiplying by twelve over the number of months.</p>
         </details>
         <details>
           <summary>What is a good turnover rate?</summary>
-          <p>SHRM's 2025 benchmarking put median voluntary turnover at 9 per cent and the average at 13 across more than 2,000 organisations. Rates vary widely by industry: hospitality and retail run far higher, government and utilities lower. A rate below the median can still be a problem if the people leaving are the ones the business most needed.</p>
+          <p>SHRM's 2025 benchmarking put median voluntary turnover at 9 percent and the average at 13 across more than 2,000 organizations. Rates vary widely by industry: hospitality and retail run far higher, government and utilities lower. A rate below the median can still be a problem if the people leaving are the ones the business most needed.</p>
         </details>
         <details>
           <summary>How do you calculate cost per hire?</summary>

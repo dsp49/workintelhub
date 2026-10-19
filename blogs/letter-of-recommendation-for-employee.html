@@ -218,7 +218,7 @@
 
       <p>
         A letter of recommendation for an employee is a manager's or colleague's written case
-        that someone should be hired, promoted, admitted or honoured, built on what the writer
+        that someone should be hired, promoted, admitted or honored, built on what the writer
         saw them do. It differs from an <a href="/blogs/employment-verification-letter">employment
         verification letter</a>, which confirms dates and title and offers no opinion, and from a
         <a href="/blogs/reference-check-questions">reference call</a>, which answers someone
@@ -255,7 +255,7 @@
           <div><label for="lr-to">to</label><input id="lr-to" type="text" maxlength="40" placeholder="August 2026 (or present)"></div>
           <div><label for="lr-rel">Your relationship</label><select id="lr-rel"><option value="manager">Direct manager</option><option value="senior">Senior colleague or project lead</option><option value="peer">Peer</option><option value="client">Client</option></select></div>
           <div><label for="lr-for">Letter is for</label><select id="lr-for"><option value="job">A job application (general)</option><option value="specific">A specific role: I will name it</option><option value="grad">Graduate school</option><option value="award">An award or promotion</option></select></div>
-          <div><label for="lr-target">Role or programme (if specific)</label><input id="lr-target" type="text" maxlength="100"></div>
+          <div><label for="lr-target">Role or program (if specific)</label><input id="lr-target" type="text" maxlength="100"></div>
           <div><label for="lr-to2">Addressee</label><input id="lr-to2" type="text" maxlength="80" placeholder="Hiring Committee (or leave blank)"></div>
           <div style="grid-column: 1 / -1"><label for="lr-s1">Strength one, with a specific example (what they did, what happened)</label><textarea id="lr-s1" style="min-height:60px" placeholder="Rebuilt our onboarding process after noticing new hires were taking three months to become productive; the ramp fell to six weeks and the process is still in use."></textarea></div>
           <div style="grid-column: 1 / -1"><label for="lr-s2">Strength two, with an example</label><textarea id="lr-s2" style="min-height:60px" placeholder="Handled the Q3 client escalation alone while I was out, kept the account, and wrote the post-mortem the team still refers to."></textarea></div>
@@ -275,7 +275,7 @@
           var relText = rel === "manager" ? "I was " + first + "'s direct manager" : rel === "senior" ? "I worked with " + first + " as a senior colleague and project lead" : rel === "peer" ? "I worked alongside " + first + " as a peer" : "I worked with " + first + " as a client";
           L.push(v("lr-writer") || "[Your name, title]"); L.push(co); L.push(""); L.push(new Date().toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})); L.push("");
           L.push(v("lr-to2") ? "Dear " + v("lr-to2") + "," : "To whom it may concern,"); L.push("");
-          var opening = kind === "specific" ? "I am writing to recommend " + emp + " for " + (v("lr-target") || "[the role]") + "." : kind === "grad" ? "I am writing in support of " + emp + "'s application to " + (v("lr-target") || "[the programme]") + "." : kind === "award" ? "I am writing to recommend " + emp + " for " + (v("lr-target") || "[the award or promotion]") + "." : "I am writing to recommend " + emp + " without reservation.";
+          var opening = kind === "specific" ? "I am writing to recommend " + emp + " for " + (v("lr-target") || "[the role]") + "." : kind === "grad" ? "I am writing in support of " + emp + "'s application to " + (v("lr-target") || "[the program]") + "." : kind === "award" ? "I am writing to recommend " + emp + " for " + (v("lr-target") || "[the award or promotion]") + "." : "I am writing to recommend " + emp + " without reservation.";
           L.push(opening + " " + relText + " at " + co + " from " + (v("lr-from") || "[start]") + " to " + (v("lr-to") || "[end]") + ", where " + first + " was " + role + ".");
           L.push("");
           if (v("lr-s1")) L.push(v("lr-s1")); else L.push("[Strength one: what " + first + " did, and what happened as a result. One concrete example is worth a paragraph of adjectives.]");
@@ -283,7 +283,7 @@
           if (v("lr-s2")) L.push(v("lr-s2")); else L.push("[Strength two, with a second example.]");
           L.push("");
           if (v("lr-s3")) L.push("Colleagues would describe " + first + " as " + v("lr-s3") + ".");
-          L.push((kind === "grad" ? "I am confident " + first + " will succeed in the programme and contribute to it. " : "I would hire " + first + " again without hesitation. ") + "I recommend " + first + " " + (kind === "specific" ? "for this role " : "") + "with complete confidence.");
+          L.push((kind === "grad" ? "I am confident " + first + " will succeed in the program and contribute to it. " : "I would hire " + first + " again without hesitation. ") + "I recommend " + first + " " + (kind === "specific" ? "for this role " : "") + "with complete confidence.");
           L.push("");
           L.push("Please contact me at " + (v("lr-contact") || "[email or phone]") + " if I can provide anything further.");
           L.push(""); L.push("Sincerely,"); L.push(""); L.push(v("lr-writer") || "[Your name, title]");
@@ -336,7 +336,7 @@
         <strong>For graduate school, from a manager.</strong> "Dana joined us as an analyst and
         within a year was the person the leadership team asked when the numbers did not add up.
         Her analysis of our churn data changed the pricing structure, and she taught two
-        colleagues the method. She has the curiosity and the discipline the programme asks for."
+        colleagues the method. She has the curiosity and the discipline the program asks for."
       </p>
       <p>
         <strong>For a mixed record, honestly.</strong> "Tom's first year with us was uneven, and

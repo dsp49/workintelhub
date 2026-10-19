@@ -143,7 +143,7 @@
             "name": "Can my boss see my Teams status?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, the same way everyone in the organisation can. Microsoft's documentation says presence is visible to all users by default, in nearly real time. Admin settings can restrict visibility to people outside the organisation but not inside it. What your boss sees is the current dot, not a record of previous ones."
+              "text": "Yes, the same way everyone in the organization can. Microsoft's documentation says presence is visible to all users by default, in nearly real time. Admin settings can restrict visibility to people outside the organization but not inside it. What your boss sees is the current dot, not a record of previous ones."
             }
           },
           {
@@ -159,7 +159,7 @@
             "name": "Can my employer see a history of my Teams status?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not from anything Microsoft provides. The Teams user activity reports have no presence or idle column, the Purview audit log has no presence event, and Microsoft staff have confirmed that the Graph presence API does not expose past presence history. A history exists only if the organisation built or bought a tool that polls or subscribes to presence and stores the results."
+              "text": "Not from anything Microsoft provides. The Teams user activity reports have no presence or idle column, the Purview audit log has no presence event, and Microsoft staff have confirmed that the Graph presence API does not expose past presence history. A history exists only if the organization built or bought a tool that polls or subscribes to presence and stores the results."
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "What does the Teams user activity report show about me?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Counts, not time. The columns are channel messages, posts, replies, urgent messages, chat messages, meetings organised and attended by type, 1:1 calls, audio, video and screen share duration, a last activity date, and an other activity flag. Changing your status counts as other activity, which marks you as active that day and nothing more. Names are hidden in the report by default."
+              "text": "Counts, not time. The columns are channel messages, posts, replies, urgent messages, chat messages, meetings organized and attended by type, 1:1 calls, audio, video and screen share duration, a last activity date, and an other activity flag. Changing your status counts as other activity, which marks you as active that day and nothing more. Names are hidden in the report by default."
             }
           },
           {
@@ -246,7 +246,7 @@
       </figure>
 
       <p>
-        Anyone in your organisation can see the yellow dot the moment it appears. That is the whole
+        Anyone in your organization can see the yellow dot the moment it appears. That is the whole
         of what Teams gives them. There is no report that says when you went Away, how long you
         stayed there, or how many times it happened this week, and Microsoft's own staff have
         confirmed that the presence API does not expose past presence history. If your employer has
@@ -318,13 +318,13 @@
         Everyone. "By default, anyone in any organization using Teams can see (in nearly real time)
         if other users are available online," the admin page says, and "your presence status is
         visible to all users globally." The only admin control is a privacy mode that stops people
-        outside your organisation seeing it. Inside, there is no setting to hide presence from a
+        outside your organization seeing it. Inside, there is no setting to hide presence from a
         manager, and no setting to show it to a manager that is not already on.
       </p>
       <p>
         What everyone sees is the current state. The "Away Last Seen" indicator exists as a state in
         Microsoft's table, but the documentation only describes it as always on where the
-        organisation also runs Skype for Business, and it shows a time of day, not a log.
+        organization also runs Skype for Business, and it shows a time of day, not a log.
       </p>
 
       <h2 id="reports">What the admin reports and audit log actually contain</h2>
@@ -333,17 +333,17 @@
         column lists are public.
       </p>
       <p>
-        The Teams user activity report in the Microsoft 365 admin centre, per its
+        The Teams user activity report in the Microsoft 365 admin center, per its
         <a href="https://learn.microsoft.com/en-us/microsoft-365/admin/activity-reports/microsoft-teams-user-activity-preview" target="_blank" rel="noopener">reference page</a>,
         has these columns: user name, tenant name, is external, channel messages, posts, replies,
         urgent messages, chat messages, total meetings, 1:1 calls, last activity date, meetings
-        participated and organised by type, is licensed, other activity, and audio, video and screen
+        participated and organized by type, is licensed, other activity, and audio, video and screen
         share duration. "Other activity" is a yes or no flag, and Microsoft's examples of what sets
         it include "when a user changes the Teams status or the Teams status message." So changing
         your status marks you active that day. It records nothing about which status or when.
       </p>
       <p>
-        The Teams admin centre version, per the
+        The Teams admin center version, per the
         <a href="https://learn.microsoft.com/en-us/microsoftteams/teams-analytics-and-reports/teams-reporting-reference" target="_blank" rel="noopener">reporting reference</a>,
         measures the same things: messages, calls, meetings, media time, last activity date. It is
         available to Teams administrators; a global reader gets only tenant level totals. Names in
@@ -387,7 +387,7 @@
       <p>
         <strong>Viva Insights</strong> personal insights are, in Microsoft's words, "for your eyes
         only"; "neither your manager nor the system administration can see your insights." They are
-        built from email, calendar, chat and call metadata, not presence. Manager and organisation
+        built from email, calendar, chat and call metadata, not presence. Manager and organization
         views are aggregated, and Microsoft's
         <a href="https://learn.microsoft.com/en-us/viva/insights/advanced/setup-maint/manager-settings" target="_blank" rel="noopener">manager settings</a>
         require a minimum group of five people before anything is shown. There is no presence or
@@ -416,7 +416,7 @@
             <tr><th>Tool</th><th>Idle threshold</th><th>Configurable</th><th>History kept</th><th>Who sees it</th></tr>
           </thead>
           <tbody>
-            <tr><td>Microsoft Teams presence</td><td>Roughly 5 minutes</td><td>No</td><td>None</td><td>Everyone in the organisation, live only</td></tr>
+            <tr><td>Microsoft Teams presence</td><td>Roughly 5 minutes</td><td>No</td><td>None</td><td>Everyone in the organization, live only</td></tr>
             <tr><td>Slack presence</td><td>10 minutes</td><td>No</td><td>None</td><td>Workspace members, live only</td></tr>
             <tr><td>ActivTrak</td><td>Passive time after 2 minutes by default</td><td>Yes, in account settings</td><td>Yes, classified by last application used</td><td>Administrators and designated managers</td></tr>
             <tr><td>Hubstaff</td><td>Idle prompt after 5 minutes by default; 10, 20 or custom</td><td>Yes</td><td>Yes, with the user's choice to keep or discard idle time</td><td>Administrators and managers</td></tr>
@@ -503,9 +503,9 @@
       <h2 id="key-takeaways">Key takeaways</h2>
       <ul>
         <li>Teams sets Away after roughly five minutes without keyboard or mouse input, immediately on lock, and Offline on sleep. Microsoft no longer commits to a number and there is no setting to change it.</li>
-        <li>Everyone in the organisation sees your current status. Nobody sees a history, because Teams does not keep one.</li>
+        <li>Everyone in the organization sees your current status. Nobody sees a history, because Teams does not keep one.</li>
         <li>The admin reports contain message counts, meeting durations and a last activity date. The audit log has no presence event.</li>
-        <li>A status history can only exist if the organisation built or bought an application that polls the Graph presence API and stores the results, which needs admin consent in the tenant.</li>
+        <li>A status history can only exist if the organization built or bought an application that polls the Graph presence API and stores the results, which needs admin consent in the tenant.</li>
         <li>Viva Insights is private to you and shows managers only aggregates of five or more people. Workplace check-in keeps no history and provides no reports.</li>
         <li>Monitoring agents on a company laptop are the real idle trackers: ActivTrak and Insightful default to two minutes, Hubstaff to five, with timelines and reports.</li>
         <li>You can set a status that is less available than Teams calculates, never more. Busy does not override Away.</li>
@@ -539,7 +539,7 @@
         </details>
         <details>
           <summary>Can my boss see my Teams status?</summary>
-          <p>Yes, the same way everyone in the organisation can. Microsoft's documentation says presence is visible to all users by default, in nearly real time. Admin settings can restrict visibility to people outside the organisation but not inside it. What your boss sees is the current dot, not a record of previous ones.</p>
+          <p>Yes, the same way everyone in the organization can. Microsoft's documentation says presence is visible to all users by default, in nearly real time. Admin settings can restrict visibility to people outside the organization but not inside it. What your boss sees is the current dot, not a record of previous ones.</p>
         </details>
         <details>
           <summary>Does Teams notify my manager when I go Away?</summary>
@@ -547,11 +547,11 @@
         </details>
         <details>
           <summary>Can my employer see a history of my Teams status?</summary>
-          <p>Not from anything Microsoft provides. The Teams user activity reports have no presence or idle column, the Purview audit log has no presence event, and Microsoft staff have confirmed that the Graph presence API does not expose past presence history. A history exists only if the organisation built or bought a tool that polls or subscribes to presence and stores the results.</p>
+          <p>Not from anything Microsoft provides. The Teams user activity reports have no presence or idle column, the Purview audit log has no presence event, and Microsoft staff have confirmed that the Graph presence API does not expose past presence history. A history exists only if the organization built or bought a tool that polls or subscribes to presence and stores the results.</p>
         </details>
         <details>
           <summary>What does the Teams user activity report show about me?</summary>
-          <p>Counts, not time. The columns are channel messages, posts, replies, urgent messages, chat messages, meetings organised and attended by type, 1:1 calls, audio, video and screen share duration, a last activity date, and an other activity flag. Changing your status counts as other activity, which marks you as active that day and nothing more. Names are hidden in the report by default.</p>
+          <p>Counts, not time. The columns are channel messages, posts, replies, urgent messages, chat messages, meetings organized and attended by type, 1:1 calls, audio, video and screen share duration, a last activity date, and an other activity flag. Changing your status counts as other activity, which marks you as active that day and nothing more. Names are hidden in the report by default.</p>
         </details>
         <details>
           <summary>Can I stop Teams from going Away?</summary>
