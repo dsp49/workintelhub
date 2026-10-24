@@ -1,51 +1,46 @@
 # Subscribe form: Cloudflare D1 setup
 
-The subscribe form posts to `/api/subscribe`, a Cloudflare Pages Function, which
-writes one row to a D1 database. D1 is Cloudflare's SQLite, on the same account
-that already serves the site, so there is no third party, no shared secret and
-no extra network hop.
-
-`/api/subscribers` reads the list back, and `/admin/subscribers` is a small page
-that shows it and exports CSV.
+The subscribe form posts to `/api/subscribe`, which writes one row to a D1
+database. `/api/subscribers` reads the list back, and `/admin/subscribers` is a
+small page that shows it and exports CSV.
 
 ---
 
-## 0. First: make Functions actually deploy
+## How this deploys, and why it was broken
 
-**This is the step that was missing.** `/api/subscribe` returned 404 on the live
-site even though `functions/api/subscribe.js` was committed, which means the
-Pages project was not building Functions at all. Check this before anything
-else, or the rest of the setup will look correct and still not work.
+**workintelhub is a Worker with static assets, not a Pages project.** That one
+fact explains why `/api/subscribe` answered 404 for months while every static
+page served fine: a `functions/` directory is a *Pages* convention. On a Worker
+it is just a folder, never routed, never executed.
 
-In **Pages -> workintelhub -> Settings -> Builds & deployments**:
+So the routing Pages would have done by filename is explicit here:
 
-- The project must be **connected to the GitHub repo**, not Direct Upload. A
-  Direct Upload project never builds Functions.
-- **Root directory** must be empty or `/`. If it points at a subfolder,
-  Cloudflare looks for `functions/` inside that subfolder and finds nothing.
-- **Build output directory** must be `/` (this site has no build step that
-  emits to `dist`).
+| File | Role |
+|---|---|
+| `src/worker.js` | entry point; maps `/api/*` to the handlers, everything else to `env.ASSETS` |
+| `functions/api/*.js` | the handlers, unchanged, imported and bundled into the Worker |
+| `wrangler.jsonc` | `main`, the assets config, and the `DB` binding |
+| `.assetsignore` | keeps source, tooling and docs from being served as files |
 
-Then redeploy and confirm:
+`run_worker_first: ["/api/*"]` in `wrangler.jsonc` is load-bearing. Without it
+the asset handler answers first and `/api/*` 404s before the Worker sees it.
 
-```
-curl -i https://workintelhub.com/api/subscribe
-```
-
-**405** with `{"ok":false,"error":"Use POST."}` means Functions are live.
-**404** means they still are not, and nothing below will help yet.
+`.assetsignore` listing `functions` is also load-bearing: the asset directory is
+the repo root, so without it the handler source would be publicly fetchable
+rather than executed.
 
 ---
 
-## 1. Create the database
+## 1. The database
 
-**Workers & Pages -> D1 -> Create database**, name it `workintelhub`.
+Already created: name `workintelhub`, ID
+`72c88f3f-bac5-4d02-9471-27eea0595398`, with the `subscribers` table in place.
+It is bound as `DB` in `wrangler.jsonc`, so there is nothing to click in the
+dashboard.
 
-Open it, go to the **Console** tab, and paste the contents of
+The schema lives in
 [`migrations/0001_create_subscribers.sql`](../migrations/0001_create_subscribers.sql).
-Run it once. That creates the `subscribers` table and its index.
-
-Or from a terminal, if you use Wrangler:
+To reapply it:
 
 ```
 npx wrangler d1 execute workintelhub --remote --file=./migrations/0001_create_subscribers.sql
@@ -53,36 +48,34 @@ npx wrangler d1 execute workintelhub --remote --file=./migrations/0001_create_su
 
 ---
 
-## 2. Bind it to the site
+## 2. The admin token
 
-**Pages -> workintelhub -> Settings -> Functions -> D1 database bindings**.
-Add, for **Production** and **Preview**:
-
-| Variable name | D1 database |
-|---|---|
-| `DB` | `workintelhub` |
-
-The variable name must be exactly `DB`; that is what the function reads.
-
----
-
-## 3. Set the admin token
-
-Generate a long random string:
+`ADMIN_TOKEN` is a **secret**, so it is not in `wrangler.jsonc` and must never
+be committed. Generate one:
 
 ```
 python -c "import secrets; print(secrets.token_urlsafe(32))"
 ```
 
-**Settings -> Environment variables**, add to **Production** and **Preview**,
-marked **encrypted**:
+Set it either in the dashboard, **Workers & Pages -> workintelhub -> Settings
+-> Variables and Secrets -> Add -> Secret**, or from a terminal:
 
-| Name | Value |
-|---|---|
-| `ADMIN_TOKEN` | the random string |
+```
+npx wrangler secret put ADMIN_TOKEN
+```
 
-**Redeploy.** Bindings and variables are read at request time, but an existing
-deployment does not pick up newly added ones until it is rebuilt.
+Save the value somewhere. It is unreadable once stored.
+
+---
+
+## 3. Deploy
+
+Pushing to `main` deploys, through the Worker's git integration. To deploy by
+hand instead:
+
+```
+npx wrangler deploy
+```
 
 ---
 

@@ -1,0 +1,11 @@
+# Not part of the site. The asset directory is the repo root, so anything that
+# is source, tooling or documentation has to be excluded by name or it would be
+# publicly fetchable. functions/ especially: those handlers are bundled into the
+# Worker, and serving them as files would publish the code instead of running it.
+src
+functions
+migrations
+wrangler.jsonc
+*.py
+docs
+README.md

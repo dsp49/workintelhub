@@ -8,10 +8,10 @@
  * hop: the database is on the same account as the site and the write happens
  * in the same request.
  *
- * Bind the database in the Cloudflare dashboard:
- *   Pages -> workintelhub -> Settings -> Functions -> D1 database bindings
- *   Variable name: DB
- * See docs/subscribe-setup.md.
+ * This project is a Worker with static assets, not a Pages project, so the
+ * `functions/` directory is never routed by filename. src/worker.js imports
+ * this handler and maps /api/subscribe to it, and the DB binding is declared
+ * in wrangler.jsonc. See docs/subscribe-setup.md.
  */
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;

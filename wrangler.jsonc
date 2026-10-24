@@ -1,0 +1,29 @@
+{
+  // workintelhub is a Worker with static assets. The site itself is the asset
+  // directory; the Worker exists only to serve the two /api routes.
+  "name": "workintelhub",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-24",
+
+  "assets": {
+    // The repo root is the site. .assetsignore keeps source and tooling out.
+    "directory": ".",
+    "binding": "ASSETS",
+    // Without this the asset handler answers first and /api/* 404s before the
+    // Worker ever sees it, which is the bug this file exists to fix.
+    "run_worker_first": ["/api/*"]
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "workintelhub",
+      "database_id": "72c88f3f-bac5-4d02-9471-27eea0595398"
+    }
+  ],
+
+  "observability": {
+    // console.error in the handlers is the only signal when a signup fails.
+    "enabled": true
+  }
+}
