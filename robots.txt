@@ -10,6 +10,8 @@ Allow: /
 
 # Keep crawlers out of build/meta noise and tracking-parameter duplicates.
 Disallow: /design/
+Disallow: /admin/
+Disallow: /api/
 Disallow: /*?utm_
 Disallow: /*?fbclid
 

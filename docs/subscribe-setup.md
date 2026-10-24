@@ -1,197 +1,178 @@
-# Subscribe form: Google Sheet setup
+# Subscribe form: Cloudflare D1 setup
 
-The homepage form posts to `/api/subscribe`, a Cloudflare Pages Function, which
-forwards the address to a Google Apps Script webhook that appends a row to a
-Sheet. The browser never sees the webhook URL.
+The subscribe form posts to `/api/subscribe`, a Cloudflare Pages Function, which
+writes one row to a D1 database. D1 is Cloudflare's SQLite, on the same account
+that already serves the site, so there is no third party, no shared secret and
+no extra network hop.
 
-Three steps. Ten minutes.
-
----
-
-## 1. Create the Sheet
-
-New Google Sheet, name it something like `workintelhub subscribers`.
-
-Put these headers in row 1, in this order:
-
-| A | B | C | D |
-|---|---|---|---|
-| email | created_at | source | country |
-
-The script writes columns in that order, so do not rearrange them.
+`/api/subscribers` reads the list back, and `/admin/subscribers` is a small page
+that shows it and exports CSV.
 
 ---
 
-## 2. Add the Apps Script
+## 0. First: make Functions actually deploy
 
-Two ways to get here, and either works because the script opens the Sheet by ID
-rather than relying on being attached to one:
+**This is the step that was missing.** `/api/subscribe` returned 404 on the live
+site even though `functions/api/subscribe.js` was committed, which means the
+Pages project was not building Functions at all. Check this before anything
+else, or the rest of the setup will look correct and still not work.
 
-- From the Sheet: **Extensions -> Apps Script**
-- Or standalone: **script.google.com -> New project**
+In **Pages -> workintelhub -> Settings -> Builds & deployments**:
 
-Delete whatever is in `Code.gs` and paste this in full.
+- The project must be **connected to the GitHub repo**, not Direct Upload. A
+  Direct Upload project never builds Functions.
+- **Root directory** must be empty or `/`. If it points at a subfolder,
+  Cloudflare looks for `functions/` inside that subfolder and finds nothing.
+- **Build output directory** must be `/` (this site has no build step that
+  emits to `dist`).
 
-```js
-/**
- * workintelhub subscribe endpoint.
- * Appends one subscriber per request to the first sheet of the target Sheet.
- */
+Then redeploy and confirm:
 
-const SHARED_SECRET = 'CHANGE-ME-TO-A-LONG-RANDOM-STRING';
-
-// From your Sheet URL, the part between /d/ and /edit:
-// https://docs.google.com/spreadsheets/d/THIS-PART-HERE/edit
-const SHEET_ID = 'PASTE-YOUR-SHEET-ID-HERE';
-
-
-function doPost(e) {
-  try {
-    if (!e || !e.postData || !e.postData.contents) {
-      return reply({ ok: false, error: 'no body' });
-    }
-
-    const body = JSON.parse(e.postData.contents);
-
-    // The web app must accept unauthenticated requests, so this is what stops
-    // a stranger who finds the URL writing rows.
-    if (body.secret !== SHARED_SECRET) {
-      return reply({ ok: false, error: 'forbidden' });
-    }
-
-    const email = String(body.email || '').trim().toLowerCase();
-    if (!email || email.indexOf('@') < 1) {
-      return reply({ ok: false, error: 'bad email' });
-    }
-
-    const sheet = SpreadsheetApp.openById(SHEET_ID).getSheets()[0];
-
-    // Skip duplicates rather than collecting the same address twice.
-    // Read only the rows that exist: getRange('A2:A') would pull a million
-    // empty cells on every request.
-    const lastRow = sheet.getLastRow();
-    if (lastRow > 1) {
-      const existing = sheet.getRange(2, 1, lastRow - 1, 1).getValues();
-      for (var i = 0; i < existing.length; i++) {
-        if (String(existing[i][0]).trim().toLowerCase() === email) {
-          return reply({ ok: true, duplicate: true });
-        }
-      }
-    }
-
-    sheet.appendRow([
-      email,
-      body.created_at || new Date().toISOString(),
-      body.source || '',
-      body.country || ''
-    ]);
-
-    return reply({ ok: true });
-  } catch (err) {
-    return reply({ ok: false, error: String(err) });
-  }
-}
-
-
-// Opening the web app URL in a browser sends a GET. Answer something sensible
-// instead of an error page, but never reveal anything about the sheet.
-function doGet() {
-  return reply({ ok: false, error: 'This endpoint accepts POST only.' });
-}
-
-
-function reply(obj) {
-  return ContentService
-    .createTextOutput(JSON.stringify(obj))
-    .setMimeType(ContentService.MimeType.JSON);
-}
+```
+curl -i https://workintelhub.com/api/subscribe
 ```
 
-Change `SHARED_SECRET` to a long random string. Generate one however you like,
-for example in a terminal:
+**405** with `{"ok":false,"error":"Use POST."}` means Functions are live.
+**404** means they still are not, and nothing below will help yet.
+
+---
+
+## 1. Create the database
+
+**Workers & Pages -> D1 -> Create database**, name it `workintelhub`.
+
+Open it, go to the **Console** tab, and paste the contents of
+[`migrations/0001_create_subscribers.sql`](../migrations/0001_create_subscribers.sql).
+Run it once. That creates the `subscribers` table and its index.
+
+Or from a terminal, if you use Wrangler:
+
+```
+npx wrangler d1 execute workintelhub --remote --file=./migrations/0001_create_subscribers.sql
+```
+
+---
+
+## 2. Bind it to the site
+
+**Pages -> workintelhub -> Settings -> Functions -> D1 database bindings**.
+Add, for **Production** and **Preview**:
+
+| Variable name | D1 database |
+|---|---|
+| `DB` | `workintelhub` |
+
+The variable name must be exactly `DB`; that is what the function reads.
+
+---
+
+## 3. Set the admin token
+
+Generate a long random string:
 
 ```
 python -c "import secrets; print(secrets.token_urlsafe(32))"
 ```
 
-Then **Deploy -> New deployment**:
-
-- Type: **Web app**
-- Execute as: **Me**
-- Who has access: **Anyone**
-
-"Anyone" sounds alarming but is required: Cloudflare calls it without a Google
-login. The shared secret is what actually protects it, which is why it must not
-be guessable.
-
-Copy the **Web app URL**. It looks like
-`https://script.google.com/macros/s/AKfy.../exec`.
-
----
-
-## 3. Tell Cloudflare about it
-
-In the Cloudflare dashboard: **Pages -> workintelhub -> Settings ->
-Environment variables**. Add to **Production** and **Preview**:
+**Settings -> Environment variables**, add to **Production** and **Preview**,
+marked **encrypted**:
 
 | Name | Value |
 |---|---|
-| `SHEETS_WEBHOOK_URL` | the Apps Script Web app URL |
-| `SHEETS_SECRET` | the same random string you put in the script |
+| `ADMIN_TOKEN` | the random string |
 
-Mark both as **encrypted**. Redeploy for them to take effect: environment
-variables are read at request time, but an existing deployment will not pick up
-newly added variables until it is rebuilt.
+**Redeploy.** Bindings and variables are read at request time, but an existing
+deployment does not pick up newly added ones until it is rebuilt.
 
 ---
 
-## Testing
-
-After deploying, from any terminal:
+## 4. Check it
 
 ```
 curl -X POST https://workintelhub.com/api/subscribe \
   -H "content-type: application/json" \
-  -d '{"email":"you@example.com","source":"manual test"}'
+  -d '{"email":"you@example.com","name":"Test","page":"/","tag":"manual"}'
 ```
 
-Expect `{"ok":true}` and a new row in the Sheet. Then check the failure path:
+Expect `{"ok":true}`. Run it twice: the second is also `{"ok":true}` but adds no
+row, because `email` is UNIQUE and the insert is `ON CONFLICT DO NOTHING`.
+
+Then the failure path:
 
 ```
 curl -X POST https://workintelhub.com/api/subscribe \
-  -H "content-type: application/json" \
-  -d '{"email":"not-an-email"}'
+  -H "content-type: application/json" -d '{"email":"nope"}'
 ```
 
-Expect a 400 and `{"ok":false,"error":"That does not look like an email address."}`.
+Expect **400** and `{"ok":false,"error":"invalid_email"}`.
+
+And reading back:
+
+```
+curl https://workintelhub.com/api/subscribers \
+  -H "authorization: Bearer YOUR_ADMIN_TOKEN"
+```
 
 ---
 
-## What this does not do
+## Viewing the list
 
-A Sheet stores addresses. It does not send email, and it has no unsubscribe
-mechanism. Before sending anything to this list you still need:
+Open **https://workintelhub.com/admin/subscribers**, paste the admin token, and
+the list loads newest first with a **Download CSV** button. The token is kept in
+`sessionStorage`, so it is gone when the tab closes.
 
-- **Double opt-in.** Right now a signup is recorded immediately, so anyone can
-  enter someone else's address. A confirmation click fixes that.
+The page is `noindex`, disallowed in `robots.txt`, and served `no-store`. It is
+not linked from anywhere on the site.
+
+### Worth doing: put Cloudflare Access in front of it
+
+A bearer token is the floor. Anyone who gets the string gets the whole list, and
+there is no audit trail. **Zero Trust -> Access -> Applications**, add a
+self-hosted application for `workintelhub.com/admin/*`, policy "emails match
+your address". That gives real login and an access log, and is free at this
+scale. The token check stays as defence in depth.
+
+---
+
+## What gets stored
+
+| Column | Source |
+|---|---|
+| `email` | the form, lower-cased, UNIQUE |
+| `name` | the form, optional |
+| `page` | `location.pathname` the signup came from |
+| `tag` | the hidden topic tag already on each form |
+| `country` | Cloudflare's `cf-ipcountry` header |
+| `created_at` | server time, ISO 8601 UTC |
+
+The name field is optional on purpose. A required name costs signups, and an
+address with no name is still a subscriber.
+
+---
+
+## What this still does not do
+
+D1 stores addresses. It does not send email, and there is no unsubscribe. Before
+sending anything to this list you need:
+
+- **Double opt-in.** A signup is recorded immediately, so anyone can enter
+  someone else's address. A confirmation click fixes that.
 - **An unsubscribe link in every email**, plus a physical postal address. Both
   are required by CAN-SPAM in the US.
-- **SPF, DKIM, and DMARC** on the sending domain, or the mail lands in spam.
+- **SPF, DKIM and DMARC** on the sending domain, or the mail lands in spam.
 
-Most of that arrives free with an email service such as Buttondown or Kit, which
-would also replace this whole setup. Worth revisiting once the list is worth
-sending to.
+Most of that comes free with an email service such as Buttondown or Kit. D1 is
+the right place to *collect* addresses; it is not a sending platform.
 
 ---
 
 ## Where the data lives
 
-Addresses sit in a Google Sheet on a personal Google account. That has
-consequences worth being deliberate about:
+Addresses sit in D1 on the Cloudflare account that serves the site. Fewer
+parties than the old Google Sheet setup, but the obligations are the same:
 
-- Anyone with access to that Google account can read the whole list.
-- Sharing the Sheet link shares the personal data of everyone on it.
-- Google is a data processor for it, which the privacy policy names.
-
-Keep the Sheet private, do not share it more widely than needed, and delete
-addresses on request.
+- Anyone with access to the Cloudflare account can read the whole list.
+- Anyone with `ADMIN_TOKEN` can read the whole list.
+- The privacy policy names who processes this data; keep it accurate.
+- Delete addresses on request:
+  `DELETE FROM subscribers WHERE email = 'someone@example.com';`

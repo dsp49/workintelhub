@@ -952,6 +952,9 @@
         <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
         <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
         <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-name">Name</label>
+          <input type="text" id="inline-name" name="name" placeholder="Your name (optional)"
+                 autocomplete="name" maxlength="100">
           <label class="visually-hidden" for="inline-email">Email address</label>
           <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
           <input type="hidden" name="tag" value="hr">
@@ -1069,5 +1072,57 @@
     </div>
   </footer>
 <!-- /BUILD:footer -->
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var nameField = form.elements.namedItem("name");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, name: nameField && nameField.value ? nameField.value : "", website: form.website ? form.website.value : "", tag: tag ? tag.value : "", page: location.pathname })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "d1", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
 </body>
 </html>

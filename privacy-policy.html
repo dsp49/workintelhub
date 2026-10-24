@@ -148,15 +148,16 @@
         </p>
         <p>
           If you enter an address in the subscribe form, we store it. We keep the address itself,
-          the date and time you submitted it, the page you submitted it from, and the two letter
-          country code our host reports for the connection. We do not store your IP address or your
-          name.
+          the date and time you submitted it, the page you submitted it from, the topic tag of that
+          page, and the two letter country code our host reports for the connection. The form also
+          has an optional name field: if you fill it in we keep what you typed, and if you leave it
+          empty we store nothing there. We do not store your IP address.
         </p>
         <p>
-          That record is written to a private Google Sheet, which makes Google a processor of it.
-          The form is served through Cloudflare, our host, which handles the request in transit. We
-          use the address for one purpose, which is to send you the email described next to the
-          form. We do not sell it, and we do not pass it to anyone else.
+          That record is written to a private database held with Cloudflare, our host, which both
+          serves the form and stores the result. No third party receives it. We use the address for
+          one purpose, which is to send you the email described next to the form. We do not sell it,
+          and we do not pass it to anyone else.
         </p>
         <p>
           Two things we would rather you heard from us than discovered. There is currently no

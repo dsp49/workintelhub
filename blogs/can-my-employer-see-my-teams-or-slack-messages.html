@@ -234,7 +234,7 @@
       <h1>Can My Employer See My Teams or Slack Messages?</h1>
 
       <div class="byline">
-        <span class="avatar" data-author="tarun">T</span>
+        <span class="avatar avatar--photo" data-author="tarun"><img src="/images/authors/tarun.webp" alt="" width="96" height="96" loading="lazy" decoding="async" /></span>
         <span>
           <a class="who" href="/authors/tarun" rel="author">Tarun Kumar Reddy</a><br />
           <span class="when">October 14, 2026 &middot; 11 min read</span>
@@ -506,6 +506,9 @@
         <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
         <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
         <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-name">Name</label>
+          <input type="text" id="inline-name" name="name" placeholder="Your name (optional)"
+                 autocomplete="name" maxlength="100">
           <label class="visually-hidden" for="inline-email">Email address</label>
           <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
           <input type="hidden" name="tag" value="employee-monitoring">
@@ -558,7 +561,7 @@
 
       <!-- wih:author-box -->
       <aside class="author-box">
-        <span class="avatar" aria-hidden="true" data-author="tarun">T</span>
+        <span class="avatar avatar--photo" aria-hidden="true" data-author="tarun"><img src="/images/authors/tarun.webp" alt="" width="96" height="96" loading="lazy" decoding="async" /></span>
         <div>
           <p class="author-box__name"><a href="/authors/tarun">Tarun Kumar Reddy</a> <span class="author-box__role">Writer and Accuracy Reviewer, WorkIntel Hub</span></p>
           <p class="author-box__bio">Tarun Kumar Reddy writes WorkIntel Hub's employee-side guides on workplace monitoring and privacy, the ones that answer what an employer can actually see and what the law allows them to do with it. He also reviews the site's monitoring and privacy coverage for accuracy, checking each claim against the statute or agency guidance it rests on.</p>
@@ -642,6 +645,7 @@
       var button = form.querySelector("button");
       var input = form.querySelector("input[type=email]");
       var tag = form.querySelector("input[name=tag]");
+      var nameField = form.elements.namedItem("name");
       var label = button ? button.textContent : "Subscribe";
       function say(msg, ok) {
         if (!status) return;
@@ -659,11 +663,11 @@
         fetch("/api/subscribe", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+          body: JSON.stringify({ email: email, name: nameField && nameField.value ? nameField.value : "", website: form.website ? form.website.value : "", tag: tag ? tag.value : "", page: location.pathname })
         }).then(function (r) {
           if (r.ok) {
             say("Thanks. You are on the list.", true); form.reset();
-            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "d1", tag: tag ? tag.value : "" });
             return;
           }
           if (r.status === 404 || r.status === 503) { fallback(); return; }

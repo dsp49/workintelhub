@@ -446,6 +446,9 @@
         <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
         <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
         <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-name">Name</label>
+          <input type="text" id="inline-name" name="name" placeholder="Your name (optional)"
+                 autocomplete="name" maxlength="100">
           <label class="visually-hidden" for="inline-email">Email address</label>
           <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
           <input type="hidden" name="tag" value="time-tracking">
@@ -582,6 +585,7 @@
       var button = form.querySelector("button");
       var input = form.querySelector("input[type=email]");
       var tag = form.querySelector("input[name=tag]");
+      var nameField = form.elements.namedItem("name");
       var label = button ? button.textContent : "Subscribe";
       function say(msg, ok) {
         if (!status) return;
@@ -599,11 +603,11 @@
         fetch("/api/subscribe", {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+          body: JSON.stringify({ email: email, name: nameField && nameField.value ? nameField.value : "", website: form.website ? form.website.value : "", tag: tag ? tag.value : "", page: location.pathname })
         }).then(function (r) {
           if (r.ok) {
             say("Thanks. You are on the list.", true); form.reset();
-            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "d1", tag: tag ? tag.value : "" });
             return;
           }
           if (r.status === 404 || r.status === 503) { fallback(); return; }

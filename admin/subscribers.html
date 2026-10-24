@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribers</title>
+  <!-- Personal data. Keep it out of every index, and out of the sitemap. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .admin { max-width: 1100px; margin: 2.5rem auto; padding: 0 1rem; }
+    .admin h1 { margin-bottom: .35rem; }
+    .admin .muted { color: var(--muted); font-size: .9rem; }
+    .admin table { width: 100%; border-collapse: collapse; margin-top: 1.25rem; font-size: .9rem; }
+    .admin th, .admin td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--line); }
+    .admin th { font-size: .78rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+    .admin td.page { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .82rem; }
+    .admin .bar { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; margin-top: 1.25rem; }
+    .admin input[type=password] { padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 8px; min-width: 18rem; }
+    .admin .err { color: #b4232a; }
+  </style>
+</head>
+<body>
+<main class="admin">
+  <h1>Subscribers</h1>
+  <p class="muted">Newsletter signups, newest first. This page is not indexed and not linked from the site.</p>
+
+  <form class="bar" id="auth">
+    <label class="visually-hidden" for="token">Admin token</label>
+    <input type="password" id="token" placeholder="Admin token" autocomplete="current-password" required>
+    <button class="btn" type="submit">Load</button>
+    <button class="btn btn-sm" type="button" id="csv" hidden>Download CSV</button>
+    <button class="btn btn-sm" type="button" id="forget" hidden>Forget token</button>
+  </form>
+
+  <p id="status" class="muted" role="status" aria-live="polite"></p>
+  <div id="out"></div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = "wih_admin_token";
+  // sessionStorage, not localStorage: the token dies with the tab rather than
+  // sitting on disk until someone clears it.
+  var token = "";
+  try { token = sessionStorage.getItem(KEY) || ""; } catch (e) {}
+
+  function say(msg, bad) {
+    $("status").textContent = msg || "";
+    $("status").className = bad ? "err" : "muted";
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function request(path) {
+    return fetch(path, { headers: { authorization: "Bearer " + token } });
+  }
+
+  function render(rows) {
+    if (!rows.length) { $("out").innerHTML = "<p class='muted'>No subscribers yet.</p>"; return; }
+    var head = "<tr><th>Email</th><th>Name</th><th>Page</th><th>Tag</th><th>Country</th><th>Signed up</th></tr>";
+    var body = rows.map(function (r) {
+      return "<tr><td>" + esc(r.email) + "</td><td>" + esc(r.name) +
+        "</td><td class='page'>" + esc(r.page) + "</td><td>" + esc(r.tag) +
+        "</td><td>" + esc(r.country) + "</td><td>" + esc((r.created_at || "").replace("T", " ").slice(0, 16)) + "</td></tr>";
+    }).join("");
+    $("out").innerHTML = "<table>" + head + body + "</table>";
+  }
+
+  function load(e) {
+    if (e) e.preventDefault();
+    token = $("token").value || token;
+    if (!token) { say("Enter the admin token.", true); return; }
+    say("Loading...");
+    request("/api/subscribers?limit=10000").then(function (r) {
+      if (r.status === 401) { say("That token was not accepted.", true); return null; }
+      if (!r.ok) { say("Request failed (" + r.status + ").", true); return null; }
+      return r.json();
+    }).then(function (j) {
+      if (!j) return;
+      try { sessionStorage.setItem(KEY, token); } catch (e) {}
+      $("token").value = "";
+      $("token").placeholder = "Token remembered for this tab";
+      $("csv").hidden = false;
+      $("forget").hidden = false;
+      say(j.count + (j.count === 1 ? " subscriber" : " subscribers"));
+      render(j.subscribers || []);
+    }).catch(function () { say("Network error.", true); });
+  }
+
+  $("auth").addEventListener("submit", load);
+
+  // The CSV needs the auth header, so it cannot be a plain link. Pull it as a
+  // blob and hand the browser a download.
+  $("csv").addEventListener("click", function () {
+    say("Preparing CSV...");
+    request("/api/subscribers?format=csv&limit=10000").then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.blob();
+    }).then(function (b) {
+      var url = URL.createObjectURL(b);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "subscribers.csv";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      say("CSV downloaded.");
+    }).catch(function () { say("Could not download the CSV.", true); });
+  });
+
+  $("forget").addEventListener("click", function () {
+    try { sessionStorage.removeItem(KEY); } catch (e) {}
+    token = "";
+    $("out").innerHTML = "";
+    $("csv").hidden = true;
+    $("forget").hidden = true;
+    $("token").placeholder = "Admin token";
+    say("Token forgotten.");
+  });
+
+  if (token) load();
+})();
+</script>
+</body>
+</html>

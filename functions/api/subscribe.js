@@ -1,16 +1,17 @@
 /**
  * POST /api/subscribe
  *
- * Takes the homepage subscribe form and appends the address to a Google Sheet.
+ * Stores one newsletter subscriber in the D1 database bound as DB.
  *
- * The browser never talks to Google directly. It posts here, and this function
- * forwards to the Apps Script webhook using a URL held in an environment
- * variable. That keeps the webhook out of public JavaScript, lets validation run
- * somewhere a visitor cannot edit, and avoids the CORS problems Apps Script has.
+ * Previously this forwarded to a Google Apps Script webhook that appended to a
+ * Sheet. D1 removes the third party, the shared secret and the extra network
+ * hop: the database is on the same account as the site and the write happens
+ * in the same request.
  *
- * Set SHEETS_WEBHOOK_URL in the Cloudflare Pages dashboard:
- *   Settings -> Environment variables -> Production (and Preview)
- * See docs/subscribe-setup.md for the Apps Script side.
+ * Bind the database in the Cloudflare dashboard:
+ *   Pages -> workintelhub -> Settings -> Functions -> D1 database bindings
+ *   Variable name: DB
+ * See docs/subscribe-setup.md.
  */
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -24,6 +25,10 @@ const json = (body, status = 200) =>
     },
   });
 
+// Trim to a sane length before anything reaches the database. These come
+// straight from a form, so treat every one of them as hostile.
+const clean = (value, max) => String(value == null ? "" : value).trim().slice(0, max);
+
 export async function onRequest({ request, env }) {
   if (request.method !== "POST") {
     return json({ ok: false, error: "Use POST." }, 405);
@@ -36,56 +41,50 @@ export async function onRequest({ request, env }) {
     return json({ ok: false, error: "Malformed request." }, 400);
   }
 
-  const email = String(payload.email || "").trim().toLowerCase();
-  const honeypot = String(payload.website || "").trim();
+  const email = clean(payload.email, 254).toLowerCase();
+  const honeypot = clean(payload.website, 100);
 
   // Bots fill every field they find. A human never sees this one, so anything
   // in it means automation. Answer as if it worked rather than teaching the bot
   // what tripped it.
   if (honeypot) return json({ ok: true });
 
-  if (!EMAIL.test(email) || email.length > 254) {
-    return json({ ok: false, error: "That does not look like an email address." }, 400);
+  if (!EMAIL.test(email)) {
+    return json({ ok: false, error: "invalid_email" }, 400);
   }
 
-  if (!env.SHEETS_WEBHOOK_URL) {
+  if (!env.DB) {
     // Misconfiguration, not the visitor's fault. Never imply the signup worked.
-    console.error("SHEETS_WEBHOOK_URL is not set");
+    console.error("D1 binding DB is not set");
     return json({ ok: false, error: "Signups are not available right now." }, 503);
   }
 
-  const record = {
-    // The Apps Script web app has to accept unauthenticated requests, so this
-    // shared secret is what stops a stranger who finds the URL writing rows.
-    secret: env.SHEETS_SECRET || "",
-    email,
-    created_at: new Date().toISOString(),
-    source: String(payload.source || "").slice(0, 200),
-    country: request.headers.get("cf-ipcountry") || "",
-  };
+  // The page is sent by the client, so it is a hint rather than a fact. Keep
+  // only a same-site path and drop anything that tries to be a URL.
+  let page = clean(payload.page, 200);
+  if (!page.startsWith("/") || page.startsWith("//")) page = "";
 
   try {
-    const res = await fetch(env.SHEETS_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(record),
-      signal: AbortSignal.timeout(8000),
-    });
-    if (!res.ok) {
-      console.error("sheet webhook returned", res.status);
-      return json({ ok: false, error: "Could not save that. Please try again." }, 502);
-    }
-    // Apps Script answers 200 even when it refuses, so the body is the real
-    // status. Without this a wrong secret would look like a successful signup.
-    const result = await res.json().catch(() => null);
-    if (!result || result.ok !== true) {
-      console.error("sheet webhook rejected:", result && result.error);
-      return json({ ok: false, error: "Could not save that. Please try again." }, 502);
-    }
+    await env.DB.prepare(
+      `INSERT INTO subscribers (email, name, page, tag, country, created_at)
+       VALUES (?1, ?2, ?3, ?4, ?5, ?6)
+       ON CONFLICT(email) DO NOTHING`
+    )
+      .bind(
+        email,
+        clean(payload.name, 100) || null,
+        page || null,
+        clean(payload.tag, 60) || null,
+        request.headers.get("cf-ipcountry") || null,
+        new Date().toISOString()
+      )
+      .run();
   } catch (err) {
-    console.error("sheet webhook failed:", err && err.message);
+    console.error("d1 insert failed:", err && err.message);
     return json({ ok: false, error: "Could not save that. Please try again." }, 502);
   }
 
+  // A repeat signup inserts nothing and still answers ok. Telling the visitor
+  // their address was already on the list would confirm it to anyone probing.
   return json({ ok: true });
 }
