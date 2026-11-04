@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluctuating Workweek Calculator: Half-Time Overtime Rules</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Calculate overtime under 29 CFR 778.114, compare it with standard time and a half, see the five conditions the method requires and the states that prohibit it." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/fluctuating-workweek-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/fluctuating-workweek-calculator" />
+  <meta property="og:title" content="Fluctuating Workweek Calculator: Half-Time Overtime Rules" />
+  <meta property="og:description" content="Calculate overtime under 29 CFR 778.114, compare it with standard time and a half, see the five conditions the method requires and the states that prohibit it." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/fluctuating-workweek-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-04T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-04T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fluctuating Workweek Calculator: Half-Time Overtime Rules" />
+  <meta name="twitter:description" content="Calculate overtime under 29 CFR 778.114, compare it with standard time and a half, see the five conditions the method requires and the states that prohibit it." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/fluctuating-workweek-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/fluctuating-workweek-calculator#article",
+      "headline": "Fluctuating Workweek Calculator: Half-Time Overtime Rules",
+      "description": "Calculate overtime under 29 CFR 778.114, compare it with standard time and a half, see the five conditions the method requires and the states that prohibit it.",
+      "image": "https://workintelhub.com/images/blog/fluctuating-workweek-calculator.png",
+      "datePublished": "2026-11-04T00:00:00+00:00",
+      "dateModified": "2026-11-04T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/fluctuating-workweek-calculator"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/fluctuating-workweek-calculator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fluctuating Workweek Calculator: Half-Time Overtime Rules"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/fluctuating-workweek-calculator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the fluctuating workweek method?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A way of paying overtime to a non-exempt employee who receives a fixed weekly salary regardless of hours. Because the salary is agreed to cover straight time for all hours worked, the employee receives only an additional half of the regular rate for hours over 40, with the regular rate recalculated each week as salary (plus any bonuses) divided by that week's hours. It is authorized by 29 CFR 778.114."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate fluctuating workweek overtime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide the weekly salary plus any nondiscretionary bonus, commission or differential by the total hours worked that week to get the regular rate. Multiply the regular rate by 0.5 and by the hours over 40. Add that premium to the salary and extra pay. Example: $800 salary, 50 hours: $800 ÷ 50 = $16.00; 0.5 × $16 × 10 = $80; total $880."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the fluctuating workweek legal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under federal law, yes, if the five conditions in 29 CFR 778.114 are met. It is not permitted under state law in Alaska, California, New Mexico or Pennsylvania, and not for retail employees in Connecticut. Employers in those states must pay one and a half times the regular rate, generally computed as salary divided by 40."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you pay bonuses under the fluctuating workweek?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, since the Department of Labor's 2020 rule, effective August 7, 2020. Bonuses, commissions, hazard pay and shift differentials are compatible with the method, but they must be added to the salary before dividing by hours to compute the regular rate, unless they are excludable under Section 7(e) of the Fair Labor Standards Act, such as truly discretionary bonuses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the employer docks the salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The method requires a fixed salary that does not vary with hours, so a deduction for a short week, a late arrival or a partial-day absence breaks the arrangement. Courts then recompute overtime under the standard method, salary divided by 40 at time and a half, for the whole limitations period, usually two or three years, with liquidated damages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did Pennsylvania reject the fluctuating workweek?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Chevalier v. General Nutrition Centers (2019) the Pennsylvania Supreme Court held that the state Minimum Wage Act and its regulations require overtime at one and a half times the regular rate for salaried employees whose hours vary, and do not incorporate the federal half-time rule. The court did not decide whether the regular rate may be computed by dividing the salary by all hours worked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do employees on a fluctuating workweek need to track hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. They are non-exempt, so the employer must record hours worked each day and week under 29 CFR 516.2, and the regular rate depends on each week's total. An employer that does not track hours cannot calculate the premium and cannot defend a claim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the fluctuating workweek fair to employees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It trades a guaranteed full salary in short weeks for a lower overtime rate in long weeks. Employees whose hours are usually above 40 do worse than under hourly pay; those with frequent short weeks may do better. The law requires a clear mutual understanding, so employees should be told how it works before accepting it, and many employers have moved to hourly pay with a guaranteed minimum instead."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>Fluctuating Workweek Calculator: Half-Time Overtime Rules</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 4, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/fluctuating-workweek-calculator.png" alt="A bar chart of weekly hours that rises and falls around a flat salary line" width="1200" height="630" />
+      </figure>
+
+      <p>
+        The fluctuating workweek is the one lawful way to pay a non-exempt salaried employee overtime at half their regular rate instead of one and a half times it. It works because the fixed salary is treated as already covering straight-time pay for every hour worked, however many there are, so only the overtime premium remains. The result is that the regular rate falls as hours rise: an employee paid $800 a week earns $20 an hour in a 40-hour week and $16 an hour in a 50-hour week, and the overtime for those 10 extra hours is $80, not $300. Employers like it for exactly that reason, and employees who understand it generally do not.
+      </p>
+      <p>
+        The Department of Labor allows the method under 29 CFR 778.114 on five conditions, and since a 2020 rule change allows bonuses and shift differentials on top of the salary. Four states refuse to allow it under their own wage laws, and one restricts it. The calculator below computes pay for a week under the fluctuating method and shows what the same week would cost under standard overtime and under the salary-divided-by-40 method; the rest of the page sets out the conditions, the state positions, the arithmetic traps and when the method makes sense. For the standard calculation, see the <a href="/blogs/overtime-calculator">overtime calculator</a>.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Fluctuating workweek calculator</a></li>
+          <li><a href="#how">How the method works</a></li>
+          <li><a href="#conditions">The five conditions</a></li>
+          <li><a href="#bonuses">Bonuses, differentials and the 2020 rule</a></li>
+          <li><a href="#states">States that prohibit or restrict the method</a></li>
+          <li><a href="#traps">Where employers get it wrong</a></li>
+          <li><a href="#when">When it makes sense, and when it does not</a></li>
+          <li><a href="#employees">If you are paid this way</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="calculator">Fluctuating workweek calculator</h2>
+      <div class="calc" id="fw">
+        <div class="calc__grid">
+          <div><label for="fw-salary">Fixed weekly salary ($)</label><input id="fw-salary" type="number" min="0" step="1" value="800"></div>
+          <div><label for="fw-hours">Hours worked this week</label><input id="fw-hours" type="number" min="0" step="0.25" value="50"></div>
+          <div><label for="fw-bonus">Nondiscretionary bonus or commission this week ($)</label><input id="fw-bonus" type="number" min="0" step="0.01" value="0"></div>
+          <div><label for="fw-diff">Shift differential or other hourly premium this week ($, total)</label><input id="fw-diff" type="number" min="0" step="0.01" value="0"></div>
+          <div><label for="fw-minwage">Applicable minimum wage ($/hour)</label><input id="fw-minwage" type="number" min="0" step="0.05" value="7.25"></div>
+          <div><label for="fw-state">State</label><select id="fw-state"><option value="ok" selected>A state that follows the federal method</option><option value="ak">Alaska (prohibited)</option><option value="ca">California (prohibited)</option><option value="nm">New Mexico (prohibited)</option><option value="pa">Pennsylvania (prohibited: 1.5x required)</option><option value="ct">Connecticut (prohibited for retail employees)</option></select></div>
+        </div>
+        <div class="calc__out" id="fw-out"></div>
+        <p class="calc__note">Federal method per 29 CFR 778.114: regular rate = (salary + non-excludable extra pay) ÷ all hours worked; overtime = 0.5 × regular rate × hours over 40. The comparison rows show the same week under standard time and a half on the salary-divided-by-40 rate, which is what California, Alaska and New Mexico require, and under Pennsylvania's rule of 1.5 times the all-hours regular rate. Nothing typed here leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function money(x) { return "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var s = parseFloat(el("fw-salary").value) || 0, h = parseFloat(el("fw-hours").value) || 0, b = parseFloat(el("fw-bonus").value) || 0, d = parseFloat(el("fw-diff").value) || 0, mw = parseFloat(el("fw-minwage").value) || 0, st = el("fw-state").value;
+          if (h <= 0 || s <= 0) { el("fw-out").innerHTML = ""; return; }
+          var ot = Math.max(0, h - 40), extra = b + d;
+          var rr = (s + extra) / h, prem = 0.5 * rr * ot, fww = s + extra + prem;
+          var rate40 = s / 40, std = s + extra + 1.5 * ((s + extra) / 40) * ot;
+          var paPrem = 1.5 * rr * ot, pa = s + extra + paPrem;
+          var html = row("Regular rate this week (salary + extra pay ÷ " + h + " hours)", money(rr) + "/hour");
+          html += row("Overtime hours", ot.toFixed(2));
+          html += row("Fluctuating workweek overtime premium (0.5 × " + money(rr) + " × " + ot.toFixed(2) + ")", money(prem));
+          html += row("Total pay, fluctuating workweek method", money(fww));
+          if (rr < mw) html += row("Minimum wage check", "FAILS: the regular rate of " + money(rr) + " is below " + money(mw) + "; the salary is too low for this many hours and the method cannot be used this week");
+          else html += row("Minimum wage check", "Passes (" + money(rr) + " is at or above " + money(mw) + ")");
+          html += row("Same week, standard method (salary ÷ 40 = " + money(rate40) + ", overtime at 1.5x)", money(std) + (ot ? " (" + money(std - fww) + " more than the fluctuating method)" : ""));
+          html += row("Same week, Pennsylvania method (1.5 × all-hours regular rate)", money(pa));
+          var note = {ok: "The fluctuating method is available if all five conditions below are met.", ak: "Alaska regulation 8 AAC 15.100 lists fixed-salary-for-fluctuating-hours plans as not acceptable; pay the standard method.", ca: "California Labor Code 515(d) sets a salaried non-exempt employee's regular rate at 1/40th of the weekly salary and requires 1.5x (and daily overtime); the fluctuating method is not available.", nm: "New Mexico's Minimum Wage Act requires time and a half and its courts have rejected the method (EchoStar, 2006); pay the standard method.", pa: "Pennsylvania's Supreme Court held in Chevalier v. General Nutrition Centers (2019) that the state Minimum Wage Act requires 1.5 times the regular rate, not 0.5; use the Pennsylvania row.", ct: "Connecticut's mercantile wage order bars the method for retail employees (Williams v. General Nutrition Centers, 2017); other industries follow the federal rule."}[st];
+          html += row("State position", note);
+          el("fw-out").innerHTML = html;
+        }
+        ["fw-salary", "fw-hours", "fw-bonus", "fw-diff", "fw-minwage", "fw-state"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+
+      <h2 id="how">How the method works</h2>
+      <p>
+        Under the Fair Labor Standards Act, overtime is one and a half times the "regular rate," and the
+        regular rate for a salaried employee is the salary divided by the hours it is intended to
+        compensate. The usual assumption is 40 hours: an $800 salary is $20 an hour, and an hour of
+        overtime costs $30. The fluctuating workweek method rests on a different agreement. The salary is
+        understood to pay straight time for <em>all</em> hours worked in the week, whether 30 or 55. The
+        regular rate is therefore the salary divided by the hours actually worked, and because straight
+        time for the overtime hours has already been paid by the salary, only the half-time premium is
+        owed on them.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Hours worked</th><th>Regular rate ($800 ÷ hours)</th><th>Overtime hours</th><th>Half-time premium</th><th>Total pay</th><th>Standard method total</th></tr></thead>
+          <tbody>
+            <tr><td>36</td><td>$22.22</td><td>0</td><td>$0</td><td>$800.00</td><td>$800.00</td></tr>
+            <tr><td>40</td><td>$20.00</td><td>0</td><td>$0</td><td>$800.00</td><td>$800.00</td></tr>
+            <tr><td>44</td><td>$18.18</td><td>4</td><td>$36.36</td><td>$836.36</td><td>$920.00</td></tr>
+            <tr><td>48</td><td>$16.67</td><td>8</td><td>$66.67</td><td>$866.67</td><td>$1,040.00</td></tr>
+            <tr><td>50</td><td>$16.00</td><td>10</td><td>$80.00</td><td>$880.00</td><td>$1,100.00</td></tr>
+            <tr><td>55</td><td>$14.55</td><td>15</td><td>$109.09</td><td>$909.09</td><td>$1,250.00</td></tr>
+            <tr><td>60</td><td>$13.33</td><td>20</td><td>$133.33</td><td>$933.33</td><td>$1,400.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Two features of the table explain both the appeal and the controversy. The employee is paid the
+        full $800 in a 36-hour week, which is the quid pro quo: the salary does not drop when hours do.
+        And the premium per overtime hour falls as hours rise, from $9.09 at 44 hours to $6.67 at 60,
+        so the marginal cost of working an employee longer declines. The Department of Labor's own
+        example in the regulation uses a $600 salary: 48 hours gives a $12.50 regular rate, a $6.25
+        half-time rate and $650 total, against $780 under the standard method.
+      </p>
+
+      <h2 id="conditions">The five conditions</h2>
+      <p>
+        29 CFR 778.114(a), as rewritten in 2020, lists what must be true for the method to apply. Failing
+        any one of them means the employer owes standard overtime on the salary-divided-by-40 rate for the
+        whole period, usually two or three years back, plus liquidated damages.
+      </p>
+      <ol>
+        <li><strong>The employee's hours actually fluctuate from week to week.</strong> They need not fluctuate above and below 40, and the regulation says so, but a schedule that is 45 hours every week is not fluctuating, and courts have rejected the method where hours were essentially fixed.</li>
+        <li><strong>The employee receives a fixed salary that does not vary with the number of hours worked.</strong> Docking the salary for a short week, or for partial-day absences, breaks the condition; the employee must receive the full salary for any week in which any work is performed. Deductions for full-day absences under a bona fide sick or vacation plan are permitted once the leave is exhausted, but the Department has warned that occasional disciplinary deductions are not.</li>
+        <li><strong>The salary is large enough that the regular rate never falls below the applicable minimum wage</strong> in the employee's longest weeks. At $7.25 an hour an $800 salary supports up to 110 hours, but at a $17 state minimum wage it supports 47. The calculator checks this.</li>
+        <li><strong>The employer and employee have a clear and mutual understanding that the fixed salary is compensation for all hours worked each week</strong>, however many or few. The understanding need not extend to how overtime is calculated, and need not be in writing, but employers that cannot produce a signed acknowledgment usually lose this point. A standard offer letter describing an annual salary "for a 40-hour week" defeats it.</li>
+        <li><strong>The employee receives overtime pay of at least one-half the regular rate for every hour over 40</strong>, with the regular rate computed each week by dividing the salary plus any non-excludable extra pay by that week's hours. An employer that pays only the salary, or that pays straight time for overtime hours, is not using the method and owes full time and a half.</li>
+      </ol>
+
+      <h2 id="bonuses">Bonuses, differentials and the 2020 rule</h2>
+      <p>
+        Until 2020 the Department of Labor's position, stated in a 2011 preamble, was that paying bonuses
+        or premiums on top of the fixed salary was incompatible with the method because the pay then
+        varied with hours. Courts split. The final rule published June 8, 2020 and effective August 7,
+        2020 settled it: bonuses, premium payments, commissions, hazard pay and shift differentials are
+        compatible with the fluctuating workweek, and must be included in the regular rate unless they
+        fall within an exclusion in Section 7(e) of the Act (discretionary bonuses, gifts, expense
+        reimbursements and the like). The regulation's examples: a $600 salary plus a $5-an-hour night
+        differential for 8 of 48 hours gives a regular rate of ($600 + $40) ÷ 48 = $13.33 and total pay of
+        $693.33; a $600 salary plus a $100 productivity bonus for 45 hours gives ($700 ÷ 45) = $15.56, a
+        $7.78 half-time rate, $38.90 in premium and $738.90 total. Hours-based bonuses (an extra $25 for
+        any week over 50 hours, say) remain the most litigated, because they look like a device to pay
+        for hours while calling the pay a bonus.
+      </p>
+
+      <h2 id="states">States that prohibit or restrict the method</h2>
+      <p>
+        State wage laws can be more protective than the federal Act, and several states' overtime
+        statutes have been read not to allow half-time pay.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>State</th><th>Position</th><th>Authority</th><th>What to pay instead</th></tr></thead>
+          <tbody>
+            <tr><td>Alaska</td><td>Not permitted</td><td>8 AAC 15.100(d)(3) lists "flex-time or flexitime plans established under 29 C.F.R. 778.114 providing a fixed salary for fluctuating hours" as not acceptable; absent a contract stating the hours covered, a salary is deemed to cover an 8-hour day and 40-hour week</td><td>1.5x on the salary ÷ 40 rate, with Alaska's daily overtime after 8 hours</td></tr>
+            <tr><td>California</td><td>Not permitted</td><td>Labor Code 515(d): a salaried non-exempt employee's regular rate is 1/40th of the weekly salary, and the salary compensates only non-overtime hours</td><td>1.5x on salary ÷ 40 (2x after 12 hours in a day), plus daily overtime after 8 hours</td></tr>
+            <tr><td>New Mexico</td><td>Not permitted</td><td><em>New Mexico Department of Labor v. EchoStar Communications</em> (Ct. App. 2006): the Minimum Wage Act's requirement of time and a half does not permit fixed-salary half-time agreements; the only statutory exception is for employers mainly providing investigative services to the federal government</td><td>1.5x on salary ÷ 40</td></tr>
+            <tr><td>Pennsylvania</td><td>Not permitted</td><td><em>Chevalier v. General Nutrition Centers</em> (Pa. Supreme Court, November 20, 2019): the Pennsylvania Minimum Wage Act requires 1.5 times the regular rate for salaried employees with fluctuating hours; the 0.5 multiplier is rejected. The court left open whether the regular rate may be computed by dividing the salary by all hours worked</td><td>1.5x the regular rate; dividing by all hours worked was accepted by the parties in <em>Chevalier</em> but is unsettled, so salary ÷ 40 is the conservative choice</td></tr>
+            <tr><td>Connecticut</td><td>Not permitted for retail (mercantile) employees</td><td><em>Williams v. General Nutrition Centers</em> (Conn. Supreme Court, August 2017): the mercantile wage order requires the regular rate to be computed on hours "usually" worked, which is incompatible with the fluctuating method for retail employees paid wholly or partly on commission; reach beyond retail unsettled</td><td>1.5x on the usual-hours regular rate for retail; federal method elsewhere at the employer's risk</td></tr>
+            <tr><td>All other states</td><td>Federal method available</td><td>No statute or decision displacing 29 CFR 778.114 found as of November 2026. Some plaintiff-side sources list Montana, New Jersey or Missouri as prohibiting the method, but no authority supports the claim and employment counsel do not include them</td><td>Federal method if the five conditions are met</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        State daily-overtime rules (Alaska, California, Colorado, Nevada) are independently incompatible
+        with a weekly half-time calculation, and state minimum wages well above $7.25 shrink the salary
+        range in which the method works. Our <a href="/blogs/overtime-laws-by-state">overtime laws by
+        state</a> guide covers both.
+      </p>
+
+      <h2 id="traps">Where employers get it wrong</h2>
+      <ul>
+        <li><strong>Treating it as a classification.</strong> The fluctuating workweek is a pay method for non-exempt employees, not an exemption. Employees paid this way still need hours recorded every week, because the regular rate changes every week. An employer that does not track hours cannot use the method.</li>
+        <li><strong>Docking the salary.</strong> A deduction for a late arrival, a short week or a half-day absence breaks condition two and converts every week in the limitations period to standard overtime.</li>
+        <li><strong>The offer letter.</strong> "$41,600 a year based on a 40-hour week" is the single most common document that defeats the clear mutual understanding. The agreement must say the salary covers all hours worked, and should say the overtime method.</li>
+        <li><strong>Forgetting the bonus in the regular rate.</strong> Since 2020 the bonus is allowed but must be added to the salary before dividing by hours. Paying the half-time premium on the salary alone underpays every week with a bonus.</li>
+        <li><strong>Using it where hours do not fluctuate.</strong> A standing 48-hour schedule paid by salary plus half-time is not a fluctuating workweek; it is a fixed workweek with underpaid overtime, and the regular rate is the salary ÷ 48 with full 1.5x owed (29 CFR 778.113 and 778.325).</li>
+        <li><strong>Multistate payrolls.</strong> A single salaried non-exempt job family paid under the method in Texas and Pennsylvania is compliant in one and unlawful in the other. The state of the employee's work governs.</li>
+        <li><strong>Reduced-hours weeks with partial pay.</strong> Furlough weeks where the employer pays a prorated salary for reduced hours break the fixed-salary condition for that week and, if frequent, undermine the mutual understanding altogether; the Department addressed this during 2020 and allowed temporary reductions only where the salary stayed fixed within each week.</li>
+      </ul>
+
+      <h2 id="when">When it makes sense, and when it does not</h2>
+      <p>
+        The method suits jobs where hours genuinely swing in both directions and the employee values the
+        steady check: retail and restaurant assistant managers who no longer meet the
+        <a href="/blogs/overtime-exempt-salary-threshold-2027">exempt salary threshold</a>, field service
+        coordinators, dispatchers, some health care support roles. It is cheapest for the employer when
+        hours are usually above 40, which is also when employees most resent it, since their effective
+        hourly rate falls the harder they work. It saves nothing when hours rarely exceed 40, and it costs
+        more than hourly pay when hours are often short, because the full salary is owed for a 30-hour
+        week.
+      </p>
+      <p>
+        Many employers that adopted the method after the 2016 and 2019 changes to the exemption threshold
+        have since moved the affected employees to hourly pay with a guaranteed minimum, which is simpler
+        to explain, lawful in every state and far less often litigated. The method's defenders note that
+        it is the only arrangement under which a non-exempt employee is guaranteed full pay in a short
+        week, which is worth something to the employee; whether it is worth the lower overtime rate is a
+        question the employee should be allowed to answer with full information, which is what condition
+        four is for.
+      </p>
+
+      <h2 id="employees">If you are paid this way</h2>
+      <p>
+        Check three things against your pay stubs. First, that your salary is the same in every week you
+        worked at all, including short weeks; a docked salary means the method does not apply and you are
+        owed full time and a half. Second, that you received an overtime line in every week over 40
+        hours equal to at least half of (salary plus bonuses) divided by that week's hours, times the
+        overtime hours; the calculator above does the arithmetic. Third, that you work in a state that
+        allows the method; if you work in California, Alaska, New Mexico or Pennsylvania, or in retail in
+        Connecticut, you are owed the difference between what you were paid and standard overtime, for up
+        to three years. Wage claims through the state labor department or the federal Wage and Hour
+        Division are free, and your own record of hours is evidence if the employer's is incomplete.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Under 29 CFR 778.114 a non-exempt employee on a fixed salary for fluctuating hours is owed overtime at one-half the regular rate, where the regular rate is salary plus non-excludable extra pay divided by all hours worked that week.</li>
+        <li>An $800 salary for 50 hours gives a $16 regular rate and $80 of overtime, against $300 under the standard salary-divided-by-40 method; the premium per overtime hour falls as hours rise.</li>
+        <li>Five conditions: hours actually fluctuate, the salary is fixed and never docked, the regular rate stays above minimum wage in the longest week, there is a clear mutual understanding that the salary covers all hours, and at least half-time is paid on every hour over 40.</li>
+        <li>The June 2020 final rule (effective August 7, 2020) allows bonuses, commissions, hazard pay and shift differentials on top of the salary; they must be added to the salary before computing the regular rate.</li>
+        <li>Alaska, California, New Mexico and Pennsylvania do not permit the method under state law; Connecticut bars it for retail employees. Daily-overtime states are independently incompatible.</li>
+        <li>Failing any condition, including a 40-hour offer letter, a docked salary or a fixed schedule, converts every week in the limitations period to standard time and a half plus liquidated damages.</li>
+        <li>Employees paid this way still need weekly hours records, since the regular rate changes every week; the method is a pay formula for non-exempt staff, not an exemption.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="hr">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is the fluctuating workweek method?</summary>
+          <p>A way of paying overtime to a non-exempt employee who receives a fixed weekly salary regardless of hours. Because the salary is agreed to cover straight time for all hours worked, the employee receives only an additional half of the regular rate for hours over 40, with the regular rate recalculated each week as salary (plus any bonuses) divided by that week's hours. It is authorized by 29 CFR 778.114.</p>
+        </details>
+        <details>
+          <summary>How do you calculate fluctuating workweek overtime?</summary>
+          <p>Divide the weekly salary plus any nondiscretionary bonus, commission or differential by the total hours worked that week to get the regular rate. Multiply the regular rate by 0.5 and by the hours over 40. Add that premium to the salary and extra pay. Example: $800 salary, 50 hours: $800 ÷ 50 = $16.00; 0.5 × $16 × 10 = $80; total $880.</p>
+        </details>
+        <details>
+          <summary>Is the fluctuating workweek legal?</summary>
+          <p>Under federal law, yes, if the five conditions in 29 CFR 778.114 are met. It is not permitted under state law in Alaska, California, New Mexico or Pennsylvania, and not for retail employees in Connecticut. Employers in those states must pay one and a half times the regular rate, generally computed as salary divided by 40.</p>
+        </details>
+        <details>
+          <summary>Can you pay bonuses under the fluctuating workweek?</summary>
+          <p>Yes, since the Department of Labor's 2020 rule, effective August 7, 2020. Bonuses, commissions, hazard pay and shift differentials are compatible with the method, but they must be added to the salary before dividing by hours to compute the regular rate, unless they are excludable under Section 7(e) of the Fair Labor Standards Act, such as truly discretionary bonuses.</p>
+        </details>
+        <details>
+          <summary>What happens if the employer docks the salary?</summary>
+          <p>The method requires a fixed salary that does not vary with hours, so a deduction for a short week, a late arrival or a partial-day absence breaks the arrangement. Courts then recompute overtime under the standard method, salary divided by 40 at time and a half, for the whole limitations period, usually two or three years, with liquidated damages.</p>
+        </details>
+        <details>
+          <summary>Why did Pennsylvania reject the fluctuating workweek?</summary>
+          <p>In Chevalier v. General Nutrition Centers (2019) the Pennsylvania Supreme Court held that the state Minimum Wage Act and its regulations require overtime at one and a half times the regular rate for salaried employees whose hours vary, and do not incorporate the federal half-time rule. The court did not decide whether the regular rate may be computed by dividing the salary by all hours worked.</p>
+        </details>
+        <details>
+          <summary>Do employees on a fluctuating workweek need to track hours?</summary>
+          <p>Yes. They are non-exempt, so the employer must record hours worked each day and week under 29 CFR 516.2, and the regular rate depends on each week's total. An employer that does not track hours cannot calculate the premium and cannot defend a claim.</p>
+        </details>
+        <details>
+          <summary>Is the fluctuating workweek fair to employees?</summary>
+          <p>It trades a guaranteed full salary in short weeks for a lower overtime rate in long weeks. Employees whose hours are usually above 40 do worse than under hourly pay; those with frequent short weeks may do better. The law requires a clear mutual understanding, so employees should be told how it works before accepting it, and many employers have moved to hourly pay with a guaranteed minimum instead.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+          <li><a href="/blogs/overtime-laws-by-state">Overtime Laws by State</a></li>
+          <li><a href="/blogs/overtime-exempt-salary-threshold-2027">Overtime Exempt Salary Threshold 2027</a></li>
+          <li><a href="/blogs/salary-vs-hourly">Salary vs Hourly Pay</a></li>
+          <li><a href="/blogs/time-and-a-half-calculator">Time and a Half Calculator</a></li>
+          <li><a href="/blogs/payroll-record-retention-by-state">Payroll Record Retention by State</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
