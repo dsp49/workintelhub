@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erlang C Calculator: Call Center Staffing and Shrinkage</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="How many agents a call center needs from call volume, handle time and a service level target, with the Erlang C formula step by step, occupancy and shrinkage." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/erlang-c-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/erlang-c-calculator" />
+  <meta property="og:title" content="Erlang C Calculator: Call Center Staffing and Shrinkage" />
+  <meta property="og:description" content="How many agents a call center needs from call volume, handle time and a service level target, with the Erlang C formula step by step, occupancy and shrinkage." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/erlang-c-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Erlang C Calculator: Call Center Staffing and Shrinkage" />
+  <meta name="twitter:description" content="How many agents a call center needs from call volume, handle time and a service level target, with the Erlang C formula step by step, occupancy and shrinkage." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/erlang-c-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/erlang-c-calculator#article",
+      "headline": "Erlang C Calculator: Call Center Staffing and Shrinkage",
+      "description": "How many agents a call center needs from call volume, handle time and a service level target, with the Erlang C formula step by step, occupancy and shrinkage.",
+      "image": "https://workintelhub.com/images/blog/erlang-c-calculator.png",
+      "datePublished": "2026-11-12T00:00:00+00:00",
+      "dateModified": "2026-11-12T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/erlang-c-calculator"
+      },
+      "articleSection": "Productivity",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/erlang-c-calculator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Productivity",
+          "item": "https://workintelhub.com/topics/productivity"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Erlang C Calculator: Call Center Staffing and Shrinkage"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/erlang-c-calculator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Erlang C formula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A queueing formula that gives the probability an arriving call must wait when N agents serve a traffic load of A erlangs (A = calls × average handle time / interval length). From that probability the model derives the service level (share answered within a target time), the average speed of answer and agent occupancy, and by increasing N until the target is met it gives the number of agents required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate how many call center agents you need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Compute traffic intensity (calls × handle time / interval), find the smallest number of agents for which Erlang C's service level meets your target (for example 80% in 20 seconds) while occupancy stays under about 85%, then divide by one minus shrinkage and round up. 100 calls per half hour at 180 seconds needs 14 agents on the phones and 20 scheduled at 30% shrinkage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an erlang?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A unit of traffic intensity equal to one resource continuously occupied for the period. 10 erlangs means enough call minutes arrive to keep 10 agents busy every second of the interval; because arrivals are random, more than 10 agents are needed to avoid long queues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good service level for a call center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no official standard. 80% of calls answered within 20 seconds is the most common inherited target; sales lines often use 90/30 and back-office lines 70/60. The right target follows abandonment data: if callers tolerate 40 seconds before hanging up, a 20-second target buys little."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is call center shrinkage and how is it calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The share of paid agent time not available for handling contacts: breaks, lunch, training, coaching, meetings, sick leave, vacation and system downtime. Shrinkage = (paid hours − hours available for contacts) / paid hours. Typical values are 30 to 35%. Agents scheduled = agents required / (1 − shrinkage), rounded up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What occupancy should a call center aim for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sustained occupancy above about 85 to 90% leads to longer handle times, unscheduled breaks and attrition, so most centers cap planned occupancy at 85%. Small queues run much lower by necessity; a 10-erlang queue meeting 80/20 runs at about 71%. Occupancy is a constraint, not a performance target."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Erlang B and Erlang C?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Erlang B assumes blocked calls are lost (used for sizing trunks and lines); Erlang C assumes blocked calls wait in a queue (used for staffing agents). Erlang C is usually computed from Erlang B through a recursion to avoid factorial overflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Erlang C work for chat and email?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not directly. Chat agents handle several conversations at once, so the model needs a concurrency adjustment to handle time; email has no real-time service level and is staffed as a workload calculation (volume × handle time / productive hours per agent) against a response-time target rather than a queue."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Erlang C Calculator: Call Center Staffing and Shrinkage</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 12, 2026 &middot; 12 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/erlang-c-calculator.png" alt="A contact center wallboard showing calls waiting, service level and agents available" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Erlang C is the formula that turns a forecast of calls into a number of agents. Given how many calls arrive in an interval, how long each takes to handle, and what share you want answered within a target time, it tells you the smallest number of agents that meets the target, along with the average wait, the probability a caller waits at all, and how busy the agents will be. It has been the standard staffing model for inbound contact centers since the 1980s because it is simple enough to compute on a spreadsheet and accurate enough for most queues; its failings, which are real, are also well understood.
+      </p>
+      <p>
+        The calculator below runs the model for one interval, shows every intermediate value so you can check it against your workforce management tool, and converts the raw requirement into scheduled headcount using your shrinkage figure. Below it: the inputs and what they mean, the formula itself with a fully worked example, the occupancy ceiling that often binds before the service level does, how shrinkage is applied, where Erlang C goes wrong and what to use instead, and how the staffing figure flows into schedules. For the schedules themselves, see <a href="/blogs/rotating-shift-schedules">rotating shift schedules</a> and the <a href="/blogs/work-schedule-template">work schedule template</a>.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Erlang C calculator</a></li>
+          <li><a href="#inputs">The inputs</a></li>
+          <li><a href="#formula">The formula, step by step</a></li>
+          <li><a href="#example">A worked example</a></li>
+          <li><a href="#occupancy">The occupancy ceiling</a></li>
+          <li><a href="#shrinkage">From agents required to agents scheduled</a></li>
+          <li><a href="#limits">Where Erlang C goes wrong</a></li>
+          <li><a href="#schedule">From intervals to a schedule</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="calculator">Erlang C calculator</h2>
+      <div class="calc" id="ec">
+        <div class="calc__grid">
+          <div><label for="ec-calls">Calls (or contacts) in the interval</label><input id="ec-calls" type="number" min="1" step="1" value="100"></div>
+          <div><label for="ec-interval">Interval length (minutes)</label><input id="ec-interval" type="number" min="1" step="1" value="30"></div>
+          <div><label for="ec-aht">Average handle time, including after-call work (seconds)</label><input id="ec-aht" type="number" min="1" step="1" value="180"></div>
+          <div><label for="ec-sl">Service level target (% answered)</label><input id="ec-sl" type="number" min="1" max="100" step="1" value="80"></div>
+          <div><label for="ec-t">Within (seconds)</label><input id="ec-t" type="number" min="0" step="1" value="20"></div>
+          <div><label for="ec-occ">Maximum occupancy (%)</label><input id="ec-occ" type="number" min="1" max="100" step="1" value="85"></div>
+          <div><label for="ec-shrink">Shrinkage (%)</label><input id="ec-shrink" type="number" min="0" max="90" step="1" value="30"></div>
+        </div>
+        <div class="calc__out" id="ec-out"></div>
+        <p class="calc__note">Traffic intensity A = calls x handle time / interval. Erlang C gives the probability a call waits; service level = 1 − Pw x e^(−(N − A) x t / AHT); average speed of answer = Pw x AHT / (N − A); occupancy = A / N. Agents scheduled = agents required / (1 − shrinkage), rounded up. The model assumes random arrivals, exponential handle times, no abandonment and no overflow.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function erlangC(A, N) {
+          if (N <= A) return 1;
+          var B = 1;
+          for (var k = 1; k <= N; k++) { B = (A * B) / (k + A * B); }
+          return B / (1 - (A / N) * (1 - B));
+        }
+        function calc() {
+          var calls = parseFloat(el("ec-calls").value) || 0, interval = parseFloat(el("ec-interval").value) || 30;
+          var aht = parseFloat(el("ec-aht").value) || 1, slT = (parseFloat(el("ec-sl").value) || 80) / 100, t = parseFloat(el("ec-t").value) || 0;
+          var occMax = (parseFloat(el("ec-occ").value) || 85) / 100, shrink = (parseFloat(el("ec-shrink").value) || 0) / 100;
+          var A = calls * aht / (interval * 60);
+          var N = Math.max(1, Math.ceil(A));
+          var pw, sl, asa, occ, guard = 0;
+          while (guard < 2000) {
+            pw = erlangC(A, N);
+            sl = N > A ? 1 - pw * Math.exp(-(N - A) * t / aht) : 0;
+            occ = A / N;
+            if (N > A && sl >= slT && occ <= occMax) break;
+            N++; guard++;
+          }
+          asa = pw * aht / (N - A);
+          var slOnly = Math.max(1, Math.ceil(A)); var pw2, sl2;
+          while (slOnly < 5000) { pw2 = erlangC(A, slOnly); sl2 = slOnly > A ? 1 - pw2 * Math.exp(-(slOnly - A) * t / aht) : 0; if (slOnly > A && sl2 >= slT) break; slOnly++; }
+          var sched = Math.ceil(N / (1 - shrink));
+          var html = row("Traffic intensity (erlangs)", A.toFixed(3) + " = " + calls + " x " + aht + " s / " + (interval * 60) + " s");
+          html += row("Agents needed for the service level alone", slOnly + "");
+          if (N > slOnly) html += row("Agents needed to respect the " + Math.round(occMax * 100) + "% occupancy ceiling", N + " (the occupancy limit binds, not the service level)");
+          html += row("Agents required (raw, on the phones)", N + "");
+          html += row("Probability a call waits (Erlang C)", (pw * 100).toFixed(1) + "%");
+          html += row("Service level: answered within " + t + " s", (sl * 100).toFixed(1) + "% (target " + Math.round(slT * 100) + "%)");
+          html += row("Average speed of answer", asa.toFixed(1) + " seconds");
+          html += row("Occupancy", (occ * 100).toFixed(1) + "%");
+          html += row("Immediate answer", ((1 - pw) * 100).toFixed(1) + "% of calls");
+          html += row("Agents to schedule after " + Math.round(shrink * 100) + "% shrinkage", sched + " = ceiling(" + N + " / " + (1 - shrink).toFixed(2) + ")");
+          var hours = sched * interval / 60;
+          html += row("Paid agent hours for this interval", hours.toFixed(1) + " h");
+          el("ec-out").innerHTML = html;
+        }
+        ["ec-calls","ec-interval","ec-aht","ec-sl","ec-t","ec-occ","ec-shrink"].forEach(function (id) { el(id).addEventListener("input", calc); });
+        calc();
+      })();
+      </script>
+
+      <h2 id="inputs">The inputs</h2>
+      <ul>
+        <li><strong>Calls in the interval.</strong> Forecast arrivals for one planning interval, usually 15 or 30 minutes. Staffing is computed interval by interval because volume changes through the day; a daily average produces a schedule that is overstaffed at 8 a.m. and understaffed at 11.</li>
+        <li><strong>Average handle time (AHT).</strong> Talk time plus hold plus after-call work, in seconds. After-call work is part of the agent's occupied time and must be included or the model understaffs by the wrap-up share, often 15 to 25%.</li>
+        <li><strong>Service level target.</strong> The share of calls answered within a threshold: 80% in 20 seconds is the convention most centers inherited, 90% in 30 is common for sales, 70% in 60 for back-office lines. There is no official industry standard; the target should follow what abandonment data says callers tolerate.</li>
+        <li><strong>Maximum occupancy.</strong> The share of logged-in time an agent spends handling contacts. Above about 85 to 90% sustained, agents stretch handle times, take unscheduled breaks and leave; the ceiling is a staffing constraint, not a target.</li>
+        <li><strong>Shrinkage.</strong> The share of paid time agents are not available for calls: breaks, lunch, training, coaching, meetings, sick leave, vacation, system downtime. Typical values run 30 to 35%; measure yours rather than borrowing one.</li>
+      </ul>
+
+      <h2 id="formula">The formula, step by step</h2>
+      <p><strong>Step 1: traffic intensity.</strong> A = calls × AHT / interval length (all in the same time unit). 100 calls of 180 seconds in a 30-minute (1,800-second) interval is A = 10.0 erlangs: ten agents would be busy every second if there were never any waiting, which is impossible with random arrivals.</p>
+      <p><strong>Step 2: Erlang C, the probability a call waits.</strong> With N agents and traffic A, the probability that an arriving call finds all agents busy is</p>
+      <p>P<sub>w</sub> = [ (A<sup>N</sup> / N!) × N / (N − A) ] / [ Σ<sub>k=0</sub><sup>N−1</sup> A<sup>k</sup> / k! + (A<sup>N</sup> / N!) × N / (N − A) ]</p>
+      <p>which requires N &gt; A (fewer agents than erlangs means an infinite queue). Factorials overflow spreadsheets above about 170 agents, so the practical computation goes through the Erlang B recursion: start with B(0) = 1, then for k = 1 to N, B(k) = A × B(k−1) / (k + A × B(k−1)). Then P<sub>w</sub> = B(N) / (1 − (A / N) × (1 − B(N))). The calculator uses this recursion.</p>
+      <p><strong>Step 3: service level.</strong> The probability a call is answered within t seconds is SL = 1 − P<sub>w</sub> × e<sup>−(N − A) × t / AHT</sup>. Increase N until SL meets the target.</p>
+      <p><strong>Step 4: the other outputs.</strong> Average speed of answer (ASA) = P<sub>w</sub> × AHT / (N − A), averaged over all calls including those answered immediately. Occupancy = A / N. The share of calls answered immediately is 1 − P<sub>w</sub>.</p>
+      <p><strong>Step 5: shrinkage.</strong> Agents scheduled = N / (1 − shrinkage), rounded up. Shrinkage is applied after the queueing step, to the raw requirement, never to the traffic.</p>
+
+      <h2 id="example">A worked example</h2>
+      <p>100 calls per 30 minutes, 180-second AHT, target 80% in 20 seconds, 85% occupancy ceiling, 30% shrinkage. A = 10.0 erlangs.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Agents N</th><th>Erlang B(N)</th><th>P<sub>w</sub> (waits)</th><th>Service level in 20 s</th><th>ASA (s)</th><th>Occupancy</th></tr></thead>
+          <tbody>
+            <tr><td>11</td><td>0.1632</td><td>68.2%</td><td>39.0%</td><td>122.8</td><td>90.9%</td></tr>
+            <tr><td>12</td><td>0.1197</td><td>44.9%</td><td>64.0%</td><td>40.4</td><td>83.3%</td></tr>
+            <tr><td>13</td><td>0.0843</td><td>28.5%</td><td>79.6%</td><td>17.1</td><td>76.9%</td></tr>
+            <tr><td>14</td><td>0.0568</td><td>17.4%</td><td>88.8%</td><td>7.8</td><td>71.4%</td></tr>
+            <tr><td>15</td><td>0.0372</td><td>10.2%</td><td>94.2%</td><td>3.7</td><td>66.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Thirteen agents reach 79.6%, just short; fourteen is the first number to meet 80/20, at 88.8%, with 82.6% of calls answered immediately and agents occupied 71.4% of the time. Scheduled agents at 30% shrinkage: ceiling(14 / 0.70) = 20. At 35% shrinkage it is 22. The jump from 13 to 14 agents moves service level nine points; the jump from 14 to 15 moves it five. That diminishing return is why service level targets above 90% are expensive, and why a center that is one agent short in an interval sees service collapse rather than sag.</p>
+      <p>A second check: 200 calls an hour with a 240-second AHT and the same 80/20 target gives A = 13.33 erlangs; 17 agents is the first to pass (81.0%, ASA 16.8 seconds, occupancy 78.4%), 25 scheduled at 30% shrinkage.</p>
+
+      <h2 id="occupancy">The occupancy ceiling</h2>
+      <p>At high volumes the service level test is satisfied with agents who are busy more than 90% of the time. Erlang C does not care; people do. The calculator therefore adds agents until both the service level and the occupancy ceiling are met, and reports which constraint bound. For a 300-call interval with a 180-second AHT (A = 30), 80/20 is met at 34 agents with occupancy 88%; an 85% ceiling pushes the requirement to 36. Small queues have the opposite problem: the 100-call example meets 80/20 at 71% occupancy, so a third of agent time is idle by design. That is the pooling argument for consolidating small skill groups, and the argument against splitting a queue by product unless handle times differ a lot.</p>
+
+      <h2 id="shrinkage">From agents required to agents scheduled</h2>
+      <p>Shrinkage converts the raw requirement into bodies on the roster. If 14 agents must be on the phones and 30% of paid time is breaks, training, meetings, absence and downtime, 20 must be scheduled. Two mistakes are common. The first is dividing by (1 + shrinkage) instead of (1 − shrinkage): 14 × 1.30 = 18.2 is wrong and understaffs by two. The second is counting shrinkage that is already in the schedule twice: if lunches are scheduled outside the interval being staffed, lunch is not shrinkage for that interval. Measure shrinkage from the workforce tool as (paid hours − hours available for contacts) / paid hours, by interval if possible, since absence is higher on Mondays and training is scheduled in the afternoon trough. The <a href="/blogs/employee-absenteeism">absenteeism guide</a> covers the unplanned component, which is the hardest to forecast.</p>
+
+      <h2 id="limits">Where Erlang C goes wrong</h2>
+      <ul>
+        <li><strong>No abandonment.</strong> The model assumes every caller waits forever. Real callers hang up, which shortens the queue and makes Erlang C overstaff for a given service level, typically by 5 to 15% at high loads. Erlang A (which adds a patience distribution) or simulation corrects this, and most modern WFM tools offer one or both.</li>
+        <li><strong>Exponential handle times.</strong> Real AHT distributions have a longer right tail; the effect on the staffing answer is small but not zero.</li>
+        <li><strong>Random arrivals within the interval.</strong> Erlang C assumes a steady Poisson stream. Arrivals that bunch after a marketing email or at the top of the hour produce worse service than the model predicts.</li>
+        <li><strong>Single skill, single queue.</strong> Multi-skilled agents, overflow between queues and callbacks break the model's assumptions; the usual workaround is to staff each skill with Erlang C and apply a pooling discount, or to simulate.</li>
+        <li><strong>Non-voice channels.</strong> Chat agents handle several conversations at once and email has no real-time service level; Erlang C applies to chat only with a concurrency adjustment, and not to email, which is a workload calculation (volume × handle time / productive hours).</li>
+        <li><strong>Small numbers.</strong> With fewer than five agents the integer constraint dominates and the service level swings wildly between N and N + 1; occupancy will be low whatever you do.</li>
+      </ul>
+      <p>Despite all of this, Erlang C remains the right first answer, because its errors are known, mostly conservative and small relative to forecast error. A 10% error in the volume forecast moves the requirement more than any of the model's simplifications.</p>
+
+      <h2 id="schedule">From intervals to a schedule</h2>
+      <p>The interval requirements for a week form a staffing curve: perhaps 8 agents at 8:00, 20 at 11:00, 14 at 15:00. Scheduling is the problem of covering that curve with shifts of fixed length, breaks and days off at the lowest cost, which is what workforce management software does with optimization, and what small centers do with a spreadsheet and patience. Three practical points. Staff the peak intervals first and accept over-coverage in the troughs, using the trough for training and coaching (which then reduces shrinkage in the peaks). Keep a short-notice flex pool, since the model's output for a single interval has no tolerance for a 20% volume surprise. And track interval-level adherence, not just daily hours: an agent who is 30 minutes late to the 11:00 peak and stays 30 minutes late in the 16:00 trough has perfect hours and has damaged service. The <a href="/blogs/team-capacity-planning">team capacity planning</a> guide covers the longer-range version of the same calculation, and the <a href="/blogs/employee-productivity-formula">productivity formula</a> page discusses occupancy and utilization as metrics.</p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Erlang C converts calls per interval, average handle time and a service level target into the minimum number of agents; traffic intensity A = calls × AHT / interval, and the model requires more agents than erlangs.</li>
+        <li>Compute the probability of waiting through the Erlang B recursion (B(k) = A·B(k−1) / (k + A·B(k−1)), then Pw = B(N) / (1 − (A/N)(1 − B(N)))), then service level = 1 − Pw·e^(−(N−A)t/AHT), ASA = Pw·AHT/(N−A), occupancy = A/N.</li>
+        <li>Worked example: 100 calls per 30 minutes at 180 seconds AHT is 10 erlangs; 14 agents are the first to meet 80% in 20 seconds (88.8%, ASA 7.8 s, occupancy 71.4%); at 30% shrinkage, schedule 20.</li>
+        <li>Hold occupancy at or below about 85%; at high volumes the occupancy ceiling, not the service level, sets the requirement, and small queues run idle by design, which is the case for pooling skill groups.</li>
+        <li>Shrinkage (breaks, training, meetings, absence, downtime; typically 30 to 35%) is applied after the queueing step as N / (1 − shrinkage), rounded up; dividing by (1 + shrinkage) understaffs.</li>
+        <li>Erlang C ignores abandonment, assumes exponential handle times and random arrivals, and handles one skill and one queue; it overstaffs slightly at high loads and does not apply to email or multi-session chat without adjustment.</li>
+        <li>Staff interval by interval, cover the peaks first, keep a flex pool and track interval adherence; forecast error moves the answer more than the model's simplifications do.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="productivity">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is the Erlang C formula?</summary>
+          <p>A queueing formula that gives the probability an arriving call must wait when N agents serve a traffic load of A erlangs (A = calls × average handle time / interval length). From that probability the model derives the service level (share answered within a target time), the average speed of answer and agent occupancy, and by increasing N until the target is met it gives the number of agents required.</p>
+        </details>
+        <details>
+          <summary>How do you calculate how many call center agents you need?</summary>
+          <p>Compute traffic intensity (calls × handle time / interval), find the smallest number of agents for which Erlang C's service level meets your target (for example 80% in 20 seconds) while occupancy stays under about 85%, then divide by one minus shrinkage and round up. 100 calls per half hour at 180 seconds needs 14 agents on the phones and 20 scheduled at 30% shrinkage.</p>
+        </details>
+        <details>
+          <summary>What is an erlang?</summary>
+          <p>A unit of traffic intensity equal to one resource continuously occupied for the period. 10 erlangs means enough call minutes arrive to keep 10 agents busy every second of the interval; because arrivals are random, more than 10 agents are needed to avoid long queues.</p>
+        </details>
+        <details>
+          <summary>What is a good service level for a call center?</summary>
+          <p>There is no official standard. 80% of calls answered within 20 seconds is the most common inherited target; sales lines often use 90/30 and back-office lines 70/60. The right target follows abandonment data: if callers tolerate 40 seconds before hanging up, a 20-second target buys little.</p>
+        </details>
+        <details>
+          <summary>What is call center shrinkage and how is it calculated?</summary>
+          <p>The share of paid agent time not available for handling contacts: breaks, lunch, training, coaching, meetings, sick leave, vacation and system downtime. Shrinkage = (paid hours − hours available for contacts) / paid hours. Typical values are 30 to 35%. Agents scheduled = agents required / (1 − shrinkage), rounded up.</p>
+        </details>
+        <details>
+          <summary>What occupancy should a call center aim for?</summary>
+          <p>Sustained occupancy above about 85 to 90% leads to longer handle times, unscheduled breaks and attrition, so most centers cap planned occupancy at 85%. Small queues run much lower by necessity; a 10-erlang queue meeting 80/20 runs at about 71%. Occupancy is a constraint, not a performance target.</p>
+        </details>
+        <details>
+          <summary>What is the difference between Erlang B and Erlang C?</summary>
+          <p>Erlang B assumes blocked calls are lost (used for sizing trunks and lines); Erlang C assumes blocked calls wait in a queue (used for staffing agents). Erlang C is usually computed from Erlang B through a recursion to avoid factorial overflow.</p>
+        </details>
+        <details>
+          <summary>Does Erlang C work for chat and email?</summary>
+          <p>Not directly. Chat agents handle several conversations at once, so the model needs a concurrency adjustment to handle time; email has no real-time service level and is staffed as a workload calculation (volume × handle time / productive hours per agent) against a response-time target rather than a queue.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/team-capacity-planning">Team Capacity Planning</a></li>
+          <li><a href="/blogs/rotating-shift-schedules">Rotating Shift Schedules</a></li>
+          <li><a href="/blogs/work-schedule-template">Work Schedule Template</a></li>
+          <li><a href="/blogs/employee-productivity-formula">Employee Productivity Formula</a></li>
+          <li><a href="/blogs/employee-absenteeism">Employee Absenteeism</a></li>
+          <li><a href="/blogs/capacity-planning-template">Capacity Planning Template</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

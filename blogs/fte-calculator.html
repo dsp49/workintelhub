@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FTE Calculator: Full-Time Equivalent Formula and ACA Rules</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Convert part-time hours to full-time equivalents with the 2,080-hour, weekly and ACA 120-hour methods, test the 50-FTE employer mandate line and plan headcount." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/fte-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/fte-calculator" />
+  <meta property="og:title" content="FTE Calculator: Full-Time Equivalent Formula and ACA Rules" />
+  <meta property="og:description" content="Convert part-time hours to full-time equivalents with the 2,080-hour, weekly and ACA 120-hour methods, test the 50-FTE employer mandate line and plan headcount." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/fte-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FTE Calculator: Full-Time Equivalent Formula and ACA Rules" />
+  <meta name="twitter:description" content="Convert part-time hours to full-time equivalents with the 2,080-hour, weekly and ACA 120-hour methods, test the 50-FTE employer mandate line and plan headcount." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/fte-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/fte-calculator#article",
+      "headline": "FTE Calculator: Full-Time Equivalent Formula and ACA Rules",
+      "description": "Convert part-time hours to full-time equivalents with the 2,080-hour, weekly and ACA 120-hour methods, test the 50-FTE employer mandate line and plan headcount.",
+      "image": "https://workintelhub.com/images/blog/fte-calculator.png",
+      "datePublished": "2026-11-12T00:00:00+00:00",
+      "dateModified": "2026-11-12T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/fte-calculator"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/fte-calculator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FTE Calculator: Full-Time Equivalent Formula and ACA Rules"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/fte-calculator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate FTE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add up the hours worked or paid by all employees in the period and divide by the hours one full-time employee works in that period. Over a year with a 40-hour week the divisor is 2,080; over a month about 173.33; over a week 40. Ten employees at 20 hours a week are 5.0 FTE. Pick one definition of full time and use it consistently."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is 1 FTE in hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With a 40-hour week, 1 FTE is 40 hours a week, 173.33 hours a month or 2,080 hours a year. With a 37.5-hour week it is 1,950 hours a year, and the federal government uses 2,087. The Affordable Care Act defines full time as 30 hours a week or 130 hours a month for the employer mandate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many hours is 0.5 FTE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Half of the full-time schedule: 20 hours a week or 1,040 hours a year where full time is 40 hours, and 18.75 hours a week where it is 37.5. Under the Affordable Care Act's 120-hour monthly divisor, 0.5 FTE is 60 hours a month, or about 14 hours a week."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is FTE calculated for the ACA employer mandate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For each month of the prior year, count employees with 130 or more hours as full time; total the hours of everyone else, counting at most 120 per person, and divide by 120; add the two numbers. Average the 12 monthly totals and round down. If the result is 50 or more, the employer is an applicable large employer for the current year and must offer coverage or face the section 4980H penalties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does FTE include part-time employees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The point of the measure is to convert part-time hours into full-time equivalents. Two part-timers at 20 hours equal 1.0 FTE. For the Affordable Care Act, part-time hours are divided by 120 a month; for budgeting they are divided by the organization's full-time schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between FTE and headcount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Headcount counts people; FTE counts full-time schedules' worth of hours. A team of 12 full-timers and 6 half-timers has a headcount of 18 and 15.0 FTE. Ratios such as revenue per employee are more comparable across teams when computed per FTE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do independent contractors count toward FTE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Contractors are not employees and are excluded from FTE counts for budgeting, the Affordable Care Act and the small-business tax credit. Misclassified workers who are later treated as employees are added back, which can change whether an employer is an applicable large employer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does paid time off count in FTE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For the Affordable Care Act, yes: hours of service include paid vacation, sick leave, holidays and jury duty. For budgets, a funded position is usually 1.0 FTE whether or not the person is on paid leave. Unpaid leave does not count as hours of service."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>FTE Calculator: Full-Time Equivalent Formula and ACA Rules</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 12, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/fte-calculator.png" alt="A bar of ten worker silhouettes, some half-filled, adding up to a full-time equivalent figure" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A full-time equivalent, or FTE, converts the hours of everyone on the payroll into the number of full-time people those hours would equal. Ten part-timers at 20 hours a week are 5.0 FTE if full time is 40 hours. The number matters for three reasons that use three slightly different formulas: budgeting and capacity planning (hours divided by a full-time schedule), the Affordable Care Act employer mandate (part-time hours divided by 120 a month, plus full-time headcount), and grant, tax-credit and loan programs that each define a full-time week their own way.
+      </p>
+      <p>
+        The calculator below runs all three methods at once from headcounts and average hours, shows whether you cross the 50-FTE Affordable Care Act line, and converts an FTE target back into hiring. Below it: each formula with a worked example, the ACA rules in detail, how to handle overtime, leave and seasonal staff, and the mistakes that make FTE counts disagree between HR, finance and the benefits broker. For the related capacity math, see <a href="/blogs/team-capacity-planning">team capacity planning</a>.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">FTE calculator</a></li>
+          <li><a href="#formula">The basic FTE formula</a></li>
+          <li><a href="#methods">Three methods and when each applies</a></li>
+          <li><a href="#aca">FTE for the Affordable Care Act</a></li>
+          <li><a href="#examples">Worked examples</a></li>
+          <li><a href="#edge">Overtime, leave, seasonal and contract staff</a></li>
+          <li><a href="#planning">Using FTE in headcount planning</a></li>
+          <li><a href="#mistakes">Why FTE counts disagree</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="calculator">FTE calculator</h2>
+      <div class="calc" id="fte">
+        <div class="calc__grid">
+          <div><label for="fte-ft">Full-time employees (headcount)</label><input id="fte-ft" type="number" min="0" step="1" value="32"></div>
+          <div><label for="fte-fth">Hours that count as full time per week</label><input id="fte-fth" type="number" min="1" max="80" step="0.5" value="40"></div>
+          <div><label for="fte-pt">Part-time employees (headcount)</label><input id="fte-pt" type="number" min="0" step="1" value="18"></div>
+          <div><label for="fte-pth">Average part-time hours per week</label><input id="fte-pth" type="number" min="0" max="80" step="0.5" value="22"></div>
+          <div><label for="fte-weeks">Weeks in the period</label><input id="fte-weeks" type="number" min="1" max="52" step="1" value="52"></div>
+          <div><label for="fte-target">Optional: FTE target for planning</label><input id="fte-target" type="number" min="0" step="0.5" value="45"></div>
+        </div>
+        <div class="calc__out" id="fte-out"></div>
+        <p class="calc__note">The standard method divides total hours by a full-time schedule (40 hours a week, 2,080 a year). The Affordable Care Act method counts anyone at 30 or more hours a week as one full-time employee and divides all other hours by 120 a month, capped at 120 per person. The small-business health care tax credit method uses 2,080 hours and rounds down. This tool is arithmetic, not legal or tax advice.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function n(x, d) { return x.toLocaleString("en-US", {minimumFractionDigits: d, maximumFractionDigits: d}); }
+        function calc() {
+          var ft = parseFloat(el("fte-ft").value) || 0, fth = parseFloat(el("fte-fth").value) || 40;
+          var pt = parseFloat(el("fte-pt").value) || 0, pth = parseFloat(el("fte-pth").value) || 0;
+          var weeks = parseFloat(el("fte-weeks").value) || 52, target = parseFloat(el("fte-target").value) || 0;
+          var ftHours = ft * fth * weeks, ptHours = pt * pth * weeks, total = ftHours + ptHours;
+          var std = total / (fth * weeks);
+          var ptFte = pt * (pth / fth);
+          var acaFt = pth >= 30 ? ft + pt : ft;
+          var acaPtMonthly = pth >= 30 ? 0 : pt * Math.min(pth * 52 / 12, 120);
+          var aca = acaFt + acaPtMonthly / 120;
+          var acaRounded = Math.floor(aca);
+          var credit = Math.floor(total / 2080 * (52 / weeks));
+          var html = row("Total paid hours in the period", n(total, 0) + " h");
+          html += row("Standard FTE (hours / " + fth + " x " + weeks + ")", n(std, 2) + " FTE");
+          html += row("Of which part-time staff contribute", n(ptFte, 2) + " FTE (" + pt + " people at " + n(pth / fth * 100, 0) + "% of full time)");
+          html += row("ACA full-time employees (30+ h/week)", acaFt + "");
+          html += row("ACA part-time hours per month / 120", n(acaPtMonthly, 0) + " h / 120 = " + n(acaPtMonthly / 120, 2) + " FTE");
+          html += row("ACA full-time plus equivalents", n(aca, 2) + ", counted as " + acaRounded + (acaRounded >= 50 ? " (50 or more: applicable large employer, mandate applies)" : " (under 50: employer mandate does not apply)"));
+          html += row("Small-business health credit FTE (2,080-hour method, rounded down)", credit + " FTE" + (credit < 25 ? " (under the 25-FTE ceiling)" : " (25 or more: credit not available)"));
+          if (target > 0) {
+            var gap = target - std;
+            if (gap > 0.005) html += row("To reach " + n(target, 1) + " FTE", "add " + n(gap, 2) + " FTE: " + n(gap * fth, 1) + " more hours a week, for example " + Math.ceil(gap) + " full-time hire(s) or " + Math.ceil(gap * fth / Math.max(pth, 1)) + " part-timers at " + pth + " h");
+            else if (gap < -0.005) html += row("Against a target of " + n(target, 1) + " FTE", n(-gap, 2) + " FTE over target, " + n(-gap * fth, 1) + " hours a week");
+            else html += row("Against a target of " + n(target, 1) + " FTE", "on target");
+          }
+          el("fte-out").innerHTML = html;
+        }
+        ["fte-ft","fte-fth","fte-pt","fte-pth","fte-weeks","fte-target"].forEach(function (id) { el(id).addEventListener("input", calc); });
+        calc();
+      })();
+      </script>
+
+      <h2 id="formula">The basic FTE formula</h2>
+      <p>One FTE is one person working a full-time schedule for the period. The general formula is:</p>
+      <p><strong>FTE = total hours paid (or scheduled) in the period / hours one full-time employee works in the same period.</strong></p>
+      <p>Over a year with a 40-hour week, the denominator is 2,080 hours (40 x 52). Over a month it is roughly 173.33 hours (2,080 / 12), and over a week it is 40. A person who works 20 hours a week is 0.5 FTE; three people at 32 hours are 2.4 FTE; a team of 12 full-timers and 6 half-timers is 15.0 FTE. The headcount is 18 but the capacity is 15.</p>
+      <p>The denominator is the only real choice in the formula, and it is where disagreements begin. A 37.5-hour week (common in hospitals, banks and the UK) gives 1,950 hours a year, so an employee at 30 hours is 0.8 FTE rather than 0.75. Public-sector bodies often use 2,087 hours, the federal government's figure, which averages the 2,080 and 2,096-hour years created by leap years and 53-pay-period years. Pick one denominator, write it into the budget assumptions and use it everywhere.</p>
+
+      <h2 id="methods">Three methods and when each applies</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Method</th><th>Formula</th><th>Full time means</th><th>Used for</th></tr></thead>
+          <tbody>
+            <tr><td>Standard (budget and capacity)</td><td>Total hours / (full-time weekly hours x weeks)</td><td>Whatever the organization defines, usually 40 or 37.5 hours a week</td><td>Headcount budgets, staffing ratios, productivity per FTE, grant reporting</td></tr>
+            <tr><td>Affordable Care Act employer mandate</td><td>Full-time employees (30+ hours a week or 130 a month) + (part-time hours per month, capped at 120 each) / 120</td><td>30 hours a week</td><td>Deciding whether an employer with 50 or more full-time equivalents must offer affordable coverage</td></tr>
+            <tr><td>Small-business health care tax credit</td><td>Total hours (max 2,080 per person) / 2,080, rounded down to a whole number; owners and family excluded</td><td>2,080 hours a year</td><td>Eligibility for the IRS credit (fewer than 25 FTEs and average wages under $34,100 for 2026, phasing out to zero at $68,200)</td></tr>
+            <tr><td>Paycheck Protection Program (historical)</td><td>Hours per week / 40, capped at 1.0, or the simplified 1.0 / 0.5 split at 40 hours</td><td>40 hours a week</td><td>Loan forgiveness in 2020 and 2021; still appears in audits</td></tr>
+            <tr><td>Federal government (OPM)</td><td>Hours / 2,087</td><td>2,087 hours a year</td><td>Agency staffing ceilings and budget justifications</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The three that matter to most private employers are the first three. They can give different answers for the same workforce in the same month, because the ACA method counts anyone at 30 hours as a full 1.0 and caps part-time hours at 120 a month, while the standard method treats 30 hours as 0.75 and has no cap. An employer with 45 full-timers and 20 part-timers at 28 hours a week has 59.0 standard FTE but 45 + (20 x 121.3 capped at 120) / 120 = 65 ACA FTEs. Both are right; they answer different questions.</p>
+
+      <h2 id="aca">FTE for the Affordable Care Act</h2>
+      <p>The employer shared responsibility provisions in Internal Revenue Code section 4980H apply to an applicable large employer (ALE), defined as one that employed an average of at least 50 full-time employees, including full-time equivalents, on business days in the preceding calendar year. The steps are set out in Treasury Regulation 54.4980H-2:</p>
+      <ol>
+        <li>For each calendar month of the prior year, count employees with 130 or more hours of service (the monthly equivalent of 30 a week). Those are full-time employees.</li>
+        <li>For everyone else, add up their hours of service for the month, counting no more than 120 hours for any one person, and divide the total by 120. That is the number of full-time equivalents for the month.</li>
+        <li>Add the two figures for each month, add the twelve monthly totals and divide by 12. Round down to the next whole number. If the result is 50 or more, the employer is an ALE for the current year.</li>
+      </ol>
+      <p>Hours of service include paid leave, so vacation, sick and holiday hours count. Seasonal workers do not count toward ALE status if the workforce exceeded 50 for 120 days or fewer in the year and the employees over 50 were seasonal. Related companies under common ownership are aggregated under the controlled-group rules, so two 30-employee businesses with the same owner are one 60-employee ALE. Volunteers and bona fide independent contractors are excluded.</p>
+      <p>Being an ALE means offering minimum essential coverage to at least 95% of full-time employees and their dependents, or paying the section 4980H(a) penalty, and offering coverage that is affordable and provides minimum value, or paying the 4980H(b) penalty for each full-time employee who gets a premium tax credit. The penalty amounts are indexed each year: for plan years beginning in 2026 the 4980H(a) amount is $3,340 per full-time employee (after excluding the first 30) and the 4980H(b) amount is $5,010 (Revenue Procedure 2025-26); for 2027 they rise to $3,780 and $5,670 (Revenue Procedure 2026-22, May 4, 2026). Full-time equivalents count toward ALE status but not toward the penalty itself, which is assessed only on full-time employees. ALE status also triggers Forms 1094-C and 1095-C reporting for the year.</p>
+
+      <h2 id="examples">Worked examples</h2>
+      <p><strong>Example 1: a clinic budgeting nursing capacity.</strong> Six nurses at 40 hours, four at 36 hours (three 12-hour shifts) and three at 24 hours. Standard FTE with a 40-hour week: (6 x 40 + 4 x 36 + 3 x 24) / 40 = (240 + 144 + 72) / 40 = 11.4 FTE across 13 people. If the clinic's full-time week is 36 hours, as many hospitals define it for shift nurses, the same roster is 456 / 36 = 12.67 FTE. The nurse-to-patient ratio report will differ by over a full FTE depending on which denominator the finance system was set up with, which is why the denominator belongs in the written assumptions.</p>
+      <p><strong>Example 2: a restaurant group testing the ALE line.</strong> Across three locations, 38 employees average 35 or more hours a week (full-time under the ACA), and 40 others average 22 hours. Monthly part-time hours: 40 x 22 x 52 / 12 = 3,813 hours, none capped (each is 95 hours, under the 120 cap). 3,813 / 120 = 31.8 FTEs. Total 38 + 31.8 = 69.8, rounded down to 69. The group is an ALE even though no single restaurant has 50 staff, because the three are a controlled group. Had it used the standard method with a 40-hour week it would have reported 38 + 22 = 60 FTE; the ACA figure is higher because 120 hours a month is a lower bar than 173.</p>
+      <p><strong>Example 3: hiring to an FTE target.</strong> A support team is budgeted at 18.0 FTE and currently runs 14 full-timers and 5 part-timers at 24 hours: 14 + 5 x 0.6 = 17.0 FTE. The 1.0 FTE gap can be filled by one full-time hire, by moving three part-timers from 24 to 32 hours (3 x 0.2 = 0.6, not enough on its own), or by two more part-timers at 20 hours. The calculator shows the hours gap so the manager can choose between the options rather than defaulting to a full-time requisition.</p>
+
+      <h2 id="edge">Overtime, leave, seasonal and contract staff</h2>
+      <ul>
+        <li><strong>Overtime</strong>: for capacity planning, count actual hours, so a 50-hour week is 1.25 FTE; it shows that the team is carrying more work than its headcount suggests. For the ACA, a full-time employee is 1.0 regardless of overtime, and a part-timer's hours are capped at 120 a month. For budgets, most organizations cap individuals at 1.0 and show overtime as a cost line instead.</li>
+        <li><strong>Paid leave</strong>: counts as hours of service under the ACA and usually counts in budget FTE, because the position is funded whether or not the person is at work. Unpaid leave does not count. A worker on 12 weeks of unpaid leave is 0.77 FTE for the year (40 / 52) on an hours basis even though the position is 1.0.</li>
+        <li><strong>Seasonal workers</strong>: count their hours in the months they work. The ACA seasonal exception removes them from the ALE test only if the employer exceeded 50 for 120 days or fewer because of them. A ski resort at 200 staff for four months and 30 staff for eight averages (200 x 4 + 30 x 8) / 12 = 86.7, but the exception means it is not an ALE if the 120-day test is met.</li>
+        <li><strong>Independent contractors</strong> are not employees and are excluded from every FTE count, which is one reason misclassification audits matter: reclassifying 15 contractors can push an employer over the ALE line retroactively.</li>
+        <li><strong>Variable-hour employees</strong>: the ACA allows a look-back measurement period of 3 to 12 months to decide whether a variable-hour employee is full time for a following stability period, so a part-timer who averages 31 hours over the measurement period must be offered coverage for the stability period even if hours later fall.</li>
+        <li><strong>Salaried exempt staff</strong>: no hours are recorded, so use 8 hours per working day (the ACA's days-worked equivalency), 40 a week, or actual scheduled hours. The ACA permits a daily or weekly equivalency only if it does not understate hours.</li>
+      </ul>
+
+      <h2 id="planning">Using FTE in headcount planning</h2>
+      <p>FTE is the unit that lets a workforce plan compare teams with different mixes of full and part-time staff, and it is the unit that productivity ratios should use. Revenue per FTE, tickets per FTE and patients per nursing FTE all control for the fact that two 20-hour people are one unit of capacity. Headcount-based ratios reward teams that happen to hire full-timers.</p>
+      <p>Three practical rules. First, budget in FTE but approve requisitions in hours, so a 0.6 FTE opening can be filled by one 24-hour person or two 12-hour people. Second, track funded FTE, filled FTE and worked FTE separately: a team funded at 20.0, filled at 18.5 and working 21.2 (because of overtime) is understaffed, not overstaffed, and the three numbers show it. Third, when the organization changes its full-time week (from 40 to 37.5, say), restate the history, or every trend line will jump by 6.7% on the changeover date. The <a href="/blogs/workforce-planning-template">workforce planning template</a> and <a href="/blogs/capacity-planning-template">capacity planning template</a> use these three columns.</p>
+      <p>For ratio benchmarks, the commonly cited figure of one HR professional per 100 employees is a headcount ratio; the <a href="/blogs/hr-metrics">HR metrics guide</a> covers how to compute it on an FTE basis so part-time-heavy workforces are not misread as under-resourced.</p>
+
+      <h2 id="mistakes">Why FTE counts disagree</h2>
+      <ul>
+        <li><strong>Different denominators</strong>: finance uses 2,080, HR uses 1,950 for a 37.5-hour week, the broker uses 120 hours a month. Every number is right and none agree. Label the method on every report.</li>
+        <li><strong>Counting scheduled rather than paid hours</strong> for part-timers whose actual hours drift. Use payroll hours for anything that has legal consequences.</li>
+        <li><strong>Forgetting the 120-hour cap</strong> in the ACA method, which overstates FTEs when part-timers work 28 or 29 hours a week (about 125 a month).</li>
+        <li><strong>Rounding at the wrong step</strong>: the ACA rounds down once, at the end of the annual average, and the tax credit rounds down the final FTE figure. Rounding each employee or each month changes the answer.</li>
+        <li><strong>Mixing controlled-group entities</strong>: counting each legal entity separately for the ACA when common ownership requires aggregation.</li>
+        <li><strong>Treating 1.0 FTE as 2,080 productive hours</strong>. After vacation, holidays, sick leave and training, a full-time employee delivers around 1,700 to 1,800 working hours a year; capacity plans that assume 2,080 are overstated by 15% before they start. The <a href="/blogs/how-many-work-hours-in-a-year">work hours in a year</a> guide has the arithmetic.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>FTE = total hours / hours in a full-time schedule for the same period; with a 40-hour week that is 2,080 hours a year, 173.33 a month or 40 a week. A 20-hour employee is 0.5 FTE.</li>
+        <li>The Affordable Care Act method is different: anyone at 30 or more hours a week (130 a month) is one full-time employee; everyone else's hours, capped at 120 each, are totaled and divided by 120. 50 or more on the prior-year average, rounded down, makes an applicable large employer.</li>
+        <li>The small-business health care tax credit uses 2,080 hours per FTE, rounds down and excludes owners and family; fewer than 25 FTEs is one of its tests.</li>
+        <li>Paid leave counts as hours of service; unpaid leave does not. Contractors are excluded from every method. Related companies under common ownership are combined for the ACA.</li>
+        <li>A 30-hour employee is 0.75 standard FTE but 1.0 ACA FTE; a restaurant group with 38 full-timers and 40 part-timers at 22 hours is 60 standard FTE and 69 ACA FTEs.</li>
+        <li>Budget in FTE, approve requisitions in hours, and track funded, filled and worked FTE separately so overtime shows up as understaffing rather than overstaffing.</li>
+        <li>One FTE is about 1,700 to 1,800 productive hours a year after leave and holidays, not 2,080; capacity plans built on 2,080 are 15% optimistic.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="hr">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate FTE?</summary>
+          <p>Add up the hours worked or paid by all employees in the period and divide by the hours one full-time employee works in that period. Over a year with a 40-hour week the divisor is 2,080; over a month about 173.33; over a week 40. Ten employees at 20 hours a week are 5.0 FTE. Pick one definition of full time and use it consistently.</p>
+        </details>
+        <details>
+          <summary>What is 1 FTE in hours?</summary>
+          <p>With a 40-hour week, 1 FTE is 40 hours a week, 173.33 hours a month or 2,080 hours a year. With a 37.5-hour week it is 1,950 hours a year, and the federal government uses 2,087. The Affordable Care Act defines full time as 30 hours a week or 130 hours a month for the employer mandate.</p>
+        </details>
+        <details>
+          <summary>How many hours is 0.5 FTE?</summary>
+          <p>Half of the full-time schedule: 20 hours a week or 1,040 hours a year where full time is 40 hours, and 18.75 hours a week where it is 37.5. Under the Affordable Care Act's 120-hour monthly divisor, 0.5 FTE is 60 hours a month, or about 14 hours a week.</p>
+        </details>
+        <details>
+          <summary>How is FTE calculated for the ACA employer mandate?</summary>
+          <p>For each month of the prior year, count employees with 130 or more hours as full time; total the hours of everyone else, counting at most 120 per person, and divide by 120; add the two numbers. Average the 12 monthly totals and round down. If the result is 50 or more, the employer is an applicable large employer for the current year and must offer coverage or face the section 4980H penalties.</p>
+        </details>
+        <details>
+          <summary>Does FTE include part-time employees?</summary>
+          <p>Yes. The point of the measure is to convert part-time hours into full-time equivalents. Two part-timers at 20 hours equal 1.0 FTE. For the Affordable Care Act, part-time hours are divided by 120 a month; for budgeting they are divided by the organization's full-time schedule.</p>
+        </details>
+        <details>
+          <summary>What is the difference between FTE and headcount?</summary>
+          <p>Headcount counts people; FTE counts full-time schedules' worth of hours. A team of 12 full-timers and 6 half-timers has a headcount of 18 and 15.0 FTE. Ratios such as revenue per employee are more comparable across teams when computed per FTE.</p>
+        </details>
+        <details>
+          <summary>Do independent contractors count toward FTE?</summary>
+          <p>No. Contractors are not employees and are excluded from FTE counts for budgeting, the Affordable Care Act and the small-business tax credit. Misclassified workers who are later treated as employees are added back, which can change whether an employer is an applicable large employer.</p>
+        </details>
+        <details>
+          <summary>Does paid time off count in FTE?</summary>
+          <p>For the Affordable Care Act, yes: hours of service include paid vacation, sick leave, holidays and jury duty. For budgets, a funded position is usually 1.0 FTE whether or not the person is on paid leave. Unpaid leave does not count as hours of service.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/team-capacity-planning">Team Capacity Planning</a></li>
+          <li><a href="/blogs/workforce-planning-template">Workforce Planning Template</a></li>
+          <li><a href="/blogs/how-many-work-hours-in-a-year">How Many Work Hours in a Year</a></li>
+          <li><a href="/blogs/employee-cost-calculator">Employee Cost Calculator</a></li>
+          <li><a href="/blogs/hr-metrics">HR Metrics</a></li>
+          <li><a href="/blogs/hours-calculator">Hours Calculator</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

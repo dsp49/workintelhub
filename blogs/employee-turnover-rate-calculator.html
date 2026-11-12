@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Turnover Rate Calculator: Formula, Benchmarks, Cost</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Calculate monthly and annual turnover, voluntary and involuntary rates, retention and new-hire turnover, compare with 2025 BLS benchmarks and cost the exits." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/employee-turnover-rate-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/employee-turnover-rate-calculator" />
+  <meta property="og:title" content="Employee Turnover Rate Calculator: Formula, Benchmarks, Cost" />
+  <meta property="og:description" content="Calculate monthly and annual turnover, voluntary and involuntary rates, retention and new-hire turnover, compare with 2025 BLS benchmarks and cost the exits." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/employee-turnover-rate-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:section" content="Engagement" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Employee Turnover Rate Calculator: Formula, Benchmarks, Cost" />
+  <meta name="twitter:description" content="Calculate monthly and annual turnover, voluntary and involuntary rates, retention and new-hire turnover, compare with 2025 BLS benchmarks and cost the exits." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/employee-turnover-rate-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/employee-turnover-rate-calculator#article",
+      "headline": "Employee Turnover Rate Calculator: Formula, Benchmarks, Cost",
+      "description": "Calculate monthly and annual turnover, voluntary and involuntary rates, retention and new-hire turnover, compare with 2025 BLS benchmarks and cost the exits.",
+      "image": "https://workintelhub.com/images/blog/employee-turnover-rate-calculator.png",
+      "datePublished": "2026-11-12T00:00:00+00:00",
+      "dateModified": "2026-11-12T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/employee-turnover-rate-calculator"
+      },
+      "articleSection": "Engagement",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/employee-turnover-rate-calculator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Engagement",
+          "item": "https://workintelhub.com/topics/engagement-and-retention"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Employee Turnover Rate Calculator: Formula, Benchmarks, Cost"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/employee-turnover-rate-calculator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate employee turnover rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide the number of separations in the period by the average headcount for the period and multiply by 100. For a month, average headcount is (start + end) / 2; for a year, the mean of the twelve month-end counts. Seven separations from an average of 210 employees is a 3.33% monthly rate, about 40% annualized."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good employee turnover rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the industry. In 2025 the BLS total separations rate averaged 3.3% a month, about 40% a year, across all industries; manufacturing was 2.4%, finance 2.1%, health care 2.9%, retail 3.8%, and leisure and hospitality 5.6%. A rate well below your industry's figure is good; a rate above it, concentrated in voluntary departures of tenured staff, is the one to act on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between turnover rate and retention rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turnover counts everyone who left during the period against average headcount. Retention counts the employees on the roster at the start who are still employed at the end, divided by the starting headcount, and ignores people hired during the period. A company can have 30% turnover and 85% retention if most leavers were recent hires."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate voluntary turnover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide voluntary separations (resignations and retirements) by average headcount and multiply by 100, excluding layoffs and discharges. The BLS calls this the quits rate; it averaged 2.0% a month in 2025, about 24% a year. Regrettable turnover narrows it further to the quits the company would have prevented."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you annualize a monthly turnover rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply by 12. A 3% monthly rate is roughly 36% a year. The approximation slightly overstates the true annual figure, which should be computed as total separations for the year divided by average annual headcount. Quarterly rates are multiplied by 4."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does employee turnover cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work Institute's conservative estimate is 33% of the departing employee's base pay, about $16,500 for a $50,000 employee. Gallup puts it at one-half to two times annual salary depending on the role. SHRM's 2025 benchmark for the recruiting component alone is $5,475 per non-executive hire and $35,879 per executive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is new-hire turnover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The share of employees hired in a period who leave within their first year: hires who left within 12 months divided by hires in the cohort. Track it by cohort so that everyone in the group has had the same time to leave. High new-hire turnover points to recruiting and onboarding rather than to management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should turnover be calculated on headcount or FTE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Headcount, for comparability with BLS and most benchmarks. FTE-based turnover weights part-time departures less and is useful internally for a workforce with many part-timers, but it is not what the published benchmarks use."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Engagement</span>
+      <h1>Employee Turnover Rate Calculator: Formula, Benchmarks, Cost</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 12, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/employee-turnover-rate-calculator.png" alt="A line chart of headcount with departures marked as downward ticks and a percentage figure beside it" width="1200" height="630" />
+      </figure>
+
+      <p>
+        Turnover rate is the share of your workforce that left in a period. The formula is simple, the choices inside it are not: which separations to count, which headcount to divide by, whether to annualize a monthly figure, and how to separate the people you wanted to keep from the people you let go. Two HR teams using the same data can report 18% and 31% for the same year, and both can defend the number. The Bureau of Labor Statistics method, used in the Job Openings and Labor Turnover Survey, is the benchmark everyone compares against, so it is the method to use when you want your figure to mean something outside the company.
+      </p>
+      <p>
+        The calculator below computes total, voluntary and involuntary turnover for a month or a year, annualizes it, computes retention and new-hire turnover, compares the result with the 2025 JOLTS industry rates, and estimates the cost of the departures. Below it: the formulas with their traps, the benchmarks by industry, the cost research, and what to do with the number. For the national picture, see <a href="/blogs/employee-turnover-statistics">employee turnover statistics</a>; for the fix, <a href="/blogs/employee-retention-strategies">employee retention strategies</a>.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Turnover rate calculator</a></li>
+          <li><a href="#formula">The formula and the choices inside it</a></li>
+          <li><a href="#types">Voluntary, involuntary, regrettable, new-hire</a></li>
+          <li><a href="#benchmarks">Benchmarks: 2025 JOLTS by industry</a></li>
+          <li><a href="#cost">What turnover costs</a></li>
+          <li><a href="#use">What to do with the number</a></li>
+          <li><a href="#examples">Worked examples</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="calculator">Turnover rate calculator</h2>
+      <div class="calc" id="tr">
+        <div class="calc__grid">
+          <div><label for="tr-start">Headcount at start of period</label><input id="tr-start" type="number" min="0" step="1" value="212"></div>
+          <div><label for="tr-end">Headcount at end of period</label><input id="tr-end" type="number" min="0" step="1" value="208"></div>
+          <div><label for="tr-quits">Voluntary separations (quits, retirements)</label><input id="tr-quits" type="number" min="0" step="1" value="5"></div>
+          <div><label for="tr-inv">Involuntary separations (layoffs, discharges)</label><input id="tr-inv" type="number" min="0" step="1" value="2"></div>
+          <div><label for="tr-period">Period</label><select id="tr-period"><option value="1" selected>One month</option><option value="3">One quarter</option><option value="12">One year</option></select></div>
+          <div><label for="tr-hires">Hires in the period (for new-hire turnover)</label><input id="tr-hires" type="number" min="0" step="1" value="9"></div>
+          <div><label for="tr-nhleft">Of those hires, how many have already left</label><input id="tr-nhleft" type="number" min="0" step="1" value="2"></div>
+          <div><label for="tr-salary">Average salary of leavers ($)</label><input id="tr-salary" type="number" min="0" step="1000" value="55000"></div>
+          <div><label for="tr-ind">Industry benchmark (2025 JOLTS annual, monthly rates)</label><select id="tr-ind"><option value="3.3|2.0" selected>All industries (3.3% total, 2.0% quits)</option><option value="3.6|2.2">Total private (3.6%, 2.2%)</option><option value="2.4|1.4">Manufacturing (2.4%, 1.4%)</option><option value="3.8|2.6">Retail trade (3.8%, 2.6%)</option><option value="2.1|1.3">Finance and insurance (2.1%, 1.3%)</option><option value="4.6|2.3">Professional and business services (4.6%, 2.3%)</option><option value="2.9|2.0">Health care and social assistance (2.9%, 2.0%)</option><option value="5.6|3.9">Leisure and hospitality (5.6%, 3.9%)</option><option value="5.5|4.2">Accommodation and food services (5.5%, 4.2%)</option><option value="1.5|0.8">Government (1.5%, 0.8%)</option></select></div>
+        </div>
+        <div class="calc__out" id="tr-out"></div>
+        <p class="calc__note">Turnover = separations / average headcount x 100, following the BLS method. Benchmarks are 2025 annual averages of monthly rates from the Job Openings and Labor Turnover Survey, released March 13, 2026; multiply by 12 for a rough annual comparison. Cost uses Work Institute's conservative 33% of base pay and Gallup's one-half to two times salary range.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function pct(x) { return x.toFixed(1) + "%"; }
+        function money(x) { return "$" + Math.round(x).toLocaleString("en-US"); }
+        function calc() {
+          var s = parseFloat(el("tr-start").value) || 0, e = parseFloat(el("tr-end").value) || 0;
+          var q = parseFloat(el("tr-quits").value) || 0, inv = parseFloat(el("tr-inv").value) || 0;
+          var months = parseInt(el("tr-period").value, 10), hires = parseFloat(el("tr-hires").value) || 0, nhl = parseFloat(el("tr-nhleft").value) || 0;
+          var sal = parseFloat(el("tr-salary").value) || 0, bench = el("tr-ind").value.split("|");
+          var avg = (s + e) / 2, seps = q + inv;
+          if (avg <= 0) { el("tr-out").innerHTML = row("Average headcount", "Enter headcounts above zero."); return; }
+          var total = seps / avg * 100, vol = q / avg * 100, invol = inv / avg * 100;
+          var annual = total * 12 / months, annualVol = vol * 12 / months;
+          var monthlyEq = total / months;
+          var retention = s > 0 ? Math.max(0, (s - seps) / s * 100) : 0;
+          var nh = hires > 0 ? nhl / hires * 100 : 0;
+          var bT = parseFloat(bench[0]), bQ = parseFloat(bench[1]);
+          var html = row("Average headcount", avg.toFixed(1));
+          html += row("Total turnover for the period", pct(total) + " (" + seps + " separations)");
+          html += row("Voluntary turnover", pct(vol));
+          html += row("Involuntary turnover", pct(invol));
+          if (months < 12) html += row("Annualized turnover", pct(annual) + " total, " + pct(annualVol) + " voluntary");
+          html += row("Retention rate (of those employed at the start)", pct(retention) + " (approximate; assumes leavers were on the start-of-period roster)");
+          if (hires > 0) html += row("New-hire turnover", pct(nh) + " of " + hires + " hires have left");
+          html += row("Benchmark: monthly rate vs 2025 JOLTS", pct(monthlyEq) + " per month vs " + pct(bT) + " industry total (" + pct(bQ) + " quits); annual equivalent about " + pct(bT * 12));
+          html += row("Verdict", monthlyEq > bT * 1.25 ? "Above the industry rate by more than 25%" : monthlyEq < bT * 0.75 ? "Well below the industry rate" : "Near the industry rate");
+          var low = seps * sal * 0.33, mid = seps * sal * 0.5, high = seps * sal * 2;
+          html += row("Cost of these separations (Work Institute, 33% of pay)", money(low));
+          html += row("Cost range (Gallup, one-half to two times salary)", money(mid) + " to " + money(high));
+          el("tr-out").innerHTML = html;
+        }
+        ["tr-start","tr-end","tr-quits","tr-inv","tr-period","tr-hires","tr-nhleft","tr-salary","tr-ind"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+
+      <h2 id="formula">The formula and the choices inside it</h2>
+      <p><strong>Turnover rate = separations in the period / average headcount in the period × 100.</strong></p>
+      <p>The Bureau of Labor Statistics computes its separations rate by dividing separations by employment and multiplying by 100, and its annual rate by dividing the sum of twelve monthly separations by the sum of twelve monthly employment levels. The choices:</p>
+      <ul>
+        <li><strong>Which separations.</strong> BLS counts quits (voluntary), layoffs and discharges (employer-initiated) and other separations (retirements, deaths, disability, transfers out). Internal transfers between departments are not separations from the company and should be excluded from a company rate, included in a department rate. Temporary and seasonal workers whose assignments end on schedule are usually excluded; say so if you exclude them.</li>
+        <li><strong>Which headcount.</strong> Average headcount, (start + end) / 2 for a month or the average of 12 month-end counts for a year, is standard. Dividing by start-of-period headcount overstates turnover in a growing company and understates it in a shrinking one. Use headcount, not FTE, unless you are measuring a part-time-heavy workforce and want to weight by hours; see the <a href="/blogs/fte-calculator">FTE calculator</a>.</li>
+        <li><strong>Annualizing.</strong> A monthly rate × 12 approximates the annual rate but overstates it slightly if the same people would have been counted twice; the proper annual figure is total separations for the year over average headcount for the year. Quarterly figures × 4 have the same caveat.</li>
+        <li><strong>Retention is not 100 minus turnover.</strong> Retention rate = employees on the roster at the start who are still employed at the end / start headcount × 100. It ignores hires made during the period, so a company that hires 50 and loses 50 new hires has high turnover and perfect retention of its original staff. The calculator's retention figure assumes the leavers were on the start-of-period roster; if some were hired and left within the period, retention is higher than shown.</li>
+        <li><strong>New-hire turnover</strong> = hires who left within their first 12 months / hires in the cohort × 100. Track it by cohort (everyone hired in a quarter), not by period, so the figure does not mix people who have had 11 months to leave with people who have had one.</li>
+      </ul>
+
+      <h2 id="types">Voluntary, involuntary, regrettable, new-hire</h2>
+      <p>Total turnover hides the two numbers that matter. <strong>Voluntary turnover</strong> (quits and retirements) reflects how the company is doing as an employer; <strong>involuntary turnover</strong> (layoffs and discharges) reflects decisions the company made. A 20% total split 5% voluntary and 15% involuntary describes a restructuring; the reverse describes a retention problem. <strong>Regrettable turnover</strong>, the subset of quits the company would have prevented if it could, is the sharpest measure and the hardest to collect; it requires the manager to classify each departure within a week, before memory softens. <strong>New-hire turnover</strong> points at recruiting and onboarding; the <a href="/blogs/employee-onboarding-statistics">onboarding statistics</a> page has the research on first-year exits. Report all four, with the denominator and the definitions, in the <a href="/blogs/hr-metrics">HR metrics</a> dashboard.</p>
+
+      <h2 id="benchmarks">Benchmarks: 2025 JOLTS by industry</h2>
+      <p>The Job Openings and Labor Turnover Survey publishes monthly rates. The 2025 annual figures (released March 13, 2026) are averages of the monthly rates, so multiply by roughly 12 for an annual comparison. In 2025 there were 62.8 million total separations, a rate of 3.3% a month, unchanged from 2024; 38.0 million quits (2.0%); and 21.2 million layoffs and discharges (1.1%). The September 2026 monthly figures (released November 3, 2026) were 3.3% total separations, 2.1% quits and 1.0% layoffs, so the picture had not moved.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Industry (2025 annual average)</th><th>Total separations, monthly</th><th>Quits, monthly</th><th>Approximate annual total</th></tr></thead>
+          <tbody>
+            <tr><td>All industries</td><td>3.3%</td><td>2.0%</td><td>About 40%</td></tr>
+            <tr><td>Total private</td><td>3.6%</td><td>2.2%</td><td>About 43%</td></tr>
+            <tr><td>Leisure and hospitality</td><td>5.6%</td><td>3.9%</td><td>About 67%</td></tr>
+            <tr><td>Accommodation and food services</td><td>5.5%</td><td>4.2%</td><td>About 66%</td></tr>
+            <tr><td>Professional and business services</td><td>4.6%</td><td>2.3%</td><td>About 55%</td></tr>
+            <tr><td>Retail trade</td><td>3.8%</td><td>2.6%</td><td>About 46%</td></tr>
+            <tr><td>Health care and social assistance</td><td>2.9%</td><td>2.0%</td><td>About 35%</td></tr>
+            <tr><td>Manufacturing</td><td>2.4%</td><td>1.4%</td><td>About 29%</td></tr>
+            <tr><td>Finance and insurance</td><td>2.1%</td><td>1.3%</td><td>About 25%</td></tr>
+            <tr><td>Government</td><td>1.5%</td><td>0.8%</td><td>About 18%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Source: BLS JOLTS annual release, tables 20 and 22, not seasonally adjusted. The annual column is the monthly rate × 12 and is an approximation. Professional and business services is high because it includes staffing agencies, whose placements end constantly; a law firm or consultancy should expect a figure well below 55%.</p>
+
+      <h2 id="cost">What turnover costs</h2>
+      <p>Three estimates are widely used, and they differ by a factor of six, so say which one you are using:</p>
+      <ul>
+        <li><strong>Work Institute</strong> (2025 Retention Report): a conservative 33% of the departing employee's base pay, so about $16,500 for a $50,000 employee. Covers recruiting, onboarding, training and lost productivity during the vacancy and ramp.</li>
+        <li><strong>Gallup</strong>: one-half to two times annual salary, with the low end for hourly and the high end for technical and leadership roles, and a national cost of voluntary turnover estimated at about $1 trillion a year.</li>
+        <li><strong>SHRM</strong> (2025 Benchmarking Reports): average cost per hire of $5,475 for non-executive roles and $35,879 for executives. This is the recruiting component only; the older $4,700 figure from the 2022 report is still widely quoted and is out of date.</li>
+      </ul>
+      <p>The components that the percentage estimates bundle: recruiting (advertising, agency fees, interviewer time), onboarding and training, the vacancy (overtime, temporary cover, lost output), the ramp-up period before the new hire reaches full productivity (three to six months for most roles, longer for technical and sales), and the knowledge that leaves with the person. For a defensible internal figure, build the components for two or three representative roles with the <a href="/blogs/employee-cost-calculator">employee cost calculator</a> rather than applying one percentage to everyone.</p>
+
+      <h2 id="use">What to do with the number</h2>
+      <ol>
+        <li><strong>Segment it.</strong> By manager, department, tenure band, location and job family. A 20% company rate is usually a 45% rate in two teams and 10% everywhere else.</li>
+        <li><strong>Separate the controllable part.</strong> Regrettable voluntary turnover among employees with more than a year's tenure is the number a retention program can move.</li>
+        <li><strong>Pair it with the reasons.</strong> <a href="/blogs/exit-interview-questions">Exit interviews</a> for the leavers and <a href="/blogs/stay-interview-questions">stay interviews</a> for the people still there.</li>
+        <li><strong>Trend it monthly, judge it annually.</strong> Monthly figures are noisy at small headcounts: one departure in a team of 12 is an 8% month, a 100% annualized rate, and means nothing.</li>
+        <li><strong>Cost it for the budget conversation.</strong> 42 departures at $55,000 is $762,000 at Work Institute's 33%, which is the figure that gets a retention budget approved.</li>
+        <li><strong>Benchmark honestly.</strong> Against your industry's JOLTS rate, against your own history, and against the rate for the specific roles you are losing.</li>
+      </ol>
+
+      <h2 id="examples">Worked examples</h2>
+      <p><strong>Example 1: a month.</strong> Headcount 212 on October 1 and 208 on October 31; average 210. Seven separations: five quits, two discharges. Total turnover 7 / 210 = 3.33%; voluntary 2.38%; involuntary 0.95%. Annualized about 40%, in line with the all-industries JOLTS rate of 3.3% a month.</p>
+      <p><strong>Example 2: a year.</strong> Average of twelve month-end headcounts 150; 42 separations in the year: 28.0% turnover. Of the 148 employees on January 1, 118 were still employed on December 31: retention 79.7%. Of 30 people hired during the year, 9 left within 12 months: new-hire turnover 30%. Cost at a $55,000 average: $762,300 at 33%; $1.16 million to $4.62 million on Gallup's range.</p>
+      <p><strong>Example 3: growth distorts the denominator.</strong> A startup grows from 40 to 120 employees in a year and loses 20. Over start headcount: 50%. Over average headcount (80): 25%. Over end headcount: 16.7%. The average-headcount figure is the one to report, with the growth noted, because it is the one comparable to the benchmarks.</p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Turnover rate = separations / average headcount × 100, the BLS method; use average headcount ((start + end) / 2, or the mean of 12 month-end counts) and state which separations are counted.</li>
+        <li>Report voluntary (quits, retirements) and involuntary (layoffs, discharges) separately, add regrettable turnover where managers classify departures, and track new-hire turnover by hiring cohort.</li>
+        <li>Retention is not 100 minus turnover: retention counts start-of-period employees still employed at the end and ignores hires made during the period.</li>
+        <li>2025 JOLTS benchmarks (monthly): all industries 3.3% total and 2.0% quits, about 40% a year; leisure and hospitality 5.6%; professional and business services 4.6%; retail 3.8%; health care 2.9%; manufacturing 2.4%; finance 2.1%; government 1.5%. September 2026 was unchanged at 3.3%.</li>
+        <li>Cost estimates range from Work Institute's 33% of base pay to Gallup's one-half to two times salary; SHRM's 2025 average cost per hire is $5,475 (non-executive) and $35,879 (executive), and the old $4,700 figure is outdated.</li>
+        <li>Monthly rates at small headcounts are noise; segment by manager, tenure and role, trend monthly and judge annually, and cost the departures for the budget case.</li>
+        <li>In a growing company the choice of denominator swings the figure by half; average headcount is the comparable one.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="engagement-and-retention">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate employee turnover rate?</summary>
+          <p>Divide the number of separations in the period by the average headcount for the period and multiply by 100. For a month, average headcount is (start + end) / 2; for a year, the mean of the twelve month-end counts. Seven separations from an average of 210 employees is a 3.33% monthly rate, about 40% annualized.</p>
+        </details>
+        <details>
+          <summary>What is a good employee turnover rate?</summary>
+          <p>It depends on the industry. In 2025 the BLS total separations rate averaged 3.3% a month, about 40% a year, across all industries; manufacturing was 2.4%, finance 2.1%, health care 2.9%, retail 3.8%, and leisure and hospitality 5.6%. A rate well below your industry's figure is good; a rate above it, concentrated in voluntary departures of tenured staff, is the one to act on.</p>
+        </details>
+        <details>
+          <summary>What is the difference between turnover rate and retention rate?</summary>
+          <p>Turnover counts everyone who left during the period against average headcount. Retention counts the employees on the roster at the start who are still employed at the end, divided by the starting headcount, and ignores people hired during the period. A company can have 30% turnover and 85% retention if most leavers were recent hires.</p>
+        </details>
+        <details>
+          <summary>How do you calculate voluntary turnover?</summary>
+          <p>Divide voluntary separations (resignations and retirements) by average headcount and multiply by 100, excluding layoffs and discharges. The BLS calls this the quits rate; it averaged 2.0% a month in 2025, about 24% a year. Regrettable turnover narrows it further to the quits the company would have prevented.</p>
+        </details>
+        <details>
+          <summary>How do you annualize a monthly turnover rate?</summary>
+          <p>Multiply by 12. A 3% monthly rate is roughly 36% a year. The approximation slightly overstates the true annual figure, which should be computed as total separations for the year divided by average annual headcount. Quarterly rates are multiplied by 4.</p>
+        </details>
+        <details>
+          <summary>How much does employee turnover cost?</summary>
+          <p>Work Institute's conservative estimate is 33% of the departing employee's base pay, about $16,500 for a $50,000 employee. Gallup puts it at one-half to two times annual salary depending on the role. SHRM's 2025 benchmark for the recruiting component alone is $5,475 per non-executive hire and $35,879 per executive.</p>
+        </details>
+        <details>
+          <summary>What is new-hire turnover?</summary>
+          <p>The share of employees hired in a period who leave within their first year: hires who left within 12 months divided by hires in the cohort. Track it by cohort so that everyone in the group has had the same time to leave. High new-hire turnover points to recruiting and onboarding rather than to management.</p>
+        </details>
+        <details>
+          <summary>Should turnover be calculated on headcount or FTE?</summary>
+          <p>Headcount, for comparability with BLS and most benchmarks. FTE-based turnover weights part-time departures less and is useful internally for a workforce with many part-timers, but it is not what the published benchmarks use.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/employee-turnover-statistics">Employee Turnover Statistics</a></li>
+          <li><a href="/blogs/employee-retention-strategies">Employee Retention Strategies</a></li>
+          <li><a href="/blogs/hr-metrics">HR Metrics</a></li>
+          <li><a href="/blogs/exit-interview-questions">Exit Interview Questions</a></li>
+          <li><a href="/blogs/stay-interview-questions">Stay Interview Questions</a></li>
+          <li><a href="/blogs/employee-cost-calculator">Employee Cost Calculator</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prorated Salary Calculator: Partial Pay for Starts and Leave</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Partial pay for a mid-period start, exit, unpaid leave or raise by the working-days, calendar-days and hourly methods, plus FLSA rules on docking exempt pay." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/prorated-salary-calculator" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/prorated-salary-calculator" />
+  <meta property="og:title" content="Prorated Salary Calculator: Partial Pay for Starts and Leave" />
+  <meta property="og:description" content="Partial pay for a mid-period start, exit, unpaid leave or raise by the working-days, calendar-days and hourly methods, plus FLSA rules on docking exempt pay." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/prorated-salary-calculator.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-12T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prorated Salary Calculator: Partial Pay for Starts and Leave" />
+  <meta name="twitter:description" content="Partial pay for a mid-period start, exit, unpaid leave or raise by the working-days, calendar-days and hourly methods, plus FLSA rules on docking exempt pay." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/prorated-salary-calculator.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/prorated-salary-calculator#article",
+      "headline": "Prorated Salary Calculator: Partial Pay for Starts and Leave",
+      "description": "Partial pay for a mid-period start, exit, unpaid leave or raise by the working-days, calendar-days and hourly methods, plus FLSA rules on docking exempt pay.",
+      "image": "https://workintelhub.com/images/blog/prorated-salary-calculator.png",
+      "datePublished": "2026-11-12T00:00:00+00:00",
+      "dateModified": "2026-11-12T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/prorated-salary-calculator"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/prorated-salary-calculator#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Prorated Salary Calculator: Partial Pay for Starts and Leave"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/prorated-salary-calculator#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate a prorated salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Take the salary for one pay period and multiply by the fraction of the period the employee is being paid for: working days paid divided by working days in the period, or calendar days employed divided by calendar days in the period. Alternatively, divide the annual salary by 260 for a daily rate or by 2,080 for an hourly rate and multiply by the days or hours paid. On $78,000 paid biweekly, six of ten working days is $1,800."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you prorate an exempt employee's salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only in the situations listed in 29 CFR 541.602(b): the first and last weeks of employment, full-day absences for personal reasons, full-day sickness under a bona fide sick-pay plan, unpaid FMLA leave, safety-rule penalties and full-day disciplinary suspensions. Deductions for partial days, lack of work, closures or jury duty are not permitted and can destroy the exemption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is a prorated salary calculated for a new hire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pay a proportionate part of the period salary for the days worked. If someone starts on Wednesday of a biweekly period with 10 working days and works 8 of them, pay 8/10 of the period salary. The FLSA expressly allows this proportional payment in the first week of employment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the daily rate for a salaried employee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most employers use annual salary divided by 260 (52 weeks x 5 days); $78,000 gives $300 a day. Some divide the period salary by the working days in that specific period, which varies between 10 and 12 for semi-monthly payroll. The hourly equivalent is salary divided by 2,080."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prorate salary for unpaid leave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For non-exempt employees, pay only the hours worked. For exempt employees, deduct only for full days of absence in the permitted categories, using the daily rate in the policy; unpaid FMLA leave may be deducted in any increment, including hours. Partial-day absences outside FMLA cannot reduce salary but may be charged to a leave bank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prorate a salary increase that starts mid-pay period?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pay the days before the effective date at the old period salary rate and the days after at the new rate, both prorated by the same method. Many employers make raises effective on the first day of a pay period to avoid the split. A raise backdated into earlier periods is retro pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is prorating by calendar days or working days better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Working days match how employees think about a week and are standard for biweekly payroll; calendar days are simpler for monthly payroll. The annual daily rate (salary / 260) is the most consistent because it never changes with the length of the period. Any method is lawful if applied consistently and disclosed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an employer dock pay when the office closes for weather?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for an exempt employee who worked any part of that week; the full salary is due because the absence was caused by the employer. The employer may require PTO to be used for the closure, but must pay the salary even if the bank is empty. Non-exempt employees need only be paid for hours worked, subject to state reporting-time pay rules."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>Prorated Salary Calculator: Partial Pay for Starts and Leave</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 12, 2026 &middot; 11 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/prorated-salary-calculator.png" alt="A pay period calendar with the first six days shaded out and a partial paycheck amount beside it" width="1200" height="630" />
+      </figure>
+
+      <p>
+        A prorated salary is the share of a salaried employee's pay that covers part of a pay period: the first paycheck for someone who started on a Wednesday, the last one for someone who left on the 19th, a period with three days of unpaid leave, or the paycheck in which a raise took effect halfway through. The arithmetic is simple. The disagreements are about the denominator (working days, calendar days or hours), and about when the law allows a deduction from an exempt employee's salary at all.
+      </p>
+      <p>
+        The calculator below prorates a salary for any partial period using the three common methods side by side, handles a mid-period raise, and flags deductions that the Fair Labor Standards Act salary-basis rule does not allow. Below it: each method with the numbers, the exempt-employee rules in 29 CFR 541.602, how proration interacts with semi-monthly schedules, final-pay deadlines, and the policy language that stops the same question being argued every payroll. For the payroll calendar itself, see <a href="/blogs/payroll-calendar-2027">the 2027 payroll calendar</a>.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#calculator">Prorated salary calculator</a></li>
+          <li><a href="#methods">Three methods, three answers</a></li>
+          <li><a href="#exempt">When you may and may not dock an exempt salary</a></li>
+          <li><a href="#cases">Common cases: start, exit, leave, raise</a></li>
+          <li><a href="#semimonthly">Semi-monthly and monthly schedules</a></li>
+          <li><a href="#final">Final pay deadlines</a></li>
+          <li><a href="#policy">Policy language that settles it</a></li>
+          <li><a href="#examples">Worked examples</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+
+      <h2 id="calculator">Prorated salary calculator</h2>
+      <div class="calc" id="pr">
+        <div class="calc__grid">
+          <div><label for="pr-salary">Annual salary ($)</label><input id="pr-salary" type="number" min="0" step="100" value="78000"></div>
+          <div><label for="pr-freq">Pay frequency</label><select id="pr-freq"><option value="52">Weekly (52)</option><option value="26" selected>Biweekly (26)</option><option value="24">Semi-monthly (24)</option><option value="12">Monthly (12)</option></select></div>
+          <div><label for="pr-wd">Working days in this pay period</label><input id="pr-wd" type="number" min="1" max="31" step="1" value="10"></div>
+          <div><label for="pr-cd">Calendar days in this pay period</label><input id="pr-cd" type="number" min="1" max="31" step="1" value="14"></div>
+          <div><label for="pr-wdw">Working days actually paid</label><input id="pr-wdw" type="number" min="0" max="31" step="1" value="6"></div>
+          <div><label for="pr-cdw">Calendar days actually employed</label><input id="pr-cdw" type="number" min="0" max="31" step="1" value="8"></div>
+          <div><label for="pr-hours">Hours per week (hourly method)</label><input id="pr-hours" type="number" min="1" max="80" step="0.5" value="40"></div>
+          <div><label for="pr-hw">Hours actually paid (hourly method)</label><input id="pr-hw" type="number" min="0" step="0.5" value="48"></div>
+          <div><label for="pr-reason">Reason for the partial period</label><select id="pr-reason"><option value="start" selected>New hire started mid-period</option><option value="exit">Employee left mid-period</option><option value="personal">Full-day absences for personal reasons (no PTO left)</option><option value="sick">Full-day sickness under a bona fide sick plan</option><option value="fmla">Unpaid FMLA leave</option><option value="partial">Partial-day absence</option><option value="closure">Employer closed; employee ready to work</option><option value="jury">Jury duty or witness leave</option></select></div>
+          <div><label for="pr-newsal">Optional: new salary if a raise took effect mid-period ($)</label><input id="pr-newsal" type="number" min="0" step="100" value="0"></div>
+        </div>
+        <div class="calc__out" id="pr-out"></div>
+        <p class="calc__note">The working-days method divides the period salary by the working days in that period (usually 10 for biweekly, 10 or 11 for semi-monthly); the calendar-days method divides by all days; the hourly method divides annual salary by 2,080 hours. Deductions from an exempt employee's salary are only permitted in the cases listed in 29 CFR 541.602(b); the tool flags the others. Not legal or tax advice.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function money(x) { return "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+        function calc() {
+          var sal = parseFloat(el("pr-salary").value) || 0, freq = parseInt(el("pr-freq").value, 10);
+          var wd = parseFloat(el("pr-wd").value) || 1, cd = parseFloat(el("pr-cd").value) || 1;
+          var wdw = parseFloat(el("pr-wdw").value) || 0, cdw = parseFloat(el("pr-cdw").value) || 0;
+          var hpw = parseFloat(el("pr-hours").value) || 40, hw = parseFloat(el("pr-hw").value) || 0;
+          var reason = el("pr-reason").value, newsal = parseFloat(el("pr-newsal").value) || 0;
+          var period = sal / freq;
+          var byWd = period * Math.min(wdw / wd, 1), byCd = period * Math.min(cdw / cd, 1);
+          var hourly = sal / 2080, byHr = hourly * hw;
+          var daily260 = sal / 260, byDaily = daily260 * wdw;
+          var html = row("Full pay for one period (" + freq + " a year)", money(period));
+          html += row("Working-days method: " + wdw + " of " + wd + " days", money(byWd));
+          html += row("Calendar-days method: " + cdw + " of " + cd + " days", money(byCd));
+          html += row("Annual daily rate method: salary / 260 x " + wdw + " days", money(byDaily) + " (daily rate " + money(daily260) + ")");
+          html += row("Hourly method: salary / 2,080 x " + hw + " h", money(byHr) + " (hourly " + money(hourly) + ")");
+          if (newsal > 0 && newsal !== sal) {
+            var oldPart = (sal / freq) * (wdw / wd), newPart = (newsal / freq) * ((wd - wdw) / wd);
+            html += row("Mid-period raise: " + wdw + " days at old rate + " + (wd - wdw) + " at new rate", money(oldPart + newPart));
+          }
+          var ok = {start: true, exit: true, personal: true, sick: true, fmla: true, partial: false, closure: false, jury: false};
+          var why = {
+            start: "Permitted: 541.602(b)(6) allows a proportional salary in the first week of employment.",
+            exit: "Permitted: 541.602(b)(6) allows a proportional salary in the last week of employment.",
+            personal: "Permitted for full days only: 541.602(b)(1). A half day cannot be docked; it may be charged to a leave bank.",
+            sick: "Permitted for full days under a bona fide plan, policy or practice of providing sick pay (541.602(b)(2)), including before eligibility or after the bank is exhausted.",
+            fmla: "Permitted in any increment, including partial days, for unpaid FMLA leave (541.602(b)(7)).",
+            partial: "NOT permitted for an exempt employee. Partial-day absences must be paid in full; the employer may deduct from a PTO bank but not from salary.",
+            closure: "NOT permitted. If the employer closes (weather, lack of work, furlough day) and the employee is ready and able to work, the full week's salary is due for any week in which some work is performed (541.602(a)(2)).",
+            jury: "NOT permitted. Salary may be offset only by the jury or witness fee received; the week's salary cannot otherwise be reduced (541.602(b)(3)). Non-exempt staff may be unpaid for the hours missed unless state law requires pay."
+          };
+          html += row("Exempt-employee check", (ok[reason] ? "Deduction allowed. " : "Deduction not allowed. ") + why[reason]);
+          if (!ok[reason]) html += row("Pay due to an exempt employee", money(period));
+          el("pr-out").innerHTML = html;
+        }
+        ["pr-salary","pr-freq","pr-wd","pr-cd","pr-wdw","pr-cdw","pr-hours","pr-hw","pr-reason","pr-newsal"].forEach(function (id) { el(id).addEventListener("input", calc); el(id).addEventListener("change", calc); });
+        calc();
+      })();
+      </script>
+
+      <h2 id="methods">Three methods, three answers</h2>
+      <p>No federal rule dictates how to prorate a salary. The FLSA regulation on exempt employees says only that an employer may pay "a proportionate part of an employee's full salary for the time actually worked" in the first and last weeks, and that deductions for permitted full-day absences may be made "in accordance with the employee's regular rate" or by the hourly or daily equivalent of the salary. That leaves the method to policy, and three are in common use.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Method</th><th>Formula</th><th>Strength</th><th>Weakness</th></tr></thead>
+          <tbody>
+            <tr><td>Working days in the period</td><td>Period salary x (days paid / working days in the period)</td><td>Matches how people think about a week; standard for biweekly payroll</td><td>Semi-monthly periods have 10, 11 or 12 working days, so the same absence costs different amounts in different months</td></tr>
+            <tr><td>Calendar days in the period</td><td>Period salary x (days employed / calendar days in the period)</td><td>Simple; common for monthly payroll and in offer letters</td><td>Pays for weekends; a Monday start in a 14-day period is 12/14, not 8/10</td></tr>
+            <tr><td>Annual daily or hourly rate</td><td>Salary / 260 per day, or / 2,080 per hour, times days or hours paid</td><td>Consistent all year; the daily rate never changes</td><td>Over a year the 260-day rate slightly overpays in short months and underpays in long ones; 2026 has 261 weekdays and 2027 has 260</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>On a $78,000 salary paid biweekly ($3,000 a period), six working days of a ten-day period is $1,800 by working days, $1,714.29 by calendar days (8 of 14) and $1,800 by the 260-day rate ($300 a day). On a semi-monthly schedule ($3,250 a period) in a month half with 11 working days, six days is $1,772.73 by working days and $1,800 by the annual daily rate. The differences are small per event and large across a workforce, so the method should be written in the pay policy and applied identically to starts, exits and leave.</p>
+
+      <h2 id="exempt">When you may and may not dock an exempt salary</h2>
+      <p>Exempt employees under the FLSA executive, administrative and professional exemptions must be paid on a salary basis: a predetermined amount each pay period that is not reduced because of variations in the quality or quantity of work. The regulation, 29 CFR 541.602, lists the only deductions that preserve the exemption. Prorating outside the list risks the exemption for that employee and, if deductions are an actual practice, for everyone in the same job classification under the same manager.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Situation</th><th>Deduction from salary</th><th>Authority</th></tr></thead>
+          <tbody>
+            <tr><td>First or last week of employment</td><td>Allowed; pay a proportionate part for days worked</td><td>541.602(b)(6)</td></tr>
+            <tr><td>Full-day absence for personal reasons other than sickness or disability</td><td>Allowed, full days only</td><td>541.602(b)(1)</td></tr>
+            <tr><td>Full-day absence for sickness or disability</td><td>Allowed only if the employer has a bona fide sick-pay plan, policy or practice, and the employee has not yet qualified or has exhausted the benefit</td><td>541.602(b)(2)</td></tr>
+            <tr><td>Partial-day absence</td><td>Not allowed; may be charged against a leave bank, including driving the bank negative, but salary is paid in full</td><td>541.602(a); DOL opinion letters FLSA2005-7, FLSA2009-18</td></tr>
+            <tr><td>Unpaid FMLA leave</td><td>Allowed in any increment, including hours</td><td>541.602(b)(7); 29 CFR 825.206</td></tr>
+            <tr><td>Jury duty, witness duty, temporary military leave</td><td>Not allowed beyond offsetting fees received for that service</td><td>541.602(b)(3)</td></tr>
+            <tr><td>Penalty for violating a major safety rule</td><td>Allowed, in good faith</td><td>541.602(b)(4)</td></tr>
+            <tr><td>Unpaid disciplinary suspension for workplace conduct rule violations</td><td>Allowed, full days only, under a written policy applicable to all employees</td><td>541.602(b)(5)</td></tr>
+            <tr><td>Employer has no work, closes for weather, or furloughs part of a week</td><td>Not allowed if any work is done in the week; a full-week furlough with no work can be unpaid</td><td>541.602(a)(2); DOL opinion letter FLSA2009-2</td></tr>
+            <tr><td>Reduction in quality or quantity of work</td><td>Not allowed</td><td>541.602(a)(1)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The safe-harbor provision in 541.603(d) lets an employer keep the exemption despite improper deductions if it has a clearly communicated policy prohibiting them with a complaint mechanism, reimburses employees, and makes a good-faith commitment to comply. Put that language in the handbook; it is the cheapest protection in wage and hour law. States add rules: California, for example, requires salaried exempt employees to earn at least twice the state minimum wage for full-time work and treats partial-day deductions from leave banks for absences of less than four hours with caution after Conley v. PG&amp;E (2005), and several states prohibit the disciplinary-suspension deduction. None of this applies to non-exempt salaried employees, who may be paid only for hours worked as long as overtime is calculated correctly.</p>
+
+      <h2 id="cases">Common cases: start, exit, leave, raise</h2>
+      <ul>
+        <li><strong>Mid-period start.</strong> Pay a proportionate part for the days worked using the policy method. Benefits deductions are usually taken in full from the first check if coverage starts on day one, which can make a small first check smaller still; tell the new hire in the offer letter.</li>
+        <li><strong>Mid-period exit.</strong> Prorate the same way. Add accrued, unused vacation where state law or policy requires payout (California, Colorado, Illinois, Massachusetts, Montana, Nebraska, North Dakota, Rhode Island after one year, Louisiana and others), and watch the final-pay deadline in the next section. Do not withhold the final check for unreturned equipment except where a signed authorization and state law allow it.</li>
+        <li><strong>Unpaid leave.</strong> For exempt staff, dock only in the permitted cases and only for full days (except FMLA). For non-exempt staff, pay hours worked. If the leave spans a whole workweek with no work at all, the whole week may be unpaid for exempt staff too.</li>
+        <li><strong>Mid-period raise.</strong> Pay the old rate for days before the effective date and the new rate after, both prorated by the same method; the calculator does this. Many employers avoid the split by making raises effective on the first day of a pay period. If the raise is retroactive to a date in an earlier period, that is <a href="/blogs/retro-pay-calculator">retro pay</a>, and overtime in those earlier weeks must be recalculated for non-exempt employees.</li>
+        <li><strong>Schedule change from full to part time.</strong> Reduce the salary prospectively from the effective date and prorate the transition period. A reduction in salary tied to a reduced schedule is permitted if it is a bona fide change, not a week-to-week response to workload.</li>
+        <li><strong>Holiday in a partial first week.</strong> If the holiday falls after the start date and the policy pays holidays from day one, pay it; if the policy requires employment on the day before and after, a Tuesday start after a Monday holiday earns no holiday pay. State it in the policy.</li>
+      </ul>
+
+      <h2 id="semimonthly">Semi-monthly and monthly schedules</h2>
+      <p>Semi-monthly periods (1st to 15th, 16th to end of month) contain between 10 and 12 working days, so the working-days method produces a different daily value in almost every period: $3,250 / 10 = $325, / 11 = $295.45, / 12 = $270.83. Employees notice when the same two-day absence costs $650 in one month and $541.67 in another. Three ways to handle it:</p>
+      <ol>
+        <li><strong>Use the annual daily rate</strong> (salary / 260) for all deductions and partial periods. Consistent, easy to explain, and the small annual drift is immaterial. 2026 has 261 weekdays, 2027 has 260; neither is wrong as a divisor as long as the policy names it.</li>
+        <li><strong>Use calendar days</strong>, which is what most monthly payrolls do. A $6,500 monthly salary prorated for a start on the 20th of a 30-day month is $6,500 x 11 / 30 = $2,383.33. It pays weekends, which is fine because the salary covers them anyway.</li>
+        <li><strong>Keep working days but define a standard period</strong> of 86.67 hours (2,080 / 24) and deduct hours at salary / 2,080. This is the method most payroll systems default to for semi-monthly salaried staff.</li>
+      </ol>
+      <p>For the full list of which states allow which frequencies for which employees, see <a href="/blogs/pay-frequency-laws-by-state">pay frequency laws by state</a>; several states that permit semi-monthly pay for exempt staff require more frequent pay for hourly workers.</p>
+
+      <h2 id="final">Final pay deadlines</h2>
+      <p>The prorated final check has a deadline that varies by state and by whether the employee quit or was dismissed. California requires immediate payment on termination and within 72 hours of a resignation without notice, with waiting-time penalties of a day's wages per day late up to 30 days under Labor Code 203. Colorado requires payment immediately on termination (or within 6 hours of the start of the next business day if payroll is off-site). Massachusetts requires payment on the day of discharge. Many states, including Texas (6 days after discharge) and New York (next regular payday), allow more time. Federal law sets no deadline beyond the next regular payday. The <a href="/blogs/final-paycheck-laws-by-state">final paycheck laws by state</a> table has every jurisdiction; the point here is that a prorating dispute is not a reason to hold the check. Pay the undisputed amount on time and correct any difference afterward.</p>
+
+      <h2 id="policy">Policy language that settles it</h2>
+      <p>A short paragraph in the compensation policy or handbook prevents most arguments. It should state: (1) the proration method, for example "Partial pay periods for salaried employees are calculated by dividing the annual salary by 260 to obtain a daily rate and multiplying by the number of scheduled workdays paid"; (2) that exempt employees' salaries are reduced only as permitted by 29 CFR 541.602, with the safe-harbor complaint procedure; (3) how partial-day absences are handled (charged to PTO, salary unaffected); (4) the effective-date convention for raises and schedule changes; and (5) that holidays and paid leave in a partial period follow the same proration. Offer letters should repeat the first-paycheck proration method so the new hire's expectations match the check.</p>
+
+      <h2 id="examples">Worked examples</h2>
+      <p><strong>Example 1: new hire, biweekly.</strong> Salary $78,000, biweekly period pay $3,000, period has 10 working days, employee started Wednesday of the first week and worked 8 days. Working-days method: $3,000 x 8 / 10 = $2,400. Calendar-days method: started day 3 of 14, employed 12 days: $3,000 x 12 / 14 = $2,571.43. Annual daily rate: $300 x 8 = $2,400. Permitted deduction under 541.602(b)(6).</p>
+      <p><strong>Example 2: three personal days, exempt, semi-monthly.</strong> Salary $96,000, semi-monthly $4,000, period has 11 working days, PTO exhausted, three full days off for a family matter. Working-days method: $4,000 x 8 / 11 = $2,909.09 (deduction $1,090.91). Annual daily rate: $96,000 / 260 = $369.23 a day, deduction $1,107.69, pay $2,892.31. Permitted under 541.602(b)(1) because the absences were full days. Had one of the three been a half day, the salary for that day could not be reduced.</p>
+      <p><strong>Example 3: office closed for a storm.</strong> The same employee missed two days because the building was shut. No deduction from salary is permitted because the employee was ready to work and the employer lacked work; the employer may require the use of PTO for the closure days, but if the PTO bank is empty the salary is still paid in full. The calculator's exempt check returns the full $4,000.</p>
+      <p><strong>Example 4: raise effective mid-period.</strong> Salary $60,000 rising to $66,000 effective day 6 of a 10-working-day biweekly period. Old rate: $2,307.69 x 5 / 10 = $1,153.85. New rate: $2,538.46 x 5 / 10 = $1,269.23. Period pay $2,423.08. If the employee is non-exempt and worked overtime in a week straddling the change, the regular rate for that week is the blended rate, not the new salary.</p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Three methods are common: period salary x (working days paid / working days in the period), period salary x (calendar days / calendar days), or an annual daily rate (salary / 260) or hourly rate (salary / 2,080) times days or hours paid. Pick one, write it in the policy and use it for starts, exits, leave and raises alike.</li>
+        <li>Exempt employees' salaries may be reduced only in the cases listed in 29 CFR 541.602(b): first and last weeks, full-day personal absences, full-day sickness under a bona fide sick plan, unpaid FMLA leave in any increment, safety-rule penalties, and full-day disciplinary suspensions under a written policy.</li>
+        <li>Partial-day absences, employer closures, lack of work and jury duty cannot reduce an exempt salary; partial days may be charged to a leave bank instead, and jury fees may be offset.</li>
+        <li>Semi-monthly periods have 10 to 12 working days, so the working-days method makes the same absence cost different amounts in different months; an annual daily rate or calendar days avoids the inconsistency.</li>
+        <li>A mid-period raise is paid as days at the old rate plus days at the new rate; make raises effective on the first day of a period to avoid the split, and recalculate overtime if a raise is retroactive.</li>
+        <li>Final prorated pay is due immediately in California (72 hours after a resignation without notice), on the day of discharge in Massachusetts, and by deadlines that vary elsewhere; a proration dispute is not a reason to hold the check.</li>
+        <li>Adopt the 541.603(d) safe-harbor language: a written policy against improper deductions, a complaint channel and prompt reimbursement preserve the exemption if a mistake happens.</li>
+      </ul>
+      <!-- wih:inline-subscribe -->
+      <aside class="inline-subscribe" aria-labelledby="inline-subscribe-title">
+        <p class="eyebrow">Free weekly brief</p>
+        <h2 id="inline-subscribe-title">Get the next guide before it is published</h2>
+        <p>One email a week on productivity, time tracking, and fair measurement. No spam, unsubscribe anytime.</p>
+        <form class="subscribe-form" method="post" novalidate>
+          <label class="visually-hidden" for="inline-email">Email address</label>
+          <input type="email" id="inline-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="hr">
+          <input type="hidden" name="embed" value="1">
+          <div class="hp" aria-hidden="true">
+            <label for="inline-website">Leave this field empty</label>
+            <input type="text" id="inline-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-status" role="status" aria-live="polite"></p>
+      </aside>
+<!-- /wih:inline-subscribe -->
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you calculate a prorated salary?</summary>
+          <p>Take the salary for one pay period and multiply by the fraction of the period the employee is being paid for: working days paid divided by working days in the period, or calendar days employed divided by calendar days in the period. Alternatively, divide the annual salary by 260 for a daily rate or by 2,080 for an hourly rate and multiply by the days or hours paid. On $78,000 paid biweekly, six of ten working days is $1,800.</p>
+        </details>
+        <details>
+          <summary>Can you prorate an exempt employee's salary?</summary>
+          <p>Only in the situations listed in 29 CFR 541.602(b): the first and last weeks of employment, full-day absences for personal reasons, full-day sickness under a bona fide sick-pay plan, unpaid FMLA leave, safety-rule penalties and full-day disciplinary suspensions. Deductions for partial days, lack of work, closures or jury duty are not permitted and can destroy the exemption.</p>
+        </details>
+        <details>
+          <summary>How is a prorated salary calculated for a new hire?</summary>
+          <p>Pay a proportionate part of the period salary for the days worked. If someone starts on Wednesday of a biweekly period with 10 working days and works 8 of them, pay 8/10 of the period salary. The FLSA expressly allows this proportional payment in the first week of employment.</p>
+        </details>
+        <details>
+          <summary>What is the daily rate for a salaried employee?</summary>
+          <p>Most employers use annual salary divided by 260 (52 weeks x 5 days); $78,000 gives $300 a day. Some divide the period salary by the working days in that specific period, which varies between 10 and 12 for semi-monthly payroll. The hourly equivalent is salary divided by 2,080.</p>
+        </details>
+        <details>
+          <summary>How do you prorate salary for unpaid leave?</summary>
+          <p>For non-exempt employees, pay only the hours worked. For exempt employees, deduct only for full days of absence in the permitted categories, using the daily rate in the policy; unpaid FMLA leave may be deducted in any increment, including hours. Partial-day absences outside FMLA cannot reduce salary but may be charged to a leave bank.</p>
+        </details>
+        <details>
+          <summary>How do you prorate a salary increase that starts mid-pay period?</summary>
+          <p>Pay the days before the effective date at the old period salary rate and the days after at the new rate, both prorated by the same method. Many employers make raises effective on the first day of a pay period to avoid the split. A raise backdated into earlier periods is retro pay.</p>
+        </details>
+        <details>
+          <summary>Is prorating by calendar days or working days better?</summary>
+          <p>Working days match how employees think about a week and are standard for biweekly payroll; calendar days are simpler for monthly payroll. The annual daily rate (salary / 260) is the most consistent because it never changes with the length of the period. Any method is lawful if applied consistently and disclosed.</p>
+        </details>
+        <details>
+          <summary>Can an employer dock pay when the office closes for weather?</summary>
+          <p>Not for an exempt employee who worked any part of that week; the full salary is due because the absence was caused by the employer. The employer may require PTO to be used for the closure, but must pay the salary even if the bank is empty. Non-exempt employees need only be paid for hours worked, subject to state reporting-time pay rules.</p>
+        </details>
+      </section>
+
+      <!-- wih:author-box -->
+      <aside class="author-box">
+        <span class="avatar" aria-hidden="true">P</span>
+        <div>
+          <p class="author-box__name"><a href="/authors/pavan">Pavan</a> <span class="author-box__role">Editor, WorkIntel Hub</span></p>
+          <p class="author-box__bio">Pavan is the editor of WorkIntel Hub, covering employee productivity, time tracking, workforce monitoring and HR compliance for the managers who have to act on them. Pavan writes the site's guides, builds its calculators and document generators, and checks every statistic and statute against its primary source before it is published.</p>
+          <p class="author-box__links"><a href="https://www.linkedin.com/in/telugu-durga-sai/" target="_blank" rel="noopener me">LinkedIn</a> &middot; <a href="/authors/pavan">All articles by Pavan</a></p>
+        </div>
+      </aside>
+<!-- /wih:author-box -->
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/salary-to-hourly-calculator">Salary to Hourly Calculator</a></li>
+          <li><a href="/blogs/pay-frequency-laws-by-state">Pay Frequency Laws by State</a></li>
+          <li><a href="/blogs/final-paycheck-laws-by-state">Final Paycheck Laws by State</a></li>
+          <li><a href="/blogs/payroll-calendar-2027">Payroll Calendar 2027</a></li>
+          <li><a href="/blogs/retro-pay-calculator">Retro Pay Calculator</a></li>
+          <li><a href="/blogs/pay-raise-calculator">Pay Raise Calculator</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+<!-- /BUILD:footer -->
+
+<script>
+  (function () {
+    var forms = document.querySelectorAll("form.subscribe-form");
+    if (!forms.length) return;
+    forms.forEach(function (form) {
+      var status = form.parentNode.querySelector(".subscribe-status");
+      var button = form.querySelector("button");
+      var input = form.querySelector("input[type=email]");
+      var tag = form.querySelector("input[name=tag]");
+      var label = button ? button.textContent : "Subscribe";
+      function say(msg, ok) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = "subscribe-status" + (ok === true ? " is-ok" : ok === false ? " is-error" : "");
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email || email.indexOf("@") < 1 || email.indexOf(".") < 0) {
+          say("Please enter a valid email address.", false); input.focus(); return;
+        }
+        if (button) { button.disabled = true; button.textContent = "Subscribing..."; }
+        say("");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ email: email, website: form.website ? form.website.value : "", tag: tag ? tag.value : "" })
+        }).then(function (r) {
+          if (r.ok) {
+            say("Thanks. You are on the list.", true); form.reset();
+            if (typeof gtag === "function") gtag("event", "subscribe", { method: "buttondown", tag: tag ? tag.value : "" });
+            return;
+          }
+          if (r.status === 404 || r.status === 503) { fallback(); return; }
+          return r.json().then(function (j) { say(j && j.error === "invalid_email" ? "That email address does not look right." : "Something went wrong. Please try again.", false); });
+        }).catch(fallback).finally(function () {
+          if (button) { button.disabled = false; button.textContent = label; }
+        });
+        function fallback() {
+          // Pages Function not deployed: post the form straight to Buttondown instead.
+          if (form.getAttribute("action") && form.getAttribute("action").indexOf("[[") < 0) {
+            form.dataset.native = "1";
+            HTMLFormElement.prototype.submit.call(form);
+          } else {
+            say("Something went wrong. Please try again.", false);
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
