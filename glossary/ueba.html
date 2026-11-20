@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UEBA: User and Entity Behavior Analytics Explained</title>
+  <meta name="description" content="What user and entity behavior analytics is, how baselines and risk scores work, the data it uses, how it differs from DLP and SIEM, and its privacy questions." />
+  <link rel="canonical" href="https://workintelhub.com/glossary/ueba" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/glossary/ueba" />
+  <meta property="og:title" content="User and Entity Behavior Analytics (UEBA)" />
+  <meta property="og:description" content="What user and entity behavior analytics is, how baselines and risk scores work, the data it uses, how it differs from DLP and SIEM, and its privacy questions." />
+  <meta property="og:image" content="https://workintelhub.com/images/glossary/ueba.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-20T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-20T00:00:00+00:00" />
+  <meta property="article:section" content="Employee Monitoring" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="User and Entity Behavior Analytics (UEBA)" />
+  <meta name="twitter:description" content="What user and entity behavior analytics is, how baselines and risk scores work, the data it uses, how it differs from DLP and SIEM, and its privacy questions." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/glossary/ueba.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://workintelhub.com/#organization",
+        "sameAs": [
+          "https://www.linkedin.com/company/workintelhub/"
+        ],
+        "name": "WorkIntel Hub",
+        "url": "https://workintelhub.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://workintelhub.com/images/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      },
+      {
+        "@type": "DefinedTermSet",
+        "@id": "https://workintelhub.com/glossary/#termset",
+        "name": "WorkIntel Hub glossary",
+        "url": "https://workintelhub.com/glossary/"
+      },
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://workintelhub.com/glossary/ueba#term",
+        "name": "User and entity behavior analytics",
+        "description": "User and entity behavior analytics (UEBA) is security software that learns the normal patterns of activity for each user and for entities such as devices, servers and service accounts, and flags deviations, such as unusual logins, data access or file transfers, that may indicate a compromised account or an insider threat.",
+        "url": "https://workintelhub.com/glossary/ueba",
+        "inDefinedTermSet": {
+          "@id": "https://workintelhub.com/glossary/#termset"
+        }
+      },
+      {
+        "@type": "Article",
+        "@id": "https://workintelhub.com/glossary/ueba#article",
+        "headline": "User and Entity Behavior Analytics (UEBA)",
+        "description": "What user and entity behavior analytics is, how baselines and risk scores work, the data it uses, how it differs from DLP and SIEM, and its privacy questions.",
+        "image": "https://workintelhub.com/images/glossary/ueba.png",
+        "datePublished": "2026-11-20T00:00:00+00:00",
+        "dateModified": "2026-11-20T00:00:00+00:00",
+        "author": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://workintelhub.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://workintelhub.com/glossary/ueba"
+        },
+        "articleSection": "Employee Monitoring",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://workintelhub.com/glossary/ueba#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://workintelhub.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Glossary",
+            "item": "https://workintelhub.com/glossary/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "User and Entity Behavior Analytics (UEBA)"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://workintelhub.com/glossary/ueba#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is UEBA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "User and entity behavior analytics: security software that establishes what normal activity looks like for each user and for devices and accounts, then alerts on unusual behavior such as logins at odd times or places, unusual data access or large transfers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between UBA and UEBA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "User behavior analytics (UBA) profiled people. UEBA, the term Gartner adopted in the mid-2010s, extends the same analysis to entities such as devices, servers, applications and service accounts, which matters because attackers often use non-human accounts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does UEBA detect insider threats?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By comparing current activity with each person's baseline and their peers'. A user who suddenly accesses many more files than usual, logs in from a new location, or moves data after giving notice raises a risk score that an analyst investigates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is UEBA the same as employee monitoring?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a form of monitoring focused on security: it analyzes account and system activity rather than productivity, and usually metadata rather than content. It is still covered by monitoring notice laws and, for UK and EU staff, data protection rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between UEBA and SIEM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A SIEM collects and correlates logs from across systems using rules. UEBA applies behavioral baselines and machine learning to find anomalies that rules miss. Many SIEM platforms now include UEBA features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a UEBA alert be used to discipline an employee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It should start an investigation, not end one. Anomalies have innocent explanations, such as a new project or travel, so a person should review the evidence before any action, and HR data used in scoring should not penalize protected activity such as medical leave."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/glossary/">&larr; Back to the glossary</a>
+      <span class="tag">Employee Monitoring</span>
+      <h1>User and Entity Behavior Analytics (UEBA)</h1>
+
+      <div class="byline">
+        <span class="avatar">WH</span>
+        <span>
+          <span class="who">The WorkIntel Hub editorial team</span><br />
+          <span class="when">November 20, 2026 &middot; 6 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/glossary/ueba.png" alt="A line of normal login activity with one spike at 3 a.m. highlighted as an anomaly" width="1200" height="630" />
+      </figure>
+
+      <p>
+        <strong>User and entity behavior analytics (UEBA) is security software that learns the normal patterns of activity for each user and for entities such as devices, servers and service accounts, and flags deviations, such as unusual logins, data access or file transfers, that may indicate a compromised account or an insider threat.</strong>
+      </p>
+      <p>
+        Where rule-based tools ask whether an event breaks a policy, UEBA asks whether it is unusual for this person or device. A finance analyst downloading 40,000 records at 3 a.m., a service account logging in from a new country, or an engineer suddenly accessing repositories outside their project are the classic alerts. The category was named by Gartner in the mid-2010s, extending earlier user behavior analytics to cover non-human entities.
+      </p>
+      <p>
+        UEBA is now usually a feature of security information and event management (SIEM), extended detection and response and insider-risk platforms rather than a separate product. Exabeam's 2025 survey found only 44% of security teams used it, despite 88% having insider-risk programs.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#how">How UEBA works</a></li>
+          <li><a href="#data">What data it uses</a></li>
+          <li><a href="#compare">UEBA, DLP and SIEM</a></li>
+          <li><a href="#privacy">Privacy and fairness questions</a></li>
+          <li><a href="#key-takeaways">Key points</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="how">How UEBA works</h2>
+      <ol>
+        <li><strong>Collect</strong> logs from identity systems, endpoints, network, cloud apps, HR systems and DLP.</li>
+        <li><strong>Baseline</strong> each user and entity over weeks: usual login times and places, systems accessed, data volumes, peers' behavior.</li>
+        <li><strong>Score</strong> deviations, weighting them by the sensitivity of the asset and context such as a recent resignation or role change.</li>
+        <li><strong>Aggregate</strong> related anomalies into a risk score or a timeline for an analyst, rather than raising each event separately.</li>
+        <li><strong>Respond</strong>: an analyst investigates; some platforms can automatically force re-authentication or suspend sessions.</li>
+      </ol>
+
+      <h2 id="data">What data it uses</h2>
+      <p>Typical inputs are authentication logs (logins, failures, MFA prompts, locations), access logs for files, databases and SaaS apps, endpoint telemetry (processes, USB, printing), network flows, email metadata, DLP alerts, and HR context such as department, manager, start date and notice of resignation. It generally analyzes metadata and patterns rather than the content of communications, though some insider-risk products add content inspection or screenshots.</p>
+
+      <h2 id="compare">UEBA, DLP and SIEM</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Tool</th><th>Question it answers</th><th>Strength</th><th>Weakness</th></tr></thead>
+          <tbody>
+            <tr><td>SIEM</td><td>What happened across all systems?</td><td>Central log collection, correlation rules, compliance reporting</td><td>Rules miss novel behavior; alert volume</td></tr>
+            <tr><td><a href="/glossary/data-loss-prevention">DLP</a></td><td>Is sensitive data going somewhere it should not?</td><td>Precise control over defined data</td><td>Blind to misuse that does not match a rule</td></tr>
+            <tr><td>UEBA</td><td>Is this behavior unusual for this user or device?</td><td>Finds compromised accounts and subtle insider activity</td><td>Needs good baselines; false positives when roles change</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Insider-threat programs typically combine all three; see <a href="/blogs/insider-threat-statistics">insider threat statistics</a> for how detection speed affects cost.</p>
+
+      <h2 id="privacy">Privacy and fairness questions</h2>
+      <ul>
+        <li><strong>Proportionality</strong>: UEBA profiles every user continuously. Under UK and EU law that needs a lawful basis, a data protection impact assessment and a notice; in the US, Connecticut, Delaware and New York require notice of electronic monitoring.</li>
+        <li><strong>HR data</strong>: feeding resignation notices, performance plans or leave status into risk scores can treat protected activity, such as medical leave, as a risk signal. Limit HR inputs to what is necessary and review them.</li>
+        <li><strong>Human review</strong>: a risk score is a lead, not evidence. Discipline should follow investigation by a person; see <a href="/glossary/human-in-the-loop">human in the loop</a>.</li>
+        <li><strong>Transparency</strong>: tell employees, in the monitoring policy, that security analytics run on account activity and what triggers investigation; see <a href="/blogs/user-activity-monitoring">user activity monitoring</a>.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key points</h2>
+      <ul>
+        <li>UEBA learns normal behavior for each user and entity (devices, servers, service accounts) and flags deviations that may indicate compromised accounts or insider threats.</li>
+        <li>It works by collecting logs, building baselines, scoring deviations by asset sensitivity and context, and aggregating anomalies into risk scores for analysts.</li>
+        <li>Inputs are mostly metadata: logins, access, endpoint, network, DLP alerts and some HR context, rather than message content.</li>
+        <li>UEBA complements SIEM (central logs and rules) and DLP (defined data controls); only 44% of security teams used it in 2025 (Exabeam).</li>
+        <li>Continuous profiling raises proportionality and notice obligations, HR inputs can encode protected activity, and risk scores should prompt investigation, not discipline.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is UEBA?</summary>
+          <p>User and entity behavior analytics: security software that establishes what normal activity looks like for each user and for devices and accounts, then alerts on unusual behavior such as logins at odd times or places, unusual data access or large transfers.</p>
+        </details>
+        <details>
+          <summary>What is the difference between UBA and UEBA?</summary>
+          <p>User behavior analytics (UBA) profiled people. UEBA, the term Gartner adopted in the mid-2010s, extends the same analysis to entities such as devices, servers, applications and service accounts, which matters because attackers often use non-human accounts.</p>
+        </details>
+        <details>
+          <summary>How does UEBA detect insider threats?</summary>
+          <p>By comparing current activity with each person's baseline and their peers'. A user who suddenly accesses many more files than usual, logs in from a new location, or moves data after giving notice raises a risk score that an analyst investigates.</p>
+        </details>
+        <details>
+          <summary>Is UEBA the same as employee monitoring?</summary>
+          <p>It is a form of monitoring focused on security: it analyzes account and system activity rather than productivity, and usually metadata rather than content. It is still covered by monitoring notice laws and, for UK and EU staff, data protection rules.</p>
+        </details>
+        <details>
+          <summary>What is the difference between UEBA and SIEM?</summary>
+          <p>A SIEM collects and correlates logs from across systems using rules. UEBA applies behavioral baselines and machine learning to find anomalies that rules miss. Many SIEM platforms now include UEBA features.</p>
+        </details>
+        <details>
+          <summary>Can a UEBA alert be used to discipline an employee?</summary>
+          <p>It should start an investigation, not end one. Anomalies have innocent explanations, such as a new project or travel, so a person should review the evidence before any action, and HR data used in scoring should not penalize protected activity such as medical leave.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/blogs/insider-threat-statistics">Insider Threat Statistics</a></li>
+          <li><a href="/blogs/user-activity-monitoring">User Activity Monitoring</a></li>
+          <li><a href="/tools/activtrak-vs-teramind">ActivTrak vs Teramind</a></li>
+          <li><a href="/glossary/data-loss-prevention">Data Loss Prevention (DLP)</a></li>
+          <li><a href="/glossary/human-in-the-loop">Human in the Loop</a></li>
+          <li><a href="/blogs/employee-monitoring-laws-by-state">Employee Monitoring Laws by State</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/glossary/">&larr; Back to the glossary</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

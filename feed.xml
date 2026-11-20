@@ -5,7 +5,7 @@
     <link>https://workintelhub.com/</link>
     <description>Practical guides on employee productivity, time tracking, time management, and employee monitoring.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://workintelhub.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://workintelhub.com/images/logo.png</url>
@@ -13,6 +13,76 @@
       <link>https://workintelhub.com/</link>
     </image>
 
+    <item>
+      <title>Geofencing</title>
+      <link>https://workintelhub.com/glossary/geofencing</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/geofencing</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Geofencing is the use of a virtual boundary around a real location, defined by GPS coordinates, Wi-Fi networks or Bluetooth beacons, so that software can trigger an action when a device enters or leaves it, such as allowing an employee to clock in only on site.</description>
+    </item>
+    <item>
+      <title>User and Entity Behavior Analytics (UEBA)</title>
+      <link>https://workintelhub.com/glossary/ueba</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/ueba</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>User and entity behavior analytics (UEBA) is security software that learns the normal patterns of activity for each user and for entities such as devices, servers and service accounts, and flags deviations, such as unusual logins, data access or file transfers, that may indicate a compromised account or an insider threat.</description>
+    </item>
+    <item>
+      <title>Data Loss Prevention (DLP)</title>
+      <link>https://workintelhub.com/glossary/data-loss-prevention</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/data-loss-prevention</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Data loss prevention (DLP) is a set of tools and policies that identify sensitive data, such as customer records, health information, payment card numbers or source code, and detect or block its movement to places it should not go, such as personal email, USB drives, unapproved cloud storage or AI tools.</description>
+    </item>
+    <item>
+      <title>Human in the Loop</title>
+      <link>https://workintelhub.com/glossary/human-in-the-loop</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/human-in-the-loop</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Human in the loop (HITL) is a design in which an AI system&#x27;s recommendation does not take effect until a person reviews it and makes the final decision, with the authority, information and time to override the system.</description>
+    </item>
+    <item>
+      <title>Algorithmic Management</title>
+      <link>https://workintelhub.com/glossary/algorithmic-management</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/algorithmic-management</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Algorithmic management is the use of software, often driven by data and AI, to perform functions traditionally done by human managers: assigning work, setting pace, monitoring performance, rating workers and deciding on pay, discipline or dismissal.</description>
+    </item>
+    <item>
+      <title>Shadow AI</title>
+      <link>https://workintelhub.com/glossary/shadow-ai</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/shadow-ai</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Shadow AI is the use of artificial intelligence tools, such as public chatbots, AI browser extensions and AI features in personal apps, for work without the knowledge, approval or governance of the employer.</description>
+    </item>
+    <item>
+      <title>Cost-of-Living Adjustment (COLA)</title>
+      <link>https://workintelhub.com/glossary/cost-of-living-adjustment</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/cost-of-living-adjustment</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>A cost-of-living adjustment, or COLA, is an increase in pay or benefits intended to offset inflation, usually set as a percentage tied to a price index such as the Consumer Price Index, and given to everyone covered regardless of individual performance.</description>
+    </item>
+    <item>
+      <title>Pay Compression</title>
+      <link>https://workintelhub.com/glossary/pay-compression</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/pay-compression</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Pay compression is a narrowing of the pay difference between employees with different levels of experience, skill or responsibility, typically when new hires are paid close to, or more than, long-serving staff or their supervisors.</description>
+    </item>
+    <item>
+      <title>Salary Band</title>
+      <link>https://workintelhub.com/glossary/salary-band</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/salary-band</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>A salary band, also called a pay range or pay grade, is the span of base pay an organization will pay for a job or group of similar jobs, defined by a minimum, a midpoint and a maximum.</description>
+    </item>
+    <item>
+      <title>Regular Rate of Pay</title>
+      <link>https://workintelhub.com/glossary/regular-rate-of-pay</link>
+      <guid isPermaLink="true">https://workintelhub.com/glossary/regular-rate-of-pay</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description>The regular rate of pay is the hourly rate, including most bonuses, commissions and premiums, on which a non-exempt employee&#x27;s overtime must be calculated under the Fair Labor Standards Act; it is total includable pay for the workweek divided by total hours worked.</description>
+    </item>
     <item>
       <title>PTO Policy Template: Accrual, Carryover, Payout, State Law</title>
       <link>https://workintelhub.com/blogs/pto-policy-template</link>
