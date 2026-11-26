@@ -249,7 +249,7 @@
           <div><label for="hw-out">End time</label><input id="hw-out" type="time" value="17:22"></div>
           <div><label for="hw-br">Unpaid break (minutes)</label><input id="hw-br" type="number" min="0" step="1" value="30"></div>
         </div>
-        <div class="calc__out" id="hw-out"></div>
+        <div class="calc__out" id="hw-result"></div>
       </div>
       <script>
       (function () {
@@ -258,7 +258,7 @@
         function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
         function calc() {
           var a = mins(el("hw-in").value), b = mins(el("hw-out").value), br = parseFloat(el("hw-br").value) || 0;
-          if (a === null || b === null) { el("hw-out").innerHTML = ""; return; }
+          if (a === null || b === null) { el("hw-result").innerHTML = ""; return; }
           if (b <= a) b += 1440;
           var gross = b - a, net = Math.max(0, gross - br);
           var h = Math.floor(net / 60), m = net % 60, dec = net / 60;
@@ -269,7 +269,7 @@
           html += row("As a decimal (minutes &divide; 60)", dec.toFixed(2) + " hours");
           html += row("Rounded to nearest tenth", (Math.round(dec * 10) / 10).toFixed(1) + " hours");
           html += row("Rounded to nearest quarter", (Math.round(dec * 4) / 4).toFixed(2) + " hours");
-          el("hw-out").innerHTML = html;
+          el("hw-result").innerHTML = html;
         }
         ["hw-in", "hw-out", "hw-br"].forEach(function (id) { el(id).addEventListener("input", calc); });
         calc();
@@ -350,6 +350,8 @@
         automatic 30-minute deduction on the second row would underpay by half an hour, and
         deducting the rest breaks on the third row would underpay by another half hour. Over a
         year, for a full-time employee, that is roughly 250 hours.
+        Recording meal breaks as punches rather than an automatic deduction avoids the first error, and the
+        <a href="/tools/best-clock-in-clock-out-apps">clock in and out apps we compared</a> differ in whether they enforce, calculate or only record breaks.
       </p>
       <h2 id="weekly">From a day to a week to a pay check</h2>
       <p>

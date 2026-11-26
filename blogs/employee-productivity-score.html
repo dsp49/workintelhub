@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Productivity Score: How It Is Calculated</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="A productivity score is usually productive active time divided by a total. How it is built from productive, neutral and unproductive time, and what it misses." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/employee-productivity-score" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/employee-productivity-score" />
+  <meta property="og:title" content="Employee Productivity Score: How It Is Calculated" />
+  <meta property="og:description" content="A productivity score is usually productive active time divided by a total. How it is built from productive, neutral and unproductive time, and what it misses." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/employee-productivity-score.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Employee Productivity Score: How It Is Calculated" />
+  <meta name="twitter:description" content="A productivity score is usually productive active time divided by a total. How it is built from productive, neutral and unproductive time, and what it misses." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/employee-productivity-score.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/employee-productivity-score#article",
+      "headline": "Employee Productivity Score: How It Is Calculated",
+      "description": "A productivity score is usually productive active time divided by a total. How it is built from productive, neutral and unproductive time, and what it misses.",
+      "image": "https://workintelhub.com/images/blog/employee-productivity-score.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/employee-productivity-score"
+      },
+      "articleSection": "Productivity",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/employee-productivity-score#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Productivity",
+          "item": "https://workintelhub.com/topics/productivity"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Employee Productivity Score: How It Is Calculated"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/employee-productivity-score#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is an employee productivity score calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most tools total your active time in apps and websites labeled productive for your role and divide it by a total, either all active time, active time excluding neutral apps, or scheduled hours. The result is shown as a percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good productivity score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no universal benchmark, because each tool and each classification list produces different numbers for the same day. Compare a person with their own baseline over several weeks, not with a colleague or another company."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does neutral time lower my productivity score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the formula. If the score divides by all active time, neutral time lowers it. If neutral time is excluded from the denominator, it has no effect. Large neutral totals usually mean the app list is incomplete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do meetings count in a productivity score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not well. Meetings with little typing fall below the idle threshold and are excluded. Some tools, such as ActivTrak, count offline meeting time and read calendars; most treat a meeting as idle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a productivity score the same as an activity level?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A productivity score depends on which apps you used and how they are labeled. An activity level, as in Hubstaff, is the share of tracked seconds with any keyboard or mouse input, whatever the app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should productivity scores be used for performance reviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not on their own. The score measures activity in approved tools, not output or quality. Use it as a conversation starter about workload and focus, and base performance decisions on results."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Employee Productivity Score: How It Is Calculated</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 7 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/employee-productivity-score.png" alt="A gauge reading 68 percent built from three stacked bars labeled productive, neutral and unproductive" width="1200" height="630" />
+      </figure>
+
+<p>
+        An employee productivity score in monitoring software is usually your productive active time
+        divided by some total, shown as a percentage. Productive time is time with keyboard or mouse input
+        in apps and sites your employer has labeled productive for your role; the total is either all
+        active time, active time excluding neutral apps, or your scheduled hours.
+      </p>
+      <p>
+        That choice of denominator can move the same day's score by twenty points or more, and none of the
+        versions sees work done away from the keyboard. This page shows how the score is built, the four
+        scoring methods tools use, a calculator that runs one day through three formulas, and what a score
+        you can defend looks like.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#inputs">The three inputs behind every score</a></li>
+          <li><a href="#methods">The four scoring methods</a></li>
+          <li><a href="#calculator">Productivity score calculator</a></li>
+          <li><a href="#two-people">Worked example: two people, one week</a></li>
+          <li><a href="#misses">What the score misses</a></li>
+          <li><a href="#defensible">A score you can defend</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>The numerator is productive active time.</strong> Time in apps labeled productive for your role, while you were touching the keyboard or mouse.</p>
+        <p><strong>The denominator is a design choice.</strong> All active time, active time without neutral apps, or scheduled hours each give a different score for the same day.</p>
+        <p><strong>The score measures activity, not output.</strong> Meetings, calls, reading and thinking mostly fall out as idle or neutral, so knowledge work scores low by design.</p>
+      </div>
+      <h2 id="inputs">The three inputs behind every score</h2>
+<p>
+        Every tool in our <a href="/tools/best-productivity-monitoring-software">review of productivity monitoring software</a>
+        builds its score from the same three inputs.
+      </p>
+      <ol class="steps">
+        <li><strong>Which app or site was in the foreground.</strong> The agent logs the application name and, for browsers, the site.</li>
+        <li><strong>Whether you were active.</strong> Keyboard or mouse input within a timeout. Past the <a href="/blogs/idle-time-tracking">idle threshold</a>, the time is idle and usually excluded.</li>
+        <li><strong>How that app is classified for your role.</strong> Productive, unproductive, or neutral (some tools say undefined). The <a href="/blogs/productive-vs-unproductive-apps">classification of productive and unproductive apps</a> is set by your employer, per team.</li>
+      </ol>
+      <p>
+        Active time is then split into the three buckets. Productive time goes on top. What goes underneath
+        is where tools, and your employer's settings, differ.
+      </p>
+      <h2 id="methods">The four scoring methods</h2>
+<p>
+        Our comparison groups the tools into four methods. Many tools combine more than one.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Method</th><th>How the number is built</th><th>Rewards</th><th>Tools</th></tr></thead>
+          <tbody>
+            <tr><td>Classification</td><td>Active time in apps and sites classed productive, neutral or unproductive per role</td><td>Time in approved tools</td><td>DeskTime, Time Champ, WorkTime, Insightful, ActivTrak, Time Doctor, Monitask</td></tr>
+            <tr><td>Activity percentage</td><td>Share of tracked time with keyboard or mouse input</td><td>Input volume</td><td>Hubstaff, Time Doctor, Monitask</td></tr>
+            <tr><td>Utilization and focus</td><td>Productive active time against available hours, with focus blocks and meeting time separated</td><td>Sustained work and sane load</td><td>ActivTrak, Insightful</td></tr>
+            <tr><td>Attendance-weighted</td><td>Classification within the scheduled shift, with late starts and idle time</td><td>Being present and active in the shift</td><td>Time Champ, Time Doctor</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A fifth route avoids the device entirely: Prodoscore connects to Google Workspace, Microsoft 365,
+        CRMs and phone systems and derives a daily score from the volume and pattern of work in those tools.
+        The <a href="/blogs/activity-level-percentage">activity level percentage</a> has its own page,
+        because it is a different measure from a classification score even when the dashboard shows both.
+      </p>
+      <h2 id="calculator">Productivity score calculator</h2>
+<p>
+        Enter one day. The calculator runs it through three common constructions and then shows what the
+        score would be if the work the agent could not see were counted. The formulas are generic
+        illustrations of the methods above, not any vendor's exact algorithm.
+      </p>
+      <div class="calc" id="ps">
+        <div class="calc__grid">
+          <div><label for="ps-p">Productive active hours</label><input id="ps-p" type="number" min="0" step="0.25" value="4" /></div>
+          <div><label for="ps-n">Neutral or unlabeled active hours</label><input id="ps-n" type="number" min="0" step="0.25" value="1.5" /></div>
+          <div><label for="ps-u">Unproductive active hours</label><input id="ps-u" type="number" min="0" step="0.25" value="0.5" /></div>
+          <div><label for="ps-s">Scheduled hours</label><input id="ps-s" type="number" min="0" step="0.25" value="8" /></div>
+          <div><label for="ps-m">Work the agent could not see (calls, meetings, reading), hours</label><input id="ps-m" type="number" min="0" step="0.25" value="1.5" /></div>
+        </div>
+        <div class="calc__out" id="ps-out"></div>
+        <p class="calc__note">Illustrative formulas. Your tool may weight neutral time, cap the score, or use a different denominator; check its documentation.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function n(id) { return Math.max(0, parseFloat(el(id).value) || 0); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function pct(a, b) { return b > 0 ? Math.round(a / b * 100) + '%' : 'n/a'; }
+        function calc() {
+          var p = n('ps-p'), ne = n('ps-n'), u = n('ps-u'), s = n('ps-s'), m = n('ps-m');
+          var active = p + ne + u;
+          var idle = Math.max(0, s - active);
+          var html = row('Active hours tracked', active.toFixed(2) + ' of ' + s.toFixed(2) + ' scheduled');
+          html += row('Idle or untracked hours', idle.toFixed(2));
+          html += row('A. Productive / all active time', pct(p, active));
+          html += row('B. Productive / (productive + unproductive), neutral excluded', pct(p, p + u));
+          html += '<div class="calc__row calc__total"><span>C. Productive / scheduled hours (utilization)</span><span>' + pct(p, s) + '</span></div>';
+          var seen = Math.min(m, idle);
+          html += row('C again, if unseen work counted as productive', pct(p + seen, s));
+          html += row('What the score misses', seen.toFixed(2) + ' hours of work, ' + (s > 0 ? Math.round(seen / s * 100) : 0) + ' points on the utilization score');
+          if (ne > p * 0.4) html += row('Check', 'Neutral time is large; the classification list is probably incomplete');
+          el('ps-out').innerHTML = html;
+        }
+        ['ps-p', 'ps-n', 'ps-u', 'ps-s', 'ps-m'].forEach(function (id) { el(id).addEventListener('input', calc); });
+        calc();
+      })();
+      </script>
+      <p>
+        With the default inputs, the same day scores 67%, 89% or 50% depending only on the formula, and
+        the 1.5 hours of calls and reading lift the utilization score from 50% to 69% once counted. Nobody
+        did anything different. That spread is why a score from one tool cannot be compared with a score
+        from another, and why a person should be compared with their own baseline, not a colleague's.
+      </p>
+      <h2 id="two-people">Worked example: two people, one week</h2>
+<p>
+        Take two employees on the same team settings, each scheduled for 40 hours, scored as productive time
+        divided by scheduled hours.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th></th><th>Support agent</th><th>Solutions architect</th></tr></thead>
+          <tbody>
+            <tr><td>Productive active hours (ticketing tool, CRM, IDE)</td><td>30</td><td>14</td></tr>
+            <tr><td>Neutral or unlabeled active hours (documents, client portals)</td><td>3</td><td>8</td></tr>
+            <tr><td>Meetings and calls, mostly idle to the agent</td><td>4</td><td>15</td></tr>
+            <tr><td>Score: productive / scheduled</td><td>75%</td><td>35%</td></tr>
+            <tr><td>Score if meetings counted as productive</td><td>85%</td><td>73%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The figures are invented for illustration. The architect spent the week in design reviews and
+        customer calls, which is the job, and the score reads it as less than half the agent's effort. Count
+        the meetings and the gap almost closes. Label the documents properly and it may reverse. Nothing about
+        either person's effort is visible in the first row; the difference is the shape of each role. That
+        is the case for comparing a person with their own trend and never ranking across roles.
+      </p>
+      <h2 id="misses">What the score misses</h2>
+<ul>
+        <li><strong>Work away from the keyboard.</strong> Listening on a call, reading on screen, sketching on paper and thinking produce no input, so they fall out as idle before classification is applied. Most tools treat a meeting as idle; ActivTrak's offline meeting time and calendar integrations are the exception our comparison notes.</li>
+        <li><strong>Quality and outcome.</strong> An hour in the right app is an hour, whether it produced a shipped feature or nothing. The score measures time in approved tools, which is a proxy, and <a href="/blogs/why-output-metrics-fail-knowledge-teams">why output metrics fail knowledge teams</a> covers what goes wrong when the proxy becomes the target.</li>
+        <li><strong>Role differences.</strong> A support agent who lives in a ticketing tool will outscore an architect who spends the day in documents and meetings. A ranking of scores across roles is noise with a leaderboard attached.</li>
+        <li><strong>Overload.</strong> A high score can be a warning. A team at 95 percent utilization has a workload problem, not a motivation problem; <a href="/blogs/spot-burnout-in-the-data">spotting burnout in the data</a> shows what that looks like.</li>
+        <li><strong>Gaming.</strong> Every method is gameable in proportion to how directly it is rewarded. Activity percentages produce <a href="/blogs/mouse-jiggler">mouse jigglers</a>; classification produces work done in the approved application; attendance weighting produces presence.</li>
+      </ul>
+      <h2 id="defensible">A score you can defend</h2>
+<ol class="steps">
+        <li><strong>Role-specific classification, reviewed with the team.</strong> A browser is not unproductive for a researcher.</li>
+        <li><strong>Meetings and offline work counted.</strong> Use calendar integration or offline time entry if your tool has it; otherwise read the score knowing meetings are missing.</li>
+        <li><strong>Trend, not snapshot.</strong> A week against the person's own baseline, not a day against a colleague.</li>
+        <li><strong>Visible to the person.</strong> Every tool in our ranking except WorkTime offers a self-view. People who can see their own pattern fix it.</li>
+        <li><strong>Never automate a decision from it.</strong> Pay, discipline and layoffs based on activity scores are the use the research links to harm and regulators are moving on.</li>
+        <li><strong>Written into policy.</strong> Say what the score is used for and what it is not. The <a href="/blogs/employee-productivity-tracking-policy">employee productivity tracking policy</a> gives the wording.</li>
+      </ol>
+      <p>
+        If you need a broader measure than software can give, the
+        <a href="/blogs/employee-productivity-formula">employee productivity formula</a> guide works through
+        output-based formulas with examples. If you are choosing a tool, our
+        <a href="/tools/best-productivity-monitoring-software">productivity monitoring software rankings</a>
+        say which method each product uses, and the
+        <a href="/tools/best-workforce-productivity-software">workforce productivity software list</a> covers
+        planning and capacity tools beyond scoring.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>A productivity score is productive active time divided by a total: all active time, active time without neutral apps, or scheduled hours.</li>
+        <li>Productive time depends on your employer's role-based app classification and on input within the idle threshold.</li>
+        <li>The denominator alone can move the same day's score from 50% to nearly 90%, so scores from different tools are not comparable.</li>
+        <li>Tools use four methods: classification, activity percentage, utilization and focus, and attendance-weighted; Prodoscore scores from cloud-tool activity without an agent.</li>
+        <li>The score misses work away from the keyboard, quality, role differences and overload, and every method can be gamed.</li>
+        <li>Use it as a personal trend, visible to the employee, with meetings counted and no automated decisions.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How is an employee productivity score calculated?</summary>
+          <p>Most tools total your active time in apps and websites labeled productive for your role and divide it by a total, either all active time, active time excluding neutral apps, or scheduled hours. The result is shown as a percentage.</p>
+        </details>
+        <details>
+          <summary>What is a good productivity score?</summary>
+          <p>There is no universal benchmark, because each tool and each classification list produces different numbers for the same day. Compare a person with their own baseline over several weeks, not with a colleague or another company.</p>
+        </details>
+        <details>
+          <summary>Does neutral time lower my productivity score?</summary>
+          <p>It depends on the formula. If the score divides by all active time, neutral time lowers it. If neutral time is excluded from the denominator, it has no effect. Large neutral totals usually mean the app list is incomplete.</p>
+        </details>
+        <details>
+          <summary>Do meetings count in a productivity score?</summary>
+          <p>Usually not well. Meetings with little typing fall below the idle threshold and are excluded. Some tools, such as ActivTrak, count offline meeting time and read calendars; most treat a meeting as idle.</p>
+        </details>
+        <details>
+          <summary>Is a productivity score the same as an activity level?</summary>
+          <p>No. A productivity score depends on which apps you used and how they are labeled. An activity level, as in Hubstaff, is the share of tracked seconds with any keyboard or mouse input, whatever the app.</p>
+        </details>
+        <details>
+          <summary>Should productivity scores be used for performance reviews?</summary>
+          <p>Not on their own. The score measures activity in approved tools, not output or quality. Use it as a conversation starter about workload and focus, and base performance decisions on results.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-productivity-monitoring-software">Best Productivity Monitoring Software</a></li>
+          <li><a href="/blogs/productive-vs-unproductive-apps">Productive vs Unproductive Apps</a></li>
+          <li><a href="/blogs/activity-level-percentage">Activity Level Percentage</a></li>
+          <li><a href="/blogs/idle-time-tracking">Idle Time Tracking</a></li>
+          <li><a href="/blogs/employee-productivity-formula">Employee Productivity Formula</a></li>
+          <li><a href="/blogs/why-output-metrics-fail-knowledge-teams">Why Output Metrics Fail Knowledge Teams</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

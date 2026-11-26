@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On-Call Scheduling: Pay Rules and How to Run a Rotation</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="On-call time is paid under the FLSA when restrictions stop employees using it as their own. The federal rule, CA and NY call-in pay, and rotations." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/on-call-scheduling" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/on-call-scheduling" />
+  <meta property="og:title" content="On-Call Scheduling: Pay Rules and How to Run a Rotation" />
+  <meta property="og:description" content="On-call time is paid under the FLSA when restrictions stop employees using it as their own. The federal rule, CA and NY call-in pay, and rotations." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/on-call-scheduling.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="On-Call Scheduling: Pay Rules and How to Run a Rotation" />
+  <meta name="twitter:description" content="On-call time is paid under the FLSA when restrictions stop employees using it as their own. The federal rule, CA and NY call-in pay, and rotations." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/on-call-scheduling.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/on-call-scheduling#article",
+      "headline": "On-Call Scheduling: Pay Rules and How to Run a Rotation",
+      "description": "On-call time is paid under the FLSA when restrictions stop employees using it as their own. The federal rule, CA and NY call-in pay, and rotations.",
+      "image": "https://workintelhub.com/images/blog/on-call-scheduling.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/on-call-scheduling"
+      },
+      "articleSection": "Time Tracking",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/on-call-scheduling#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Time Tracking",
+          "item": "https://workintelhub.com/topics/time-tracking"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "On-Call Scheduling: Pay Rules and How to Run a Rotation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/on-call-scheduling#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do employers have to pay for on-call time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under federal law, yes if the employee must remain on the employer's premises or so close that they cannot use the time effectively for their own purposes (29 CFR 785.17). If they only have to leave word where they can be reached, the waiting is not hours worked, but the time spent responding is."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is carrying a work phone on call paid time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not automatically. The question under 785.17 is whether the employee can use the time effectively for their own purposes. Tight response times, frequent calls and location restrictions push it toward paid time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do on-call hours count toward overtime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hours worked count, so call-out time always does, and restricted on-call time does in full. Unrestricted waiting time is not hours worked and does not count."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is reporting time pay in California?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pay owed when an employee reports to work but is not put to work or gets less than half the usual or scheduled day: half the day, at least two and at most four hours, at the regular rate, with two hours for a second reporting in one day that gets under two hours of work. It does not apply to employees on paid standby."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is call-in pay in New York?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under 12 NYCRR 142-2.3, an employee covered by the Miscellaneous Industries wage order who reports for work at the employer's request or permission is paid for at least four hours, or the regularly scheduled shift if shorter, at the basic minimum hourly wage. Other industries have their own wage orders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should an on-call rotation be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A week is the most common because it is simple to track and swap. Whatever the length, keep a backup, a pool of at least four people where possible, and recovery time after night calls."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>On-Call Scheduling: Pay Rules and How to Run a Rotation</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 10 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/on-call-scheduling.png" alt="A document page with a phone icon, a weekly rotation strip and a pay rule highlighted" width="1200" height="630" />
+      </figure>
+
+<p>
+        Under federal law, on-call time is paid working time when the employee must stay on the
+        employer's premises, or so close to them, that they cannot use the time effectively for their
+        own purposes. An employee who only has to leave word where they can be reached is not working
+        while on call, but every hour spent actually responding is work and counts toward overtime.
+      </p>
+      <p>
+        States add rules of their own. California and New York both require minimum pay when an
+        employee reports for work and is sent home or given little work, which matters every time an
+        on-call employee is called in. This page sets out the federal regulation, those two state
+        rules from the official text, a weekly pay estimate, and how to run an on-call rotation people
+        will stay on. It covers nonexempt (hourly) employees and is not legal advice.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#federal">The federal rule: 29 CFR 785.15 to 785.17</a></li>
+          <li><a href="#restrictions">What pushes on-call time toward paid</a></li>
+          <li><a href="#call-outs">Pay for the call itself, and overtime</a></li>
+          <li><a href="#calculator">Weekly on-call pay estimate</a></li>
+          <li><a href="#states">State rules: California and New York</a></li>
+          <li><a href="#rotation">How to run an on-call rotation</a></li>
+          <li><a href="#policy">What an on-call policy should say</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>Restricted on-call is paid.</strong> Required to stay on site, or so near it you cannot use the time for yourself: every on-call hour is hours worked.</p>
+        <p><strong>Reachable-only on-call is not, until the call comes.</strong> Then the time spent working is paid and counts toward the 40-hour overtime threshold.</p>
+        <p><strong>Being called in can trigger state minimums.</strong> California reporting time pay and New York call-in pay guarantee pay for a minimum number of hours in defined cases.</p>
+      </div>
+      <h2 id="federal">The federal rule: 29 CFR 785.15 to 785.17</h2>
+<p>
+        The Department of Labor's interpretations of hours worked under the Fair Labor Standards Act
+        draw the line in three short sections of
+        <a href="https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-785" target="_blank" rel="noopener">29 CFR Part 785</a>.
+      </p>
+      <ul>
+        <li><strong>On duty (<a href="https://www.ecfr.gov/current/title-29/section-785.15" target="_blank" rel="noopener">785.15</a>).</strong> Waiting that is part of the job is work. The section's examples include a fireman who plays checkers while waiting for alarms, and it concludes: "The employee is engaged to wait." It applies even when the employee may leave the site during short, unpredictable waits, because the time "belongs to and is controlled by the employer."</li>
+        <li><strong>Off duty (<a href="https://www.ecfr.gov/current/title-29/section-785.16" target="_blank" rel="noopener">785.16</a>).</strong> Time is not hours worked when the employee is "completely relieved from duty" for long enough to use it for their own purposes, and that requires being "definitely told in advance that he may leave the job and that he will not have to commence work until a definitely specified hour has arrived." Whether the time is long enough "depends upon all of the facts and circumstances of the case."</li>
+        <li><strong>On-call time (<a href="https://www.ecfr.gov/current/title-29/section-785.17" target="_blank" rel="noopener">785.17</a>).</strong> "An employee who is required to remain on call on the employer's premises or so close thereto that he cannot use the time effectively for his own purposes is working while 'on call'. An employee who is not required to remain on the employer's premises but is merely required to leave word at his home or with company officials where he may be reached is not working while on call."</li>
+      </ul>
+      <p>
+        The regulation was written for landlines, but its test, whether the employee can use the time
+        effectively for their own purposes, is the one that still decides modern phone-based on-call.
+        The more an arrangement restricts where someone can be and what they can do, the closer it moves
+        to the first sentence of 785.17.
+      </p>
+      <h2 id="restrictions">What pushes on-call time toward paid</h2>
+<p>
+        Section 785.17 gives the two ends; most rotations sit between them. Read against the
+        regulation's own test, these are the features to look at in your policy:
+      </p>
+      <ol class="steps">
+        <li><strong>Where the employee must be.</strong> On the premises is the paid end of the regulation. A required radius tight enough to keep someone near the site moves toward it.</li>
+        <li><strong>How fast they must respond.</strong> A short required response or arrival time limits what someone can do, such as travel, see a film or put a child to bed.</li>
+        <li><strong>How often the call comes.</strong> If calls are frequent enough that an evening on call is an evening of work, the employee cannot use the time for themselves.</li>
+        <li><strong>What else is restricted.</strong> Bans on alcohol, on leaving town, or requirements to stay in uniform or near a laptop add up.</li>
+        <li><strong>Whether they can swap.</strong> Being able to trade an on-call shift gives back control over the time; see <a href="/blogs/shift-swap-policy">shift swap policy</a>.</li>
+      </ol>
+      <p>
+        If your arrangement is near the line, get advice for your jurisdiction. The safest design keeps
+        restrictions to what the work needs and pays generously for the calls themselves.
+      </p>
+      <h2 id="call-outs">Pay for the call itself, and overtime</h2>
+<p>
+        Whatever the status of the waiting, the time spent working when the call comes is hours worked:
+        the phone call, remote troubleshooting and the work on site. Whether travel to a call-out is
+        paid has its own rules; settle it in your policy. Record it with start and stop times, because a fifteen-minute fix at 02:00 is
+        easy to forget by payday.
+      </p>
+      <p>
+        Those hours count toward the 40-hour weekly overtime threshold like any others. An employee who
+        works 40 scheduled hours and three call-out hours has three hours at time and a half; the
+        <a href="/blogs/overtime-calculator">overtime calculator</a> handles the arithmetic and the
+        <a href="/blogs/how-to-calculate-hours-worked">hours worked guide</a> covers the related
+        engaged-to-wait rules. Many employers also pay a flat on-call stipend; how a stipend enters the
+        regular rate for overtime is a question to settle with your payroll provider before you start.
+      </p>
+      <h2 id="calculator">Weekly on-call pay estimate</h2>
+<div class="calc" id="ocp">
+        <div class="calc__grid">
+          <div><label for="ocp-rate">Hourly rate ($)</label><input id="ocp-rate" type="number" min="0" step="0.01" value="24" /></div>
+          <div><label for="ocp-reg">Scheduled hours worked this week</label><input id="ocp-reg" type="number" min="0" step="0.25" value="40" /></div>
+          <div><label for="ocp-hrs">On-call hours this week (outside scheduled hours)</label><input id="ocp-hrs" type="number" min="0" step="0.5" value="56" /></div>
+          <div><label for="ocp-type">Type of on-call</label><select id="ocp-type"><option value="free" selected>Reachable; free to use the time</option><option value="restricted">Restricted: on site or so near it the time is not their own</option></select></div>
+          <div><label for="ocp-calls">Call-outs this week</label><input id="ocp-calls" type="number" min="0" step="1" value="3" /></div>
+          <div><label for="ocp-len">Average hours worked per call-out</label><input id="ocp-len" type="number" min="0" step="0.25" value="1.5" /></div>
+        </div>
+        <div class="calc__out" id="ocp-out"></div>
+        <p class="calc__note">Federal FLSA estimate for one nonexempt employee at a single rate: overtime at 1.5 times the rate over 40 hours in the workweek. It does not add daily overtime, stipends, or state reporting-time and call-in minimums, which can raise the total.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function num(id) { var v = parseFloat(el(id).value); return isNaN(v) || v < 0 ? 0 : v; }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function money(n) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+        function h(n) { return (Math.round(n * 100) / 100) + ' h'; }
+        function calc() {
+          var rate = num('ocp-rate'), reg = num('ocp-reg'), oc = num('ocp-hrs');
+          var calls = num('ocp-calls'), len = num('ocp-len');
+          var restricted = el('ocp-type').value === 'restricted';
+          var callHrs = calls * len;
+          var ocPaid = restricted ? Math.max(oc, callHrs) : callHrs;
+          var total = reg + ocPaid;
+          var ot = Math.max(0, total - 40), st = total - ot;
+          function payFor(t) { return Math.min(t, 40) * rate + Math.max(0, t - 40) * rate * 1.5; }
+          var pay = payFor(total);
+          var html = row('Call-out hours worked', h(callHrs));
+          html += row('On-call hours counted as hours worked', h(ocPaid) + (restricted ? ' (all on-call hours)' : ' (call-outs only)'));
+          html += row('Total hours worked', h(total));
+          html += row('Straight-time hours', h(st));
+          html += row('Overtime hours at 1.5x', h(ot));
+          html += '<div class="calc__row calc__total"><span>Estimated gross pay for the week</span><span>' + money(pay) + '</span></div>';
+          if (!restricted && oc > 0) html += row('If the same on-call were restricted', money(payFor(reg + Math.max(oc, callHrs))));
+          el('ocp-out').innerHTML = html;
+        }
+        ['ocp-rate', 'ocp-reg', 'ocp-hrs', 'ocp-type', 'ocp-calls', 'ocp-len'].forEach(function (id) { el(id).addEventListener('input', calc); el(id).addEventListener('change', calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="states">State rules: California and New York</h2>
+<p>
+        Several states set minimum pay for reporting to work. We cover the two we verified from the
+        official text; check your own state's labor department before relying on the federal rule
+        alone.
+      </p>
+      <p>
+        <strong>California: reporting time pay.</strong> The Labor Commissioner's
+        <a href="https://www.dir.ca.gov/dlse/FAQ_ReportingTimePay.htm" target="_blank" rel="noopener">reporting time pay guidance</a>
+        states that each workday an employee is required to report to work but is not put to work, or
+        is given less than half the usual or scheduled day's work, they must be paid for half the usual
+        or scheduled day, "but in no event for less than two hours nor more than four hours," at the
+        regular rate. If an employee is required to report a second time in one workday and gets less
+        than two hours of work on the second reporting, they must be paid for two hours. Three points
+        matter for on-call:
+      </p>
+      <ul>
+        <li>The guidance says the reporting time provisions do not apply to employees on paid standby status.</li>
+        <li>Physically showing up is not required. Citing <em>Ward v. Tilly's, Inc.</em> (2019), it lists telephoning the store two hours before a shift, logging on remotely, and arriving at a client's site as triggers.</li>
+        <li>No reporting time pay is due when work cannot begin because of threats to employees or property, a recommendation from civil authorities, a public utility failure, or an Act of God or other cause outside the employer's control.</li>
+      </ul>
+      <p>
+        <strong>New York: call-in pay.</strong> Under the Minimum Wage Order for Miscellaneous
+        Industries and Occupations,
+        <a href="https://forms.labor.ny.gov/WP/CR142.pdf" target="_blank" rel="noopener">12 NYCRR 142-2.3</a>,
+        "an employee who by request or permission of the employer reports for work on any day shall be
+        paid for at least four hours, or the number of hours in the regularly scheduled shift,
+        whichever is less, at the basic minimum hourly wage." The hospitality and building service
+        industries have their own wage orders with their own rules.
+      </p>
+      <p>
+        Separately, the fair workweek ordinances in Oregon and several large cities regulate schedule
+        changes and short-notice shifts for covered retail, food service and hospitality employers;
+        see <a href="/blogs/predictive-scheduling-laws-by-state">predictive scheduling laws</a> before you use
+        on-call shifts to cover demand in those places.
+      </p>
+      <h2 id="rotation">How to run an on-call rotation</h2>
+<ol class="steps">
+        <li><strong>Decide what on-call is for.</strong> Write down which events justify a call and which wait until morning. Fewer calls is the cheapest way to make on-call bearable and to keep it on the unpaid side of 785.17 where that is your design.</li>
+        <li><strong>Pick a rotation length.</strong> A week is common because it is easy to remember and swap; shorter blocks spread weekends more evenly. Keep the same handover day and time.</li>
+        <li><strong>Use primary and backup.</strong> The backup takes the call if the primary does not answer within the stated time, and rotates into primary next.</li>
+        <li><strong>Size the pool.</strong> With six people on weekly rotation, each is on call about one week in six. Below four, people burn out; add backup from a neighboring team or narrow the scope.</li>
+        <li><strong>Publish it with the schedule.</strong> Put on-call blocks in the same tool as shifts so swaps, time off and coverage are visible together.</li>
+        <li><strong>Record every call-out.</strong> Start, stop, what happened. It is the pay record and the evidence for fixing the causes.</li>
+        <li><strong>Give recovery time.</strong> A late call-out should move the next morning's start, not be absorbed.</li>
+        <li><strong>Review monthly.</strong> Calls per week, hours per person, and which causes repeat.</li>
+      </ol>
+      <p>
+        Scheduling tools that handle shifts, swaps and availability make this easier to keep visible;
+        our <a href="/tools/best-workforce-scheduling-software">workforce scheduling software guide</a>
+        compares them, and <a href="/blogs/demand-based-scheduling">demand-based scheduling</a> shows
+        how to staff peaks so on-call is a backstop rather than a plan. For other non-standard
+        patterns, see the <a href="/blogs/split-shift">split shift</a> and
+        <a href="/blogs/rotating-shift-schedules">rotating shift</a> guides.
+      </p>
+      <h2 id="policy">What an on-call policy should say</h2>
+<ul>
+        <li>Who is eligible, how the rotation works and how to swap.</li>
+        <li>Required response time and any location or conduct restrictions, kept to what the work needs.</li>
+        <li>What counts as a call-out and how time is recorded, including remote work and travel.</li>
+        <li>Pay: the hourly rate for call-out time, travel, any stipend, minimum pay per call-out, and state reporting or call-in minimums.</li>
+        <li>Recovery time after night call-outs.</li>
+        <li>Escalation: what happens if the primary and backup cannot be reached.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Under 29 CFR 785.17, on-call time is hours worked when the employee must stay on or so near the premises that the time is not their own.</li>
+        <li>Employees who only have to leave word where they can be reached are not working while on call, but every hour of call-out work is paid.</li>
+        <li>Call-out hours count toward the 40-hour federal overtime threshold.</li>
+        <li>California reporting time pay guarantees two to four hours in defined cases and two hours for a second reporting in a day; it does not apply on paid standby.</li>
+        <li>New York's Miscellaneous Industries order requires call-in pay of four hours or the regular shift, whichever is less, at the basic minimum wage.</li>
+        <li>Run on-call as a published rotation with primary and backup, recorded call-outs and recovery time.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>Do employers have to pay for on-call time?</summary>
+          <p>Under federal law, yes if the employee must remain on the employer's premises or so close that they cannot use the time effectively for their own purposes (29 CFR 785.17). If they only have to leave word where they can be reached, the waiting is not hours worked, but the time spent responding is.</p>
+        </details>
+        <details>
+          <summary>Is carrying a work phone on call paid time?</summary>
+          <p>Not automatically. The question under 785.17 is whether the employee can use the time effectively for their own purposes. Tight response times, frequent calls and location restrictions push it toward paid time.</p>
+        </details>
+        <details>
+          <summary>Do on-call hours count toward overtime?</summary>
+          <p>Hours worked count, so call-out time always does, and restricted on-call time does in full. Unrestricted waiting time is not hours worked and does not count.</p>
+        </details>
+        <details>
+          <summary>What is reporting time pay in California?</summary>
+          <p>Pay owed when an employee reports to work but is not put to work or gets less than half the usual or scheduled day: half the day, at least two and at most four hours, at the regular rate, with two hours for a second reporting in one day that gets under two hours of work. It does not apply to employees on paid standby.</p>
+        </details>
+        <details>
+          <summary>What is call-in pay in New York?</summary>
+          <p>Under 12 NYCRR 142-2.3, an employee covered by the Miscellaneous Industries wage order who reports for work at the employer's request or permission is paid for at least four hours, or the regularly scheduled shift if shorter, at the basic minimum hourly wage. Other industries have their own wage orders.</p>
+        </details>
+        <details>
+          <summary>How long should an on-call rotation be?</summary>
+          <p>A week is the most common because it is simple to track and swap. Whatever the length, keep a backup, a pool of at least four people where possible, and recovery time after night calls.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-workforce-scheduling-software">Best Workforce Scheduling Software</a></li>
+          <li><a href="/blogs/demand-based-scheduling">Demand-Based Scheduling</a></li>
+          <li><a href="/blogs/workforce-vs-shift-scheduling">Workforce Scheduling vs Shift Scheduling</a></li>
+          <li><a href="/blogs/predictive-scheduling-laws-by-state">Predictive Scheduling Laws</a></li>
+          <li><a href="/blogs/split-shift">Split Shift</a></li>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

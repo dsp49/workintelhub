@@ -220,7 +220,7 @@
             "name": "Is employee monitoring software legal?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Monitoring company-owned devices and accounts is lawful across the United States. New York, Connecticut and Delaware require written notice; about a dozen states require all-party consent to record audio; the National Labor Relations Act limits monitoring that chills discussion of working conditions; Illinois and California add biometric and privacy rules. Monitoring personal devices or accounts without consent is not lawful."
+              "text": "Monitoring company-owned devices and accounts is lawful across the United States. New York, Connecticut, Delaware and Maine require notice, in writing or electronically depending on the state; about a dozen states require all-party consent to record audio; the National Labor Relations Act limits monitoring that chills discussion of working conditions; Illinois and California add biometric and privacy rules. Monitoring personal devices or accounts without consent is not lawful."
             }
           },
           {
@@ -228,7 +228,7 @@
             "name": "Can employee monitoring software see everything on my computer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On a company-managed device, the security tools (Teramind, Veriato, Controlio, Kickidler) can record the screen, keystrokes, files and communications. The productivity tools (ActivTrak, Insightful, DeskTime) record application and website use, activity and optionally screenshots, and ActivTrak logs no keystrokes at all. On a personal device with nothing installed, none of them see anything."
+              "text": "On a company-managed device, the security tools (Teramind, Veriato, Controlio, Kickidler) can record the screen, keystrokes, files and communications. The productivity tools (ActivTrak, Insightful, DeskTime) record application and website use and activity, with screenshots optional or sold as an add-on (on ActivTrak only through the Screen Details add-on), and ActivTrak logs no keystrokes at all. On a personal device with nothing installed, none of them see anything."
             }
           },
           {
@@ -236,7 +236,7 @@
             "name": "What is the least invasive employee monitoring software?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ActivTrak and DeskTime: both measure application and website use and activity, neither logs keystrokes, screenshots are optional (DeskTime only on Premium), and DeskTime gives employees a private-time switch. Insightful and Time Champ can be configured similarly, with screenshots off or blurred."
+              "text": "ActivTrak and DeskTime: both measure application and website use and activity, neither logs keystrokes, neither takes screenshots by default (ActivTrak only through the Screen Details add-on, DeskTime only on Premium), and DeskTime gives employees a private-time switch. Insightful and Time Champ can be configured similarly, with screenshots off or blurred."
             }
           },
           {
@@ -353,7 +353,7 @@
       </div>
       <script>
       (function () {
-        var Q = ["size", "goal", "depth", "plat", "budget", "deploy"], F = {"activtrak": {"size": {"s": [2, "free for three people"], "m": [2, ""], "l": [2, ""]}, "goal": {"prod": [4, "built for productivity and workload analytics"], "att": [2, "schedule adherence reporting"], "sec": [-4, ""], "hours": [0, ""]}, "depth": {"light": [3, "no keystrokes, screenshots optional"], "shots": [1, ""], "full": [-3, ""]}, "plat": {"win": [1, ""], "mac": [1, ""], "linux": [-3, ""]}, "budget": {"low": [-1, ""], "mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "hubstaff": {"size": {"s": [2, "cheap entry plan"], "m": [2, ""], "l": [0, ""]}, "goal": {"hours": [4, "time, payroll and invoicing in one"], "prod": [1, ""], "att": [1, ""], "sec": [-4, ""]}, "depth": {"light": [1, ""], "shots": [3, "configurable screenshots"], "full": [-2, ""]}, "plat": {"linux": [3, "Linux, Chromebook and mobile agents"]}, "budget": {"low": [3, "Starter at $4.99"], "mid": [2, ""]}, "deploy": {"onprem": [-6, ""]}}, "teramind": {"size": {"s": [-2, ""], "m": [1, ""], "l": [3, ""]}, "goal": {"sec": [5, "the deepest capture and real DLP"], "prod": [-2, ""], "hours": [-2, ""]}, "depth": {"full": [4, "screen video, keystrokes and OCR"], "light": [-4, ""]}, "plat": {"win": [2, ""], "linux": [-1, ""]}, "budget": {"high": [3, ""], "low": [-5, ""], "mid": [-2, ""]}, "deploy": {"onprem": [4, "on-premise and private cloud"]}}, "controlio": {"size": {"s": [1, ""], "m": [2, ""]}, "goal": {"sec": [2, "recording and keystrokes for investigations"], "prod": [0, ""]}, "depth": {"full": [3, "continuous recording at a mid-market price"], "light": [-2, ""]}, "plat": {"linux": [-4, ""]}, "budget": {"mid": [2, ""], "low": [1, ""]}, "deploy": {"onprem": [3, "on-premise available"]}}, "currentware": {"size": {"m": [2, ""], "l": [2, ""], "s": [-1, ""]}, "goal": {"sec": [3, "blocking and USB control alongside reporting"], "prod": [0, ""]}, "depth": {"light": [1, ""], "shots": [1, ""]}, "plat": {"linux": [-4, ""]}, "budget": {"mid": [1, ""], "high": [1, ""], "low": [-2, ""]}, "deploy": {"onprem": [4, "runs on your own server"]}}, "desktime": {"size": {"s": [2, "free single user, cheap after"], "m": [1, ""]}, "goal": {"prod": [2, "automatic productivity scoring"], "att": [3, "shift scheduling and absence calendar"]}, "depth": {"light": [3, "no screenshots unless enabled on Premium"]}, "plat": {"linux": [2, "Linux agent"]}, "budget": {"low": [3, "Pro from $6.42"], "mid": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "insightful": {"size": {"m": [2, ""], "l": [2, ""]}, "goal": {"prod": [3, "utilization and location analytics"], "att": [1, ""], "sec": [1, "security add-on"]}, "depth": {"shots": [2, ""], "light": [1, ""]}, "plat": {"linux": [2, "Linux agent"]}, "budget": {"mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [1, "on-premise from 250 employees"]}}, "kickidler": {"size": {"s": [1, ""], "m": [1, ""]}, "goal": {"sec": [1, ""], "prod": [1, ""]}, "depth": {"full": [3, "live viewing, video and keystrokes"], "light": [-3, ""]}, "plat": {"linux": [2, ""]}, "budget": {"low": [4, "cheapest on a long license"]}, "deploy": {"onprem": [3, ""]}}, "monitask": {"size": {"s": [3, "built for small teams"], "l": [-3, ""]}, "goal": {"hours": [3, "timesheets and payroll exports"], "prod": [1, ""]}, "depth": {"shots": [2, "adjustable screenshots"]}, "plat": {"linux": [1, ""]}, "budget": {"low": [3, "Pro at $6.49"]}, "deploy": {"onprem": [-6, ""]}}, "timechamp": {"size": {"s": [2, ""], "m": [2, ""], "l": [1, ""]}, "goal": {"att": [4, "automatic attendance and shifts"], "prod": [2, "productivity classification"], "hours": [1, ""]}, "depth": {"shots": [2, "configurable screenshots and blurring"], "full": [1, "recording and keylogger add-ons"], "light": [1, ""]}, "plat": {"linux": [2, "Linux agent and mobile GPS"]}, "budget": {"low": [4, "Starter at $3.90"], "mid": [2, ""]}, "deploy": {"onprem": [-6, ""]}}, "timedoctor": {"size": {"m": [2, ""], "l": [1, ""]}, "goal": {"hours": [3, "payroll and integrations"], "prod": [2, "work-life balance reporting"], "att": [2, "attendance and breaks"]}, "depth": {"shots": [2, ""], "full": [1, "video on Premium"]}, "plat": {"linux": [2, "Linux, Chromebook and Android"]}, "budget": {"mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "veriato": {"size": {"l": [3, ""], "s": [-3, ""]}, "goal": {"sec": [4, "insider risk scoring"], "prod": [-3, ""]}, "depth": {"full": [3, ""], "light": [-4, ""]}, "plat": {"linux": [-3, ""]}, "budget": {"high": [3, ""], "low": [-5, ""]}, "deploy": {"onprem": [3, ""]}}}, N = {"activtrak": "ActivTrak", "hubstaff": "Hubstaff", "teramind": "Teramind", "controlio": "Controlio", "currentware": "CurrentWare", "desktime": "DeskTime", "insightful": "Insightful", "kickidler": "Kickidler", "monitask": "Monitask", "timechamp": "Time Champ", "timedoctor": "Time Doctor", "veriato": "Veriato"};
+        var Q = ["size", "goal", "depth", "plat", "budget", "deploy"], F = {"activtrak": {"size": {"s": [2, "free for three people"], "m": [2, ""], "l": [2, ""]}, "goal": {"prod": [4, "built for productivity and workload analytics"], "att": [2, "schedule adherence reporting"], "sec": [-4, ""], "hours": [0, ""]}, "depth": {"light": [3, "no keystrokes, screenshots only as an add-on"], "shots": [1, ""], "full": [-3, ""]}, "plat": {"win": [1, ""], "mac": [1, ""], "linux": [-3, ""]}, "budget": {"low": [-1, ""], "mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "hubstaff": {"size": {"s": [2, "cheap entry plan"], "m": [2, ""], "l": [0, ""]}, "goal": {"hours": [4, "time, payroll and invoicing in one"], "prod": [1, ""], "att": [1, ""], "sec": [-4, ""]}, "depth": {"light": [1, ""], "shots": [3, "configurable screenshots"], "full": [-2, ""]}, "plat": {"linux": [3, "Linux, Chromebook and mobile agents"]}, "budget": {"low": [3, "Starter at $4.99"], "mid": [2, ""]}, "deploy": {"onprem": [-6, ""]}}, "teramind": {"size": {"s": [-2, ""], "m": [1, ""], "l": [3, ""]}, "goal": {"sec": [5, "the deepest capture and real DLP"], "prod": [-2, ""], "hours": [-2, ""]}, "depth": {"full": [4, "screen video, keystrokes and OCR"], "light": [-4, ""]}, "plat": {"win": [2, ""], "linux": [-1, ""]}, "budget": {"high": [3, ""], "low": [-5, ""], "mid": [-2, ""]}, "deploy": {"onprem": [4, "on-premise and private cloud"]}}, "controlio": {"size": {"s": [1, ""], "m": [2, ""]}, "goal": {"sec": [2, "recording and keystrokes for investigations"], "prod": [0, ""]}, "depth": {"full": [3, "continuous recording at a mid-market price"], "light": [-2, ""]}, "plat": {"linux": [-4, ""]}, "budget": {"mid": [2, ""], "low": [1, ""]}, "deploy": {"onprem": [3, "on-premise available"]}}, "currentware": {"size": {"m": [2, ""], "l": [2, ""], "s": [-1, ""]}, "goal": {"sec": [3, "blocking and USB control alongside reporting"], "prod": [0, ""]}, "depth": {"light": [1, ""], "shots": [1, ""]}, "plat": {"linux": [-4, ""]}, "budget": {"mid": [1, ""], "high": [1, ""], "low": [-2, ""]}, "deploy": {"onprem": [4, "runs on your own server"]}}, "desktime": {"size": {"s": [2, "free single user, cheap after"], "m": [1, ""]}, "goal": {"prod": [2, "automatic productivity scoring"], "att": [3, "shift scheduling and absence calendar"]}, "depth": {"light": [3, "no screenshots unless enabled on Premium"]}, "plat": {"linux": [2, "Linux agent"]}, "budget": {"low": [3, "Pro from $6.42"], "mid": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "insightful": {"size": {"m": [2, ""], "l": [2, ""]}, "goal": {"prod": [3, "utilization and location analytics"], "att": [1, ""], "sec": [1, "security add-on"]}, "depth": {"shots": [2, ""], "light": [1, ""]}, "plat": {"linux": [2, "Linux agent"]}, "budget": {"mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [1, "on-premise from 250 employees"]}}, "kickidler": {"size": {"s": [1, ""], "m": [1, ""]}, "goal": {"sec": [1, ""], "prod": [1, ""]}, "depth": {"full": [3, "live viewing, video and keystrokes"], "light": [-3, ""]}, "plat": {"linux": [2, ""]}, "budget": {"low": [4, "cheapest on a long license"]}, "deploy": {"onprem": [3, ""]}}, "monitask": {"size": {"s": [3, "built for small teams"], "l": [-3, ""]}, "goal": {"hours": [3, "timesheets and payroll exports"], "prod": [1, ""]}, "depth": {"shots": [2, "adjustable screenshots"]}, "plat": {"linux": [1, ""]}, "budget": {"low": [3, "Pro at $6.49"]}, "deploy": {"onprem": [-6, ""]}}, "timechamp": {"size": {"s": [2, ""], "m": [2, ""], "l": [1, ""]}, "goal": {"att": [4, "automatic attendance and shifts"], "prod": [2, "productivity classification"], "hours": [1, ""]}, "depth": {"shots": [2, "configurable screenshots and blurring"], "full": [1, "recording and keylogger add-ons"], "light": [1, ""]}, "plat": {"linux": [2, "Linux agent and mobile GPS"]}, "budget": {"low": [4, "Starter at $3.90"], "mid": [2, ""]}, "deploy": {"onprem": [-6, ""]}}, "timedoctor": {"size": {"m": [2, ""], "l": [1, ""]}, "goal": {"hours": [3, "payroll and integrations"], "prod": [2, "work-life balance reporting"], "att": [2, "attendance and breaks"]}, "depth": {"shots": [2, ""], "full": [1, "video on Premium"]}, "plat": {"linux": [2, "Linux, Chromebook and Android"]}, "budget": {"mid": [2, ""], "high": [1, ""]}, "deploy": {"onprem": [-6, ""]}}, "veriato": {"size": {"l": [3, ""], "s": [-3, ""]}, "goal": {"sec": [4, "insider risk scoring"], "prod": [-3, ""]}, "depth": {"full": [3, ""], "light": [-4, ""]}, "plat": {"linux": [-3, ""]}, "budget": {"high": [3, ""], "low": [-5, ""]}, "deploy": {"onprem": [3, ""]}}}, N = {"activtrak": "ActivTrak", "hubstaff": "Hubstaff", "teramind": "Teramind", "controlio": "Controlio", "currentware": "CurrentWare", "desktime": "DeskTime", "insightful": "Insightful", "kickidler": "Kickidler", "monitask": "Monitask", "timechamp": "Time Champ", "timedoctor": "Time Doctor", "veriato": "Veriato"};
         function el(id) { return document.getElementById(id); }
         function calc() {
           var S = {}, R = {};
@@ -473,7 +473,7 @@
             applications and websites are in use, how long they are active, and when the person is idle,
             and the platform turns that into productivity classifications, utilization and focus reports,
             schedule adherence and, on the higher plans, capacity and headcount planning and AI coaching
-            suggestions. Screenshots are available but optional, and there is no keystroke logging at all,
+            suggestions. Screenshots come only through the Screen Details add-on, and there is no keystroke logging at all,
             which is a design choice the company is open about. The free plan covers three people with
             30 days of history and is the easiest way in this category to see what the data looks like.
           </p>
@@ -490,7 +490,7 @@
           <ul>
             <li>A free plan for three people, which is the best way to see the data before buying</li>
             <li>Productivity, utilization and focus analytics that managers can act on without reading screenshots</li>
-            <li>No keystroke logging and optional screenshots: the least invasive serious tool here</li>
+            <li>No keystroke logging and screenshots only as an add-on: the least invasive serious tool here</li>
             <li>Workforce planning, capacity and coaching features on the upper plans</li>
           </ul>
           <h3>Where it falls short</h3>
@@ -991,8 +991,8 @@
           <h3>What it is</h3>
           <p>
             Time Doctor is a time tracker built for remote teams and outsourcing companies, with
-            monitoring layered on. It tracks time against projects and tasks, takes optional
-            screenshots, records web and application use, and reports on attendance, breaks, idle
+            monitoring layered on. It tracks time against projects and tasks, takes screenshots
+            on every plan (they cannot be switched off), records web and application use, and reports on attendance, breaks, idle
             time and, distinctively, work-life balance signals such as late hours and long days. The
             Standard plan adds payroll and 60-plus integrations; Premium adds screen video, two years
             of history and executive dashboards. An Office versus Remote report compares the two
@@ -1091,7 +1091,7 @@
       <h2 id="law">The law in one paragraph</h2>
       <p>
         Monitoring company devices and accounts is lawful across the United States, with notice laws in
-        New York, Connecticut and Delaware, all-party consent rules for audio in about a dozen states,
+        New York, Connecticut, Delaware and Maine, all-party consent rules for audio in about a dozen states,
         limits under the National Labor Relations Act on monitoring that chills discussion of working
         conditions, and biometric and privacy statutes in Illinois and California. Every tool on this
         page can be configured lawfully and most can be configured unlawfully. The
@@ -1114,13 +1114,16 @@
         off; recording off. Then ask whether the remaining data answers the decision. Usually it does.</li>
         <li><strong>Price it at your headcount with minimums and add-ons.</strong> A $4.99 plan with a
         two-seat minimum and a $4 add-on is not $4.99. The small-business page in this series has a
-        calculator for that.</li>
+        calculator for that, our <a href="/blogs/employee-monitoring-software-cost">employee monitoring
+        software pricing</a> guide breaks down what plans, minimums and add-ons cost, and the
+        <a href="/blogs/employee-monitoring-software-features">features checklist</a> shows which
+        capabilities you can leave out.</li>
         <li><strong>Check retention and export.</strong> How long is data kept, can you shorten it, and
         can you get it out. Short retention protects employees; it also limits investigations.</li>
         <li><strong>Write the policy before go-live.</strong> The
         <a href="/blogs/employee-monitoring-policy-template">policy template</a> and
         <a href="/blogs/write-monitoring-policy-employees-sign">how to write one employees will sign</a>
-        cover it. In New York, Connecticut and Delaware the notice is a legal requirement.</li>
+        cover it. In New York, Connecticut, Delaware and Maine the notice is a legal requirement.</li>
       </ol>
       <h2 id="not">When not to monitor</h2>
       <p>
@@ -1132,7 +1135,10 @@
         data on how employees respond, the <a href="/blogs/ethical-employee-monitoring-playbook">ethical
         monitoring playbook</a> sets out a design that holds up, and the
         <a href="/blogs/mouse-jiggler">mouse jiggler</a> page shows what happens to activity metrics
-        once people are judged on them.
+        once people are judged on them. Both sides of the decision are set out in the
+        <a href="/blogs/pros-and-cons-of-employee-monitoring">pros and cons of employee monitoring</a>,
+        and if you go ahead, <a href="/blogs/visible-vs-stealth-employee-monitoring">visible vs stealth
+        monitoring</a> explains why the agent should never hide.
       </p>
       <h2 id="price-per-seat">Price per seat at 10, 25 and 100 people</h2>
       <div class="table-scroll">
@@ -1184,7 +1190,7 @@
         <li>Decide which kind of tool you need first: productivity analytics, a time tracker with monitoring, or a security tool. Features only compare within a kind.</li>
         <li>ActivTrak for the most useful data with the least intrusion; Hubstaff for hourly and distributed teams; Teramind when the problem is security.</li>
         <li>Entry prices in October 2026 run from about $2.75 (Kickidler) and $3.90 (Time Champ) to $18 (Veriato); minimums and add-ons move the real cost more than the tier.</li>
-        <li>Every tool can be configured lawfully and most can be configured unlawfully; notice laws apply in New York, Connecticut and Delaware.</li>
+        <li>Every tool can be configured lawfully and most can be configured unlawfully; notice laws apply in New York, Connecticut, Delaware and Maine.</li>
         <li>Trial visibly on your own team, switch off what you do not need, and write the policy before go-live.</li>
       </ul>
       <!-- wih:inline-subscribe -->
@@ -1222,15 +1228,15 @@
         </details>
         <details>
           <summary>Is employee monitoring software legal?</summary>
-          <p>Monitoring company-owned devices and accounts is lawful across the United States. New York, Connecticut and Delaware require written notice; about a dozen states require all-party consent to record audio; the National Labor Relations Act limits monitoring that chills discussion of working conditions; Illinois and California add biometric and privacy rules. Monitoring personal devices or accounts without consent is not lawful.</p>
+          <p>Monitoring company-owned devices and accounts is lawful across the United States. New York, Connecticut, Delaware and Maine require notice, in writing or electronically depending on the state; about a dozen states require all-party consent to record audio; the National Labor Relations Act limits monitoring that chills discussion of working conditions; Illinois and California add biometric and privacy rules. Monitoring personal devices or accounts without consent is not lawful.</p>
         </details>
         <details>
           <summary>Can employee monitoring software see everything on my computer?</summary>
-          <p>On a company-managed device, the security tools (Teramind, Veriato, Controlio, Kickidler) can record the screen, keystrokes, files and communications. The productivity tools (ActivTrak, Insightful, DeskTime) record application and website use, activity and optionally screenshots, and ActivTrak logs no keystrokes at all. On a personal device with nothing installed, none of them see anything.</p>
+          <p>On a company-managed device, the security tools (Teramind, Veriato, Controlio, Kickidler) can record the screen, keystrokes, files and communications. The productivity tools (ActivTrak, Insightful, DeskTime) record application and website use and activity, with screenshots optional or sold as an add-on (on ActivTrak only through the Screen Details add-on), and ActivTrak logs no keystrokes at all. On a personal device with nothing installed, none of them see anything.</p>
         </details>
         <details>
           <summary>What is the least invasive employee monitoring software?</summary>
-          <p>ActivTrak and DeskTime: both measure application and website use and activity, neither logs keystrokes, screenshots are optional (DeskTime only on Premium), and DeskTime gives employees a private-time switch. Insightful and Time Champ can be configured similarly, with screenshots off or blurred.</p>
+          <p>ActivTrak and DeskTime: both measure application and website use and activity, neither logs keystrokes, neither takes screenshots by default (ActivTrak only through the Screen Details add-on, DeskTime only on Premium), and DeskTime gives employees a private-time switch. Insightful and Time Champ can be configured similarly, with screenshots off or blurred.</p>
         </details>
         <details>
           <summary>Does employee monitoring improve productivity?</summary>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a People Analytics Function</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Build a people analytics function in order: one analyst, agreed definitions, joined HR data, written privacy rules, then three first projects." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/build-people-analytics-function" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/build-people-analytics-function" />
+  <meta property="og:title" content="How to Build a People Analytics Function" />
+  <meta property="og:description" content="Build a people analytics function in order: one analyst, agreed definitions, joined HR data, written privacy rules, then three first projects." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/build-people-analytics-function.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Build a People Analytics Function" />
+  <meta name="twitter:description" content="Build a people analytics function in order: one analyst, agreed definitions, joined HR data, written privacy rules, then three first projects." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/build-people-analytics-function.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/build-people-analytics-function#article",
+      "headline": "How to Build a People Analytics Function",
+      "description": "Build a people analytics function in order: one analyst, agreed definitions, joined HR data, written privacy rules, then three first projects.",
+      "image": "https://workintelhub.com/images/blog/build-people-analytics-function.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/build-people-analytics-function"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/build-people-analytics-function#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Build a People Analytics Function"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/build-people-analytics-function#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who should be the first people analytics hire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An analyst who understands HR data and can write SQL or build in Power BI or Tableau. An internal HRIS or HR reporting analyst is often the best candidate, because domain knowledge is harder to teach than tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should people analytics report?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually to the CHRO, which keeps sensitive data inside HR and ties the work to HR decisions, with a dotted line to finance or the central data team for definitions and infrastructure. A named executive sponsor matters more than the reporting line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data sources does a people analytics team need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the HRIS, payroll and the applicant tracking system. Add engagement and exit surveys, performance and learning data, and time, absence and collaboration data as projects require them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should the first people analytics project be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turnover by manager, tenure and job family, split into voluntary and regretted, with first-year turnover separate. The data is already in the HRIS, the result is usually actionable, and it builds trust for the projects that follow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you protect employee privacy in people analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Publish a purpose statement, set a minimum group size for every report, restrict person-level data to analysts, never let a model decide about an individual, delete raw extracts on a schedule, and check GDPR, CCPA, AI-in-employment and monitoring notice rules for each data source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you need software to start people analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Most organizations under a few hundred employees can run the first projects on HRIS exports in a spreadsheet or Power BI. Platforms pay when data sits in several systems or the analyst's time runs out."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>How to Build a People Analytics Function</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 7 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/build-people-analytics-function.png" alt="A document showing a staffing plan, a data source map and three numbered project cards" width="1200" height="630" />
+      </figure>
+
+<p>
+        To build a people analytics function, hire or appoint one analyst who knows HR data, agree
+        written definitions for headcount, turnover and hires, join the HRIS, applicant tracking and
+        payroll systems, write the privacy rules before the first analysis, and start with three
+        projects leaders have already committed to act on. Software comes after that, not before.
+      </p>
+      <p>
+        The order matters more than the budget. People analytics fails more often on data and
+        definitions than on tools, and a function that launches with a platform and no agreed
+        definitions spends its first year reconciling numbers. This guide covers staffing, data
+        sources, privacy governance and the first three projects, with a 90-day plan at the end.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#staffing">Staffing: who to hire, and when</a></li>
+          <li><a href="#definitions">Before the data: agree the definitions</a></li>
+          <li><a href="#data">Data sources: what to connect, in what order</a></li>
+          <li><a href="#privacy">Privacy governance: write it before the first analysis</a></li>
+          <li><a href="#projects">The first three projects</a></li>
+          <li><a href="#plan">A 90-day plan</a></li>
+          <li><a href="#tools">When to buy a platform</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="staffing">Staffing: who to hire, and when</h2>
+<p>
+        The first hire matters most. Look for someone who understands HR data, including how the
+        HRIS stores job changes and why the termination date and the last day worked differ, and who
+        can write SQL or build in Power BI or Tableau. Domain knowledge is harder to teach than the
+        tools. An internal HRIS analyst who has been doing reporting is often the right person.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Stage</th><th>Who</th><th>What they deliver</th></tr></thead>
+          <tbody>
+            <tr><td>Start</td><td>One HR or people analyst, part or full time</td><td>Trusted monthly reporting, written definitions, the first diagnostic project</td></tr>
+            <tr><td>Grow</td><td>A data engineer or a shared resource from the central data team</td><td>Automated, joined data from HRIS, ATS, payroll and survey systems</td></tr>
+            <tr><td>Extend</td><td>Someone with statistics or industrial-organizational psychology training</td><td>Pay equity models, survey design, attrition risk, testing whether programs worked</td></tr>
+            <tr><td>Scale</td><td>A lead who translates between analysts and executives</td><td>A roadmap tied to business decisions, and analysis built into planning cycles</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        <strong>Where it reports.</strong> Most functions report into the CHRO, which keeps access to
+        sensitive data inside HR and keeps the work tied to HR decisions. The risk is that it becomes
+        a report factory for HR operations. A dotted line to finance or the central data team helps
+        with definitions and infrastructure. Whatever the line, give the function a named executive
+        sponsor who brings it questions.
+      </p>
+      <p>
+        <strong>When to stop at one.</strong> In a company of a few hundred, one analyst with clean
+        exports covers headcount, turnover, hiring and pay reporting, and that may be the whole
+        function for years. Add people when the questions outgrow the analyst's time, not because the
+        organization crossed a headcount threshold.
+      </p>
+      <h2 id="definitions">Before the data: agree the definitions</h2>
+<p>
+        Write a one-page data dictionary before connecting anything. It needs, at minimum:
+      </p>
+      <ul>
+        <li><strong>Headcount:</strong> who counts (employees only, or contractors, interns and
+        temps), on which date, and whether it reconciles to finance's number.</li>
+        <li><strong>Turnover:</strong> leavers divided by average headcount, with voluntary,
+        involuntary and regretted defined, and whether internal transfers count. The
+        <a href="/glossary/turnover-rate">turnover rate entry</a> covers the choices.</li>
+        <li><strong>Hire, rehire and transfer:</strong> what each means in the HRIS and the ATS,
+        which often disagree.</li>
+        <li><strong>Time to fill, time to hire, cost per hire, absence:</strong> the formulas and
+        cost categories in our <a href="/blogs/hr-metrics">HR metrics guide</a>.</li>
+        <li><strong>Organization:</strong> which field is the manager, which is the team, and how job
+        families and locations are coded.</li>
+      </ul>
+      <p>
+        Get the CHRO and the CFO to sign it. Every later argument about a number becomes an
+        argument about the dictionary, which is quicker to settle.
+      </p>
+      <h2 id="data">Data sources: what to connect, in what order</h2>
+<div class="table-scroll">
+        <table>
+          <thead><tr><th>Order</th><th>Source</th><th>What it adds</th><th>Watch for</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>HRIS</td><td>Headcount, job, manager, location, tenure, exits and reasons</td><td>Stale manager fields; job changes overwritten rather than dated</td></tr>
+            <tr><td>2</td><td>Payroll and compensation</td><td>Pay, grade, bonus, raises</td><td>Different employee IDs from the HRIS</td></tr>
+            <tr><td>3</td><td>Applicant tracking (ATS)</td><td>Source, stages, time to fill, offers</td><td>Stages skipped or back-filled by recruiters</td></tr>
+            <tr><td>4</td><td>Engagement and exit surveys</td><td>Sentiment by team; coded exit reasons</td><td>Anonymity promises that limit joining</td></tr>
+            <tr><td>5</td><td>Performance and learning</td><td>Ratings, promotions, completed training</td><td>Rating inflation; ratings that change meaning year to year</td></tr>
+            <tr><td>6</td><td>Time, absence and collaboration</td><td>Absence, overtime, meeting load, after-hours work</td><td>Monitoring notice laws once data is attributed to individuals</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The first three answer most early questions. Surveys come fourth because joining them to HR
+        data is where anonymity promises and analysis collide: if the survey said responses would
+        never be linked to individuals, report by team above a minimum group size and do not join at
+        person level. Our <a href="/blogs/employee-engagement-survey-questions">engagement survey
+        guide</a> suggests a floor of five responses; our <a href="/glossary/enps">eNPS entry</a>
+        explains why team eNPS below about 30 respondents is mostly noise.
+      </p>
+      <p>
+        The sixth row is where people analytics becomes workforce analytics and, if attributed to
+        individuals, monitoring. Our comparison of
+        <a href="/blogs/workforce-analytics-vs-people-analytics">workforce and people analytics</a>
+        covers that boundary.
+      </p>
+      <h2 id="privacy">Privacy governance: write it before the first analysis</h2>
+<p>
+        A people analytics function holds the most sensitive data in the company: pay, performance,
+        health-related absence, protected attributes and survey answers. Write these rules down and
+        publish them to employees before the first project:
+      </p>
+      <ol class="steps">
+        <li><strong>Purpose statement.</strong> What the function analyzes and why, and what it will
+        not do, such as judging individuals from activity data or using survey answers in
+        performance reviews.</li>
+        <li><strong>Minimum group size.</strong> No report on a group below a set number; report the
+        next level up instead. Apply it to pay, diversity and survey results especially.</li>
+        <li><strong>Access tiers.</strong> Analysts see person-level data; managers see their team's
+        aggregates; executives see the organization. Log who accessed what.</li>
+        <li><strong>Model rules.</strong> Attrition risk and other predictions are used for
+        populations, reviewed for bias, and never used alone for a decision about a person. In New
+        York City, <a href="/glossary/aedt">automated employment decision tools</a> used in hiring or
+        promotion need a bias audit; <a href="/blogs/ai-hiring-laws-by-state">other states</a> and
+        <a href="/blogs/california-ai-workplace-laws">California's automated decision rules</a> add
+        their own requirements.</li>
+        <li><strong>Retention and deletion.</strong> How long raw extracts are kept and when they are
+        deleted.</li>
+        <li><strong>Jurisdiction checks.</strong> GDPR and works council consultation in Europe, the
+        California Consumer Privacy Act's employee provisions, and
+        <a href="/blogs/employee-monitoring-laws-by-state">monitoring notice laws</a> in four states
+        for any activity data attributed to individuals.</li>
+      </ol>
+      <p>
+        The test for every output is whether it could be shown to the people it describes without
+        difficulty. Our guide to <a href="/blogs/workplace-analytics-without-surveillance">analytics
+        without surveillance</a> has the design rules.
+      </p>
+      <h2 id="projects">The first three projects</h2>
+<p>
+        Pick projects that use the first three data sources, answer a question a leader has asked,
+        and end in a decision. These three meet all three tests in most organizations.
+      </p>
+      <h3>1. Where turnover concentrates</h3>
+      <p>
+        Calculate voluntary and regretted turnover by manager, tenure band, job family and location,
+        with first-year turnover separately. Add coded exit reasons from your
+        <a href="/blogs/exit-interview-questions">exit interviews</a>. The decision is where to put
+        manager support and stay conversations. It is the right first project because the data is in
+        the HRIS, the result is usually striking, and turnover by manager is typically the most
+        concentrated pattern in the data.
+      </p>
+      <h3>2. Pay equity review</h3>
+      <p>
+        Compare pay by gender and, where data allows, race, controlling for grade, role, location,
+        tenure and performance. Report the adjusted gap and the individuals who fall outside their
+        band, to HR and counsel only. The decision is the adjustment budget. Several states now
+        require pay analysis or reporting, which makes this the most common first use case for
+        platforms; our <a href="/blogs/pay-transparency-laws-by-state">pay transparency laws</a> guide
+        lists them. Run it under legal privilege where counsel advises.
+      </p>
+      <h3>3. Quality of hire by source</h3>
+      <p>
+        Join ATS source to first-year turnover and cost per hire for each channel: referral, job
+        board, agency, internal move. The decision is next year's recruiting budget. It proves the
+        value of joining two systems, and it puts a money figure on the answer that recruiting leaders
+        can act on directly.
+      </p>
+      <p>
+        Each project should end in a one-page memo: the question, the finding, the decision taken,
+        and the date the result will be re-measured. Our
+        <a href="/blogs/workforce-analytics-examples">workforce analytics examples</a> list seven more
+        questions to queue after these.
+      </p>
+      <h2 id="plan">A 90-day plan</h2>
+<div class="table-scroll">
+        <table>
+          <thead><tr><th>Weeks</th><th>Work</th><th>Done when</th></tr></thead>
+          <tbody>
+            <tr><td>1 to 2</td><td>Appoint the analyst and the executive sponsor; list the leaders' top five questions</td><td>Three questions chosen, each with a decision owner</td></tr>
+            <tr><td>3 to 4</td><td>Write and sign the data dictionary; draft the privacy rules</td><td>Headcount reconciles with finance</td></tr>
+            <tr><td>5 to 8</td><td>Extract and join HRIS, payroll and ATS data; publish the privacy rules</td><td>Monthly turnover and headcount report trusted by HR and finance</td></tr>
+            <tr><td>9 to 12</td><td>Run project 1; start project 2 with counsel</td><td>First memo delivered and a decision recorded</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2 id="tools">When to buy a platform</h2>
+<p>
+        Stay on spreadsheets and Power BI while one analyst can keep the joins current. Buy when data
+        lives in several systems that disagree, definitions need governing across a large
+        organization, predictive models are wanted, or analyst time is the bottleneck. ChartHop is
+        priced for mid-sized companies, from $2 per employee for its Basic plan as read in October
+        2026; Visier, One Model and Crunchr are quoted. Our
+        <a href="/tools/best-people-analytics-software">people analytics software guide</a> compares
+        eight platforms by who they are built for, and our explainer on
+        <a href="/blogs/what-is-people-analytics">what people analytics is</a> includes a maturity
+        self-check to see whether you are ready for one.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Start with one analyst who knows HR data and can use SQL or Power BI; add engineering and statistics as questions grow.</li>
+        <li>Write a signed data dictionary for headcount, turnover, hires and organization fields before connecting any system.</li>
+        <li>Connect the HRIS, payroll and ATS first; add surveys, performance and activity data later, with anonymity and notice rules in mind.</li>
+        <li>Publish privacy rules first: purpose, minimum group size, access tiers, model rules, retention and jurisdiction checks.</li>
+        <li>First projects: turnover concentration, pay equity review and quality of hire by source, each ending in a recorded decision.</li>
+        <li>Buy a platform when data lives in several disagreeing systems or analyst time runs out, not before.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>Who should be the first people analytics hire?</summary>
+          <p>An analyst who understands HR data and can write SQL or build in Power BI or Tableau. An internal HRIS or HR reporting analyst is often the best candidate, because domain knowledge is harder to teach than tools.</p>
+        </details>
+        <details>
+          <summary>Where should people analytics report?</summary>
+          <p>Usually to the CHRO, which keeps sensitive data inside HR and ties the work to HR decisions, with a dotted line to finance or the central data team for definitions and infrastructure. A named executive sponsor matters more than the reporting line.</p>
+        </details>
+        <details>
+          <summary>What data sources does a people analytics team need?</summary>
+          <p>Start with the HRIS, payroll and the applicant tracking system. Add engagement and exit surveys, performance and learning data, and time, absence and collaboration data as projects require them.</p>
+        </details>
+        <details>
+          <summary>What should the first people analytics project be?</summary>
+          <p>Turnover by manager, tenure and job family, split into voluntary and regretted, with first-year turnover separate. The data is already in the HRIS, the result is usually actionable, and it builds trust for the projects that follow.</p>
+        </details>
+        <details>
+          <summary>How do you protect employee privacy in people analytics?</summary>
+          <p>Publish a purpose statement, set a minimum group size for every report, restrict person-level data to analysts, never let a model decide about an individual, delete raw extracts on a schedule, and check GDPR, CCPA, AI-in-employment and monitoring notice rules for each data source.</p>
+        </details>
+        <details>
+          <summary>Do you need software to start people analytics?</summary>
+          <p>No. Most organizations under a few hundred employees can run the first projects on HRIS exports in a spreadsheet or Power BI. Platforms pay when data sits in several systems or the analyst's time runs out.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-people-analytics-software">Best People Analytics Software (2026)</a></li>
+          <li><a href="/blogs/what-is-people-analytics">What Is People Analytics?</a></li>
+          <li><a href="/blogs/hr-metrics">HR Metrics: Formulas and 2025 Benchmarks</a></li>
+          <li><a href="/blogs/workforce-analytics-examples">Workforce Analytics Examples</a></li>
+          <li><a href="/glossary/turnover-rate">Turnover Rate</a></li>
+          <li><a href="/blogs/pay-transparency-laws-by-state">Pay Transparency Laws by State</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

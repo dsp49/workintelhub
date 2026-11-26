@@ -122,7 +122,7 @@
             "name": "Is keystroke logging legal in the United States?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut and Delaware require written notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability."
+              "text": "On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut, Delaware and Maine require notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability."
             }
           },
           {
@@ -130,7 +130,7 @@
             "name": "Can my employer see what I type?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut and Delaware the employer must have told you in writing; elsewhere the policy should say what is captured."
+              "text": "If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut, Delaware and Maine the employer must have told you, in writing or electronically depending on the state; elsewhere the policy should say what is captured."
             }
           },
           {
@@ -146,7 +146,7 @@
             "name": "Do employers have to tell employees about keystroke logging?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it."
+              "text": "By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) Delaware (acknowledged notice or daily electronic notice) and Maine (notice to applicants and written notice to employees every year, since July 2026). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it."
             }
           },
           {
@@ -273,7 +273,7 @@
           if (what === "content") risk.push("Content capture records passwords, personal messages and health or financial details; several states treat real-time capture as interception requiring all-party consent, and it creates a data breach liability the employer did not have before");
           if (what === "biometric") risk.push("Typing-rhythm identification is a biometric identifier in Illinois (BIPA) and under similar laws in Texas and Washington; written consent and a retention policy are required");
           if (dev === "byod") risk.push("Logging on an employee-owned device captures personal use outside work; courts have been hostile to it and many states' computer crime laws apply");
-          if (notice === "none") risk.push("No notice: in every state this removes the employer's main defense and in New York, Connecticut and Delaware it is a statutory violation");
+          if (notice === "none") risk.push("No notice: in every state this removes the employer's main defense and in New York, Connecticut, Delaware and Maine it is a statutory violation");
           html += row("Reading", risk.length ? "Not defensible as configured" : (what === "counts" && dev === "company" && notice === "ack" ? "Defensible: activity-level data on company devices with acknowledged notice" : "Defensible with the conditions in the state rule met"));
           risk.forEach(function (x, i) { html += row("Issue " + (i + 1), x); });
           html += row("Minimum to fix", "Written notice acknowledged at hire and posted; policy stating what is captured, who sees it, how long it is kept; company devices only; counts not content; no capture in password fields or personal accounts");
@@ -331,6 +331,9 @@
         the change.</li>
         <li><strong>Delaware.</strong> <a href="https://delcode.delaware.gov/title19/c007/sc01/index.html" target="_blank" rel="noopener">19 Del. C. 705</a> requires either a one-time acknowledged notice or a
         daily electronic notice at login for monitoring of email, internet or telephone use.</li>
+        <li><strong>Maine.</strong> <a href="https://legislature.maine.gov/legis/bills/display_ps.asp?LD=61&amp;snum=132" target="_blank" rel="noopener">26 M.R.S. 620-A</a>, in force since 14 July 2026,
+        covers employer surveillance generally, including keystroke logging, and requires notice to
+        applicants during hiring and written notice to employees at least once a year.</li>
         <li><strong>All-party consent states.</strong> California, Florida, Illinois, Maryland,
         Massachusetts, Pennsylvania, Washington and others require every party's consent to
         intercept a communication. Real-time capture of a message as it is typed has been argued
@@ -383,7 +386,7 @@
         exclusion lists; a tool that does not is the wrong tool.</li>
         <li><strong>Give notice properly.</strong> Written, at hire, acknowledged, posted, and
         specific about what is captured, who can see it, how long it is kept and what decisions
-        it may inform. This is the law in three states and the defense everywhere.</li>
+        it may inform. This is the law in four states and the defense everywhere.</li>
         <li><strong>Restrict access and retention.</strong> Named viewers, a short retention
         period, deletion on schedule, and a log of who looked at what.</li>
         <li><strong>Never use it as the sole basis for a decision.</strong> An activity score is
@@ -402,7 +405,7 @@
       <ul>
         <li>Keystroke counting records how much was typed; keystroke content logging records what. The first is an activity signal, the second is a store of passwords and personal data.</li>
         <li>Federal law permits monitoring on company systems with notice and a business purpose. Covert logging, personal devices and personal accounts are where liability starts.</li>
-        <li>New York, Connecticut and Delaware require written notice by statute; all-party consent states make real-time content capture riskier; Illinois treats typing rhythm as a biometric.</li>
+        <li>New York, Connecticut, Delaware and Maine require notice by statute; all-party consent states make real-time content capture riskier; Illinois treats typing rhythm as a biometric.</li>
         <li>About half of US adults oppose recording what workers do on their computers, and activity scores based on typing reward typing, not work.</li>
         <li>Configure for counts not content, company devices only, exclusion lists, acknowledged notice, restricted access and short retention.</li>
         <li>Never make a decision on an activity score alone.</li>
@@ -412,11 +415,11 @@
         <h2 id="faq">Frequently asked questions</h2>
         <details>
           <summary>Is keystroke logging legal in the United States?</summary>
-          <p>On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut and Delaware require written notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability.</p>
+          <p>On company-owned devices, with notice and a legitimate business purpose, generally yes under federal law. New York, Connecticut, Delaware and Maine require notice by statute, all-party consent states raise the risk of capturing message content in real time, and Illinois requires written consent for typing-rhythm biometrics. Covert logging, logging on personal devices and capture of personal accounts have produced civil and, occasionally, criminal liability.</p>
         </details>
         <details>
           <summary>Can my employer see what I type?</summary>
-          <p>If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut and Delaware the employer must have told you in writing; elsewhere the policy should say what is captured.</p>
+          <p>If the employer has installed keystroke content logging on a company device, yes, including passwords and personal messages typed on it, subject to any exclusions the tool applies. Most productivity monitoring tools record keystroke counts rather than content. In New York, Connecticut, Delaware and Maine the employer must have told you, in writing or electronically depending on the state; elsewhere the policy should say what is captured.</p>
         </details>
         <details>
           <summary>What is the difference between keystroke logging and keystroke counting?</summary>
@@ -424,7 +427,7 @@
         </details>
         <details>
           <summary>Do employers have to tell employees about keystroke logging?</summary>
-          <p>By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) and Delaware (acknowledged notice or daily electronic notice). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it.</p>
+          <p>By statute in New York (written notice at hire, acknowledged and posted), Connecticut (written notice of the types of monitoring, posted, with additional requirements from October 2026) Delaware (acknowledged notice or daily electronic notice) and Maine (notice to applicants and written notice to employees every year, since July 2026). Everywhere else, notice is the practical basis for the consent and business-use defenses under federal law, and covert logging removes it.</p>
         </details>
         <details>
           <summary>Is keystroke logging a biometric?</summary>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Make a Shift Schedule, Step by Step</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Work out coverage, pick shift lengths, collect availability, fill the grid, check overtime and rest, then publish two weeks ahead. With a headcount calculator." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/how-to-make-a-shift-schedule" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/how-to-make-a-shift-schedule" />
+  <meta property="og:title" content="How to Make a Shift Schedule, Step by Step" />
+  <meta property="og:description" content="Work out coverage, pick shift lengths, collect availability, fill the grid, check overtime and rest, then publish two weeks ahead. With a headcount calculator." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/how-to-make-a-shift-schedule.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Make a Shift Schedule, Step by Step" />
+  <meta name="twitter:description" content="Work out coverage, pick shift lengths, collect availability, fill the grid, check overtime and rest, then publish two weeks ahead. With a headcount calculator." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/how-to-make-a-shift-schedule.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/how-to-make-a-shift-schedule#article",
+      "headline": "How to Make a Shift Schedule, Step by Step",
+      "description": "Work out coverage, pick shift lengths, collect availability, fill the grid, check overtime and rest, then publish two weeks ahead. With a headcount calculator.",
+      "image": "https://workintelhub.com/images/blog/how-to-make-a-shift-schedule.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/how-to-make-a-shift-schedule"
+      },
+      "articleSection": "Time Tracking",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/how-to-make-a-shift-schedule#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Time Tracking",
+          "item": "https://workintelhub.com/topics/time-tracking"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Make a Shift Schedule, Step by Step"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/how-to-make-a-shift-schedule#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I make a shift schedule for employees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Map how many people you need at each hour, choose shift lengths that cover those hours, calculate the shifts and headcount, collect availability and constraints, fill the constrained shifts first and then the rest, check overtime and rest gaps, and publish at least two weeks ahead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many employees do I need to cover a shift schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Multiply shifts per day by staff per shift, days open and shift length to get staffed hours per week, divide by the average hours each employee works, and add a buffer for time off and absence. Twelve hours a day, seven days, with three people on at a time and 8-hour shifts needs 336 staffed hours, or about 12 people at 32 hours each with a 12% buffer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best shift length?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your hours. Eight-hour shifts fit a 16-hour day in two, 12-hour shifts cover 24 hours in two but owe daily overtime in states such as California, and four- to six-hour shifts suit peaks and part-time staff."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far in advance should a shift schedule be posted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At least two weeks. It is the legal minimum for covered employers in Oregon and in fair workweek cities including Seattle, Chicago, Philadelphia, Los Angeles and New York City for fast food, and changes after posting can owe premium pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the easiest way to make a shift schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a small team, a template that totals coverage and hours as you fill it, such as our work schedule template. For 20 or more people or several sites, a scheduling app that collects availability, runs swaps and flags overtime saves the most time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make a fair shift schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Write down how unpopular shifts such as closes, weekends and nights are shared, rotate them, give hours first to people below their target, and publish the rule with the schedule so everyone can check it."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>How to Make a Shift Schedule, Step by Step</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/how-to-make-a-shift-schedule.png" alt="A document showing a weekly shift grid with colored blocks and a calculator beside it" width="1200" height="630" />
+      </figure>
+
+<p>
+        To make a shift schedule, work out how many people you need at each hour you are open, divide
+        those hours into shifts, collect everyone's availability, fill the shifts against it, check
+        each person's weekly hours and rest gaps, and publish the schedule at least two weeks ahead.
+        The order matters: a schedule built from people first and demand second is the one that gets
+        rewritten in swap requests by Wednesday.
+      </p>
+      <p>
+        This guide takes the seven steps in turn. The calculator in step three turns your opening
+        hours, staff per shift and shift length into the number of shifts and the headcount the week
+        needs, which is the number most managers guess at. The
+        <a href="/blogs/work-schedule-template">work schedule template</a> is where you fill the grid
+        once you have it.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#step-1">Step 1: Map demand by hour</a></li>
+          <li><a href="#step-2">Step 2: Choose shift lengths and a pattern</a></li>
+          <li><a href="#step-3">Step 3: Work out shifts and headcount</a></li>
+          <li><a href="#step-4">Step 4: Collect availability and constraints</a></li>
+          <li><a href="#step-5">Step 5: Fill the grid</a></li>
+          <li><a href="#step-6">Step 6: Check hours, overtime and rest</a></li>
+          <li><a href="#step-7">Step 7: Publish, then manage changes</a></li>
+          <li><a href="#mistakes">Five mistakes that break a schedule</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>Start from demand.</strong> The number of people needed at each hour decides everything else; availability and preferences come after.</p>
+        <p><strong>Headcount is hours divided by hours per person, plus a buffer.</strong> A shop open 12 hours a day, 7 days a week, with 2 people on at all times needs about 168 staffed hours a week before anyone is off sick.</p>
+        <p><strong>Check before you publish.</strong> Weekly overtime over 40 hours, rest gaps between close and open, and any local fair workweek notice rule.</p>
+      </div>
+      <h2 id="step-1">Step 1: Map demand by hour</h2>
+<p>
+        Write down your opening hours for each day and how many people each hour needs. Use what you
+        already have: sales or transactions by hour from the till, call volumes, patient census, or
+        simply the times the floor feels short. Most businesses have three or four levels a day: a
+        quiet opening, a peak, a shoulder and a close.
+      </p>
+      <p>
+        Include the work that happens while the doors are shut. Opening and closing tasks, deliveries
+        and cash-up are staffed hours even though no customer sees them, and leaving them out is the
+        most common reason a schedule looks covered on paper and is short in practice.
+      </p>
+      <h2 id="step-2">Step 2: Choose shift lengths and a pattern</h2>
+<p>
+        Shift length is a trade-off between coverage and people. Eight-hour shifts fit a 16-hour day
+        neatly in two; 12-hour shifts cover 24 hours with two shifts but put four hours of daily
+        overtime on every shift in states with a daily threshold, such as California. Shorter
+        shifts of four to six hours suit a lunch or evening peak and the part-time staff who want
+        them.
+      </p>
+      <ul>
+        <li><strong>Fixed shifts</strong> give each person the same hours each week. Easiest to plan a life around, hardest to make fair for the unpopular slots.</li>
+        <li><strong>Rotating shifts</strong> move people through days, evenings and nights on a cycle. For 24-hour operations, our <a href="/blogs/rotating-shift-schedules">rotating shift schedules</a> guide covers the Panama, Pitman, DuPont and 4-on-4-off patterns.</li>
+        <li><strong>Split shifts</strong> cover two peaks with a gap in the middle. Some states require a premium; see <a href="/blogs/split-shift">split shift</a>.</li>
+        <li><strong>On-call shifts</strong> hold someone in reserve. Several fair workweek laws pay for unused on-call time, and New York City bans it in retail; see <a href="/blogs/on-call-scheduling">on-call scheduling</a>.</li>
+      </ul>
+      <p>
+        Overlap shifts by 15 to 30 minutes where handover matters, and count the overlap as staffed
+        time in the calculator below.
+      </p>
+      <h2 id="step-3">Step 3: Work out shifts and headcount</h2>
+<p>
+        Enter your hours and staffing level. The calculator rounds shifts up, because a shift that
+        covers part of the day still has to be staffed in full, and adds a buffer for holidays,
+        sickness and turnover so the headcount is the number you need on the payroll, not the number
+        you need on a perfect week.
+      </p>
+      <div class="calc" id="ssc">
+        <div class="calc__grid">
+          <div><label for="ssc-open">Hours open per day</label><input id="ssc-open" type="number" min="1" max="24" step="0.5" value="12" /></div>
+          <div><label for="ssc-extra">Extra hours for opening and closing tasks</label><input id="ssc-extra" type="number" min="0" max="6" step="0.5" value="1" /></div>
+          <div><label for="ssc-days">Days open per week</label><input id="ssc-days" type="number" min="1" max="7" value="7" /></div>
+          <div><label for="ssc-staff">Staff needed on each shift</label><input id="ssc-staff" type="number" min="1" value="3" /></div>
+          <div><label for="ssc-len">Shift length (hours)</label><select id="ssc-len"><option value="4">4</option><option value="6">6</option><option value="8" selected>8</option><option value="10">10</option><option value="12">12</option></select></div>
+          <div><label for="ssc-per">Average hours per employee per week</label><input id="ssc-per" type="number" min="4" max="60" value="32" /></div>
+          <div><label for="ssc-buf">Buffer for time off and absence (%)</label><input id="ssc-buf" type="number" min="0" max="50" value="12" /></div>
+        </div>
+        <div class="calc__out" id="ssc-out"></div>
+        <p class="calc__note">Assumes the same staffing level for every hour you are open. If your peak needs more people, run it once for the base level and add peak shifts separately. Nothing you enter leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function num(id, d) { var v = parseFloat(el(id).value); return isNaN(v) ? d : v; }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function fmt(n) { return n.toLocaleString('en-US', {maximumFractionDigits: 1}); }
+        function calc() {
+          var open = Math.min(24, Math.max(1, num('ssc-open', 12)));
+          var extra = Math.max(0, num('ssc-extra', 0));
+          var span = Math.min(24, open + extra);
+          var days = Math.min(7, Math.max(1, Math.round(num('ssc-days', 7))));
+          var staff = Math.max(1, Math.round(num('ssc-staff', 1)));
+          var len = parseFloat(el('ssc-len').value);
+          var per = Math.max(4, num('ssc-per', 32));
+          var buf = Math.min(50, Math.max(0, num('ssc-buf', 0)));
+          var perDay = Math.ceil(span / len);
+          var overlap = perDay * len - span;
+          var shiftsWeek = perDay * staff * days;
+          var hoursWeek = shiftsWeek * len;
+          var base = hoursWeek / per;
+          var head = Math.ceil(base * (1 + buf / 100));
+          var html = row('Hours to cover each day', fmt(span));
+          html += row('Shifts per position per day', perDay + (overlap > 0 ? ' (' + fmt(overlap) + ' h of overlap or slack to place)' : ''));
+          html += row('Shifts to fill per week', fmt(shiftsWeek));
+          html += row('Staffed hours per week', fmt(hoursWeek));
+          html += row('People needed before buffer', fmt(base));
+          html += '<div class="calc__row calc__total"><span>Headcount to schedule from</span><span>' + head + ' people</span></div>';
+          if (per > 40) html += row('Note', 'Over 40 hours a week is overtime for non-exempt staff');
+          if (len >= 10) html += row('Note', len + '-hour shifts owe daily overtime in states with an 8-hour daily threshold');
+          el('ssc-out').innerHTML = html;
+        }
+        ['ssc-open', 'ssc-extra', 'ssc-days', 'ssc-staff', 'ssc-len', 'ssc-per', 'ssc-buf'].forEach(function (id) { el(id).addEventListener('input', calc); el(id).addEventListener('change', calc); });
+        calc();
+      })();
+      </script>
+      <p>
+        With the defaults (12 hours open plus an hour of opening and closing, 3 people at a time,
+        8-hour shifts, 7 days), the day needs two shifts per position with 3 hours of overlap to
+        place, 42 shifts a week and 336 staffed hours. At 32 hours a person that is 10.5 people, and
+        with a 12% buffer, 12 on the payroll. The buffer is a judgment: use your own absence and
+        turnover history if you have it.
+      </p>
+      <h2 id="step-4">Step 4: Collect availability and constraints</h2>
+<p>
+        Before anyone is placed, collect each person's availability as time ranges per day, their
+        maximum weekly hours and their fixed commitments. Our
+        <a href="/blogs/employee-availability-form">employee availability form</a> generates the
+        form. Then list the hard constraints that override preference:
+      </p>
+      <ul>
+        <li>Skills or certifications a shift needs: a keyholder on every open and close, a licensed pharmacist, a forklift ticket.</li>
+        <li>Minors' hour limits under state child labor law.</li>
+        <li>Minimum rest between shifts where a law or agreement sets one.</li>
+        <li>Approved time off.</li>
+      </ul>
+      <h2 id="step-5">Step 5: Fill the grid</h2>
+<ol class="steps">
+        <li><strong>Place the constrained shifts first.</strong> Keyholders and certified roles, because they have the fewest people who can do them.</li>
+        <li><strong>Spread the unpopular shifts.</strong> Closes, weekends and nights rotate, and the rule for who gets them is written down. Publishing the rule settles most fairness complaints before they start.</li>
+        <li><strong>Fill the remaining shifts against availability,</strong> giving hours first to people below their target.</li>
+        <li><strong>Name an on-call or first-call person for each day,</strong> who has agreed to be asked first when someone is out.</li>
+      </ol>
+      <p>
+        The <a href="/blogs/work-schedule-template">schedule builder in our work schedule template</a>
+        does this fill automatically from each person's maximum hours and shows the coverage and
+        hours totals live. For more than about 20 people, or more than one site, a scheduling app
+        saves the most time here; our
+        <a href="/tools/best-shift-scheduling-software">comparison of shift scheduling software</a>
+        ranks eight, from Sling's free plan for 30 users to Deputy's auto-scheduling.
+      </p>
+      <h2 id="step-6">Step 6: Check hours, overtime and rest</h2>
+<p>
+        Before publishing, run three checks on every person's week.
+      </p>
+      <ul>
+        <li><strong>Weekly hours.</strong> Under the Fair Labor Standards Act, hours over 40 in a workweek are overtime at one and a half times the regular rate, and the regular rate includes shift differentials. Our <a href="/blogs/overtime-calculator">overtime calculator</a> does it properly. Overtime to cover a gap can be the cheaper choice, but make it a decision rather than a surprise.</li>
+        <li><strong>Daily hours.</strong> California and a few other states add a daily overtime threshold, so a 10-hour shift can owe overtime in a 40-hour week.</li>
+        <li><strong>Rest gaps.</strong> Sort each person's shifts and flag any close followed by an open. Fair workweek cities set minimum gaps of 9 to 11 hours with premiums for working inside them; our table of <a href="/blogs/predictive-scheduling-laws-by-state">predictive scheduling laws</a> lists each.</li>
+      </ul>
+      <h2 id="step-7">Step 7: Publish, then manage changes</h2>
+<p>
+        Publish the schedule at least two weeks ahead, on the same day every week, where everyone can
+        see it on their phone. In Oregon and the fair workweek cities, 14 days is the legal minimum
+        for covered employers, and changes after that cost a premium. Everywhere else it is what
+        makes planning, and swapping, possible.
+      </p>
+      <p>
+        After publication, most changes are swaps. Write the rule down so they do not need a manager:
+        both people qualified, neither pushed into overtime or a short rest gap, and both confirming in
+        writing. Our <a href="/blogs/shift-swap-policy">shift swap policy</a> has the wording, and
+        the <a href="/tools/best-shift-scheduling-software">top shift scheduling tools</a> run swaps
+        and open shifts in the app with those checks applied.
+      </p>
+      <h2 id="mistakes">Five mistakes that break a schedule</h2>
+<ul>
+        <li><strong>Scheduling to the average day.</strong> The average Tuesday is short at lunch and overstaffed at 3 p.m.</li>
+        <li><strong>No buffer.</strong> A headcount that only works if nobody is sick fails every week someone is.</li>
+        <li><strong>Copying last week's schedule forward.</strong> It carries last week's mistakes and ignores this week's time off.</li>
+        <li><strong>Publishing late.</strong> Every day of notice lost becomes a swap request or a no-show.</li>
+        <li><strong>Unwritten rules for good shifts.</strong> If people cannot see how weekends and closes are shared, they assume favoritism.</li>
+      </ul>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Build the schedule from demand by hour first, then availability, then preferences.</li>
+        <li>Headcount is staffed hours per week divided by average hours per person, plus a buffer for time off and absence.</li>
+        <li>Include opening and closing tasks in the hours to cover, and round shifts up.</li>
+        <li>Place keyholder and certified shifts first and rotate the unpopular ones under a written rule.</li>
+        <li>Check every person for weekly overtime over 40 hours, daily overtime where a state requires it, and close-to-open rest gaps.</li>
+        <li>Publish at least two weeks ahead; it is the law for covered employers in Oregon and the fair workweek cities.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do I make a shift schedule for employees?</summary>
+          <p>Map how many people you need at each hour, choose shift lengths that cover those hours, calculate the shifts and headcount, collect availability and constraints, fill the constrained shifts first and then the rest, check overtime and rest gaps, and publish at least two weeks ahead.</p>
+        </details>
+        <details>
+          <summary>How many employees do I need to cover a shift schedule?</summary>
+          <p>Multiply shifts per day by staff per shift, days open and shift length to get staffed hours per week, divide by the average hours each employee works, and add a buffer for time off and absence. Twelve hours a day, seven days, with three people on at a time and 8-hour shifts needs 336 staffed hours, or about 12 people at 32 hours each with a 12% buffer.</p>
+        </details>
+        <details>
+          <summary>What is the best shift length?</summary>
+          <p>It depends on your hours. Eight-hour shifts fit a 16-hour day in two, 12-hour shifts cover 24 hours in two but owe daily overtime in states such as California, and four- to six-hour shifts suit peaks and part-time staff.</p>
+        </details>
+        <details>
+          <summary>How far in advance should a shift schedule be posted?</summary>
+          <p>At least two weeks. It is the legal minimum for covered employers in Oregon and in fair workweek cities including Seattle, Chicago, Philadelphia, Los Angeles and New York City for fast food, and changes after posting can owe premium pay.</p>
+        </details>
+        <details>
+          <summary>What is the easiest way to make a shift schedule?</summary>
+          <p>For a small team, a template that totals coverage and hours as you fill it, such as our work schedule template. For 20 or more people or several sites, a scheduling app that collects availability, runs swaps and flags overtime saves the most time.</p>
+        </details>
+        <details>
+          <summary>How do I make a fair shift schedule?</summary>
+          <p>Write down how unpopular shifts such as closes, weekends and nights are shared, rotate them, give hours first to people below their target, and publish the rule with the schedule so everyone can check it.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-shift-scheduling-software">Best Shift Scheduling Software</a></li>
+          <li><a href="/blogs/work-schedule-template">Work Schedule Template</a></li>
+          <li><a href="/blogs/rotating-shift-schedules">Rotating Shift Schedules</a></li>
+          <li><a href="/blogs/predictive-scheduling-laws-by-state">Predictive Scheduling Laws by State and City</a></li>
+          <li><a href="/blogs/shift-swap-policy">Shift Swap Policy: Rules and a Free Template</a></li>
+          <li><a href="/blogs/workforce-vs-shift-scheduling">Workforce vs Shift Scheduling</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

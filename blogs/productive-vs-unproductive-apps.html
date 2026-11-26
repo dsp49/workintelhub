@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productive vs Unproductive Apps: How Classification Works</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Tools label each app and site productive, unproductive or neutral per role, then total active time in each. How labels are set, where they fail, plus a demo." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/productive-vs-unproductive-apps" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/productive-vs-unproductive-apps" />
+  <meta property="og:title" content="Productive vs Unproductive Apps: How Classification Works" />
+  <meta property="og:description" content="Tools label each app and site productive, unproductive or neutral per role, then total active time in each. How labels are set, where they fail, plus a demo." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/productive-vs-unproductive-apps.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Productivity" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Productive vs Unproductive Apps: How Classification Works" />
+  <meta name="twitter:description" content="Tools label each app and site productive, unproductive or neutral per role, then total active time in each. How labels are set, where they fail, plus a demo." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/productive-vs-unproductive-apps.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/productive-vs-unproductive-apps#article",
+      "headline": "Productive vs Unproductive Apps: How Classification Works",
+      "description": "Tools label each app and site productive, unproductive or neutral per role, then total active time in each. How labels are set, where they fail, plus a demo.",
+      "image": "https://workintelhub.com/images/blog/productive-vs-unproductive-apps.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/productive-vs-unproductive-apps"
+      },
+      "articleSection": "Productivity",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/productive-vs-unproductive-apps#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Productivity",
+          "item": "https://workintelhub.com/topics/productivity"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Productive vs Unproductive Apps: How Classification Works"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/productive-vs-unproductive-apps#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does software decide if an app is productive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It looks the app or website up in a classification list your employer maintains, usually per team or role, and labels it productive, unproductive or neutral. It does not judge what you did inside the app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the same app be productive and unproductive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lists are set per role or team, so a code editor can be productive for engineers and neutral for sales, and YouTube can be unproductive for most staff and productive for a video or social media team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does neutral or undefined mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Neutral or undefined time is time in an app or site the list has not labeled, or has deliberately left out. Most scores exclude it, so a large neutral total usually means the list is incomplete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a browser productive or unproductive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Neither by itself. Tools that work well classify browser time by site or URL. A browser-level label tells a manager almost nothing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see how my apps are classified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually. Most productivity tools offer an employee self-view showing your own time by label. If a tool you need is marked unproductive, ask how your team's list is set up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who sets the productive and unproductive lists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An administrator at your company, often with team leads. Vendors ship default categories in some tools, but the employer decides the final labels for each team."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Productivity</span>
+      <h1>Productive vs Unproductive Apps: How Classification Works</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/productive-vs-unproductive-apps.png" alt="Three columns of app icons sorted into productive, neutral and unproductive, with one browser icon sitting between them" width="1200" height="630" />
+      </figure>
+
+<p>
+        Productivity monitoring software decides whether an app is productive by looking it up in a list
+        your company maintains, usually per team or role, that labels each application and website
+        productive, unproductive or neutral. The agent then totals your active time in each label, and
+        that total becomes your productivity score.
+      </p>
+      <p>
+        The label is not a property of the app. Slack is work for a support agent and a distraction for
+        a developer in a focus block; YouTube is a time sink for most people and the job for a video
+        editor. This page explains how classification works, how the major tools set it up, where it goes
+        wrong, and how to build lists people will accept. The demo lets you watch one app change label as
+        the role changes.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#how-it-works">How classification works</a></li>
+          <li><a href="#labels">Productive, unproductive and neutral, by tool</a></li>
+          <li><a href="#demo">Try it: one app, three labels</a></li>
+          <li><a href="#failures">Where classification goes wrong</a></li>
+          <li><a href="#employees">If your app is labeled wrong</a></li>
+          <li><a href="#build-a-list">How to build a list people will accept</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>A label is a lookup, not a judgment.</strong> The agent records the app or site in the foreground and checks it against a list someone at your company configured.</p>
+        <p><strong>Labels are per role.</strong> The same app is productive for one team, neutral for another and unproductive for a third.</p>
+        <p><strong>Unlabeled apps are the hidden problem.</strong> Anything not on the list lands as neutral or undefined, and the score quietly ignores it.</p>
+      </div>
+      <h2 id="how-it-works">How classification works</h2>
+<p>
+        Every tool in our <a href="/tools/best-productivity-monitoring-software">productivity monitoring software comparison</a>
+        builds its score from three inputs: which application or site was in the foreground, whether the
+        person was active (keyboard or mouse input within a timeout), and how that application is
+        classified for the role. Classification is the third input and the one an employer controls
+        completely.
+      </p>
+      <ol class="steps">
+        <li><strong>Capture.</strong> The agent logs the foreground application name and, for browsers, the site or URL, with the time spent in each.</li>
+        <li><strong>Active filter.</strong> Time with no input past the <a href="/blogs/idle-time-tracking">idle threshold</a> is set aside as idle or passive.</li>
+        <li><strong>Lookup.</strong> The app or domain is matched against the classification list for the person's team or role.</li>
+        <li><strong>Totals.</strong> Active time is summed into productive, unproductive and neutral (or undefined) buckets, which feed the score, utilization or trend report.</li>
+      </ol>
+      <p>
+        Note what is not in the lookup: what you did inside the app. An hour in a spreadsheet is
+        productive whether you built the budget or stared at one cell. That is why classification
+        measures time in approved tools, which is a proxy for productivity, not productivity itself.
+      </p>
+      <h2 id="labels">Productive, unproductive and neutral, by tool</h2>
+<p>
+        Tools use slightly different words for the middle bucket and differ in how much setup they need.
+        The descriptions below come from our reviews of each product.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Tool</th><th>Labels</th><th>Set per</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>ActivTrak</td><td>Productive, unproductive, undefined</td><td>Role or team</td><td>Passive time is classified by the last application used; reviewers describe hours spent classifying</td></tr>
+            <tr><td>DeskTime</td><td>Productive, neutral, unproductive</td><td>Role</td><td>Simple scoring that needs the lists tuned per role</td></tr>
+            <tr><td>Time Doctor</td><td>Productive or unproductive</td><td>Team</td><td>Web and app ratings on Standard and Premium</td></tr>
+            <tr><td>Monitask</td><td>App and website classification</td><td>Team</td><td>Classification only on the Business plan and above</td></tr>
+            <tr><td>RescueTime</td><td>Automatic categories</td><td>The individual</td><td>Needs little setup; the person sees their own data first</td></tr>
+            <tr><td>Time Champ, Insightful, WorkTime</td><td>App and website classification</td><td>Team</td><td>Feeds a productivity score or utilization report</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        ActivTrak's value, as our <a href="/tools/activtrak-alternatives">ActivTrak alternatives guide</a>
+        puts it, depends on every application and website being classified for each team. That is true
+        of all of them. A tool with good defaults saves a week of setup; a tool with no review of those
+        defaults produces a confident wrong number.
+      </p>
+      <h2 id="demo">Try it: one app, three labels</h2>
+<p>
+        Pick a role and an app to see how a typical role-based list might label it, and why. The rules
+        here are an illustration written for this page, not any vendor's default list.
+      </p>
+      <div class="calc" id="pc">
+        <div class="calc__grid">
+          <div><label for="pc-role">Role</label><select id="pc-role"><option value="dev">Software engineer</option><option value="sales">Account executive</option><option value="support">Support agent</option><option value="design">Designer</option><option value="mkt">Social media marketer</option></select></div>
+          <div><label for="pc-app">App or site</label><select id="pc-app"><option value="ide">Code editor (IDE)</option><option value="crm">CRM</option><option value="slack">Team chat</option><option value="zoom">Video call app</option><option value="figma">Design tool</option><option value="yt">YouTube</option><option value="li">LinkedIn</option><option value="news">News site</option><option value="browser">Browser, unknown site</option><option value="sheet">Spreadsheet</option></select></div>
+          <div><label for="pc-min">Active minutes in it today</label><input id="pc-min" type="number" min="0" value="90" /></div>
+        </div>
+        <div class="calc__out" id="pc-out"></div>
+        <p class="calc__note">Illustrative rules only. Real lists are set by your employer per team, and the same app can be labeled differently in your account.</p>
+      </div>
+      <script>
+      (function () {
+        var R = {
+          ide:    {dev: 'P', sales: 'N', support: 'N', design: 'N', mkt: 'N'},
+          crm:    {dev: 'N', sales: 'P', support: 'P', design: 'N', mkt: 'N'},
+          slack:  {dev: 'N', sales: 'N', support: 'P', design: 'N', mkt: 'N'},
+          zoom:   {dev: 'N', sales: 'P', support: 'P', design: 'N', mkt: 'N'},
+          figma:  {dev: 'N', sales: 'N', support: 'N', design: 'P', mkt: 'P'},
+          yt:     {dev: 'U', sales: 'U', support: 'U', design: 'N', mkt: 'P'},
+          li:     {dev: 'U', sales: 'P', support: 'U', design: 'N', mkt: 'P'},
+          news:   {dev: 'U', sales: 'U', support: 'U', design: 'U', mkt: 'N'},
+          browser:{dev: 'N', sales: 'N', support: 'N', design: 'N', mkt: 'N'},
+          sheet:  {dev: 'N', sales: 'P', support: 'N', design: 'N', mkt: 'P'}
+        };
+        var WHY = {
+          P: 'It is a core tool for this role, so the list marks it productive.',
+          N: 'It is not core to this role, or the list cannot tell what was done in it, so it lands as neutral or undefined and is left out of most scores.',
+          U: 'The list treats it as off-task for this role, so its active minutes count against the score.'
+        };
+        var NAME = {P: 'Productive', N: 'Neutral / undefined', U: 'Unproductive'};
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var app = el('pc-app').value, role = el('pc-role').value;
+          var m = Math.max(0, parseFloat(el('pc-min').value) || 0);
+          var lab = R[app][role];
+          var others = Object.keys(R[app]).map(function (k) { return R[app][k]; });
+          var html = '<div class="calc__row calc__total"><span>Label</span><span>' + NAME[lab] + '</span></div>';
+          html += row('Why', WHY[lab]);
+          html += row(m + ' active minutes count as', NAME[lab].toLowerCase() + ' time');
+          html += row('Same app across the five roles', others.filter(function (x) { return x === 'P'; }).length + ' productive, ' + others.filter(function (x) { return x === 'N'; }).length + ' neutral, ' + others.filter(function (x) { return x === 'U'; }).length + ' unproductive');
+          if (app === 'browser') html += row('Note', 'A browser is anything. Useful lists classify by website, and an unlisted site falls into the neutral bucket.');
+          if (app === 'zoom') html += row('Note', 'A call with no typing may also be flagged idle, so it can drop out of active time before it is ever classified.');
+          el('pc-out').innerHTML = html;
+        }
+        ['pc-role', 'pc-app', 'pc-min'].forEach(function (id) { el(id).addEventListener('input', calc); el(id).addEventListener('change', calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="failures">Where classification goes wrong</h2>
+<ul>
+        <li><strong>The browser problem.</strong> Most work now happens in a browser, so a list that labels the browser itself tells you nothing. Classification has to happen at the site level, and every new internal tool, client portal or documentation site starts unlabeled.</li>
+        <li><strong>One list for everyone.</strong> Writing code in an IDE is productive for an engineer and undefined for a salesperson. A company-wide list either punishes specialists or labels so much as neutral that the score means little.</li>
+        <li><strong>Work the agent cannot see.</strong> Meetings with no typing, phone calls, whiteboards and thinking fall out as idle before classification is applied. Most tools treat a meeting as idle; ActivTrak's offline meeting time and calendar integrations are the exception noted in our comparison.</li>
+        <li><strong>The neutral bucket.</strong> Neutral time is usually excluded from the score, so a person who spends the morning in an unlabeled client tool can score higher or lower depending only on what the denominator includes. Our page on <a href="/blogs/employee-productivity-score">how an employee productivity score is calculated</a> works through that arithmetic.</li>
+        <li><strong>Gaming.</strong> Every method is gameable in proportion to how directly it is rewarded. Classification produces work done in the approved application, a cousin of the <a href="/blogs/mouse-jiggler">mouse jiggler</a> that activity scores produce.</li>
+      </ul>
+      <h2 id="employees">If your app is labeled wrong</h2>
+<p>
+        Employees usually see the result of classification before they see the list. A morning in a client
+        portal shows up as neutral, or a research site you need shows up as unproductive, and the daily score
+        drops for reasons that have nothing to do with the work. Three steps fix most of it.
+      </p>
+      <ul>
+        <li><strong>Open your own view.</strong> Most tools show tracked employees their own time by label. Find the specific apps and sites behind the neutral and unproductive totals.</li>
+        <li><strong>Ask how your team's list is set up.</strong> Lists are set per team, so the fix is usually a one-line change by an administrator, not an exception for you.</li>
+        <li><strong>Bring the job description.</strong> If a tool is part of the work, say which tasks use it. A label that contradicts the role is a configuration error, and reasonable managers treat it that way.</li>
+      </ul>
+      <p>
+        For what else the same agent records, see <a href="/blogs/what-can-hubstaff-see">what Hubstaff can see</a>
+        and <a href="/blogs/what-can-time-doctor-see">what Time Doctor can see</a>; Time Doctor's own
+        employee-facing advice, as our page puts it, is that the rating is only as good as the list.
+      </p>
+      <h2 id="build-a-list">How to build a list people will accept</h2>
+<ol class="steps">
+        <li><strong>Start per team, not per company.</strong> Ask each team lead for the ten tools their people live in, and label those productive first.</li>
+        <li><strong>Leave the rest neutral.</strong> Mark something unproductive only when the whole team agrees it is off-task. An unfair unproductive label does more damage than a missing productive one.</li>
+        <li><strong>Review with the team.</strong> Show people the list and their own data. Every tool in our ranking except Teramind, Controlio and WorkTime has an employee self-view.</li>
+        <li><strong>Watch the neutral total.</strong> If neutral time is large, the list is incomplete. Review the top unlabeled sites monthly.</li>
+        <li><strong>Re-check after tool changes.</strong> A new CRM or design tool starts unlabeled and quietly lowers scores until someone adds it.</li>
+        <li><strong>Write it into policy.</strong> Say what the labels are used for and what they will not be used for. The <a href="/blogs/employee-productivity-tracking-policy">productivity tracking policy</a> covers the wording.</li>
+      </ol>
+      <p>
+        Classification measures time in tools, which is closer to a measure of input than output; the
+        <a href="/blogs/activity-level-percentage">activity level percentage</a> sits even further toward
+        input. If you are choosing a product, the
+        <a href="/tools/best-productivity-monitoring-software">best productivity monitoring software list</a>
+        compares how much setup each tool's classification needs, and
+        <a href="/blogs/what-can-activtrak-see">what ActivTrak can see</a> shows the employee's side of the same data.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Classification is a lookup: the agent records the app or site in the foreground and checks it against a list your employer configured.</li>
+        <li>Labels are per role or team; the same app can be productive, neutral or unproductive depending on who uses it.</li>
+        <li>Only active time is classified, so calls and meetings with no typing usually drop out as idle first.</li>
+        <li>Browsers must be classified by site, and unlisted sites land in a neutral or undefined bucket most scores ignore.</li>
+        <li>ActivTrak, DeskTime, Time Doctor, Monitask, Insightful, WorkTime and Time Champ all classify; RescueTime categorizes automatically for the individual.</li>
+        <li>Build lists per team, default to neutral, review them with employees, and watch the neutral total.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How does software decide if an app is productive?</summary>
+          <p>It looks the app or website up in a classification list your employer maintains, usually per team or role, and labels it productive, unproductive or neutral. It does not judge what you did inside the app.</p>
+        </details>
+        <details>
+          <summary>Can the same app be productive and unproductive?</summary>
+          <p>Yes. Lists are set per role or team, so a code editor can be productive for engineers and neutral for sales, and YouTube can be unproductive for most staff and productive for a video or social media team.</p>
+        </details>
+        <details>
+          <summary>What does neutral or undefined mean?</summary>
+          <p>Neutral or undefined time is time in an app or site the list has not labeled, or has deliberately left out. Most scores exclude it, so a large neutral total usually means the list is incomplete.</p>
+        </details>
+        <details>
+          <summary>Is a browser productive or unproductive?</summary>
+          <p>Neither by itself. Tools that work well classify browser time by site or URL. A browser-level label tells a manager almost nothing.</p>
+        </details>
+        <details>
+          <summary>Can I see how my apps are classified?</summary>
+          <p>Usually. Most productivity tools offer an employee self-view showing your own time by label. If a tool you need is marked unproductive, ask how your team's list is set up.</p>
+        </details>
+        <details>
+          <summary>Who sets the productive and unproductive lists?</summary>
+          <p>An administrator at your company, often with team leads. Vendors ship default categories in some tools, but the employer decides the final labels for each team.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-productivity-monitoring-software">Best Productivity Monitoring Software</a></li>
+          <li><a href="/blogs/employee-productivity-score">Employee Productivity Score: How It Is Calculated</a></li>
+          <li><a href="/blogs/activity-level-percentage">Activity Level Percentage</a></li>
+          <li><a href="/blogs/idle-time-tracking">Idle Time Tracking: How Software Decides You Are Idle</a></li>
+          <li><a href="/blogs/what-can-activtrak-see">What Can ActivTrak See?</a></li>
+          <li><a href="/tools/best-workforce-productivity-software">Best Workforce Productivity Software</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracking Hours Across Time Zones: A Manager&#x27;s Guide</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Record hours in each person&#x27;s local time, fix a workweek per employee, and set a short overlap window. Rules, pitfalls and an overlap calculator." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/time-tracking-across-time-zones" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/time-tracking-across-time-zones" />
+  <meta property="og:title" content="Tracking Hours Across Time Zones: A Manager&#x27;s Guide" />
+  <meta property="og:description" content="Record hours in each person&#x27;s local time, fix a workweek per employee, and set a short overlap window. Rules, pitfalls and an overlap calculator." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/time-tracking-across-time-zones.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tracking Hours Across Time Zones: A Manager&#x27;s Guide" />
+  <meta name="twitter:description" content="Record hours in each person&#x27;s local time, fix a workweek per employee, and set a short overlap window. Rules, pitfalls and an overlap calculator." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/time-tracking-across-time-zones.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/time-tracking-across-time-zones#article",
+      "headline": "Tracking Hours Across Time Zones: A Manager's Guide",
+      "description": "Record hours in each person's local time, fix a workweek per employee, and set a short overlap window. Rules, pitfalls and an overlap calculator.",
+      "image": "https://workintelhub.com/images/blog/time-tracking-across-time-zones.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/time-tracking-across-time-zones"
+      },
+      "articleSection": "Time Tracking",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/time-tracking-across-time-zones#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Time Tracking",
+          "item": "https://workintelhub.com/topics/time-tracking"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tracking Hours Across Time Zones: A Manager's Guide"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/time-tracking-across-time-zones#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you track time for employees in different time zones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Record each entry in the employee's local time with the zone attached, fix each employee's workweek to a stated day, hour and zone, and set schedules and attendance in the employee's zone. Most remote time trackers display entries in each user's local time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can different employees have different workweeks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. 29 CFR 778.105 says different workweeks may be established for different employees or groups of employees. Each must be a fixed, recurring 168-hour period, and the start time must be recorded for non-exempt employees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which time zone should payroll use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Payroll can run on one cutoff, but hours must be grouped into each employee's own workweek for overtime. Keep the zone on every entry so the export can place hours in the right week regardless of where payroll is run."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many overlap hours does a remote team need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no legal or standard number. Two or three shared hours are usually enough for live decisions and unblocking, provided status updates and handoffs happen in writing. Some teams spanning three continents have no common hour and rely on handoffs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is answering a message after hours paid time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For non-exempt employees it can be. Under 29 CFR 785.11 and 785.12 and DOL Field Assistance Bulletin 2020-5, work the employer knows or has reason to believe is performed counts as hours worked, including at home. Give employees a way to report it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do daylight saving time changes affect tracked hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They change the UTC offset, so a meeting or schedule fixed in one zone moves by an hour for colleagues whose clocks did not change. Store the offset in force on each entry and recheck schedules after each change."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Tracking Hours Across Time Zones: A Manager&#x27;s Guide</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 9 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/time-tracking-across-time-zones.png" alt="Three clock faces showing different times above a single shared timeline bar" width="1200" height="630" />
+      </figure>
+
+<p>
+        To track hours across time zones, record every entry in the employee's own local time with
+        the zone attached, fix each employee's workweek to a stated day, hour and zone, and judge
+        attendance against the person's local schedule rather than head office's. Then agree a short
+        window of overlap for the work that has to happen live, and move everything else to written
+        handoffs.
+      </p>
+      <p>
+        Most of the mistakes in distributed time tracking come from one assumption: that "Monday" and
+        "9 a.m." mean the same thing for everyone. This guide covers the federal rules that decide how
+        hours are grouped into workweeks, the reporting traps that make remote staff look late or absent,
+        and how to find the hours a team genuinely shares, with a calculator for up to three locations.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#workweek">The workweek: whose Monday counts</a></li>
+          <li><a href="#recording">Recording hours: local time, with the zone attached</a></li>
+          <li><a href="#attendance">Attendance and lateness across zones</a></li>
+          <li><a href="#overlap">Find the hours your team shares</a></li>
+          <li><a href="#working-the-overlap">What to do with the overlap</a></li>
+          <li><a href="#after-hours">After-hours messages are hours worked</a></li>
+          <li><a href="#choosing-tools">Choosing a tracker for a multi-zone team</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>Store time with its zone.</strong> An entry without a time zone cannot be placed in the right day or workweek later.</p>
+        <p><strong>Fix the workweek per employee, in writing.</strong> Federal rules let you set different workweeks for different employees, but each one must be fixed and recorded.</p>
+        <p><strong>Overlap is a budget, not a goal.</strong> Two or three shared hours are enough for live decisions; the rest of the day should not require everyone online.</p>
+      </div>
+      <h2 id="workweek">The workweek: whose Monday counts</h2>
+<p>
+        Overtime under the Fair Labor Standards Act is calculated per workweek, so the definition of
+        the workweek is the first thing to settle for a team spread across zones. The rule at
+        <a href="https://www.ecfr.gov/current/title-29/section-778.105" target="_blank" rel="noopener">29 CFR 778.105</a> is short: a workweek is "a fixed and regularly recurring period of
+        168 hours", it "may begin on any day and at any hour of the day", and "different workweeks may
+        be established for different employees or groups of employees". Once set, it stays fixed
+        regardless of the hours worked, and it can be changed only if the change is meant to be
+        permanent and is not designed to evade overtime.
+      </p>
+      <p>
+        That flexibility is useful. You can start an employee's workweek at midnight Sunday in their own
+        zone, so their week lines up with their life and their timesheet. The cost is a record: the
+        federal recordkeeping rule at <a href="https://www.ecfr.gov/current/title-29/section-516.2" target="_blank" rel="noopener">29 CFR 516.2(a)(5)</a> requires the "time of day and day of
+        week on which the employee's workweek begins" for each non-exempt employee, with a single
+        notation allowed only where a whole workforce starts at the same time. For a distributed team,
+        write the zone next to the start time; "Sunday 00:00" alone is ambiguous.
+      </p>
+      <p>
+        Choose a start time when nobody works. A shift that runs across the boundary splits between two
+        workweeks, which is correct under a fixed 168-hour period but confusing on a timesheet, and the
+        place where overtime gets miscounted. The <a href="/blogs/remote-employee-overtime-rules">remote employee
+        overtime rules</a> page covers what is owed once hours are grouped, including states that count
+        overtime by the day.
+      </p>
+      <h2 id="recording">Recording hours: local time, with the zone attached</h2>
+<p>
+        The recordkeeping rule defines a workday as "any fixed period of 24 consecutive hours" and
+        requires hours worked each workday and each workweek. A record that can be regrouped correctly
+        later needs three things for every entry:
+      </p>
+      <ul>
+        <li><strong>The start and end in the employee's local time,</strong> because that is the time the employee
+        will check and dispute.</li>
+        <li><strong>The time zone or UTC offset in force at that moment,</strong> because offsets change during the
+        year in many places and not on the same dates everywhere.</li>
+        <li><strong>The workweek the entry belongs to,</strong> calculated from the employee's own workweek start.</li>
+      </ul>
+      <p>
+        Most trackers built for remote teams handle the first two. Per the October 2026 review in our
+        <a href="/tools/best-time-tracking-software-for-remote-employees">time tracking software for remote employees</a>
+        guide, Time Champ and Time Doctor set time zones per user so attendance and late reports are
+        correct for each person, and Toggl, Clockify and Hubstaff display entries in each user's local
+        time. Check the third yourself: run a payroll export for a test employee in another zone and
+        confirm a late Sunday entry lands in the week you expect.
+      </p>
+      <h2 id="attendance">Attendance and lateness across zones</h2>
+<p>
+        Attendance reports are where time zones do the most damage. A dashboard set to head office time
+        shows a Manila employee starting at 9 p.m. and a Denver employee as "late" every morning. Three
+        rules prevent it:
+      </p>
+      <ol class="steps">
+        <li><strong>Set the schedule in the employee's zone.</strong> A 9 a.m. start means the employee's 9 a.m.</li>
+        <li><strong>Report lateness against that schedule only.</strong> If the tool cannot do that, turn lateness reporting off rather than explain false flags.</li>
+        <li><strong>Re-check after every clock change.</strong> When one country moves its clocks and another does not, a meeting fixed in one zone shifts by an hour for the other, and so does any schedule stored as a fixed offset.</li>
+      </ol>
+      <p>
+        For salaried staff who are managed on output, consider whether you need attendance at all. The
+        remote tracking guide's point applies here: trackers that do not report attendance avoid the time
+        zone problem, at the price of not telling you who started on time.
+      </p>
+      <h2 id="overlap">Find the hours your team shares</h2>
+<p>
+        Enter each person's zone and normal hours. The calculator shows the window each pair shares and
+        the window everyone shares, in each person's local time. With the defaults (New York, London and
+        India on ordinary office hours in northern winter), New York and London share three hours, London
+        and India share three and a half, and New York and India share none, so there is no hour all three
+        have in common. London is the bridge, and the handoff runs through it.
+      </p>
+      <div class="calc" id="tz">
+        <div class="calc__grid">
+          <div><label for="tz-z1">Person 1 time zone</label><select id="tz-z1"><option value="-10">UTC-10 (Hawaii)</option><option value="-9">UTC-9 (Alaska)</option><option value="-8">UTC-8 (US Pacific, standard)</option><option value="-7">UTC-7 (US Mountain / Pacific daylight)</option><option value="-6">UTC-6 (US Central / Mountain daylight)</option><option value="-5" selected>UTC-5 (US Eastern / Central daylight)</option><option value="-4">UTC-4 (US Eastern daylight)</option><option value="-3">UTC-3 (Buenos Aires, Sao Paulo)</option><option value="0">UTC+0 (London winter, Lisbon winter)</option><option value="1">UTC+1 (Central Europe winter, Lagos)</option><option value="2">UTC+2 (Central Europe summer, Cairo)</option><option value="3">UTC+3 (Nairobi, Istanbul)</option><option value="4">UTC+4 (Dubai)</option><option value="5">UTC+5 (Karachi)</option><option value="5.5">UTC+5:30 (India)</option><option value="7">UTC+7 (Bangkok, Jakarta)</option><option value="8">UTC+8 (Manila, Singapore)</option><option value="9">UTC+9 (Tokyo, Seoul)</option><option value="10">UTC+10 (Sydney winter)</option><option value="11">UTC+11 (Sydney summer)</option><option value="12">UTC+12 (Auckland winter)</option></select></div>
+          <div><label for="tz-s1">Person 1 working hours (local)</label><input id="tz-s1" type="time" value="09:00" /> <input id="tz-e1" type="time" value="17:00" aria-label="Person 1 end time" /></div>
+          <div><label for="tz-z2">Person 2 time zone</label><select id="tz-z2"><option value="-10">UTC-10 (Hawaii)</option><option value="-9">UTC-9 (Alaska)</option><option value="-8">UTC-8 (US Pacific, standard)</option><option value="-7">UTC-7 (US Mountain / Pacific daylight)</option><option value="-6">UTC-6 (US Central / Mountain daylight)</option><option value="-5">UTC-5 (US Eastern / Central daylight)</option><option value="-4">UTC-4 (US Eastern daylight)</option><option value="-3">UTC-3 (Buenos Aires, Sao Paulo)</option><option value="0" selected>UTC+0 (London winter, Lisbon winter)</option><option value="1">UTC+1 (Central Europe winter, Lagos)</option><option value="2">UTC+2 (Central Europe summer, Cairo)</option><option value="3">UTC+3 (Nairobi, Istanbul)</option><option value="4">UTC+4 (Dubai)</option><option value="5">UTC+5 (Karachi)</option><option value="5.5">UTC+5:30 (India)</option><option value="7">UTC+7 (Bangkok, Jakarta)</option><option value="8">UTC+8 (Manila, Singapore)</option><option value="9">UTC+9 (Tokyo, Seoul)</option><option value="10">UTC+10 (Sydney winter)</option><option value="11">UTC+11 (Sydney summer)</option><option value="12">UTC+12 (Auckland winter)</option></select></div>
+          <div><label for="tz-s2">Person 2 working hours (local)</label><input id="tz-s2" type="time" value="09:00" /> <input id="tz-e2" type="time" value="17:00" aria-label="Person 2 end time" /></div>
+          <div><label for="tz-z3">Person 3 time zone</label><select id="tz-z3"><option value="-10">UTC-10 (Hawaii)</option><option value="-9">UTC-9 (Alaska)</option><option value="-8">UTC-8 (US Pacific, standard)</option><option value="-7">UTC-7 (US Mountain / Pacific daylight)</option><option value="-6">UTC-6 (US Central / Mountain daylight)</option><option value="-5">UTC-5 (US Eastern / Central daylight)</option><option value="-4">UTC-4 (US Eastern daylight)</option><option value="-3">UTC-3 (Buenos Aires, Sao Paulo)</option><option value="0">UTC+0 (London winter, Lisbon winter)</option><option value="1">UTC+1 (Central Europe winter, Lagos)</option><option value="2">UTC+2 (Central Europe summer, Cairo)</option><option value="3">UTC+3 (Nairobi, Istanbul)</option><option value="4">UTC+4 (Dubai)</option><option value="5">UTC+5 (Karachi)</option><option value="5.5" selected>UTC+5:30 (India)</option><option value="7">UTC+7 (Bangkok, Jakarta)</option><option value="8">UTC+8 (Manila, Singapore)</option><option value="9">UTC+9 (Tokyo, Seoul)</option><option value="10">UTC+10 (Sydney winter)</option><option value="11">UTC+11 (Sydney summer)</option><option value="12">UTC+12 (Auckland winter)</option></select></div>
+          <div><label for="tz-s3">Person 3 working hours (local)</label><input id="tz-s3" type="time" value="10:00" /> <input id="tz-e3" type="time" value="18:00" aria-label="Person 3 end time" /></div>
+          <div><label><input id="tz-use3" type="checkbox" checked /> Include person 3</label></div>
+        </div>
+        <div class="calc__out" id="tz-out"></div>
+        <p class="calc__note">Uses fixed UTC offsets. Pick the offset in force on the date you care about: clocks change on different dates in different countries, and some places do not change at all. Nothing you enter leaves your browser.</p>
+      </div>
+      <script>
+      (function () {
+        var D = 1440;
+        function el(id) { return document.getElementById(id); }
+        function mins(v) { var p = (v || '00:00').split(':'); return (parseInt(p[0], 10) || 0) * 60 + (parseInt(p[1], 10) || 0); }
+        function fmt(m) { m = ((Math.round(m) % D) + D) % D; var h = Math.floor(m / 60), n = m % 60; return (h < 10 ? '0' : '') + h + ':' + (n < 10 ? '0' : '') + n; }
+        function dur(m) { var h = Math.floor(m / 60), n = m % 60; return h + ' h' + (n ? ' ' + n + ' min' : ''); }
+        function person(i) {
+          var off = parseFloat(el('tz-z' + i).value) * 60, s = mins(el('tz-s' + i).value), e = mins(el('tz-e' + i).value);
+          if (e <= s) e += D;
+          var su = s - off, eu = e - off;
+          var k = Math.floor(su / D) * D;
+          return {off: off, s: su - k, e: eu - k, len: e - s};
+        }
+        function inter(segs, p) {
+          var out = [];
+          segs.forEach(function (g) {
+            [-D, 0, D].forEach(function (k) {
+              var a = Math.max(g[0], p.s + k), b = Math.min(g[1], p.e + k);
+              if (b > a) out.push([a, b]);
+            });
+          });
+          return out;
+        }
+        function overlap(ps) {
+          var segs = [[ps[0].s, ps[0].e]];
+          for (var i = 1; i < ps.length; i++) segs = inter(segs, ps[i]);
+          return segs;
+        }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function describe(segs, ps, names) {
+          return segs.map(function (g) {
+            return ps.map(function (p, j) { return names[j] + ' ' + fmt(g[0] + p.off) + ' to ' + fmt(g[1] + p.off); }).join('; ');
+          }).join(' | ');
+        }
+        function calc() {
+          var ps = [person(1), person(2)], names = ['P1', 'P2'];
+          if (el('tz-use3').checked) { ps.push(person(3)); names.push('P3'); }
+          var html = '';
+          var all = overlap(ps), tot = all.reduce(function (t, g) { return t + g[1] - g[0]; }, 0);
+          if (ps.length === 3) {
+            [[0, 1], [0, 2], [1, 2]].forEach(function (pr) {
+              var sub = [ps[pr[0]], ps[pr[1]]], o = overlap(sub), t = o.reduce(function (a, g) { return a + g[1] - g[0]; }, 0);
+              html += row(names[pr[0]] + ' and ' + names[pr[1]], t ? dur(t) + ' (' + describe(o, sub, [names[pr[0]], names[pr[1]]]) + ')' : 'No overlap');
+            });
+          }
+          html += '<div class="calc__row calc__total"><span>Shared hours, everyone</span><span>' + (tot ? dur(tot) : 'None') + '</span></div>';
+          if (tot) html += row('In local time', describe(all, ps, names));
+          else html += row('Suggestion', 'No common window. Use written handoffs, or move one person\'s start time and recheck.');
+          if (tot && tot < 120) html += row('Note', 'Under two hours: keep it for decisions and use async updates for status.');
+          el('tz-out').innerHTML = html;
+        }
+        ['tz-z1', 'tz-s1', 'tz-e1', 'tz-z2', 'tz-s2', 'tz-e2', 'tz-z3', 'tz-s3', 'tz-e3', 'tz-use3'].forEach(function (id) {
+          el(id).addEventListener('input', calc); el(id).addEventListener('change', calc);
+        });
+        calc();
+      })();
+      </script>
+      <h2 id="working-the-overlap">What to do with the overlap</h2>
+<p>
+        Shared hours are scarce, so spend them on the work that needs people at the same time: decisions,
+        unblocking, and the occasional conversation that writing makes worse. Status updates, reviews and
+        handoffs work better written, and they leave a record.
+      </p>
+      <ul>
+        <li><strong>Rotate the inconvenient slot.</strong> If someone must join early or late, rotate who it is
+        rather than leaving it with the person furthest from head office.</li>
+        <li><strong>Write the handoff at the end of the day.</strong> What was done, what is blocked, what the
+        next zone should pick up. It replaces the meeting the overlap cannot hold.</li>
+        <li><strong>Agree response times, not online times.</strong> "Replies within one working day in your zone"
+        is a rule people can keep; "always available during overlap" turns into always available.</li>
+      </ul>
+      <h2 id="after-hours">After-hours messages are hours worked</h2>
+<p>
+        Time zones make after-hours work routine: a question sent at the end of one person's day arrives
+        in the middle of another's evening. For non-exempt employees, answering it can be compensable
+        time. The Department of Labor's <a href="https://www.dol.gov/agencies/whd/field-assistance-bulletins/2020-5" target="_blank" rel="noopener">Field Assistance Bulletin 2020-5</a> reminds employers that
+        they must pay for work they know or have reason to believe is performed, including unscheduled
+        work at home, and that a reasonable way to meet that duty is a reporting procedure through which
+        employees record unscheduled time and are paid for all of it.
+      </p>
+      <p>
+        Two practical steps follow. Tell non-exempt staff to log any after-hours message they answer, and
+        mean it; the bulletin says a reporting process does not count as reasonable diligence if the
+        employer discourages accurate reporting. And use scheduled send, so a manager's late message
+        arrives at the start of the recipient's day rather than in their evening. The
+        <a href="/blogs/overtime-calculator">overtime calculator</a> shows what those minutes are worth once a week
+        passes 40 hours.
+      </p>
+      <h2 id="choosing-tools">Choosing a tracker for a multi-zone team</h2>
+<p>
+        Before you buy, test four things with a real employee in another zone: that entries show in their
+        local time, that their workweek can start in their zone, that attendance flags use their schedule,
+        and that the payroll export keeps the zone. Offline tracking matters too for staff on unreliable
+        connections. Our ranked list of the
+        <a href="/tools/best-time-tracking-software-for-remote-employees">best time tracking tools for remote teams</a>
+        compares how each handles time zones, offline sync and payroll. If the team includes contractors,
+        read <a href="/blogs/can-you-monitor-independent-contractors">whether you can monitor independent contractors</a>
+        before putting them on the same tracker, and for employees in other states or countries, see
+        <a href="/blogs/monitoring-remote-employees-other-states">monitoring remote employees across borders</a>.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Record every entry in the employee's local time with the time zone or UTC offset attached.</li>
+        <li>Under 29 CFR 778.105 a workweek is a fixed, recurring 168 hours that may start at any day and hour, and different employees can have different workweeks.</li>
+        <li>29 CFR 516.2 requires a record of when each non-exempt employee's workweek begins; write the zone next to the start time.</li>
+        <li>Set attendance schedules in each employee's zone, and turn lateness reports off if the tool cannot do that.</li>
+        <li>A few shared hours are enough for live decisions; move status and handoffs to writing.</li>
+        <li>After-hours messages answered by non-exempt staff can be hours worked; give them a way to report it and pay for it.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>How do you track time for employees in different time zones?</summary>
+          <p>Record each entry in the employee's local time with the zone attached, fix each employee's workweek to a stated day, hour and zone, and set schedules and attendance in the employee's zone. Most remote time trackers display entries in each user's local time.</p>
+        </details>
+        <details>
+          <summary>Can different employees have different workweeks?</summary>
+          <p>Yes. 29 CFR 778.105 says different workweeks may be established for different employees or groups of employees. Each must be a fixed, recurring 168-hour period, and the start time must be recorded for non-exempt employees.</p>
+        </details>
+        <details>
+          <summary>Which time zone should payroll use?</summary>
+          <p>Payroll can run on one cutoff, but hours must be grouped into each employee's own workweek for overtime. Keep the zone on every entry so the export can place hours in the right week regardless of where payroll is run.</p>
+        </details>
+        <details>
+          <summary>How many overlap hours does a remote team need?</summary>
+          <p>There is no legal or standard number. Two or three shared hours are usually enough for live decisions and unblocking, provided status updates and handoffs happen in writing. Some teams spanning three continents have no common hour and rely on handoffs.</p>
+        </details>
+        <details>
+          <summary>Is answering a message after hours paid time?</summary>
+          <p>For non-exempt employees it can be. Under 29 CFR 785.11 and 785.12 and DOL Field Assistance Bulletin 2020-5, work the employer knows or has reason to believe is performed counts as hours worked, including at home. Give employees a way to report it.</p>
+        </details>
+        <details>
+          <summary>Do daylight saving time changes affect tracked hours?</summary>
+          <p>They change the UTC offset, so a meeting or schedule fixed in one zone moves by an hour for colleagues whose clocks did not change. Store the offset in force on each entry and recheck schedules after each change.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-time-tracking-software-for-remote-employees">Best Time Tracking Software for Remote Employees</a></li>
+          <li><a href="/blogs/remote-employee-overtime-rules">Remote Employee Overtime Rules</a></li>
+          <li><a href="/blogs/overtime-calculator">Overtime Calculator</a></li>
+          <li><a href="/blogs/can-you-monitor-independent-contractors">Can You Monitor Independent Contractors?</a></li>
+          <li><a href="/blogs/monitoring-remote-employees-other-states">Monitoring Remote Employees in Other States and Countries</a></li>
+          <li><a href="/blogs/how-to-calculate-hours-worked">How to Calculate Hours Worked</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

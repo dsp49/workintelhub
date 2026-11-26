@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Scheduling: How Automated Shift Planning Works</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="AI scheduling forecasts demand, then builds shifts that meet it inside labor rules and preferences. What it adds over rule-based tools, its limits, and the law." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/ai-scheduling" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/ai-scheduling" />
+  <meta property="og:title" content="AI Scheduling: How Automated Shift Planning Works" />
+  <meta property="og:description" content="AI scheduling forecasts demand, then builds shifts that meet it inside labor rules and preferences. What it adds over rule-based tools, its limits, and the law." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/ai-scheduling.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Scheduling: How Automated Shift Planning Works" />
+  <meta name="twitter:description" content="AI scheduling forecasts demand, then builds shifts that meet it inside labor rules and preferences. What it adds over rule-based tools, its limits, and the law." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/ai-scheduling.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/ai-scheduling#article",
+      "headline": "AI Scheduling: How Automated Shift Planning Works",
+      "description": "AI scheduling forecasts demand, then builds shifts that meet it inside labor rules and preferences. What it adds over rule-based tools, its limits, and the law.",
+      "image": "https://workintelhub.com/images/blog/ai-scheduling.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/ai-scheduling"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/ai-scheduling#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Scheduling: How Automated Shift Planning Works"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/ai-scheduling#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI scheduling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Software that forecasts demand for each interval from sales, traffic or volume history, converts it into required staffing, and generates a schedule that covers it within labor rules, cost targets and employee preferences. A manager reviews and approves the draft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is AI scheduling different from auto-scheduling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auto-scheduling usually means filling shifts you defined with available, qualified people inside rules. AI scheduling also decides how many people each interval needs from a forecast, and optimizes the assignment across cost, compliance and preferences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI scheduling accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When the demand feed is clean and there is about a year of history, forecasts can beat a manager's estimate; without that, they are no better than the data. Backtest on a past month and count the manual edits a generated week needs before relying on it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AI scheduling comply with predictive scheduling laws?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if the rules are configured. Fair workweek laws require advance notice (often 14 days), premiums for changes and rest between shifts. Deputy encodes these rules; many tools only flag some or leave them to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it legal to let AI set employee schedules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with conditions. Fair workweek laws apply to any schedule. Colorado's AI law excludes routine scheduling, but California and Illinois rules on discriminatory automated decisions are broad enough to reach an optimizer with unequal outcomes. Keep a human approving schedules and tell employees an algorithm is involved."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does AI scheduling software cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Read in October 2026: Deputy's forecasting and auto-scheduling were on Core at $6.50 and Pro at $9 per user per month with a $30 minimum; Homebase's scheduling assistant was on Plus at $70 per location per month; Legion and UKG were quote-only."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>AI Scheduling: How Automated Shift Planning Works</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 8 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/ai-scheduling.png" alt="A weekly shift schedule document with a forecast curve drawn above the rows of shifts" width="1200" height="630" />
+      </figure>
+
+<p>
+        AI scheduling is software that predicts how much work there will be in each hour and then builds a
+        schedule that covers it at the lowest cost the rules allow, weighing each employee's availability and
+        preferences. The prediction is the part that is genuinely AI; the schedule-building is optimization;
+        and both still run inside the labor rules you configure, including predictive scheduling laws that
+        apply no matter who, or what, wrote the rota.
+      </p>
+      <p>
+        This page explains the three things AI adds to a rule-based scheduler, where it stops working, how to
+        test it before you buy, and how fair workweek and AI decision laws interact with an algorithm that
+        sets people's hours. Vendor details and prices come from our review of the
+        <a href="/tools/top-ai-workforce-management-tools">top AI workforce management tools</a>, read in
+        October 2026.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#rules-vs-ai">Rule-based scheduling versus AI scheduling</a></li>
+          <li><a href="#forecasting">Layer one: demand forecasting</a></li>
+          <li><a href="#solving">Layer two: constraint solving</a></li>
+          <li><a href="#preferences">Layer three: preferences and stability</a></li>
+          <li><a href="#limits">Where AI scheduling falls short</a></li>
+          <li><a href="#test">How to test it before you buy</a></li>
+          <li><a href="#predictive-laws">Predictive scheduling laws still apply</a></li>
+          <li><a href="#ai-laws">Do AI decision laws apply to scheduling?</a></li>
+          <li><a href="#where-next">Where AI scheduling fits in workforce management</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>Rule-based scheduling</strong> fills a template you define with people who are available and qualified, and flags rule breaks. You decide how many people each shift needs.</p>
+        <p><strong>AI scheduling</strong> decides how many people each interval needs from a demand forecast, then generates the schedule that meets it within cost, compliance and preference constraints.</p>
+        <p><strong>It works</strong> when there is a clean demand feed (point of sale, foot traffic, call volume, patient census) and about a year of history. Without that, it is a rule-based scheduler with a forecast you should not trust.</p>
+      </div>
+      <h2 id="rules-vs-ai">Rule-based scheduling versus AI scheduling</h2>
+<div class="table-scroll">
+        <table>
+          <thead><tr><th>Step</th><th>Rule-based scheduler</th><th>AI scheduler</th></tr></thead>
+          <tbody>
+            <tr><td>How many people are needed</td><td>The manager sets it per shift, usually from habit or last year</td><td>Forecast for each hour or part-hour interval from sales, traffic or volume history</td></tr>
+            <tr><td>Who works when</td><td>Manager assigns, or auto-fill from availability</td><td>Solver searches for the cheapest compliant assignment that covers the forecast</td></tr>
+            <tr><td>Labor rules</td><td>Flags violations after the fact</td><td>Treats rules as hard constraints, so the generated schedule complies by construction</td></tr>
+            <tr><td>Preferences</td><td>Availability blocks only</td><td>Preferences weighted alongside cost, such as preferred shifts, hour targets and stability</td></tr>
+            <tr><td>What the manager does</td><td>Builds the rota</td><td>Reviews, edits and approves a draft</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Most tools sold as "AI scheduling" combine all three layers. Some sell only the last two: auto-fill
+        from availability inside rules is useful, but it is automation, not prediction. Ask the vendor which
+        layer the AI label refers to.
+      </p>
+      <h2 id="forecasting">Layer one: demand forecasting</h2>
+<p>
+        Forecasting is where machine learning earns the name. The model learns how demand moves with time of
+        day, day of week, season, promotions, holidays and local events, and produces an expected volume for
+        each interval of the coming weeks. A labor standard (transactions per staff hour, calls per agent,
+        patients per nurse) converts that volume into required headcount by interval.
+      </p>
+      <p>
+        Legion builds interval-level forecasts from point-of-sale and traffic data for large hourly operations
+        and is quote-only. Deputy forecasts from sales and foot-traffic feeds on its Core and Pro plans, which
+        were $6.50 and $9 per user per month with a $30 monthly minimum when read in October 2026. Homebase's
+        scheduling assistant drafts schedules from sales forecasts on its Plus plan, then $70 per location per
+        month. The mechanics of turning a forecast into staffing targets are covered in our guide to
+        <a href="/blogs/demand-based-scheduling">demand-based scheduling</a>.
+      </p>
+      <h2 id="solving">Layer two: constraint solving</h2>
+<p>
+        Once the required headcount is known, building the schedule is a search problem: thousands of
+        possible assignments, most of which break a rule or leave a gap. The solver treats some conditions as
+        hard constraints that can never be broken (maximum hours, minors' hours, minimum rest between shifts,
+        break rules, certifications, the predictive scheduling notice window) and others as soft costs to be
+        traded off (overtime, labor percentage, unfilled preferences, understaffing in a quiet interval).
+      </p>
+      <p>
+        This is why AI scheduling can be compliant by construction rather than by review: a rule entered as a
+        hard constraint simply cannot appear in the output. It also means the output is only as compliant as
+        the rules you entered. A tool that knows the federal overtime rule but not your state's daily overtime
+        or your city's fair workweek ordinance will generate violations confidently.
+      </p>
+      <h2 id="preferences">Layer three: preferences and stability</h2>
+<p>
+        A solver tuned only to cost produces the schedules workers dislike most: split shifts, a close followed
+        by an open, hours that swing from week to week, and late publication. Our
+        <a href="/tools/best-workforce-optimization-software">workforce optimization software</a> review notes
+        that this is why fair workweek laws exist and why turnover rises when cost is the only objective. The
+        better tools weight employee preferences and schedule stability alongside cost; Legion and UKG do this
+        explicitly.
+      </p>
+      <p>
+        Preferences need data. Collect them in the tool, not in a group chat, using a structure like our
+        <a href="/blogs/employee-availability-form">employee availability form</a>, and decide in advance how
+        much a preference is worth against an hour of overtime. That weighting is a policy choice the vendor
+        cannot make for you.
+      </p>
+      <h2 id="limits">Where AI scheduling falls short</h2>
+<ul>
+        <li><strong>No clean demand feed.</strong> The forecast can only learn from the data it gets. Missing history, a changed store layout, a new product line or a feed that drops days will produce a confident, wrong forecast.</li>
+        <li><strong>Short history.</strong> Seasonality needs at least one full year to learn. A new location starts as a rule-based scheduler.</li>
+        <li><strong>Knowledge work.</strong> Desk teams have no interval demand to forecast. Capacity and workload planning is the equivalent; our <a href="/blogs/team-capacity-planning">team capacity planning</a> guide covers it.</li>
+        <li><strong>Unusual events.</strong> A local closure, a heatwave or a viral post is outside the history. Managers still need to override.</li>
+        <li><strong>Hidden objectives.</strong> If the cost weight is high and the stability weight low, the schedule will be cheap and unstable, and the vendor's default settings decide that unless you change them.</li>
+        <li><strong>Small teams.</strong> Our <a href="/tools/best-workforce-scheduling-software">workforce scheduling software</a> review puts the payback for auto-scheduling at roughly thirty people; below that, a template and a good manager are usually enough.</li>
+      </ul>
+      <h2 id="test">How to test it before you buy</h2>
+<ol class="steps">
+        <li><strong>Backtest the forecast.</strong> Give the vendor a year of your demand data, ask it to forecast a past month it has not seen, and compare its error with the manager forecast you actually used.</li>
+        <li><strong>Generate a real week.</strong> Load real availability, contracts and rules, generate next week's schedule, and count the manual edits a manager still needs to make.</li>
+        <li><strong>Try to break a rule.</strong> Ask the tool to schedule a clopening inside your city's rest window, or to change a published shift inside the notice period. It should refuse or show the premium.</li>
+        <li><strong>Read the weights.</strong> Find where cost, preferences and stability are weighted, and who can change them.</li>
+        <li><strong>Check the audit trail.</strong> You need to show what the tool proposed, what the manager changed and when the schedule was published.</li>
+      </ol>
+      <h2 id="predictive-laws">Predictive scheduling laws still apply</h2>
+<p>
+        Oregon and a group of cities including New York, San Francisco, Seattle, Chicago, Philadelphia and Los
+        Angeles have predictive scheduling or fair workweek laws for larger retail, food service and
+        hospitality employers. The common shape is schedules published about 14 days ahead (72 hours for New
+        York City retail), premium pay when the employer changes a published shift, a right to decline hours
+        added at short notice, minimum rest between closing and opening shifts, and offers of extra hours to
+        existing staff before new hires. Coverage thresholds typically run from 20 to 500 employees depending
+        on the jurisdiction. Our <a href="/blogs/predictive-scheduling-laws-by-state">predictive scheduling laws</a>
+        guide has the city-by-city detail.
+      </p>
+      <p>
+        These laws do not care how the schedule was built, and they cut against one selling point of AI
+        scheduling: re-forecasting and re-optimizing close to the day. Every change the algorithm makes inside
+        the notice window costs a premium in a covered location. The practical setting is to freeze the
+        published schedule, let the tool propose changes rather than make them, and show the manager the
+        premium before approving. Deputy encodes these rules; Homebase and 7shifts flag some; most other tools
+        leave compliance to whatever you configure.
+      </p>
+      <h2 id="ai-laws">Do AI decision laws apply to scheduling?</h2>
+<p>
+        Mostly not, with edges worth knowing. Colorado's re-enacted AI law, which applies to decisions from
+        January 1, 2027, expressly excludes routine scheduling, administrative routing and workflow management
+        from the consequential decisions it covers, so a tool that assigns shifts to cover demand is outside
+        it. A tool that scores or ranks employees to decide who loses hours, pay or a role is a different
+        matter, because compensation and employment decisions are covered. Our
+        <a href="/blogs/colorado-ai-act-employers">Colorado AI Act guide</a> quotes the definitions.
+      </p>
+      <p>
+        California's Civil Rights Council regulations, in force since October 1, 2025, define an automated
+        decision system as one that makes or facilitates a decision about an employment benefit, and a
+        discriminatory outcome is unlawful whether by design or by disparate impact. Illinois' Human Rights
+        Act amendment covers AI used in the terms, privileges or conditions of employment. Neither names
+        scheduling, but the wording is broad enough that a schedule optimizer which consistently gives fewer
+        or worse shifts to one protected group is a risk. The
+        <a href="/blogs/california-ai-workplace-laws">California AI workplace laws</a> page has the detail.
+      </p>
+      <p>
+        The bias route is usually indirect. A solver that penalizes limited availability will disadvantage
+        caregivers, students and people with religious or medical constraints. Accommodation requests belong
+        in an HR process, not in an availability score, and the weighting should not quietly punish them.
+        Two habits cover most of the exposure: a human approves every generated schedule, and employees are
+        told that an algorithm proposes their hours and how to ask for a change.
+      </p>
+      <h2 id="where-next">Where AI scheduling fits in workforce management</h2>
+<p>
+        Scheduling is one of nine uses of AI covered in our guide to
+        <a href="/blogs/ai-in-workforce-management">AI in workforce management</a>, and with forecasting it is
+        the one that changes outcomes rather than saving clicks. If you are choosing a product, the
+        <a href="/tools/top-ai-workforce-management-tools">AI workforce management tools comparison</a> sorts
+        Legion, Deputy, UKG, Homebase and others by what their AI actually does, and the
+        <a href="/blogs/work-schedule-template">work schedule template</a> is the manual baseline to beat.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>AI scheduling adds three things to a rule-based scheduler: interval demand forecasting, constraint solving that builds a compliant schedule, and weighting of employee preferences and stability.</li>
+        <li>Forecasting needs a clean demand feed and about a year of history; without them the tool is a rule-based scheduler with an unreliable forecast.</li>
+        <li>A solver tuned only to cost produces split shifts, clopenings and unstable hours; set preference and stability weights deliberately.</li>
+        <li>Test by backtesting the forecast on your own history and counting the manual edits a generated real week still needs.</li>
+        <li>Fair workweek laws in Oregon and several large cities apply regardless of who builds the schedule; freeze published schedules and let the tool propose, not make, late changes.</li>
+        <li>Colorado's AI law excludes routine scheduling, but tools that rank employees for hours or pay, and optimizers with disparate outcomes, carry risk under California and Illinois rules.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is AI scheduling?</summary>
+          <p>Software that forecasts demand for each interval from sales, traffic or volume history, converts it into required staffing, and generates a schedule that covers it within labor rules, cost targets and employee preferences. A manager reviews and approves the draft.</p>
+        </details>
+        <details>
+          <summary>How is AI scheduling different from auto-scheduling?</summary>
+          <p>Auto-scheduling usually means filling shifts you defined with available, qualified people inside rules. AI scheduling also decides how many people each interval needs from a forecast, and optimizes the assignment across cost, compliance and preferences.</p>
+        </details>
+        <details>
+          <summary>Is AI scheduling accurate?</summary>
+          <p>When the demand feed is clean and there is about a year of history, forecasts can beat a manager's estimate; without that, they are no better than the data. Backtest on a past month and count the manual edits a generated week needs before relying on it.</p>
+        </details>
+        <details>
+          <summary>Does AI scheduling comply with predictive scheduling laws?</summary>
+          <p>Only if the rules are configured. Fair workweek laws require advance notice (often 14 days), premiums for changes and rest between shifts. Deputy encodes these rules; many tools only flag some or leave them to you.</p>
+        </details>
+        <details>
+          <summary>Is it legal to let AI set employee schedules?</summary>
+          <p>Yes, with conditions. Fair workweek laws apply to any schedule. Colorado's AI law excludes routine scheduling, but California and Illinois rules on discriminatory automated decisions are broad enough to reach an optimizer with unequal outcomes. Keep a human approving schedules and tell employees an algorithm is involved.</p>
+        </details>
+        <details>
+          <summary>How much does AI scheduling software cost?</summary>
+          <p>Read in October 2026: Deputy's forecasting and auto-scheduling were on Core at $6.50 and Pro at $9 per user per month with a $30 minimum; Homebase's scheduling assistant was on Plus at $70 per location per month; Legion and UKG were quote-only.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/top-ai-workforce-management-tools">Top AI Workforce Management Tools</a></li>
+          <li><a href="/blogs/ai-in-workforce-management">AI in Workforce Management: 9 Use Cases</a></li>
+          <li><a href="/blogs/predictive-scheduling-laws-by-state">Predictive Scheduling Laws</a></li>
+          <li><a href="/blogs/demand-based-scheduling">Demand-Based Scheduling</a></li>
+          <li><a href="/tools/best-workforce-scheduling-software">Best Workforce Scheduling Software</a></li>
+          <li><a href="/blogs/colorado-ai-act-employers">Colorado AI Act for Employers</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

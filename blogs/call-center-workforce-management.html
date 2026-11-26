@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Center Workforce Management: Forecasting, Adherence and Occupancy</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Call center WFM forecasts contacts, staffs each interval to a service level, and tracks adherence, occupancy and shrinkage. Formulas and a staffing calculator." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/call-center-workforce-management" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/call-center-workforce-management" />
+  <meta property="og:title" content="Call Center Workforce Management: Forecasting, Adherence and Occupancy" />
+  <meta property="og:description" content="Call center WFM forecasts contacts, staffs each interval to a service level, and tracks adherence, occupancy and shrinkage. Formulas and a staffing calculator." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/call-center-workforce-management.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="HR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Call Center Workforce Management: Forecasting, Adherence and Occupancy" />
+  <meta name="twitter:description" content="Call center WFM forecasts contacts, staffs each interval to a service level, and tracks adherence, occupancy and shrinkage. Formulas and a staffing calculator." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/call-center-workforce-management.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/call-center-workforce-management#article",
+      "headline": "Call Center Workforce Management: Forecasting, Adherence and Occupancy",
+      "description": "Call center WFM forecasts contacts, staffs each interval to a service level, and tracks adherence, occupancy and shrinkage. Formulas and a staffing calculator.",
+      "image": "https://workintelhub.com/images/blog/call-center-workforce-management.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/call-center-workforce-management"
+      },
+      "articleSection": "HR",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/call-center-workforce-management#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HR",
+          "item": "https://workintelhub.com/topics/hr"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Call Center Workforce Management: Forecasting, Adherence and Occupancy"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/call-center-workforce-management#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is call center workforce management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The process of forecasting contact volume and handle time by interval, calculating how many agents are needed to meet a service level target, scheduling people to cover that requirement after shrinkage, managing changes during the day, and reviewing service level, occupancy, shrinkage and adherence afterward."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you calculate shrinkage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Divide paid hours not available for contacts (breaks, meetings, training, vacation, sickness, absence) by total paid hours and multiply by 100. To staff for it, divide the agents needed on queue by one minus the shrinkage rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between occupancy and adherence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Occupancy measures how busy agents were while available: handle time divided by handle time plus idle time. Adherence measures whether agents were in the scheduled state at the scheduled time. An agent can be fully adherent and lightly occupied in a quiet interval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good service level for a call center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no universal standard. The right target depends on your contracts, channel, customers and the cost of staffing. Set it from what customers need and what you can fund, define how abandoned contacts are counted, and measure it by interval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Erlang C?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A queueing formula that calculates the probability a contact waits, given the workload in Erlangs and the number of agents. From it you can derive the service level and average speed of answer for any staffing level, and so find the fewest agents that meet a target. It assumes callers never abandon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between adherence and conformance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adherence compares what agents did with the schedule minute by minute. Conformance compares total time worked with total time scheduled, regardless of timing. Starting ten minutes late and staying ten minutes late is full conformance but not full adherence."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">HR</span>
+      <h1>Call Center Workforce Management: Forecasting, Adherence and Occupancy</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 10 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/call-center-workforce-management.png" alt="A document page with a forecast curve, staffing bars and a highlighted service level line" width="1200" height="630" />
+      </figure>
+
+<p>
+        Call center workforce management forecasts how many contacts will arrive in each 15- or
+        30-minute interval, calculates how many agents are needed to answer them within a target time,
+        schedules people to cover that requirement, and then measures what happened. Four numbers run
+        the loop: service level (how fast contacts were answered), occupancy (how busy agents were while
+        available), shrinkage (how much paid time was not available for contacts) and schedule adherence
+        (whether people worked when the schedule said).
+      </p>
+      <p>
+        Contact centers are where workforce management began, and our
+        <a href="/glossary/workforce-management">workforce management glossary entry</a> traces the term
+        back to them. This guide defines each metric with its formula, shows how they combine into a
+        staffing number, and includes a calculator for interval staffing and another for shrinkage. It
+        gives no industry benchmarks. Published targets are rarely traceable to a primary source, and
+        the right target depends on your contracts, channels and customers.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#loop">The call center WFM loop</a></li>
+          <li><a href="#forecasting">Forecasting: volume, handle time and accuracy</a></li>
+          <li><a href="#service-level">Service level and speed of answer</a></li>
+          <li><a href="#occupancy">Occupancy</a></li>
+          <li><a href="#shrinkage">Shrinkage</a></li>
+          <li><a href="#adherence">Schedule adherence and conformance</a></li>
+          <li><a href="#staffing">Interval staffing calculator</a></li>
+          <li><a href="#software">What WFM software adds in a contact center</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="loop">The call center WFM loop</h2>
+<ol class="steps">
+        <li><strong>Forecast</strong> contact volume and average handle time for every interval, by queue and channel, from history, seasonality, campaigns and known events.</li>
+        <li><strong>Calculate requirements:</strong> the number of agents on queue each interval needs to meet the service level target, usually with Erlang C or a simulation.</li>
+        <li><strong>Add shrinkage</strong> to turn agents on queue into agents scheduled.</li>
+        <li><strong>Schedule</strong> shifts, breaks, lunches, training and meetings to fit the requirement curve, within labor law and agent preferences.</li>
+        <li><strong>Manage intraday:</strong> compare actual volume with the forecast and move breaks, training or overtime when they diverge.</li>
+        <li><strong>Review</strong> forecast accuracy, service level, occupancy, shrinkage and adherence, and feed what you learn into the next forecast.</li>
+      </ol>
+      <p>
+        Every step has a general workforce management equivalent: forecast, schedule, time and
+        attendance, absence, compliance. What makes contact centers different is the interval. Demand
+        is measured in minutes, a queue does not wait for tomorrow, and a staffing error shows up in
+        customer wait times within the hour.
+      </p>
+      <h2 id="forecasting">Forecasting: volume, handle time and accuracy</h2>
+<p>
+        A forecast needs two numbers per interval: contacts offered and average handle time (AHT).
+        Handle time is talk time plus hold time plus after-contact work. Together they give the
+        workload, expressed in Erlangs, where one Erlang is one agent busy for the whole interval:
+      </p>
+      <div class="callout"><p><strong>Workload (Erlangs) = contacts in the interval × AHT (seconds) ÷ interval length (seconds)</strong><br />Example: 120 calls in 30 minutes at 300 seconds AHT = 120 × 300 ÷ 1,800 = 20 Erlangs.</p></div>
+      <p>
+        Twenty Erlangs means twenty agents would be busy all interval if calls arrived perfectly evenly.
+        They do not, so you need more than twenty to answer quickly. The gap between workload and
+        agents needed is what the staffing formula works out.
+      </p>
+      <p>
+        Measure forecast accuracy by interval, not by day, because a daily total can be right while
+        every morning interval is understaffed and every afternoon interval is overstaffed. A common
+        measure is the mean absolute percentage error across intervals:
+      </p>
+      <div class="callout"><p><strong>Interval error = |forecast − actual| ÷ actual</strong>; average it across the intervals in the day or week.</p></div>
+      <p>
+        Forecast handle time as well as volume. A new product, a policy change or a system outage can
+        change AHT faster than it changes volume, and workload moves with both. For non-voice queues
+        such as email or tickets, which can wait hours, the planning interval is longer and the target
+        is a response time rather than a speed of answer. The
+        <a href="/blogs/demand-based-scheduling">demand-based scheduling guide</a> covers the general
+        method of building shifts from a demand curve.
+      </p>
+      <h2 id="service-level">Service level and speed of answer</h2>
+<p>
+        Service level is the share of contacts answered within a threshold you choose, written as X/Y:
+        X percent answered within Y seconds.
+      </p>
+      <div class="callout"><p><strong>Service level = contacts answered within Y seconds ÷ contacts offered × 100</strong></p></div>
+      <p>
+        The denominator is where definitions differ. Some centers exclude calls abandoned before the
+        threshold, some count them as failures, and some exclude only very short abandons. Each choice
+        produces a different number from the same calls, so write yours down and keep it fixed when
+        you compare periods. Average speed of answer (ASA) is the companion measure:
+      </p>
+      <div class="callout"><p><strong>ASA = total wait time of answered contacts ÷ contacts answered</strong></p></div>
+      <p>
+        Service level describes the queue, not any one agent. It is set by how many people were
+        available against how many contacts arrived, which is why it belongs to the planning team
+        and the operation as a whole.
+      </p>
+      <h2 id="occupancy">Occupancy</h2>
+<p>
+        Occupancy is the share of an agent's available time spent handling contacts.
+      </p>
+      <div class="callout"><p><strong>Occupancy = handle time ÷ (handle time + available idle time) × 100</strong><br />At interval level it is also workload ÷ agents on queue: 20 Erlangs across 23 agents is 87 percent.</p></div>
+      <p>
+        Occupancy and service level pull against each other. With a fixed workload, adding agents
+        raises service level and lowers occupancy; removing them does the reverse. Queueing math also
+        means large teams can run at higher occupancy than small ones for the same service level,
+        because random peaks average out across more people. A target that suits a 200-seat queue can
+        burn out a 10-seat one.
+      </p>
+      <p>
+        Do not confuse occupancy with utilization. Definitions vary by vendor, but utilization usually
+        divides handle time by total logged-in or paid time, so it falls when shrinkage rises.
+        Occupancy ignores time that was not available for contacts. State which one a report uses.
+      </p>
+      <h2 id="shrinkage">Shrinkage</h2>
+<p>
+        Shrinkage is the share of paid time when scheduled agents are not available to handle contacts.
+      </p>
+      <div class="callout"><p><strong>Shrinkage = paid hours not available for contacts ÷ total paid hours × 100</strong><br /><strong>Agents to schedule = agents needed on queue ÷ (1 − shrinkage)</strong></p></div>
+      <p>
+        Split it into planned shrinkage (breaks, lunches if paid, meetings, coaching, training,
+        vacation, holidays) and unplanned shrinkage (sickness, unscheduled absence, lateness, system
+        downtime). Planned shrinkage is scheduled around the forecast. Unplanned shrinkage needs its
+        own forecast, usually by day of week and season. Our guide to
+        <a href="/blogs/employee-absenteeism">employee absenteeism</a> covers measuring the unplanned part.
+      </p>
+      <p>
+        The most common error is applying shrinkage as a markup. If you need 100 agents on queue and
+        shrinkage is 30 percent, 100 × 1.3 = 130 is wrong. Thirty percent of 130 is 39, which leaves
+        91 on queue. The correct figure is 100 ÷ 0.7 = 143. The gap widens as shrinkage rises.
+      </p>
+      <div class="calc" id="cs">
+        <div class="calc__grid">
+          <div><label for="cs-paid">Paid hours per agent per week</label><input id="cs-paid" type="number" min="1" step="0.5" value="40" /></div>
+          <div><label for="cs-breaks">Paid breaks</label><input id="cs-breaks" type="number" min="0" step="0.25" value="2.5" /></div>
+          <div><label for="cs-meet">Meetings and coaching</label><input id="cs-meet" type="number" min="0" step="0.25" value="1.5" /></div>
+          <div><label for="cs-train">Training</label><input id="cs-train" type="number" min="0" step="0.25" value="1" /></div>
+          <div><label for="cs-pto">Vacation and holidays (weekly average)</label><input id="cs-pto" type="number" min="0" step="0.25" value="2" /></div>
+          <div><label for="cs-sick">Sickness, absence and lateness (weekly average)</label><input id="cs-sick" type="number" min="0" step="0.25" value="1.5" /></div>
+        </div>
+        <div class="calc__out" id="cs-out"></div>
+        <p class="calc__note">All figures are hours per agent per week. The default inputs are an illustration, not a benchmark; use your own payroll and schedule data.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function v(id) { return Math.max(0, parseFloat(el(id).value) || 0); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function calc() {
+          var paid = Math.max(1, v('cs-paid'));
+          var planned = v('cs-breaks') + v('cs-meet') + v('cs-train') + v('cs-pto'), unplanned = v('cs-sick');
+          var lost = Math.min(paid, planned + unplanned), s = lost / paid;
+          var html = row('Planned shrinkage', (planned / paid * 100).toFixed(1) + '%');
+          html += row('Unplanned shrinkage', (unplanned / paid * 100).toFixed(1) + '%');
+          html += row('Hours available for contacts', (paid - lost).toFixed(1) + ' of ' + paid);
+          html += '<div class="calc__row calc__total"><span>Total shrinkage</span><span>' + (s * 100).toFixed(1) + '%</span></div>';
+          if (s < 1) html += row('Agents to schedule per 10 needed on queue', (10 / (1 - s)).toFixed(1));
+          el('cs-out').innerHTML = html;
+        }
+        ['cs-paid', 'cs-breaks', 'cs-meet', 'cs-train', 'cs-pto', 'cs-sick'].forEach(function (id) { el(id).addEventListener('input', calc); });
+        calc();
+      })();
+      </script>
+      <h2 id="adherence">Schedule adherence and conformance</h2>
+<p>
+        Schedule adherence measures whether people were doing the scheduled activity at the scheduled
+        time.
+      </p>
+      <div class="callout"><p><strong>Adherence = minutes in the scheduled state at the scheduled time ÷ scheduled minutes × 100</strong></p></div>
+      <p>
+        An agent scheduled on the phones from 9:00 to 10:00 who starts at 9:10 and works until 10:10
+        is out of adherence for 20 minutes: ten at the start and ten at the end. Conformance, the
+        related measure, compares total time worked with total time scheduled regardless of timing. That
+        agent is at 100 percent conformance and below 100 percent adherence. Adherence matters more in
+        a contact center because the interval is what the forecast staffed.
+      </p>
+      <p>
+        Two cautions. First, the
+        <a href="/glossary/workforce-management">glossary entry on WFM</a> describes adherence as useful
+        at team level and toxic as an individual score, because it rewards presence over results;
+        <a href="/blogs/why-output-metrics-fail-knowledge-teams">why activity metrics fail</a> explains
+        the mechanism. Agents who are out of adherence because they stayed on a hard call are often
+        doing the right thing. Second, real-time adherence tracking is a record of individual activity.
+        Some states require written notice before that kind of monitoring begins; our
+        <a href="/blogs/employee-monitoring-laws-by-state">state monitoring law summary</a> lists them.
+      </p>
+      <h2 id="staffing">Interval staffing calculator</h2>
+<p>
+        This calculator uses Erlang C, the standard queueing formula for contact center staffing, named
+        after the Danish engineer A. K. Erlang. Given the workload and a service level target, it finds
+        the smallest number of agents on queue that meets the target, then grosses that number up for
+        shrinkage. Erlang C assumes callers never abandon and arrivals are random, so it tends to
+        overstate the requirement slightly where many callers hang up. Treat its output as a starting
+        point, not a final answer.
+      </p>
+      <div class="calc" id="cc">
+        <div class="calc__grid">
+          <div><label for="cc-vol">Contacts in the interval</label><input id="cc-vol" type="number" min="0" value="120" /></div>
+          <div><label for="cc-int">Interval length (minutes)</label><select id="cc-int"><option value="15">15</option><option value="30" selected>30</option><option value="60">60</option></select></div>
+          <div><label for="cc-aht">Average handle time (seconds)</label><input id="cc-aht" type="number" min="1" value="300" /></div>
+          <div><label for="cc-sl">Service level target (% answered)</label><input id="cc-sl" type="number" min="1" max="99" value="80" /></div>
+          <div><label for="cc-t">Within (seconds)</label><input id="cc-t" type="number" min="0" value="30" /></div>
+          <div><label for="cc-shr">Shrinkage (%)</label><input id="cc-shr" type="number" min="0" max="90" value="25" /></div>
+        </div>
+        <div class="calc__out" id="cc-out"></div>
+        <p class="calc__note">The default inputs are an example, not a recommended target. Erlang C covers one queue with interchangeable agents; multi-skill routing needs simulation.</p>
+      </div>
+      <script>
+      (function () {
+        function el(id) { return document.getElementById(id); }
+        function row(a, b) { return '<div class="calc__row"><span>' + a + '</span><span>' + b + '</span></div>'; }
+        function erlangC(n, a) {
+          var b = 1;
+          for (var k = 1; k <= n; k++) b = a * b / (k + a * b);
+          return n * b / (n - a * (1 - b));
+        }
+        function calc() {
+          var vol = Math.max(0, parseFloat(el('cc-vol').value) || 0), secs = parseInt(el('cc-int').value, 10) * 60;
+          var aht = Math.max(1, parseFloat(el('cc-aht').value) || 1);
+          var tgt = Math.min(99, Math.max(1, parseFloat(el('cc-sl').value) || 80)) / 100;
+          var t = Math.max(0, parseFloat(el('cc-t').value) || 0);
+          var shr = Math.min(90, Math.max(0, parseFloat(el('cc-shr').value) || 0)) / 100;
+          var a = vol * aht / secs;
+          if (a <= 0) { el('cc-out').innerHTML = row('Workload', '0 Erlangs'); return; }
+          var n = Math.floor(a) + 1, c, sl;
+          for (; n < a + 1000; n++) {
+            c = erlangC(n, a);
+            sl = 1 - c * Math.exp(-(n - a) * t / aht);
+            if (sl >= tgt) break;
+          }
+          var asa = c * aht / (n - a);
+          var html = row('Workload', a.toFixed(1) + ' Erlangs');
+          html += row('Agents needed on queue', n);
+          html += row('Expected service level', (sl * 100).toFixed(1) + '% within ' + t + 's');
+          html += row('Average speed of answer', asa.toFixed(0) + ' seconds');
+          html += row('Occupancy', (a / n * 100).toFixed(1) + '%');
+          html += '<div class="calc__row calc__total"><span>Agents to schedule (after shrinkage)</span><span>' + Math.ceil(n / (1 - shr)) + '</span></div>';
+          el('cc-out').innerHTML = html;
+        }
+        ['cc-vol', 'cc-int', 'cc-aht', 'cc-sl', 'cc-t', 'cc-shr'].forEach(function (id) { el(id).addEventListener('input', calc); el(id).addEventListener('change', calc); });
+        calc();
+      })();
+      </script>
+      <p>
+        Try lowering the agent count in your head: each agent removed raises occupancy and lowers
+        service level, and near the target the service level falls quickly. That non-linearity is why
+        a center that is two people short in a busy interval can see wait times multiply.
+      </p>
+      <h2 id="software">What WFM software adds in a contact center</h2>
+<p>
+        You can run the loop in a spreadsheet for one queue. Software earns its cost when there are
+        many queues, channels or sites, when agents have multiple skills, and when intraday changes
+        have to reach people in minutes. The features that matter are interval-level forecasting,
+        automated schedules that respect skills, contracts and labor law, real-time adherence, and
+        intraday re-forecasting.
+      </p>
+      <p>
+        Our <a href="/tools/best-workforce-management-software">ranked list of workforce management platforms</a>
+        covers general WFM rather than contact-center-specific suites. Within it, Legion offers
+        interval-level AI demand forecasting, UKG Pro Workforce Management carries forecasting and a deep
+        rules engine, and Time Champ records attendance and shift adherence for desk-based and remote
+        agents through a desktop agent. The contact center specialists, NICE, Verint and Calabrio, are
+        covered in our <a href="/tools/best-workforce-optimization-software">workforce optimization software review</a>.
+        Whichever you buy, check that its service level definition matches yours
+        and that it can export interval-level data. For budget figures, see
+        <a href="/blogs/workforce-management-software-pricing">workforce management software pricing</a>.
+        For which system should hold agent records, pay rates and leave balances, see
+        <a href="/blogs/wfm-vs-hris">WFM vs HRIS</a>. If a vendor is pitching schedules optimized for
+        cost against a service target, <a href="/blogs/what-is-workforce-optimization">what is workforce optimization</a>
+        explains the wider category.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>Call center WFM forecasts contacts and handle time per interval, staffs each interval to a service level target, adds shrinkage, schedules, manages intraday and reviews.</li>
+        <li>Workload in Erlangs = contacts × AHT ÷ interval length; Erlang C turns workload and a service level target into agents needed on queue.</li>
+        <li>Service level = answered within Y seconds ÷ offered; define how abandons are treated and keep it fixed.</li>
+        <li>Occupancy = handle time ÷ (handle time + available idle time); it moves opposite to service level for a fixed workload.</li>
+        <li>Agents to schedule = agents on queue ÷ (1 − shrinkage), not agents × (1 + shrinkage).</li>
+        <li>Adherence is a team planning measure; as an individual score it rewards presence over results, and real-time tracking can trigger state notice rules.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is call center workforce management?</summary>
+          <p>The process of forecasting contact volume and handle time by interval, calculating how many agents are needed to meet a service level target, scheduling people to cover that requirement after shrinkage, managing changes during the day, and reviewing service level, occupancy, shrinkage and adherence afterward.</p>
+        </details>
+        <details>
+          <summary>How do you calculate shrinkage?</summary>
+          <p>Divide paid hours not available for contacts (breaks, meetings, training, vacation, sickness, absence) by total paid hours and multiply by 100. To staff for it, divide the agents needed on queue by one minus the shrinkage rate.</p>
+        </details>
+        <details>
+          <summary>What is the difference between occupancy and adherence?</summary>
+          <p>Occupancy measures how busy agents were while available: handle time divided by handle time plus idle time. Adherence measures whether agents were in the scheduled state at the scheduled time. An agent can be fully adherent and lightly occupied in a quiet interval.</p>
+        </details>
+        <details>
+          <summary>What is a good service level for a call center?</summary>
+          <p>There is no universal standard. The right target depends on your contracts, channel, customers and the cost of staffing. Set it from what customers need and what you can fund, define how abandoned contacts are counted, and measure it by interval.</p>
+        </details>
+        <details>
+          <summary>What is Erlang C?</summary>
+          <p>A queueing formula that calculates the probability a contact waits, given the workload in Erlangs and the number of agents. From it you can derive the service level and average speed of answer for any staffing level, and so find the fewest agents that meet a target. It assumes callers never abandon.</p>
+        </details>
+        <details>
+          <summary>What is the difference between adherence and conformance?</summary>
+          <p>Adherence compares what agents did with the schedule minute by minute. Conformance compares total time worked with total time scheduled, regardless of timing. Starting ten minutes late and staying ten minutes late is full conformance but not full adherence.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-workforce-management-software">Best Workforce Management Software: 12 Reviewed</a></li>
+          <li><a href="/glossary/workforce-management">Workforce Management (WFM)</a></li>
+          <li><a href="/blogs/workforce-management-software-pricing">Workforce Management Software Pricing</a></li>
+          <li><a href="/blogs/wfm-vs-hris">WFM vs HRIS: What Each System Owns</a></li>
+          <li><a href="/blogs/demand-based-scheduling">Demand-Based Scheduling</a></li>
+          <li><a href="/tools/best-workforce-scheduling-software">Best Workforce Scheduling Software</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>

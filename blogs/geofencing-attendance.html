@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geofencing Attendance: How Location-Based Clock-In Works</title>
+  <meta name="author" content="Pavan">
+  <meta name="description" content="Geofenced attendance lets staff clock in only inside a set boundary. How it works, where it fails, and the notice, consent and location rules that apply." />
+  <link rel="canonical" href="https://workintelhub.com/blogs/geofencing-attendance" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="WorkIntel Hub" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://workintelhub.com/blogs/geofencing-attendance" />
+  <meta property="og:title" content="Geofencing Attendance: How Location-Based Clock-In Works" />
+  <meta property="og:description" content="Geofenced attendance lets staff clock in only inside a set boundary. How it works, where it fails, and the notice, consent and location rules that apply." />
+  <meta property="og:image" content="https://workintelhub.com/images/blog/geofencing-attendance.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-11-26T00:00:00+00:00" />
+  <meta property="article:section" content="Time Tracking" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Geofencing Attendance: How Location-Based Clock-In Works" />
+  <meta name="twitter:description" content="Geofenced attendance lets staff clock in only inside a set boundary. How it works, where it fails, and the notice, consent and location rules that apply." />
+  <meta name="twitter:image" content="https://workintelhub.com/images/blog/geofencing-attendance.png" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-96.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0b46e0" />
+
+  <link rel="alternate" type="application/rss+xml" title="WorkIntel Hub" href="https://workintelhub.com/feed.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01G9V5B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C01G9V5B37');
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://workintelhub.com/#organization",
+      "sameAs": [
+        "https://www.linkedin.com/company/workintelhub/"
+      ],
+      "name": "WorkIntel Hub",
+      "url": "https://workintelhub.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://workintelhub.com/images/logo.png",
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://workintelhub.com/authors/pavan#person",
+      "name": "Pavan",
+      "sameAs": [
+        "https://www.linkedin.com/in/telugu-durga-sai/"
+      ],
+      "url": "https://workintelhub.com/authors/pavan",
+      "jobTitle": "Editor, WorkIntel Hub",
+      "worksFor": {
+        "@id": "https://workintelhub.com/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://workintelhub.com/blogs/geofencing-attendance#article",
+      "headline": "Geofencing Attendance: How Location-Based Clock-In Works",
+      "description": "Geofenced attendance lets staff clock in only inside a set boundary. How it works, where it fails, and the notice, consent and location rules that apply.",
+      "image": "https://workintelhub.com/images/blog/geofencing-attendance.png",
+      "datePublished": "2026-11-26T00:00:00+00:00",
+      "dateModified": "2026-11-26T00:00:00+00:00",
+      "author": {
+        "@id": "https://workintelhub.com/authors/pavan#person"
+      },
+      "publisher": {
+        "@id": "https://workintelhub.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://workintelhub.com/blogs/geofencing-attendance"
+      },
+      "articleSection": "Time Tracking",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://workintelhub.com/blogs/geofencing-attendance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://workintelhub.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Time Tracking",
+          "item": "https://workintelhub.com/topics/time-tracking"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Geofencing Attendance: How Location-Based Clock-In Works"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://workintelhub.com/blogs/geofencing-attendance#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is geofencing attendance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A clock-in method where an employee's phone app accepts a punch only when the phone reports a location inside a virtual boundary drawn around a work site. Outside the boundary the punch is blocked or flagged for review, and some apps clock people in and out automatically on arrival and exit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is geofencing employees legal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes for confirming location at the punch during working hours, with notice. Connecticut, Delaware, New York and Maine require written notice of electronic monitoring, Maine covers GPS expressly, personal phones need genuine agreement, and tracking outside working hours is where disputes come from."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a geofenced time clock track me all day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the setting. A punch-time geofence records your position only when you clock in or out. Automatic clock-in and continuous shift tracking check location in the background. Ask your employer which is configured and whether it stops at clock-out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to use my personal phone for geofenced clock-in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tracking a personal phone needs genuine agreement, and in Maine employees may decline to install surveillance software on a personal device. A reasonable employer offers an alternative, such as a site kiosk or a company phone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is geofencing covered by Illinois BIPA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Location data is not a biometric identifier under BIPA. If the app also scans your face to verify the punch, that scan is, and the employer must give written notice and obtain a written release before collecting it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What radius should a geofence have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wide enough to cover the site's entrances and car park plus some signal drift, so people punching just inside the door are not rejected. Start generous, set punches outside the fence to flag rather than block, and tighten only where flagged punches show a real problem."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2670082311993794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- BUILD:header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/"><img src="/images/logo.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+      <ul class="nav-links">
+        <li><a href="/topics/productivity">Productivity</a></li>
+        <li><a href="/topics/time-tracking">Time Tracking</a></li>
+        <li><a href="/topics/time-management">Time Management</a></li>
+        <li><a href="/topics/employee-monitoring">Monitoring</a></li>
+        <li><a href="/topics/hr">HR</a></li>
+        <li><a href="/lists/">Lists</a></li>
+        <li><a href="/statistics/">Statistics</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/glossary/">Glossary</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-sm" href="/#subscribe">Subscribe</a>
+      </div>
+    </nav>
+  </header>
+<!-- /BUILD:header -->
+
+  <main>
+    <article class="article">
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+      <span class="tag">Time Tracking</span>
+      <h1>Geofencing Attendance: How Location-Based Clock-In Works</h1>
+
+      <div class="byline">
+        <span class="avatar">P</span>
+        <span>
+          <a class="who" href="/authors/pavan" rel="author">Pavan</a><br />
+          <span class="when">November 26, 2026 &middot; 7 min read</span>
+        </span>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="/images/blog/geofencing-attendance.png" alt="A document with lines of text, representing a location-based attendance policy" width="1200" height="630" />
+      </figure>
+
+<p>
+        Geofencing attendance means employees can clock in and out on their phones only when the
+        phone reports a position inside a virtual boundary drawn around a work site. Inside the
+        boundary, the punch is accepted. Outside it, the app either blocks the punch or records it
+        with a flag for a manager to review. Some apps go further and clock people in automatically
+        when they arrive and out when they leave.
+      </p>
+      <p>
+        It solves two problems at once: people clocking in from the car park or from home, and one
+        person clocking in for another from somewhere else. What it does not do is make location
+        tracking free of rules. This page explains how a geofence decides, the settings worth getting
+        right, where it fails, and the notice, consent and location laws that apply.
+      </p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2>In this article</h2>
+        <ol>
+          <li><a href="#short-answer">The short answer</a></li>
+          <li><a href="#how-it-works">How a geofence decides whether a punch counts</a></li>
+          <li><a href="#settings">The settings that matter</a></li>
+          <li><a href="#where-it-fails">Where geofencing fails</a></li>
+          <li><a href="#law">The law: notice, consent and location</a></li>
+          <li><a href="#rollout">Rolling it out without a dispute</a></li>
+          <li><a href="#key-takeaways">Key takeaways</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="short-answer">The short answer</h2>
+<div class="verdict">
+        <p><strong>A geofence checks location at the punch, not all day.</strong> Configured that way it is the least intrusive form of GPS an employer can use.</p>
+        <p><strong>It is not biometric.</strong> Location alone does not engage Illinois BIPA, but a geofenced app that also scans faces does.</p>
+        <p><strong>Give written notice everywhere.</strong> Connecticut, Delaware, New York and Maine have monitoring notice laws, Maine names GPS expressly, and personal phones need genuine agreement and an alternative way to clock in.</p>
+      </div>
+      <h2 id="how-it-works">How a geofence decides whether a punch counts</h2>
+<ol class="steps">
+        <li><strong>An admin draws the boundary.</strong> Usually a circle with a set radius around an address, or a polygon around a site. Large sites may need several.</li>
+        <li><strong>The employee taps clock in.</strong> The app asks the phone for its current position, which the phone works out from GPS and, where available, Wi-Fi and cell signals.</li>
+        <li><strong>The app compares the two.</strong> Inside the boundary, the punch is accepted and stamped with the location. Outside it, the punch is blocked, or accepted and flagged, depending on the setting.</li>
+        <li><strong>Optionally, the app watches the boundary.</strong> In automatic mode it clocks the employee in on entry and out on exit, which requires the app to check location in the background.</li>
+      </ol>
+      <p>
+        The difference between steps three and four matters for privacy. A punch-time check records
+        one position when the employee chooses to punch. Automatic clock-in and continuous location
+        during the shift record far more. Choose the least that answers your question.
+      </p>
+      <h2 id="settings">The settings that matter</h2>
+<div class="table-scroll">
+        <table>
+          <thead><tr><th>Setting</th><th>Options</th><th>What to choose</th></tr></thead>
+          <tbody>
+            <tr><td>Radius</td><td>Tight to generous</td><td>Wide enough to cover the car park edge and signal drift; too tight produces false rejections</td></tr>
+            <tr><td>Outside the fence</td><td>Block the punch, or allow and flag</td><td>Allow and flag for most teams; blocking turns a weak signal into a missed punch and a pay dispute</td></tr>
+            <tr><td>Automatic clock-in</td><td>Off, on entry, on entry and exit</td><td>Off unless people forget to punch; it needs background location</td></tr>
+            <tr><td>Location during the shift</td><td>Punch only, or continuous</td><td>Punch only, unless the job needs dispatch or safety tracking</td></tr>
+            <tr><td>After the shift</td><td>Stops, or keeps reporting</td><td>Always stops at clock-out</td></tr>
+            <tr><td>Retention</td><td>Vendor default, or a set period</td><td>A set period; ninety days covers nearly every legitimate need</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Many attendance apps support geofencing, often on a paid tier rather than the entry plan. Our
+        <a href="/tools/best-employee-attendance-tracking-software">comparison of attendance tracking tools</a>
+        and the <a href="/tools/best-clock-in-clock-out-apps">clock in clock out app review</a> list
+        which plan includes it for each vendor.
+      </p>
+      <h2 id="where-it-fails">Where geofencing fails</h2>
+<ul>
+        <li><strong>Weak signal.</strong> Phone positions drift indoors, underground and between tall buildings. A punch from inside a basement kitchen may read as outside the fence. Allow-and-flag handles this; hard blocking does not.</li>
+        <li><strong>Sites without a fixed address.</strong> Crews that move between jobs need a fence per job, set before the crew arrives, or the check means nothing.</li>
+        <li><strong>Work that starts before the fence.</strong> Drivers, people loading vehicles and staff on required pre-shift tasks may be working before they reach the boundary. That time is generally compensable whatever the geofence says.</li>
+        <li><strong>Spoofed locations.</strong> Location-faking apps exist. Some vendors detect them; treat a geofence as strong deterrence, not proof.</li>
+        <li><strong>No phone.</strong> Some employees do not have a smartphone or will not use their own. They need a kiosk or another method.</li>
+      </ul>
+      <p>
+        For buddy punching specifically, a geofence closes most of the gap a shared login leaves open,
+        because the punch must come from the right phone in the right place. Our
+        <a href="/blogs/buddy-punching">buddy punching guide</a> compares it with photo kiosks and
+        biometric clocks.
+      </p>
+      <h2 id="law">The law: notice, consent and location</h2>
+<p>
+        No federal statute requires an employer to disclose GPS tracking, so the rules come from the
+        states. Four strands apply to a geofenced clock.
+      </p>
+      <p>
+        <strong>Monitoring notice laws.</strong> Connecticut, Delaware, New York and Maine require
+        written notice of electronic monitoring. Maine's
+        <a href="https://legislature.maine.gov/legis/bills/display_ps.asp?LD=61&amp;snum=132" target="_blank" rel="noopener">26 M.R.S. section 620-A</a>,
+        in force since July 14, 2026, is the broadest: it covers GPS expressly, requires notice to
+        applicants and written notice to employees at least once a year, and carves out GPS on
+        employer-owned vehicles but not on an employee's own phone. Employees in Maine may also
+        decline to install surveillance software on a personal device.
+        <a href="https://codes.findlaw.com/ct/title-31-labor/ct-gen-st-sect-31-48d/" target="_blank" rel="noopener">Connecticut General Statutes section 31-48d</a>
+        requires prior written notice and a posted notice. Delaware and New York frame their notice
+        laws around telephone, email and internet monitoring, so location sits less squarely inside
+        them, which is a reason to give notice rather than rely on the gap.
+      </p>
+      <p>
+        <strong>Tracking-device laws.</strong>
+        <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&amp;sectionNum=637.7" target="_blank" rel="noopener">California Penal Code section 637.7</a>
+        prohibits using an electronic tracking device, defined as a device attached to a vehicle or
+        other movable thing, to determine a person's location, unless the vehicle's registered owner,
+        lessor or lessee consents. Consent runs with the vehicle, not the driver. It is aimed at
+        trackers on vehicles rather than an app an employee opens to punch, but it is the reason
+        mileage and vehicle-tracking features need the owner's consent when the car is the employee's.
+      </p>
+      <p>
+        <strong>Personal phones and off-duty location.</strong> Tracking an employee's own phone
+        requires genuine agreement, which can be withdrawn, and several states protect lawful off-duty
+        conduct. A geofence that checks location only at the punch and stops at clock-out stays well
+        clear of both. One that keeps reporting in the evening does not.
+      </p>
+      <p>
+        <strong>Biometric laws.</strong> A location is not a biometric identifier under Illinois
+        BIPA, whose list is retina or iris scan, fingerprint, voiceprint, and scan of hand or face
+        geometry. But many geofenced apps add a face scan at the punch. That scan engages BIPA's
+        written notice, written release and retention schedule requirements, and Texas and Washington
+        require notice and consent too. A plain photo without face recognition avoids them. The
+        <a href="/glossary/biometric-time-clock">biometric time clock entry</a> and our
+        <a href="/blogs/employee-monitoring-laws-by-state">monitoring laws by state</a> set out the
+        detail.
+      </p>
+      <h2 id="rollout">Rolling it out without a dispute</h2>
+<ol class="steps">
+        <li><strong>Write down the purpose.</strong> Confirming people are on site when they punch is a clear business reason. If you also want dispatch or safety tracking, say so separately.</li>
+        <li><strong>Give written notice and collect an acknowledgment.</strong> State what is recorded, when, who sees it and how long it is kept. Our <a href="/blogs/employee-monitoring-consent-form">monitoring acknowledgment form</a> has wording that covers location.</li>
+        <li><strong>Offer an alternative for personal phones.</strong> A kiosk at the site, a company phone, or a supervisor-confirmed punch for anyone who declines.</li>
+        <li><strong>Configure punch-only location and a hard stop at clock-out.</strong> Almost every GPS dispute would have been avoided by a system that stopped reporting at the end of the shift.</li>
+        <li><strong>Flag rather than block.</strong> Review flagged punches weekly and fix the fence where false rejections cluster.</li>
+        <li><strong>Let people see their own record.</strong> It turns a tracking system into a timekeeping one in the employee's eyes.</li>
+      </ol>
+      <p>
+        For staff who work from home or a client site, a geofence is the wrong tool; see
+        <a href="/blogs/how-to-clock-in-remotely">how to clock in remotely</a>. For the wider choice of
+        method, our <a href="/blogs/attendance-tracking-methods">attendance tracking methods comparison</a>
+        sets geofenced phones against kiosks, wall clocks and web punches, and the
+        <a href="/tools/best-employee-attendance-tracking-software">best attendance software list</a>
+        shows which tools do each.
+      </p>
+
+      <h2 id="key-takeaways">Key takeaways</h2>
+      <ul>
+        <li>A geofence accepts a phone punch only when the phone reports a position inside a boundary around the site; outside, the punch is blocked or flagged.</li>
+        <li>Check location at the punch only and stop at clock-out. Automatic clock-in and continuous tracking collect far more than attendance needs.</li>
+        <li>Allow-and-flag beats hard blocking, because weak indoor signal turns a block into a missed punch and a pay dispute.</li>
+        <li>Connecticut, Delaware, New York and Maine require written notice of electronic monitoring; Maine covers GPS expressly and carves out only employer-owned vehicles.</li>
+        <li>Location is not a biometric under Illinois BIPA, but a face scan at the geofenced punch is, with written notice and release required first.</li>
+        <li>Offer a kiosk or other alternative to employees who will not use a personal phone, and keep location history for a set period such as ninety days.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        <details>
+          <summary>What is geofencing attendance?</summary>
+          <p>A clock-in method where an employee's phone app accepts a punch only when the phone reports a location inside a virtual boundary drawn around a work site. Outside the boundary the punch is blocked or flagged for review, and some apps clock people in and out automatically on arrival and exit.</p>
+        </details>
+        <details>
+          <summary>Is geofencing employees legal?</summary>
+          <p>Generally yes for confirming location at the punch during working hours, with notice. Connecticut, Delaware, New York and Maine require written notice of electronic monitoring, Maine covers GPS expressly, personal phones need genuine agreement, and tracking outside working hours is where disputes come from.</p>
+        </details>
+        <details>
+          <summary>Does a geofenced time clock track me all day?</summary>
+          <p>It depends on the setting. A punch-time geofence records your position only when you clock in or out. Automatic clock-in and continuous shift tracking check location in the background. Ask your employer which is configured and whether it stops at clock-out.</p>
+        </details>
+        <details>
+          <summary>Do I have to use my personal phone for geofenced clock-in?</summary>
+          <p>Tracking a personal phone needs genuine agreement, and in Maine employees may decline to install surveillance software on a personal device. A reasonable employer offers an alternative, such as a site kiosk or a company phone.</p>
+        </details>
+        <details>
+          <summary>Is geofencing covered by Illinois BIPA?</summary>
+          <p>Location data is not a biometric identifier under BIPA. If the app also scans your face to verify the punch, that scan is, and the employer must give written notice and obtain a written release before collecting it.</p>
+        </details>
+        <details>
+          <summary>What radius should a geofence have?</summary>
+          <p>Wide enough to cover the site's entrances and car park plus some signal drift, so people punching just inside the door are not rejected. Start generous, set punches outside the fence to flag rather than block, and tighten only where flagged punches show a real problem.</p>
+        </details>
+      </section>
+
+      <div class="related">
+        <h2>Related reading</h2>
+        <ul>
+          <li><a href="/tools/best-employee-attendance-tracking-software">Best Employee Attendance Tracking Software</a></li>
+          <li><a href="/tools/best-clock-in-clock-out-apps">Best Clock In Clock Out Apps</a></li>
+          <li><a href="/blogs/buddy-punching">Buddy Punching: What It Is and How to Stop It</a></li>
+          <li><a href="/blogs/attendance-tracking-methods">Attendance Tracking Methods Compared</a></li>
+          <li><a href="/blogs/employee-gps-tracking">Employee GPS Tracking</a></li>
+          <li><a href="/blogs/employee-monitoring-laws-by-state">Employee Monitoring Laws by State</a></li>
+        </ul>
+      </div>
+
+      <a class="back-link" href="/blogs/">&larr; Back to all articles</a>
+    </article>
+  </main>
+
+<!-- BUILD:footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="/"><img src="/images/logo-light.png" alt="WorkIntel Hub" width="320" height="81" /></a>
+          <p class="footer-blurb">
+            Productivity, time tracking, time management, and employee monitoring,
+            covered end to end for the people who manage the work.
+          </p>
+          <p class="footer-social"><a href="https://www.linkedin.com/company/workintelhub/" target="_blank" rel="noopener me">Follow on LinkedIn</a></p>
+        </div>
+        <div>
+          <h2>Topics</h2>
+          <ul>
+            <li><a href="/topics/productivity">Productivity</a></li>
+            <li><a href="/topics/time-tracking">Time Tracking</a></li>
+            <li><a href="/topics/time-management">Time Management</a></li>
+            <li><a href="/topics/employee-monitoring">Employee Monitoring</a></li>
+            <li><a href="/topics/hr">HR</a></li>
+            <li><a href="/topics/for-employees">For employees</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Site</h2>
+          <ul>
+            <li><a href="/blogs/">All articles</a></li>
+            <li><a href="/lists/">Tool reviews</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/topics/">All topics</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/editorial-policy">Editorial policy</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WorkIntel Hub. All rights reserved.</p>
+        <p><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="/editorial-policy">Editorial standards</a></p>
+      </div>
+    </div>
+  </footer>
+<!-- /BUILD:footer -->
+
+</body>
+</html>
